@@ -1,4 +1,4 @@
-import type { CreateRoomResponse, HostCommand, JoinResponse, OptionKey } from "@quiz/shared";
+import type { CreateRoomResponse, HostCommand, JoinResponse, OnboardingInput, OptionKey } from "@quiz/shared";
 
 export class ApiError extends Error {
   status: number;
@@ -23,6 +23,7 @@ export const api = {
   createRoom: () => call<CreateRoomResponse>("/rooms"),
   join: (code: string, nickname: string) => call<JoinResponse>(`/rooms/${code}/players`, { body: { nickname } }),
   host: (code: string, token: string, command: HostCommand) => call(`/rooms/${code}/${command}`, { token }),
+  onboarding: (code: string, token: string, input: OnboardingInput) => call(`/rooms/${code}/onboarding`, { token, body: input }),
   answer: (code: string, token: string, optionKey: OptionKey) =>
     call<{ optionKey: OptionKey }>(`/rooms/${code}/answers`, { token, body: { optionKey } }),
 };

@@ -1,7 +1,7 @@
 // RoomDO — one Durable Object per room (09-system-design §6). A thin adapter around the pure
 // `Room` state machine: authenticates, persists state, drives the alarm and delivers effects.
 import { DurableObject } from "cloudflare:workers";
-import { DEFAULT_CONFIG, NICKNAME_MAX, type HostCommand, type OptionKey, type ServerEvent, type Snapshot } from "@quiz/shared";
+import { DEFAULT_CONFIG, NICKNAME_MAX, type HostCommand, type OnboardingInput, type OptionKey, type ServerEvent, type Snapshot } from "@quiz/shared";
 import { newRoomState, Room, ROOM_STATE_VERSION, type Effect, type Result, type RoomState, type Viewer } from "./game.ts";
 
 export type { Result };
@@ -72,6 +72,15 @@ export class RoomDO extends DurableObject<Env> {
       end: () => room.end(id, now),
       "play-again": () => room.playAgain(id, now),
     }[command]();
+    await this.commit(room);
+    return r;
+  }
+
+  async onboarding(token: string, input: OnboardingInput): Promise<Result<true>> {
+    const viewer = await this.authenticate(token);
+    if (!viewer || viewer.role !== "player") return this.live() ? fail(401, "invalid token") : fail(404, "room not found");
+    const room = this.room();
+    const r = room.submitOnboarding(viewer.player.id, input, Date.now());
     await this.commit(room);
     return r;
   }

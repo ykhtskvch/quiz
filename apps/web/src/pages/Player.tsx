@@ -1,15 +1,19 @@
 // Phone: join → wait → answer → result → final place. Host controls appear for the first player.
 import { useEffect, useState } from "react";
-import type { HostCommand, OptionKey, Snapshot } from "@quiz/shared";
+import type { HostCommand, OnboardingInput, OptionKey, Snapshot } from "@quiz/shared";
 import { NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { PhaseBar } from "../components.tsx";
+import { Onboarding } from "./Onboarding.tsx";
 import { t } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
 
 export function Player({ code }: { code: string }) {
   const [me, setMe] = useState<PlayerSession | null>(() => session.load(code));
   const { snapshot, status, timingAt } = useRoom(code, me?.playerToken ?? null);
+  const [editing, setEditing] = useState(false);
+  // Own answers are never broadcast, so the snapshot only has them after a reconnect; keep the last submission.
+  const [submitted, setSubmitted] = useState<OnboardingInput | null>(null);
 
   useEffect(() => {
     if (status === "unauthorized") {
@@ -24,14 +28,31 @@ export function Player({ code }: { code: string }) {
   if (!me) return <JoinForm code={code} onJoined={setMe} />;
   if (!snapshot || snapshot.you.role !== "player") return <main className="center muted">…</main>;
 
+  const you = snapshot.you;
+  const between = !snapshot.game || snapshot.game.status === "FINISHED";
+  const onboarding = you.status === "ONBOARDING" || (editing && between);
+
   return (
     <main className="player">
       {status === "reconnecting" && <div className="banner">{t.reconnecting}</div>}
       <header className="player-header">
-        <span>{snapshot.you.nickname}</span>
-        <span className="muted">{snapshot.mine && snapshot.game ? t.total(snapshot.mine.total) : code}</span>
+        <span>{you.nickname}</span>
+        <span className="muted">{snapshot.mine && snapshot.game && !onboarding ? t.total(snapshot.mine.total) : code}</span>
       </header>
-      <PlayerBody s={snapshot} code={code} token={me.playerToken} timingAt={timingAt} />
+      {onboarding ? (
+        <Onboarding
+          code={code}
+          token={me.playerToken}
+          initial={submitted ?? you.onboarding}
+          onDone={(input) => {
+            setSubmitted(input);
+            setEditing(false);
+          }}
+          onCancel={you.status === "ONBOARDING" ? undefined : () => setEditing(false)}
+        />
+      ) : (
+        <PlayerBody s={snapshot} code={code} token={me.playerToken} timingAt={timingAt} onEdit={() => setEditing(true)} />
+      )}
     </main>
   );
 }
@@ -99,26 +120,30 @@ function useCommand(code: string, token: string) {
   return { busy, error, run, host };
 }
 
-function PlayerBody({ s, code, token, timingAt }: { s: Snapshot; code: string; token: string; timingAt: number }) {
+function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: string; token: string; timingAt: number; onEdit: () => void }) {
   const isHost = s.you.role === "player" && s.you.isHost;
   const cmd = useCommand(code, token);
   const game = s.game;
 
   // ---- lobby ----
   if (!game) {
-    const enough = s.room.players.length >= 2;
+    const ready = s.room.players.filter((p) => p.ready).length;
+    const enough = ready >= 2;
     return (
       <section className="center grow">
+        <p className="big-text">{t.readyWait}</p>
         <p>{isHost ? t.youAreHost : t.waitingForHost}</p>
-        <p className="muted">
-          {t.players}: {s.room.players.length}
-        </p>
+        <p className="muted">{t.readyCount(ready, s.room.players.length)}</p>
         {isHost && (
           <button className="primary big" disabled={cmd.busy || !enough} onClick={() => cmd.host("start")}>
             {t.start}
           </button>
         )}
         {isHost && !enough && <p className="muted small">{t.needTwoPlayers}</p>}
+        {isHost && enough && ready < s.room.players.length && <p className="muted small">{t.stragglersHint}</p>}
+        <button className="link" onClick={onEdit}>
+          {t.editPrefs}
+        </button>
         {cmd.error && <p className="error">{cmd.error}</p>}
       </section>
     );
@@ -139,6 +164,9 @@ function PlayerBody({ s, code, token, timingAt }: { s: Snapshot; code: string; t
             {t.playAgain}
           </button>
         )}
+        <button className="link" onClick={onEdit}>
+          {t.editPrefs}
+        </button>
         {cmd.error && <p className="error">{cmd.error}</p>}
       </section>
     );

@@ -14,44 +14,44 @@ contexts:
 
 topics:
   # История
-  - { slug: ancient-world, name: "Древний мир", group: "История", level: B, target_questions: 8 }
-  - { slug: russia-pre-1917, name: "История России до 1917", group: "История", level: B, target_questions: 8, implied_context: POST_SOVIET }
-  - { slug: ussr-history, name: "СССР: история", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: cold-war, name: "Холодная война и XX век", group: "История", level: A, target_questions: 15 }
-  - { slug: ussr-everyday, name: "Советский быт", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: russia-90s-life, name: "90-е: жизнь и быт", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ancient-world, emoji: "🏛️", name: "Древний мир", group: "История", level: B, target_questions: 8 }
+  - { slug: russia-pre-1917, emoji: "👑", name: "История России до 1917", group: "История", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: ussr-history, emoji: "🏭", name: "СССР: история", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: cold-war, emoji: "🧊", name: "Холодная война и XX век", group: "История", level: A, target_questions: 15 }
+  - { slug: ussr-everyday, emoji: "🪆", name: "Советский быт", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: russia-90s-life, emoji: "📼", name: "90-е: жизнь и быт", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
   # Наука и мир
-  - { slug: space, name: "Космос", group: "Наука и мир", level: A, target_questions: 15 }
-  - { slug: science, name: "Наука и изобретения", group: "Наука и мир", level: B, target_questions: 8 }
-  - { slug: geography, name: "География и страны", group: "Наука и мир", level: A, target_questions: 15 }
-  - { slug: nature, name: "Животные и природа", group: "Наука и мир", level: B, target_questions: 8 }
+  - { slug: space, emoji: "🚀", name: "Космос", group: "Наука и мир", level: A, target_questions: 15 }
+  - { slug: science, emoji: "🔬", name: "Наука и изобретения", group: "Наука и мир", level: B, target_questions: 8 }
+  - { slug: geography, emoji: "🌍", name: "География и страны", group: "Наука и мир", level: A, target_questions: 15 }
+  - { slug: nature, emoji: "🐾", name: "Животные и природа", group: "Наука и мир", level: B, target_questions: 8 }
   # Литература и искусство
-  - { slug: russian-literature, name: "Русская литература", group: "Литература и искусство", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: world-literature, name: "Мировая литература", group: "Литература и искусство", level: B, target_questions: 8 }
-  - { slug: art, name: "Живопись и искусство", group: "Литература и искусство", level: B, target_questions: 8 }
+  - { slug: russian-literature, emoji: "📖", name: "Русская литература", group: "Литература и искусство", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: world-literature, emoji: "📚", name: "Мировая литература", group: "Литература и искусство", level: B, target_questions: 8 }
+  - { slug: art, emoji: "🎨", name: "Живопись и искусство", group: "Литература и искусство", level: B, target_questions: 8 }
   # Кино и ТВ
-  - { slug: soviet-cinema, name: "Советское кино", group: "Кино и ТВ", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: world-cinema, name: "Голливуд и мировое кино", group: "Кино и ТВ", level: A, target_questions: 15 }
-  - { slug: ru-tv-90s-00s, name: "ТВ 90-х и 00-х", group: "Кино и ТВ", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: ru-series, name: "Российские сериалы 2000–2010-х", group: "Кино и ТВ", level: B, target_questions: 8, implied_context: POST_SOVIET }
-  - { slug: world-series, name: "Мировые сериалы", group: "Кино и ТВ", level: B, target_questions: 8 }
-  - { slug: cartoons, name: "Мультфильмы: советские и мировые", group: "Кино и ТВ", level: A, target_questions: 15 }
-  - { slug: ads-90s-00s, name: "Реклама 90-х и 00-х", group: "Кино и ТВ", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: soviet-cinema, emoji: "🎞️", name: "Советское кино", group: "Кино и ТВ", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: world-cinema, emoji: "🎬", name: "Голливуд и мировое кино", group: "Кино и ТВ", level: A, target_questions: 15 }
+  - { slug: ru-tv-90s-00s, emoji: "📺", name: "ТВ 90-х и 00-х", group: "Кино и ТВ", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ru-series, emoji: "🛋️", name: "Российские сериалы 2000–2010-х", group: "Кино и ТВ", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: world-series, emoji: "🍿", name: "Мировые сериалы", group: "Кино и ТВ", level: B, target_questions: 8 }
+  - { slug: cartoons, emoji: "🐻", name: "Мультфильмы: советские и мировые", group: "Кино и ТВ", level: A, target_questions: 15 }
+  - { slug: ads-90s-00s, emoji: "📢", name: "Реклама 90-х и 00-х", group: "Кино и ТВ", level: B, target_questions: 8, implied_context: POST_SOVIET }
   # Музыка
-  - { slug: ru-pop-90s, name: "Русская поп-музыка 90-х", group: "Музыка", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: ru-pop-00s, name: "Русская поп-музыка 00-х", group: "Музыка", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: ru-rock, name: "Русский рок", group: "Музыка", level: B, target_questions: 8, implied_context: POST_SOVIET }
-  - { slug: world-pop, name: "Мировая поп-музыка 80–00-х", group: "Музыка", level: A, target_questions: 15 }
-  - { slug: eurovision, name: "Евровидение", group: "Музыка", level: B, target_questions: 8 }
-  - { slug: music-now, name: "Рэп и современная музыка", group: "Музыка", level: B, target_questions: 8 }
+  - { slug: ru-pop-90s, emoji: "💿", name: "Русская поп-музыка 90-х", group: "Музыка", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ru-pop-00s, emoji: "🎤", name: "Русская поп-музыка 00-х", group: "Музыка", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ru-rock, emoji: "🎸", name: "Русский рок", group: "Музыка", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: world-pop, emoji: "🎧", name: "Мировая поп-музыка 80–00-х", group: "Музыка", level: A, target_questions: 15 }
+  - { slug: eurovision, emoji: "🌟", name: "Евровидение", group: "Музыка", level: B, target_questions: 8 }
+  - { slug: music-now, emoji: "🎙️", name: "Рэп и современная музыка", group: "Музыка", level: B, target_questions: 8 }
   # Интернет и игры
-  - { slug: old-internet, name: "Старый интернет", group: "Интернет и игры", level: A, target_questions: 15, implied_context: POST_SOVIET }
-  - { slug: internet-now, name: "Мемы и интернет сейчас", group: "Интернет и игры", level: B, target_questions: 8 }
-  - { slug: videogames, name: "Видеоигры", group: "Интернет и игры", level: B, target_questions: 8 }
-  - { slug: fandoms, name: "Фэнтези и фандомы", group: "Интернет и игры", level: B, target_questions: 8 }
+  - { slug: old-internet, emoji: "💾", name: "Старый интернет", group: "Интернет и игры", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: internet-now, emoji: "📱", name: "Мемы и интернет сейчас", group: "Интернет и игры", level: B, target_questions: 8 }
+  - { slug: videogames, emoji: "🎮", name: "Видеоигры", group: "Интернет и игры", level: B, target_questions: 8 }
+  - { slug: fandoms, emoji: "🧙", name: "Фэнтези и фандомы", group: "Интернет и игры", level: B, target_questions: 8 }
   # Жизнь
-  - { slug: food, name: "Еда и кухня", group: "Жизнь", level: B, target_questions: 8 }
-  - { slug: fashion-brands, name: "Мода и бренды", group: "Жизнь", level: B, target_questions: 8 }
-  - { slug: celebrities, name: "Знаменитости и светская хроника", group: "Жизнь", level: B, target_questions: 8 }
-  - { slug: football, name: "Футбол", group: "Жизнь", level: B, target_questions: 8 }
-  - { slug: sports, name: "Олимпиады, F1 и другой спорт", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: food, emoji: "🍲", name: "Еда и кухня", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: fashion-brands, emoji: "👗", name: "Мода и бренды", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: celebrities, emoji: "📸", name: "Знаменитости и светская хроника", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: football, emoji: "⚽", name: "Футбол", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: sports, emoji: "🏅", name: "Олимпиады, F1 и другой спорт", group: "Жизнь", level: B, target_questions: 8 }

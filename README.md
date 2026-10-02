@@ -26,11 +26,11 @@ npm run dev        # worker на :8787 и web на :5173
 QR-код указывает на LAN-адрес машины, так что телефоны в той же Wi-Fi-сети подключаются по нему.
 Первый вошедший игрок становится ведущим.
 
-Пока нет Composition Engine (M4), вопросы берутся из демо-банка — пилотных черновиков в `content/families`.
-После правки контента пересобери его:
+Taxonomy и демо-банк (пилотные черновики из `content/families`, пока нет Composition Engine — M4) генерируются в `packages/shared`.
+После правки `content/` пересобери:
 
 ```bash
-node scripts/dev/gen-demo-bank.ts
+node scripts/dev/gen-shared.ts
 ```
 
 Проверки:

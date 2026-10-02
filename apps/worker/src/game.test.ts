@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_CONFIG, type DemoQuestion, type GameConfig } from "@quiz/shared";
+import { DEFAULT_CONFIG, type DemoQuestion, type GameConfig, type OnboardingInput } from "@quiz/shared";
 import { newRoomState, Room, type RoomState } from "./game.ts";
 
 const config: GameConfig = {
@@ -25,7 +25,14 @@ const bank: DemoQuestion[] = ["q1", "q2", "q3", "q4"].map((id, i) => ({
   explanation: `Because ${id}`,
 }));
 
-/** A room with N connected players, game started at t=0, first question presenting. */
+const onboarding: OnboardingInput = {
+  ageBand: "35_44",
+  topics: [{ slug: "space", preference: "LIKE", depth: "EXPERT" }],
+  backgrounds: ["POST_SOVIET"],
+  dignity: "BALANCE",
+};
+
+/** A room with N connected, onboarded players, game started at t=0, first question presenting. */
 function setup(nPlayers = 2) {
   const state: RoomState = newRoomState("ABCDEF", "display-hash", 0, config);
   const ids: string[] = [];
@@ -34,6 +41,7 @@ function setup(nPlayers = 2) {
     const r = at(state);
     const p = r.join(`P${i}`, `p${i}`, `hash${i}`, 0);
     r.connect(p.id, 0);
+    r.submitOnboarding(p.id, onboarding, 0);
     ids.push(p.id);
   }
   const room = () => at(state);
@@ -170,6 +178,8 @@ describe("players", () => {
     room().tick(3000);
     const late = room().join("Late", "late", "hash-late", 4000);
     room().connect(late.id, 4000);
+    expect(room().snapshot({ role: "player", player: late }, 4100).you).toMatchObject({ status: "ONBOARDING" });
+    room().submitOnboarding(late.id, onboarding, 4200);
     expect(room().answer(late.id, "B", 4500)).toMatchObject({ ok: false, status: 409 });
     expect(room().snapshot({ role: "player", player: late }, 4500).you).toMatchObject({ status: "PENDING" });
 
@@ -191,6 +201,48 @@ describe("players", () => {
       room().end(ids[0], 5000);
       expect(Boolean(state.game!.results!.stats.onlyOneKnew)).toBe(shown);
     }
+  });
+});
+
+describe("onboarding", () => {
+  it("start needs two players who finished onboarding; stragglers join later", () => {
+    const state = newRoomState("ABCDEF", "h", 0, config);
+    const room = () => new Room(state, config, bank);
+    const a = room().join("A", "a", "ha", 0);
+    const b = room().join("B", "b", "hb", 0);
+    const c = room().join("C", "c", "hc", 0);
+    for (const p of [a, b, c]) room().connect(p.id, 0);
+    room().submitOnboarding(a.id, onboarding, 0);
+    expect(room().start(a.id, 0)).toMatchObject({ ok: false, status: 409 });
+
+    room().submitOnboarding(b.id, onboarding, 0);
+    expect(room().start(a.id, 0).ok).toBe(true);
+    expect(state.game!.profile!.players.map((p) => p.playerId)).toEqual([a.id, b.id]);
+
+    // C finishes onboarding mid-question: plays from the next one and enters the profile.
+    room().tick(3000);
+    room().submitOnboarding(c.id, onboarding, 4000);
+    expect(state.players.find((p) => p.id === c.id)!.activeFrom).toBe(2);
+    expect(state.game!.profile!.players).toHaveLength(3);
+  });
+
+  it("preferences can change between games but not during one", () => {
+    const { ids, room } = setup();
+    expect(room().submitOnboarding(ids[0], onboarding, 1000)).toMatchObject({ ok: false, status: 409 });
+    room().end(ids[0], 2000);
+    expect(room().submitOnboarding(ids[0], { ...onboarding, dignity: "POP" }, 3000).ok).toBe(true);
+  });
+
+  it("never broadcasts onboarding answers", () => {
+    const state = newRoomState("ABCDEF", "h", 0, config);
+    const r = new Room(state, config, bank);
+    const p = r.join("A", "a", "ha", 0);
+    r.connect(p.id, 0);
+    r.submitOnboarding(p.id, { ...onboarding, ageBand: "13_17" }, 0);
+    const broadcast = r.effects.filter((e) => e.to === "all").map((e) => JSON.stringify(e)).join("");
+    expect(broadcast).not.toMatch(/13_17|POST_SOVIET|space|BALANCE/);
+    const display = JSON.stringify(r.snapshot({ role: "display" }, 0));
+    expect(display).not.toMatch(/13_17|POST_SOVIET|BALANCE/);
   });
 });
 

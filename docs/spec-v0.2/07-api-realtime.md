@@ -81,6 +81,8 @@ GET /games/{gameSessionId}/onboarding-config
 → age bands, topic cards (2 уровня), cultural context cards, dignity options (3)
 ```
 
+> Реализация M3: конфигурация встроена в клиент из `packages/shared` (генерируется из `content/taxonomy.yaml`), endpoint не нужен. Отправка — `POST /rooms/{code}/onboarding` с токеном игрока; повторная отправка между играми заменяет ответы.
+
 ```
 POST /games/{gameSessionId}/players/{playerId}/onboarding
 {

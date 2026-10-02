@@ -59,16 +59,18 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
       </section>
       <section className="players-panel">
         <h2>
-          {t.players} · {s.room.players.length}
+          {t.players} · {t.readyCount(s.room.players.filter((p) => p.ready).length, s.room.players.length)}
         </h2>
         {s.room.players.length === 0 ? (
           <p className="muted">{t.noPlayersYet}</p>
         ) : (
           <ul className="players">
             {s.room.players.map((p) => (
-              <li key={p.id} className={p.status === "DISCONNECTED" ? "offline" : ""}>
+              <li key={p.id} className={p.status === "DISCONNECTED" ? "offline" : p.ready ? "ready" : "filling"}>
+                {p.ready && <span aria-hidden>✓</span>}
                 {p.nickname}
                 {p.isHost && <span className="tag">{t.host}</span>}
+                {!p.ready && p.status !== "DISCONNECTED" && <span className="tag muted">{t.chipOnboarding}</span>}
                 {p.status === "DISCONNECTED" && <span className="tag muted">{t.offline}</span>}
               </li>
             ))}

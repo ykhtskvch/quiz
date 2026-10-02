@@ -625,3 +625,164 @@ button.danger {
 .soft-end p {
   margin: 0;
 }
+
+/* ---------- M3: onboarding ---------- */
+
+button.link {
+  background: none;
+  padding: 0.25rem 0;
+  color: var(--muted);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.onboarding h2 {
+  margin: 0.25rem 0;
+  font-size: 1.5rem;
+  line-height: 1.25;
+}
+
+.onb-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.privacy-note {
+  margin: 0;
+}
+
+.choice-list {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.choice {
+  text-align: left;
+  background: var(--surface);
+  border: 2px solid transparent;
+  padding: 1rem 1.1rem;
+  font-size: 1.1rem;
+}
+
+.choice.tall {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.choice.selected {
+  border-color: var(--accent);
+}
+
+.topic-groups {
+  display: grid;
+  gap: 1rem;
+  padding-bottom: 5.5rem; /* room for the sticky button */
+}
+
+.group-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.topic-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.35rem;
+  text-align: left;
+  min-height: 84px;
+  padding: 0.75rem;
+  background: var(--surface);
+  border: 2px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  line-height: 1.2;
+}
+
+.topic-card .emoji {
+  font-size: 1.5rem;
+}
+
+.topic-card.selected.like {
+  border-color: var(--accent);
+  background: var(--surface-2);
+}
+
+.topic-card.selected.less {
+  border-color: var(--muted);
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.sticky-next {
+  position: sticky;
+  bottom: 0;
+  padding: 0.75rem 0 calc(0.5rem + env(safe-area-inset-bottom));
+  background: linear-gradient(to top, var(--bg) 70%, transparent);
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.sticky-next .big {
+  max-width: none;
+}
+
+.depth-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.depth-list li {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.depth-topic {
+  font-weight: 600;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 4px;
+  gap: 4px;
+}
+
+.segmented button {
+  padding: 0.6em 0.25em;
+  background: transparent;
+  font-size: 0.9rem;
+  border-radius: 12px;
+}
+
+.segmented button.on {
+  background: var(--accent);
+  color: var(--accent-text);
+}
+
+.players li.filling {
+  opacity: 0.7;
+}

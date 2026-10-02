@@ -72,8 +72,6 @@ check((await missing.waitClosed()) === 4404, "unknown room is rejected with clos
 
 type Joined = { playerId: string; playerToken: string; isHost: boolean };
 const anna = (await api<Joined>(`/rooms/${code}/players`, { body: { nickname: "Аня" } })).body;
-const alone = await api(`/rooms/${code}/start`, { token: anna.playerToken });
-check(alone.status === 409, `start is rejected with fewer than 2 players (status ${alone.status})`);
 
 const max = (await api<Joined>(`/rooms/${code}/players`, { body: { nickname: "Макс" } })).body;
 check(anna.isHost && !max.isHost, "first player is host");
@@ -82,6 +80,26 @@ const annaWs = new Client(code, anna.playerToken);
 const maxWs = new Client(code, max.playerToken);
 await annaWs.waitFor("SNAPSHOT");
 await maxWs.waitFor("SNAPSHOT");
+
+// ---- private onboarding ----
+const badOnb = await api(`/rooms/${code}/onboarding`, { token: anna.playerToken, body: { ageBand: "35_44", topics: [], dignity: "POP" } });
+check(badOnb.status === 400, "onboarding without topics is rejected (400)");
+const notReady = await api(`/rooms/${code}/start`, { token: anna.playerToken });
+check(notReady.status === 409, "start is rejected until 2 players finish onboarding");
+const onb = (ageBand: string, slug: string) => ({
+  ageBand,
+  topics: [{ slug, preference: "LIKE", depth: "EXPERT" }, { slug: "football", preference: "LESS_OF" }],
+  backgrounds: ["POST_SOVIET"],
+  dignity: "POP",
+});
+const o1 = await api(`/rooms/${code}/onboarding`, { token: anna.playerToken, body: onb("13_17", "ru-pop-00s") });
+const o2 = await api(`/rooms/${code}/onboarding`, { token: max.playerToken, body: onb("35_44", "space") });
+check(o1.status === 200 && o2.status === 200, "both players submit onboarding");
+await new Promise((r) => setTimeout(r, 200));
+const leaked = display.raw.some((r) => /13_17|POST_SOVIET|ru-pop-00s|LESS_OF/.test(r));
+check(!leaked, "display never receives anyone's onboarding answers");
+const statusEvents = display.events.filter((e) => e.type === "PLAYER_STATUS");
+check(statusEvents.length >= 2, "display only learns that players are ready");
 
 const notHost = await api(`/rooms/${code}/start`, { token: max.playerToken });
 check(notHost.status === 403, `non-host cannot start (status ${notHost.status})`);

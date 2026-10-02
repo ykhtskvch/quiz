@@ -1,6 +1,6 @@
 // Worker entry: HTTP routing and room lookup. All room state lives in RoomDO.
 import { Hono, type Context } from "hono";
-import { isRoomCode, ROOM_CODE_ALPHABET, ROOM_CODE_LENGTH, type HostCommand, type OptionKey } from "@quiz/shared";
+import { isRoomCode, parseOnboarding, ROOM_CODE_ALPHABET, ROOM_CODE_LENGTH, type HostCommand, type OptionKey } from "@quiz/shared";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
 export { RoomDO };
@@ -46,6 +46,12 @@ app.post("/rooms/:code/:command{start|pause|resume|skip|end|play-again}", async 
   const command = c.req.param("command") as HostCommand;
   if (!HOST_COMMANDS.includes(command)) return c.json({ error: "not found" }, 404);
   return reply(c, await roomStub(c, c.req.param("code")).host(bearer(c), command));
+});
+
+app.post("/rooms/:code/onboarding", async (c) => {
+  const parsed = parseOnboarding(await c.req.json().catch(() => null));
+  if (!parsed.ok) return c.json({ error: parsed.error }, 400);
+  return reply(c, await roomStub(c, c.req.param("code")).onboarding(bearer(c), parsed.value));
 });
 
 app.post("/rooms/:code/answers", async (c) => {

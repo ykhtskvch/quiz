@@ -8,6 +8,7 @@ import {
   type GameConfig,
   type GameResults,
   type GameStatus,
+  type OnboardingInput,
   type OptionKey,
   type PersonalResult,
   type PhaseTiming,
@@ -19,6 +20,7 @@ import {
   type Snapshot,
   type StatQuestion,
 } from "@quiz/shared";
+import { aggregateProfile, playerProfile, type GroupProfile } from "./profile.ts";
 
 export type Player = {
   id: string;
@@ -28,6 +30,8 @@ export type Player = {
   joinedAt: number;
   /** First question number (in the current game) this player can answer. Late joiners start at the next one. */
   activeFrom: number;
+  /** Private; never broadcast (BR-013). */
+  onboarding: OnboardingInput | null;
   connected: boolean;
   disconnectedAt: number | null;
 };
@@ -64,10 +68,15 @@ export type Game = {
   paused: { kind: PhaseDeadline; remainingMs: number } | null;
   softEndSuggested: boolean;
   results: GameResults | null;
+  /** Aggregated private preferences; backend-only input for the Composition Engine. */
+  profile: GroupProfile | null;
 };
 
 /** Bump when RoomState changes shape; rooms stored in an older shape are treated as closed. */
-export const ROOM_STATE_VERSION = 2;
+export const ROOM_STATE_VERSION = 3;
+
+/** `activeFrom` for a player who hasn't finished onboarding during a game. */
+export const NOT_YET = Number.MAX_SAFE_INTEGER;
 
 export type RoomState = {
   version: number;
@@ -126,14 +135,14 @@ export class Room {
 
   join(nickname: string, id: string, tokenHash: string, now: number): Player {
     this.touch(now);
-    const current = this.currentQuestion();
     const player: Player = {
       id,
       nickname: this.uniqueNickname(nickname),
       tokenHash,
       isHost: this.s.players.length === 0,
       joinedAt: now,
-      activeFrom: this.s.game?.status !== "FINISHED" && current ? current.number + 1 : 1,
+      activeFrom: this.gameRunning() ? NOT_YET : 1,
+      onboarding: null,
       connected: false,
       disconnectedAt: null,
     };
@@ -148,7 +157,7 @@ export class Room {
     p.connected = true;
     p.disconnectedAt = null;
     this.s.deadlines = this.s.deadlines.filter((d) => !(d.kind === "DISCONNECT_GRACE" && d.playerId === playerId));
-    this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId, status: this.playerStatus(p) } });
+    this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId, status: this.playerStatus(p), ready: Boolean(p.onboarding) } });
     this.broadcastCounts(now);
   }
 
@@ -158,15 +167,32 @@ export class Room {
     p.connected = false;
     p.disconnectedAt = now;
     this.s.deadlines.push({ kind: "DISCONNECT_GRACE", at: now + this.config.disconnectGraceMs, playerId });
-    this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId, status: "DISCONNECTED" } });
+    this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId, status: "DISCONNECTED", ready: Boolean(p.onboarding) } });
+  }
+
+  submitOnboarding(playerId: string, input: OnboardingInput, now: number): Result<true> {
+    const p = this.player(playerId);
+    if (!p) return fail(401, "invalid token");
+    // Preferences can change between games, not in the middle of one.
+    if (this.gameRunning() && p.onboarding) return fail(409, "game in progress");
+    this.touch(now);
+    p.onboarding = input;
+    if (this.gameRunning() && p.activeFrom === NOT_YET) {
+      p.activeFrom = (this.currentQuestion()?.number ?? 0) + 1;
+      this.s.game!.profile = this.buildProfile(); // late join updates future selection (Engine §14)
+    }
+    this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId, status: this.playerStatus(p), ready: Boolean(p.onboarding) } });
+    return ok(true);
   }
 
   start(hostId: string, now: number): Result<true> {
     const host = this.requireHost(hostId);
     if (!host.ok) return host;
     if (this.s.game) return fail(409, "game already started");
-    if (this.s.players.length < this.config.minPlayers) return fail(409, `need at least ${this.config.minPlayers} players`);
+    if (this.readyPlayers().length < this.config.minPlayers) return fail(409, `need at least ${this.config.minPlayers} ready players`);
     this.touch(now);
+    // Players still filling in onboarding join from the question after they finish.
+    for (const p of this.s.players) p.activeFrom = p.onboarding ? 1 : NOT_YET;
     this.newGame(1, now);
     return ok(true);
   }
@@ -175,8 +201,9 @@ export class Room {
     const host = this.requireHost(hostId);
     if (!host.ok) return host;
     if (this.s.game?.status !== "FINISHED") return fail(409, "game not finished");
+    if (this.readyPlayers().length < this.config.minPlayers) return fail(409, `need at least ${this.config.minPlayers} ready players`);
     this.touch(now);
-    for (const p of this.s.players) p.activeFrom = 1;
+    for (const p of this.s.players) p.activeFrom = p.onboarding ? 1 : NOT_YET;
     this.newGame(this.s.game.number + 1, now);
     return ok(true);
   }
@@ -280,7 +307,14 @@ export class Room {
     const myAnswer = me && q ? q.answers[me.id] : undefined;
     return {
       you: me
-        ? { role: "player", playerId: me.id, nickname: me.nickname, isHost: me.isHost, status: this.playerStatus(me) }
+        ? {
+            role: "player",
+            playerId: me.id,
+            nickname: me.nickname,
+            isHost: me.isHost,
+            status: this.playerStatus(me),
+            onboarding: me.onboarding,
+          }
         : { role: "display" },
       room: { code: this.s.code, status: this.roomStatus(), players: this.s.players.map((p) => this.publicPlayer(p)) },
       game: g ? { number: g.number, status: g.status, softEndSuggested: g.softEndSuggested } : null,
@@ -333,7 +367,16 @@ export class Room {
   }
 
   private newGame(number: number, now: number) {
-    this.s.game = { number, status: "ACTIVE", startedAt: now, questions: [], paused: null, softEndSuggested: false, results: null };
+    this.s.game = {
+      number,
+      status: "ACTIVE",
+      startedAt: now,
+      questions: [],
+      paused: null,
+      softEndSuggested: false,
+      results: null,
+      profile: this.buildProfile(),
+    };
     this.s.deadlines = this.s.deadlines.filter((d) => d.kind === "EXPIRY" || d.kind === "DISCONNECT_GRACE");
     this.s.deadlines.push({ kind: "SOFT_END", at: now + this.config.softEndAfterMs });
     this.broadcast({ type: "GAME_STARTED", seq: 0, payload: { number } });
@@ -370,7 +413,7 @@ export class Room {
 
     for (const p of this.s.players) {
       if (p.activeFrom === number && number > 1) {
-        this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId: p.id, status: this.playerStatus(p) } });
+        this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId: p.id, status: this.playerStatus(p), ready: Boolean(p.onboarding) } });
       }
     }
     this.broadcast({ type: "QUESTION_PRESENTED", seq: 0, payload: { question: this.publicQuestion(now)! } });
@@ -432,6 +475,7 @@ export class Room {
     });
 
     const leaderboard = this.s.players
+      .filter((p) => p.onboarding && p.activeFrom !== NOT_YET)
       .map((p) => {
         const mine = revealed.map((q) => q.answers[p.id]).filter((a): a is Answer => Boolean(a));
         return {
@@ -557,14 +601,25 @@ export class Room {
 
   private playerStatus(p: Player): PlayerStatus {
     if (!p.connected) return "DISCONNECTED";
-    const g = this.s.game;
-    const q = this.currentQuestion();
-    if (g && g.status !== "FINISHED" && p.activeFrom > (q?.number ?? 0)) return "PENDING";
+    if (!p.onboarding) return "ONBOARDING";
+    if (this.gameRunning() && p.activeFrom > (this.currentQuestion()?.number ?? 0)) return "PENDING";
     return "ACTIVE";
   }
 
+  private gameRunning(): boolean {
+    return Boolean(this.s.game && this.s.game.status !== "FINISHED");
+  }
+
+  private readyPlayers(): Player[] {
+    return this.s.players.filter((p) => p.onboarding);
+  }
+
+  private buildProfile(): GroupProfile {
+    return aggregateProfile(this.readyPlayers().map((p) => playerProfile(p.id, p.onboarding!)));
+  }
+
   private publicPlayer(p: Player): PublicPlayer {
-    return { id: p.id, nickname: p.nickname, isHost: p.isHost, status: this.playerStatus(p) };
+    return { id: p.id, nickname: p.nickname, isHost: p.isHost, status: this.playerStatus(p), ready: Boolean(p.onboarding) };
   }
 
   private roomStatus() {

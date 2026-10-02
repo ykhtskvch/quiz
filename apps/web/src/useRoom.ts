@@ -28,9 +28,9 @@ function apply(s: Snapshot, e: ServerEvent): Snapshot {
       return { ...next, room: { ...s.room, players: [...others, e.payload.player] } };
     }
     case "PLAYER_STATUS": {
-      const { playerId, status } = e.payload;
+      const { playerId, status, ready } = e.payload;
       const you = s.you.role === "player" && s.you.playerId === playerId ? { ...s.you, status } : s.you;
-      return { ...next, you, room: { ...s.room, players: s.room.players.map((p) => (p.id === playerId ? { ...p, status } : p)) } };
+      return { ...next, you, room: { ...s.room, players: s.room.players.map((p) => (p.id === playerId ? { ...p, status, ready } : p)) } };
     }
     case "GAME_STARTED":
       return {

@@ -1,5 +1,6 @@
 // Wire protocol between RoomDO and clients — docs/spec-v0.2/07-api-realtime.md.
 // Events are past tense; commands go over HTTP. Only broadcast events carry `seq`.
+import type { OnboardingInput } from "./onboarding.ts";
 
 export type OptionKey = "A" | "B" | "C" | "D";
 export const OPTION_KEYS: OptionKey[] = ["A", "B", "C", "D"];
@@ -7,9 +8,11 @@ export const OPTION_KEYS: OptionKey[] = ["A", "B", "C", "D"];
 export type RoomStatus = "WAITING" | "ACTIVE" | "CLOSED";
 export type GameStatus = "ACTIVE" | "PAUSED" | "FINISHED";
 export type QuestionPhase = "PRESENTING" | "ANSWERING" | "REVEALED";
-export type PlayerStatus = "PENDING" | "ACTIVE" | "DISCONNECTED";
+/** ONBOARDING: joined, private onboarding not finished. PENDING: plays from the next question. */
+export type PlayerStatus = "ONBOARDING" | "PENDING" | "ACTIVE" | "DISCONNECTED";
 
-export type PublicPlayer = { id: string; nickname: string; isHost: boolean; status: PlayerStatus };
+/** `ready` = finished onboarding; independent of connection status. */
+export type PublicPlayer = { id: string; nickname: string; isHost: boolean; status: PlayerStatus; ready: boolean };
 
 /**
  * Countdown for the current phase. Clients render `remainingMs` relative to the moment they
@@ -53,7 +56,17 @@ export type GameResults = {
 };
 
 export type Snapshot = {
-  you: { role: "display" } | { role: "player"; playerId: string; nickname: string; isHost: boolean; status: PlayerStatus };
+  you:
+    | { role: "display" }
+    | {
+        role: "player";
+        playerId: string;
+        nickname: string;
+        isHost: boolean;
+        status: PlayerStatus;
+        /** Own answers only — lets the phone prefill "change my preferences". */
+        onboarding: OnboardingInput | null;
+      };
   room: { code: string; status: RoomStatus; players: PublicPlayer[] };
   game: { number: number; status: GameStatus; softEndSuggested: boolean } | null;
   question: PublicQuestion | null;
@@ -67,7 +80,7 @@ export type Snapshot = {
 export type ServerEvent =
   | { type: "SNAPSHOT"; payload: Snapshot }
   | { type: "PLAYER_JOINED"; seq: number; payload: { player: PublicPlayer } }
-  | { type: "PLAYER_STATUS"; seq: number; payload: { playerId: string; status: PlayerStatus } }
+  | { type: "PLAYER_STATUS"; seq: number; payload: { playerId: string; status: PlayerStatus; ready: boolean } }
   | { type: "GAME_STARTED"; seq: number; payload: { number: number } }
   | { type: "QUESTION_PRESENTED"; seq: number; payload: { question: PublicQuestion } }
   | { type: "ANSWER_PHASE_STARTED"; seq: number; payload: { options: { key: OptionKey; text: string }[]; timing: PhaseTiming; activePlayers: number } }
