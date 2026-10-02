@@ -1,0 +1,649 @@
+# Pilot C1 — ru-pop-00s. Written by Claude as DRAFT; every fact needs human review (BR-130).
+# Sources have no URLs on purpose: the reviewer finds and verifies them.
+
+families:
+  - family: tatu
+    name: "t.A.T.u."
+    facts:
+      - id: tatu-eurovision-2003-place
+        statement: "На «Евровидении-2003» t.A.T.u. с песней «Не верь, не бойся» заняли 3-е место (164 балла)."
+        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2003", type: REFERENCE, verified: false }]
+        questions:
+          - id: tatu-eurovision-2003-place-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какое место заняла группа t.A.T.u. на «Евровидении-2003» с песней «Не верь, не бойся»?"
+            options:
+              - { key: A, text: "Первое", distractor: PLAUSIBLE }
+              - { key: B, text: "Третье", correct: true }
+              - { key: C, text: "Второе", distractor: NEAR_MISS }
+              - { key: D, text: "Девятое", distractor: PLAUSIBLE }
+            explanation: "Россия набрала 164 балла — всего на 3 меньше победительницы, Сертаб Эренер из Турции."
+            topics: { ru-pop-00s: 1.0, eurovision: 0.6 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tatu-members
+        statement: "Участницы t.A.T.u. — Юлия Волкова и Елена Катина; обе до этого пели в ансамбле «Непоседы»."
+        sources: [{ name: "Википедия: t.A.T.u.", type: REFERENCE, verified: false }]
+        questions:
+          - id: tatu-members-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Юлия Волкова пела в группе t.A.T.u. вместе с…"
+            options:
+              - { key: A, text: "Юлией Савичевой", distractor: SAME_CATEGORY }
+              - { key: B, text: "Ириной Дубцовой", distractor: SAME_CATEGORY }
+              - { key: C, text: "Еленой Катиной", correct: true }
+              - { key: D, text: "Полиной Гагариной", distractor: SAME_CATEGORY }
+            explanation: "Дуэт собрали в 1999 году; обе участницы до этого пели в детском ансамбле «Непоседы»."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tatu-producer
+        statement: "Продюсер и автор концепции t.A.T.u. — Иван Шаповалов."
+        sources: [{ name: "Википедия: Шаповалов, Иван Николаевич", type: REFERENCE, verified: false }]
+        questions:
+          - id: tatu-producer-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто был продюсером и автором концепции группы t.A.T.u.?"
+            options:
+              - { key: A, text: "Юрий Айзеншпис", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Максим Фадеев", distractor: SAME_CATEGORY }
+              - { key: C, text: "Игорь Крутой", distractor: SAME_CATEGORY }
+              - { key: D, text: "Иван Шаповалов", correct: true }
+            explanation: "До t.A.T.u. Шаповалов работал психологом и в рекламе — отсюда провокационный имидж группы."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: проверить, что Шаповалов действительно работал психологом и в рекламе, — иначе переписать пояснение."]
+
+  - family: fabrika-zvezd
+    name: "«Фабрика звёзд»"
+    facts:
+      - id: fabrika-zvezd-channel
+        statement: "«Фабрика звёзд» выходила на Первом канале; первый сезон — 2002 год."
+        sources: [{ name: "Википедия: Фабрика звёзд (Россия)", type: REFERENCE, verified: false }]
+        questions:
+          - id: fabrika-zvezd-channel-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "На каком телеканале выходила первая «Фабрика звёзд» (2002)?"
+            options:
+              - { key: A, text: "Первый канал", correct: true }
+              - { key: B, text: "НТВ", distractor: SAME_CATEGORY }
+              - { key: C, text: "СТС", distractor: SAME_CATEGORY }
+              - { key: D, text: "Муз-ТВ", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Продюсером первого сезона был Игорь Матвиенко — тот самый, что стоял за «Любэ» и «Иванушками»."
+            topics: { ru-pop-00s: 1.0, ru-tv-90s-00s: 0.7 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: fabrika-zvezd-1-winner
+        statement: "Победитель первой «Фабрики звёзд» (2002) — группа «Корни»."
+        sources: [{ name: "Википедия: Фабрика звёзд 1", type: REFERENCE, verified: false }]
+        questions:
+          - id: fabrika-zvezd-1-winner-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой коллектив победил в первой «Фабрике звёзд»?"
+            options:
+              - { key: A, text: "«Банда»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Корни»", correct: true }
+              - { key: C, text: "«Фабрика»", distractor: NEAR_MISS }
+              - { key: D, text: "«Челси»", distractor: SAME_CATEGORY }
+            explanation: "Их «Ты узнаешь её» стала одним из главных хитов 2002 года. Группа «Фабрика» тоже вышла из первого сезона, но не победила."
+            topics: { ru-pop-00s: 1.0, ru-tv-90s-00s: 0.6 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: fabrika-zvezd-host
+        statement: "Ведущая первых сезонов «Фабрики звёзд» — Яна Чурикова."
+        sources: [{ name: "Википедия: Чурикова, Яна Александровна", type: REFERENCE, verified: false }]
+        questions:
+          - id: fabrika-zvezd-host-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто вела первые сезоны «Фабрики звёзд»?"
+            options:
+              - { key: A, text: "Ксения Собчак", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Тина Канделаки", distractor: SAME_CATEGORY }
+              - { key: C, text: "Яна Чурикова", correct: true }
+              - { key: D, text: "Ольга Шелест", distractor: SAME_CATEGORY }
+            explanation: "Ксения Собчак в те же годы вела другое большое реалити — «Дом-2» на ТНТ."
+            topics: { ru-pop-00s: 0.8, ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: fabrika-zvezd-format
+        statement: "«Фабрика звёзд» — российская адаптация формата Star Academy."
+        sources: [{ name: "Википедия: Star Academy", type: REFERENCE, verified: false }]
+        questions:
+          - id: fabrika-zvezd-format-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Адаптацией какого международного телеформата была «Фабрика звёзд»?"
+            options:
+              - { key: A, text: "Pop Idol", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Big Brother", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Star Academy", correct: true }
+              - { key: D, text: "The X Factor", distractor: SAME_CATEGORY }
+            explanation: "Pop Idol в России адаптировали как «Народный артист» — он шёл в те же годы на канале «Россия»."
+            topics: { ru-pop-00s: 0.7, ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0, GLOBAL: 0.3 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Star Academy восходит к испанскому Operación Triunfo — проверить, что формулировка «адаптация Star Academy» корректна."]
+
+  - family: timati
+    name: "Тимати"
+    facts:
+      - id: timati-banda
+        statement: "Тимати участвовал в «Фабрике звёзд-4» (2004) в составе группы «Банда»."
+        sources: [{ name: "Википедия: Тимати", type: REFERENCE, verified: false }]
+        questions:
+          - id: timati-banda-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "В составе какой группы Тимати участвовал в «Фабрике звёзд»?"
+            options:
+              - { key: A, text: "«Корни»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Банда»", correct: true }
+              - { key: C, text: "«Инь-Ян»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Челси»", distractor: SAME_CATEGORY }
+            explanation: "Это была четвёртая «Фабрика» (2004); сольную карьеру Тимати начал вскоре после проекта."
+            topics: { ru-pop-00s: 1.0, ru-tv-90s-00s: 0.5 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: via-gra
+    name: "«ВИА Гра»"
+    facts:
+      - id: via-gra-founder
+        statement: "Группу «ВИА Гра» в 2000 году создали Константин Меладзе и Дмитрий Костюк; Меладзе — автор большинства песен."
+        sources: [{ name: "Википедия: ВИА Гра", type: REFERENCE, verified: false }]
+        questions:
+          - id: via-gra-founder-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто создал группу «ВИА Гра» и написал большинство её хитов?"
+            options:
+              - { key: A, text: "Валерий Меладзе", distractor: NEAR_MISS }
+              - { key: B, text: "Максим Фадеев", distractor: SAME_CATEGORY }
+              - { key: C, text: "Константин Меладзе", correct: true }
+              - { key: D, text: "Игорь Матвиенко", distractor: SAME_CATEGORY }
+            explanation: "Константин — младший брат Валерия Меладзе; группу он создал вместе с продюсером Дмитрием Костюком."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: via-gra-first-singer
+        statement: "Алёна Винницкая — участница «ВИА Гры» с момента основания (2000); Вера Брежнева и Анна Седокова пришли в 2002 году."
+        sources: [{ name: "Википедия: ВИА Гра", type: REFERENCE, verified: false }]
+        questions:
+          - id: via-gra-first-singer-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто из солисток была в «ВИА Гре» с самого основания группы в 2000 году?"
+            options:
+              - { key: A, text: "Вера Брежнева", distractor: SAME_CATEGORY }
+              - { key: B, text: "Алёна Винницкая", correct: true }
+              - { key: C, text: "Анна Седокова", distractor: SAME_CATEGORY }
+              - { key: D, text: "Альбина Джанабаева", distractor: SAME_CATEGORY }
+            explanation: "Вера Брежнева и Анна Седокова присоединились позже, в 2002 году."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: via-gra-name
+        statement: "Название «ВИА Гра» обыгрывает советскую аббревиатуру ВИА — вокально-инструментальный ансамбль."
+        sources: [{ name: "Википедия: Вокально-инструментальный ансамбль", type: REFERENCE, verified: false }]
+        questions:
+          - id: via-gra-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Название «ВИА Гра» обыгрывает советскую аббревиатуру ВИА. Как она расшифровывается?"
+            options:
+              - { key: A, text: "Всесоюзное информационное агентство", distractor: PLAUSIBLE }
+              - { key: B, text: "Вокально-инструментальный ансамбль", correct: true }
+              - { key: C, text: "Высшая исполнительская академия", distractor: PLAUSIBLE }
+              - { key: D, text: "Всероссийская интерпретация авторов", distractor: PLAUSIBLE }
+            explanation: "Так в СССР называли разрешённые поп-группы вроде «Песняров» и «Самоцветов»."
+            topics: { ru-pop-00s: 0.8, ussr-everyday: 0.5 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 1.0, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: serebro
+    name: "«Серебро»"
+    facts:
+      - id: serebro-producer
+        statement: "Продюсер группы «Серебро» — Максим Фадеев; на «Евровидении-2007» группа заняла 3-е место с песней Song #1."
+        sources: [{ name: "Википедия: Серебро (группа)", type: REFERENCE, verified: false }]
+        questions:
+          - id: serebro-producer-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто продюсировал группу «Серебро», занявшую 3-е место на «Евровидении-2007»?"
+            options:
+              - { key: A, text: "Максим Фадеев", correct: true }
+              - { key: B, text: "Иван Шаповалов", distractor: SAME_CATEGORY }
+              - { key: C, text: "Константин Меладзе", distractor: SAME_CATEGORY }
+              - { key: D, text: "Игорь Крутой", distractor: SAME_CATEGORY }
+            explanation: "Song #1 была дебютной песней группы — «Серебро» поехало на конкурс почти никому не известным."
+            topics: { ru-pop-00s: 1.0, eurovision: 0.5 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: dima-bilan
+    name: "Дима Билан"
+    facts:
+      - id: dima-bilan-eurovision-2008
+        statement: "Дима Билан победил на «Евровидении-2008» в Белграде с песней Believe."
+        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2008", type: REFERENCE, verified: false }]
+        questions:
+          - id: dima-bilan-eurovision-2008-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "С какой песней Дима Билан победил на «Евровидении-2008»?"
+            options:
+              - { key: A, text: "Never Let You Go", distractor: NEAR_MISS }
+              - { key: B, text: "Shady Lady", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Believe", correct: true }
+              - { key: D, text: "Song #1", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "С Never Let You Go Билан занял второе место в 2006 году, а Shady Lady принесла второе место Ани Лорак в том же 2008-м."
+            topics: { ru-pop-00s: 1.0, eurovision: 0.8 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: dima-bilan-real-name
+        statement: "Настоящее имя Димы Билана — Виктор Белан."
+        sources: [{ name: "Википедия: Дима Билан", type: REFERENCE, verified: false }]
+        questions:
+          - id: dima-bilan-real-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как на самом деле зовут Диму Билана?"
+            options:
+              - { key: A, text: "Дмитрий Биланов", distractor: PLAUSIBLE }
+              - { key: B, text: "Виктор Белан", correct: true }
+              - { key: C, text: "Дмитрий Белан", distractor: NEAR_MISS }
+              - { key: D, text: "Виктор Билан", distractor: NEAR_MISS }
+            explanation: "Сценическое имя он позже сделал официальным."
+            topics: { ru-pop-00s: 1.0, celebrities: 0.5 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 1
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: проверить, что Билан официально сменил паспортное имя и в каком году."]
+
+  - family: uma2rman
+    name: "Uma2rman"
+    facts:
+      - id: uma2rman-founders
+        statement: "Группу Uma2rman основали братья Владимир и Сергей Кристовские из Нижнего Новгорода."
+        sources: [{ name: "Википедия: Uma2rman", type: REFERENCE, verified: false }]
+        questions:
+          - id: uma2rman-founders-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какие братья основали группу Uma2rman?"
+            options:
+              - { key: A, text: "Вадим и Глеб Самойловы", distractor: NEAR_MISS }
+              - { key: B, text: "Валерий и Константин Меладзе", distractor: SAME_CATEGORY }
+              - { key: C, text: "Борис и Константин Бурдаевы", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Владимир и Сергей Кристовские", correct: true }
+            explanation: "Название группы отсылает к актрисе Уме Турман. Бурдаевы — это «Братья Грим», Самойловы — «Агата Кристи»."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: uma2rman-nochnoy-dozor
+        statement: "Uma2rman записали песню «Ночной дозор» для одноимённого фильма Тимура Бекмамбетова (2004)."
+        sources: [{ name: "Википедия: Ночной дозор (фильм)", type: REFERENCE, verified: false }]
+        questions:
+          - id: uma2rman-nochnoy-dozor-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Для какого фильма группа Uma2rman записала песню?"
+            options:
+              - { key: A, text: "«Бумер»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«Ночной дозор»", correct: true }
+              - { key: C, text: "«Брат 2»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«9 рота»", distractor: SAME_CATEGORY }
+            explanation: "Песня так и называется — «Ночной дозор»; фильм Тимура Бекмамбетова вышел в 2004 году."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: zveri
+    name: "«Звери»"
+    facts:
+      - id: zveri-rayony-kvartaly
+        statement: "Песню «Районы-кварталы» исполняет группа «Звери»."
+        sources: [{ name: "Википедия: Звери (группа)", type: REFERENCE, verified: false }]
+        questions:
+          - id: zveri-rayony-kvartaly-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какая группа исполняла песню «Районы-кварталы»?"
+            options:
+              - { key: A, text: "«Мумий Тролль»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Би-2»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Сплин»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Звери»", correct: true }
+            explanation: "Песня вышла в середине 2000-х и стала одним из гимнов дворовых компаний того времени."
+            topics: { ru-pop-00s: 1.0, ru-rock: 0.4 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: zveri-roma-real-name
+        statement: "Настоящее имя Ромы Зверя — Роман Билык; он родом из Таганрога."
+        sources: [{ name: "Википедия: Рома Зверь", type: REFERENCE, verified: false }]
+        questions:
+          - id: zveri-roma-real-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какая настоящая фамилия у Ромы Зверя, лидера группы «Звери»?"
+            options:
+              - { key: A, text: "Зверев", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Билык", correct: true }
+              - { key: C, text: "Белый", distractor: PLAUSIBLE }
+              - { key: D, text: "Романов", distractor: PLAUSIBLE }
+            explanation: "Роман Билык родом из Таганрога; в Москву он переехал уже с готовыми песнями будущих «Зверей»."
+            topics: { ru-pop-00s: 1.0, ru-rock: 0.4 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 5
+            dignity: 2
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: seryoga
+    name: "Серёга"
+    facts:
+      - id: seryoga-chorny-bumer
+        statement: "Песню «Чёрный бумер» исполняет рэпер Серёга."
+        sources: [{ name: "Википедия: Серёга", type: REFERENCE, verified: false }]
+        questions:
+          - id: seryoga-chorny-bumer-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Чёрный бумер»?"
+            options:
+              - { key: A, text: "Серёга", correct: true }
+              - { key: B, text: "Тимати", distractor: SAME_CATEGORY }
+              - { key: C, text: "Децл", distractor: SAME_CATEGORY }
+              - { key: D, text: "Сергей Шнуров", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Шнуров написал музыку к фильму «Бумер», но «Чёрный бумер» — песня Серёги, к фильму она отношения не имеет."
+            topics: { ru-pop-00s: 1.0, music-now: 0.2 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: glukoza
+    name: "Глюк'oZa"
+    facts:
+      - id: glukoza-animated-image
+        statement: "В первых клипах проекта Глюк'oZa (2002–2003) вместо певицы был нарисованный мультипликационный персонаж."
+        sources: [{ name: "Википедия: Глюк’oZa", type: REFERENCE, verified: false }]
+        questions:
+          - id: glukoza-animated-image-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Чем был необычен образ Глюк'oZa в первых клипах (2002–2003)?"
+            options:
+              - { key: A, text: "Певица выступала в маске, скрывая лицо", distractor: PLAUSIBLE }
+              - { key: B, text: "Вместо певицы в клипах был нарисованный персонаж", correct: true }
+              - { key: C, text: "Голос певицы был полностью синтезирован", distractor: PLAUSIBLE }
+              - { key: D, text: "Все песни исполнялись на английском", distractor: PLAUSIBLE }
+            explanation: "Реальная исполнительница, Наталья Ионова, появилась перед публикой не сразу. Проект продюсировал Максим Фадеев."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: russia-eurovision
+    name: "Россия на «Евровидении»"
+    facts:
+      - id: mumiy-troll-eurovision-2001
+        statement: "На «Евровидении-2001» Россию представлял «Мумий Тролль» с песней Lady Alpine Blue (12-е место)."
+        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2001", type: REFERENCE, verified: false }]
+        questions:
+          - id: mumiy-troll-eurovision-2001-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какая группа представляла Россию на «Евровидении-2001»?"
+            options:
+              - { key: A, text: "«Мумий Тролль»", correct: true }
+              - { key: B, text: "t.A.T.u.", distractor: NEAR_MISS }
+              - { key: C, text: "«Серебро»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Звери»", distractor: PLAUSIBLE }
+            explanation: "Песня Lady Alpine Blue заняла 12-е место. t.A.T.u. поехали на конкурс двумя годами позже."
+            topics: { ru-pop-00s: 0.8, eurovision: 1.0, ru-rock: 0.4 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: alsu-eurovision-2000
+        statement: "Алсу заняла 2-е место на «Евровидении-2000» с песней Solo — первый «серебряный» результат России."
+        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2000", type: REFERENCE, verified: false }]
+        questions:
+          - id: alsu-eurovision-2000-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "С какой песней Алсу заняла второе место на «Евровидении-2000»?"
+            options:
+              - { key: A, text: "Believe", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Solo", correct: true }
+              - { key: C, text: "«Зимний сон»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Lady Alpine Blue", distractor: SAME_CATEGORY }
+            explanation: "Это было первое второе место России на конкурсе. «Зимний сон» — её же хит, но к «Евровидению» он отношения не имеет."
+            topics: { ru-pop-00s: 0.8, eurovision: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: polina-gagarina
+    name: "Полина Гагарина"
+    facts:
+      - id: polina-gagarina-fabrika-2
+        statement: "Полина Гагарина победила во второй «Фабрике звёзд» (2003), а в 2015 году заняла 2-е место на «Евровидении» с песней A Million Voices."
+        sources: [{ name: "Википедия: Гагарина, Полина Сергеевна", type: REFERENCE, verified: false }]
+        questions:
+          - id: polina-gagarina-fabrika-2-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто победил во второй «Фабрике звёзд» (2003), а в 2015 году занял второе место на «Евровидении»?"
+            options:
+              - { key: A, text: "Юлия Савичева", distractor: SAME_CATEGORY }
+              - { key: B, text: "Ирина Дубцова", distractor: SAME_CATEGORY }
+              - { key: C, text: "Полина Гагарина", correct: true }
+              - { key: D, text: "Елена Темникова", distractor: SAME_CATEGORY }
+            explanation: "На «Евровидении-2015» в Вене Гагарина исполнила песню A Million Voices."
+            topics: { ru-pop-00s: 1.0, eurovision: 0.6, ru-tv-90s-00s: 0.4 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: smash
+    name: "Smash!!"
+    facts:
+      - id: smash-members
+        statement: "В дуэт Smash!! входили Сергей Лазарев и Влад Топалов; известность им принёс кавер на песню Belle."
+        sources: [{ name: "Википедия: Smash!!", type: REFERENCE, verified: false }]
+        questions:
+          - id: smash-members-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "С кем Сергей Лазарев пел в дуэте Smash!!?"
+            options:
+              - { key: A, text: "С Владом Соколовским", distractor: NEAR_MISS }
+              - { key: B, text: "С Владом Топаловым", correct: true }
+              - { key: C, text: "С Димой Биланом", distractor: SAME_CATEGORY }
+              - { key: D, text: "С Тимати", distractor: SAME_CATEGORY }
+            explanation: "Дуэт прославился кавер-версией песни Belle из мюзикла «Нотр-Дам де Пари». Влад Соколовский — участник «Банды» с «Фабрики»."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: maksim
+    name: "МакSим"
+    facts:
+      - id: maksim-znaesh-li-ty
+        statement: "Хит середины 2000-х «Знаешь ли ты» исполняет певица МакSим из Казани."
+        sources: [{ name: "Википедия: МакSим", type: REFERENCE, verified: false }]
+        questions:
+          - id: maksim-znaesh-li-ty-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял хит середины 2000-х «Знаешь ли ты»?"
+            options:
+              - { key: A, text: "Земфира", distractor: SAME_CATEGORY }
+              - { key: B, text: "Юлия Савичева", distractor: SAME_CATEGORY }
+              - { key: C, text: "МакSим", correct: true }
+              - { key: D, text: "Ёлка", distractor: SAME_CATEGORY }
+            explanation: "Песня принесла певице из Казани всероссийскую известность."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI

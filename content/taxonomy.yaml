@@ -1,0 +1,57 @@
+# Taxonomy for MVP — see docs/spec-v0.2/08-topics-mvp.md
+# implied_context is used to infer a player's cultural background (D-01).
+
+contexts:
+  - { code: GLOBAL, name: "Глобальный" }
+  - { code: POST_SOVIET, name: "Постсоветское пространство" }
+  - { code: RUSSIA_1990S, name: "Россия 1990-х", parent: POST_SOVIET }
+  - { code: RUSSIA_2000S, name: "Россия 2000-х", parent: POST_SOVIET }
+  - { code: UK, name: "Великобритания" }
+  - { code: US, name: "США" }
+  - { code: EUROPE, name: "Европа" }
+  - { code: ASIA, name: "Азия" }
+  - { code: INTERNET_GLOBAL, name: "Глобальный интернет" }
+
+topics:
+  # История
+  - { slug: ancient-world, name: "Древний мир", group: "История", level: B, target_questions: 8 }
+  - { slug: russia-pre-1917, name: "История России до 1917", group: "История", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: ussr-history, name: "СССР: история", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: cold-war, name: "Холодная война и XX век", group: "История", level: A, target_questions: 15 }
+  - { slug: ussr-everyday, name: "Советский быт", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: russia-90s-life, name: "90-е: жизнь и быт", group: "История", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  # Наука и мир
+  - { slug: space, name: "Космос", group: "Наука и мир", level: A, target_questions: 15 }
+  - { slug: science, name: "Наука и изобретения", group: "Наука и мир", level: B, target_questions: 8 }
+  - { slug: geography, name: "География и страны", group: "Наука и мир", level: A, target_questions: 15 }
+  - { slug: nature, name: "Животные и природа", group: "Наука и мир", level: B, target_questions: 8 }
+  # Литература и искусство
+  - { slug: russian-literature, name: "Русская литература", group: "Литература и искусство", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: world-literature, name: "Мировая литература", group: "Литература и искусство", level: B, target_questions: 8 }
+  - { slug: art, name: "Живопись и искусство", group: "Литература и искусство", level: B, target_questions: 8 }
+  # Кино и ТВ
+  - { slug: soviet-cinema, name: "Советское кино", group: "Кино и ТВ", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: world-cinema, name: "Голливуд и мировое кино", group: "Кино и ТВ", level: A, target_questions: 15 }
+  - { slug: ru-tv-90s-00s, name: "ТВ 90-х и 00-х", group: "Кино и ТВ", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ru-series, name: "Российские сериалы 2000–2010-х", group: "Кино и ТВ", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: world-series, name: "Мировые сериалы", group: "Кино и ТВ", level: B, target_questions: 8 }
+  - { slug: cartoons, name: "Мультфильмы: советские и мировые", group: "Кино и ТВ", level: A, target_questions: 15 }
+  - { slug: ads-90s-00s, name: "Реклама 90-х и 00-х", group: "Кино и ТВ", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  # Музыка
+  - { slug: ru-pop-90s, name: "Русская поп-музыка 90-х", group: "Музыка", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ru-pop-00s, name: "Русская поп-музыка 00-х", group: "Музыка", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: ru-rock, name: "Русский рок", group: "Музыка", level: B, target_questions: 8, implied_context: POST_SOVIET }
+  - { slug: world-pop, name: "Мировая поп-музыка 80–00-х", group: "Музыка", level: A, target_questions: 15 }
+  - { slug: eurovision, name: "Евровидение", group: "Музыка", level: B, target_questions: 8 }
+  - { slug: music-now, name: "Рэп и современная музыка", group: "Музыка", level: B, target_questions: 8 }
+  # Интернет и игры
+  - { slug: old-internet, name: "Старый интернет", group: "Интернет и игры", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: internet-now, name: "Мемы и интернет сейчас", group: "Интернет и игры", level: B, target_questions: 8 }
+  - { slug: videogames, name: "Видеоигры", group: "Интернет и игры", level: B, target_questions: 8 }
+  - { slug: fandoms, name: "Фэнтези и фандомы", group: "Интернет и игры", level: B, target_questions: 8 }
+  # Жизнь
+  - { slug: food, name: "Еда и кухня", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: fashion-brands, name: "Мода и бренды", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: celebrities, name: "Знаменитости и светская хроника", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: football, name: "Футбол", group: "Жизнь", level: B, target_questions: 8 }
+  - { slug: sports, name: "Олимпиады, F1 и другой спорт", group: "Жизнь", level: B, target_questions: 8 }
