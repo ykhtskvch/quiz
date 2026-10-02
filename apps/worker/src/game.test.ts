@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { DEFAULT_CONFIG, type DemoQuestion, type GameConfig, type OnboardingInput } from "@quiz/shared";
+import { DEFAULT_CONFIG, type BankQuestion, type GameConfig, type OnboardingInput } from "@quiz/shared";
+import { DEFAULT_ENGINE_CONFIG } from "@quiz/engine";
 import { newRoomState, Room, type RoomState } from "./game.ts";
 
 const config: GameConfig = {
@@ -11,9 +12,22 @@ const config: GameConfig = {
   disconnectGraceMs: 25_000,
 };
 
-const bank: DemoQuestion[] = ["q1", "q2", "q3", "q4"].map((id, i) => ({
+const bank: BankQuestion[] = ["q1", "q2", "q3", "q4"].map((id, i) => ({
   id,
+  factId: `fact-${id}`,
   familyId: `f${i}`,
+  language: "ru",
+  originLanguage: "ru",
+  cultureSpecificity: "GLOBAL",
+  isBridge: false,
+  topics: { [["space", "art", "food", "geography"][i]]: 1 },
+  contexts: { GLOBAL: 1 },
+  generations: {},
+  difficulty: 2,
+  dignity: 3,
+  effects: {},
+  ageSafety: "ALL",
+  status: "DRAFT",
   text: `Question ${id}?`,
   options: [
     { key: "A", text: `${id}-a` },
@@ -36,7 +50,7 @@ const onboarding: OnboardingInput = {
 function setup(nPlayers = 2) {
   const state: RoomState = newRoomState("ABCDEF", "display-hash", 0, config);
   const ids: string[] = [];
-  const at = (s: RoomState) => new Room(s, config, bank);
+  const at = (s: RoomState) => new Room(s, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
   for (let i = 0; i < nPlayers; i++) {
     const r = at(state);
     const p = r.join(`P${i}`, `p${i}`, `hash${i}`, 0);
@@ -50,6 +64,9 @@ function setup(nPlayers = 2) {
 }
 
 const q = (state: RoomState) => state.game!.questions.at(-1)!;
+
+/** rng ≈ 1 makes the option shuffle an identity, so "B" stays the correct key in these tests. */
+const keepOrder = () => 0.999999;
 
 describe("question cycle", () => {
   it("presents, opens answering after the presentation, reveals when everyone answered", () => {
@@ -153,12 +170,35 @@ describe("host controls", () => {
     expect(state.deadlines.every((d) => d.kind === "EXPIRY")).toBe(true);
   });
 
-  it("play again keeps used questions out", () => {
+  it("play again keeps used questions and facts out", () => {
     const { state, ids, room } = setup();
+    const first = q(state).questionId;
     room().end(ids[0], 1000);
     room().playAgain(ids[0], 2000);
     expect(state.game!.number).toBe(2);
-    expect(q(state).questionId).toBe("q2");
+    expect(q(state).questionId).not.toBe(first);
+    expect(state.usedFactIds).toHaveLength(2);
+  });
+
+  it("reshuffles options on every showing and remaps the correct key", () => {
+    const state = newRoomState("ABCDEF", "h", 0, config);
+    const reverse = (() => {
+      const seq = [0, 0, 0, 0.5, 0, 0, 0]; // engine pick, then a permutation
+      let i = 0;
+      return () => seq[i++ % seq.length];
+    })();
+    const room = () => new Room(state, config, bank, DEFAULT_ENGINE_CONFIG, reverse);
+    for (const id of ["a", "b"]) {
+      const p = room().join(id, id, `h${id}`, 0);
+      room().connect(p.id, 0);
+      room().submitOnboarding(p.id, onboarding, 0);
+    }
+    room().start(state.players[0].id, 0);
+    const run = q(state);
+    const original = bank.find((b) => b.id === run.questionId)!;
+    const correctText = original.options.find((o) => o.key === original.correctKey)!.text;
+    expect(run.options.find((o) => o.key === run.correctKey)!.text).toBe(correctText);
+    expect(run.options.map((o) => o.key)).toEqual(["A", "B", "C", "D"]);
   });
 });
 
@@ -207,7 +247,7 @@ describe("players", () => {
 describe("onboarding", () => {
   it("start needs two players who finished onboarding; stragglers join later", () => {
     const state = newRoomState("ABCDEF", "h", 0, config);
-    const room = () => new Room(state, config, bank);
+    const room = () => new Room(state, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
     const a = room().join("A", "a", "ha", 0);
     const b = room().join("B", "b", "hb", 0);
     const c = room().join("C", "c", "hc", 0);
@@ -235,7 +275,7 @@ describe("onboarding", () => {
 
   it("never broadcasts onboarding answers", () => {
     const state = newRoomState("ABCDEF", "h", 0, config);
-    const r = new Room(state, config, bank);
+    const r = new Room(state, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
     const p = r.join("A", "a", "ha", 0);
     r.connect(p.id, 0);
     r.submitOnboarding(p.id, { ...onboarding, ageBand: "13_17" }, 0);
@@ -247,6 +287,19 @@ describe("onboarding", () => {
 });
 
 describe("privacy and lifecycle", () => {
+  it("never sends engine internals (hero target, scores) to any client", () => {
+    const { state, ids, room } = setup();
+    const r = room();
+    r.tick(3000);
+    r.answer(ids[0], "B", 3000);
+    r.answer(ids[1], "B", 3000);
+    expect(state.game!.questions[0].selection).toBeDefined();
+    const sent = [...r.effects.map((e) => JSON.stringify(e)), JSON.stringify(r.snapshot({ role: "display" }, 3000))];
+    const player = state.players[0];
+    sent.push(JSON.stringify(r.snapshot({ role: "player", player }, 3000)));
+    for (const s of sent) expect(s).not.toMatch(/heroPlayerId|selection|components|composition|profile/);
+  });
+
   it("never broadcasts the correct key before the reveal", () => {
     const { ids, room } = setup();
     const r = room();

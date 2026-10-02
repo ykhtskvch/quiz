@@ -26,7 +26,8 @@ writeFileSync(
     `export const CONTEXTS: TaxonomyContext[] = ${JSON.stringify(taxonomy.contexts.map((c) => ({ code: c.code, name: c.name, parent: c.parent ?? null })), null, 2)};\n`,
 );
 
-// ---------- demo bank ----------
+// ---------- bank ----------
+// Includes unreviewed DRAFTs until C2: the engine filters them out unless config.allowDrafts.
 
 const { files, schemaErrors } = loadFamilies();
 if (schemaErrors.length) {
@@ -34,33 +35,39 @@ if (schemaErrors.length) {
   process.exit(1);
 }
 
-const perFile = files.map((f) =>
+const bank = files.flatMap((f) =>
   f.families.flatMap((family) =>
     family.facts.flatMap((fact) =>
       fact.questions
         .filter((q) => q.status !== "RETIRED")
         .map((q) => ({
           id: q.id,
+          factId: fact.id,
           familyId: family.family,
+          language: q.language,
+          originLanguage: q.origin_language,
+          cultureSpecificity: q.culture_specificity,
+          isBridge: q.is_bridge,
           text: q.text,
           options: q.options.map((o) => ({ key: o.key, text: o.text })),
           correctKey: q.options.find((o) => o.correct)!.key,
           explanation: q.explanation,
+          topics: q.topics,
+          contexts: q.contexts,
+          generations: q.generations,
+          difficulty: q.difficulty,
+          dignity: q.dignity,
+          effects: q.effects,
+          ageSafety: q.age_safety,
+          status: q.status,
           ...(q.answer_time_override ? { answerMs: q.answer_time_override * 1000 } : {}),
         })),
     ),
   ),
 );
-const interleaved = [];
-for (let i = 0; perFile.some((qs) => i < qs.length); i++) {
-  for (const qs of perFile) if (qs[i]) interleaved.push(qs[i]);
-}
 writeFileSync(
-  "packages/shared/src/demo-bank.generated.ts",
-  HEADER +
-    "// Includes unreviewed DRAFT questions (dev only).\n" +
-    `import type { DemoQuestion } from "./demo-bank.ts";\n\n` +
-    `export const DEMO_BANK: DemoQuestion[] = ${JSON.stringify(interleaved, null, 2)};\n`,
+  "packages/shared/src/bank.generated.ts",
+  HEADER + `import type { BankQuestion } from "./bank.ts";\n\n` + `export const BANK: BankQuestion[] = ${JSON.stringify(bank, null, 2)};\n`,
 );
 
-console.log(`Wrote ${topics.length} topics, ${taxonomy.contexts.length} contexts, ${interleaved.length} demo questions`);
+console.log(`Wrote ${topics.length} topics, ${taxonomy.contexts.length} contexts, ${bank.length} bank questions`);

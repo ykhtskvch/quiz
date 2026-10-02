@@ -1,8 +1,6 @@
 // Group Profile Engine (EPIC 5): turns private onboarding answers into the room profile the
 // Composition Engine reads. Pure; the result never leaves the backend (BR-013, Engine §18).
-import { DIGNITY_CHOICES, TOPICS, type AgeBand, type Depth, type OnboardingInput } from "@quiz/shared";
-
-export type Era = "80s" | "90s" | "00s" | "10s" | "current";
+import { DIGNITY_CHOICES, ERAS, TOPICS, type AgeBand, type Depth, type Era, type OnboardingInput } from "@quiz/shared";
 
 /** Engine §5 — topic match values. Starting points for playtests, not final. */
 export const TOPIC_AFFINITY = { EXPERT: 1.0, INTERESTED: 0.8, CASUAL: 0.6, NONE: 0.3, LESS_OF: 0.1 } as const;
@@ -90,7 +88,7 @@ export function aggregateProfile(players: PlayerProfile[]): GroupProfile {
   }
 
   const generationMix: Partial<Record<Era, number>> = {};
-  for (const era of ["80s", "90s", "00s", "10s", "current"] as Era[]) {
+  for (const era of ERAS) {
     const w = mean(players.map((p) => p.eras[era] ?? 0));
     if (w > 0) generationMix[era] = round(w);
   }

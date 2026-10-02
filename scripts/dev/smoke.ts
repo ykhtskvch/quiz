@@ -119,18 +119,22 @@ check(!display.raw.some((r) => r.includes("correctKey") && !r.includes("QUESTION
 const a1 = await api<{ optionKey: string }>(`/rooms/${code}/answers`, { token: anna.playerToken, body: { optionKey: "B" } });
 const a1again = await api<{ optionKey: string }>(`/rooms/${code}/answers`, { token: anna.playerToken, body: { optionKey: "C" } });
 check(a1.status === 200 && a1again.body.optionKey === "B", "second tap keeps the first answer");
+// Options are shuffled per showing, so correctness is checked against what the server reveals.
 await annaWs.waitFor("ANSWER_ACCEPTED");
 await api(`/rooms/${code}/answers`, { token: max.playerToken, body: { optionKey: "A" } });
 
 const revealed = await display.waitFor("QUESTION_REVEALED");
 const { reveal } = revealed.payload;
-check(reveal.correctKey === "B" && reveal.distribution.A === 1 && reveal.distribution.B === 1, "auto-reveal when all answered, distribution A1 B1");
+check(reveal.distribution.A === 1 && reveal.distribution.B === 1, `auto-reveal when all answered, distribution A1 B1 (correct: ${reveal.correctKey})`);
 const annaResult = await annaWs.waitFor("PERSONAL_RESULT");
 const maxResult = await maxWs.waitFor("PERSONAL_RESULT");
+const annaRight = reveal.correctKey === "B";
+const maxRight = reveal.correctKey === "A";
 const pts = annaResult.payload.result.points;
-check(annaResult.payload.result.correct && pts > 1000 && pts <= 1150, `Аня: correct, ${pts} points (1000 + speed bonus)`);
-check(!maxResult.payload.result.correct && maxResult.payload.result.points === 0, "Макс: wrong, 0 points");
+check(annaResult.payload.result.correct === annaRight && (annaRight ? pts > 1000 && pts <= 1150 : pts === 0), `Аня: ${annaRight ? "correct" : "wrong"}, ${pts} points`);
+check(maxResult.payload.result.correct === maxRight && (maxRight ? maxResult.payload.result.points > 1000 : maxResult.payload.result.points === 0), `Макс: ${maxRight ? "correct" : "wrong"}, ${maxResult.payload.result.points} points`);
 check(!display.events.some((e) => e.type === "PERSONAL_RESULT" || e.type === "ANSWER_ACCEPTED"), "display gets no private events");
+check(![...display.raw, ...annaWs.raw].some((r) => /heroPlayerId|"selection"|composition/.test(r)), "no engine internals reach any client");
 
 // ---- question 2: pause / resume / skip ----
 const m2 = display.mark();
@@ -153,7 +157,8 @@ const ended = await api(`/rooms/${code}/end`, { token: anna.playerToken });
 const finished = await display.waitFor("GAME_FINISHED", 3000, m3);
 const { results } = finished.payload;
 check(ended.status === 200 && results.questionsPlayed === 1, `end mid-question: ${results.questionsPlayed} question counted`);
-check(results.leaderboard[0].nickname === "Аня" && results.leaderboard[0].score === pts, "leaderboard: Аня first with her points");
+const top = Math.max(pts, maxResult.payload.result.points);
+check(results.leaderboard[0].score === top && results.leaderboard.length === 2, `leaderboard: winner has ${top} points`);
 check(results.stats.onlyOneKnew === null, "single-person stat hidden in a 2-player room");
 
 const seqs = display.events.flatMap((e) => ("seq" in e ? [e.seq] : []));

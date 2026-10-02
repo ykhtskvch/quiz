@@ -1,10 +1,10 @@
 // Pure room/game state machine. No I/O: every method takes `now` and records effects,
 // so the whole game loop is unit-testable with a fake clock. RoomDO is the thin adapter.
+import { BANK } from "@quiz/shared/bank-data";
 import {
-  DEMO_BANK,
   OPTION_KEYS,
+  type BankQuestion,
   type BroadcastEvent,
-  type DemoQuestion,
   type GameConfig,
   type GameResults,
   type GameStatus,
@@ -20,7 +20,20 @@ import {
   type Snapshot,
   type StatQuestion,
 } from "@quiz/shared";
-import { aggregateProfile, playerProfile, type GroupProfile } from "./profile.ts";
+import {
+  aggregateProfile,
+  DEFAULT_ENGINE_CONFIG,
+  emptyCompositionState,
+  nextQuestion,
+  playerProfile,
+  recordAccuracy,
+  registerLateJoin,
+  shuffle,
+  type CompositionState,
+  type EngineConfig,
+  type GroupProfile,
+  type SelectionDebug,
+} from "@quiz/engine";
 
 export type Player = {
   id: string;
@@ -41,6 +54,7 @@ export type Answer = { key: OptionKey; responseMs: number; base: number; bonus: 
 export type QuestionRun = {
   number: number;
   questionId: string;
+  factId: string;
   familyId: string;
   text: string;
   options: { key: OptionKey; text: string }[];
@@ -51,6 +65,8 @@ export type QuestionRun = {
   answerMs: number;
   answeringStartedAt: number | null;
   answers: Record<string, Answer>;
+  /** Why the engine picked it — backend-only, names the hero target (Engine §18). */
+  selection: SelectionDebug;
 };
 
 type PhaseDeadline = "PRESENTATION_END" | "ANSWER_END" | "REVEAL_END" | "NEXT_QUESTION";
@@ -70,10 +86,11 @@ export type Game = {
   results: GameResults | null;
   /** Aggregated private preferences; backend-only input for the Composition Engine. */
   profile: GroupProfile | null;
+  composition: CompositionState;
 };
 
 /** Bump when RoomState changes shape; rooms stored in an older shape are treated as closed. */
-export const ROOM_STATE_VERSION = 3;
+export const ROOM_STATE_VERSION = 4;
 
 /** `activeFrom` for a player who hasn't finished onboarding during a game. */
 export const NOT_YET = Number.MAX_SAFE_INTEGER;
@@ -87,6 +104,8 @@ export type RoomState = {
   players: Player[];
   game: Game | null;
   usedQuestionIds: string[];
+  /** BR-093: a fact is never asked twice in a room, whatever the wording. */
+  usedFactIds: string[];
   deadlines: Deadline[];
   seq: number;
   closed: boolean;
@@ -116,6 +135,7 @@ export function newRoomState(code: string, displayTokenHash: string, now: number
     players: [],
     game: null,
     usedQuestionIds: [],
+    usedFactIds: [],
     deadlines: [{ kind: "EXPIRY", at: now + config.roomExpiryMs }],
     seq: 0,
     closed: false,
@@ -128,7 +148,9 @@ export class Room {
   constructor(
     readonly s: RoomState,
     private readonly config: GameConfig,
-    private readonly bank: DemoQuestion[] = DEMO_BANK,
+    private readonly bank: BankQuestion[] = BANK,
+    private readonly engine: EngineConfig = DEFAULT_ENGINE_CONFIG,
+    private readonly rng: () => number = Math.random,
   ) {}
 
   // ================= commands =================
@@ -179,7 +201,9 @@ export class Room {
     p.onboarding = input;
     if (this.gameRunning() && p.activeFrom === NOT_YET) {
       p.activeFrom = (this.currentQuestion()?.number ?? 0) + 1;
-      this.s.game!.profile = this.buildProfile(); // late join updates future selection (Engine §14)
+      const g = this.s.game!;
+      g.profile = this.buildProfile(); // late join updates future selection (Engine §14)
+      g.composition = registerLateJoin(g.composition, p.id);
     }
     this.broadcast({ type: "PLAYER_STATUS", seq: 0, payload: { playerId, status: this.playerStatus(p), ready: Boolean(p.onboarding) } });
     return ok(true);
@@ -376,6 +400,7 @@ export class Room {
       softEndSuggested: false,
       results: null,
       profile: this.buildProfile(),
+      composition: emptyCompositionState(),
     };
     this.s.deadlines = this.s.deadlines.filter((d) => d.kind === "EXPIRY" || d.kind === "DISCONNECT_GRACE");
     this.s.deadlines.push({ kind: "SOFT_END", at: now + this.config.softEndAfterMs });
@@ -386,29 +411,48 @@ export class Room {
   private presentNext(now: number) {
     const g = this.s.game!;
     const prev = g.questions.at(-1);
-    const used = new Set(this.s.usedQuestionIds);
-    const next =
-      this.bank.find((q) => !used.has(q.id) && q.familyId !== prev?.familyId) ?? this.bank.find((q) => !used.has(q.id));
-    if (!next) return this.finishGame(); // bank exhausted
-
     const number = (prev?.number ?? 0) + 1;
+    const ready = this.s.players.filter((p) => p.onboarding && p.activeFrom <= number);
+    const live = ready.filter((p) => p.connected || (p.disconnectedAt !== null && now - p.disconnectedAt < this.config.disconnectGraceMs));
+    const selection = nextQuestion({
+      bank: this.bank,
+      profile: g.profile ?? this.buildProfile(),
+      activePlayerIds: (live.length ? live : ready).map((p) => p.id),
+      usedQuestionIds: new Set(this.s.usedQuestionIds),
+      usedFactIds: new Set(this.s.usedFactIds),
+      state: g.composition,
+      config: this.engine,
+      rng: this.rng,
+    });
+    if (!selection) return this.finishGame(); // bank exhausted for this room
+    g.composition = selection.state;
+    const next = selection.question;
+
+    // Options are reshuffled on every showing: the file order is editorial, not random.
+    const shuffled = shuffle(next.options, this.rng);
+    const options = shuffled.map((o, i) => ({ key: OPTION_KEYS[i], text: o.text }));
+    const correctKey = OPTION_KEYS[shuffled.findIndex((o) => o.key === next.correctKey)];
+
     const { minMs, perCharMs, maxMs } = this.config.presentation;
     const run: QuestionRun = {
       number,
       questionId: next.id,
+      factId: next.factId,
       familyId: next.familyId,
       text: next.text,
-      options: next.options,
-      correctKey: next.correctKey,
+      options,
+      correctKey,
       explanation: next.explanation,
       phase: "PRESENTING",
       presentationMs: Math.min(maxMs, Math.max(minMs, next.text.length * perCharMs)),
       answerMs: next.answerMs ?? this.config.answerMs,
       answeringStartedAt: null,
       answers: {},
+      selection: selection.debug,
     };
     g.questions.push(run);
     this.s.usedQuestionIds.push(next.id); // presented = consumed (BR-134)
+    this.s.usedFactIds.push(next.factId);
     this.s.deadlines.push({ kind: "PRESENTATION_END", at: now + run.presentationMs });
 
     for (const p of this.s.players) {
@@ -438,6 +482,11 @@ export class Room {
       a.base = correct ? this.config.baseScore : 0;
       const remaining = Math.max(0, 1 - a.responseMs / q.answerMs);
       a.bonus = correct ? Math.round(this.config.speedBonusMax * remaining) : 0;
+    }
+    const answers = Object.values(q.answers);
+    if (answers.length && this.s.game) {
+      const accuracy = answers.filter((a) => a.key === q.correctKey).length / answers.length;
+      this.s.game.composition = recordAccuracy(this.s.game.composition, accuracy);
     }
     this.s.deadlines.push({ kind: "REVEAL_END", at: now + this.config.revealMs });
     this.broadcast({ type: "QUESTION_REVEALED", seq: 0, payload: { reveal: this.revealData(q), timing: this.timing(now)! } });

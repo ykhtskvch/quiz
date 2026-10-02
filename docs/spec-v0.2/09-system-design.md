@@ -264,7 +264,7 @@ taxonomy.yaml + план покрытия (08-topics)
 | **M1 — Skeleton** ✅ | Монорепо, Create Room, QR, join, display и телефоны в одном WebSocket, захардкоженный вопрос | — |
 | **M2 — Game loop** ✅ | Фазы, серверный таймер, ответы, reveal, scoring, Pause / Skip / End, final leaderboard, reconnect по токену | M1 |
 | **M3 — Onboarding** ✅ | Карточки тем, depth, age, Dignity, культурный бэкграунд, агрегат профиля | M1 |
-| **M4 — Engine** | `packages/engine` по документу 05 + симулятор; подключение к RoomDO | M2, M3, C1 |
+| **M4 — Engine** ✅ | `packages/engine` по документу 05 + симулятор; подключение к RoomDO | M2, M3, C1 |
 | **C1 — Content pilot** ✅ | Схема, гайдлайн, скрипты, 50 вопросов в 2 темах | параллельно с M1 |
 | **C2 — Content MVP** | ≈ 285 APPROVED (15 тем A + 60 wildcard) | C1 |
 | **M5 — Feedback** | Offboarding, Great / Bad, запись в D1 | M2 |
@@ -273,6 +273,8 @@ taxonomy.yaml + план покрытия (08-topics)
 Статус M1: первый игрок, вошедший с телефона, становится хостом; создающее устройство — общий экран (токен экрана в URL-фрагменте). Статус M2: игровая логика — чистый модуль `apps/worker/src/game.ts` с подменяемыми часами (юнит-тесты), RoomDO — тонкий адаптер (storage, alarm, WebSocket). Состояние комнаты пока одним объектом в storage DO с полем `version` (комнаты старого формата считаются закрытыми); на SQLite-таблицы переходим, если объект начнёт упираться в лимиты. Вопросы — демо-банк из пилотных черновиков (`scripts/dev/gen-shared.ts`) до M4.
 
 Статус M3: onboarding из шести шагов на телефоне; агрегация профиля — чистый модуль `apps/worker/src/profile.ts` (веса тем как среднее top-60 %, медиана Dignity, вывод культурного контекста из тем при пропуске шага). Профиль лежит в состоянии игры и наружу не отдаётся. Taxonomy генерируется в `packages/shared` из `content/taxonomy.yaml` и встроена в клиент, поэтому отдельного `GET /onboarding-config` (07-api §5) нет.
+
+Статус M4: `packages/engine` — профиль, affinity, `nextQuestion` (eligibility → score → штрафы → opening/wildcard → top-15 → weighted random), Hero с `hero_need` и ограничением для поздних игроков, адаптация сложности по точности. Состояние движка — `game.composition` (T-07); `selection` с hero-целью хранится только на сервере. Варианты перемешиваются при каждом показе. Данные банка импортируются только сервером через `@quiz/shared/bank-data` — в клиентский бандл ответы не попадают. Симулятор: `node scripts/dev/simulate.ts`. Пока `allowDrafts: true` — до C2 банк состоит из черновиков; в продакшене должно быть `false`.
 
 Основной риск по срокам — не код, а **C2**: ручная проверка ~285 вопросов. Её стоит начать сразу после C1.
 

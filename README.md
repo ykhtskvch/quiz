@@ -9,6 +9,7 @@
 apps/web               React SPA: / (создать), /d/:code (общий экран), /j/:code (телефон)
 apps/worker            Cloudflare Worker + RoomDO (Durable Object на комнату)
 packages/shared        протокол событий и API, общий для клиента и сервера
+packages/engine        Composition Engine и профиль комнаты (чистый TS)
 packages/content-schema схема и правила банка вопросов
 content/               банк вопросов (YAML), taxonomy, гайдлайн
 scripts/content        validate / build / draft / critique
@@ -26,7 +27,7 @@ npm run dev        # worker на :8787 и web на :5173
 QR-код указывает на LAN-адрес машины, так что телефоны в той же Wi-Fi-сети подключаются по нему.
 Первый вошедший игрок становится ведущим.
 
-Taxonomy и демо-банк (пилотные черновики из `content/families`, пока нет Composition Engine — M4) генерируются в `packages/shared`.
+Taxonomy и банк вопросов для движка генерируются в `packages/shared` (банк — только для сервера: `@quiz/shared/bank-data`). Пока в банке пилотные черновики, движок играет и ими (`allowDrafts`).
 После правки `content/` пересобери:
 
 ```bash
@@ -39,4 +40,5 @@ node scripts/dev/gen-shared.ts
 npm run typecheck
 npm test
 npm run smoke      # нужен запущенный worker; ~30 с из-за реальных таймеров
+node scripts/dev/simulate.ts   # движок на виртуальных комнатах: покрытие, Hero, точность, дыры контента
 ```

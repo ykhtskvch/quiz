@@ -1,0 +1,7 @@
+{
+  "name": "@quiz/engine",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": { "@quiz/shared": "*" }
+}
