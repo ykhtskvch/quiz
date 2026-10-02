@@ -1,6 +1,15 @@
 // Worker entry: HTTP routing and room lookup. All room state lives in RoomDO.
 import { Hono, type Context } from "hono";
-import { isRoomCode, parseOnboarding, ROOM_CODE_ALPHABET, ROOM_CODE_LENGTH, type HostCommand, type OptionKey } from "@quiz/shared";
+import {
+  isRoomCode,
+  parseOnboarding,
+  parseQuestionRating,
+  parseSessionFeedback,
+  ROOM_CODE_ALPHABET,
+  ROOM_CODE_LENGTH,
+  type HostCommand,
+  type OptionKey,
+} from "@quiz/shared";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
 export { RoomDO };
@@ -52,6 +61,18 @@ app.post("/rooms/:code/onboarding", async (c) => {
   const parsed = parseOnboarding(await c.req.json().catch(() => null));
   if (!parsed.ok) return c.json({ error: parsed.error }, 400);
   return reply(c, await roomStub(c, c.req.param("code")).onboarding(bearer(c), parsed.value));
+});
+
+app.post("/rooms/:code/feedback", async (c) => {
+  const parsed = parseSessionFeedback(await c.req.json().catch(() => null));
+  if (!parsed.ok) return c.json({ error: parsed.error }, 400);
+  return reply(c, await roomStub(c, c.req.param("code")).feedback(bearer(c), parsed.value));
+});
+
+app.post("/rooms/:code/question-feedback", async (c) => {
+  const parsed = parseQuestionRating(await c.req.json().catch(() => null));
+  if (!parsed.ok) return c.json({ error: parsed.error }, 400);
+  return reply(c, await roomStub(c, c.req.param("code")).rate(bearer(c), parsed.value.number, parsed.value.rating));
 });
 
 app.post("/rooms/:code/answers", async (c) => {

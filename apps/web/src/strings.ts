@@ -99,6 +99,28 @@ export const t = {
   stragglersHint: "Кто не успел — подключится со следующего вопроса",
   readyWait: "Готово! Ждём начала",
 
+  // offboarding
+  feedbackTitle: "Как тебе игра?",
+  fbPlayAgain: "Хочется сыграть ещё?",
+  fbDifferentGroup: "А с другой компанией?",
+  intent: { YES: "Да", MAYBE: "Может быть", NO: "Нет" } as Record<string, string>,
+  fbDifficulty: "Сложность",
+  fbDifficultyValues: { TOO_EASY: "Легко", JUST_RIGHT: "В самый раз", TOO_HARD: "Сложно" } as Record<string, string>,
+  fbPace: "Темп",
+  fbPaceValues: { TOO_SLOW: "Медленно", JUST_RIGHT: "В самый раз", TOO_FAST: "Быстро" } as Record<string, string>,
+  fbBalance: "Темы",
+  fbBalanceValues: { MORE_CLASSIC: "Больше классики", JUST_RIGHT: "В самый раз", MORE_POP: "Больше поп-культуры" } as Record<string, string>,
+  fbNeedPlayAgain: "Ответь на первый вопрос",
+  send: "Отправить",
+  feedbackThanks: "Спасибо! Это помогает делать квиз лучше.",
+  rateTitle: "Оцени вопросы",
+  rateHint: "Плохие вопросы уйдут на доработку.",
+  rating: {
+    GREAT: { icon: "👍", label: "Отличный вопрос" },
+    FINE: { icon: "👌", label: "Нормальный вопрос" },
+    BAD: { icon: "👎", label: "Плохой вопрос" },
+  },
+
   reconnecting: "Связь потеряна. Переподключаемся…",
   roomNotFound: "Комната не найдена. Проверь код.",
   displayNoToken: "Этот экран открыт без ключа комнаты. Создай игру заново на этом устройстве.",

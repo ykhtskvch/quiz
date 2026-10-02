@@ -2,9 +2,23 @@
 //   node scripts/dev/smoke.ts [http://localhost:8787]
 // Checks: create → 2 players join → display sees them → start → answers → auto-reveal,
 // and that the display never receives the correct answer before reveal.
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import type { ServerEvent } from "../../packages/shared/src/index.ts";
 
-const BASE = process.argv[2] ?? "http://localhost:8787";
+/** Reads the local analytics D1 that `wrangler dev` writes to (skipped with --no-db). */
+const checkDb = !process.argv.includes("--no-db");
+// Async on purpose: a blocking exec stalls the event loop, so pooled keep-alive sockets the server
+// closed meanwhile get reused and the next fetch fails with ECONNRESET.
+async function d1Count(sql: string): Promise<number> {
+  const { stdout } = await promisify(execFile)("npx", ["wrangler", "d1", "execute", "quiz-analytics", "--local", "--json", "--command", sql], {
+    cwd: "apps/worker",
+    encoding: "utf8",
+  });
+  return Number(Object.values((JSON.parse(stdout) as { results: Record<string, number>[] }[])[0].results[0])[0]);
+}
+
+const BASE = process.argv.slice(2).find((a) => a.startsWith("http")) ?? "http://localhost:8787";
 const WS_BASE = BASE.replace(/^http/, "ws");
 
 async function api<T>(path: string, init: { method?: string; token?: string; body?: unknown } = {}): Promise<{ status: number; body: T }> {
@@ -58,6 +72,7 @@ const check = (cond: boolean, msg: string) => {
   if (!cond) failures++;
 };
 
+const playedBefore = checkDb ? await d1Count("SELECT COALESCE(SUM(times_played),0) FROM question_stats") : 0;
 const created = await api<{ roomCode: string; displayToken: string }>("/rooms");
 check(created.status === 201 && /^[A-Z2-9]{6}$/.test(created.body.roomCode), `room created: ${created.body.roomCode}`);
 const code = created.body.roomCode;
@@ -163,6 +178,22 @@ check(results.stats.onlyOneKnew === null, "single-person stat hidden in a 2-play
 
 const seqs = display.events.flatMap((e) => ("seq" in e ? [e.seq] : []));
 check(seqs.every((x, i) => i === 0 || x === seqs[i - 1] + 1), `display seq is gapless (${seqs.length} events)`);
+
+// ---- offboarding and anonymous analytics ----
+const feedbackBefore = checkDb ? await d1Count("SELECT COUNT(*) FROM session_feedback") : 0;
+const noKpi = await api(`/rooms/${code}/feedback`, { token: anna.playerToken, body: { difficulty: "JUST_RIGHT" } });
+check(noKpi.status === 400, "feedback without the play-again answer is rejected");
+const fb = await api(`/rooms/${code}/feedback`, { token: anna.playerToken, body: { playAgain: "YES", difficulty: "JUST_RIGHT", culturalBalance: "MORE_POP" } });
+const fb2 = await api(`/rooms/${code}/feedback`, { token: max.playerToken, body: { playAgain: "MAYBE" } });
+check(fb.status === 200 && fb2.status === 200, "both players send offboarding");
+const rated = await api(`/rooms/${code}/question-feedback`, { token: anna.playerToken, body: { number: 1, rating: "GREAT" } });
+check(rated.status === 200, "a player rates a played question");
+if (checkDb) {
+  await new Promise((r) => setTimeout(r, 800)); // analytics are written off the gameplay path
+  check((await d1Count("SELECT COUNT(*) FROM session_feedback")) === feedbackBefore + 2, "two anonymous feedback rows reached D1");
+  check((await d1Count("SELECT COALESCE(SUM(times_played),0) FROM question_stats")) === playedBefore + 1, "question stats reached D1");
+  check((await d1Count("SELECT COUNT(*) FROM session_feedback WHERE game_uid LIKE '%" + code + "%'")) === 0, "D1 rows are not linked to the room code");
+}
 
 maxWs.close();
 const status = await display.waitFor("PLAYER_STATUS", 3000, display.mark());

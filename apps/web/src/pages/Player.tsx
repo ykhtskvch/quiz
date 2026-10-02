@@ -4,6 +4,7 @@ import type { HostCommand, OnboardingInput, OptionKey, Snapshot } from "@quiz/sh
 import { NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { PhaseBar } from "../components.tsx";
+import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
 import { t } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
@@ -149,26 +150,35 @@ function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: s
     );
   }
 
-  // ---- finished ----
+  // ---- finished: place, offboarding, ratings, play again ----
   if (s.results) {
     const place = s.results.leaderboard.findIndex((l) => s.you.role === "player" && l.playerId === s.you.playerId) + 1;
     const mine = s.results.leaderboard[place - 1];
     return (
-      <section className="center grow">
-        <p className="result-title">{t.results}</p>
-        {mine && <p className="big-text">{t.yourPlace(place, s.results.leaderboard.length)}</p>}
-        {mine && <p className="muted">{t.score(mine.score)} · {t.correctOf(mine.correct, mine.attempted)}</p>}
-        <p className="muted small">{t.lookAtScreen}</p>
-        {isHost && (
-          <button className="primary big" disabled={cmd.busy} onClick={() => cmd.host("play-again")}>
-            {t.playAgain}
+      <div className="finished">
+        <section className="center-text">
+          <p className="result-title">{t.results}</p>
+          {mine && <p className="big-text">{t.yourPlace(place, s.results.leaderboard.length)}</p>}
+          {mine && (
+            <p className="muted">
+              {t.score(mine.score)} · {t.correctOf(mine.correct, mine.attempted)}
+            </p>
+          )}
+        </section>
+        {mine && <SessionFeedback code={code} token={token} sent={s.mine?.feedbackGiven ?? false} />}
+        {mine && <QuestionRatings code={code} token={token} results={s.results} initial={s.mine?.ratings ?? {}} />}
+        <section className="center-text finished-actions">
+          {isHost && (
+            <button className="primary big" disabled={cmd.busy} onClick={() => cmd.host("play-again")}>
+              {t.playAgain}
+            </button>
+          )}
+          <button className="link" onClick={onEdit}>
+            {t.editPrefs}
           </button>
-        )}
-        <button className="link" onClick={onEdit}>
-          {t.editPrefs}
-        </button>
-        {cmd.error && <p className="error">{cmd.error}</p>}
-      </section>
+          {cmd.error && <p className="error">{cmd.error}</p>}
+        </section>
+      </div>
     );
   }
 

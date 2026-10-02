@@ -20,7 +20,8 @@ scripts/dev/smoke.ts   e2e-проверка комнаты против запу
 
 ```bash
 npm install
-npm run dev        # worker на :8787 и web на :5173
+npm run db:migrate:local   # один раз: локальная база аналитики (D1)
+npm run dev                # worker на :8787 и web на :5173
 ```
 
 Открой http://localhost:5173 на ноутбуке и нажми «Создать игру» — это общий экран.
@@ -41,4 +42,5 @@ npm run typecheck
 npm test
 npm run smoke      # нужен запущенный worker; ~30 с из-за реальных таймеров
 node scripts/dev/simulate.ts   # движок на виртуальных комнатах: покрытие, Hero, точность, дыры контента
+npm run analytics              # KPI из локальной D1: Play Again Intent, точность, вопросы на доработку
 ```

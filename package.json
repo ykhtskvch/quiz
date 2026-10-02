@@ -13,7 +13,9 @@
     "content:critique": "node scripts/content/critique.ts",
     "typecheck": "tsc --noEmit && tsc --noEmit -p apps/worker && tsc --noEmit -p apps/web",
     "test": "vitest run",
-    "smoke": "node scripts/dev/smoke.ts"
+    "smoke": "node scripts/dev/smoke.ts",
+    "analytics": "node scripts/dev/analytics-report.ts",
+    "db:migrate:local": "npm run db:migrate:local -w @quiz/worker"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

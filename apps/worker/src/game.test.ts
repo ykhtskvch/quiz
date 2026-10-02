@@ -286,6 +286,67 @@ describe("onboarding", () => {
   });
 });
 
+describe("feedback and analytics", () => {
+  const analytics = (r: Room) => r.effects.flatMap((e) => (e.to === "analytics" ? [e.event] : []));
+
+  it("emits anonymous per-question stats with distribution by the file's option keys", () => {
+    const { ids, room } = setup(3);
+    const r = room();
+    r.tick(3000);
+    r.answer(ids[0], "B", 3000);
+    r.answer(ids[1], "B", 4000);
+    r.answer(ids[2], "A", 5000);
+    const played = analytics(r).find((e) => e.kind === "QUESTION_PLAYED");
+    expect(played).toMatchObject({ kind: "QUESTION_PLAYED", answered: 3, correct: 2, distribution: { A: 1, B: 2, C: 0, D: 0 } });
+    expect(JSON.stringify(analytics(r))).not.toMatch(/P0|P1|P2|"p0"|"p1"|"p2"|ABCDEF/);
+  });
+
+  it("records skips and the end of a game", () => {
+    const { ids, room } = setup();
+    const r = room();
+    r.skip(ids[0], 1000);
+    r.tick(2000);
+    r.end(ids[0], 3000);
+    const kinds = analytics(r).map((e) => e.kind);
+    expect(kinds).toEqual(["QUESTION_SKIPPED", "GAME_FINISHED"]);
+    expect(analytics(r)[1]).toMatchObject({ endedBy: "HOST", questionsPlayed: 0 });
+  });
+
+  it("accepts offboarding once per player after the game, never with a player id", () => {
+    const { state, ids, room } = setup();
+    expect(room().submitFeedback(ids[0], { playAgain: "YES" }, 1000)).toMatchObject({ ok: false, status: 409 });
+    room().tick(3000);
+    room().answer(ids[0], "B", 3000);
+    room().answer(ids[1], "B", 3000);
+    room().end(ids[0], 5000);
+
+    const r = room();
+    expect(r.submitFeedback(ids[0], { playAgain: "YES", difficulty: "JUST_RIGHT" }, 6000).ok).toBe(true);
+    expect(r.submitFeedback(ids[0], { playAgain: "NO" }, 6100).ok).toBe(true); // idempotent, ignored
+    const events = analytics(r);
+    expect(events).toHaveLength(1);
+    expect(events[0]).toMatchObject({ kind: "SESSION_FEEDBACK", feedback: { playAgain: "YES" } });
+    expect(JSON.stringify(events)).not.toContain(ids[0]);
+    expect(r.snapshot({ role: "player", player: state.players[0] }, 6200).mine).toMatchObject({ feedbackGiven: true });
+  });
+
+  it("lets each player rate a revealed question once", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().answer(ids[0], "B", 3000);
+    room().answer(ids[1], "B", 3000);
+    room().end(ids[0], 5000);
+    expect(state.game!.results!.questions).toEqual([{ number: 1, text: expect.any(String) }]);
+
+    const r = room();
+    expect(r.rateQuestion(ids[0], 1, "GREAT", 6000).ok).toBe(true);
+    expect(r.rateQuestion(ids[0], 1, "BAD", 6100).ok).toBe(true);
+    expect(r.rateQuestion(ids[0], 2, "BAD", 6200)).toMatchObject({ ok: false, status: 404 });
+    expect(analytics(r).filter((e) => e.kind === "QUESTION_RATED")).toHaveLength(1);
+    expect(r.snapshot({ role: "player", player: state.players[0] }, 6300).mine?.ratings).toEqual({ 1: "GREAT" });
+  });
+});
+
 describe("privacy and lifecycle", () => {
   it("never sends engine internals (hero target, scores) to any client", () => {
     const { state, ids, room } = setup();

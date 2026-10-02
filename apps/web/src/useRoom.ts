@@ -40,7 +40,7 @@ function apply(s: Snapshot, e: ServerEvent): Snapshot {
         question: null,
         reveal: null,
         results: null,
-        mine: next.mine ? { answer: null, result: null, total: 0 } : null,
+        mine: next.mine ? { answer: null, result: null, total: 0, feedbackGiven: false, ratings: {} } : null,
       };
     case "QUESTION_PRESENTED":
       return { ...next, question: e.payload.question, reveal: null, mine: clearMine };

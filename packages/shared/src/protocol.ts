@@ -1,5 +1,6 @@
 // Wire protocol between RoomDO and clients — docs/spec-v0.2/07-api-realtime.md.
 // Events are past tense; commands go over HTTP. Only broadcast events carry `seq`.
+import type { QuestionRating, SessionFeedbackInput } from "./feedback.ts";
 import type { OnboardingInput } from "./onboarding.ts";
 
 export type OptionKey = "A" | "B" | "C" | "D";
@@ -53,6 +54,8 @@ export type GameResults = {
     fastestCorrect: { nickname: string; responseMs: number; question: StatQuestion } | null;
   };
   questionsPlayed: number;
+  /** Revealed questions, for per-question ratings on the phone. */
+  questions: { number: number; text: string }[];
 };
 
 export type Snapshot = {
@@ -72,7 +75,14 @@ export type Snapshot = {
   question: PublicQuestion | null;
   reveal: Reveal | null;
   /** Player-only: own answer/result for the current question and running total. */
-  mine: { answer: OptionKey | null; result: PersonalResult | null; total: number } | null;
+  mine: {
+    answer: OptionKey | null;
+    result: PersonalResult | null;
+    total: number;
+    /** After the game: has this player sent the offboarding form, and which questions they rated. */
+    feedbackGiven: boolean;
+    ratings: Record<number, QuestionRating>;
+  } | null;
   results: GameResults | null;
   seq: number;
 };
@@ -109,6 +119,39 @@ export type JoinResponse = { playerId: string; playerToken: string; isHost: bool
 export type AnswerRequest = { optionKey: OptionKey };
 export type ApiError = { error: string };
 export type HostCommand = "start" | "pause" | "resume" | "skip" | "end" | "play-again";
+
+/**
+ * Anonymous analytics written to D1 (09-system-design §13). No player ids or nicknames, ever:
+ * the product remembers questions, not people.
+ */
+export type AnalyticsEvent =
+  | {
+      kind: "QUESTION_PLAYED";
+      gameUid: string;
+      questionId: string;
+      at: number;
+      answered: number;
+      correct: number;
+      responseMsSum: number;
+      /** Answer counts by the option keys in the content file, not the shuffled on-screen keys. */
+      distribution: Record<OptionKey, number>;
+      heroTargeted: boolean;
+      /** Engine §16 proxy: hero target was right while under half of the room was. */
+      heroSuccess: boolean;
+    }
+  | { kind: "QUESTION_SKIPPED"; gameUid: string; questionId: string; at: number }
+  | {
+      kind: "GAME_FINISHED";
+      gameUid: string;
+      startedAt: number;
+      endedAt: number;
+      players: number;
+      questionsPlayed: number;
+      endedBy: "HOST" | "BANK_EXHAUSTED";
+      softEndShown: boolean;
+    }
+  | { kind: "SESSION_FEEDBACK"; gameUid: string; at: number; feedback: SessionFeedbackInput }
+  | { kind: "QUESTION_RATED"; gameUid: string; questionId: string; rating: QuestionRating };
 
 export const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O, 1/I
 export const ROOM_CODE_LENGTH = 6;

@@ -7,5 +7,10 @@
     "bindings": [{ "name": "ROOMS", "class_name": "RoomDO" }]
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RoomDO"] }],
+  // Anonymous analytics. `database_id` is a placeholder until the production database exists;
+  // local dev only needs the name (npm run db:migrate:local).
+  "d1_databases": [
+    { "binding": "DB", "database_name": "quiz-analytics", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "migrations" }
+  ],
   "observability": { "enabled": true }
 }

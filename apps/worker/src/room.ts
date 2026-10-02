@@ -1,13 +1,27 @@
 // RoomDO — one Durable Object per room (09-system-design §6). A thin adapter around the pure
 // `Room` state machine: authenticates, persists state, drives the alarm and delivers effects.
 import { DurableObject } from "cloudflare:workers";
-import { DEFAULT_CONFIG, NICKNAME_MAX, type HostCommand, type OnboardingInput, type OptionKey, type ServerEvent, type Snapshot } from "@quiz/shared";
+import {
+  DEFAULT_CONFIG,
+  NICKNAME_MAX,
+  type AnalyticsEvent,
+  type HostCommand,
+  type OnboardingInput,
+  type OptionKey,
+  type QuestionRating,
+  type ServerEvent,
+  type SessionFeedbackInput,
+  type Snapshot,
+} from "@quiz/shared";
+import { writeAnalytics } from "./analytics.ts";
 import { newRoomState, Room, ROOM_STATE_VERSION, type Effect, type Result, type RoomState, type Viewer } from "./game.ts";
 
 export type { Result };
 
 export interface Env {
   ROOMS: DurableObjectNamespace<RoomDO>;
+  /** Anonymous analytics; optional so a missing binding never breaks gameplay. */
+  DB?: D1Database;
 }
 
 type Attachment = { role: "display" } | { role: "player"; playerId: string };
@@ -81,6 +95,24 @@ export class RoomDO extends DurableObject<Env> {
     if (!viewer || viewer.role !== "player") return this.live() ? fail(401, "invalid token") : fail(404, "room not found");
     const room = this.room();
     const r = room.submitOnboarding(viewer.player.id, input, Date.now());
+    await this.commit(room);
+    return r;
+  }
+
+  async feedback(token: string, input: SessionFeedbackInput): Promise<Result<true>> {
+    const viewer = await this.authenticate(token);
+    if (!viewer || viewer.role !== "player") return this.live() ? fail(401, "invalid token") : fail(404, "room not found");
+    const room = this.room();
+    const r = room.submitFeedback(viewer.player.id, input, Date.now());
+    await this.commit(room);
+    return r;
+  }
+
+  async rate(token: string, number: number, rating: QuestionRating): Promise<Result<true>> {
+    const viewer = await this.authenticate(token);
+    if (!viewer || viewer.role !== "player") return this.live() ? fail(401, "invalid token") : fail(404, "room not found");
+    const room = this.room();
+    const r = room.rateQuestion(viewer.player.id, number, rating, Date.now());
     await this.commit(room);
     return r;
   }
@@ -182,6 +214,8 @@ export class RoomDO extends DurableObject<Env> {
 
   /** Persist, deliver effects, reschedule the alarm. `skip` is a socket that already got a fresh snapshot. */
   private async commit(room: Room, skip?: WebSocket) {
+    const analytics = room.effects.flatMap((e) => (e.to === "analytics" ? [e.event] : []));
+    if (analytics.length) this.ctx.waitUntil(writeAnalytics(this.env.DB, analytics as AnalyticsEvent[]));
     if (room.s.closed) return this.closeRoom();
     await this.ctx.storage.put("state", room.s);
     for (const e of room.effects) this.deliver(e, skip);
@@ -191,7 +225,7 @@ export class RoomDO extends DurableObject<Env> {
   }
 
   private deliver(e: Effect, skip?: WebSocket) {
-    if (e.to === "close") return;
+    if (e.to === "close" || e.to === "analytics") return;
     const sockets = e.to === "all" ? this.ctx.getWebSockets() : this.ctx.getWebSockets(e.playerId);
     const data = JSON.stringify(e.event);
     for (const ws of sockets) {

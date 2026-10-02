@@ -3,6 +3,7 @@
 import { BANK } from "@quiz/shared/bank-data";
 import {
   OPTION_KEYS,
+  type AnalyticsEvent,
   type BankQuestion,
   type BroadcastEvent,
   type GameConfig,
@@ -16,7 +17,9 @@ import {
   type PrivateEvent,
   type PublicPlayer,
   type PublicQuestion,
+  type QuestionRating,
   type Reveal,
+  type SessionFeedbackInput,
   type Snapshot,
   type StatQuestion,
 } from "@quiz/shared";
@@ -58,6 +61,8 @@ export type QuestionRun = {
   familyId: string;
   text: string;
   options: { key: OptionKey; text: string }[];
+  /** On-screen key → key in the content file, for distractor analytics. */
+  originalKeys: Record<OptionKey, OptionKey>;
   correctKey: OptionKey;
   explanation: string;
   phase: "PRESENTING" | "ANSWERING" | "REVEALED" | "SKIPPED" | "CANCELLED";
@@ -77,6 +82,8 @@ export type Deadline =
   | { kind: "EXPIRY"; at: number };
 
 export type Game = {
+  /** Random id that groups anonymous analytics for one game; not linked to the room code or players. */
+  uid: string;
   number: number;
   status: GameStatus;
   startedAt: number;
@@ -87,10 +94,14 @@ export type Game = {
   /** Aggregated private preferences; backend-only input for the Composition Engine. */
   profile: GroupProfile | null;
   composition: CompositionState;
+  /** Player ids who already sent the offboarding form (temporary, dies with the room). */
+  feedbackFrom: string[];
+  /** `${questionNumber}:${playerId}` → rating; dedupes ratings. */
+  ratings: Record<string, QuestionRating>;
 };
 
 /** Bump when RoomState changes shape; rooms stored in an older shape are treated as closed. */
-export const ROOM_STATE_VERSION = 4;
+export const ROOM_STATE_VERSION = 5;
 
 /** `activeFrom` for a player who hasn't finished onboarding during a game. */
 export const NOT_YET = Number.MAX_SAFE_INTEGER;
@@ -114,6 +125,7 @@ export type RoomState = {
 export type Effect =
   | { to: "all"; event: BroadcastEvent }
   | { to: "player"; playerId: string; event: PrivateEvent }
+  | { to: "analytics"; event: AnalyticsEvent }
   | { to: "close" };
 
 export type Viewer = { role: "display" } | { role: "player"; player: Player };
@@ -151,6 +163,7 @@ export class Room {
     private readonly bank: BankQuestion[] = BANK,
     private readonly engine: EngineConfig = DEFAULT_ENGINE_CONFIG,
     private readonly rng: () => number = Math.random,
+    private readonly makeId: () => string = () => crypto.randomUUID(),
   ) {}
 
   // ================= commands =================
@@ -289,6 +302,7 @@ export class Room {
     this.touch(now);
     this.voidQuestion(q, "SKIPPED");
     this.clearPhaseDeadlines();
+    this.effects.push({ to: "analytics", event: { kind: "QUESTION_SKIPPED", gameUid: this.s.game!.uid, questionId: q.questionId, at: now } });
     this.broadcast({ type: "QUESTION_SKIPPED", seq: 0, payload: { number: q.number } });
     this.s.deadlines.push({ kind: "NEXT_QUESTION", at: now + this.config.skipGapMs });
     return ok(true);
@@ -303,7 +317,35 @@ export class Room {
     this.touch(now);
     const q = this.currentQuestion();
     if (q && (q.phase === "PRESENTING" || q.phase === "ANSWERING")) this.voidQuestion(q, "CANCELLED");
-    this.finishGame();
+    this.finishGame(now, "HOST");
+    return ok(true);
+  }
+
+  /** Offboarding (EPIC 28): once per player per game, after it ends. Stored without the player id. */
+  submitFeedback(playerId: string, input: SessionFeedbackInput, now: number): Result<true> {
+    const g = this.s.game;
+    if (!this.player(playerId)) return fail(401, "invalid token");
+    if (g?.status !== "FINISHED") return fail(409, "game not finished");
+    if (!g.results?.leaderboard.some((l) => l.playerId === playerId)) return fail(403, "not a participant");
+    if (g.feedbackFrom.includes(playerId)) return ok(true); // idempotent
+    this.touch(now);
+    g.feedbackFrom.push(playerId);
+    this.effects.push({ to: "analytics", event: { kind: "SESSION_FEEDBACK", gameUid: g.uid, at: now, feedback: input } });
+    return ok(true);
+  }
+
+  /** Great / Fine / Bad for a revealed question of the finished game (US-FEED-001). First rating wins. */
+  rateQuestion(playerId: string, number: number, rating: QuestionRating, now: number): Result<true> {
+    const g = this.s.game;
+    if (!this.player(playerId)) return fail(401, "invalid token");
+    if (g?.status !== "FINISHED") return fail(409, "game not finished");
+    const q = g.questions.find((x) => x.number === number && x.phase === "REVEALED");
+    if (!q) return fail(404, "no such question");
+    const key = `${number}:${playerId}`;
+    if (g.ratings[key]) return ok(true);
+    this.touch(now);
+    g.ratings[key] = rating;
+    this.effects.push({ to: "analytics", event: { kind: "QUESTION_RATED", gameUid: g.uid, questionId: q.questionId, rating } });
     return ok(true);
   }
 
@@ -349,6 +391,8 @@ export class Room {
             answer: myAnswer && !myAnswer.voided ? myAnswer.key : null,
             result: q?.phase === "REVEALED" && myAnswer ? this.personalResult(q, myAnswer) : null,
             total: this.totalScore(me.id),
+            feedbackGiven: Boolean(g?.feedbackFrom.includes(me.id)),
+            ratings: g ? this.ratingsOf(me.id) : {},
           }
         : null,
       results: g?.status === "FINISHED" ? g.results : null,
@@ -392,6 +436,7 @@ export class Room {
 
   private newGame(number: number, now: number) {
     this.s.game = {
+      uid: this.makeId(),
       number,
       status: "ACTIVE",
       startedAt: now,
@@ -401,6 +446,8 @@ export class Room {
       results: null,
       profile: this.buildProfile(),
       composition: emptyCompositionState(),
+      feedbackFrom: [],
+      ratings: {},
     };
     this.s.deadlines = this.s.deadlines.filter((d) => d.kind === "EXPIRY" || d.kind === "DISCONNECT_GRACE");
     this.s.deadlines.push({ kind: "SOFT_END", at: now + this.config.softEndAfterMs });
@@ -424,13 +471,14 @@ export class Room {
       config: this.engine,
       rng: this.rng,
     });
-    if (!selection) return this.finishGame(); // bank exhausted for this room
+    if (!selection) return this.finishGame(now, "BANK_EXHAUSTED"); // bank exhausted for this room
     g.composition = selection.state;
     const next = selection.question;
 
     // Options are reshuffled on every showing: the file order is editorial, not random.
     const shuffled = shuffle(next.options, this.rng);
     const options = shuffled.map((o, i) => ({ key: OPTION_KEYS[i], text: o.text }));
+    const originalKeys = Object.fromEntries(shuffled.map((o, i) => [OPTION_KEYS[i], o.key])) as Record<OptionKey, OptionKey>;
     const correctKey = OPTION_KEYS[shuffled.findIndex((o) => o.key === next.correctKey)];
 
     const { minMs, perCharMs, maxMs } = this.config.presentation;
@@ -441,6 +489,7 @@ export class Room {
       familyId: next.familyId,
       text: next.text,
       options,
+      originalKeys,
       correctKey,
       explanation: next.explanation,
       phase: "PRESENTING",
@@ -483,11 +532,29 @@ export class Room {
       const remaining = Math.max(0, 1 - a.responseMs / q.answerMs);
       a.bonus = correct ? Math.round(this.config.speedBonusMax * remaining) : 0;
     }
+    const g = this.s.game!;
     const answers = Object.values(q.answers);
-    if (answers.length && this.s.game) {
-      const accuracy = answers.filter((a) => a.key === q.correctKey).length / answers.length;
-      this.s.game.composition = recordAccuracy(this.s.game.composition, accuracy);
-    }
+    const correct = answers.filter((a) => a.key === q.correctKey).length;
+    if (answers.length) g.composition = recordAccuracy(g.composition, correct / answers.length);
+
+    const hero = q.selection.heroPlayerId;
+    const distribution: Record<OptionKey, number> = { A: 0, B: 0, C: 0, D: 0 };
+    for (const a of answers) distribution[q.originalKeys[a.key]]++;
+    this.effects.push({
+      to: "analytics",
+      event: {
+        kind: "QUESTION_PLAYED",
+        gameUid: g.uid,
+        questionId: q.questionId,
+        at: now,
+        answered: answers.length,
+        correct,
+        responseMsSum: answers.reduce((sum, a) => sum + a.responseMs, 0),
+        distribution,
+        heroTargeted: hero !== null,
+        heroSuccess: hero !== null && q.answers[hero]?.key === q.correctKey && correct / Math.max(1, answers.length) < 0.5,
+      },
+    });
     this.s.deadlines.push({ kind: "REVEAL_END", at: now + this.config.revealMs });
     this.broadcast({ type: "QUESTION_REVEALED", seq: 0, payload: { reveal: this.revealData(q), timing: this.timing(now)! } });
     for (const [playerId, a] of Object.entries(q.answers)) {
@@ -504,7 +571,7 @@ export class Room {
     }
   }
 
-  private finishGame() {
+  private finishGame(now: number, endedBy: "HOST" | "BANK_EXHAUSTED") {
     const g = this.s.game!;
     this.clearPhaseDeadlines();
     this.s.deadlines = this.s.deadlines.filter((d) => d.kind !== "SOFT_END");
@@ -512,6 +579,19 @@ export class Room {
     g.paused = null;
     g.results = this.computeResults();
     this.broadcast({ type: "GAME_FINISHED", seq: 0, payload: { results: g.results } });
+    this.effects.push({
+      to: "analytics",
+      event: {
+        kind: "GAME_FINISHED",
+        gameUid: g.uid,
+        startedAt: g.startedAt,
+        endedAt: now,
+        players: g.results.leaderboard.length,
+        questionsPlayed: g.results.questionsPlayed,
+        endedBy,
+        softEndShown: g.softEndSuggested,
+      },
+    });
   }
 
   private computeResults(): GameResults {
@@ -575,6 +655,7 @@ export class Room {
         fastestCorrect: fastest,
       },
       questionsPlayed: revealed.length,
+      questions: revealed.map((q) => ({ number: q.number, text: q.text })),
     };
   }
 
@@ -653,6 +734,15 @@ export class Room {
     if (!p.onboarding) return "ONBOARDING";
     if (this.gameRunning() && p.activeFrom > (this.currentQuestion()?.number ?? 0)) return "PENDING";
     return "ACTIVE";
+  }
+
+  private ratingsOf(playerId: string): Record<number, QuestionRating> {
+    const out: Record<number, QuestionRating> = {};
+    for (const [key, rating] of Object.entries(this.s.game?.ratings ?? {})) {
+      const [n, id] = key.split(":");
+      if (id === playerId) out[Number(n)] = rating;
+    }
+    return out;
   }
 
   private gameRunning(): boolean {
