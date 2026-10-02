@@ -1,6 +1,6 @@
 // Worker entry: HTTP routing and room lookup. All room state lives in RoomDO.
 import { Hono, type Context } from "hono";
-import { isRoomCode, ROOM_CODE_ALPHABET, ROOM_CODE_LENGTH, type OptionKey } from "@quiz/shared";
+import { isRoomCode, ROOM_CODE_ALPHABET, ROOM_CODE_LENGTH, type HostCommand, type OptionKey } from "@quiz/shared";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
 export { RoomDO };
@@ -40,9 +40,13 @@ app.get("/rooms/:code/ws", async (c) => {
 
 app.get("/rooms/:code/state", async (c) => reply(c, await roomStub(c, c.req.param("code")).snapshotFor(bearer(c))));
 
-app.post("/rooms/:code/start", async (c) => reply(c, await roomStub(c, c.req.param("code")).start(bearer(c))));
+const HOST_COMMANDS: HostCommand[] = ["start", "pause", "resume", "skip", "end", "play-again"];
 
-app.post("/rooms/:code/reveal", async (c) => reply(c, await roomStub(c, c.req.param("code")).reveal(bearer(c))));
+app.post("/rooms/:code/:command{start|pause|resume|skip|end|play-again}", async (c) => {
+  const command = c.req.param("command") as HostCommand;
+  if (!HOST_COMMANDS.includes(command)) return c.json({ error: "not found" }, 404);
+  return reply(c, await roomStub(c, c.req.param("code")).host(bearer(c), command));
+});
 
 app.post("/rooms/:code/answers", async (c) => {
   const body = await c.req.json<{ optionKey?: unknown }>().catch(() => ({ optionKey: undefined }));

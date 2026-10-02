@@ -29,11 +29,12 @@ class Client {
     };
     this.ws.onclose = (e) => (this.closeCode = e.code);
   }
-  async waitFor(type: ServerEvent["type"], timeoutMs = 3000) {
+  /** Waits for the first event of `type` at index ≥ `from` (use `mark()` to get the current index). */
+  async waitFor<T extends ServerEvent["type"]>(type: T, timeoutMs = 3000, from = 0): Promise<Extract<ServerEvent, { type: T }>> {
     const start = Date.now();
     while (Date.now() - start < timeoutMs) {
-      const e = this.events.find((x) => x.type === type);
-      if (e) return e;
+      const e = this.events.slice(from).find((x) => x.type === type);
+      if (e) return e as Extract<ServerEvent, { type: T }>;
       await new Promise((r) => setTimeout(r, 20));
     }
     throw new Error(`timeout waiting for ${type}; got ${this.events.map((e) => e.type).join(",")}`);
@@ -42,6 +43,9 @@ class Client {
     const start = Date.now();
     while (this.closeCode === null && Date.now() - start < timeoutMs) await new Promise((r) => setTimeout(r, 20));
     return this.closeCode;
+  }
+  mark() {
+    return this.events.length;
   }
   close() {
     this.ws.close();
@@ -83,31 +87,63 @@ const notHost = await api(`/rooms/${code}/start`, { token: max.playerToken });
 check(notHost.status === 403, `non-host cannot start (status ${notHost.status})`);
 const started = await api(`/rooms/${code}/start`, { token: anna.playerToken });
 check(started.status === 200, "host starts the game");
-await display.waitFor("QUESTION_PRESENTED");
+
+// ---- question 1: presentation → answering → all answered → reveal ----
+const presented = await display.waitFor("QUESTION_PRESENTED");
+check(presented.payload.question.options === null, "options are hidden while the question is being read");
+const early = await api(`/rooms/${code}/answers`, { token: anna.playerToken, body: { optionKey: "B" } });
+check(early.status === 409, "answers are rejected during the presentation phase");
+
+const opened = await display.waitFor("ANSWER_PHASE_STARTED", 10_000);
+check(opened.payload.options.length === 4 && opened.payload.timing.durationMs === 15_000, "answer phase opens with 4 options and a 15 s timer");
 check(!display.raw.some((r) => r.includes("correctKey") && !r.includes("QUESTION_REVEALED")), "display has no correctKey before reveal");
 
 const a1 = await api<{ optionKey: string }>(`/rooms/${code}/answers`, { token: anna.playerToken, body: { optionKey: "B" } });
 const a1again = await api<{ optionKey: string }>(`/rooms/${code}/answers`, { token: anna.playerToken, body: { optionKey: "C" } });
 check(a1.status === 200 && a1again.body.optionKey === "B", "second tap keeps the first answer");
 await annaWs.waitFor("ANSWER_ACCEPTED");
-
 await api(`/rooms/${code}/answers`, { token: max.playerToken, body: { optionKey: "A" } });
+
 const revealed = await display.waitFor("QUESTION_REVEALED");
-if (revealed.type === "QUESTION_REVEALED") {
-  check(revealed.payload.correctKey === "B" && revealed.payload.distribution.A === 1 && revealed.payload.distribution.B === 1, "auto-reveal when all answered, distribution A1 B1");
-}
+const { reveal } = revealed.payload;
+check(reveal.correctKey === "B" && reveal.distribution.A === 1 && reveal.distribution.B === 1, "auto-reveal when all answered, distribution A1 B1");
 const annaResult = await annaWs.waitFor("PERSONAL_RESULT");
 const maxResult = await maxWs.waitFor("PERSONAL_RESULT");
-check(annaResult.type === "PERSONAL_RESULT" && annaResult.payload.correct, "Аня gets correct=true privately");
-check(maxResult.type === "PERSONAL_RESULT" && !maxResult.payload.correct, "Макс gets correct=false privately");
+const pts = annaResult.payload.result.points;
+check(annaResult.payload.result.correct && pts > 1000 && pts <= 1150, `Аня: correct, ${pts} points (1000 + speed bonus)`);
+check(!maxResult.payload.result.correct && maxResult.payload.result.points === 0, "Макс: wrong, 0 points");
 check(!display.events.some((e) => e.type === "PERSONAL_RESULT" || e.type === "ANSWER_ACCEPTED"), "display gets no private events");
 
+// ---- question 2: pause / resume / skip ----
+const m2 = display.mark();
+await display.waitFor("QUESTION_PRESENTED", 15_000, m2);
+check(true, "next question presented automatically after the reveal");
+const paused = await api(`/rooms/${code}/pause`, { token: anna.playerToken });
+const pausedEvt = await display.waitFor("GAME_PAUSED", 3000, m2);
+check(paused.status === 200 && pausedEvt.payload.timing?.paused === true, "host pauses; timing is frozen");
+await new Promise((r) => setTimeout(r, 1000));
+await api(`/rooms/${code}/resume`, { token: anna.playerToken });
+await display.waitFor("GAME_RESUMED", 3000, m2);
+const skipped = await api(`/rooms/${code}/skip`, { token: anna.playerToken });
+await display.waitFor("QUESTION_SKIPPED", 3000, m2);
+check(skipped.status === 200, "host skips the question");
+
+// ---- question 3, then end ----
+const m3 = display.mark();
+await display.waitFor("QUESTION_PRESENTED", 5000, m3);
+const ended = await api(`/rooms/${code}/end`, { token: anna.playerToken });
+const finished = await display.waitFor("GAME_FINISHED", 3000, m3);
+const { results } = finished.payload;
+check(ended.status === 200 && results.questionsPlayed === 1, `end mid-question: ${results.questionsPlayed} question counted`);
+check(results.leaderboard[0].nickname === "Аня" && results.leaderboard[0].score === pts, "leaderboard: Аня first with her points");
+check(results.stats.onlyOneKnew === null, "single-person stat hidden in a 2-player room");
+
 const seqs = display.events.flatMap((e) => ("seq" in e ? [e.seq] : []));
-check(seqs.every((s, i) => i === 0 || s === seqs[i - 1] + 1), `display seq is gapless: ${seqs.join(",")}`);
+check(seqs.every((x, i) => i === 0 || x === seqs[i - 1] + 1), `display seq is gapless (${seqs.length} events)`);
 
 maxWs.close();
-const presence = await display.waitFor("PLAYER_PRESENCE").catch(() => null);
-check(presence !== null, "display sees presence changes");
+const status = await display.waitFor("PLAYER_STATUS", 3000, display.mark());
+check(status.payload.status === "DISCONNECTED", "display sees a player go offline");
 
 for (const c of [display, annaWs]) c.close();
 console.log(failures ? `\n${failures} check(s) failed` : "\nall checks passed");

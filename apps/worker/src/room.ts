@@ -1,162 +1,104 @@
-// RoomDO — one Durable Object per room; the single source of truth (09-system-design §6).
-// M1: one hardcoded question, host-driven Start / Reveal, no timers yet.
+// RoomDO — one Durable Object per room (09-system-design §6). A thin adapter around the pure
+// `Room` state machine: authenticates, persists state, drives the alarm and delivers effects.
 import { DurableObject } from "cloudflare:workers";
-import {
-  DEMO_QUESTION,
-  NICKNAME_MAX,
-  type OptionKey,
-  type PublicPlayer,
-  type PublicQuestion,
-  type Reveal,
-  type RoomStatus,
-  type ServerEvent,
-  type Snapshot,
-} from "@quiz/shared";
+import { DEFAULT_CONFIG, NICKNAME_MAX, type HostCommand, type OptionKey, type ServerEvent, type Snapshot } from "@quiz/shared";
+import { newRoomState, Room, ROOM_STATE_VERSION, type Effect, type Result, type RoomState, type Viewer } from "./game.ts";
+
+export type { Result };
 
 export interface Env {
   ROOMS: DurableObjectNamespace<RoomDO>;
 }
 
-type Player = { id: string; nickname: string; tokenHash: string; isHost: boolean; joinedAt: number };
-
-type QuestionState = {
-  number: number;
-  id: string;
-  text: string;
-  options: { key: OptionKey; text: string }[];
-  correctKey: OptionKey;
-  explanation: string;
-  phase: "ANSWERING" | "REVEALED";
-  answers: Record<string, OptionKey>; // playerId → key
-};
-
-type State = {
-  code: string;
-  createdAt: number;
-  status: RoomStatus;
-  displayTokenHash: string;
-  players: Player[];
-  question: QuestionState | null;
-  seq: number;
-};
-
-type Viewer = { role: "display" } | { role: "player"; player: Player };
 type Attachment = { role: "display" } | { role: "player"; playerId: string };
 
-export type Result<T> = { ok: true; value: T } | { ok: false; status: 400 | 401 | 403 | 404 | 409; error: string };
-const ok = <T>(value: T): Result<T> => ({ ok: true, value });
-const fail = (status: 400 | 401 | 403 | 404 | 409, error: string): Result<never> => ({ ok: false, status, error });
-
-// WebSocket close codes for clients: auth failure and unknown room.
+// WebSocket close codes for clients: auth failure and unknown/closed room.
 const CLOSE_UNAUTHORIZED = 4401;
 const CLOSE_NOT_FOUND = 4404;
-const MIN_PLAYERS_TO_START = 2; // D-12
+
+const fail = (status: 400 | 401 | 404, error: string): Result<never> => ({ ok: false, status, error });
 
 export class RoomDO extends DurableObject<Env> {
-  private state: State | null = null;
+  private state: RoomState | null = null;
+  private readonly config = DEFAULT_CONFIG;
 
   constructor(ctx: DurableObjectState, env: Env) {
     super(ctx, env);
     ctx.blockConcurrencyWhile(async () => {
-      this.state = (await ctx.storage.get<State>("state")) ?? null;
+      const stored = (await ctx.storage.get<RoomState>("state")) ?? null;
+      if (stored && stored.version !== ROOM_STATE_VERSION) {
+        // Written by an older deploy: we can't safely resume it, so the room is gone.
+        await ctx.storage.deleteAll();
+        this.state = null;
+      } else {
+        this.state = stored;
+      }
     });
   }
 
   // ---------- commands (RPC from the Worker) ----------
 
   async init(code: string): Promise<Result<{ displayToken: string }>> {
-    if (this.state) return fail(409, "room exists");
+    if (this.state) return { ok: false, status: 409, error: "room exists" };
     const displayToken = randomToken();
-    this.state = {
-      code,
-      createdAt: Date.now(),
-      status: "WAITING",
-      displayTokenHash: await sha256(displayToken),
-      players: [],
-      question: null,
-      seq: 0,
-    };
-    await this.save();
-    return ok({ displayToken });
+    this.state = newRoomState(code, await sha256(displayToken), Date.now(), this.config);
+    await this.commit(new Room(this.state, this.config));
+    return { ok: true, value: { displayToken } };
   }
 
   async join(rawNickname: string): Promise<Result<{ playerId: string; playerToken: string; isHost: boolean }>> {
-    const s = this.state;
-    if (!s) return fail(404, "room not found");
-    const base = rawNickname.trim().replace(/\s+/g, " ").slice(0, NICKNAME_MAX);
-    if (!base) return fail(400, "nickname required");
-
-    let nickname = base;
-    for (let i = 2; s.players.some((p) => p.nickname.toLowerCase() === nickname.toLowerCase()); i++) {
-      nickname = `${base} ${i}`;
-    }
+    if (!this.live()) return fail(404, "room not found");
+    const nickname = rawNickname.trim().replace(/\s+/g, " ").slice(0, NICKNAME_MAX);
+    if (!nickname) return fail(400, "nickname required");
     const playerToken = randomToken();
-    // M1: the first player to join becomes host; the creating device is the shared display.
-    const player: Player = {
-      id: crypto.randomUUID(),
-      nickname,
-      tokenHash: await sha256(playerToken),
-      isHost: s.players.length === 0,
-      joinedAt: Date.now(),
-    };
-    s.players.push(player);
-    await this.save();
-    this.broadcast({ type: "PLAYER_JOINED", seq: this.nextSeq(), payload: { player: this.publicPlayer(player) } });
-    return ok({ playerId: player.id, playerToken, isHost: player.isHost });
+    const room = this.room();
+    const player = room.join(nickname, crypto.randomUUID(), await sha256(playerToken), Date.now());
+    await this.commit(room);
+    return { ok: true, value: { playerId: player.id, playerToken, isHost: player.isHost } };
   }
 
-  async start(token: string): Promise<Result<{ started: true }>> {
-    const host = await this.requireHost(token);
-    if (!host.ok) return host;
-    const s = this.state!;
-    if (s.question?.phase === "ANSWERING") return fail(409, "question in progress");
-    if (s.players.length < MIN_PLAYERS_TO_START) return fail(409, `need at least ${MIN_PLAYERS_TO_START} players`);
-
-    s.status = "ACTIVE";
-    s.question = {
-      ...DEMO_QUESTION,
-      number: (s.question?.number ?? 0) + 1,
-      phase: "ANSWERING",
-      answers: {},
-    };
-    await this.save();
-    this.broadcast({ type: "QUESTION_PRESENTED", seq: this.nextSeq(), payload: { question: this.publicQuestion()! } });
-    return ok({ started: true });
+  async host(token: string, command: HostCommand): Promise<Result<true>> {
+    const viewer = await this.authenticate(token);
+    if (!viewer) return this.live() ? fail(401, "invalid token") : fail(404, "room not found");
+    if (viewer.role !== "player") return { ok: false, status: 403, error: "host only" };
+    const room = this.room();
+    const now = Date.now();
+    const id = viewer.player.id;
+    const r = {
+      start: () => room.start(id, now),
+      pause: () => room.pause(id, now),
+      resume: () => room.resume(id, now),
+      skip: () => room.skip(id, now),
+      end: () => room.end(id, now),
+      "play-again": () => room.playAgain(id, now),
+    }[command]();
+    await this.commit(room);
+    return r;
   }
 
   async answer(token: string, optionKey: OptionKey): Promise<Result<{ optionKey: OptionKey }>> {
     const viewer = await this.authenticate(token);
-    if (!viewer || viewer.role !== "player") return fail(401, "invalid token");
-    const q = this.state!.question;
-    if (!q || q.phase !== "ANSWERING") return fail(409, "question closed");
-    if (!q.options.some((o) => o.key === optionKey)) return fail(400, "unknown option");
-
-    // Idempotent: a repeated tap returns the first accepted answer (07-api §7.3).
-    const existing = q.answers[viewer.player.id];
-    if (existing) return ok({ optionKey: existing });
-
-    q.answers[viewer.player.id] = optionKey;
-    await this.save();
-    this.sendToPlayer(viewer.player.id, { type: "ANSWER_ACCEPTED", payload: { optionKey } });
-    const counts = this.answerCounts();
-    this.broadcast({ type: "ANSWER_COUNT_UPDATED", seq: this.nextSeq(), payload: counts });
-    if (counts.activePlayers > 0 && this.connectedPlayerIds().every((id) => q.answers[id])) await this.doReveal();
-    return ok({ optionKey });
-  }
-
-  async reveal(token: string): Promise<Result<{ revealed: true }>> {
-    const host = await this.requireHost(token);
-    if (!host.ok) return host;
-    if (this.state!.question?.phase !== "ANSWERING") return fail(409, "nothing to reveal");
-    await this.doReveal();
-    return ok({ revealed: true });
+    if (!viewer || viewer.role !== "player") return this.live() ? fail(401, "invalid token") : fail(404, "room not found");
+    const room = this.room();
+    const r = room.answer(viewer.player.id, optionKey, Date.now());
+    await this.commit(room);
+    return r;
   }
 
   async snapshotFor(token: string): Promise<Result<Snapshot>> {
-    if (!this.state) return fail(404, "room not found");
+    if (!this.live()) return fail(404, "room not found");
     const viewer = await this.authenticate(token);
     if (!viewer) return fail(401, "invalid token");
-    return ok(this.snapshot(viewer));
+    return { ok: true, value: this.room().snapshot(viewer, Date.now()) };
+  }
+
+  // ---------- timers ----------
+
+  async alarm() {
+    if (!this.state) return;
+    const room = this.room();
+    room.tick(Date.now());
+    await this.commit(room);
   }
 
   // ---------- WebSocket (hibernation API) ----------
@@ -166,40 +108,38 @@ export class RoomDO extends DurableObject<Env> {
     const { 0: client, 1: server } = new WebSocketPair();
 
     const token = new URL(request.url).searchParams.get("token") ?? "";
-    const viewer = this.state ? await this.authenticate(token) : null;
+    const viewer = await this.authenticate(token);
     if (!viewer) {
       // Accept-then-close lets the browser see a meaningful close code instead of a bare 1006.
       server.accept();
-      server.close(this.state ? CLOSE_UNAUTHORIZED : CLOSE_NOT_FOUND, this.state ? "unauthorized" : "room not found");
+      server.close(this.live() ? CLOSE_UNAUTHORIZED : CLOSE_NOT_FOUND, this.live() ? "unauthorized" : "room not found");
       return new Response(null, { status: 101, webSocket: client });
     }
 
     const attachment: Attachment = viewer.role === "display" ? { role: "display" } : { role: "player", playerId: viewer.player.id };
-    const tags = viewer.role === "display" ? ["display"] : ["player", viewer.player.id];
-    this.ctx.acceptWebSocket(server, tags);
+    this.ctx.acceptWebSocket(server, viewer.role === "display" ? ["display"] : ["player", viewer.player.id]);
     server.serializeAttachment(attachment);
 
-    const wasConnected = viewer.role === "player" && this.socketsOf(viewer.player.id, server).length > 0;
-    server.send(JSON.stringify({ type: "SNAPSHOT", payload: this.snapshot(viewer) } satisfies ServerEvent));
-    if (viewer.role === "player" && !wasConnected) {
-      this.broadcast({ type: "PLAYER_PRESENCE", seq: this.nextSeq(), payload: { playerId: viewer.player.id, connected: true } });
-      this.broadcastCounts();
-      await this.save();
-    }
+    const room = this.room();
+    const now = Date.now();
+    if (viewer.role === "player") room.connect(viewer.player.id, now);
+    // The snapshot already reflects this connection; earlier effects carry lower seq numbers than it.
+    server.send(JSON.stringify({ type: "SNAPSHOT", payload: room.snapshot(viewer, now) } satisfies ServerEvent));
+    await this.commit(room, server);
     return new Response(null, { status: 101, webSocket: client });
   }
 
   async webSocketMessage(ws: WebSocket, message: string | ArrayBuffer) {
     if (typeof message !== "string") return;
-    let msg: unknown;
+    let msg: { type?: string } | null = null;
     try {
       msg = JSON.parse(message);
     } catch {
       return;
     }
-    if ((msg as { type?: string })?.type !== "SYNC") return;
+    if (msg?.type !== "SYNC" || !this.state) return;
     const viewer = this.viewerOf(ws);
-    if (viewer) ws.send(JSON.stringify({ type: "SNAPSHOT", payload: this.snapshot(viewer) } satisfies ServerEvent));
+    if (viewer) ws.send(JSON.stringify({ type: "SNAPSHOT", payload: this.room().snapshot(viewer, Date.now()) } satisfies ServerEvent));
   }
 
   async webSocketClose(ws: WebSocket, code: number, reason: string) {
@@ -209,11 +149,12 @@ export class RoomDO extends DurableObject<Env> {
       // already closed
     }
     const a = ws.deserializeAttachment() as Attachment | null;
-    if (a?.role !== "player" || !this.state) return;
-    if (this.socketsOf(a.playerId, ws).length > 0) return; // another tab of the same player is still open
-    this.broadcast({ type: "PLAYER_PRESENCE", seq: this.nextSeq(), payload: { playerId: a.playerId, connected: false } });
-    this.broadcastCounts();
-    await this.save();
+    if (a?.role !== "player" || !this.live()) return;
+    const stillOpen = this.ctx.getWebSockets(a.playerId).some((s) => s !== ws && s.readyState === WebSocket.OPEN);
+    if (stillOpen) return; // another tab of the same player
+    const room = this.room();
+    room.disconnect(a.playerId, Date.now());
+    await this.commit(room);
   }
 
   async webSocketError(ws: WebSocket) {
@@ -222,114 +163,30 @@ export class RoomDO extends DurableObject<Env> {
 
   // ---------- internals ----------
 
-  private async doReveal() {
-    const q = this.state!.question!;
-    q.phase = "REVEALED";
-    await this.save();
-    this.broadcast({ type: "QUESTION_REVEALED", seq: this.nextSeq(), payload: this.revealData()! });
-    for (const [playerId, key] of Object.entries(q.answers)) {
-      this.sendToPlayer(playerId, { type: "PERSONAL_RESULT", payload: { correct: key === q.correctKey } });
-    }
+  private room(): Room {
+    return new Room(this.state!, this.config);
   }
 
-  private async authenticate(token: string): Promise<Viewer | null> {
-    const s = this.state;
-    if (!s || !token) return null;
-    const h = await sha256(token);
-    if (h === s.displayTokenHash) return { role: "display" };
-    const player = s.players.find((p) => p.tokenHash === h);
-    return player ? { role: "player", player } : null;
+  private live(): boolean {
+    return Boolean(this.state && !this.state.closed);
   }
 
-  private async requireHost(token: string): Promise<Result<Player>> {
-    if (!this.state) return fail(404, "room not found");
-    const viewer = await this.authenticate(token);
-    if (!viewer || viewer.role !== "player") return fail(401, "invalid token");
-    if (!viewer.player.isHost) return fail(403, "host only");
-    return ok(viewer.player);
+  /** Persist, deliver effects, reschedule the alarm. `skip` is a socket that already got a fresh snapshot. */
+  private async commit(room: Room, skip?: WebSocket) {
+    if (room.s.closed) return this.closeRoom();
+    await this.ctx.storage.put("state", room.s);
+    for (const e of room.effects) this.deliver(e, skip);
+    const next = room.nextAlarm();
+    if (next === null) await this.ctx.storage.deleteAlarm();
+    else await this.ctx.storage.setAlarm(next);
   }
 
-  private viewerOf(ws: WebSocket): Viewer | null {
-    const a = ws.deserializeAttachment() as Attachment | null;
-    if (!a) return null;
-    if (a.role === "display") return { role: "display" };
-    const player = this.state?.players.find((p) => p.id === a.playerId);
-    return player ? { role: "player", player } : null;
-  }
-
-  private socketsOf(playerId: string, except: WebSocket): WebSocket[] {
-    return this.ctx.getWebSockets(playerId).filter((s) => s !== except && s.readyState === WebSocket.OPEN);
-  }
-
-  private connectedPlayerIds(): string[] {
-    const ids = new Set<string>();
-    for (const ws of this.ctx.getWebSockets("player")) {
-      const a = ws.deserializeAttachment() as Attachment | null;
-      if (a?.role === "player" && ws.readyState === WebSocket.OPEN) ids.add(a.playerId);
-    }
-    return [...ids];
-  }
-
-  private answerCounts() {
-    const q = this.state!.question;
-    return { answered: q ? Object.keys(q.answers).length : 0, activePlayers: this.connectedPlayerIds().length };
-  }
-
-  private broadcastCounts() {
-    if (this.state?.question?.phase === "ANSWERING") {
-      this.broadcast({ type: "ANSWER_COUNT_UPDATED", seq: this.nextSeq(), payload: this.answerCounts() });
-    }
-  }
-
-  private publicPlayer(p: Player): PublicPlayer {
-    return { id: p.id, nickname: p.nickname, isHost: p.isHost, connected: this.connectedPlayerIds().includes(p.id) };
-  }
-
-  /** The privacy boundary: never includes correctKey or individual answers. */
-  private publicQuestion(): PublicQuestion | null {
-    const q = this.state?.question;
-    if (!q) return null;
-    return { id: q.id, number: q.number, text: q.text, options: q.options, phase: q.phase, ...this.answerCounts() };
-  }
-
-  private revealData(): Reveal | null {
-    const q = this.state?.question;
-    if (!q || q.phase !== "REVEALED") return null;
-    const distribution: Record<OptionKey, number> = { A: 0, B: 0, C: 0, D: 0 };
-    for (const key of Object.values(q.answers)) distribution[key]++;
-    return { correctKey: q.correctKey, explanation: q.explanation, distribution };
-  }
-
-  private snapshot(viewer: Viewer): Snapshot {
-    const s = this.state!;
-    const q = s.question;
-    const mine =
-      viewer.role === "player" && q
-        ? {
-            answer: q.answers[viewer.player.id] ?? null,
-            correct: q.phase === "REVEALED" && q.answers[viewer.player.id] ? q.answers[viewer.player.id] === q.correctKey : null,
-          }
-        : null;
-    return {
-      you:
-        viewer.role === "display"
-          ? { role: "display" }
-          : { role: "player", playerId: viewer.player.id, nickname: viewer.player.nickname, isHost: viewer.player.isHost },
-      room: { code: s.code, status: s.status, players: s.players.map((p) => this.publicPlayer(p)) },
-      question: this.publicQuestion(),
-      reveal: this.revealData(),
-      mine,
-      seq: s.seq,
-    };
-  }
-
-  private nextSeq(): number {
-    return ++this.state!.seq;
-  }
-
-  private broadcast(event: ServerEvent) {
-    const data = JSON.stringify(event);
-    for (const ws of this.ctx.getWebSockets()) {
+  private deliver(e: Effect, skip?: WebSocket) {
+    if (e.to === "close") return;
+    const sockets = e.to === "all" ? this.ctx.getWebSockets() : this.ctx.getWebSockets(e.playerId);
+    const data = JSON.stringify(e.event);
+    for (const ws of sockets) {
+      if (ws === skip) continue;
       try {
         ws.send(data);
       } catch {
@@ -338,19 +195,36 @@ export class RoomDO extends DurableObject<Env> {
     }
   }
 
-  private sendToPlayer(playerId: string, event: ServerEvent) {
-    const data = JSON.stringify(event);
-    for (const ws of this.ctx.getWebSockets(playerId)) {
+  /** Room expiry: drop every trace of the players (Data Model §7). */
+  private async closeRoom() {
+    for (const ws of this.ctx.getWebSockets()) {
       try {
-        ws.send(data);
+        ws.close(CLOSE_NOT_FOUND, "room closed");
       } catch {
         // ignore
       }
     }
+    await this.ctx.storage.deleteAlarm();
+    await this.ctx.storage.deleteAll();
+    // Keep a tombstone in memory so a late request in this instance sees a closed room.
+    this.state = { ...this.state!, closed: true, players: [], game: null };
   }
 
-  private async save() {
-    await this.ctx.storage.put("state", this.state);
+  private async authenticate(token: string): Promise<Viewer | null> {
+    const s = this.state;
+    if (!s || s.closed || !token) return null;
+    const h = await sha256(token);
+    if (h === s.displayTokenHash) return { role: "display" };
+    const player = s.players.find((p) => p.tokenHash === h);
+    return player ? { role: "player", player } : null;
+  }
+
+  private viewerOf(ws: WebSocket): Viewer | null {
+    const a = ws.deserializeAttachment() as Attachment | null;
+    if (!a) return null;
+    if (a.role === "display") return { role: "display" };
+    const player = this.state?.players.find((p) => p.id === a.playerId);
+    return player ? { role: "player", player } : null;
   }
 }
 

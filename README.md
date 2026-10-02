@@ -26,10 +26,17 @@ npm run dev        # worker на :8787 и web на :5173
 QR-код указывает на LAN-адрес машины, так что телефоны в той же Wi-Fi-сети подключаются по нему.
 Первый вошедший игрок становится ведущим.
 
+Пока нет Composition Engine (M4), вопросы берутся из демо-банка — пилотных черновиков в `content/families`.
+После правки контента пересобери его:
+
+```bash
+node scripts/dev/gen-demo-bank.ts
+```
+
 Проверки:
 
 ```bash
 npm run typecheck
 npm test
-npm run smoke      # нужен запущенный worker
+npm run smoke      # нужен запущенный worker; ~30 с из-за реальных таймеров
 ```

@@ -415,3 +415,213 @@ li:nth-child(4) .key,
 .result.wrong .result-title {
   color: var(--wrong);
 }
+
+/* ---------- M2: timers, host controls, results ---------- */
+
+button.danger {
+  background: var(--wrong);
+  color: #1a0505;
+}
+
+.big-text {
+  font-size: 1.5em;
+}
+
+.phase-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  width: 100%;
+}
+
+.phase-bar .track {
+  flex: 1;
+  height: 0.5em;
+  background: var(--surface-2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.phase-bar .fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.1s linear;
+}
+
+.phase-bar.urgent .fill {
+  background: var(--wrong);
+}
+
+.phase-bar .seconds {
+  font-variant-numeric: tabular-nums;
+  font-weight: 800;
+  min-width: 2ch;
+  text-align: right;
+}
+
+.question-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.question-head p {
+  margin: 0;
+}
+
+.pause-overlay {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgb(22 19 31 / 0.82);
+  font-size: 4em;
+  font-weight: 800;
+  z-index: 5;
+}
+
+.display-footer {
+  position: fixed;
+  right: 2vw;
+  bottom: 1.5vw;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+.results {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  min-height: calc(100dvh - 6vw);
+  justify-content: center;
+}
+
+.results p {
+  margin: 0;
+}
+
+.winner {
+  text-align: center;
+}
+
+.winner-name {
+  font-size: 4em;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.winner-score {
+  font-size: 1.8em;
+  font-variant-numeric: tabular-nums;
+}
+
+.leaderboard {
+  margin: 0;
+  padding-left: 1.5em;
+  display: grid;
+  gap: 0.4em;
+  font-size: 1.3em;
+}
+
+.leaderboard li {
+  padding-left: 0.4em;
+}
+
+.leaderboard li::marker {
+  color: var(--muted);
+}
+
+.leaderboard li > span {
+  display: inline-block;
+}
+
+.leaderboard .name {
+  min-width: 40%;
+  font-weight: 600;
+}
+
+.leaderboard .score {
+  float: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em;
+}
+
+.stat-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1em 1.2em;
+  display: grid;
+  gap: 0.4em;
+}
+
+.stat-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-body {
+  font-size: 1.1em;
+}
+
+.phone-question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.points {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--right);
+  margin: 0;
+}
+
+.paused-chip {
+  align-self: center;
+  background: var(--accent);
+  color: var(--accent-text);
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+/* Sticky so the host can always reach the controls, whatever the phase renders above. */
+.host-bar {
+  position: sticky;
+  bottom: 0;
+  display: grid;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding: 0.75rem 0 calc(0.25rem + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--surface-2);
+  background: var(--bg);
+}
+
+.host-bar .row button {
+  flex: 1;
+  padding: 0.75em 0.5em;
+}
+
+.soft-end {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.soft-end p {
+  margin: 0;
+}

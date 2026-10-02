@@ -2,21 +2,31 @@
 // Events are past tense; commands go over HTTP. Only broadcast events carry `seq`.
 
 export type OptionKey = "A" | "B" | "C" | "D";
-export type Role = "display" | "player";
-export type RoomStatus = "WAITING" | "ACTIVE" | "FINISHED";
-export type QuestionPhase = "ANSWERING" | "REVEALED";
+export const OPTION_KEYS: OptionKey[] = ["A", "B", "C", "D"];
 
-export type PublicPlayer = { id: string; nickname: string; isHost: boolean; connected: boolean };
+export type RoomStatus = "WAITING" | "ACTIVE" | "CLOSED";
+export type GameStatus = "ACTIVE" | "PAUSED" | "FINISHED";
+export type QuestionPhase = "PRESENTING" | "ANSWERING" | "REVEALED";
+export type PlayerStatus = "PENDING" | "ACTIVE" | "DISCONNECTED";
+
+export type PublicPlayer = { id: string; nickname: string; isHost: boolean; status: PlayerStatus };
+
+/**
+ * Countdown for the current phase. Clients render `remainingMs` relative to the moment they
+ * received the message, so phone clocks don't matter (T-03).
+ */
+export type PhaseTiming = { durationMs: number; remainingMs: number; paused: boolean };
 
 /** What every client may see about the current question. Never contains the correct key before reveal. */
 export type PublicQuestion = {
-  id: string;
   number: number;
   text: string;
-  options: { key: OptionKey; text: string }[];
   phase: QuestionPhase;
+  /** Hidden during PRESENTING (BR-058). */
+  options: { key: OptionKey; text: string }[] | null;
   answered: number;
   activePlayers: number;
+  timing: PhaseTiming | null;
 };
 
 export type Reveal = {
@@ -25,26 +35,55 @@ export type Reveal = {
   distribution: Record<OptionKey, number>;
 };
 
+export type PersonalResult = { correct: boolean; baseScore: number; speedBonus: number; points: number };
+
+export type StatQuestion = { number: number; text: string; correctText: string };
+
+export type GameResults = {
+  leaderboard: { playerId: string; nickname: string; score: number; correct: number; attempted: number }[];
+  stats: {
+    hardest: StatQuestion | null;
+    everyoneKnew: StatQuestion | null;
+    mostDivided: StatQuestion | null;
+    /** No name on purpose (D-09); omitted in rooms with fewer than 4 players (BR-129). */
+    onlyOneKnew: StatQuestion | null;
+    fastestCorrect: { nickname: string; responseMs: number; question: StatQuestion } | null;
+  };
+  questionsPlayed: number;
+};
+
 export type Snapshot = {
-  you: { role: "display" } | { role: "player"; playerId: string; nickname: string; isHost: boolean };
+  you: { role: "display" } | { role: "player"; playerId: string; nickname: string; isHost: boolean; status: PlayerStatus };
   room: { code: string; status: RoomStatus; players: PublicPlayer[] };
+  game: { number: number; status: GameStatus; softEndSuggested: boolean } | null;
   question: PublicQuestion | null;
   reveal: Reveal | null;
-  /** Player-only: own answer and result for the current question. */
-  mine: { answer: OptionKey | null; correct: boolean | null } | null;
+  /** Player-only: own answer/result for the current question and running total. */
+  mine: { answer: OptionKey | null; result: PersonalResult | null; total: number } | null;
+  results: GameResults | null;
   seq: number;
 };
 
 export type ServerEvent =
   | { type: "SNAPSHOT"; payload: Snapshot }
   | { type: "PLAYER_JOINED"; seq: number; payload: { player: PublicPlayer } }
-  | { type: "PLAYER_PRESENCE"; seq: number; payload: { playerId: string; connected: boolean } }
+  | { type: "PLAYER_STATUS"; seq: number; payload: { playerId: string; status: PlayerStatus } }
+  | { type: "GAME_STARTED"; seq: number; payload: { number: number } }
   | { type: "QUESTION_PRESENTED"; seq: number; payload: { question: PublicQuestion } }
+  | { type: "ANSWER_PHASE_STARTED"; seq: number; payload: { options: { key: OptionKey; text: string }[]; timing: PhaseTiming; activePlayers: number } }
   | { type: "ANSWER_COUNT_UPDATED"; seq: number; payload: { answered: number; activePlayers: number } }
-  | { type: "QUESTION_REVEALED"; seq: number; payload: Reveal }
+  | { type: "QUESTION_REVEALED"; seq: number; payload: { reveal: Reveal; timing: PhaseTiming } }
+  | { type: "QUESTION_SKIPPED"; seq: number; payload: { number: number } }
+  | { type: "GAME_PAUSED"; seq: number; payload: { timing: PhaseTiming | null } }
+  | { type: "GAME_RESUMED"; seq: number; payload: { timing: PhaseTiming | null } }
+  | { type: "SOFT_END_SUGGESTED"; seq: number; payload: Record<string, never> }
+  | { type: "GAME_FINISHED"; seq: number; payload: { results: GameResults } }
   // private
   | { type: "ANSWER_ACCEPTED"; payload: { optionKey: OptionKey } }
-  | { type: "PERSONAL_RESULT"; payload: { correct: boolean } };
+  | { type: "PERSONAL_RESULT"; payload: { result: PersonalResult; total: number } };
+
+export type BroadcastEvent = Extract<ServerEvent, { seq: number }>;
+export type PrivateEvent = Exclude<ServerEvent, { seq: number } | { type: "SNAPSHOT" }>;
 
 /** Client → server over WebSocket: only a resync request. Everything else is HTTP. */
 export type ClientMessage = { type: "SYNC" };
@@ -56,6 +95,7 @@ export type JoinRequest = { nickname: string };
 export type JoinResponse = { playerId: string; playerToken: string; isHost: boolean };
 export type AnswerRequest = { optionKey: OptionKey };
 export type ApiError = { error: string };
+export type HostCommand = "start" | "pause" | "resume" | "skip" | "end" | "play-again";
 
 export const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O, 1/I
 export const ROOM_CODE_LENGTH = 6;

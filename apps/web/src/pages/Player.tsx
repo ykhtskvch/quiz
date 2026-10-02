@@ -1,14 +1,15 @@
-// Phone: join → wait → answer → result. Host controls appear for the first player.
+// Phone: join → wait → answer → result → final place. Host controls appear for the first player.
 import { useEffect, useState } from "react";
-import type { OptionKey, Snapshot } from "@quiz/shared";
+import type { HostCommand, OptionKey, Snapshot } from "@quiz/shared";
 import { NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
+import { PhaseBar } from "../components.tsx";
 import { t } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
 
 export function Player({ code }: { code: string }) {
   const [me, setMe] = useState<PlayerSession | null>(() => session.load(code));
-  const { snapshot, status } = useRoom(code, me?.playerToken ?? null);
+  const { snapshot, status, timingAt } = useRoom(code, me?.playerToken ?? null);
 
   useEffect(() => {
     if (status === "unauthorized") {
@@ -28,9 +29,9 @@ export function Player({ code }: { code: string }) {
       {status === "reconnecting" && <div className="banner">{t.reconnecting}</div>}
       <header className="player-header">
         <span>{snapshot.you.nickname}</span>
-        <span className="muted">{code}</span>
+        <span className="muted">{snapshot.mine && snapshot.game ? t.total(snapshot.mine.total) : code}</span>
       </header>
-      <PlayerBody s={snapshot} code={code} token={me.playerToken} />
+      <PlayerBody s={snapshot} code={code} token={me.playerToken} timingAt={timingAt} />
     </main>
   );
 }
@@ -58,7 +59,9 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
   return (
     <main className="player center">
       <form className="join-form" onSubmit={submit}>
-        <p className="muted">{t.roomCode}: {code}</p>
+        <p className="muted">
+          {t.roomCode}: {code}
+        </p>
         <label htmlFor="name">{t.yourName}</label>
         <input
           id="name"
@@ -78,11 +81,9 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
   );
 }
 
-function PlayerBody({ s, code, token }: { s: Snapshot; code: string; token: string }) {
-  const isHost = s.you.role === "player" && s.you.isHost;
+function useCommand(code: string, token: string) {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-
   const run = async (f: () => Promise<unknown>) => {
     setBusy(true);
     setError(null);
@@ -94,11 +95,18 @@ function PlayerBody({ s, code, token }: { s: Snapshot; code: string; token: stri
       setBusy(false);
     }
   };
+  const host = (command: HostCommand) => run(() => api.host(code, token, command));
+  return { busy, error, run, host };
+}
 
-  const q = s.question;
-  const enoughPlayers = s.room.players.length >= 2;
+function PlayerBody({ s, code, token, timingAt }: { s: Snapshot; code: string; token: string; timingAt: number }) {
+  const isHost = s.you.role === "player" && s.you.isHost;
+  const cmd = useCommand(code, token);
+  const game = s.game;
 
-  if (!q) {
+  // ---- lobby ----
+  if (!game) {
+    const enough = s.room.players.length >= 2;
     return (
       <section className="center grow">
         <p>{isHost ? t.youAreHost : t.waitingForHost}</p>
@@ -106,27 +114,90 @@ function PlayerBody({ s, code, token }: { s: Snapshot; code: string; token: stri
           {t.players}: {s.room.players.length}
         </p>
         {isHost && (
-          <button className="primary big" disabled={busy || !enoughPlayers} onClick={() => run(() => api.start(code, token))}>
+          <button className="primary big" disabled={cmd.busy || !enough} onClick={() => cmd.host("start")}>
             {t.start}
           </button>
         )}
-        {isHost && !enoughPlayers && <p className="muted small">{t.needTwoPlayers}</p>}
-        {error && <p className="error">{error}</p>}
+        {isHost && !enough && <p className="muted small">{t.needTwoPlayers}</p>}
+        {cmd.error && <p className="error">{cmd.error}</p>}
+      </section>
+    );
+  }
+
+  // ---- finished ----
+  if (s.results) {
+    const place = s.results.leaderboard.findIndex((l) => s.you.role === "player" && l.playerId === s.you.playerId) + 1;
+    const mine = s.results.leaderboard[place - 1];
+    return (
+      <section className="center grow">
+        <p className="result-title">{t.results}</p>
+        {mine && <p className="big-text">{t.yourPlace(place, s.results.leaderboard.length)}</p>}
+        {mine && <p className="muted">{t.score(mine.score)} · {t.correctOf(mine.correct, mine.attempted)}</p>}
+        <p className="muted small">{t.lookAtScreen}</p>
+        {isHost && (
+          <button className="primary big" disabled={cmd.busy} onClick={() => cmd.host("play-again")}>
+            {t.playAgain}
+          </button>
+        )}
+        {cmd.error && <p className="error">{cmd.error}</p>}
+      </section>
+    );
+  }
+
+  return (
+    <>
+      {game.status === "PAUSED" && <div className="paused-chip">{t.paused}</div>}
+      <QuestionBody s={s} code={code} token={token} timingAt={timingAt} run={cmd.run} busy={cmd.busy} />
+      {cmd.error && <p className="error center-text">{cmd.error}</p>}
+      {isHost && <HostBar s={s} host={cmd.host} busy={cmd.busy} />}
+    </>
+  );
+}
+
+function QuestionBody({
+  s,
+  code,
+  token,
+  timingAt,
+  run,
+  busy,
+}: {
+  s: Snapshot;
+  code: string;
+  token: string;
+  timingAt: number;
+  run: (f: () => Promise<unknown>) => Promise<void>;
+  busy: boolean;
+}) {
+  const q = s.question;
+  if (s.you.role === "player" && s.you.status === "PENDING") {
+    return <section className="center grow">{t.pendingJoin}</section>;
+  }
+  if (!q) return <section className="center grow muted">{t.nextQuestion}</section>;
+
+  if (q.phase === "PRESENTING") {
+    return (
+      <section className="center grow">
+        <p className="muted small">{t.question(q.number)}</p>
+        <p className="phone-question">{q.text}</p>
+        <p className="muted">{t.reading}</p>
+        <PhaseBar timing={q.timing} timingAt={timingAt} />
       </section>
     );
   }
 
   if (q.phase === "ANSWERING") {
     const mine = s.mine?.answer ?? null;
+    const paused = s.game?.status === "PAUSED";
     return (
       <section className="grow answer-section">
-        <p className="muted small">{t.lookAtScreen}</p>
+        <PhaseBar timing={q.timing} timingAt={timingAt} showSeconds />
         <div className="answer-grid">
-          {q.options.map((o) => (
+          {q.options!.map((o) => (
             <button
               key={o.key}
               className={`answer ${mine === o.key ? "chosen" : ""}`}
-              disabled={Boolean(mine) || busy}
+              disabled={Boolean(mine) || busy || paused}
               onClick={() => run(() => api.answer(code, token, o.key as OptionKey))}
             >
               <span className="key">{o.key}</span>
@@ -139,33 +210,69 @@ function PlayerBody({ s, code, token }: { s: Snapshot; code: string; token: stri
             {t.answerAccepted}: <strong>{mine}</strong>. {t.waitForOthers}
           </p>
         )}
-        {isHost && (
-          <button className="secondary" disabled={busy} onClick={() => run(() => api.reveal(code, token))}>
-            {t.revealNow}
-          </button>
-        )}
-        {error && <p className="error">{error}</p>}
       </section>
     );
   }
 
+  // REVEALED
+  const r = s.mine?.result;
   const correctKey = s.reveal?.correctKey;
-  const result = s.mine?.answer == null ? "none" : s.mine.correct ? "right" : "wrong";
+  const kind = !r ? "none" : r.correct ? "right" : "wrong";
   return (
-    <section className={`center grow result ${result}`}>
-      <p className="result-title">{result === "right" ? t.correct : result === "wrong" ? t.wrong : t.noAnswer}</p>
+    <section className={`center grow result ${kind}`}>
+      <p className="result-title">{kind === "right" ? t.correct : kind === "wrong" ? t.wrong : t.noAnswer}</p>
+      {r?.correct && <p className="points">{t.points(r.points)}</p>}
       {correctKey && (
         <p className="muted">
-          {t.correctAnswer}: {correctKey} — {q.options.find((o) => o.key === correctKey)?.text}
+          {t.correctAnswer}: {correctKey} — {q.options?.find((o) => o.key === correctKey)?.text}
         </p>
       )}
-      {isHost && (
-        <button className="primary" disabled={busy} onClick={() => run(() => api.start(code, token))}>
-          {t.nextDemo}
-        </button>
-      )}
-      {error && <p className="error">{error}</p>}
+      <PhaseBar timing={q.timing} timingAt={timingAt} />
     </section>
+  );
+}
+
+function HostBar({ s, host, busy }: { s: Snapshot; host: (c: HostCommand) => Promise<void>; busy: boolean }) {
+  const [confirmEnd, setConfirmEnd] = useState(false);
+  const [softDismissed, setSoftDismissed] = useState(false);
+  useEffect(() => {
+    if (!confirmEnd) return;
+    const id = setTimeout(() => setConfirmEnd(false), 3000);
+    return () => clearTimeout(id);
+  }, [confirmEnd]);
+
+  const paused = s.game?.status === "PAUSED";
+  const canSkip = !paused && (s.question?.phase === "PRESENTING" || s.question?.phase === "ANSWERING");
+
+  return (
+    <div className="host-bar">
+      {s.game?.softEndSuggested && !softDismissed && (
+        <div className="soft-end">
+          <p>{t.softEnd}</p>
+          <div className="row">
+            <button className="primary" disabled={busy} onClick={() => host("end")}>
+              {t.end}
+            </button>
+            <button onClick={() => setSoftDismissed(true)}>{t.softEndContinue}</button>
+          </div>
+        </div>
+      )}
+      <div className="row">
+        <button disabled={busy} onClick={() => host(paused ? "resume" : "pause")}>
+          {paused ? t.resume : t.pause}
+        </button>
+        <button disabled={busy || !canSkip} onClick={() => host("skip")}>
+          {t.skip}
+        </button>
+        <button
+          className={confirmEnd ? "danger" : ""}
+          disabled={busy}
+          onClick={() => (confirmEnd ? host("end") : setConfirmEnd(true))}
+        >
+          {confirmEnd ? t.confirmEnd : t.end}
+        </button>
+      </div>
+    </div>
   );
 }
 

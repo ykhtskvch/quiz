@@ -1,0 +1,222 @@
+import { describe, expect, it } from "vitest";
+import { DEFAULT_CONFIG, type DemoQuestion, type GameConfig } from "@quiz/shared";
+import { newRoomState, Room, type RoomState } from "./game.ts";
+
+const config: GameConfig = {
+  ...DEFAULT_CONFIG,
+  presentation: { minMs: 3000, perCharMs: 0, maxMs: 3000 },
+  answerMs: 15_000,
+  revealMs: 10_000,
+  skipGapMs: 1000,
+  disconnectGraceMs: 25_000,
+};
+
+const bank: DemoQuestion[] = ["q1", "q2", "q3", "q4"].map((id, i) => ({
+  id,
+  familyId: `f${i}`,
+  text: `Question ${id}?`,
+  options: [
+    { key: "A", text: `${id}-a` },
+    { key: "B", text: `${id}-b` },
+    { key: "C", text: `${id}-c` },
+    { key: "D", text: `${id}-d` },
+  ],
+  correctKey: "B",
+  explanation: `Because ${id}`,
+}));
+
+/** A room with N connected players, game started at t=0, first question presenting. */
+function setup(nPlayers = 2) {
+  const state: RoomState = newRoomState("ABCDEF", "display-hash", 0, config);
+  const ids: string[] = [];
+  const at = (s: RoomState) => new Room(s, config, bank);
+  for (let i = 0; i < nPlayers; i++) {
+    const r = at(state);
+    const p = r.join(`P${i}`, `p${i}`, `hash${i}`, 0);
+    r.connect(p.id, 0);
+    ids.push(p.id);
+  }
+  const room = () => at(state);
+  expect(room().start(ids[0], 0).ok).toBe(true);
+  return { state, ids, room };
+}
+
+const q = (state: RoomState) => state.game!.questions.at(-1)!;
+
+describe("question cycle", () => {
+  it("presents, opens answering after the presentation, reveals when everyone answered", () => {
+    const { state, ids, room } = setup();
+    expect(q(state).phase).toBe("PRESENTING");
+    expect(room().answer(ids[0], "B", 1000).ok).toBe(false); // options not open yet
+
+    room().tick(3000);
+    expect(q(state).phase).toBe("ANSWERING");
+
+    room().answer(ids[0], "B", 3000);
+    expect(q(state).phase).toBe("ANSWERING");
+    room().answer(ids[1], "A", 6000);
+    expect(q(state).phase).toBe("REVEALED");
+
+    room().tick(16_000);
+    expect(q(state).number).toBe(2);
+    expect(q(state).phase).toBe("PRESENTING");
+  });
+
+  it("reveals on timer expiry when someone did not answer", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().answer(ids[0], "B", 4000);
+    room().tick(17_999);
+    expect(q(state).phase).toBe("ANSWERING");
+    room().tick(18_000);
+    expect(q(state).phase).toBe("REVEALED");
+  });
+
+  it("scores 1000 + up to 150 for speed, nothing for wrong answers", () => {
+    const { state, ids, room } = setup(3);
+    room().tick(3000);
+    room().answer(ids[0], "B", 3000); // instant
+    room().answer(ids[1], "B", 10_500); // half the window
+    room().answer(ids[2], "C", 3500); // wrong
+    const a = q(state).answers;
+    expect(a[ids[0]].base + a[ids[0]].bonus).toBe(1150);
+    expect(a[ids[1]].base + a[ids[1]].bonus).toBe(1075);
+    expect(a[ids[2]].base + a[ids[2]].bonus).toBe(0);
+  });
+
+  it("keeps the first answer on a repeated tap", () => {
+    const { ids, room } = setup();
+    room().tick(3000);
+    room().answer(ids[0], "B", 4000);
+    const again = room().answer(ids[0], "C", 4100);
+    expect(again.ok && again.value.optionKey).toBe("B");
+  });
+});
+
+describe("host controls", () => {
+  it("pause freezes the timer and resume restores the remaining time", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().pause(ids[0], 8000); // 10s left
+    room().tick(100_000);
+    expect(q(state).phase).toBe("ANSWERING");
+    expect(room().answer(ids[1], "B", 100_000).ok).toBe(false);
+
+    room().resume(ids[0], 200_000);
+    room().tick(209_999);
+    expect(q(state).phase).toBe("ANSWERING");
+    room().tick(210_000);
+    expect(q(state).phase).toBe("REVEALED");
+  });
+
+  it("skip voids answers, moves on after the gap and never repeats the question", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().answer(ids[0], "B", 4000);
+    expect(room().skip(ids[0], 5000).ok).toBe(true);
+    expect(state.game!.questions[0].answers[ids[0]].voided).toBe(true);
+    room().tick(6000);
+    expect(q(state).number).toBe(2);
+    expect(q(state).questionId).not.toBe("q1");
+  });
+
+  it("only the host can control the game", () => {
+    const { ids, room } = setup();
+    expect(room().pause(ids[1], 1000)).toMatchObject({ ok: false, status: 403 });
+    expect(room().skip(ids[1], 1000)).toMatchObject({ ok: false, status: 403 });
+    expect(room().end(ids[1], 1000)).toMatchObject({ ok: false, status: 403 });
+  });
+
+  it("end cancels an unrevealed question and excludes it from results", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().answer(ids[0], "B", 3000);
+    room().answer(ids[1], "B", 3000); // reveal q1
+    room().tick(13_000); // q2 presenting
+    room().tick(16_000); // q2 answering
+    room().answer(ids[0], "B", 16_000);
+    room().end(ids[0], 17_000);
+
+    const results = state.game!.results!;
+    expect(state.game!.status).toBe("FINISHED");
+    expect(state.game!.questions[1].phase).toBe("CANCELLED");
+    expect(results.questionsPlayed).toBe(1);
+    expect(results.leaderboard.map((l) => l.score)).toEqual([1150, 1150]);
+    expect(state.deadlines.every((d) => d.kind === "EXPIRY")).toBe(true);
+  });
+
+  it("play again keeps used questions out", () => {
+    const { state, ids, room } = setup();
+    room().end(ids[0], 1000);
+    room().playAgain(ids[0], 2000);
+    expect(state.game!.number).toBe(2);
+    expect(q(state).questionId).toBe("q2");
+  });
+});
+
+describe("players", () => {
+  it("a disconnected player blocks the reveal only during the grace period", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().disconnect(ids[1], 4000);
+    room().answer(ids[0], "B", 5000);
+    expect(q(state).phase).toBe("ANSWERING");
+    room().tick(29_000); // grace over, before the answer timer
+    expect(q(state).phase).toBe("REVEALED");
+  });
+
+  it("a late joiner starts from the next question with zero score", () => {
+    const { state, room } = setup();
+    room().tick(3000);
+    const late = room().join("Late", "late", "hash-late", 4000);
+    room().connect(late.id, 4000);
+    expect(room().answer(late.id, "B", 4500)).toMatchObject({ ok: false, status: 409 });
+    expect(room().snapshot({ role: "player", player: late }, 4500).you).toMatchObject({ status: "PENDING" });
+
+    room().tick(18_000); // reveal by timer
+    room().tick(28_000); // q2
+    expect(q(state).number).toBe(2);
+    room().tick(31_000);
+    expect(room().answer(late.id, "B", 31_000).ok).toBe(true);
+  });
+
+  it("hides the single-person stat in rooms with fewer than 4 players", () => {
+    for (const [n, shown] of [
+      [3, false],
+      [4, true],
+    ] as const) {
+      const { state, ids, room } = setup(n);
+      room().tick(3000);
+      ids.forEach((id, i) => room().answer(id, i === 0 ? "B" : "C", 3000));
+      room().end(ids[0], 5000);
+      expect(Boolean(state.game!.results!.stats.onlyOneKnew)).toBe(shown);
+    }
+  });
+});
+
+describe("privacy and lifecycle", () => {
+  it("never broadcasts the correct key before the reveal", () => {
+    const { ids, room } = setup();
+    const r = room();
+    r.tick(3000);
+    r.answer(ids[0], "A", 3000);
+    const beforeReveal = r.effects.filter((e) => e.to === "all").map((e) => JSON.stringify(e));
+    expect(beforeReveal.some((s) => s.includes("correctKey"))).toBe(false);
+  });
+
+  it("closes the room after inactivity", () => {
+    const { state, room } = setup();
+    const r = room();
+    r.tick(config.roomExpiryMs + 1);
+    expect(state.closed).toBe(true);
+    expect(r.effects.some((e) => e.to === "close")).toBe(true);
+  });
+
+  it("keeps seq gapless across broadcasts", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000);
+    room().answer(ids[0], "B", 3000);
+    room().answer(ids[1], "B", 3000);
+    expect(state.seq).toBeGreaterThan(5);
+  });
+});
