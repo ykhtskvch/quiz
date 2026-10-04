@@ -1,0 +1,305 @@
+# Bridges for mixed rooms, set 2 (EN-native)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: bridges-screen
+    name: "Screen bridges"
+    facts:
+      - id: livanov-mbe
+        statement: "Vasily Livanov, Sherlock Holmes in the Soviet TV films (1979–1986), was made an honorary MBE in 2006."
+        sources: [{ name: "Wikipedia: Vasily Livanov", type: REFERENCE, verified: false }]
+        questions:
+          - id: livanov-mbe-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which actor, famous as Sherlock Holmes in the Soviet TV films, was made an honorary MBE?"
+            options:
+              - { key: A, text: "Jeremy Brett", distractor: SAME_CATEGORY }
+              - { key: B, text: "Vasily Livanov", correct: true }
+              - { key: C, text: "Vitaly Solomin", distractor: NEAR_MISS }
+              - { key: D, text: "Innokenty Smoktunovsky", distractor: SAME_CATEGORY }
+            explanation: "Vitaly Solomin played his Watson. Many British fans rate the Soviet series among the best Holmes adaptations."
+            topics: { world-literature: 0.6, soviet-cinema: 0.8 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 4
+            dignity: 4
+            effects: { BRIDGE: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bbc-war-and-peace-2016
+        statement: "In 2016 the BBC adapted War and Peace with Paul Dano as Pierre and Lily James as Natasha."
+        sources: [{ name: "Wikipedia: War & Peace (2016 TV series)", type: REFERENCE, verified: false }]
+        questions:
+          - id: bbc-war-and-peace-2016-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which Russian classic did the BBC adapt in 2016, with Paul Dano and Lily James?"
+            options:
+              - { key: A, text: "Anna Karenina", distractor: NEAR_MISS }
+              - { key: B, text: "War and Peace", correct: true }
+              - { key: C, text: "Doctor Zhivago", distractor: SAME_CATEGORY }
+              - { key: D, text: "The Brothers Karamazov", distractor: SAME_CATEGORY }
+            explanation: "Anna Karenina was the 2012 film with Keira Knightley. Paul Dano played Pierre, Lily James played Natasha."
+            topics: { russian-literature: 0.8, world-cinema: 0.5 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            generations: { 10s: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tarkovsky-solaris
+        statement: "The 1972 Soviet film Solaris was directed by Andrei Tarkovsky; Steven Soderbergh remade it in 2002."
+        sources: [{ name: "Wikipedia: Solaris (1972 film)", type: REFERENCE, verified: false }]
+        questions:
+          - id: tarkovsky-solaris-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Who directed the 1972 Soviet film Solaris?"
+            options:
+              - { key: A, text: "Sergei Eisenstein", distractor: SAME_CATEGORY }
+              - { key: B, text: "Andrei Tarkovsky", correct: true }
+              - { key: C, text: "Stanley Kubrick", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Sergei Bondarchuk", distractor: SAME_CATEGORY }
+            explanation: "It is often called the Soviet answer to Kubrick's 2001. Soderbergh remade it in 2002 with George Clooney."
+            topics: { world-cinema: 0.8, soviet-cinema: 0.8 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 4
+            dignity: 4
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: potemkin-odessa-steps
+        statement: "The famous Odessa Steps sequence comes from Sergei Eisenstein's Battleship Potemkin (1925)."
+        sources: [{ name: "Wikipedia: Battleship Potemkin", type: REFERENCE, verified: false }]
+        questions:
+          - id: potemkin-odessa-steps-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "The famous \"Odessa Steps\" scene comes from which film?"
+            options:
+              - { key: A, text: "October", distractor: NEAR_MISS }
+              - { key: B, text: "Battleship Potemkin", correct: true }
+              - { key: C, text: "Doctor Zhivago", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "The Untouchables", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The pram rolling down the steps has been copied endlessly — most famously in The Untouchables (1987)."
+            topics: { world-cinema: 0.8, soviet-cinema: 0.6 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: cheburashka-japan
+        statement: "Cheburashka became hugely popular in Japan, which made its own stop-motion version in 2010."
+        sources: [{ name: "Wikipedia: Cheburashka", type: REFERENCE, verified: false }]
+        questions:
+          - id: cheburashka-japan-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Outside the former USSR, in which country did Cheburashka become a big hit and get its own remake?"
+            options:
+              - { key: A, text: "China", distractor: PLAUSIBLE }
+              - { key: B, text: "Japan", correct: true }
+              - { key: C, text: "Finland", distractor: PLAUSIBLE }
+              - { key: D, text: "Italy", distractor: PLAUSIBLE }
+            explanation: "Japanese fans love his huge ears and big eyes; a Japanese stop-motion version came out in 2010."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: bridges-music
+    name: "Music bridges"
+    facts:
+      - id: back-in-the-ussr
+        statement: "\"Back in the U.S.S.R.\" (The Beatles, 1968) parodies Chuck Berry's \"Back in the U.S.A.\" and the Beach Boys."
+        sources: [{ name: "Wikipedia: Back in the U.S.S.R.", type: REFERENCE, verified: false }]
+        questions:
+          - id: back-in-the-ussr-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which Beatles song is about flying home to the Soviet Union?"
+            options:
+              - { key: A, text: "Ticket to Ride", distractor: SAME_CATEGORY }
+              - { key: B, text: "Back in the U.S.S.R.", correct: true }
+              - { key: C, text: "Revolution", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Drive My Car", distractor: SAME_CATEGORY }
+            explanation: "It's a parody of Chuck Berry's \"Back in the U.S.A.\" and the Beach Boys. Paul McCartney finally played it on Red Square in 2003."
+            topics: { world-pop: 1.0 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            generations: { 80s: 0.5 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: elton-john-ussr-1979
+        statement: "In May 1979 Elton John played concerts in Leningrad and Moscow, one of the first Western pop stars to tour the USSR."
+        sources: [{ name: "Wikipedia: Elton John's 1979 tour of the Soviet Union", type: REFERENCE, verified: false }]
+        questions:
+          - id: elton-john-ussr-1979-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which British star played concerts in Leningrad and Moscow in 1979?"
+            options:
+              - { key: A, text: "David Bowie", distractor: SAME_CATEGORY }
+              - { key: B, text: "Elton John", correct: true }
+              - { key: C, text: "Rod Stewart", distractor: SAME_CATEGORY }
+              - { key: D, text: "Paul McCartney", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "He toured with just a percussionist, Ray Cooper. The trip was filmed as the documentary To Russia… with Elton."
+            topics: { world-pop: 1.0, cold-war: 0.4 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            generations: { 80s: 0.8 }
+            difficulty: 4
+            dignity: 4
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Check the tour dates and that only Ray Cooper accompanied him."]
+
+      - id: flight-of-the-bumblebee
+        statement: "\"Flight of the Bumblebee\" was written by Nikolai Rimsky-Korsakov for his opera The Tale of Tsar Saltan."
+        sources: [{ name: "Wikipedia: Flight of the Bumblebee", type: REFERENCE, verified: false }]
+        questions:
+          - id: flight-of-the-bumblebee-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which Russian composer wrote \"Flight of the Bumblebee\"?"
+            options:
+              - { key: A, text: "Pyotr Tchaikovsky", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Nikolai Rimsky-Korsakov", correct: true }
+              - { key: C, text: "Sergei Rachmaninoff", distractor: SAME_CATEGORY }
+              - { key: D, text: "Igor Stravinsky", distractor: SAME_CATEGORY }
+            explanation: "It comes from his opera The Tale of Tsar Saltan, from Pushkin's fairy tale: the prince turns into a bumblebee."
+            topics: { art: 0.6, russian-literature: 0.4 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.6, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: bridges-people
+    name: "People and words"
+    facts:
+      - id: nureyev-paris-1961
+        statement: "Ballet dancer Rudolf Nureyev defected to the West at Le Bourget airport, Paris, in June 1961."
+        sources: [{ name: "Wikipedia: Rudolf Nureyev", type: REFERENCE, verified: false }]
+        questions:
+          - id: nureyev-paris-1961-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "In which city did ballet star Rudolf Nureyev defect to the West in 1961?"
+            options:
+              - { key: A, text: "London", distractor: PLAUSIBLE }
+              - { key: B, text: "Paris", correct: true }
+              - { key: C, text: "Vienna", distractor: PLAUSIBLE }
+              - { key: D, text: "New York", distractor: PLAUSIBLE }
+            explanation: "He slipped away from his KGB minders at Le Bourget airport. He later danced for years at the Royal Ballet with Margot Fonteyn."
+            topics: { cold-war: 0.8, art: 0.5 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 4
+            dignity: 4
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: nabokov-lolita
+        statement: "Lolita was written in English by the Russian-born writer Vladimir Nabokov."
+        sources: [{ name: "Wikipedia: Lolita", type: REFERENCE, verified: false }]
+        questions:
+          - id: nabokov-lolita-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which Russian-born writer wrote Lolita, in English?"
+            options:
+              - { key: A, text: "Aleksandr Solzhenitsyn", distractor: SAME_CATEGORY }
+              - { key: B, text: "Vladimir Nabokov", correct: true }
+              - { key: C, text: "Joseph Brodsky", distractor: SAME_CATEGORY }
+              - { key: D, text: "Boris Pasternak", distractor: SAME_CATEGORY }
+            explanation: "Nabokov wrote his first novels in Russian and switched to English in America. He later translated Lolita into Russian himself."
+            topics: { world-literature: 0.8, russian-literature: 0.8 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: theremin-termen
+        statement: "The theremin, an electronic instrument played without being touched, was invented in 1920 by the Russian physicist Lev Termen (Leon Theremin)."
+        sources: [{ name: "Wikipedia: Theremin", type: REFERENCE, verified: false }]
+        questions:
+          - id: theremin-termen-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "The theremin — the spooky instrument you play without touching it — was invented by…"
+            options:
+              - { key: A, text: "Nikola Tesla", distractor: SAME_CATEGORY }
+              - { key: B, text: "Lev Termen, a Russian physicist", correct: true }
+              - { key: C, text: "Robert Moog", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Thomas Edison", distractor: SAME_CATEGORY }
+            explanation: "Termen showed it to Lenin in 1922. Robert Moog built theremins before he became famous for synthesisers."
+            topics: { science: 1.0 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: mammoth-from-russian
+        statement: "The English word \"mammoth\" came from Russian \"mamont\"."
+        sources: [{ name: "Wiktionary / OED: mammoth", type: REFERENCE, verified: false }]
+        questions:
+          - id: mammoth-from-russian-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which of these English words came into the language from Russian?"
+            options:
+              - { key: A, text: "Kayak", distractor: PLAUSIBLE }
+              - { key: B, text: "Mammoth", correct: true }
+              - { key: C, text: "Safari", distractor: PLAUSIBLE }
+              - { key: D, text: "Ketchup", distractor: PLAUSIBLE }
+            explanation: "Mammoth bones were dug up in Siberia, and the Russian word came with them. Kayak comes from Inuit languages, safari from Swahili."
+            topics: { nature: 0.6, science: 0.4 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: The Russian word may itself come from Mansi; the question only says it came into English from Russian."]

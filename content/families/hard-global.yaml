@@ -1,0 +1,995 @@
+# Difficulty pass — hard GLOBAL questions for level-A topics (translated to EN)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: hard-cold-war
+    name: "Холодная война — сложные"
+    facts:
+      - id: berlin-airlift
+        statement: "В 1948–1949 годах во время блокады Западного Берлина западные союзники снабжали город по воздуху — «Берлинский воздушный мост»."
+        sources: [ { name: "Википедия: Берлинский воздушный мост", type: REFERENCE, verified: false } ]
+        questions:
+          - id: berlin-airlift-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как называлась операция по снабжению Западного Берлина самолётами в 1948–1949 годах?"
+            options:
+              - { key: A, text: "План Маршалла", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Берлинский воздушный мост", correct: true }
+              - { key: C, text: "Операция «Немыслимое»", distractor: SAME_CATEGORY }
+              - { key: D, text: "Операция «Оверлорд»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Почти год самолёты садились в Берлине каждые несколько минут. «Немыслимое» — британский план войны с СССР 1945 года, так и оставшийся на бумаге."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: berlin-airlift-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the 1948–49 operation that kept West Berlin supplied by plane called?
+            options:
+              - { key: A, text: The Marshall Plan, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: The Berlin Airlift, correct: true }
+              - { key: C, text: Operation Unthinkable, distractor: SAME_CATEGORY }
+              - { key: D, text: Operation Overlord, distractor: CONTEXTUAL_CONFUSION }
+            explanation: For almost a year a plane landed in Berlin every few minutes. Operation Unthinkable was a 1945 British plan for war with the USSR that never left the page.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: u2-powers
+        statement: "В 1960 году над Свердловском сбили американский самолёт-разведчик U-2; пилот Фрэнсис Пауэрс попал в плен."
+        sources: [ { name: "Википедия: Инцидент с U-2 (1960)", type: REFERENCE, verified: false } ]
+        questions:
+          - id: u2-powers-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как звали американского пилота самолёта-разведчика U-2, сбитого над СССР в 1960 году?"
+            options:
+              - { key: A, text: "Рудольф Абель", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Фрэнсис Пауэрс", correct: true }
+              - { key: C, text: "Чак Йегер", distractor: SAME_CATEGORY }
+              - { key: D, text: "Джеймс Донован", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "В 1962 году Пауэрса обменяли на советского разведчика Рудольфа Абеля; переговоры вёл адвокат Джеймс Донован. Об этом фильм «Шпионский мост»."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: u2-powers-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the name of the American U-2 spy-plane pilot shot down over the USSR in 1960?
+            options:
+              - { key: A, text: Rudolf Abel, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Francis Gary Powers, correct: true }
+              - { key: C, text: Chuck Yeager, distractor: SAME_CATEGORY }
+              - { key: D, text: James Donovan, distractor: CONTEXTUAL_CONFUSION }
+            explanation: In 1962 Powers was swapped for the Soviet spy Rudolf Abel, in a deal negotiated by lawyer James Donovan — the story of Bridge of Spies.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: reykjavik-1986
+        statement: "В октябре 1986 года Горбачёв и Рейган встретились в Рейкьявике и едва не договорились о полном ядерном разоружении."
+        sources: [ { name: "Википедия: Рейкьявикская встреча", type: REFERENCE, verified: false } ]
+        questions:
+          - id: reykjavik-1986-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Где в 1986 году встретились Горбачёв и Рейган, едва не договорившись отказаться от ядерного оружия?"
+            options:
+              - { key: A, text: "В Женеве", distractor: NEAR_MISS }
+              - { key: B, text: "В Рейкьявике", correct: true }
+              - { key: C, text: "На Мальте", distractor: NEAR_MISS }
+              - { key: D, text: "В Хельсинки", distractor: SAME_CATEGORY }
+            explanation: "В Женеве они встречались годом раньше, а на Мальте в 1989-м Горбачёв встретился уже с Бушем."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: reykjavik-1986-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where did Gorbachev and Reagan meet in 1986 and nearly agree to give up nuclear weapons?
+            options:
+              - { key: A, text: Geneva, distractor: NEAR_MISS }
+              - { key: B, text: Reykjavík, correct: true }
+              - { key: C, text: Malta, distractor: NEAR_MISS }
+              - { key: D, text: Helsinki, distractor: SAME_CATEGORY }
+            explanation: They had met in Geneva a year earlier; in Malta in 1989 Gorbachev met George H. W. Bush.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: prague-spring-dubcek
+        statement: "Лидером Чехословакии во время «Пражской весны» 1968 года был Александр Дубчек."
+        sources: [ { name: "Википедия: Пражская весна", type: REFERENCE, verified: false } ]
+        questions:
+          - id: prague-spring-dubcek-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто руководил Чехословакией во время «Пражской весны» 1968 года?"
+            options:
+              - { key: A, text: "Вацлав Гавел", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Александр Дубчек", correct: true }
+              - { key: C, text: "Густав Гусак", distractor: NEAR_MISS }
+              - { key: D, text: "Имре Надь", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Дубчек обещал «социализм с человеческим лицом». После ввода войск его сменил Гусак, Гавел стал президентом только в 1989-м, а Надь — венгерский лидер 1956 года."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: prague-spring-dubcek-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who led Czechoslovakia during the Prague Spring of 1968?
+            options:
+              - { key: A, text: Václav Havel, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Alexander Dubček, correct: true }
+              - { key: C, text: Gustáv Husák, distractor: NEAR_MISS }
+              - { key: D, text: Imre Nagy, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Dubček promised "socialism with a human face". After the invasion Husák replaced him; Havel became president only in 1989, and Nagy was Hungary's leader in 1956.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+  - family: hard-space
+    name: "Космос — сложные"
+    facts:
+      - id: john-glenn-orbit
+        statement: "Первым американцем на околоземной орбите стал Джон Гленн 20 февраля 1962 года."
+        sources: [ { name: "Википедия: Гленн, Джон", type: REFERENCE, verified: false } ]
+        questions:
+          - id: john-glenn-orbit-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто первым из американцев облетел Землю по орбите?"
+            options:
+              - { key: A, text: "Алан Шепард", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Джон Гленн", correct: true }
+              - { key: C, text: "Нил Армстронг", distractor: SAME_CATEGORY }
+              - { key: D, text: "Гас Гриссом", distractor: SAME_CATEGORY }
+            explanation: "Шепард был первым американцем в космосе, но его полёт 1961 года был суборбитальным. Гленн сделал три витка, а в 77 лет слетал ещё раз — на шаттле."
+            topics: { space: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: john-glenn-orbit-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who was the first American to orbit the Earth?
+            options:
+              - { key: A, text: Alan Shepard, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: John Glenn, correct: true }
+              - { key: C, text: Neil Armstrong, distractor: SAME_CATEGORY }
+              - { key: D, text: Gus Grissom, distractor: SAME_CATEGORY }
+            explanation: Shepard was the first American in space, but his 1961 flight was suborbital. Glenn made three orbits in 1962 — and flew again on the Shuttle at 77.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: apollo-11-eagle
+        statement: "Лунный модуль «Аполлона-11» назывался «Игл» (Eagle), командный модуль — «Колумбия»."
+        sources: [ { name: "Википедия: Аполлон-11", type: REFERENCE, verified: false } ]
+        questions:
+          - id: apollo-11-eagle-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как назывался лунный модуль «Аполлона-11», севший на Луну?"
+            options:
+              - { key: A, text: "«Колумбия»", distractor: NEAR_MISS }
+              - { key: B, text: "«Игл»", correct: true }
+              - { key: C, text: "«Аквариус»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Сатурн»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Орёл сел» — так Армстронг сообщил о посадке. «Колумбия» осталась на орбите с Коллинзом, «Аквариус» — модуль «Аполлона-13», а «Сатурн-5» — ракета."
+            topics: { space: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: apollo-11-eagle-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the name of Apollo 11's lunar module, the one that landed on the Moon?
+            options:
+              - { key: A, text: Columbia, distractor: NEAR_MISS }
+              - { key: B, text: Eagle, correct: true }
+              - { key: C, text: Aquarius, distractor: SAME_CATEGORY }
+              - { key: D, text: Saturn, distractor: CONTEXTUAL_CONFUSION }
+            explanation: "\"The Eagle has landed.\" Columbia stayed in orbit with Collins, Aquarius was Apollo 13's lunar module, and the Saturn V was the rocket."
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: luna-9-soft-landing
+        statement: "Первую мягкую посадку на Луну совершила советская станция «Луна-9» 3 февраля 1966 года."
+        sources: [ { name: "Википедия: Луна-9", type: REFERENCE, verified: false } ]
+        questions:
+          - id: luna-9-soft-landing-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой аппарат первым совершил мягкую посадку на Луну?"
+            options:
+              - { key: A, text: "«Луна-2»", distractor: NEAR_MISS }
+              - { key: B, text: "«Луна-9»", correct: true }
+              - { key: C, text: "«Луна-3»", distractor: NEAR_MISS }
+              - { key: D, text: "«Сервейер-1»", distractor: SAME_CATEGORY }
+            explanation: "«Луна-2» в 1959 году просто врезалась в Луну, «Луна-3» сфотографировала обратную сторону, а американский «Сервейер-1» сел через четыре месяца после «Луны-9»."
+            topics: { space: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            difficulty: 5
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: luna-9-soft-landing-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which spacecraft made the first soft landing on the Moon?
+            options:
+              - { key: A, text: Luna 2, distractor: NEAR_MISS }
+              - { key: B, text: Luna 9, correct: true }
+              - { key: C, text: Luna 3, distractor: NEAR_MISS }
+              - { key: D, text: Surveyor 1, distractor: SAME_CATEGORY }
+            explanation: Luna 2 simply crashed into the Moon in 1959, Luna 3 photographed the far side, and America's Surveyor 1 landed four months after Luna 9.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            difficulty: 5
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: salyut-1-first-station
+        statement: "Первой в мире орбитальной станцией стал советский «Салют-1», запущенный в 1971 году."
+        sources: [ { name: "Википедия: Салют-1", type: REFERENCE, verified: false } ]
+        questions:
+          - id: salyut-1-first-station-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая орбитальная станция была первой в мире?"
+            options:
+              - { key: A, text: "«Мир»", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "«Салют-1»", correct: true }
+              - { key: C, text: "«Скайлэб»", distractor: SAME_CATEGORY }
+              - { key: D, text: "МКС", distractor: COMMON_MISCONCEPTION }
+            explanation: "«Салют-1» запустили в апреле 1971 года, американский «Скайлэб» — в 1973-м, «Мир» — в 1986-м."
+            topics: { space: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: salyut-1-first-station-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which was the world's first space station?
+            options:
+              - { key: A, text: Mir, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Salyut 1, correct: true }
+              - { key: C, text: Skylab, distractor: SAME_CATEGORY }
+              - { key: D, text: The ISS, distractor: COMMON_MISCONCEPTION }
+            explanation: Salyut 1 launched in April 1971, Skylab in 1973 and Mir in 1986.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+  - family: hard-geography
+    name: "География — сложные"
+    facts:
+      - id: france-most-time-zones
+        statement: "С учётом заморских территорий больше всего часовых поясов у Франции — 12."
+        sources: [ { name: "Википедия: Часовые пояса Франции", type: REFERENCE, verified: false } ]
+        questions:
+          - id: france-most-time-zones-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "У какой страны, с учётом заморских территорий, больше всего часовых поясов?"
+            options:
+              - { key: A, text: "У России", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "У Франции", correct: true }
+              - { key: C, text: "У США", distractor: NEAR_MISS }
+              - { key: D, text: "У Великобритании", distractor: PLAUSIBLE }
+            explanation: "Французская Полинезия, Реюньон, Новая Каледония и другие владения дают Франции 12 поясов. У России и США по 11."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: france-most-time-zones-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Counting overseas territories, which country has the most time zones?
+            options:
+              - { key: A, text: Russia, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: France, correct: true }
+              - { key: C, text: The United States, distractor: NEAR_MISS }
+              - { key: D, text: The United Kingdom, distractor: PLAUSIBLE }
+            explanation: French Polynesia, Réunion, New Caledonia and the rest give France 12 time zones. Russia and the US have 11 each.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: danube-most-countries
+        statement: "Дунай протекает по территории 10 стран — больше, чем любая другая река мира."
+        sources: [ { name: "Википедия: Дунай", type: REFERENCE, verified: false } ]
+        questions:
+          - id: danube-most-countries-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая река протекает через наибольшее число стран?"
+            options:
+              - { key: A, text: "Рейн", distractor: SAME_CATEGORY }
+              - { key: B, text: "Дунай", correct: true }
+              - { key: C, text: "Амазонка", distractor: PLAUSIBLE }
+              - { key: D, text: "Нигер", distractor: PLAUSIBLE }
+            explanation: "Германия, Австрия, Словакия, Венгрия, Хорватия, Сербия, Румыния, Болгария, Молдавия и Украина. И четыре столицы на берегах."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: danube-most-countries-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which river flows through the most countries?
+            options:
+              - { key: A, text: The Rhine, distractor: SAME_CATEGORY }
+              - { key: B, text: The Danube, correct: true }
+              - { key: C, text: The Amazon, distractor: PLAUSIBLE }
+              - { key: D, text: The Niger, distractor: PLAUSIBLE }
+            explanation: Germany, Austria, Slovakia, Hungary, Croatia, Serbia, Romania, Bulgaria, Moldova and Ukraine — plus four capitals on its banks.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: lesotho-enclave
+        statement: "Лесото со всех сторон окружено территорией ЮАР."
+        sources: [ { name: "Википедия: Лесото", type: REFERENCE, verified: false } ]
+        questions:
+          - id: lesotho-enclave-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая страна со всех сторон окружена территорией ЮАР?"
+            options:
+              - { key: A, text: "Эсватини", distractor: NEAR_MISS }
+              - { key: B, text: "Лесото", correct: true }
+              - { key: C, text: "Ботсвана", distractor: SAME_CATEGORY }
+              - { key: D, text: "Намибия", distractor: SAME_CATEGORY }
+            explanation: "Эсватини почти окружена ЮАР, но граничит ещё и с Мозамбиком. Лесото — ещё и единственная страна, целиком лежащая выше 1000 м."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 4
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: lesotho-enclave-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which country is completely surrounded by South Africa?
+            options:
+              - { key: A, text: Eswatini, distractor: NEAR_MISS }
+              - { key: B, text: Lesotho, correct: true }
+              - { key: C, text: Botswana, distractor: SAME_CATEGORY }
+              - { key: D, text: Namibia, distractor: SAME_CATEGORY }
+            explanation: Eswatini is almost surrounded too, but it also borders Mozambique. Lesotho is also the only country lying entirely above 1,000 m.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 4
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: seychelles-smallest-africa
+        statement: "Самое маленькое по площади государство Африки — Сейшельские Острова (около 455 км²)."
+        sources: [ { name: "Википедия: Сейшельские Острова", type: REFERENCE, verified: false } ]
+        questions:
+          - id: seychelles-smallest-africa-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое государство — самое маленькое по площади в Африке?"
+            options:
+              - { key: A, text: "Гамбия", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Сейшельские Острова", correct: true }
+              - { key: C, text: "Маврикий", distractor: NEAR_MISS }
+              - { key: D, text: "Кабо-Верде", distractor: SAME_CATEGORY }
+            explanation: "Гамбия — самая маленькая страна на материке. Маврикий примерно вчетверо больше Сейшел."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: seychelles-smallest-africa-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which is the smallest country in Africa by area?
+            options:
+              - { key: A, text: The Gambia, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Seychelles, correct: true }
+              - { key: C, text: Mauritius, distractor: NEAR_MISS }
+              - { key: D, text: Cape Verde, distractor: SAME_CATEGORY }
+            explanation: The Gambia is the smallest on the mainland. Mauritius is about four times the size of Seychelles.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+  - family: hard-world-cinema
+    name: "Мировое кино — сложные"
+    facts:
+      - id: parasite-best-picture
+        statement: "«Паразиты» Пон Джун Хо (2019) стали первым фильмом не на английском языке, получившим «Оскар» за лучший фильм."
+        sources: [ { name: "Википедия: Паразиты (фильм)", type: REFERENCE, verified: false } ]
+        questions:
+          - id: parasite-best-picture-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой фильм первым получил «Оскар» за лучший фильм, будучи снятым не на английском?"
+            options:
+              - { key: A, text: "«Рома»", distractor: NEAR_MISS }
+              - { key: B, text: "«Паразиты»", correct: true }
+              - { key: C, text: "«Жизнь прекрасна»", distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "«Крадущийся тигр, затаившийся дракон»", distractor: SAME_CATEGORY }
+            explanation: "«Рома» и «Жизнь прекрасна» были номинированы, но победили в других категориях. «Паразиты» взяли ещё и Золотую пальмовую ветвь."
+            topics: { world-cinema: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 10s: 1.0, current: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: parasite-best-picture-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which was the first non-English-language film to win the Oscar for Best Picture?
+            options:
+              - { key: A, text: Roma, distractor: NEAR_MISS }
+              - { key: B, text: Parasite, correct: true }
+              - { key: C, text: Life Is Beautiful, distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "Crouching Tiger, Hidden Dragon", distractor: SAME_CATEGORY }
+            explanation: Roma and Life Is Beautiful were nominated but won in other categories. Parasite also took the Palme d'Or.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 10s: 1, current: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: alien-weyland-yutani
+        statement: "В фильмах «Чужой» действует корпорация «Вейланд-Ютани» (Weyland-Yutani)."
+        sources: [ { name: "Википедия: Вейланд-Ютани", type: REFERENCE, verified: false } ]
+        questions:
+          - id: alien-weyland-yutani-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как называется корпорация, которая охотится за Чужим в фильмах серии «Чужой»?"
+            options:
+              - { key: A, text: "«Кибердайн Системс»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«Вейланд-Ютани»", correct: true }
+              - { key: C, text: "«Тайрелл»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "OCP", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Кибердайн» — из «Терминатора», «Тайрелл» — из «Бегущего по лезвию», OCP — из «Робокопа». Всё это злые корпорации 80-х."
+            topics: { world-cinema: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: alien-weyland-yutani-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In the Alien films, which corporation wants the alien for itself?
+            options:
+              - { key: A, text: Cyberdyne Systems, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Weyland-Yutani, correct: true }
+              - { key: C, text: Tyrell Corporation, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: OCP, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Cyberdyne is from The Terminator, Tyrell from Blade Runner and OCP from RoboCop — the evil corporations of the 80s.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: avatar-2-billion
+        statement: "«Аватар» (2009) первым в истории собрал в прокате больше 2 миллиардов долларов."
+        sources: [ { name: "Википедия: Аватар (фильм, 2009)", type: REFERENCE, verified: false } ]
+        questions:
+          - id: avatar-2-billion-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой фильм первым собрал в мировом прокате больше 2 миллиардов долларов?"
+            options:
+              - { key: A, text: "«Титаник»", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "«Аватар»", correct: true }
+              - { key: C, text: "«Мстители: Финал»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Звёздные войны: Пробуждение силы»", distractor: SAME_CATEGORY }
+            explanation: "«Титаник» первым преодолел миллиард, а два — только после повторного проката 2012 года, уже после «Аватара»."
+            topics: { world-cinema: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: avatar-2-billion-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which film was the first to gross more than $2 billion worldwide?
+            options:
+              - { key: A, text: Titanic, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Avatar, correct: true }
+              - { key: C, text: "Avengers: Endgame", distractor: SAME_CATEGORY }
+              - { key: D, text: "Star Wars: The Force Awakens", distractor: SAME_CATEGORY }
+            explanation: Titanic was the first to pass $1 billion, but reached $2 billion only with its 2012 re-release — after Avatar.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1, 10s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: jaws-bruce
+        statement: "Механическую акулу на съёмках «Челюстей» прозвали Брюсом — в честь адвоката Спилберга."
+        sources: [ { name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false } ]
+        questions:
+          - id: jaws-bruce-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как съёмочная группа прозвала механическую акулу из «Челюстей»?"
+            options:
+              - { key: A, text: "Джордж", distractor: PLAUSIBLE }
+              - { key: B, text: "Брюс", correct: true }
+              - { key: C, text: "Моби", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Чарли", distractor: PLAUSIBLE }
+            explanation: "Акула постоянно ломалась, поэтому Спилберг показывал её как можно реже — и фильм от этого стал только страшнее."
+            topics: { world-cinema: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 80s: 0.6 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: jaws-bruce-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What did the crew of Jaws nickname the mechanical shark?
+            options:
+              - { key: A, text: George, distractor: PLAUSIBLE }
+              - { key: B, text: Bruce, correct: true }
+              - { key: C, text: Moby, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Charlie, distractor: PLAUSIBLE }
+            explanation: It was named after Spielberg's lawyer. The shark kept breaking down, so Spielberg showed it as little as possible — which made the film scarier.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.6 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+  - family: hard-cartoons
+    name: "Мультфильмы — сложные"
+    facts:
+      - id: simpsons-groening
+        statement: "Создатель «Симпсонов» — Мэтт Грейнинг."
+        sources: [ { name: "Википедия: Грейнинг, Мэтт", type: REFERENCE, verified: false } ]
+        questions:
+          - id: simpsons-groening-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто создал «Симпсонов»?"
+            options:
+              - { key: A, text: "Сет Макфарлейн", distractor: SAME_CATEGORY }
+              - { key: B, text: "Мэтт Грейнинг", correct: true }
+              - { key: C, text: "Трей Паркер", distractor: SAME_CATEGORY }
+              - { key: D, text: "Майк Джадж", distractor: SAME_CATEGORY }
+            explanation: "Членов семьи Грейнинг назвал в честь своих родных: отца звали Гомер, мать — Маргарет. Макфарлейн придумал «Гриффинов», Паркер — «Южный парк», Джадж — «Бивиса и Баттхеда»."
+            topics: { cartoons: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 0.6, 00s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: simpsons-groening-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who created The Simpsons?
+            options:
+              - { key: A, text: Seth MacFarlane, distractor: SAME_CATEGORY }
+              - { key: B, text: Matt Groening, correct: true }
+              - { key: C, text: Trey Parker, distractor: SAME_CATEGORY }
+              - { key: D, text: Mike Judge, distractor: SAME_CATEGORY }
+            explanation: "Groening named the family after his own: his father was Homer, his mother Margaret. MacFarlane made Family Guy, Parker South Park, Judge Beavis and Butt-Head."
+            topics: { cartoons: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 0.6, 00s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: aladdin-iago
+        statement: "Попугая злодея Джафара в диснеевском «Аладдине» зовут Яго."
+        sources: [ { name: "Википедия: Аладдин (мультфильм, 1992)", type: REFERENCE, verified: false } ]
+        questions:
+          - id: aladdin-iago-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как зовут попугая Джафара в диснеевском «Аладдине»?"
+            options:
+              - { key: A, text: "Абу", distractor: NEAR_MISS }
+              - { key: B, text: "Яго", correct: true }
+              - { key: C, text: "Раджа", distractor: NEAR_MISS }
+              - { key: D, text: "Зазу", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Абу — обезьянка Аладдина, Раджа — тигр Жасмин, а Зазу — птица-советник из «Короля Льва»."
+            topics: { cartoons: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 0.6, 00s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+          - id: aladdin-iago-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the name of Jafar's parrot in Disney's Aladdin?
+            options:
+              - { key: A, text: Abu, distractor: NEAR_MISS }
+              - { key: B, text: Iago, correct: true }
+              - { key: C, text: Rajah, distractor: NEAR_MISS }
+              - { key: D, text: Zazu, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Abu is Aladdin's monkey, Rajah is Jasmine's tiger, and Zazu is the hornbill from The Lion King.
+            topics: { cartoons: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 0.6, 00s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: spirited-away-chihiro
+        statement: "Героиню «Унесённых призраками» Хаяо Миядзаки зовут Тихиро."
+        sources: [ { name: "Википедия: Унесённые призраками", type: REFERENCE, verified: false } ]
+        questions:
+          - id: spirited-away-chihiro-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как зовут девочку — главную героиню «Унесённых призраками»?"
+            options:
+              - { key: A, text: "Сацуки", distractor: NEAR_MISS }
+              - { key: B, text: "Тихиро", correct: true }
+              - { key: C, text: "Кики", distractor: NEAR_MISS }
+              - { key: D, text: "Сан", distractor: NEAR_MISS }
+            explanation: "Остальные — тоже героини Миядзаки: Сацуки из «Тоторо», Кики из «Ведьминой службы доставки», Сан из «Принцессы Мононоке»."
+            topics: { cartoons: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: spirited-away-chihiro-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the name of the girl at the centre of Spirited Away?
+            options:
+              - { key: A, text: Satsuki, distractor: NEAR_MISS }
+              - { key: B, text: Chihiro, correct: true }
+              - { key: C, text: Kiki, distractor: NEAR_MISS }
+              - { key: D, text: San, distractor: NEAR_MISS }
+            explanation: "The others are Miyazaki heroines too: Satsuki from Totoro, Kiki from Kiki's Delivery Service, San from Princess Mononoke."
+            topics: { cartoons: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+  - family: hard-world-pop
+    name: "Мировой поп — сложные"
+    facts:
+      - id: beatles-quarrymen
+        statement: "Группа Джона Леннона, в которой он познакомился с Полом Маккартни, называлась The Quarrymen."
+        sources: [ { name: "Википедия: The Quarrymen", type: REFERENCE, verified: false } ]
+        questions:
+          - id: beatles-quarrymen-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как называлась группа, в которой Джон Леннон познакомился с Полом Маккартни?"
+            options:
+              - { key: A, text: "The Silver Beetles", distractor: NEAR_MISS }
+              - { key: B, text: "The Quarrymen", correct: true }
+              - { key: C, text: "The Cavern Boys", distractor: PLAUSIBLE }
+              - { key: D, text: "The Hollies", distractor: SAME_CATEGORY }
+            explanation: "The Silver Beetles — одно из промежуточных названий по дороге к The Beatles. Леннон и Маккартни познакомились в 1957 году."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: beatles-quarrymen-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which band did John Lennon first meet Paul McCartney?
+            options:
+              - { key: A, text: The Silver Beetles, distractor: NEAR_MISS }
+              - { key: B, text: The Quarrymen, correct: true }
+              - { key: C, text: The Cavern Boys, distractor: PLAUSIBLE }
+              - { key: D, text: The Hollies, distractor: SAME_CATEGORY }
+            explanation: The Silver Beetles was one of the names on the way to The Beatles. Lennon and McCartney met in 1957.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: nirvana-aberdeen
+        statement: "Группа Nirvana образовалась в 1987 году в городе Абердин, штат Вашингтон."
+        sources: [ { name: "Википедия: Nirvana", type: REFERENCE, verified: false } ]
+        questions:
+          - id: nirvana-aberdeen-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком городе образовалась группа Nirvana?"
+            options:
+              - { key: A, text: "В Сиэтле", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "В Абердине", correct: true }
+              - { key: C, text: "В Портленде", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Олимпии", distractor: NEAR_MISS }
+            explanation: "Абердин — маленький город в штате Вашингтон. Позже группа переехала в Олимпию, а славу ей принёс Сиэтл."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: nirvana-aberdeen-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which town was Nirvana formed?
+            options:
+              - { key: A, text: Seattle, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Aberdeen, Washington", correct: true }
+              - { key: C, text: Portland, distractor: SAME_CATEGORY }
+              - { key: D, text: Olympia, distractor: NEAR_MISS }
+            explanation: Aberdeen is a small town in Washington state. The band later moved to Olympia, and Seattle made them famous.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+
+      - id: sting-sumner
+        statement: "Настоящее имя Стинга — Гордон Самнер."
+        sources: [ { name: "Википедия: Стинг", type: REFERENCE, verified: false } ]
+        questions:
+          - id: sting-sumner-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как по-настоящему зовут Стинга?"
+            options:
+              - { key: A, text: "Дэвид Джонс", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Гордон Самнер", correct: true }
+              - { key: C, text: "Реджинальд Дуайт", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Пол Хьюсон", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Остальные — тоже настоящие имена звёзд: Дэвида Боуи, Элтона Джона и Боно."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+          - id: sting-sumner-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is Sting's real name?
+            options:
+              - { key: A, text: David Jones, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Gordon Sumner, correct: true }
+              - { key: C, text: Reginald Dwight, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Paul Hewson, distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The others are real names too: David Bowie, Elton John and Bono."
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

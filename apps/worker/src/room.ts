@@ -26,6 +26,10 @@ export interface Env {
   ROOMS: DurableObjectNamespace<RoomDO>;
   /** Anonymous analytics; optional so a missing binding never breaks gameplay. */
   DB?: D1Database;
+  /** Per-IP rate limiters (NFR-016); optional so tests and old configs run without them. */
+  RL_CREATE?: RateLimit;
+  RL_ROOM?: RateLimit;
+  RL_ACTION?: RateLimit;
 }
 
 type Attachment = { role: "display" } | { role: "player"; playerId: string };

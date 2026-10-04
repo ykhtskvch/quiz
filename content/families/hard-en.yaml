@@ -1,0 +1,200 @@
+# Difficulty pass — hard EN-native questions
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: hard-british-culture
+    name: "British culture — hard"
+    facts:
+      - id: tube-circle-yellow
+        statement: "The Circle line is shown in yellow on the London Underground map."
+        sources: [{ name: "Wikipedia: Circle line", type: REFERENCE, verified: false }]
+        questions:
+          - id: tube-circle-yellow-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which London Underground line is yellow on the Tube map?"
+            options:
+              - { key: A, text: "The Central line", distractor: SAME_CATEGORY }
+              - { key: B, text: "The Circle line", correct: true }
+              - { key: C, text: "The Hammersmith & City line", distractor: NEAR_MISS }
+              - { key: D, text: "The Jubilee line", distractor: SAME_CATEGORY }
+            explanation: "The Central line is red, the Jubilee silver-grey, and Hammersmith & City pink — it shares many stations with the Circle."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: fawlty-towers-12
+        statement: "Only 12 episodes of Fawlty Towers were ever made, in two series (1975 and 1979)."
+        sources: [{ name: "Wikipedia: Fawlty Towers", type: REFERENCE, verified: false }]
+        questions:
+          - id: fawlty-towers-12-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "How many episodes of Fawlty Towers were made in total?"
+            options:
+              - { key: A, text: "6", distractor: NEAR_MISS }
+              - { key: B, text: "12", correct: true }
+              - { key: C, text: "18", distractor: PLAUSIBLE }
+              - { key: D, text: "26", distractor: PLAUSIBLE }
+            explanation: "Two series of six, four years apart. John Cleese and Connie Booth refused to make any more."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bake-off-edd-kimber
+        statement: "Edd Kimber won the first series of The Great British Bake Off in 2010."
+        sources: [{ name: "Wikipedia: The Great British Bake Off (series 1)", type: REFERENCE, verified: false }]
+        questions:
+          - id: bake-off-edd-kimber-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Who won the very first series of The Great British Bake Off in 2010?"
+            options:
+              - { key: A, text: "Nadiya Hussain", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Edd Kimber", correct: true }
+              - { key: C, text: "John Whaite", distractor: NEAR_MISS }
+              - { key: D, text: "Jo Wheatley", distractor: NEAR_MISS }
+            explanation: "Nadiya Hussain won series 6 in 2015 and became the show's most famous winner; John Whaite and Jo Wheatley won series 3 and 2."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 1.0 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Check the winners of series 1–3 and 6."]
+
+      - id: everton-toffees
+        statement: "Everton FC is nicknamed \"the Toffees\"."
+        sources: [{ name: "Wikipedia: Everton F.C.", type: REFERENCE, verified: false }]
+        questions:
+          - id: everton-toffees-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which football club is nicknamed \"the Toffees\"?"
+            options:
+              - { key: A, text: "Liverpool", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Everton", correct: true }
+              - { key: C, text: "Aston Villa", distractor: SAME_CATEGORY }
+              - { key: D, text: "West Ham United", distractor: SAME_CATEGORY }
+            explanation: "The name probably comes from a toffee shop near the club's early ground. Liverpool are \"the Reds\", Villa \"the Villans\", West Ham \"the Hammers\"."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-american-pop-culture
+    name: "American pop culture — hard"
+    facts:
+      - id: chandler-muriel
+        statement: "In Friends, Chandler Bing's middle name is Muriel."
+        sources: [{ name: "Wikipedia: Chandler Bing", type: REFERENCE, verified: false }]
+        questions:
+          - id: chandler-muriel-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In Friends, what is Chandler Bing's middle name?"
+            options:
+              - { key: A, text: "Martin", distractor: PLAUSIBLE }
+              - { key: B, text: "Muriel", correct: true }
+              - { key: C, text: "Morris", distractor: PLAUSIBLE }
+              - { key: D, text: "Michael", distractor: PLAUSIBLE }
+            explanation: "It comes up in the episode where Chandler and Joey bet the apartment in a trivia game. Chandler is not proud of it."
+            topics: { american-pop-culture: 1.0 }
+            contexts: { US: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.6 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: kramer-cosmo
+        statement: "In Seinfeld, Kramer's first name is Cosmo."
+        sources: [{ name: "Wikipedia: Cosmo Kramer", type: REFERENCE, verified: false }]
+        questions:
+          - id: kramer-cosmo-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In Seinfeld, what is Kramer's first name?"
+            options:
+              - { key: A, text: "Kenny", distractor: NEAR_MISS }
+              - { key: B, text: "Cosmo", correct: true }
+              - { key: C, text: "Stanley", distractor: PLAUSIBLE }
+              - { key: D, text: "Newman", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "It's revealed in season 6. The character was inspired by the real Kenny Kramer, and Newman is the mailman across the hall."
+            topics: { american-pop-culture: 1.0 }
+            contexts: { US: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: homer-jay
+        statement: "Homer Simpson's middle name is Jay."
+        sources: [{ name: "Wikipedia: Homer Simpson", type: REFERENCE, verified: false }]
+        questions:
+          - id: homer-jay-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What is Homer Simpson's middle name?"
+            options:
+              - { key: A, text: "James", distractor: PLAUSIBLE }
+              - { key: B, text: "Jay", correct: true }
+              - { key: C, text: "John", distractor: PLAUSIBLE }
+              - { key: D, text: "Joseph", distractor: PLAUSIBLE }
+            explanation: "Matt Groening named it after Bullwinkle J. Moose and Rocky the Flying Squirrel — both have a middle initial J."
+            topics: { american-pop-culture: 1.0 }
+            contexts: { US: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.8 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Check the Rocky and Bullwinkle explanation."]
+
+      - id: tonight-show-steve-allen
+        statement: "Steve Allen was the first host of The Tonight Show, from 1954."
+        sources: [{ name: "Wikipedia: The Tonight Show", type: REFERENCE, verified: false }]
+        questions:
+          - id: tonight-show-steve-allen-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Who was the first host of The Tonight Show?"
+            options:
+              - { key: A, text: "Johnny Carson", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Steve Allen", correct: true }
+              - { key: C, text: "Jack Paar", distractor: NEAR_MISS }
+              - { key: D, text: "Jay Leno", distractor: SAME_CATEGORY }
+            explanation: "Jack Paar took over in 1957, and Johnny Carson in 1962 — he hosted for thirty years."
+            topics: { american-pop-culture: 1.0 }
+            contexts: { US: 1.0 }
+            difficulty: 5
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI

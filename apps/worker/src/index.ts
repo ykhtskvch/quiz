@@ -24,6 +24,31 @@ const roomStub = (c: C, code: string) => c.env.ROOMS.get(c.env.ROOMS.idFromName(
 const bearer = (c: C) => c.req.header("Authorization")?.replace(/^Bearer\s+/i, "") ?? "";
 const reply = <T>(c: C, r: Result<T>) => (r.ok ? c.json(r.value as object) : c.json({ error: r.error }, r.status));
 
+// Rate limiting (NFR-016), keyed by client IP. Creating rooms is cheapest to abuse, so it gets the
+// tightest limit; anything that addresses a room by code alone (lookup, join, socket, state) is what a
+// code-guesser hits; token-authorised actions only need a flood guard.
+const UNAUTHENTICATED_ROOM_PATHS = new Set([undefined, "players", "ws", "state"]);
+
+function limiterFor(c: C): RateLimit | undefined {
+  const parts = c.req.path.split("/").filter(Boolean); // ["api", "rooms", code?, sub?]
+  if (parts[1] !== "rooms") return undefined;
+  if (parts.length === 2) return c.req.method === "POST" ? c.env.RL_CREATE : undefined;
+  return UNAUTHENTICATED_ROOM_PATHS.has(parts[3]) ? c.env.RL_ROOM : c.env.RL_ACTION;
+}
+
+app.use("*", async (c, next) => {
+  const limiter = limiterFor(c);
+  if (limiter) {
+    const ip = c.req.header("CF-Connecting-IP") ?? "local";
+    const { success } = await limiter.limit({ key: ip });
+    if (!success) {
+      c.header("Retry-After", "60");
+      return c.json({ error: "too many requests" }, 429);
+    }
+  }
+  await next();
+});
+
 app.post("/rooms", async (c) => {
   const body = await c.req.json<{ language?: unknown }>().catch(() => ({ language: undefined }));
   const language: Language = LANGUAGES.includes(body.language as Language) ? (body.language as Language) : "ru";

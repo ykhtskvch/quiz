@@ -92,7 +92,8 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
       session.save(code, s);
       onJoined(s);
     } catch (err) {
-      setError(err instanceof ApiError && err.status === 404 ? t.roomNotFound : t.errorGeneric);
+      const httpStatus = err instanceof ApiError ? err.status : 0;
+      setError(httpStatus === 404 ? t.roomNotFound : httpStatus === 429 ? t.tooManyRequests : t.errorGeneric);
       setBusy(false);
     }
   };

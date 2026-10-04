@@ -133,6 +133,7 @@ const ru = {
   roomNotFound: "Комната не найдена. Проверь код.",
   displayNoToken: "Этот экран открыт без ключа комнаты. Создай игру заново на этом устройстве.",
   errorGeneric: "Что-то пошло не так. Попробуй ещё раз.",
+  tooManyRequests: "Слишком много попыток. Подожди минуту и попробуй снова.",
 };
 
 const en: Strings = {
@@ -258,6 +259,7 @@ const en: Strings = {
   roomNotFound: "Room not found. Check the code.",
   displayNoToken: "This screen was opened without the room key. Create the game again on this device.",
   errorGeneric: "Something went wrong. Please try again.",
+  tooManyRequests: "Too many attempts. Wait a minute and try again.",
 };
 
 export type Strings = typeof ru;

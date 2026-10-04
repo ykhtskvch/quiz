@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { isRoomCode, LANGUAGES } from "@quiz/shared";
-import { api } from "../api.ts";
+import { api, ApiError } from "../api.ts";
 import { navigate } from "../router.ts";
 import { setLanguage, useLanguage, useT } from "../strings.ts";
 
@@ -19,8 +19,8 @@ export function Home() {
       // The display token rides in the URL fragment: it never reaches the server logs,
       // and the display survives a reload.
       navigate(`/d/${room.roomCode}#t=${room.displayToken}`);
-    } catch {
-      setError(t.errorGeneric);
+    } catch (err) {
+      setError(err instanceof ApiError && err.status === 429 ? t.tooManyRequests : t.errorGeneric);
       setBusy(false);
     }
   };

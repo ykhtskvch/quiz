@@ -1,14 +1,17 @@
 // KPI report from the anonymous analytics database (EPIC 30; 09-system-design §13).
 //   node scripts/dev/analytics-report.ts           # local D1 used by `wrangler dev`
 //   node scripts/dev/analytics-report.ts --remote  # production D1
+//   node scripts/dev/analytics-report.ts --staging # staging D1 (playtests)
 import { execFileSync } from "node:child_process";
 
-const remote = process.argv.includes("--remote");
+const staging = process.argv.includes("--staging");
+const remote = staging || process.argv.includes("--remote");
+const target = staging ? ["quiz-analytics-staging", "--env", "staging"] : ["quiz-analytics"];
 
 function query<T = Record<string, unknown>>(sql: string): T[] {
   const out = execFileSync(
     "npx",
-    ["wrangler", "d1", "execute", "quiz-analytics", remote ? "--remote" : "--local", "--json", "--command", sql],
+    ["wrangler", "d1", "execute", ...target, remote ? "--remote" : "--local", "--json", "--command", sql],
     { cwd: "apps/worker", encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] },
   );
   return (JSON.parse(out) as { results: T[] }[])[0]?.results ?? [];

@@ -1,0 +1,848 @@
+# Difficulty pass — hard questions for post-Soviet level-A topics
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: hard-ussr-history
+    name: "СССР: история — сложные"
+    facts:
+      - id: ussr-treaty-four-republics
+        statement: "Договор об образовании СССР в декабре 1922 года подписали четыре республики: РСФСР, УССР, БССР и ЗСФСР."
+        sources: [{ name: "Википедия: Договор об образовании СССР", type: REFERENCE, verified: false }]
+        questions:
+          - id: ussr-treaty-four-republics-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Сколько республик подписали Договор об образовании СССР в 1922 году?"
+            options:
+              - { key: A, text: "Три", distractor: NEAR_MISS }
+              - { key: B, text: "Четыре", correct: true }
+              - { key: C, text: "Шесть", distractor: PLAUSIBLE }
+              - { key: D, text: "Пятнадцать", distractor: COMMON_MISCONCEPTION }
+            explanation: "РСФСР, Украина, Белоруссия и Закавказская федерация. Пятнадцать республик набралось только к 1940 году."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: kosygin-reform
+        statement: "Экономическую реформу 1965 года проводил председатель Совета министров СССР Алексей Косыгин."
+        sources: [{ name: "Википедия: Косыгинская реформа", type: REFERENCE, verified: false }]
+        questions:
+          - id: kosygin-reform-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Кто возглавлял Совет министров СССР во время экономической реформы 1965 года?"
+            options:
+              - { key: A, text: "Николай Рыжков", distractor: SAME_CATEGORY }
+              - { key: B, text: "Алексей Косыгин", correct: true }
+              - { key: C, text: "Георгий Маленков", distractor: SAME_CATEGORY }
+              - { key: D, text: "Николай Тихонов", distractor: NEAR_MISS }
+            explanation: "Реформу так и называют — косыгинской. Тихонов сменил Косыгина в 1980 году, Рыжков пришёл при Горбачёве."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 4
+            dignity: 4
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: andropov-term
+        statement: "Юрий Андропов был генеральным секретарём ЦК КПСС с ноября 1982 по февраль 1984 года — около 15 месяцев."
+        sources: [{ name: "Википедия: Андропов, Юрий Владимирович", type: REFERENCE, verified: false }]
+        questions:
+          - id: andropov-term-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Сколько примерно Юрий Андропов пробыл генеральным секретарём?"
+            options:
+              - { key: A, text: "Около трёх месяцев", distractor: PLAUSIBLE }
+              - { key: B, text: "Около 15 месяцев", correct: true }
+              - { key: C, text: "Около трёх лет", distractor: PLAUSIBLE }
+              - { key: D, text: "Около пяти лет", distractor: PLAUSIBLE }
+            explanation: "С ноября 1982 по февраль 1984. Его преемник Черненко продержался ещё меньше — около 13 месяцев."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: referendum-1991
+        statement: "На всесоюзном референдуме 17 марта 1991 года за сохранение СССР проголосовали около 76 % участников; шесть республик голосование не проводили."
+        sources: [{ name: "Википедия: Всесоюзный референдум о сохранении СССР", type: REFERENCE, verified: false }]
+        questions:
+          - id: referendum-1991-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Сколько примерно участников референдума в марте 1991 года проголосовали за сохранение СССР?"
+            options:
+              - { key: A, text: "Около 52 %", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Около 64 %", distractor: PLAUSIBLE }
+              - { key: C, text: "Около 76 %", correct: true }
+              - { key: D, text: "Около 89 %", distractor: PLAUSIBLE }
+            explanation: "Прибалтика, Грузия, Армения и Молдавия референдум не проводили. Через девять месяцев СССР всё равно не стало."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-ussr-everyday
+    name: "Советский быт — сложные"
+    facts:
+      - id: vaz-2101-fiat-124
+        statement: "Прототипом ВАЗ-2101 «Жигули» стал итальянский Fiat 124."
+        sources: [{ name: "Википедия: ВАЗ-2101", type: REFERENCE, verified: false }]
+        questions:
+          - id: vaz-2101-fiat-124-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой итальянский автомобиль стал прототипом «копейки» ВАЗ-2101?"
+            options:
+              - { key: A, text: "Fiat 124", correct: true }
+              - { key: B, text: "Fiat 128", distractor: NEAR_MISS }
+              - { key: C, text: "Fiat 125", distractor: NEAR_MISS }
+              - { key: D, text: "Alfa Romeo Giulia", distractor: SAME_CATEGORY }
+            explanation: "Fiat 124 в 1967 году признали «Автомобилем года» в Европе. Для советских дорог машину сильно переделали: усилили кузов и подвеску."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tarkhun-estragon
+        statement: "Лимонад «Тархун» делали на экстракте эстрагона: «тархун» — другое название этого растения."
+        sources: [{ name: "Википедия: Тархун (напиток)", type: REFERENCE, verified: false }]
+        questions:
+          - id: tarkhun-estragon-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Из какого растения делали вкус лимонада «Тархун»?"
+            options:
+              - { key: A, text: "Мята", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Эстрагон", correct: true }
+              - { key: C, text: "Базилик", distractor: PLAUSIBLE }
+              - { key: D, text: "Фенхель", distractor: PLAUSIBLE }
+            explanation: "Тархун и эстрагон — одно и то же растение. Зелёный цвет у советского лимонада, правда, был от красителя."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bottle-deposit-12-kop
+        statement: "В СССР при сдаче пустой стеклянной бутылки 0,5 л из-под пива или лимонада возвращали 12 копеек."
+        sources: [{ name: "Википедия: Стеклотара", type: REFERENCE, verified: false }]
+        questions:
+          - id: bottle-deposit-12-kop-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Сколько платили за сданную пустую пол-литровую бутылку из-под лимонада в 1980-е?"
+            options:
+              - { key: A, text: "5 копеек", distractor: PLAUSIBLE }
+              - { key: B, text: "12 копеек", correct: true }
+              - { key: C, text: "20 копеек", distractor: PLAUSIBLE }
+              - { key: D, text: "50 копеек", distractor: PLAUSIBLE }
+            explanation: "Десяток бутылок — и можно было купить что-то серьёзное. Очереди у пунктов приёма стеклотары были отдельным жанром."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить цену: 12 копеек для бутылки 0,5 л в 1980-е; для разных бутылок цены отличались."]
+
+      - id: phone-07-long-distance
+        statement: "В СССР междугородный телефонный разговор через телефонистку заказывали по номеру 07."
+        sources: [{ name: "Википедия: Междугородная телефонная связь", type: REFERENCE, verified: false }]
+        questions:
+          - id: phone-07-long-distance-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "По какому номеру в СССР заказывали междугородный разговор через телефонистку?"
+            options:
+              - { key: A, text: "07", correct: true }
+              - { key: B, text: "09", distractor: NEAR_MISS }
+              - { key: C, text: "100", distractor: SAME_CATEGORY }
+              - { key: D, text: "8-800", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "09 — справочная, 100 — точное время в Москве. Междугородку ждали часами, а потом кричали в трубку."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что 07 был единым номером заказа междугородных разговоров по всему СССР."]
+
+  - family: hard-russia-90s-life
+    name: "Россия 90-х — сложные"
+    facts:
+      - id: big-mac-1990-price
+        statement: "В январе 1990 года «Биг Мак» в первом московском «Макдоналдсе» стоил 3 рубля 75 копеек."
+        sources: [{ name: "Википедия: Макдоналдс в России", type: REFERENCE, verified: false }]
+        questions:
+          - id: big-mac-1990-price-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Сколько стоил «Биг Мак» в первом московском «Макдоналдсе» в 1990 году?"
+            options:
+              - { key: A, text: "1 рубль 50 копеек", distractor: PLAUSIBLE }
+              - { key: B, text: "3 рубля 75 копеек", correct: true }
+              - { key: C, text: "7 рублей 50 копеек", distractor: PLAUSIBLE }
+              - { key: D, text: "12 рублей", distractor: PLAUSIBLE }
+            explanation: "Почти два обеда в столовой при средней зарплате около 250 рублей. Очередь всё равно тянулась через всю Пушкинскую площадь."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 80s: 0.5 }
+            difficulty: 5
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить цену 3 р. 75 к. и среднюю зарплату в пояснении."]
+
+      - id: vlastilina-solovyova
+        statement: "Финансовую пирамиду «Властилина» в Подольске создала Валентина Соловьёва."
+        sources: [{ name: "Википедия: Властилина", type: REFERENCE, verified: false }]
+        questions:
+          - id: vlastilina-solovyova-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто создал финансовую пирамиду «Властилина»?"
+            options:
+              - { key: A, text: "Сергей Мавроди", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Валентина Соловьёва", correct: true }
+              - { key: C, text: "Борис Березовский", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Олег Тиньков", distractor: SAME_CATEGORY }
+            explanation: "«Властилина» обещала вкладчикам машины по половине цены. Мавроди — это МММ, а у Березовского была своя история с «АВВА»."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: default-1998-rate
+        statement: "После дефолта 17 августа 1998 года курс рубля упал примерно с 6 до 20 с лишним рублей за доллар к концу года."
+        sources: [{ name: "Википедия: Дефолт в России (1998)", type: REFERENCE, verified: false }]
+        questions:
+          - id: default-1998-rate-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Во сколько примерно раз подешевел рубль к доллару с августа до конца 1998 года?"
+            options:
+              - { key: A, text: "Примерно в полтора раза", distractor: PLAUSIBLE }
+              - { key: B, text: "Примерно в три раза", correct: true }
+              - { key: C, text: "Примерно в десять раз", distractor: PLAUSIBLE }
+              - { key: D, text: "Примерно в сто раз", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Было около 6 рублей за доллар, к концу года — около 20. «В сто раз» — это скорее инфляция начала 90-х."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-russian-literature
+    name: "Русская литература — сложные"
+    facts:
+      - id: vronsky-frou-frou
+        statement: "Кобылу Вронского в «Анне Карениной», сломавшую спину на скачках, звали Фру-Фру."
+        sources: [{ name: "Л. Н. Толстой, «Анна Каренина»", type: REFERENCE, verified: false }]
+        questions:
+          - id: vronsky-frou-frou-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Как звали лошадь Вронского, погибшую на скачках в «Анне Карениной»?"
+            options:
+              - { key: A, text: "Гладиатор", distractor: NEAR_MISS }
+              - { key: B, text: "Фру-Фру", correct: true }
+              - { key: C, text: "Холстомер", distractor: SAME_CATEGORY }
+              - { key: D, text: "Буцефал", distractor: SAME_CATEGORY }
+            explanation: "Гладиатор — конь соперника Вронского, Махотина. Холстомер — герой другой повести Толстого, рассказанной от лица лошади."
+            topics: { russian-literature: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: crime-opening-july
+        statement: "«Преступление и наказание» начинается словами «В начале июля, в чрезвычайно жаркое время…»."
+        sources: [{ name: "Ф. М. Достоевский, «Преступление и наказание»", type: REFERENCE, verified: false }]
+        questions:
+          - id: crime-opening-july-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Какой роман начинается словами «В начале июля, в чрезвычайно жаркое время, под вечер…»?"
+            options:
+              - { key: A, text: "«Идиот»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Преступление и наказание»", correct: true }
+              - { key: C, text: "«Бесы»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Белые ночи»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Дальше молодой человек выходит из своей каморки в Столярном переулке — это Раскольников."
+            topics: { russian-literature: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pushkin-kern
+        statement: "Стихотворение «Я помню чудное мгновенье…» Пушкин посвятил Анне Керн."
+        sources: [{ name: "Википедия: К *** (Я помню чудное мгновенье)", type: REFERENCE, verified: false }]
+        questions:
+          - id: pushkin-kern-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Кому посвящено стихотворение Пушкина «Я помню чудное мгновенье…»?"
+            options:
+              - { key: A, text: "Наталье Гончаровой", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Анне Керн", correct: true }
+              - { key: C, text: "Анне Олениной", distractor: NEAR_MISS }
+              - { key: D, text: "Амалии Ризнич", distractor: SAME_CATEGORY }
+            explanation: "Пушкин отдал ей рукопись в Тригорском в 1825 году. Глинка позже написал на эти стихи романс — для дочери Керн."
+            topics: { russian-literature: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bely-bugaev
+        statement: "Настоящее имя поэта Андрея Белого — Борис Николаевич Бугаев."
+        sources: [{ name: "Википедия: Андрей Белый", type: REFERENCE, verified: false }]
+        questions:
+          - id: bely-bugaev-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Какая настоящая фамилия была у поэта Андрея Белого?"
+            options:
+              - { key: A, text: "Бугаев", correct: true }
+              - { key: B, text: "Гликберг", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Пешков", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Гофман", distractor: PLAUSIBLE }
+            explanation: "Гликберг — настоящая фамилия Саши Чёрного, Пешков — Максима Горького."
+            topics: { russian-literature: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }
+            difficulty: 5
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-soviet-cinema
+    name: "Советское кино — сложные"
+    facts:
+      - id: ironiya-apartment-12
+        statement: "В «Иронии судьбы» Лукашин и Надя живут по одному адресу: 3-я улица Строителей, дом 25, квартира 12."
+        sources: [{ name: "Э. Рязанов, «Ирония судьбы, или С лёгким паром!»", type: REFERENCE, verified: false }]
+        questions:
+          - id: ironiya-apartment-12-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой номер квартиры был у Жени Лукашина на 3-й улице Строителей?"
+            options:
+              - { key: A, text: "25", distractor: NEAR_MISS }
+              - { key: B, text: "12", correct: true }
+              - { key: C, text: "13", distractor: PLAUSIBLE }
+              - { key: D, text: "21", distractor: PLAUSIBLE }
+            explanation: "Дом 25, квартира 12 — и в Москве, и в Ленинграде. Ключ тоже подошёл."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ironiya-pugacheva-sings
+        statement: "В «Иронии судьбы» песни за героиню Барбары Брыльской исполнила Алла Пугачёва, а говорит за неё Валентина Талызина."
+        sources: [{ name: "Википедия: Ирония судьбы, или С лёгким паром!", type: REFERENCE, verified: false }]
+        questions:
+          - id: ironiya-pugacheva-sings-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто спел песни за Надю, героиню Барбары Брыльской, в «Иронии судьбы»?"
+            options:
+              - { key: A, text: "Валентина Талызина", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Алла Пугачёва", correct: true }
+              - { key: C, text: "Софья Ротару", distractor: SAME_CATEGORY }
+              - { key: D, text: "Валентина Толкунова", distractor: SAME_CATEGORY }
+            explanation: "Талызина озвучила Надю, а сама играет её подругу Валю. Пугачёвой в титрах не было."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: war-and-peace-oscar
+        statement: "«Война и мир» Сергея Бондарчука стала первым советским фильмом, получившим «Оскар» за лучший фильм на иностранном языке (1969)."
+        sources: [{ name: "Википедия: Война и мир (фильм, 1965)", type: REFERENCE, verified: false }]
+        questions:
+          - id: war-and-peace-oscar-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой советский фильм первым получил «Оскар» как лучший фильм на иностранном языке?"
+            options:
+              - { key: A, text: "«Москва слезам не верит»", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "«Война и мир»", correct: true }
+              - { key: C, text: "«Летят журавли»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Дерсу Узала»", distractor: NEAR_MISS }
+            explanation: "Награду вручили в 1969 году. «Дерсу Узала» получил «Оскар» позже, «Москва слезам не верит» — в 1981-м, а «Журавли» взяли Золотую пальмовую ветвь в Каннах."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Документальный «Разгром немецких войск под Москвой» получил «Оскар» в 1943 году — вопрос именно про категорию иностранного фильма."]
+
+      - id: seventeen-moments-tariverdiev
+        statement: "Музыку к «Семнадцати мгновениям весны» написал Микаэл Таривердиев."
+        sources: [{ name: "Википедия: Семнадцать мгновений весны", type: REFERENCE, verified: false }]
+        questions:
+          - id: seventeen-moments-tariverdiev-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто написал музыку к «Семнадцати мгновениям весны»?"
+            options:
+              - { key: A, text: "Александр Зацепин", distractor: SAME_CATEGORY }
+              - { key: B, text: "Микаэл Таривердиев", correct: true }
+              - { key: C, text: "Геннадий Гладков", distractor: SAME_CATEGORY }
+              - { key: D, text: "Эдуард Артемьев", distractor: SAME_CATEGORY }
+            explanation: "«Не думай о секундах свысока» — его. Зацепин писал для Гайдая, Гладков — для «Бременских музыкантов»."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-ru-tv-90s-00s
+    name: "ТВ 90-х и 00-х — сложные"
+    facts:
+      - id: chgk-six-points
+        statement: "В «Что? Где? Когда?» игра идёт до шести очков: знатоки побеждают, набрав 6."
+        sources: [{ name: "Википедия: Что? Где? Когда?", type: REFERENCE, verified: false }]
+        questions:
+          - id: chgk-six-points-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Сколько очков нужно набрать знатокам, чтобы выиграть игру в «Что? Где? Когда?»?"
+            options:
+              - { key: A, text: "Пять", distractor: NEAR_MISS }
+              - { key: B, text: "Шесть", correct: true }
+              - { key: C, text: "Семь", distractor: NEAR_MISS }
+              - { key: D, text: "Десять", distractor: PLAUSIBLE }
+            explanation: "Игра идёт до шести очков — у знатоков или у телезрителей."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.8, 80s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tetya-valya-leontyeva
+        statement: "«Тётей Валей» дети называли Валентину Леонтьеву, ведущую «Спокойной ночи, малыши!»."
+        sources: [{ name: "Википедия: Леонтьева, Валентина Михайловна", type: REFERENCE, verified: false }]
+        questions:
+          - id: tetya-valya-leontyeva-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кого из ведущих «Спокойной ночи, малыши!» дети звали «тётей Валей»?"
+            options:
+              - { key: A, text: "Валентину Леонтьеву", correct: true }
+              - { key: B, text: "Ангелину Вовк", distractor: SAME_CATEGORY }
+              - { key: C, text: "Татьяну Веденееву", distractor: SAME_CATEGORY }
+              - { key: D, text: "Валентину Талызину", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Леонтьеву знали и по передаче «От всей души». Ей писали письма дети со всей страны."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ntv-gusinsky
+        statement: "Телеканал НТВ создал медиамагнат Владимир Гусинский (холдинг «Медиа-Мост»)."
+        sources: [{ name: "Википедия: НТВ", type: REFERENCE, verified: false }]
+        questions:
+          - id: ntv-gusinsky-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой телеканал входил в «Медиа-Мост» Владимира Гусинского?"
+            options:
+              - { key: A, text: "ТВ-6", distractor: NEAR_MISS }
+              - { key: B, text: "НТВ", correct: true }
+              - { key: C, text: "ОРТ", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "РЕН ТВ", distractor: SAME_CATEGORY }
+            explanation: "ОРТ связывали с Березовским; ТВ-6 стал прибежищем журналистов НТВ уже после смены его владельца в 2001 году."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: maski-show-odessa
+        statement: "Комик-труппа «Маски» и их «Маски-шоу» — из Одессы."
+        sources: [{ name: "Википедия: Маски-шоу", type: REFERENCE, verified: false }]
+        questions:
+          - id: maski-show-odessa-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Из какого города комик-труппа «Маски», создатели «Маски-шоу»?"
+            options:
+              - { key: A, text: "Из Киева", distractor: PLAUSIBLE }
+              - { key: B, text: "Из Одессы", correct: true }
+              - { key: C, text: "Из Харькова", distractor: PLAUSIBLE }
+              - { key: D, text: "Из Ростова-на-Дону", distractor: PLAUSIBLE }
+            explanation: "Немое кино в стиле Чаплина и Бастера Китона — с одесским колоритом."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-ru-pop-90s
+    name: "Поп 90-х — сложные"
+    facts:
+      - id: ruki-vverh-debut
+        statement: "Дебютный альбом группы «Руки вверх!» — «Дышите равномерно» (1997)."
+        sources: [{ name: "Википедия: Руки вверх!", type: REFERENCE, verified: false }]
+        questions:
+          - id: ruki-vverh-debut-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как назывался дебютный альбом группы «Руки вверх!»?"
+            options:
+              - { key: A, text: "«Дышите равномерно»", correct: true }
+              - { key: B, text: "«Сделай погромче!»", distractor: NEAR_MISS }
+              - { key: C, text: "«Без тормозов»", distractor: PLAUSIBLE }
+              - { key: D, text: "«Крошка моя»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Год — 1997. «Крошка моя» — песня, а не альбом."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить название и год дебютного альбома."]
+
+      - id: shura-real-name
+        statement: "Настоящее имя певца Шуры — Александр Медведев."
+        sources: [{ name: "Википедия: Шура (певец)", type: REFERENCE, verified: false }]
+        questions:
+          - id: shura-real-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как по-настоящему зовут певца Шуру?"
+            options:
+              - { key: A, text: "Александр Медведев", correct: true }
+              - { key: B, text: "Александр Шуров", distractor: PLAUSIBLE }
+              - { key: C, text: "Андрей Шуркин", distractor: PLAUSIBLE }
+              - { key: D, text: "Шура Каретный", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Александр Медведев из Новосибирска. «Шура Каретный» — персонаж Владимира Высоцкого и Шуфутинского."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: rozovye-rozy-veselye
+        statement: "Песню «Розовые розы» (1990) исполняла группа «Весёлые ребята»."
+        sources: [{ name: "Википедия: Весёлые ребята", type: REFERENCE, verified: false }]
+        questions:
+          - id: rozovye-rozy-veselye-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какая группа исполняла песню «Розовые розы» («…Светке Соколовой»)?"
+            options:
+              - { key: A, text: "«Ласковый май»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«Весёлые ребята»", correct: true }
+              - { key: C, text: "«Мираж»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Комбинация»", distractor: SAME_CATEGORY }
+            explanation: "«Ласковый май» пел про белые розы, а розовые — это «Весёлые ребята»."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: akh-kakaya-zhenshchina
+        statement: "Хит «Ах, какая женщина» (1995) исполняла группа «Фристайл»."
+        sources: [{ name: "Википедия: Фристайл (группа)", type: REFERENCE, verified: false }]
+        questions:
+          - id: akh-kakaya-zhenshchina-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какая группа исполняла хит «Ах, какая женщина»?"
+            options:
+              - { key: A, text: "«Лесоповал»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Фристайл»", correct: true }
+              - { key: C, text: "«Белый орёл»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Комбинация»", distractor: SAME_CATEGORY }
+            explanation: "«Фристайл» — группа Анатолия Розанова из Полтавы. «Лесоповал» и «Белый орёл» тоже пели про жизнь и женщин, но по-другому."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить год хита и что группа из Полтавы."]
+
+  - family: hard-ru-pop-00s
+    name: "Поп 00-х — сложные"
+    facts:
+      - id: timati-real-name
+        statement: "Настоящее имя Тимати — Тимур Юнусов."
+        sources: [{ name: "Википедия: Тимати", type: REFERENCE, verified: false }]
+        questions:
+          - id: timati-real-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как по-настоящему зовут Тимати?"
+            options:
+              - { key: A, text: "Тимофей Матвеев", distractor: PLAUSIBLE }
+              - { key: B, text: "Тимур Юнусов", correct: true }
+              - { key: C, text: "Тимур Батрутдинов", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Артём Юсупов", distractor: PLAUSIBLE }
+            explanation: "Тимур Ильдарович Юнусов. Тимур Батрутдинов — комик из Comedy Club."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: glukoza-real-name
+        statement: "Настоящее имя певицы Глюк'oZa — Наталья Ионова."
+        sources: [{ name: "Википедия: Глюкоза (певица)", type: REFERENCE, verified: false }]
+        questions:
+          - id: glukoza-real-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как по-настоящему зовут певицу Глюк'oZa?"
+            options:
+              - { key: A, text: "Наталья Подольская", distractor: SAME_CATEGORY }
+              - { key: B, text: "Наталья Ионова", correct: true }
+              - { key: C, text: "Анна Седокова", distractor: SAME_CATEGORY }
+              - { key: D, text: "Юлия Савичева", distractor: SAME_CATEGORY }
+            explanation: "Наталья Ионова; первые клипы делали с мультяшным персонажем вместо певицы."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bi2-polkovnik
+        statement: "Песню «Полковнику никто не пишет» из фильма «Брат-2» исполняла группа «Би-2»."
+        sources: [{ name: "Википедия: Брат 2 (саундтрек)", type: REFERENCE, verified: false }]
+        questions:
+          - id: bi2-polkovnik-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какая группа исполняла «Полковнику никто не пишет» из «Брата-2»?"
+            options:
+              - { key: A, text: "«Сплин»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Би-2»", correct: true }
+              - { key: C, text: "«Смысловые галлюцинации»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Мумий Тролль»", distractor: SAME_CATEGORY }
+            explanation: "И «Сплин», и «Смысловые галлюцинации» тоже есть на саундтреке «Брата-2» — поэтому вопрос не такой простой."
+            topics: { ru-pop-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: hard-old-internet
+    name: "Старый интернет — сложные"
+    facts:
+      - id: livejournal-sup
+        statement: "В 2007 году LiveJournal купила компания SUP Александра Мамута."
+        sources: [{ name: "Википедия: LiveJournal", type: REFERENCE, verified: false }]
+        questions:
+          - id: livejournal-sup-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Какая компания купила LiveJournal («Живой журнал») в 2007 году?"
+            options:
+              - { key: A, text: "«Яндекс»", distractor: SAME_CATEGORY }
+              - { key: B, text: "SUP", correct: true }
+              - { key: C, text: "Mail.ru", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Рамблер»", distractor: SAME_CATEGORY }
+            explanation: "Рунет к тому моменту был самой активной аудиторией ЖЖ, поэтому покупка выглядела логичной."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: fidonet
+        statement: "Фидонет (FidoNet) — любительская сеть обмена сообщениями между BBS через модемы и телефонные линии."
+        sources: [{ name: "Википедия: Фидонет", type: REFERENCE, verified: false }]
+        questions:
+          - id: fidonet-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Что такое Фидонет?"
+            options:
+              - { key: A, text: "Любительская сеть обмена сообщениями через модемы", correct: true }
+              - { key: B, text: "Первый российский поисковик", distractor: PLAUSIBLE }
+              - { key: C, text: "Сеть интернет-кафе 90-х", distractor: PLAUSIBLE }
+              - { key: D, text: "Советская военная компьютерная сеть", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Узлы созванивались по ночам, когда телефон был свободен. В рунете Фидонет жил до самого конца 90-х."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: rambler-pushchino
+        statement: "Поисковик «Рамблер» создали в 1996 году в подмосковном научном городе Пущино."
+        sources: [{ name: "Википедия: Рамблер", type: REFERENCE, verified: false }]
+        questions:
+          - id: rambler-pushchino-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "В каком городе создали поисковик «Рамблер»?"
+            options:
+              - { key: A, text: "В Зеленограде", distractor: PLAUSIBLE }
+              - { key: B, text: "В Пущино", correct: true }
+              - { key: C, text: "В Новосибирском Академгородке", distractor: PLAUSIBLE }
+              - { key: D, text: "В Дубне", distractor: SAME_CATEGORY }
+            explanation: "Пущино — научный город биологов. Рамблер появился там в 1996 году, на год раньше Яндекса."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 5
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: mailru-1998
+        statement: "Почтовый сервис Mail.ru запустили в 1998 году."
+        sources: [{ name: "Википедия: Mail.ru", type: REFERENCE, verified: false }]
+        questions:
+          - id: mailru-1998-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "В каком году появилась почта Mail.ru?"
+            options:
+              - { key: A, text: "В 1995", distractor: PLAUSIBLE }
+              - { key: B, text: "В 1998", correct: true }
+              - { key: C, text: "В 2001", distractor: PLAUSIBLE }
+              - { key: D, text: "В 2004", distractor: PLAUSIBLE }
+            explanation: "Бесплатная почта стала первым большим продуктом компании. ICQ Mail.ru купит гораздо позже — в 2010 году."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI

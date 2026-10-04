@@ -129,6 +129,7 @@ function pCorrect(aff: number, difficulty: number) {
 type Metrics = {
   played: number;
   accuracy: number;
+  difficulty: number;
   coverage: number;
   heroCoverage: number;
   heroSuccess: number;
@@ -151,6 +152,7 @@ function simulate(a: Archetype, seed: number): Metrics {
   const heroTargets = new Set<string>();
   let heroHits = 0;
   let correctSum = 0;
+  let difficultySum = 0;
   let lowDignity = 0;
   let wildcards = 0;
   const topics: string[] = [];
@@ -162,6 +164,7 @@ function simulate(a: Archetype, seed: number): Metrics {
     usedQ.add(q.id);
     usedF.add(q.factId);
     topics.push(primaryTopic(q));
+    difficultySum += q.difficulty;
     if (q.dignity <= 2) lowDignity++;
     if (r.debug.mode === "wildcard") wildcards++;
 
@@ -187,6 +190,7 @@ function simulate(a: Archetype, seed: number): Metrics {
   return {
     played,
     accuracy: played ? correctSum / played : 0,
+    difficulty: played ? difficultySum / played : 0,
     coverage: highAffinitySeen.size / ids.length,
     heroCoverage: heroTargets.size / ids.length,
     heroSuccess: heroHits,
@@ -210,6 +214,7 @@ const rows = ARCHETYPES.map((a) => {
     Вопросов: num(avg("played")),
     "Банк кончился": pct(avg("exhausted")),
     Точность: pct(avg("accuracy")),
+    Сложность: num(avg("difficulty")),
     "Покрытие ≥1 «своего»": pct(avg("coverage")),
     "Hero-цели": pct(avg("heroCoverage")),
     "Hero-удачи": num(avg("heroSuccess")),
@@ -231,3 +236,4 @@ for (const r of rows) {
 }
 console.log("\nЦели (05-engine §2, §16): точность 50–70 %, покрытие и Hero-цели → 100 %, банк не заканчивается.");
 console.log(hints.length ? "\n" + hints.map((h) => "• " + h).join("\n") : "\nВсе метрики в целевых диапазонах.");
+

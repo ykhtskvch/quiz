@@ -123,7 +123,8 @@ function adaptedDifficultyTargets(config: EngineConfig, accuracy: number[]): Rec
   const t = { ...config.difficultyTargets };
   if (recent.length < 3) return t;
   const mean = recent.reduce((a, b) => a + b, 0) / recent.length;
-  const shift = mean > 0.75 ? 0.08 : mean < 0.4 ? -0.08 : 0;
+  // Steer back into the 05-engine target band (accuracy 50–70 %).
+  const shift = mean > 0.7 ? 0.08 : mean < 0.5 ? -0.08 : 0;
   t.easy = Math.max(0, t.easy - shift);
   t.medium = Math.max(0, t.medium - shift / 2);
   t.hard += shift / 2;
