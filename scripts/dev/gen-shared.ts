@@ -14,8 +14,10 @@ const taxonomy = loadTaxonomy();
 const topics = taxonomy.topics.map((t) => ({
   slug: t.slug,
   name: t.name,
+  nameEn: t.name_en,
   emoji: t.emoji ?? "•",
   group: t.group,
+  groupEn: t.group_en,
   impliedContext: t.implied_context ?? null,
 }));
 writeFileSync(

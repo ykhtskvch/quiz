@@ -11,9 +11,10 @@ import {
   type SessionFeedbackInput,
 } from "@quiz/shared";
 import { api } from "../api.ts";
-import { t } from "../strings.ts";
+import { useT } from "../strings.ts";
 
 export function SessionFeedback({ code, token, sent }: { code: string; token: string; sent: boolean }) {
+  const t = useT();
   const [form, setForm] = useState<Partial<SessionFeedbackInput>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -75,6 +76,7 @@ export function QuestionRatings({
   results: GameResults;
   initial: Record<number, QuestionRating>;
 }) {
+  const t = useT();
   const [ratings, setRatings] = useState<Record<number, QuestionRating>>(initial);
   if (results.questions.length === 0) return null;
 

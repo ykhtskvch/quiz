@@ -7,7 +7,7 @@ families:
     facts:
       - id: romeo-verona
         statement: "Действие «Ромео и Джульетты» Шекспира происходит в Вероне."
-        sources: [{ name: "Википедия: Ромео и Джульетта", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ромео и Джульетта", type: REFERENCE, verified: false } ]
         questions:
           - id: romeo-verona-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: romeo-verona-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which city is Romeo and Juliet set?
+            options:
+              - { key: A, text: Venice, distractor: NEAR_MISS }
+              - { key: B, text: Verona, correct: true }
+              - { key: C, text: Florence, distractor: SAME_CATEGORY }
+              - { key: D, text: Rome, distractor: SAME_CATEGORY }
+            explanation: Shakespeare set The Merchant of Venice and Othello in Venice.
+            topics: { world-literature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: don-quixote-windmills
         statement: "Дон Кихот принимает ветряные мельницы за великанов и бросается с ними в бой."
-        sources: [{ name: "Википедия: Дон Кихот", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Дон Кихот", type: REFERENCE, verified: false } ]
         questions:
           - id: don-quixote-windmills-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: don-quixote-windmills-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What did Don Quixote attack, believing they were giants?
+            options:
+              - { key: A, text: Windmills, correct: true }
+              - { key: B, text: A flock of sheep, distractor: NEAR_MISS }
+              - { key: C, text: Peasants, distractor: PLAUSIBLE }
+              - { key: D, text: Trees, distractor: PLAUSIBLE }
+            explanation: He fought a flock of sheep too — mistaking it for an army.
+            topics: { world-literature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: baker-street-221b
         statement: "Шерлок Холмс жил на Бейкер-стрит, 221Б."
-        sources: [{ name: "Википедия: Бейкер-стрит, 221Б", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Бейкер-стрит, 221Б", type: REFERENCE, verified: false } ]
         questions:
           - id: baker-street-221b-ru-1
             language: ru
@@ -73,10 +113,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: baker-street-221b-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where did Sherlock Holmes live?
+            options:
+              - { key: A, text: 10 Downing Street, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: 221B Baker Street, correct: true }
+              - { key: C, text: 7 Oxford Street, distractor: PLAUSIBLE }
+              - { key: D, text: 13 Piccadilly, distractor: PLAUSIBLE }
+            explanation: 10 Downing Street is the British Prime Minister's residence.
+            topics: { world-literature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: saint-exupery-pilot
         statement: "Антуан де Сент-Экзюпери, автор «Маленького принца», был лётчиком."
-        sources: [{ name: "Википедия: Сент-Экзюпери, Антуан де", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Сент-Экзюпери, Антуан де", type: REFERENCE, verified: false } ]
         questions:
           - id: saint-exupery-pilot-ru-1
             language: ru
@@ -96,10 +156,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: saint-exupery-pilot-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the author of The Little Prince by profession?
+            options:
+              - { key: A, text: A doctor, distractor: PLAUSIBLE }
+              - { key: B, text: A pilot, correct: true }
+              - { key: C, text: A sailor, distractor: PLAUSIBLE }
+              - { key: D, text: A teacher, distractor: PLAUSIBLE }
+            explanation: He disappeared in 1944 on a reconnaissance flight.
+            topics: { world-literature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: 1984-big-brother
         statement: "«Большой брат следит за тобой» — лозунг из романа Джорджа Оруэлла «1984»."
-        sources: [{ name: "Википедия: 1984 (роман)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: 1984 (роман)", type: REFERENCE, verified: false } ]
         questions:
           - id: 1984-big-brother-ru-1
             language: ru
@@ -120,10 +200,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, BRIDGE: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: 1984-big-brother-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: Which novel gave us "Big Brother is watching you"?
+            options:
+              - { key: A, text: Brave New World, distractor: NEAR_MISS }
+              - { key: B, text: Nineteen Eighty-Four, correct: true }
+              - { key: C, text: Fahrenheit 451, distractor: NEAR_MISS }
+              - { key: D, text: Animal Farm, distractor: NEAR_MISS }
+            explanation: All four are dystopias — and Orwell wrote Animal Farm too.
+            topics: { world-literature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, BRIDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: robinson-friday
         statement: "Спутника Робинзона Крузо зовут Пятница."
-        sources: [{ name: "Википедия: Робинзон Крузо", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Робинзон Крузо", type: REFERENCE, verified: false } ]
         questions:
           - id: robinson-friday-ru-1
             language: ru
@@ -143,3 +244,23 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: robinson-friday-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the name of Robinson Crusoe's companion?
+            options:
+              - { key: A, text: Monday, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Friday, correct: true }
+              - { key: C, text: Sunday, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Wednesday, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Crusoe named him after the day he rescued him.
+            topics: { world-literature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

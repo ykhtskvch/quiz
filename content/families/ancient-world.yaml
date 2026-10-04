@@ -7,7 +7,7 @@ families:
     facts:
       - id: colosseum-purpose
         statement: "Колизей в Риме строили для гладиаторских боёв и других зрелищ."
-        sources: [{ name: "Википедия: Колизей", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Колизей", type: REFERENCE, verified: false } ]
         questions:
           - id: colosseum-purpose-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: colosseum-purpose-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the Colosseum built for?
+            options:
+              - { key: A, text: Meetings of the Senate, distractor: PLAUSIBLE }
+              - { key: B, text: Gladiator fights and public spectacles, correct: true }
+              - { key: C, text: As a temple to Jupiter, distractor: PLAUSIBLE }
+              - { key: D, text: Chariot races, distractor: NEAR_MISS }
+            explanation: Chariot races were held at the Circus Maximus.
+            topics: { ancient-world: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: cheops-wonder
         statement: "Пирамида Хеопса — единственное из семи чудес света, сохранившееся до наших дней."
-        sources: [{ name: "Википедия: Семь чудес света", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Семь чудес света", type: REFERENCE, verified: false } ]
         questions:
           - id: cheops-wonder-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: cheops-wonder-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which of the Seven Wonders of the Ancient World still stands today?
+            options:
+              - { key: A, text: The Colossus of Rhodes, distractor: SAME_CATEGORY }
+              - { key: B, text: The Great Pyramid of Giza, correct: true }
+              - { key: C, text: The Hanging Gardens of Babylon, distractor: SAME_CATEGORY }
+              - { key: D, text: The Lighthouse of Alexandria, distractor: SAME_CATEGORY }
+            explanation: It is also the oldest of the seven.
+            topics: { ancient-world: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: veni-vidi-vici
         statement: "«Пришёл, увидел, победил» (Veni, vidi, vici) — слова Юлия Цезаря."
-        sources: [{ name: "Википедия: Veni, vidi, vici", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Veni, vidi, vici", type: REFERENCE, verified: false } ]
         questions:
           - id: veni-vidi-vici-ru-1
             language: ru
@@ -73,10 +113,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: veni-vidi-vici-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who said "I came, I saw, I conquered"?
+            options:
+              - { key: A, text: Alexander the Great, distractor: SAME_CATEGORY }
+              - { key: B, text: Julius Caesar, correct: true }
+              - { key: C, text: Hannibal, distractor: SAME_CATEGORY }
+              - { key: D, text: Nero, distractor: SAME_CATEGORY }
+            explanation: "Caesar's report to Rome after a lightning victory in 47 BC: \"Veni, vidi, vici\"."
+            topics: { ancient-world: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: olympics-greece
         statement: "Олимпийские игры зародились в Древней Греции, в Олимпии."
-        sources: [{ name: "Википедия: Олимпийские игры в Древней Греции", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Олимпийские игры в Древней Греции", type: REFERENCE, verified: false } ]
         questions:
           - id: olympics-greece-ru-1
             language: ru
@@ -96,10 +156,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: olympics-greece-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where did the Olympic Games begin?
+            options:
+              - { key: A, text: Ancient Rome, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Ancient Greece, correct: true }
+              - { key: C, text: Ancient Egypt, distractor: SAME_CATEGORY }
+              - { key: D, text: Persia, distractor: SAME_CATEGORY }
+            explanation: The first recorded Games were held at Olympia in 776 BC.
+            topics: { ancient-world: 1, sports: 0.5 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: trojan-horse
         statement: "По легенде, греки проникли в Трою, спрятавшись в деревянном коне."
-        sources: [{ name: "Википедия: Троянский конь", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Троянский конь", type: REFERENCE, verified: false } ]
         questions:
           - id: trojan-horse-ru-1
             language: ru
@@ -119,10 +199,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: trojan-horse-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: According to legend, how did the Greeks get inside Troy?
+            options:
+              - { key: A, text: Through a secret tunnel, distractor: PLAUSIBLE }
+              - { key: B, text: Hidden inside a wooden horse, correct: true }
+              - { key: C, text: By bribing the guards, distractor: PLAUSIBLE }
+              - { key: D, text: Disguised as merchants, distractor: PLAUSIBLE }
+            explanation: Hence the "Trojan horse" — in computer security too.
+            topics: { ancient-world: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: pompeii-vesuvius
         statement: "Помпеи погибли при извержении Везувия в 79 году н. э."
-        sources: [{ name: "Википедия: Помпеи", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Помпеи", type: REFERENCE, verified: false } ]
         questions:
           - id: pompeii-vesuvius-ru-1
             language: ru
@@ -142,3 +242,23 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: pompeii-vesuvius-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which volcano destroyed Pompeii?
+            options:
+              - { key: A, text: Etna, distractor: NEAR_MISS }
+              - { key: B, text: Vesuvius, correct: true }
+              - { key: C, text: Stromboli, distractor: SAME_CATEGORY }
+              - { key: D, text: Krakatoa, distractor: SAME_CATEGORY }
+            explanation: Etna is in Sicily and still very active.
+            topics: { ancient-world: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

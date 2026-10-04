@@ -7,7 +7,7 @@ families:
     facts:
       - id: moonwalk
         statement: "Знаменитое «скользящее назад» движение Майкла Джексона называется «лунная походка»."
-        sources: [{ name: "Википедия: Лунная походка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Лунная походка", type: REFERENCE, verified: false } ]
         questions:
           - id: moonwalk-ru-1
             language: ru
@@ -28,10 +28,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: moonwalk-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is Michael Jackson's famous gliding dance move called?
+            options:
+              - { key: A, text: The robot, distractor: SAME_CATEGORY }
+              - { key: B, text: The moonwalk, correct: true }
+              - { key: C, text: Breakdancing, distractor: SAME_CATEGORY }
+              - { key: D, text: Tecktonik, distractor: SAME_CATEGORY }
+            explanation: He first showed it in 1983, performing "Billie Jean".
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: thriller-best-selling
         statement: "Альбом Майкла Джексона «Thriller» (1982) — самый продаваемый альбом в истории."
-        sources: [{ name: "Википедия: Thriller (альбом)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Thriller (альбом)", type: REFERENCE, verified: false } ]
         questions:
           - id: thriller-best-selling-ru-1
             language: ru
@@ -52,13 +73,34 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: thriller-best-selling-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which is the best-selling album of all time?
+            options:
+              - { key: A, text: Back in Black — AC/DC, distractor: NEAR_MISS }
+              - { key: B, text: Thriller — Michael Jackson, correct: true }
+              - { key: C, text: The Dark Side of the Moon — Pink Floyd, distractor: NEAR_MISS }
+              - { key: D, text: Bad — Michael Jackson, distractor: SAME_CATEGORY }
+            explanation: Back in Black and The Dark Side of the Moon usually come next.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: abba
     name: "ABBA"
     facts:
       - id: abba-waterloo
         statement: "ABBA победила на «Евровидении-1974» с песней «Waterloo»."
-        sources: [{ name: "Википедия: Waterloo (песня ABBA)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Waterloo (песня ABBA)", type: REFERENCE, verified: false } ]
         questions:
           - id: abba-waterloo-ru-1
             language: ru
@@ -79,13 +121,34 @@ families:
             effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: abba-waterloo-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: With which song did ABBA win Eurovision?
+            options:
+              - { key: A, text: Dancing Queen, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Waterloo, correct: true }
+              - { key: C, text: Mamma Mia, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: SOS, distractor: CONTEXTUAL_CONFUSION }
+            explanation: That was 1974, in Brighton, England.
+            topics: { world-pop: 1, eurovision: 0.6 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: queen
     name: "Queen"
     facts:
       - id: mercury-zanzibar
         statement: "Фредди Меркьюри родился на острове Занзибар (1946)."
-        sources: [{ name: "Википедия: Меркьюри, Фредди", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Меркьюри, Фредди", type: REFERENCE, verified: false } ]
         questions:
           - id: mercury-zanzibar-ru-1
             language: ru
@@ -106,13 +169,34 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: mercury-zanzibar-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where was Freddie Mercury born?
+            options:
+              - { key: A, text: London, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Zanzibar, correct: true }
+              - { key: C, text: Bombay, distractor: NEAR_MISS }
+              - { key: D, text: Cairo, distractor: PLAUSIBLE }
+            explanation: Born Farrokh Bulsara; he went to school in India, and the family moved to England in 1964.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: spice-girls
     name: "Spice Girls"
     facts:
       - id: posh-spice
         statement: "Прозвище Виктории Бекхэм (Адамс) в Spice Girls — Posh Spice."
-        sources: [{ name: "Википедия: Spice Girls", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Spice Girls", type: REFERENCE, verified: false } ]
         questions:
           - id: posh-spice-ru-1
             language: ru
@@ -133,13 +217,34 @@ families:
             effects: { I_KNOW_THIS: 0.7, WHY_DO_I_REMEMBER_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: posh-spice-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was Victoria Beckham's nickname in the Spice Girls?
+            options:
+              - { key: A, text: Baby Spice, distractor: SAME_CATEGORY }
+              - { key: B, text: Posh Spice, correct: true }
+              - { key: C, text: Ginger Spice, distractor: SAME_CATEGORY }
+              - { key: D, text: Sporty Spice, distractor: SAME_CATEGORY }
+            explanation: The fifth was Scary Spice.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: britney
     name: "Бритни Спирс"
     facts:
       - id: britney-debut
         statement: "Дебютный хит Бритни Спирс — «...Baby One More Time» (1998)."
-        sources: [{ name: "Википедия: ...Baby One More Time (песня)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: ...Baby One More Time (песня)", type: REFERENCE, verified: false } ]
         questions:
           - id: britney-debut-ru-1
             language: ru
@@ -160,13 +265,34 @@ families:
             effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: britney-debut-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which song was Britney Spears's debut hit?
+            options:
+              - { key: A, text: '"Oops!... I Did It Again"', distractor: NEAR_MISS }
+              - { key: B, text: '"...Baby One More Time"', correct: true }
+              - { key: C, text: '"Toxic"', distractor: NEAR_MISS }
+              - { key: D, text: '"Genie in a Bottle"', distractor: CONTEXTUAL_CONFUSION }
+            explanation: "\"Genie in a Bottle\" was Christina Aguilera's debut at the same time."
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1, 00s: 0.8 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: madonna
     name: "Мадонна"
     facts:
       - id: madonna-like-a-prayer
         statement: "Песню «Like a Prayer» (1989) исполняет Мадонна."
-        sources: [{ name: "Википедия: Like a Prayer (песня)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Like a Prayer (песня)", type: REFERENCE, verified: false } ]
         questions:
           - id: madonna-like-a-prayer-ru-1
             language: ru
@@ -187,13 +313,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: madonna-like-a-prayer-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who sang "Like a Prayer"?
+            options:
+              - { key: A, text: Cyndi Lauper, distractor: SAME_CATEGORY }
+              - { key: B, text: Madonna, correct: true }
+              - { key: C, text: Whitney Houston, distractor: SAME_CATEGORY }
+              - { key: D, text: Cher, distractor: SAME_CATEGORY }
+            explanation: The 1989 song and video were among the most talked-about of her career.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: psy
     name: "PSY"
     facts:
       - id: psy-country
         statement: "PSY, исполнитель «Gangnam Style», — из Южной Кореи."
-        sources: [{ name: "Википедия: Gangnam Style", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Gangnam Style", type: REFERENCE, verified: false } ]
         questions:
           - id: psy-country-ru-1
             language: ru
@@ -214,13 +361,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: psy-country-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which country is PSY, of "Gangnam Style", from?
+            options:
+              - { key: A, text: Japan, distractor: SAME_CATEGORY }
+              - { key: B, text: South Korea, correct: true }
+              - { key: C, text: China, distractor: SAME_CATEGORY }
+              - { key: D, text: Thailand, distractor: SAME_CATEGORY }
+            explanation: Gangnam is a wealthy district of Seoul; the video was the first on YouTube to hit a billion views.
+            topics: { world-pop: 1, internet-now: 0.4 }
+            contexts: { GLOBAL: 1 }
+            generations: { 10s: 1 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: macarena
     name: "«Макарена»"
     facts:
       - id: macarena-spain
         statement: "«Макарену» исполнил испанский дуэт Los del Río."
-        sources: [{ name: "Википедия: Macarena", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Macarena", type: REFERENCE, verified: false } ]
         questions:
           - id: macarena-spain-ru-1
             language: ru
@@ -241,13 +409,34 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: macarena-spain-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which country is Los del Río, the duo behind "Macarena", from?
+            options:
+              - { key: A, text: Mexico, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Spain, correct: true }
+              - { key: C, text: Argentina, distractor: SAME_CATEGORY }
+              - { key: D, text: Cuba, distractor: SAME_CATEGORY }
+            explanation: The song came out in 1993 and went global with the 1996 remix.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: crazy-frog
     name: "Crazy Frog"
     facts:
       - id: crazy-frog-axel-f
         statement: "Хит Crazy Frog «Axel F» (2005) — кавер на тему из фильма «Полицейский из Беверли-Хиллз»."
-        sources: [{ name: "Википедия: Axel F", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Axel F", type: REFERENCE, verified: false } ]
         questions:
           - id: crazy-frog-axel-f-ru-1
             language: ru
@@ -269,13 +458,35 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: crazy-frog-axel-f-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: Crazy Frog's hit "Axel F" is a cover of the theme from which film?
+            options:
+              - { key: A, text: Back to the Future, distractor: SAME_CATEGORY }
+              - { key: B, text: Beverly Hills Cop, correct: true }
+              - { key: C, text: Ghostbusters, distractor: SAME_CATEGORY }
+              - { key: D, text: Top Gun, distractor: SAME_CATEGORY }
+            explanation: Harold Faltermeyer wrote the original in 1984; Axel Foley is Eddie Murphy's character.
+            topics: { world-pop: 1, old-internet: 0.4 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1, 80s: 0.4 }
+            difficulty: 4
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: modern-talking
     name: "Modern Talking"
     facts:
       - id: modern-talking-country
         statement: "Modern Talking — дуэт Дитера Болена и Томаса Андерса из ФРГ."
-        sources: [{ name: "Википедия: Modern Talking", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Modern Talking", type: REFERENCE, verified: false } ]
         questions:
           - id: modern-talking-country-ru-1
             language: ru
@@ -302,7 +513,7 @@ families:
     facts:
       - id: boney-m-rasputin
         statement: "Героем хита Boney M. 1978 года стал Григорий Распутин."
-        sources: [{ name: "Википедия: Rasputin (песня)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Rasputin (песня)", type: REFERENCE, verified: false } ]
         questions:
           - id: boney-m-rasputin-ru-1
             language: ru
@@ -324,13 +535,35 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: boney-m-rasputin-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: Which Russian historical figure is the subject of a Boney M. hit?
+            options:
+              - { key: A, text: Peter the Great, distractor: SAME_CATEGORY }
+              - { key: B, text: Grigori Rasputin, correct: true }
+              - { key: C, text: Ivan the Terrible, distractor: SAME_CATEGORY }
+              - { key: D, text: Yemelyan Pugachev, distractor: SAME_CATEGORY }
+            explanation: '"Ra-Ra-Rasputin, lover of the Russian queen…" — from 1978.'
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 0.7, POST_SOVIET: 1 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: beatles
     name: "The Beatles"
     facts:
       - id: beatles-liverpool
         statement: "The Beatles — из Ливерпуля."
-        sources: [{ name: "Википедия: The Beatles", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: The Beatles", type: REFERENCE, verified: false } ]
         questions:
           - id: beatles-liverpool-ru-1
             language: ru
@@ -350,13 +583,33 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: beatles-liverpool-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which city are The Beatles from?
+            options:
+              - { key: A, text: London, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Liverpool, correct: true }
+              - { key: C, text: Manchester, distractor: SAME_CATEGORY }
+              - { key: D, text: Birmingham, distractor: SAME_CATEGORY }
+            explanation: The Cavern Club, where they played, is still open.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1, UK: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: whitney
     name: "Уитни Хьюстон"
     facts:
       - id: always-love-you-dolly
         statement: "Песню «I Will Always Love You», хит Уитни Хьюстон (1992), написала и первой исполнила Долли Партон."
-        sources: [{ name: "Википедия: I Will Always Love You", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: I Will Always Love You", type: REFERENCE, verified: false } ]
         questions:
           - id: always-love-you-dolly-ru-1
             language: ru
@@ -377,13 +630,34 @@ families:
             effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: always-love-you-dolly-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who wrote "I Will Always Love You", which became Whitney Houston's huge hit?
+            options:
+              - { key: A, text: Whitney Houston herself, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Dolly Parton, correct: true }
+              - { key: C, text: Celine Dion, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Mariah Carey, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Parton recorded it in 1974; Whitney sang it for The Bodyguard.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 5
+            dignity: 2
+            effects: { I_KNOW_THIS: 1, HERO_CANDIDATE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: ace-of-base
     name: "Ace of Base"
     facts:
       - id: ace-of-base-sweden
         statement: "Группа Ace of Base («All That She Wants», «The Sign») — из Швеции."
-        sources: [{ name: "Википедия: Ace of Base", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ace of Base", type: REFERENCE, verified: false } ]
         questions:
           - id: ace-of-base-sweden-ru-1
             language: ru
@@ -404,3 +678,24 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: ace-of-base-sweden-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which country is Ace of Base from?
+            options:
+              - { key: A, text: Denmark, distractor: NEAR_MISS }
+              - { key: B, text: Sweden, correct: true }
+              - { key: C, text: Norway, distractor: NEAR_MISS }
+              - { key: D, text: Germany, distractor: SAME_CATEGORY }
+            explanation: Another Swedish pop machine after ABBA and Roxette.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

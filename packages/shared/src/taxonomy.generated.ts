@@ -5,247 +5,335 @@ export const TOPICS: TaxonomyTopic[] = [
   {
     "slug": "ancient-world",
     "name": "Древний мир",
+    "nameEn": "Ancient world",
     "emoji": "🏛️",
     "group": "История",
+    "groupEn": "History",
     "impliedContext": null
   },
   {
     "slug": "russia-pre-1917",
     "name": "История России до 1917",
+    "nameEn": "Russia before 1917",
     "emoji": "👑",
     "group": "История",
+    "groupEn": "History",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "ussr-history",
     "name": "СССР: история",
+    "nameEn": "USSR history",
     "emoji": "🏭",
     "group": "История",
+    "groupEn": "History",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "cold-war",
     "name": "Холодная война и XX век",
+    "nameEn": "Cold War & the 20th century",
     "emoji": "🧊",
     "group": "История",
+    "groupEn": "History",
     "impliedContext": null
   },
   {
     "slug": "ussr-everyday",
     "name": "Советский быт",
+    "nameEn": "Soviet everyday life",
     "emoji": "🪆",
     "group": "История",
+    "groupEn": "History",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "russia-90s-life",
     "name": "90-е: жизнь и быт",
+    "nameEn": "Russia in the 90s",
     "emoji": "📼",
     "group": "История",
+    "groupEn": "History",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "space",
     "name": "Космос",
+    "nameEn": "Space",
     "emoji": "🚀",
     "group": "Наука и мир",
+    "groupEn": "Science & the world",
     "impliedContext": null
   },
   {
     "slug": "science",
     "name": "Наука и изобретения",
+    "nameEn": "Science & inventions",
     "emoji": "🔬",
     "group": "Наука и мир",
+    "groupEn": "Science & the world",
     "impliedContext": null
   },
   {
     "slug": "geography",
     "name": "География и страны",
+    "nameEn": "Geography & countries",
     "emoji": "🌍",
     "group": "Наука и мир",
+    "groupEn": "Science & the world",
     "impliedContext": null
   },
   {
     "slug": "nature",
     "name": "Животные и природа",
+    "nameEn": "Animals & nature",
     "emoji": "🐾",
     "group": "Наука и мир",
+    "groupEn": "Science & the world",
     "impliedContext": null
   },
   {
     "slug": "russian-literature",
     "name": "Русская литература",
+    "nameEn": "Russian literature",
     "emoji": "📖",
     "group": "Литература и искусство",
+    "groupEn": "Literature & art",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "world-literature",
     "name": "Мировая литература",
+    "nameEn": "World literature",
     "emoji": "📚",
     "group": "Литература и искусство",
+    "groupEn": "Literature & art",
     "impliedContext": null
   },
   {
     "slug": "art",
     "name": "Живопись и искусство",
+    "nameEn": "Painting & art",
     "emoji": "🎨",
     "group": "Литература и искусство",
+    "groupEn": "Literature & art",
     "impliedContext": null
   },
   {
     "slug": "soviet-cinema",
     "name": "Советское кино",
+    "nameEn": "Soviet cinema",
     "emoji": "🎞️",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "world-cinema",
     "name": "Голливуд и мировое кино",
+    "nameEn": "Hollywood & world cinema",
     "emoji": "🎬",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": null
   },
   {
     "slug": "ru-tv-90s-00s",
     "name": "ТВ 90-х и 00-х",
+    "nameEn": "Russian TV of the 90s–00s",
     "emoji": "📺",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "ru-series",
     "name": "Российские сериалы 2000–2010-х",
+    "nameEn": "Russian TV series",
     "emoji": "🛋️",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "world-series",
     "name": "Мировые сериалы",
+    "nameEn": "TV series",
     "emoji": "🍿",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": null
   },
   {
     "slug": "cartoons",
     "name": "Мультфильмы: советские и мировые",
+    "nameEn": "Cartoons & animation",
     "emoji": "🐻",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": null
   },
   {
     "slug": "ads-90s-00s",
     "name": "Реклама 90-х и 00-х",
+    "nameEn": "Russian ads of the 90s–00s",
     "emoji": "📢",
     "group": "Кино и ТВ",
+    "groupEn": "Film & TV",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "ru-pop-90s",
     "name": "Русская поп-музыка 90-х",
+    "nameEn": "Russian pop of the 90s",
     "emoji": "💿",
     "group": "Музыка",
+    "groupEn": "Music",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "ru-pop-00s",
     "name": "Русская поп-музыка 00-х",
+    "nameEn": "Russian pop of the 00s",
     "emoji": "🎤",
     "group": "Музыка",
+    "groupEn": "Music",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "ru-rock",
     "name": "Русский рок",
+    "nameEn": "Russian rock",
     "emoji": "🎸",
     "group": "Музыка",
+    "groupEn": "Music",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "world-pop",
     "name": "Мировая поп-музыка 80–00-х",
+    "nameEn": "Pop music 80s–00s",
     "emoji": "🎧",
     "group": "Музыка",
+    "groupEn": "Music",
     "impliedContext": null
   },
   {
     "slug": "eurovision",
     "name": "Евровидение",
+    "nameEn": "Eurovision",
     "emoji": "🌟",
     "group": "Музыка",
+    "groupEn": "Music",
     "impliedContext": null
   },
   {
     "slug": "music-now",
     "name": "Рэп и современная музыка",
+    "nameEn": "Rap & music now",
     "emoji": "🎙️",
     "group": "Музыка",
+    "groupEn": "Music",
     "impliedContext": null
   },
   {
     "slug": "old-internet",
     "name": "Старый интернет",
+    "nameEn": "The old internet",
     "emoji": "💾",
     "group": "Интернет и игры",
+    "groupEn": "Internet & games",
     "impliedContext": "POST_SOVIET"
   },
   {
     "slug": "internet-now",
     "name": "Мемы и интернет сейчас",
+    "nameEn": "Memes & the internet now",
     "emoji": "📱",
     "group": "Интернет и игры",
+    "groupEn": "Internet & games",
     "impliedContext": null
   },
   {
     "slug": "videogames",
     "name": "Видеоигры",
+    "nameEn": "Video games",
     "emoji": "🎮",
     "group": "Интернет и игры",
+    "groupEn": "Internet & games",
     "impliedContext": null
   },
   {
     "slug": "fandoms",
     "name": "Фэнтези и фандомы",
+    "nameEn": "Fantasy & fandoms",
     "emoji": "🧙",
     "group": "Интернет и игры",
+    "groupEn": "Internet & games",
     "impliedContext": null
   },
   {
     "slug": "food",
     "name": "Еда и кухня",
+    "nameEn": "Food & cuisine",
     "emoji": "🍲",
     "group": "Жизнь",
+    "groupEn": "Life",
     "impliedContext": null
   },
   {
     "slug": "fashion-brands",
     "name": "Мода и бренды",
+    "nameEn": "Fashion & brands",
     "emoji": "👗",
     "group": "Жизнь",
+    "groupEn": "Life",
     "impliedContext": null
   },
   {
     "slug": "celebrities",
     "name": "Знаменитости и светская хроника",
+    "nameEn": "Celebrities",
     "emoji": "📸",
     "group": "Жизнь",
+    "groupEn": "Life",
     "impliedContext": null
   },
   {
     "slug": "football",
     "name": "Футбол",
+    "nameEn": "Football",
     "emoji": "⚽",
     "group": "Жизнь",
+    "groupEn": "Life",
     "impliedContext": null
   },
   {
     "slug": "sports",
     "name": "Олимпиады, F1 и другой спорт",
+    "nameEn": "Olympics, F1 & other sports",
     "emoji": "🏅",
     "group": "Жизнь",
+    "groupEn": "Life",
     "impliedContext": null
+  },
+  {
+    "slug": "british-culture",
+    "name": "Британская культура",
+    "nameEn": "British culture",
+    "emoji": "🇬🇧",
+    "group": "Британия и США",
+    "groupEn": "Britain & the US",
+    "impliedContext": "UK"
+  },
+  {
+    "slug": "american-pop-culture",
+    "name": "Американская поп-культура",
+    "nameEn": "American pop culture",
+    "emoji": "🇺🇸",
+    "group": "Британия и США",
+    "groupEn": "Britain & the US",
+    "impliedContext": "US"
   }
 ];
 

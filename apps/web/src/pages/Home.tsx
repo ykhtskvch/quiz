@@ -1,10 +1,12 @@
 import { useState } from "react";
-import { isRoomCode } from "@quiz/shared";
+import { isRoomCode, LANGUAGES } from "@quiz/shared";
 import { api } from "../api.ts";
 import { navigate } from "../router.ts";
-import { t } from "../strings.ts";
+import { setLanguage, useLanguage, useT } from "../strings.ts";
 
 export function Home() {
+  const t = useT();
+  const lang = useLanguage();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [code, setCode] = useState("");
@@ -13,7 +15,7 @@ export function Home() {
     setBusy(true);
     setError(null);
     try {
-      const room = await api.createRoom();
+      const room = await api.createRoom(lang);
       // The display token rides in the URL fragment: it never reaches the server logs,
       // and the display survives a reload.
       navigate(`/d/${room.roomCode}#t=${room.displayToken}`);
@@ -29,6 +31,17 @@ export function Home() {
     <main className="home">
       <h1>{t.appName}</h1>
       <p className="muted">{t.tagline}</p>
+      <div className="lang-pick" role="radiogroup" aria-label={t.gameLanguage}>
+        <span className="muted small">{t.gameLanguage}</span>
+        <div className="segmented">
+          {LANGUAGES.map((l) => (
+            <button key={l} role="radio" aria-checked={lang === l} className={lang === l ? "on" : ""} onClick={() => setLanguage(l, true)}>
+              {t.languageName[l]}
+            </button>
+          ))}
+        </div>
+        <span className="muted small">{t.languageHint}</span>
+      </div>
       <button className="primary big" onClick={create} disabled={busy}>
         {busy ? t.creating : t.createRoom}
       </button>

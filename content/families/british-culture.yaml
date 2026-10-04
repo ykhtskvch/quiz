@@ -1,0 +1,364 @@
+# EPIC 36 — british-culture (EN-native)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: london
+    name: "London"
+    facts:
+      - id: mind-the-gap
+        statement: "\"Mind the gap\" is the famous safety announcement on the London Underground."
+        sources: [{ name: "Wikipedia: Mind the gap", type: REFERENCE, verified: false }]
+        questions:
+          - id: mind-the-gap-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "On which transport system would you hear \"Mind the gap\"?"
+            options:
+              - { key: A, text: "The Paris Métro", distractor: SAME_CATEGORY }
+              - { key: B, text: "The London Underground", correct: true }
+              - { key: C, text: "The New York Subway", distractor: SAME_CATEGORY }
+              - { key: D, text: "British Rail ferries", distractor: PLAUSIBLE }
+            explanation: "The announcement started on the Tube in 1969."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: big-ben-bell
+        statement: "Big Ben is the name of the great bell; the clock tower has been called the Elizabeth Tower since 2012."
+        sources: [{ name: "Wikipedia: Big Ben", type: REFERENCE, verified: false }]
+        questions:
+          - id: big-ben-bell-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Strictly speaking, what is \"Big Ben\"?"
+            options:
+              - { key: A, text: "The clock tower", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "The great bell", correct: true }
+              - { key: C, text: "The clock face", distractor: NEAR_MISS }
+              - { key: D, text: "The Houses of Parliament", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The tower itself was renamed the Elizabeth Tower in 2012."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: royals
+    name: "The Royal Family"
+    facts:
+      - id: elizabeth-70-years
+        statement: "Queen Elizabeth II reigned for 70 years (1952–2022), the longest of any British monarch."
+        sources: [{ name: "Wikipedia: Elizabeth II", type: REFERENCE, verified: false }]
+        questions:
+          - id: elizabeth-70-years-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "Which British monarch reigned for 70 years?"
+            options:
+              - { key: A, text: "Queen Victoria", distractor: NEAR_MISS }
+              - { key: B, text: "Elizabeth II", correct: true }
+              - { key: C, text: "George III", distractor: SAME_CATEGORY }
+              - { key: D, text: "Henry VIII", distractor: SAME_CATEGORY }
+            explanation: "Victoria held the record before her, with 63 years."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0, GLOBAL: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: british-tv
+    name: "British TV"
+    facts:
+      - id: eastenders-square
+        statement: "EastEnders is set around Albert Square in the fictional Walford."
+        sources: [{ name: "Wikipedia: EastEnders", type: REFERENCE, verified: false }]
+        questions:
+          - id: eastenders-square-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which square is at the heart of EastEnders?"
+            options:
+              - { key: A, text: "Coronation Square", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Albert Square", correct: true }
+              - { key: C, text: "Victoria Square", distractor: SAME_CATEGORY }
+              - { key: D, text: "Trafalgar Square", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Walford is fictional, in London's East End; Coronation Street is a different soap altogether."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tardis-police-box
+        statement: "The TARDIS in Doctor Who looks like a 1960s blue police box."
+        sources: [{ name: "Wikipedia: TARDIS", type: REFERENCE, verified: false }]
+        questions:
+          - id: tardis-police-box-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What does the TARDIS in Doctor Who look like from the outside?"
+            options:
+              - { key: A, text: "A red phone box", distractor: NEAR_MISS }
+              - { key: B, text: "A blue police box", correct: true }
+              - { key: C, text: "A London bus", distractor: SAME_CATEGORY }
+              - { key: D, text: "A post box", distractor: SAME_CATEGORY }
+            explanation: "\"Bigger on the inside\" — the disguise got stuck in 1963."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: del-boy-van
+        statement: "In Only Fools and Horses, the Trotters drive a yellow three-wheeled Reliant Regal van."
+        sources: [{ name: "Wikipedia: Only Fools and Horses", type: REFERENCE, verified: false }]
+        questions:
+          - id: del-boy-van-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What do Del Boy and Rodney drive in Only Fools and Horses?"
+            options:
+              - { key: A, text: "A black cab", distractor: SAME_CATEGORY }
+              - { key: B, text: "A yellow three-wheeled van", correct: true }
+              - { key: C, text: "A Mini Cooper", distractor: SAME_CATEGORY }
+              - { key: D, text: "An ice-cream van", distractor: PLAUSIBLE }
+            explanation: "A Reliant Regal with \"New York – Paris – Peckham\" on the side."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.8 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: blue-peter-badge
+        statement: "The children's programme Blue Peter is famous for awarding its badges."
+        sources: [{ name: "Wikipedia: Blue Peter", type: REFERENCE, verified: false }]
+        questions:
+          - id: blue-peter-badge-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Which children's TV show is famous for giving out badges?"
+            options:
+              - { key: A, text: "Grange Hill", distractor: SAME_CATEGORY }
+              - { key: B, text: "Blue Peter", correct: true }
+              - { key: C, text: "Teletubbies", distractor: SAME_CATEGORY }
+              - { key: D, text: "Newsround", distractor: SAME_CATEGORY }
+            explanation: "It has been on air since 1958 — the longest-running children's TV show in the world."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.6 }
+            difficulty: 3
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: mr-bean-atkinson
+        statement: "Mr. Bean is played by Rowan Atkinson."
+        sources: [{ name: "Wikipedia: Mr. Bean", type: REFERENCE, verified: false }]
+        questions:
+          - id: mr-bean-atkinson-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "Who plays Mr. Bean?"
+            options:
+              - { key: A, text: "Hugh Laurie", distractor: SAME_CATEGORY }
+              - { key: B, text: "Rowan Atkinson", correct: true }
+              - { key: C, text: "John Cleese", distractor: SAME_CATEGORY }
+              - { key: D, text: "Stephen Fry", distractor: SAME_CATEGORY }
+            explanation: "Atkinson also played Blackadder."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0, GLOBAL: 0.8 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bake-off-star-baker
+        statement: "Each week on The Great British Bake Off the best contestant is named Star Baker."
+        sources: [{ name: "Wikipedia: The Great British Bake Off", type: REFERENCE, verified: false }]
+        questions:
+          - id: bake-off-star-baker-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What title goes to the best contestant each week on The Great British Bake Off?"
+            options:
+              - { key: A, text: "Master Baker", distractor: NEAR_MISS }
+              - { key: B, text: "Star Baker", correct: true }
+              - { key: C, text: "Golden Whisk", distractor: PLAUSIBLE }
+              - { key: D, text: "Champion of the Tent", distractor: PLAUSIBLE }
+            explanation: "The rarest prize is a Hollywood handshake."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: wallace-wensleydale
+        statement: "Wallace of Wallace & Gromit is famously fond of Wensleydale cheese."
+        sources: [{ name: "Wikipedia: Wallace & Gromit", type: REFERENCE, verified: false }]
+        questions:
+          - id: wallace-wensleydale-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which cheese is Wallace, of Wallace & Gromit, famously fond of?"
+            options:
+              - { key: A, text: "Cheddar", distractor: SAME_CATEGORY }
+              - { key: B, text: "Wensleydale", correct: true }
+              - { key: C, text: "Stilton", distractor: SAME_CATEGORY }
+              - { key: D, text: "Red Leicester", distractor: SAME_CATEGORY }
+            explanation: "The films gave a real boost to sales of Wensleydale."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: british-life
+    name: "British life"
+    facts:
+      - id: bonfire-night
+        statement: "Bonfire Night on 5 November commemorates the failed Gunpowder Plot of Guy Fawkes in 1605."
+        sources: [{ name: "Wikipedia: Guy Fawkes Night", type: REFERENCE, verified: false }]
+        questions:
+          - id: bonfire-night-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Whose failed plot is remembered on Bonfire Night, 5 November?"
+            options:
+              - { key: A, text: "Oliver Cromwell", distractor: SAME_CATEGORY }
+              - { key: B, text: "Guy Fawkes", correct: true }
+              - { key: C, text: "Robin Hood", distractor: PLAUSIBLE }
+              - { key: D, text: "Richard III", distractor: SAME_CATEGORY }
+            explanation: "The Gunpowder Plot of 1605 tried to blow up Parliament."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: mushy-peas
+        statement: "Mushy peas are a classic side for fish and chips."
+        sources: [{ name: "Wikipedia: Mushy peas", type: REFERENCE, verified: false }]
+        questions:
+          - id: mushy-peas-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which green side dish traditionally comes with fish and chips?"
+            options:
+              - { key: A, text: "Mushy peas", correct: true }
+              - { key: B, text: "Brussels sprouts", distractor: PLAUSIBLE }
+              - { key: C, text: "Spinach", distractor: PLAUSIBLE }
+              - { key: D, text: "Broad beans", distractor: SAME_CATEGORY }
+            explanation: "Made from dried marrowfat peas."
+            topics: { british-culture: 1.0, food: 0.5 }
+            contexts: { UK: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: quid
+        statement: "\"Quid\" is slang for one pound sterling."
+        sources: [{ name: "Wikipedia: Quid", type: REFERENCE, verified: false }]
+        questions:
+          - id: quid-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In British slang, what is a \"quid\"?"
+            options:
+              - { key: A, text: "A penny", distractor: SAME_CATEGORY }
+              - { key: B, text: "One pound", correct: true }
+              - { key: C, text: "Five pounds", distractor: NEAR_MISS }
+              - { key: D, text: "A pint", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "A fiver is five pounds, a tenner ten."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: apples-and-pears
+        statement: "In Cockney rhyming slang, \"apples and pears\" means stairs."
+        sources: [{ name: "Wikipedia: Cockney rhyming slang", type: REFERENCE, verified: false }]
+        questions:
+          - id: apples-and-pears-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In Cockney rhyming slang, what are \"apples and pears\"?"
+            options:
+              - { key: A, text: "Stairs", correct: true }
+              - { key: B, text: "Pears", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Prayers", distractor: NEAR_MISS }
+              - { key: D, text: "Chairs", distractor: NEAR_MISS }
+            explanation: "The rhyming word gets dropped: \"up the apples\" means upstairs."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: stonehenge-wiltshire
+        statement: "Stonehenge is in Wiltshire."
+        sources: [{ name: "Wikipedia: Stonehenge", type: REFERENCE, verified: false }]
+        questions:
+          - id: stonehenge-wiltshire-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In which English county is Stonehenge?"
+            options:
+              - { key: A, text: "Cornwall", distractor: SAME_CATEGORY }
+              - { key: B, text: "Wiltshire", correct: true }
+              - { key: C, text: "Somerset", distractor: NEAR_MISS }
+              - { key: D, text: "Kent", distractor: SAME_CATEGORY }
+            explanation: "On Salisbury Plain; the stones were raised around 2500 BC."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI

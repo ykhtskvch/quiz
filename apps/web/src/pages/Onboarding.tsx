@@ -12,12 +12,11 @@ import {
   type OnboardingInput,
 } from "@quiz/shared";
 import { api } from "../api.ts";
-import { t } from "../strings.ts";
+import { useLanguage, useT } from "../strings.ts";
 
 type Step = "age" | "topics" | "depth" | "less" | "background" | "dignity";
 const STEPS: Step[] = ["age", "topics", "depth", "less", "background", "dignity"];
 
-const groups = [...new Set(TOPICS.map((x) => x.group))];
 const topicBySlug = new Map(TOPICS.map((x) => [x.slug, x]));
 
 export function Onboarding({
@@ -26,6 +25,7 @@ export function Onboarding({
   initial,
   onDone,
   onCancel,
+  availableTopics,
 }: {
   code: string;
   token: string;
@@ -33,11 +33,26 @@ export function Onboarding({
   onDone: (submitted: OnboardingInput) => void;
   /** Present when editing existing preferences between games. */
   onCancel?: () => void;
+  /** Topics that have questions in the room language; null while loading or unknown (show all). */
+  availableTopics?: string[] | null;
 }) {
+  const t = useT();
+  const lang = useLanguage();
+  const offered = useMemo(
+    () => (availableTopics && availableTopics.length ? TOPICS.filter((x) => availableTopics.includes(x.slug)) : TOPICS),
+    [availableTopics],
+  );
+  const name = (slug: string) => {
+    const x = topicBySlug.get(slug)!;
+    return lang === "en" ? x.nameEn : x.name;
+  };
   const [step, setStep] = useState<Step>("age");
   const [ageBand, setAgeBand] = useState<AgeBand | null>(initial?.ageBand ?? null);
   const [liked, setLiked] = useState<Map<string, Depth>>(
-    () => new Map(initial?.topics.flatMap((x) => (x.preference === "LIKE" ? [[x.slug, x.depth] as const] : [])) ?? []),
+    () =>
+      new Map(
+        initial?.topics.flatMap((x) => (x.preference === "LIKE" && topicBySlug.has(x.slug) ? [[x.slug, x.depth] as const] : [])) ?? [],
+      ),
   );
   const [less, setLess] = useState<Set<string>>(() => new Set(initial?.topics.filter((x) => x.preference === "LESS_OF").map((x) => x.slug)));
   const [backgrounds, setBackgrounds] = useState<Set<BackgroundContext>>(() => new Set(initial?.backgrounds ?? []));
@@ -125,6 +140,7 @@ export function Onboarding({
           <h2>{t.topicsTitle}</h2>
           <p className="muted small">{t.topicsHint(MAX_LIKED_TOPICS)}</p>
           <TopicGrid
+            topics={offered}
             selected={new Set(liked.keys())}
             onToggle={(slug) => {
               const copy = new Map(liked);
@@ -146,7 +162,7 @@ export function Onboarding({
               return (
                 <li key={slug}>
                   <span className="depth-topic">
-                    {topic.emoji} {topic.name}
+                    {topic.emoji} {name(slug)}
                   </span>
                   <div className="segmented">
                     {(["CASUAL", "INTERESTED", "EXPERT"] as Depth[]).map((d) => (
@@ -167,7 +183,7 @@ export function Onboarding({
         <>
           <h2>{t.lessTitle}</h2>
           <p className="muted small">{t.lessHint}</p>
-          <TopicGrid selected={less} exclude={new Set(liked.keys())} variant="less" onToggle={(slug) => setLess(toggle(less, slug))} />
+          <TopicGrid topics={offered} selected={less} exclude={new Set(liked.keys())} variant="less" onToggle={(slug) => setLess(toggle(less, slug))} />
           <StickyNext onClick={next} label={less.size ? t.next : t.skipStep} />
         </>
       )}
@@ -211,25 +227,31 @@ export function Onboarding({
 }
 
 function TopicGrid({
+  topics: all,
   selected,
   exclude,
   onToggle,
   variant = "like",
 }: {
+  topics: typeof TOPICS;
   selected: Set<string>;
   exclude?: Set<string>;
   onToggle: (slug: string) => void;
   variant?: "like" | "less";
 }) {
+  const lang = useLanguage();
   const byGroup = useMemo(
-    () => groups.map((g) => ({ group: g, topics: TOPICS.filter((x) => x.group === g && !exclude?.has(x.slug)) })).filter((g) => g.topics.length),
-    [exclude],
+    () =>
+      [...new Set(all.map((x) => x.group))]
+        .map((g) => ({ group: g, topics: all.filter((x) => x.group === g && !exclude?.has(x.slug)) }))
+        .filter((g) => g.topics.length),
+    [all, exclude],
   );
   return (
     <div className="topic-groups">
       {byGroup.map(({ group, topics }) => (
         <div key={group}>
-          <h3 className="group-title">{group}</h3>
+          <h3 className="group-title">{lang === "en" ? topics[0].groupEn : group}</h3>
           <div className="topic-grid">
             {topics.map((x) => (
               <button
@@ -241,7 +263,7 @@ function TopicGrid({
                 <span className="emoji" aria-hidden>
                   {x.emoji}
                 </span>
-                <span>{x.name}</span>
+                <span>{lang === "en" ? x.nameEn : x.name}</span>
               </button>
             ))}
           </div>

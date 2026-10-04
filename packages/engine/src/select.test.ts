@@ -3,7 +3,7 @@ import { primaryTopic, type BankQuestion, type OnboardingInput } from "@quiz/sha
 import { DEFAULT_ENGINE_CONFIG, type EngineConfig } from "./config.ts";
 import { aggregateProfile, playerProfile, type GroupProfile } from "./profile.ts";
 import { seededRng } from "./rng.ts";
-import { emptyCompositionState, nextQuestion, registerLateJoin, type CompositionState } from "./select.ts";
+import { availableTopics, emptyCompositionState, nextQuestion, registerLateJoin, type CompositionState } from "./select.ts";
 
 const TOPIC_SPECS: { slug: string; dignity: number; local?: boolean }[] = [
   { slug: "space", dignity: 5 },
@@ -123,6 +123,15 @@ describe("eligibility", () => {
   it("returns null when the bank is exhausted", () => {
     const bank = makeBank().slice(0, 3);
     expect(run(fourExperts(), 10, { bank }).picks).toHaveLength(3);
+  });
+});
+
+describe("availableTopics", () => {
+  it("offers only topics with enough questions in the room language", () => {
+    const bank = makeBank().map((q) => (q.topics.space ? { ...q, language: "en" as const } : q));
+    expect(availableTopics(bank, { ...DEFAULT_ENGINE_CONFIG, language: "en" })).toEqual(["space"]);
+    expect(availableTopics(bank, { ...DEFAULT_ENGINE_CONFIG, language: "ru" })).not.toContain("space");
+    expect(availableTopics(bank, { ...DEFAULT_ENGINE_CONFIG, language: "en", allowDrafts: false })).toEqual([]);
   });
 });
 

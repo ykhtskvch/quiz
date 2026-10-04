@@ -7,7 +7,7 @@ families:
     facts:
       - id: titanic-jack
         statement: "Героя Леонардо Ди Каприо в «Титанике» зовут Джек Доусон."
-        sources: [{ name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false } ]
         questions:
           - id: titanic-jack-ru-1
             language: ru
@@ -28,10 +28,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: titanic-jack-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the name of Leonardo DiCaprio's character in Titanic?
+            options:
+              - { key: A, text: Cal Hockley, distractor: SAME_CATEGORY }
+              - { key: B, text: Jack Dawson, correct: true }
+              - { key: C, text: Jay Gatsby, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Frank Abagnale, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Cal is Rose's fiancé; Gatsby and Abagnale are other DiCaprio roles.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 0.8, 00s: 0.5 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: titanic-oscars
         statement: "«Титаник» получил 11 «Оскаров» из 14 номинаций."
-        sources: [{ name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false } ]
         questions:
           - id: titanic-oscars-ru-1
             language: ru
@@ -52,13 +73,34 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: titanic-oscars-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many Oscars did Titanic win?
+            options:
+              - { key: A, text: "7", distractor: PLAUSIBLE }
+              - { key: B, text: "9", distractor: PLAUSIBLE }
+              - { key: C, text: "11", correct: true }
+              - { key: D, text: "14", distractor: NEAR_MISS }
+            explanation: It had 14 nominations; 11 wins is a record it shares with Ben-Hur and The Return of the King.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 0.8, 00s: 0.5 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: matrix
     name: "«Матрица»"
     facts:
       - id: matrix-red-pill
         statement: "В «Матрице» Нео выбирает красную таблетку."
-        sources: [{ name: "Википедия: Матрица (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Матрица (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: matrix-red-pill-ru-1
             language: ru
@@ -79,13 +121,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: matrix-red-pill-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which pill does Neo take in The Matrix?
+            options:
+              - { key: A, text: The blue pill, distractor: NEAR_MISS }
+              - { key: B, text: The red pill, correct: true }
+              - { key: C, text: The green pill, distractor: PLAUSIBLE }
+              - { key: D, text: The white pill, distractor: PLAUSIBLE }
+            explanation: Blue means staying in the illusion; red means seeing how deep the rabbit hole goes.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1, 00s: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: godfather
     name: "«Крёстный отец»"
     facts:
       - id: godfather-brando
         statement: "Вито Корлеоне в первом «Крёстном отце» (1972) сыграл Марлон Брандо."
-        sources: [{ name: "Википедия: Крёстный отец", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Крёстный отец", type: REFERENCE, verified: false } ]
         questions:
           - id: godfather-brando-ru-1
             language: ru
@@ -106,13 +169,34 @@ families:
             effects: { I_KNOW_THIS: 0.7, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: godfather-brando-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who played Vito Corleone in the first Godfather film?
+            options:
+              - { key: A, text: Al Pacino, distractor: NEAR_MISS }
+              - { key: B, text: Marlon Brando, correct: true }
+              - { key: C, text: Robert De Niro, distractor: NEAR_MISS }
+              - { key: D, text: Jack Nicholson, distractor: SAME_CATEGORY }
+            explanation: Al Pacino played his son Michael; De Niro played the young Vito in Part II.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: star-wars
     name: "«Звёздные войны»"
     facts:
       - id: i-am-your-father
         statement: "«Я твой отец» Дарт Вейдер говорит Люку Скайуокеру в «Империи наносит ответный удар»."
-        sources: [{ name: "Википедия: Звёздные войны. Эпизод V: Империя наносит ответный удар", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Звёздные войны. Эпизод V: Империя наносит ответный удар", type: REFERENCE, verified: false } ]
         questions:
           - id: i-am-your-father-ru-1
             language: ru
@@ -134,13 +218,35 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: i-am-your-father-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: Who does Darth Vader tell "I am your father"?
+            options:
+              - { key: A, text: Han Solo, distractor: SAME_CATEGORY }
+              - { key: B, text: Luke Skywalker, correct: true }
+              - { key: C, text: Princess Leia, distractor: NEAR_MISS }
+              - { key: D, text: Obi-Wan Kenobi, distractor: SAME_CATEGORY }
+            explanation: Leia is his daughter too, but the famous reveal is to Luke.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 00s: 0.6, 10s: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: back-to-future
     name: "«Назад в будущее»"
     facts:
       - id: delorean-88
         statement: "Машину времени DeLorean в «Назад в будущее» нужно было разогнать до 88 миль в час."
-        sources: [{ name: "Википедия: Назад в будущее", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Назад в будущее", type: REFERENCE, verified: false } ]
         questions:
           - id: delorean-88-ru-1
             language: ru
@@ -161,13 +267,34 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: delorean-88-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How fast did the DeLorean have to go to travel through time?
+            options:
+              - { key: A, text: 100 mph, distractor: PLAUSIBLE }
+              - { key: B, text: 88 mph, correct: true }
+              - { key: C, text: 77 mph, distractor: PLAUSIBLE }
+              - { key: D, text: 121 mph, distractor: CONTEXTUAL_CONFUSION }
+            explanation: It also needed 1.21 gigawatts — hence the 121.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 1, 90s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: directors
     name: "Режиссёры"
     facts:
       - id: psycho-hitchcock
         statement: "Фильм «Психо» (1960) снял Альфред Хичкок."
-        sources: [{ name: "Википедия: Психо (фильм, 1960)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Психо (фильм, 1960)", type: REFERENCE, verified: false } ]
         questions:
           - id: psycho-hitchcock-ru-1
             language: ru
@@ -187,10 +314,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: psycho-hitchcock-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who directed Psycho?
+            options:
+              - { key: A, text: Stanley Kubrick, distractor: SAME_CATEGORY }
+              - { key: B, text: Alfred Hitchcock, correct: true }
+              - { key: C, text: Steven Spielberg, distractor: SAME_CATEGORY }
+              - { key: D, text: Francis Ford Coppola, distractor: SAME_CATEGORY }
+            explanation: The shower scene is one of the most famous in film history.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: jaws-spielberg
         statement: "«Челюсти» (1975) снял Стивен Спилберг."
-        sources: [{ name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: jaws-spielberg-ru-1
             language: ru
@@ -211,10 +358,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: jaws-spielberg-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who directed Jaws?
+            options:
+              - { key: A, text: George Lucas, distractor: NEAR_MISS }
+              - { key: B, text: Steven Spielberg, correct: true }
+              - { key: C, text: James Cameron, distractor: SAME_CATEGORY }
+              - { key: D, text: Ridley Scott, distractor: SAME_CATEGORY }
+            explanation: Lucas and Spielberg were friends; Jaws is often called the first summer blockbuster.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: seven-samurai-remake
         statement: "Вестерн «Великолепная семёрка» (1960) — ремейк «Семи самураев» Акиры Куросавы."
-        sources: [{ name: "Википедия: Великолепная семёрка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Великолепная семёрка", type: REFERENCE, verified: false } ]
         questions:
           - id: seven-samurai-remake-ru-1
             language: ru
@@ -234,13 +402,33 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.8, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: seven-samurai-remake-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which western is a remake of Kurosawa's Seven Samurai?
+            options:
+              - { key: A, text: "The Good, the Bad and the Ugly", distractor: SAME_CATEGORY }
+              - { key: B, text: The Magnificent Seven, correct: true }
+              - { key: C, text: High Noon, distractor: SAME_CATEGORY }
+              - { key: D, text: Stagecoach, distractor: SAME_CATEGORY }
+            explanation: The number seven is a hint for anyone who doesn't remember.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: quotes
     name: "Цитаты из кино"
     facts:
       - id: forrest-chocolates
         statement: "Форрест Гамп сравнивает жизнь с коробкой шоколадных конфет."
-        sources: [{ name: "Википедия: Форрест Гамп", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Форрест Гамп", type: REFERENCE, verified: false } ]
         questions:
           - id: forrest-chocolates-ru-1
             language: ru
@@ -261,10 +449,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: forrest-chocolates-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What does Forrest Gump compare life to?
+            options:
+              - { key: A, text: A box of chocolates, correct: true }
+              - { key: B, text: A long run, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: A game of ping-pong, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: A feather in the wind, distractor: CONTEXTUAL_CONFUSION }
+            explanation: "\"You never know what you're gonna get.\" The running, ping-pong and feather are all in the film too."
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: terminator-be-back
         statement: "Фразу «I'll be back» Терминатор произносит в первом фильме (1984), перед тем как въехать на машине в полицейский участок."
-        sources: [{ name: "Википедия: Терминатор (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Терминатор (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: terminator-be-back-ru-1
             language: ru
@@ -285,10 +494,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: terminator-be-back-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What does the Terminator say in the first film before driving a car into the police station?
+            options:
+              - { key: A, text: '"Hasta la vista, baby"', distractor: NEAR_MISS }
+              - { key: B, text: "\"I'll be back\"", correct: true }
+              - { key: C, text: '"Come with me if you want to live"', distractor: NEAR_MISS }
+              - { key: D, text: "\"Here's Johnny!\"", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "\"Hasta la vista, baby\" is from the sequel; \"Here's Johnny!\" is from The Shining."
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.8, 90s: 0.8 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: scarlett-tomorrow
         statement: "«Я подумаю об этом завтра» — фраза Скарлетт О'Хара из «Унесённых ветром»."
-        sources: [{ name: "Википедия: Унесённые ветром (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Унесённые ветром (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: scarlett-tomorrow-ru-1
             language: ru
@@ -308,13 +538,33 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: scarlett-tomorrow-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Whose line is "I'll think about that tomorrow"?
+            options:
+              - { key: A, text: Holly Golightly, distractor: SAME_CATEGORY }
+              - { key: B, text: Scarlett O'Hara, correct: true }
+              - { key: C, text: Jane Eyre, distractor: SAME_CATEGORY }
+              - { key: D, text: Anna Karenina, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Gone with the Wind (1939), from Margaret Mitchell's novel — "after all, tomorrow is another day."
+            topics: { world-cinema: 1, world-literature: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: details
     name: "Детали знаменитых фильмов"
     facts:
       - id: schindler-red-coat
         statement: "В чёрно-белом «Списке Шиндлера» единственное цветное пятно — красное пальто девочки."
-        sources: [{ name: "Википедия: Список Шиндлера", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Список Шиндлера", type: REFERENCE, verified: false } ]
         questions:
           - id: schindler-red-coat-ru-1
             language: ru
@@ -335,10 +585,31 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: schindler-red-coat-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In black-and-white Schindler's List, what colour is the little girl's coat?
+            options:
+              - { key: A, text: Blue, distractor: PLAUSIBLE }
+              - { key: B, text: Red, correct: true }
+              - { key: C, text: Yellow, distractor: PLAUSIBLE }
+              - { key: D, text: Green, distractor: PLAUSIBLE }
+            explanation: One of Spielberg's best-known touches.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: amelie-montmartre
         statement: "Амели из фильма «Амели» (2001) живёт и работает на Монмартре."
-        sources: [{ name: "Википедия: Амели", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Амели", type: REFERENCE, verified: false } ]
         questions:
           - id: amelie-montmartre-ru-1
             language: ru
@@ -362,7 +633,7 @@ families:
 
       - id: fifth-element-leeloo
         statement: "Лилу в «Пятом элементе» (1997) сыграла Милла Йовович."
-        sources: [{ name: "Википедия: Пятый элемент (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пятый элемент (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: fifth-element-leeloo-ru-1
             language: ru
@@ -384,3 +655,25 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: fifth-element-leeloo-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: Who played Leeloo in The Fifth Element?
+            options:
+              - { key: A, text: Uma Thurman, distractor: SAME_CATEGORY }
+              - { key: B, text: Milla Jovovich, correct: true }
+              - { key: C, text: Natalie Portman, distractor: SAME_CATEGORY }
+              - { key: D, text: Cate Blanchett, distractor: SAME_CATEGORY }
+            explanation: Milla Jovovich was born in Kyiv and moved to the US with her family as a child.
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.3 }
+            generations: { 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

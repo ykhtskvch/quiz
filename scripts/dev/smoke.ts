@@ -73,7 +73,9 @@ const check = (cond: boolean, msg: string) => {
 };
 
 const playedBefore = checkDb ? await d1Count("SELECT COALESCE(SUM(times_played),0) FROM question_stats") : 0;
-const created = await api<{ roomCode: string; displayToken: string }>("/rooms");
+const LANG = process.argv.includes("--en") ? "en" : "ru";
+const created = await api<{ roomCode: string; displayToken: string; language: string }>("/rooms", { body: { language: LANG } });
+check(created.body.language === LANG, `room language is ${LANG}`);
 check(created.status === 201 && /^[A-Z2-9]{6}$/.test(created.body.roomCode), `room created: ${created.body.roomCode}`);
 const code = created.body.roomCode;
 
@@ -124,6 +126,8 @@ check(started.status === 200, "host starts the game");
 // ---- question 1: presentation → answering → all answered → reveal ----
 const presented = await display.waitFor("QUESTION_PRESENTED");
 check(presented.payload.question.options === null, "options are hidden while the question is being read");
+const cyrillic = /[А-Яа-яЁё]/.test(presented.payload.question.text);
+check(LANG === "en" ? !cyrillic : cyrillic, `question is in ${LANG}: «${presented.payload.question.text.slice(0, 60)}…»`);
 const early = await api(`/rooms/${code}/answers`, { token: anna.playerToken, body: { optionKey: "B" } });
 check(early.status === 409, "answers are rejected during the presentation phase");
 

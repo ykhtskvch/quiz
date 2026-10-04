@@ -1,8 +1,10 @@
 export type TaxonomyTopic = {
   slug: string;
   name: string;
+  nameEn: string;
   emoji: string;
   group: string;
+  groupEn: string;
   /** Used to infer a player's cultural background when they skip that step (D-01). */
   impliedContext: string | null;
 };

@@ -7,7 +7,7 @@ families:
     facts:
       - id: olympic-rings
         statement: "Олимпийских колец пять — по числу обитаемых континентов."
-        sources: [{ name: "Википедия: Олимпийские символы", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Олимпийские символы", type: REFERENCE, verified: false } ]
         questions:
           - id: olympic-rings-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: olympic-rings-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many rings are on the Olympic flag?
+            options:
+              - { key: A, text: Four, distractor: PLAUSIBLE }
+              - { key: B, text: Five, correct: true }
+              - { key: C, text: Six, distractor: PLAUSIBLE }
+              - { key: D, text: Seven, distractor: PLAUSIBLE }
+            explanation: The symbol was designed by Pierre de Coubertin.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: grand-slam-four
         statement: "Большой шлем в теннисе — четыре турнира: Australian Open, Ролан Гаррос, Уимблдон и US Open."
-        sources: [{ name: "Википедия: Большой шлем (теннис)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Большой шлем (теннис)", type: REFERENCE, verified: false } ]
         questions:
           - id: grand-slam-four-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: grand-slam-four-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many tournaments make up tennis's Grand Slam?
+            options:
+              - { key: A, text: Three, distractor: PLAUSIBLE }
+              - { key: B, text: Four, correct: true }
+              - { key: C, text: Five, distractor: PLAUSIBLE }
+              - { key: D, text: Six, distractor: PLAUSIBLE }
+            explanation: The Australian Open, Roland Garros, Wimbledon and the US Open.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: marathon-distance
         statement: "Марафонская дистанция — 42 км 195 м."
-        sources: [{ name: "Википедия: Марафон", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Марафон", type: REFERENCE, verified: false } ]
         questions:
           - id: marathon-distance-ru-1
             language: ru
@@ -73,10 +113,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: marathon-distance-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How long is a marathon?
+            options:
+              - { key: A, text: 21.1 km, distractor: NEAR_MISS }
+              - { key: B, text: 42.195 km, correct: true }
+              - { key: C, text: 50 km, distractor: PLAUSIBLE }
+              - { key: D, text: Exactly 40 km, distractor: PLAUSIBLE }
+            explanation: 21.1 km is a half marathon; 42.195 km is 26.2 miles.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: chess-stalemate
         statement: "Пат в шахматах — положение, когда у стороны нет ходов, но её король не под шахом; это ничья."
-        sources: [{ name: "Википедия: Пат (шахматы)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пат (шахматы)", type: REFERENCE, verified: false } ]
         questions:
           - id: chess-stalemate-ru-1
             language: ru
@@ -96,10 +156,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: chess-stalemate-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In chess, what is it called when a player has no legal move but is not in check?
+            options:
+              - { key: A, text: Checkmate, distractor: NEAR_MISS }
+              - { key: B, text: Stalemate, correct: true }
+              - { key: C, text: Zugzwang, distractor: NEAR_MISS }
+              - { key: D, text: Castling, distractor: SAME_CATEGORY }
+            explanation: It's a draw. Zugzwang is when you can move, but every move makes things worse.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: schumacher-titles
         statement: "Михаэль Шумахер — семикратный чемпион мира «Формулы-1»."
-        sources: [{ name: "Википедия: Шумахер, Михаэль", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Шумахер, Михаэль", type: REFERENCE, verified: false } ]
         questions:
           - id: schumacher-titles-ru-1
             language: ru
@@ -120,11 +200,33 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Рекорд по титулам может измениться — перепроверить на дату ревью."]
+            review_notes: [ "AI doubt: Рекорд по титулам может измениться — перепроверить на дату ревью." ]
+          - id: schumacher-titles-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many Formula 1 world championships did Michael Schumacher win?
+            options:
+              - { key: A, text: Five, distractor: PLAUSIBLE }
+              - { key: B, text: Seven, correct: true }
+              - { key: C, text: Nine, distractor: PLAUSIBLE }
+              - { key: D, text: Four, distractor: PLAUSIBLE }
+            explanation: Lewis Hamilton has the same number.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 0.6, 00s: 1 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Рекорд по титулам может измениться — перепроверить на дату ревью."
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: jordan-bulls
         statement: "Майкл Джордан шесть раз выигрывал чемпионат НБА с «Чикаго Буллз»."
-        sources: [{ name: "Википедия: Джордан, Майкл", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Джордан, Майкл", type: REFERENCE, verified: false } ]
         questions:
           - id: jordan-bulls-ru-1
             language: ru
@@ -145,3 +247,24 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: jordan-bulls-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: With which team did Michael Jordan win all of his NBA titles?
+            options:
+              - { key: A, text: Los Angeles Lakers, distractor: SAME_CATEGORY }
+              - { key: B, text: Chicago Bulls, correct: true }
+              - { key: C, text: Boston Celtics, distractor: SAME_CATEGORY }
+              - { key: D, text: Washington Wizards, distractor: NEAR_MISS }
+            explanation: He finished his career in Washington, without a title.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

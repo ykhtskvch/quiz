@@ -7,7 +7,7 @@ families:
     facts:
       - id: gold-symbol
         statement: "Химический символ золота — Au (от лат. aurum)."
-        sources: [{ name: "Википедия: Золото", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Золото", type: REFERENCE, verified: false } ]
         questions:
           - id: gold-symbol-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: gold-symbol-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the chemical symbol for gold?
+            options:
+              - { key: A, text: Ag, distractor: NEAR_MISS }
+              - { key: B, text: Au, correct: true }
+              - { key: C, text: Go, distractor: PLAUSIBLE }
+              - { key: D, text: Gd, distractor: SAME_CATEGORY }
+            explanation: Ag is silver (argentum), Gd is gadolinium.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: air-nitrogen
         statement: "Больше всего в атмосфере Земли азота — около 78 %."
-        sources: [{ name: "Википедия: Атмосфера Земли", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Атмосфера Земли", type: REFERENCE, verified: false } ]
         questions:
           - id: air-nitrogen-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { I_KNOW_THIS: 0.5, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: air-nitrogen-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which gas makes up most of Earth's atmosphere?
+            options:
+              - { key: A, text: Oxygen, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Nitrogen, correct: true }
+              - { key: C, text: Carbon dioxide, distractor: PLAUSIBLE }
+              - { key: D, text: Argon, distractor: SAME_CATEGORY }
+            explanation: Nitrogen is about 78%, oxygen about 21%, argon under 1%.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.5, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: diamond-hardest
         statement: "Алмаз — самый твёрдый природный минерал."
-        sources: [{ name: "Википедия: Алмаз", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Алмаз", type: REFERENCE, verified: false } ]
         questions:
           - id: diamond-hardest-ru-1
             language: ru
@@ -73,13 +113,33 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: diamond-hardest-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the hardest natural mineral?
+            options:
+              - { key: A, text: Quartz, distractor: SAME_CATEGORY }
+              - { key: B, text: Diamond, correct: true }
+              - { key: C, text: Granite, distractor: PLAUSIBLE }
+              - { key: D, text: Corundum, distractor: NEAR_MISS }
+            explanation: Corundum (ruby and sapphire) is second.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: biology
     name: "Биология и медицина"
     facts:
       - id: bones-206
         statement: "В скелете взрослого человека 206 костей."
-        sources: [{ name: "Википедия: Скелет человека", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Скелет человека", type: REFERENCE, verified: false } ]
         questions:
           - id: bones-206-ru-1
             language: ru
@@ -99,10 +159,30 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: bones-206-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many bones are in the adult human skeleton?
+            options:
+              - { key: A, text: "106", distractor: PLAUSIBLE }
+              - { key: B, text: "206", correct: true }
+              - { key: C, text: "306", distractor: PLAUSIBLE }
+              - { key: D, text: "412", distractor: PLAUSIBLE }
+            explanation: Newborns have around 270; some fuse as we grow.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: penicillin-fleming
         statement: "Пенициллин открыл Александр Флеминг в 1928 году."
-        sources: [{ name: "Википедия: Пенициллин", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пенициллин", type: REFERENCE, verified: false } ]
         questions:
           - id: penicillin-fleming-ru-1
             language: ru
@@ -122,10 +202,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: penicillin-fleming-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who discovered penicillin?
+            options:
+              - { key: A, text: Louis Pasteur, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Alexander Fleming, correct: true }
+              - { key: C, text: Robert Koch, distractor: SAME_CATEGORY }
+              - { key: D, text: Ilya Mechnikov, distractor: SAME_CATEGORY }
+            explanation: Fleming noticed that mould had killed the bacteria in a forgotten Petri dish.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: dna-watson-crick
         statement: "Структуру ДНК — двойную спираль — описали Джеймс Уотсон и Фрэнсис Крик в 1953 году."
-        sources: [{ name: "Википедия: Дезоксирибонуклеиновая кислота", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Дезоксирибонуклеиновая кислота", type: REFERENCE, verified: false } ]
         questions:
           - id: dna-watson-crick-ru-1
             language: ru
@@ -145,13 +245,33 @@ families:
             effects: { I_KNOW_THIS: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: dna-watson-crick-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who described the double helix structure of DNA?
+            options:
+              - { key: A, text: Marie and Pierre Curie, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Watson and Crick, correct: true }
+              - { key: C, text: Mendel and Darwin, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Pasteur and Koch, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Rosalind Franklin's X-ray images played a key role.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: physics
     name: "Физика"
     facts:
       - id: light-speed
         statement: "Скорость света в вакууме — около 300 000 км/с."
-        sources: [{ name: "Википедия: Скорость света", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Скорость света", type: REFERENCE, verified: false } ]
         questions:
           - id: light-speed-ru-1
             language: ru
@@ -171,10 +291,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: light-speed-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Roughly how fast does light travel?
+            options:
+              - { key: A, text: 300 km per second, distractor: PLAUSIBLE }
+              - { key: B, text: "300,000 km per second", correct: true }
+              - { key: C, text: 3 million km per second, distractor: PLAUSIBLE }
+              - { key: D, text: "30,000 km per second", distractor: PLAUSIBLE }
+            explanation: Exactly 299,792,458 metres per second.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: newton-gravity
         statement: "Закон всемирного тяготения и законы движения сформулировал Исаак Ньютон."
-        sources: [{ name: "Википедия: Ньютон, Исаак", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ньютон, Исаак", type: REFERENCE, verified: false } ]
         questions:
           - id: newton-gravity-ru-1
             language: ru
@@ -194,3 +334,23 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: newton-gravity-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who formulated the law of universal gravitation?
+            options:
+              - { key: A, text: Galileo Galilei, distractor: NEAR_MISS }
+              - { key: B, text: Isaac Newton, correct: true }
+              - { key: C, text: Albert Einstein, distractor: SAME_CATEGORY }
+              - { key: D, text: Johannes Kepler, distractor: NEAR_MISS }
+            explanation: The apple falling on his head is most likely an embellishment.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

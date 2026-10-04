@@ -318,6 +318,21 @@ export function nextQuestion(input: SelectionInput): Selection | null {
   };
 }
 
+/**
+ * Topics worth offering in onboarding for a room language: at least `min` usable questions
+ * where the topic carries real weight. Picking a topic with no content would only disappoint.
+ */
+export function availableTopics(bank: BankQuestion[], config: EngineConfig, min = 3): string[] {
+  const counts = new Map<string, number>();
+  for (const q of bank) {
+    if (q.language !== config.language) continue;
+    if (!config.allowDrafts && q.status !== "APPROVED" && q.status !== "GOLD") continue;
+    if (!config.allowExplicit && q.ageSafety === "EXPLICIT_18") continue;
+    for (const [slug, w] of Object.entries(q.topics)) if (w >= 0.5) counts.set(slug, (counts.get(slug) ?? 0) + 1);
+  }
+  return [...counts].filter(([, n]) => n >= min).map(([slug]) => slug).sort();
+}
+
 /** Late joiners get a fresh hero_need but a delayed boost (D-14). */
 export function registerLateJoin(state: CompositionState, playerId: string): CompositionState {
   return { ...state, joinedAtIndex: { ...state.joinedAtIndex, [playerId]: state.history.length } };

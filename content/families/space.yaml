@@ -7,7 +7,7 @@ families:
     facts:
       - id: gagarin-spacecraft
         statement: "Юрий Гагарин совершил первый полёт человека в космос 12 апреля 1961 года на корабле «Восток-1»."
-        sources: [{ name: "Википедия: Восток-1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Восток-1", type: REFERENCE, verified: false } ]
         questions:
           - id: gagarin-spacecraft-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: gagarin-spacecraft-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the name of the spacecraft Yuri Gagarin flew into space?
+            options:
+              - { key: A, text: Soyuz 1, distractor: SAME_CATEGORY }
+              - { key: B, text: Voskhod 1, distractor: NEAR_MISS }
+              - { key: C, text: Vostok 1, correct: true }
+              - { key: D, text: Mir, distractor: CONTEXTUAL_CONFUSION }
+            explanation: 12 April 1961; the Voskhod flights came later, in 1964–65.
+            topics: { space: 1, ussr-history: 0.4 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: gagarin-flight-duration
         statement: "Полёт Гагарина длился 108 минут — один виток вокруг Земли."
-        sources: [{ name: "Википедия: Восток-1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Восток-1", type: REFERENCE, verified: false } ]
         questions:
           - id: gagarin-flight-duration-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: gagarin-flight-duration-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How long was Yuri Gagarin's flight?
+            options:
+              - { key: A, text: 108 minutes, correct: true }
+              - { key: B, text: 45 minutes, distractor: PLAUSIBLE }
+              - { key: C, text: About 5 hours, distractor: PLAUSIBLE }
+              - { key: D, text: Almost a day, distractor: PLAUSIBLE }
+            explanation: One orbit of the Earth; the next cosmonaut, Gherman Titov, stayed up for a full day.
+            topics: { space: 1, ussr-history: 0.3 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: korolev-chief-designer
         statement: "Советскую космическую программу времён полёта Гагарина возглавлял главный конструктор Сергей Королёв."
-        sources: [{ name: "Википедия: Королёв, Сергей Павлович", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Королёв, Сергей Павлович", type: REFERENCE, verified: false } ]
         questions:
           - id: korolev-chief-designer-ru-1
             language: ru
@@ -79,7 +119,7 @@ families:
     facts:
       - id: tereshkova-callsign
         statement: "Позывной Валентины Терешковой в полёте на «Востоке-6» (1963) — «Чайка»."
-        sources: [{ name: "Википедия: Восток-6", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Восток-6", type: REFERENCE, verified: false } ]
         questions:
           - id: tereshkova-callsign-ru-1
             language: ru
@@ -102,7 +142,7 @@ families:
 
       - id: leonov-first-spacewalk
         statement: "Первым в открытый космос вышел Алексей Леонов 18 марта 1965 года (корабль «Восход-2»)."
-        sources: [{ name: "Википедия: Леонов, Алексей Архипович", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Леонов, Алексей Архипович", type: REFERENCE, verified: false } ]
         questions:
           - id: leonov-first-spacewalk-ru-1
             language: ru
@@ -122,10 +162,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: leonov-first-spacewalk-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who was the first person to walk in space?
+            options:
+              - { key: A, text: Yuri Gagarin, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Gherman Titov, distractor: SAME_CATEGORY }
+              - { key: C, text: Neil Armstrong, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Alexei Leonov, correct: true }
+            explanation: In 1965. His suit ballooned and he had to let air out to squeeze back into the airlock.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: polyakov-longest-flight
         statement: "Рекорд самого продолжительного одиночного космического полёта — около 437 суток — принадлежит Валерию Полякову (станция «Мир», 1994–1995)."
-        sources: [{ name: "Википедия: Поляков, Валерий Владимирович", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Поляков, Валерий Владимирович", type: REFERENCE, verified: false } ]
         questions:
           - id: polyakov-longest-flight-ru-1
             language: ru
@@ -147,14 +207,37 @@ families:
             time_sensitive: false
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: рекорд может быть побит — проверить актуальность на дату ревью; при необходимости пометить факт time_sensitive."]
+            review_notes: [ "AI doubt: рекорд может быть побит — проверить актуальность на дату ревью; при необходимости пометить факт time_sensitive." ]
+          - id: polyakov-longest-flight-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who holds the record for the longest single spaceflight — about 437 days?
+            options:
+              - { key: A, text: Sergei Krikalev, distractor: NEAR_MISS }
+              - { key: B, text: Scott Kelly, distractor: SAME_CATEGORY }
+              - { key: C, text: Valeri Polyakov, correct: true }
+              - { key: D, text: Gennady Padalka, distractor: SAME_CATEGORY }
+            explanation: Polyakov, a doctor, spent over a year on Mir to test whether humans could survive a trip to Mars. Scott Kelly managed 340 days.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.5 }
+            generations: { 90s: 0.5 }
+            difficulty: 5
+            dignity: 5
+            effects: { I_KNOW_THIS: 1, HERO_CANDIDATE: 0.8 }
+            time_sensitive: false
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: рекорд может быть побит — проверить актуальность на дату ревью; при необходимости пометить факт time_sensitive."
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: space-dogs
     name: "Собаки в космосе"
     facts:
       - id: belka-strelka
         statement: "Белка и Стрелка в августе 1960 года первыми слетали на орбиту и благополучно вернулись."
-        sources: [{ name: "Википедия: Белка и Стрелка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Белка и Стрелка", type: REFERENCE, verified: false } ]
         questions:
           - id: belka-strelka-ru-1
             language: ru
@@ -174,10 +257,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: belka-strelka-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What were the names of the dogs that, in 1960, became the first to return alive from orbit?
+            options:
+              - { key: A, text: Pchyolka and Mushka, distractor: NEAR_MISS }
+              - { key: B, text: Belka and Strelka, correct: true }
+              - { key: C, text: Dezik and Tsygan, distractor: SAME_CATEGORY }
+              - { key: D, text: Chernushka and Zvyozdochka, distractor: SAME_CATEGORY }
+            explanation: "All of them were real space dogs: Dezik and Tsygan flew a suborbital rocket in 1951, while Pchyolka and Mushka died on re-entry in December 1960."
+            topics: { space: 1, ussr-history: 0.3 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: laika-sputnik-2
         statement: "Лайка полетела в космос на «Спутнике-2» в ноябре 1957 года."
-        sources: [{ name: "Википедия: Лайка (собака-космонавт)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Лайка (собака-космонавт)", type: REFERENCE, verified: false } ]
         questions:
           - id: laika-sputnik-2-ru-1
             language: ru
@@ -197,13 +300,33 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: laika-sputnik-2-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which spacecraft carried the dog Laika into space in 1957?
+            options:
+              - { key: A, text: Sputnik 1, distractor: NEAR_MISS }
+              - { key: B, text: Vostok 1, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Luna 2, distractor: SAME_CATEGORY }
+              - { key: D, text: Sputnik 2, correct: true }
+            explanation: Sputnik 1 had launched only a month earlier and carried no animals; Laika's craft was never designed to come back.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.5 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: sputnik-1
     name: "Первый спутник"
     facts:
       - id: sputnik-1-year
         statement: "Первый искусственный спутник Земли запущен в СССР 4 октября 1957 года."
-        sources: [{ name: "Википедия: Спутник-1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Спутник-1", type: REFERENCE, verified: false } ]
         questions:
           - id: sputnik-1-year-ru-1
             language: ru
@@ -223,13 +346,33 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: sputnik-1-year-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which year was the first artificial satellite launched?
+            options:
+              - { key: A, text: "1955", distractor: PLAUSIBLE }
+              - { key: B, text: "1957", correct: true }
+              - { key: C, text: "1959", distractor: PLAUSIBLE }
+              - { key: D, text: "1961", distractor: CONTEXTUAL_CONFUSION }
+            explanation: Radio amateurs around the world could pick up its beep-beep — the start of the Space Age.
+            topics: { space: 1, cold-war: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: apollo
     name: "Программа «Аполлон»"
     facts:
       - id: apollo-11-collins
         statement: "Из экипажа «Аполлона-11» на Луну не высаживался Майкл Коллинз — он оставался на орбите в командном модуле."
-        sources: [{ name: "Википедия: Аполлон-11", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Аполлон-11", type: REFERENCE, verified: false } ]
         questions:
           - id: apollo-11-collins-ru-1
             language: ru
@@ -249,10 +392,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: apollo-11-collins-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which Apollo 11 astronaut never set foot on the Moon?
+            options:
+              - { key: A, text: Neil Armstrong, distractor: SAME_CATEGORY }
+              - { key: B, text: Buzz Aldrin, distractor: SAME_CATEGORY }
+              - { key: C, text: Michael Collins, correct: true }
+              - { key: D, text: Jim Lovell, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Collins waited in orbit in the command module. Jim Lovell commanded Apollo 13, which never landed.
+            topics: { space: 1, cold-war: 0.3 }
+            contexts: { GLOBAL: 1, US: 0.5 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: moonwalkers-count
         statement: "По Луне ходили 12 человек (миссии «Аполлон» 1969–1972); всего к Луне летали 24 человека."
-        sources: [{ name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: false } ]
         questions:
           - id: moonwalkers-count-ru-1
             language: ru
@@ -273,11 +436,33 @@ families:
             time_sensitive: true
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: факт изменится после высадки «Артемиды» — проверить на дату ревью; time_sensitive выставлен."]
+            review_notes: [ "AI doubt: факт изменится после высадки «Артемиды» — проверить на дату ревью; time_sensitive выставлен." ]
+          - id: moonwalkers-count-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many people have ever walked on the Moon?
+            options:
+              - { key: A, text: "2", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "6", distractor: PLAUSIBLE }
+              - { key: C, text: "12", correct: true }
+              - { key: D, text: "24", distractor: NEAR_MISS }
+            explanation: Six missions landed two astronauts each. 24 people flew to the Moon, but many stayed in orbit.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.8, I_KNOW_THIS: 0.5 }
+            time_sensitive: true
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: факт изменится после высадки «Артемиды» — проверить на дату ревью; time_sensitive выставлен."
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: last-moon-landing-year
         statement: "Последняя на сегодня высадка людей на Луну — «Аполлон-17», декабрь 1972 года."
-        sources: [{ name: "Википедия: Аполлон-17", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Аполлон-17", type: REFERENCE, verified: false } ]
         questions:
           - id: last-moon-landing-year-ru-1
             language: ru
@@ -298,14 +483,36 @@ families:
             time_sensitive: true
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: вопрос устареет после высадки по программе «Артемида» — проверить на дату ревью."]
+            review_notes: [ "AI doubt: вопрос устареет после высадки по программе «Артемида» — проверить на дату ревью." ]
+          - id: last-moon-landing-year-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which year did humans last land on the Moon?
+            options:
+              - { key: A, text: "1969", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "1972", correct: true }
+              - { key: C, text: "1975", distractor: NEAR_MISS }
+              - { key: D, text: "1986", distractor: PLAUSIBLE }
+            explanation: Apollo 17; Eugene Cernan was the last to walk on the surface.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            time_sensitive: true
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: вопрос устареет после высадки по программе «Артемида» — проверить на дату ревью."
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: solar-system
     name: "Солнечная система"
     facts:
       - id: largest-planet
         statement: "Самая большая планета Солнечной системы — Юпитер."
-        sources: [{ name: "Википедия: Юпитер", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Юпитер", type: REFERENCE, verified: false } ]
         questions:
           - id: largest-planet-ru-1
             language: ru
@@ -325,10 +532,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: largest-planet-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the largest planet in the Solar System?
+            options:
+              - { key: A, text: Saturn, distractor: NEAR_MISS }
+              - { key: B, text: Neptune, distractor: SAME_CATEGORY }
+              - { key: C, text: Uranus, distractor: SAME_CATEGORY }
+              - { key: D, text: Jupiter, correct: true }
+            explanation: Jupiter is about two and a half times as massive as all the other planets combined.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: hottest-planet
         statement: "Самая горячая планета Солнечной системы — Венера (около 465 °C на поверхности), а не Меркурий."
-        sources: [{ name: "Википедия: Венера", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Венера", type: REFERENCE, verified: false } ]
         questions:
           - id: hottest-planet-ru-1
             language: ru
@@ -348,10 +575,30 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: hottest-planet-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which planet has the hottest surface in the Solar System?
+            options:
+              - { key: A, text: Mercury, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Venus, correct: true }
+              - { key: C, text: Mars, distractor: PLAUSIBLE }
+              - { key: D, text: Jupiter, distractor: PLAUSIBLE }
+            explanation: Mercury is closer to the Sun, but Venus's thick carbon dioxide atmosphere traps heat — about 465 °C day and night.
+            topics: { space: 1, science: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: pluto-dwarf-planet
         statement: "В 2006 году Международный астрономический союз перевёл Плутон в категорию карликовых планет."
-        sources: [{ name: "Википедия: Плутон", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Плутон", type: REFERENCE, verified: false } ]
         questions:
           - id: pluto-dwarf-planet-ru-1
             language: ru
@@ -373,10 +620,32 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.6, BRIDGE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: pluto-dwarf-planet-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: In which year did Pluto stop being classed as a planet?
+            options:
+              - { key: A, text: "1996", distractor: PLAUSIBLE }
+              - { key: B, text: "2001", distractor: PLAUSIBLE }
+              - { key: C, text: "2006", correct: true }
+              - { key: D, text: "2012", distractor: PLAUSIBLE }
+            explanation: The International Astronomical Union reclassified it as a dwarf planet — and textbooks had to be rewritten.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: mars-moons
         statement: "Спутники Марса — Фобос и Деймос."
-        sources: [{ name: "Википедия: Спутники Марса", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Спутники Марса", type: REFERENCE, verified: false } ]
         questions:
           - id: mars-moons-ru-1
             language: ru
@@ -396,10 +665,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: mars-moons-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What are the names of Mars's moons?
+            options:
+              - { key: A, text: Io and Europa, distractor: SAME_CATEGORY }
+              - { key: B, text: Titan and Enceladus, distractor: SAME_CATEGORY }
+              - { key: C, text: Phobos and Deimos, correct: true }
+              - { key: D, text: Charon and Nix, distractor: SAME_CATEGORY }
+            explanation: The names mean "fear" and "dread" — the sons of Ares, the Greek Mars.
+            topics: { space: 1, ancient-world: 0.3 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: saturn-rings-ice
         statement: "Кольца Сатурна состоят в основном из частиц водяного льда."
-        sources: [{ name: "Википедия: Кольца Сатурна", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Кольца Сатурна", type: REFERENCE, verified: false } ]
         questions:
           - id: saturn-rings-ice-ru-1
             language: ru
@@ -419,10 +708,30 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: saturn-rings-ice-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What are Saturn's rings mostly made of?
+            options:
+              - { key: A, text: Particles of water ice, correct: true }
+              - { key: B, text: Hot gas, distractor: PLAUSIBLE }
+              - { key: C, text: Iron meteorites, distractor: PLAUSIBLE }
+              - { key: D, text: Volcanic ash, distractor: PLAUSIBLE }
+            explanation: From grains of sand to house-sized chunks; ice reflects light well, which is why they shine.
+            topics: { space: 1, science: 0.3 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: sunlight-travel-time
         statement: "Свет от Солнца до Земли идёт примерно 8 минут 20 секунд."
-        sources: [{ name: "Википедия: Астрономическая единица", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Астрономическая единица", type: REFERENCE, verified: false } ]
         questions:
           - id: sunlight-travel-time-ru-1
             language: ru
@@ -442,10 +751,30 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.6, SHARED_KNOWLEDGE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: sunlight-travel-time-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Roughly how long does sunlight take to reach Earth?
+            options:
+              - { key: A, text: About 8 seconds, distractor: NEAR_MISS }
+              - { key: B, text: About 8 minutes, correct: true }
+              - { key: C, text: About an hour, distractor: PLAUSIBLE }
+              - { key: D, text: About a day, distractor: PLAUSIBLE }
+            explanation: If the Sun went out, we wouldn't know for about eight minutes.
+            topics: { space: 1, science: 0.5 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: halley-comet-return
         statement: "Комета Галлея возвращается примерно раз в 76 лет; следующее прохождение перигелия — в 2061 году."
-        sources: [{ name: "Википедия: Комета Галлея", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Комета Галлея", type: REFERENCE, verified: false } ]
         questions:
           - id: halley-comet-return-ru-1
             language: ru
@@ -466,13 +795,34 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: halley-comet-return-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: When will Halley's Comet next come close to the Sun?
+            options:
+              - { key: A, text: "2034", distractor: PLAUSIBLE }
+              - { key: B, text: "2048", distractor: PLAUSIBLE }
+              - { key: C, text: "2061", correct: true }
+              - { key: D, text: "2086", distractor: NEAR_MISS }
+            explanation: It returns roughly every 76 years; the last visit was in 1986.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.5 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: space-stations
     name: "Космические станции"
     facts:
       - id: mir-deorbit
         statement: "Станцию «Мир» свели с орбиты 23 марта 2001 года; несгоревшие обломки упали в Тихий океан."
-        sources: [{ name: "Википедия: Мир (орбитальная станция)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Мир (орбитальная станция)", type: REFERENCE, verified: false } ]
         questions:
           - id: mir-deorbit-ru-1
             language: ru
@@ -496,7 +846,7 @@ families:
 
       - id: iss-orbit-period
         statement: "МКС облетает Землю примерно за 90 минут — около 16 витков в сутки."
-        sources: [{ name: "Википедия: Международная космическая станция", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Международная космическая станция", type: REFERENCE, verified: false } ]
         questions:
           - id: iss-orbit-period-ru-1
             language: ru
@@ -517,10 +867,31 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: iss-orbit-period-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Roughly how long does the ISS take to orbit the Earth once?
+            options:
+              - { key: A, text: 10 minutes, distractor: PLAUSIBLE }
+              - { key: B, text: 90 minutes, correct: true }
+              - { key: C, text: 12 hours, distractor: PLAUSIBLE }
+              - { key: D, text: A day, distractor: COMMON_MISCONCEPTION }
+            explanation: The crew sees about 16 sunrises and sunsets every day.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { current: 0.5 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: baikonur-country
         statement: "Космодром Байконур находится на территории Казахстана; Россия арендует его."
-        sources: [{ name: "Википедия: Байконур (космодром)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Байконур (космодром)", type: REFERENCE, verified: false } ]
         questions:
           - id: baikonur-country-ru-1
             language: ru
@@ -546,7 +917,7 @@ families:
     facts:
       - id: jwst-launch
         statement: "Космический телескоп «Джеймс Уэбб» запущен в декабре 2021 года как преемник «Хаббла»."
-        sources: [{ name: "Википедия: Джеймс Уэбб (телескоп)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Джеймс Уэбб (телескоп)", type: REFERENCE, verified: false } ]
         questions:
           - id: jwst-launch-ru-1
             language: ru
@@ -567,10 +938,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: jwst-launch-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which space telescope was launched in 2021 as Hubble's successor?
+            options:
+              - { key: A, text: Kepler, distractor: SAME_CATEGORY }
+              - { key: B, text: James Webb, correct: true }
+              - { key: C, text: Spitzer, distractor: SAME_CATEGORY }
+              - { key: D, text: Chandra, distractor: SAME_CATEGORY }
+            explanation: It observes in infrared from 1.5 million km away, at the L2 Lagrange point.
+            topics: { space: 1, science: 0.4 }
+            contexts: { GLOBAL: 1 }
+            generations: { current: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: crew-dragon-2020
         statement: "В 2020 году корабль SpaceX Crew Dragon впервые доставил астронавтов на МКС."
-        sources: [{ name: "Википедия: SpaceX Demo-2", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: SpaceX Demo-2", type: REFERENCE, verified: false } ]
         questions:
           - id: crew-dragon-2020-ru-1
             language: ru
@@ -591,10 +983,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: crew-dragon-2020-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which SpaceX spacecraft first carried astronauts to the ISS in 2020?
+            options:
+              - { key: A, text: Starliner, distractor: NEAR_MISS }
+              - { key: B, text: Orion, distractor: SAME_CATEGORY }
+              - { key: C, text: Starship, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Crew Dragon, correct: true }
+            explanation: The first crewed launch from US soil since 2011. Starliner is Boeing's rival capsule.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1, US: 0.4 }
+            generations: { current: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: voyager-1-heliopause
         statement: "«Вояджер-1» в 2012 году первым из аппаратов пересёк гелиопаузу и вышел в межзвёздное пространство; «Вояджер-2» — в 2018 году."
-        sources: [{ name: "Википедия: Вояджер-1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Вояджер-1", type: REFERENCE, verified: false } ]
         questions:
           - id: voyager-1-heliopause-ru-1
             language: ru
@@ -615,3 +1028,24 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: voyager-1-heliopause-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which spacecraft was the first to reach interstellar space, in 2012?
+            options:
+              - { key: A, text: Voyager 1, correct: true }
+              - { key: B, text: Voyager 2, distractor: NEAR_MISS }
+              - { key: C, text: Pioneer 10, distractor: SAME_CATEGORY }
+              - { key: D, text: New Horizons, distractor: SAME_CATEGORY }
+            explanation: Launched back in 1977; Voyager 2 crossed the same boundary in 2018.
+            topics: { space: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 10s: 0.5 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

@@ -7,7 +7,7 @@ families:
     facts:
       - id: berlin-wall-fall
         statement: "Берлинская стена пала 9 ноября 1989 года."
-        sources: [{ name: "Википедия: Берлинская стена", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Берлинская стена", type: REFERENCE, verified: false } ]
         questions:
           - id: berlin-wall-fall-ru-1
             language: ru
@@ -28,10 +28,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: berlin-wall-fall-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which year did the Berlin Wall fall?
+            options:
+              - { key: A, text: "1985", distractor: PLAUSIBLE }
+              - { key: B, text: "1987", distractor: PLAUSIBLE }
+              - { key: C, text: "1989", correct: true }
+              - { key: D, text: "1991", distractor: COMMON_MISCONCEPTION }
+            explanation: Germany reunited a year later; the USSR collapsed in 1991.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: berlin-wall-built
         statement: "Берлинскую стену возвели в августе 1961 года."
-        sources: [{ name: "Википедия: Берлинская стена", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Берлинская стена", type: REFERENCE, verified: false } ]
         questions:
           - id: berlin-wall-built-ru-1
             language: ru
@@ -52,10 +73,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: berlin-wall-built-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which year was the Berlin Wall built?
+            options:
+              - { key: A, text: "1949", distractor: NEAR_MISS }
+              - { key: B, text: "1953", distractor: PLAUSIBLE }
+              - { key: C, text: "1961", correct: true }
+              - { key: D, text: "1968", distractor: PLAUSIBLE }
+            explanation: The two German states were founded in 1949; the wall went up twelve years later.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: berlin-four-sectors
         statement: "После Второй мировой войны Берлин разделили на четыре оккупационных сектора: советский, американский, британский и французский."
-        sources: [{ name: "Википедия: Западный Берлин", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Западный Берлин", type: REFERENCE, verified: false } ]
         questions:
           - id: berlin-four-sectors-ru-1
             language: ru
@@ -76,10 +118,31 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: berlin-four-sectors-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Into how many occupation sectors was Berlin divided after the war?
+            options:
+              - { key: A, text: Two, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Three, distractor: NEAR_MISS }
+              - { key: C, text: Four, correct: true }
+              - { key: D, text: Five, distractor: PLAUSIBLE }
+            explanation: The three Western sectors became West Berlin, the Soviet one East Berlin.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: checkpoint-charlie
         statement: "«Чекпойнт Чарли» — самый известный пропускной пункт между Западным и Восточным Берлином."
-        sources: [{ name: "Википедия: Чекпойнт Чарли", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Чекпойнт Чарли", type: REFERENCE, verified: false } ]
         questions:
           - id: checkpoint-charlie-ru-1
             language: ru
@@ -100,13 +163,34 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: checkpoint-charlie-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was Checkpoint Charlie?
+            options:
+              - { key: A, text: A CIA spy base, distractor: PLAUSIBLE }
+              - { key: B, text: A crossing point between West and East Berlin, correct: true }
+              - { key: C, text: An American airfield, distractor: PLAUSIBLE }
+              - { key: D, text: Hitler's bunker, distractor: CONTEXTUAL_CONFUSION }
+            explanation: '"Charlie" is C in the NATO alphabet — the third checkpoint after Alpha and Bravo.'
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: cuban-crisis
     name: "Карибский кризис"
     facts:
       - id: cuban-crisis-country
         statement: "Карибский кризис 1962 года начался из-за размещения советских ракет на Кубе."
-        sources: [{ name: "Википедия: Карибский кризис", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Карибский кризис", type: REFERENCE, verified: false } ]
         questions:
           - id: cuban-crisis-country-ru-1
             language: ru
@@ -127,10 +211,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: cuban-crisis-country-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Soviet missiles in which country triggered the 1962 missile crisis?
+            options:
+              - { key: A, text: Turkey, distractor: NEAR_MISS }
+              - { key: B, text: Cuba, correct: true }
+              - { key: C, text: Vietnam, distractor: PLAUSIBLE }
+              - { key: D, text: Nicaragua, distractor: PLAUSIBLE }
+            explanation: "US missiles in Turkey were part of the story too: they were quietly removed as part of the deal."
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: hotline-1963
         statement: "После Карибского кризиса, в 1963 году, между Москвой и Вашингтоном установили прямую линию связи — «горячую линию»."
-        sources: [{ name: "Википедия: Горячая линия Вашингтон — Москва", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Горячая линия Вашингтон — Москва", type: REFERENCE, verified: false } ]
         questions:
           - id: hotline-1963-ru-1
             language: ru
@@ -151,14 +256,36 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Проверить, что первая «горячая линия» была телетайпной, а не телефонной."]
+            review_notes: [ "AI doubt: Проверить, что первая «горячая линия» была телетайпной, а не телефонной." ]
+          - id: hotline-1963-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was set up between Moscow and Washington soon after the Cuban Missile Crisis?
+            options:
+              - { key: A, text: A direct passenger flight, distractor: PLAUSIBLE }
+              - { key: B, text: A direct line between the leaders, correct: true }
+              - { key: C, text: A joint space programme, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: An exchange of embassies, distractor: PLAUSIBLE }
+            explanation: Despite the "red telephone" myth, it started as a teletype link.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Проверить, что первая «горячая линия» была телетайпной, а не телефонной."
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: cold-war-start
     name: "Начало холодной войны"
     facts:
       - id: iron-curtain-churchill
         statement: "Речь о «железном занавесе» произнёс Уинстон Черчилль в Фултоне в 1946 году."
-        sources: [{ name: "Википедия: Фултонская речь", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Фултонская речь", type: REFERENCE, verified: false } ]
         questions:
           - id: iron-curtain-churchill-ru-1
             language: ru
@@ -179,10 +306,31 @@ families:
             effects: { I_KNOW_THIS: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: iron-curtain-churchill-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who gave the famous "Iron Curtain" speech?
+            options:
+              - { key: A, text: Harry Truman, distractor: NEAR_MISS }
+              - { key: B, text: Winston Churchill, correct: true }
+              - { key: C, text: Franklin Roosevelt, distractor: SAME_CATEGORY }
+              - { key: D, text: John F. Kennedy, distractor: SAME_CATEGORY }
+            explanation: Delivered in 1946 in Fulton, Missouri — with Truman in the audience.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: yalta-1945
         statement: "В феврале 1945 года Сталин, Рузвельт и Черчилль встретились в Ялте."
-        sources: [{ name: "Википедия: Ялтинская конференция", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ялтинская конференция", type: REFERENCE, verified: false } ]
         questions:
           - id: yalta-1945-ru-1
             language: ru
@@ -203,10 +351,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: yalta-1945-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where did Stalin, Roosevelt and Churchill meet in February 1945?
+            options:
+              - { key: A, text: Tehran, distractor: NEAR_MISS }
+              - { key: B, text: Yalta, correct: true }
+              - { key: C, text: Potsdam, distractor: NEAR_MISS }
+              - { key: D, text: Geneva, distractor: PLAUSIBLE }
+            explanation: Tehran was in 1943; at Potsdam in summer 1945 Truman had replaced Roosevelt.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: soviet-bomb-1949
         statement: "Первую атомную бомбу СССР испытал в 1949 году."
-        sources: [{ name: "Википедия: РДС-1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: РДС-1", type: REFERENCE, verified: false } ]
         questions:
           - id: soviet-bomb-1949-ru-1
             language: ru
@@ -227,13 +396,34 @@ families:
             effects: { I_KNOW_THIS: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: soviet-bomb-1949-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which year did the USSR test its first atomic bomb?
+            options:
+              - { key: A, text: "1945", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "1949", correct: true }
+              - { key: C, text: "1953", distractor: NEAR_MISS }
+              - { key: D, text: "1957", distractor: PLAUSIBLE }
+            explanation: The US did so in 1945; in 1953 the USSR tested its first hydrogen bomb.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: blocs
     name: "Блоки и противостояние"
     facts:
       - id: warsaw-pact
         statement: "Военный блок социалистических стран — Организация Варшавского договора (1955)."
-        sources: [{ name: "Википедия: Организация Варшавского договора", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Организация Варшавского договора", type: REFERENCE, verified: false } ]
         questions:
           - id: warsaw-pact-ru-1
             language: ru
@@ -254,10 +444,31 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: warsaw-pact-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the military alliance of socialist states — the counterpart to NATO — called?
+            options:
+              - { key: A, text: Comecon, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: The Warsaw Pact, correct: true }
+              - { key: C, text: The Comintern, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: The Commonwealth of Independent States, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Comecon was an economic union; the Comintern an association of communist parties (1919–1943).
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: korea-38
         statement: "Корею после Второй мировой войны разделили по 38-й параллели."
-        sources: [{ name: "Википедия: 38-я параллель", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: 38-я параллель", type: REFERENCE, verified: false } ]
         questions:
           - id: korea-38-ru-1
             language: ru
@@ -278,10 +489,31 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: korea-38-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Along which parallel was Korea divided?
+            options:
+              - { key: A, text: The 17th, distractor: NEAR_MISS }
+              - { key: B, text: The 38th, correct: true }
+              - { key: C, text: The 45th, distractor: PLAUSIBLE }
+              - { key: D, text: The 49th, distractor: PLAUSIBLE }
+            explanation: Vietnam was divided along the 17th parallel.
+            topics: { cold-war: 1, geography: 0.4 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: olympic-boycott-1984
         statement: "СССР бойкотировал летнюю Олимпиаду 1984 года в Лос-Анджелесе."
-        sources: [{ name: "Википедия: Бойкот летних Олимпийских игр 1984 года", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Бойкот летних Олимпийских игр 1984 года", type: REFERENCE, verified: false } ]
         questions:
           - id: olympic-boycott-1984-ru-1
             language: ru
@@ -302,10 +534,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: olympic-boycott-1984-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which Olympics did the USSR boycott?
+            options:
+              - { key: A, text: Moscow 1980, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Los Angeles 1984, correct: true }
+              - { key: C, text: Seoul 1988, distractor: NEAR_MISS }
+              - { key: D, text: Montreal 1976, distractor: PLAUSIBLE }
+            explanation: A response to the US boycott of Moscow 1980. North Korea boycotted Seoul 1988; the USSR went.
+            topics: { cold-war: 1, sports: 0.5 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: sdi-star-wars
         statement: "Американскую Стратегическую оборонную инициативу Рейгана (1983) прозвали «Звёздными войнами»."
-        sources: [{ name: "Википедия: Стратегическая оборонная инициатива", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Стратегическая оборонная инициатива", type: REFERENCE, verified: false } ]
         questions:
           - id: sdi-star-wars-ru-1
             language: ru
@@ -327,10 +580,32 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.6, BRIDGE: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: sdi-star-wars-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: Which Reagan programme was nicknamed "Star Wars"?
+            options:
+              - { key: A, text: A Moon programme, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: A space-based missile defence system, correct: true }
+              - { key: C, text: The Space Shuttle programme, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: A mission to Mars, distractor: PLAUSIBLE }
+            explanation: The nickname came from George Lucas's 1977 film.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, BRIDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: khrushchev-shoe
         statement: "Широко известна история о том, как Хрущёв в 1960 году стучал ботинком по столу на заседании Генассамблеи ООН."
-        sources: [{ name: "Википедия: Кузькина мать", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Кузькина мать", type: REFERENCE, verified: false } ]
         questions:
           - id: khrushchev-shoe-ru-1
             language: ru
@@ -351,11 +626,11 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Проверить источник: эпизод известен, но детали спорны; источник статьи — уточнить (возможно, «Хрущёв, Никита Сергеевич»)."]
+            review_notes: [ "AI doubt: Проверить источник: эпизод известен, но детали спорны; источник статьи — уточнить (возможно, «Хрущёв, Никита Сергеевич»)." ]
 
       - id: prague-spring
         statement: "Период реформ в Чехословакии 1968 года назван «Пражской весной»."
-        sources: [{ name: "Википедия: Пражская весна", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пражская весна", type: REFERENCE, verified: false } ]
         questions:
           - id: prague-spring-ru-1
             language: ru
@@ -376,3 +651,24 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: prague-spring-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was the 1968 period of reforms in Czechoslovakia called?
+            options:
+              - { key: A, text: The Velvet Revolution, distractor: NEAR_MISS }
+              - { key: B, text: The Prague Spring, correct: true }
+              - { key: C, text: The Hungarian Autumn, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Solidarity, distractor: CONTEXTUAL_CONFUSION }
+            explanation: The Velvet Revolution happened there too, but in 1989; Solidarity was a Polish trade union.
+            topics: { cold-war: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

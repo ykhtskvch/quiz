@@ -1,6 +1,6 @@
 // Small pieces shared by the display and the phone.
 import type { GameResults, PhaseTiming } from "@quiz/shared";
-import { t } from "./strings.ts";
+import { useT } from "./strings.ts";
 import { useCountdown } from "./useRoom.ts";
 
 /** Shrinking bar for the current phase; shows seconds when `showSeconds`. */
@@ -20,6 +20,7 @@ export function PhaseBar({ timing, timingAt, showSeconds = false }: { timing: Ph
 }
 
 export function StatCards({ results }: { results: GameResults }) {
+  const t = useT();
   const s = results.stats;
   const cards = [
     s.hardest && { title: t.statHardest, body: s.hardest.text, note: `${t.correctAnswer}: ${s.hardest.correctText}` },

@@ -7,7 +7,7 @@ families:
     facts:
       - id: baikal-deepest
         statement: "Байкал — самое глубокое озеро на Земле (около 1640 м)."
-        sources: [{ name: "Википедия: Байкал", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Байкал", type: REFERENCE, verified: false } ]
         questions:
           - id: baikal-deepest-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: baikal-deepest-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which is the deepest lake on Earth?
+            options:
+              - { key: A, text: Lake Tanganyika, distractor: NEAR_MISS }
+              - { key: B, text: Lake Baikal, correct: true }
+              - { key: C, text: The Caspian Sea, distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: Lake Superior, distractor: PLAUSIBLE }
+            explanation: Tanganyika is the second deepest; the Caspian is the largest by area.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.5 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: amazon-volume
         statement: "Амазонка — самая полноводная река мира."
-        sources: [{ name: "Википедия: Амазонка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Амазонка", type: REFERENCE, verified: false } ]
         questions:
           - id: amazon-volume-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: amazon-volume-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which river carries the most water in the world?
+            options:
+              - { key: A, text: The Nile, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: The Amazon, correct: true }
+              - { key: C, text: The Yangtze, distractor: SAME_CATEGORY }
+              - { key: D, text: The Mississippi, distractor: SAME_CATEGORY }
+            explanation: The Amazon and the Nile argue over length, but by volume the Amazon has no rival.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: tiber-rome
         statement: "Река Тибр протекает через Рим."
-        sources: [{ name: "Википедия: Тибр", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Тибр", type: REFERENCE, verified: false } ]
         questions:
           - id: tiber-rome-ru-1
             language: ru
@@ -73,13 +113,33 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: tiber-rome-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which city does the Tiber flow through?
+            options:
+              - { key: A, text: Florence, distractor: NEAR_MISS }
+              - { key: B, text: Rome, correct: true }
+              - { key: C, text: Milan, distractor: SAME_CATEGORY }
+              - { key: D, text: Venice, distractor: SAME_CATEGORY }
+            explanation: Florence is on the Arno.
+            topics: { geography: 1, ancient-world: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: capitals
     name: "Столицы"
     facts:
       - id: australia-capital
         statement: "Столица Австралии — Канберра."
-        sources: [{ name: "Википедия: Канберра", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Канберра", type: REFERENCE, verified: false } ]
         questions:
           - id: australia-capital-ru-1
             language: ru
@@ -99,10 +159,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: australia-capital-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the capital of Australia?
+            options:
+              - { key: A, text: Sydney, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Melbourne, distractor: NEAR_MISS }
+              - { key: C, text: Canberra, correct: true }
+              - { key: D, text: Perth, distractor: SAME_CATEGORY }
+            explanation: Canberra was built as a compromise so nobody had to choose between Sydney and Melbourne.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: turkey-capital
         statement: "Столица Турции — Анкара."
-        sources: [{ name: "Википедия: Анкара", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Анкара", type: REFERENCE, verified: false } ]
         questions:
           - id: turkey-capital-ru-1
             language: ru
@@ -122,13 +202,33 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: turkey-capital-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the capital of Turkey?
+            options:
+              - { key: A, text: Istanbul, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Ankara, correct: true }
+              - { key: C, text: Izmir, distractor: SAME_CATEGORY }
+              - { key: D, text: Antalya, distractor: SAME_CATEGORY }
+            explanation: Istanbul is the biggest city, but Atatürk made Ankara the capital in 1923.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: records
     name: "Географические рекорды"
     facts:
       - id: kilimanjaro
         statement: "Высочайшая вершина Африки — Килиманджаро (5895 м)."
-        sources: [{ name: "Википедия: Килиманджаро", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Килиманджаро", type: REFERENCE, verified: false } ]
         questions:
           - id: kilimanjaro-ru-1
             language: ru
@@ -148,10 +248,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: kilimanjaro-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the highest mountain in Africa?
+            options:
+              - { key: A, text: Mount Kenya, distractor: NEAR_MISS }
+              - { key: B, text: Kilimanjaro, correct: true }
+              - { key: C, text: Toubkal, distractor: SAME_CATEGORY }
+              - { key: D, text: Mount Elbrus, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Mount Kenya is Africa's second highest; Toubkal is the top of the Atlas Mountains.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: vatican-smallest
         statement: "Ватикан — самое маленькое государство мира."
-        sources: [{ name: "Википедия: Ватикан", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ватикан", type: REFERENCE, verified: false } ]
         questions:
           - id: vatican-smallest-ru-1
             language: ru
@@ -171,10 +291,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: vatican-smallest-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the smallest country in the world?
+            options:
+              - { key: A, text: Monaco, distractor: NEAR_MISS }
+              - { key: B, text: Vatican City, correct: true }
+              - { key: C, text: San Marino, distractor: SAME_CATEGORY }
+              - { key: D, text: Liechtenstein, distractor: SAME_CATEGORY }
+            explanation: Less than half a square kilometre; Monaco comes second.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: greenland-island
         statement: "Гренландия — самый большой остров в мире (Австралию считают материком)."
-        sources: [{ name: "Википедия: Гренландия", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Гренландия", type: REFERENCE, verified: false } ]
         questions:
           - id: greenland-island-ru-1
             language: ru
@@ -194,10 +334,30 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: greenland-island-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the largest island in the world?
+            options:
+              - { key: A, text: Australia, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Greenland, correct: true }
+              - { key: C, text: New Guinea, distractor: NEAR_MISS }
+              - { key: D, text: Madagascar, distractor: SAME_CATEGORY }
+            explanation: Australia counts as a continent, so first place goes to Greenland; New Guinea is second.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: canada-second-area
         statement: "Канада — вторая по площади страна мира после России."
-        sources: [{ name: "Википедия: Канада", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Канада", type: REFERENCE, verified: false } ]
         questions:
           - id: canada-second-area-ru-1
             language: ru
@@ -217,11 +377,31 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: canada-second-area-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which is the second-largest country by area, after Russia?
+            options:
+              - { key: A, text: China, distractor: NEAR_MISS }
+              - { key: B, text: Canada, correct: true }
+              - { key: C, text: The United States, distractor: NEAR_MISS }
+              - { key: D, text: Brazil, distractor: SAME_CATEGORY }
+            explanation: China and the US argue over third place, depending on how water is counted.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: india-population
         statement: "С 2023 года Индия — самая населённая страна мира, обогнав Китай."
         time_sensitive: true
-        sources: [{ name: "Википедия: Население Индии", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Население Индии", type: REFERENCE, verified: false } ]
         questions:
           - id: india-population-ru-1
             language: ru
@@ -241,12 +421,33 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Факт меняется со временем — перепроверить на дату ревью."]
+            review_notes: [ "AI doubt: Факт меняется со временем — перепроверить на дату ревью." ]
+          - id: india-population-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which country has the largest population today?
+            options:
+              - { key: A, text: China, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: India, correct: true }
+              - { key: C, text: The United States, distractor: SAME_CATEGORY }
+              - { key: D, text: Indonesia, distractor: SAME_CATEGORY }
+            explanation: According to UN estimates, India overtook China in 2023.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Факт меняется со временем — перепроверить на дату ревью."
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: russia-time-zones
         statement: "В России 11 часовых поясов."
         time_sensitive: true
-        sources: [{ name: "Википедия: Время в России", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Время в России", type: REFERENCE, verified: false } ]
         questions:
           - id: russia-time-zones-ru-1
             language: ru
@@ -266,14 +467,14 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Число поясов менялось (2010, 2014) — перепроверить на дату ревью."]
+            review_notes: [ "AI doubt: Число поясов менялось (2010, 2014) — перепроверить на дату ревью." ]
 
   - family: straits-cities
     name: "Проливы и города"
     facts:
       - id: bering-strait
         statement: "Евразию и Северную Америку разделяет Берингов пролив."
-        sources: [{ name: "Википедия: Берингов пролив", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Берингов пролив", type: REFERENCE, verified: false } ]
         questions:
           - id: bering-strait-ru-1
             language: ru
@@ -293,10 +494,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: bering-strait-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which strait separates Asia from North America?
+            options:
+              - { key: A, text: The Strait of Gibraltar, distractor: SAME_CATEGORY }
+              - { key: B, text: The Bering Strait, correct: true }
+              - { key: C, text: The Strait of Magellan, distractor: SAME_CATEGORY }
+              - { key: D, text: The Bosphorus, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Named after Vitus Bering, a Dane in Russian service.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: istanbul-two-continents
         statement: "Стамбул — крупнейший город, расположенный одновременно в Европе и Азии."
-        sources: [{ name: "Википедия: Стамбул", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Стамбул", type: REFERENCE, verified: false } ]
         questions:
           - id: istanbul-two-continents-ru-1
             language: ru
@@ -316,13 +537,33 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: istanbul-two-continents-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which major city lies in both Europe and Asia?
+            options:
+              - { key: A, text: Athens, distractor: PLAUSIBLE }
+              - { key: B, text: Istanbul, correct: true }
+              - { key: C, text: Cairo, distractor: PLAUSIBLE }
+              - { key: D, text: Baku, distractor: PLAUSIBLE }
+            explanation: The Bosphorus separates its European and Asian sides.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: landmarks
     name: "Достопримечательности мира"
     facts:
       - id: machu-picchu
         statement: "Мачу-Пикчу — город инков в Перу."
-        sources: [{ name: "Википедия: Мачу-Пикчу", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Мачу-Пикчу", type: REFERENCE, verified: false } ]
         questions:
           - id: machu-picchu-ru-1
             language: ru
@@ -342,10 +583,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: machu-picchu-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which country is Machu Picchu?
+            options:
+              - { key: A, text: Mexico, distractor: NEAR_MISS }
+              - { key: B, text: Peru, correct: true }
+              - { key: C, text: Bolivia, distractor: NEAR_MISS }
+              - { key: D, text: Chile, distractor: SAME_CATEGORY }
+            explanation: A 15th-century Inca city in the Andes; Mexico has Maya and Aztec pyramids.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: angkor-wat
         statement: "Храмовый комплекс Ангкор-Ват находится в Камбодже."
-        sources: [{ name: "Википедия: Ангкор-Ват", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ангкор-Ват", type: REFERENCE, verified: false } ]
         questions:
           - id: angkor-wat-ru-1
             language: ru
@@ -365,3 +626,23 @@ families:
             effects: { I_KNOW_THIS: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: angkor-wat-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: In which country is Angkor Wat?
+            options:
+              - { key: A, text: Thailand, distractor: NEAR_MISS }
+              - { key: B, text: Cambodia, correct: true }
+              - { key: C, text: Vietnam, distractor: SAME_CATEGORY }
+              - { key: D, text: India, distractor: SAME_CATEGORY }
+            explanation: It even appears on Cambodia's flag.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

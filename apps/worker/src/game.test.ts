@@ -286,6 +286,28 @@ describe("onboarding", () => {
   });
 });
 
+describe("room language", () => {
+  it("an English room only ever presents English questions", () => {
+    const mixed: BankQuestion[] = [
+      ...bank,
+      ...bank.map((q) => ({ ...q, id: q.id.replace("q", "en"), language: "en" as const, text: `EN ${q.text}` })),
+    ];
+    const state = newRoomState("ABCDEF", "h", 0, config, "en");
+    const room = () => new Room(state, config, mixed, DEFAULT_ENGINE_CONFIG, keepOrder);
+    for (const id of ["a", "b"]) {
+      const p = room().join(id, id, `h${id}`, 0);
+      room().connect(p.id, 0);
+      room().submitOnboarding(p.id, onboarding, 0);
+    }
+    room().start(state.players[0].id, 0);
+    for (let t = 0; state.game!.status !== "FINISHED" && t < 200_000; t += 1000) room().tick(t);
+    const shown = state.game!.questions.map((q) => q.questionId);
+    expect(shown.length).toBeGreaterThan(0);
+    expect(shown.every((id) => id.startsWith("en"))).toBe(true);
+    expect(room().snapshot({ role: "display" }, 0).room.language).toBe("en");
+  });
+});
+
 describe("feedback and analytics", () => {
   const analytics = (r: Room) => r.effects.flatMap((e) => (e.to === "analytics" ? [e.event] : []));
 

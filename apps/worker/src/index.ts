@@ -8,6 +8,8 @@ import {
   ROOM_CODE_ALPHABET,
   ROOM_CODE_LENGTH,
   type HostCommand,
+  type Language,
+  LANGUAGES,
   type OptionKey,
 } from "@quiz/shared";
 import { RoomDO, type Env, type Result } from "./room.ts";
@@ -23,10 +25,12 @@ const bearer = (c: C) => c.req.header("Authorization")?.replace(/^Bearer\s+/i, "
 const reply = <T>(c: C, r: Result<T>) => (r.ok ? c.json(r.value as object) : c.json({ error: r.error }, r.status));
 
 app.post("/rooms", async (c) => {
+  const body = await c.req.json<{ language?: unknown }>().catch(() => ({ language: undefined }));
+  const language: Language = LANGUAGES.includes(body.language as Language) ? (body.language as Language) : "ru";
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = generateRoomCode();
-    const r = await roomStub(c, code).init(code);
-    if (r.ok) return c.json({ roomCode: code, displayToken: r.value.displayToken }, 201);
+    const r = await roomStub(c, code).init(code, language);
+    if (r.ok) return c.json({ roomCode: code, displayToken: r.value.displayToken, language }, 201);
   }
   return c.json({ error: "could not allocate a room code" }, 503);
 });
@@ -34,6 +38,11 @@ app.post("/rooms", async (c) => {
 app.use("/rooms/:code/*", async (c, next) => {
   if (!isRoomCode(c.req.param("code") ?? "")) return c.json({ error: "room not found" }, 404);
   await next();
+});
+
+app.get("/rooms/:code", async (c) => {
+  if (!isRoomCode(c.req.param("code"))) return c.json({ error: "room not found" }, 404);
+  return reply(c, await roomStub(c, c.req.param("code")).info());
 });
 
 app.post("/rooms/:code/players", async (c) => {

@@ -7,7 +7,7 @@ families:
     facts:
       - id: lyonya-golubkov
         statement: "Героем рекламы МММ был Лёня Голубков: «Я не халявщик, я партнёр!»."
-        sources: [{ name: "Википедия: МММ (финансовая пирамида)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: МММ (финансовая пирамида)", type: REFERENCE, verified: false } ]
         questions:
           - id: lyonya-golubkov-ru-1
             language: ru
@@ -34,7 +34,7 @@ families:
     facts:
       - id: denomination-1998
         statement: "При деноминации 1998 года 1000 старых рублей обменивали на 1 новый."
-        sources: [{ name: "Википедия: Деноминация рубля в 1998 году", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Деноминация рубля в 1998 году", type: REFERENCE, verified: false } ]
         questions:
           - id: denomination-1998-ru-1
             language: ru
@@ -58,7 +58,7 @@ families:
 
       - id: default-1998-month
         statement: "Дефолт 1998 года объявлен 17 августа."
-        sources: [{ name: "Википедия: Экономический кризис в России (1998)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Экономический кризис в России (1998)", type: REFERENCE, verified: false } ]
         questions:
           - id: default-1998-month-ru-1
             language: ru
@@ -82,7 +82,7 @@ families:
 
       - id: voucher-nominal
         statement: "Номинал приватизационного чека (ваучера) 1992 года — 10 000 рублей."
-        sources: [{ name: "Википедия: Приватизационный чек", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Приватизационный чек", type: REFERENCE, verified: false } ]
         questions:
           - id: voucher-nominal-ru-1
             language: ru
@@ -103,14 +103,14 @@ families:
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.4 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Проверить формулировку про «две „Волги“» — это известная цитата, но приписать её корректно."]
+            review_notes: [ "AI doubt: Проверить формулировку про «две „Волги“» — это известная цитата, но приписать её корректно." ]
 
   - family: dendy
     name: "Приставки 90-х"
     facts:
       - id: dendy-clone
         statement: "Приставка Dendy — клон японской Nintendo Famicom (NES)."
-        sources: [{ name: "Википедия: Dendy", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Dendy", type: REFERENCE, verified: false } ]
         questions:
           - id: dendy-clone-ru-1
             language: ru
@@ -137,7 +137,7 @@ families:
     facts:
       - id: malinovy-pidzhak
         statement: "Символ «новых русских» 1990-х — малиновый пиджак."
-        sources: [{ name: "Википедия: Новые русские", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Новые русские", type: REFERENCE, verified: false } ]
         questions:
           - id: malinovy-pidzhak-ru-1
             language: ru
@@ -161,7 +161,7 @@ families:
 
       - id: chelnoki
         statement: "«Челноками» в 90-е называли торговцев, возивших товар из Турции, Китая и Польши в огромных клетчатых сумках."
-        sources: [{ name: "Википедия: Челночная торговля", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Челночная торговля", type: REFERENCE, verified: false } ]
         questions:
           - id: chelnoki-ru-1
             language: ru
@@ -188,7 +188,7 @@ families:
     facts:
       - id: tamagotchi-country
         statement: "Тамагочи придумали в Японии (Bandai, 1996)."
-        sources: [{ name: "Википедия: Тамагочи", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Тамагочи", type: REFERENCE, verified: false } ]
         questions:
           - id: tamagotchi-country-ru-1
             language: ru
@@ -209,10 +209,31 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: tamagotchi-country-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where was the Tamagotchi invented?
+            options:
+              - { key: A, text: China, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Japan, correct: true }
+              - { key: C, text: South Korea, distractor: SAME_CATEGORY }
+              - { key: D, text: The United States, distractor: SAME_CATEGORY }
+            explanation: Released by Bandai in 1996 — followed by countless cheap copies.
+            topics: { russia-90s-life: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: pager
         statement: "Пейджер принимал короткие текстовые сообщения, которые диктовали оператору."
-        sources: [{ name: "Википедия: Пейджер", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пейджер", type: REFERENCE, verified: false } ]
         questions:
           - id: pager-ru-1
             language: ru
@@ -239,7 +260,7 @@ families:
     facts:
       - id: love-is-country
         statement: "Жвачка «Love is…» с комиксами-вкладышами в 90-е производилась в Турции."
-        sources: [{ name: "Википедия: Love is…", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Love is…", type: REFERENCE, verified: false } ]
         questions:
           - id: love-is-country-ru-1
             language: ru
@@ -260,11 +281,11 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Проверить производителя жвачки «Love is…» и что она турецкая; проверить имя художницы (Ким Казали)."]
+            review_notes: [ "AI doubt: Проверить производителя жвачки «Love is…» и что она турецкая; проверить имя художницы (Ким Казали)." ]
 
       - id: turbo-inserts
         statement: "Во вкладышах жвачки Turbo были картинки машин."
-        sources: [{ name: "Википедия: Turbo (жевательная резинка)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Turbo (жевательная резинка)", type: REFERENCE, verified: false } ]
         questions:
           - id: turbo-inserts-ru-1
             language: ru
@@ -291,7 +312,7 @@ families:
     facts:
       - id: invite-dobav-vody
         statement: "Растворимый напиток Invite рекламировали слоганом «Просто добавь воды!»."
-        sources: [{ name: "Википедия: Invite (напиток)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Invite (напиток)", type: REFERENCE, verified: false } ]
         questions:
           - id: invite-dobav-vody-ru-1
             language: ru
@@ -312,11 +333,11 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Проверить, что слоган «Просто добавь воды» именно у Invite, а не у Yupi."]
+            review_notes: [ "AI doubt: Проверить, что слоган «Просто добавь воды» именно у Invite, а не у Yupi." ]
 
       - id: snickers-poryadok
         statement: "Snickers в 90-е рекламировали слоганом «Съел — и порядок!»."
-        sources: [{ name: "Википедия: Snickers", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Snickers", type: REFERENCE, verified: false } ]
         questions:
           - id: snickers-poryadok-ru-1
             language: ru
@@ -343,7 +364,7 @@ families:
     facts:
       - id: mcdonalds-1990
         statement: "Первый в СССР «Макдоналдс» открылся 31 января 1990 года на Пушкинской площади в Москве."
-        sources: [{ name: "Википедия: Макдоналдс в России", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Макдоналдс в России", type: REFERENCE, verified: false } ]
         questions:
           - id: mcdonalds-1990-ru-1
             language: ru
@@ -370,7 +391,7 @@ families:
     facts:
       - id: volodarsky-clothespin
         statement: "О Леониде Володарском, одном из самых известных переводчиков видеокассет, ходила легенда, что он переводил с прищепкой на носу."
-        sources: [{ name: "Википедия: Володарский, Леонид Вениаминович", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Володарский, Леонид Вениаминович", type: REFERENCE, verified: false } ]
         questions:
           - id: volodarsky-clothespin-ru-1
             language: ru
@@ -391,4 +412,4 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Проверить, что легенда о прищепке связана именно с Володарским и чем объясняют его голос."]
+            review_notes: [ "AI doubt: Проверить, что легенда о прищепке связана именно с Володарским и чем объясняют его голос." ]

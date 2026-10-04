@@ -1,4 +1,14 @@
-import type { CreateRoomResponse, HostCommand, JoinResponse, OnboardingInput, OptionKey, QuestionRating, SessionFeedbackInput } from "@quiz/shared";
+import type {
+  CreateRoomResponse,
+  HostCommand,
+  JoinResponse,
+  Language,
+  OnboardingInput,
+  OptionKey,
+  QuestionRating,
+  RoomInfo,
+  SessionFeedbackInput,
+} from "@quiz/shared";
 
 export class ApiError extends Error {
   status: number;
@@ -8,9 +18,9 @@ export class ApiError extends Error {
   }
 }
 
-async function call<T>(path: string, init: { token?: string; body?: unknown } = {}): Promise<T> {
+async function call<T>(path: string, init: { token?: string; body?: unknown; method?: "GET" | "POST" } = {}): Promise<T> {
   const res = await fetch(`/api${path}`, {
-    method: "POST",
+    method: init.method ?? "POST",
     headers: { "Content-Type": "application/json", ...(init.token ? { Authorization: `Bearer ${init.token}` } : {}) },
     body: init.body === undefined ? undefined : JSON.stringify(init.body),
   });
@@ -20,7 +30,8 @@ async function call<T>(path: string, init: { token?: string; body?: unknown } = 
 }
 
 export const api = {
-  createRoom: () => call<CreateRoomResponse>("/rooms"),
+  createRoom: (language: Language) => call<CreateRoomResponse>("/rooms", { body: { language } }),
+  roomInfo: (code: string) => call<RoomInfo>(`/rooms/${code}`, { method: "GET" }),
   join: (code: string, nickname: string) => call<JoinResponse>(`/rooms/${code}/players`, { body: { nickname } }),
   host: (code: string, token: string, command: HostCommand) => call(`/rooms/${code}/${command}`, { token }),
   onboarding: (code: string, token: string, input: OnboardingInput) => call(`/rooms/${code}/onboarding`, { token, body: input }),

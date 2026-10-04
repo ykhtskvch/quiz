@@ -320,9 +320,9 @@ US-CUSTOM-001 Private question for room · US-CUSTOM-002 Birthday / friends pack
 | US-CONT-005 | Coverage report | Сколько APPROVED по теме × difficulty × dignity × generation; подсветка дыр. |
 | US-CONT-006 | Images (own / PD) | Для image-вопросов — только собственные или PD с rights metadata. |
 
-## EPIC 36 — English Language & International Mix — P2
+## EPIC 36 — English Language & International Mix — ✅ (сделан раньше плана)
 
-EN-интерфейс, EN-банк (GLOBAL / UK / US + bridge), US-CULT-002, NFR-011.
+EN-интерфейс, EN-банк (GLOBAL / UK / US + bridge), US-CULT-002, NFR-011. Выбор языка на главной; телефон берёт язык комнаты; onboarding показывает только темы с контентом в языке комнаты. Банк: 147 переводов + 39 EN-native черновиков.
 
 ---
 

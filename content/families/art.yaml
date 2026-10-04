@@ -7,7 +7,7 @@ families:
     facts:
       - id: mona-lisa-louvre
         statement: "«Мона Лиза» Леонардо да Винчи хранится в Лувре."
-        sources: [{ name: "Википедия: Мона Лиза", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Мона Лиза", type: REFERENCE, verified: false } ]
         questions:
           - id: mona-lisa-louvre-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: mona-lisa-louvre-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which museum is home to the Mona Lisa?
+            options:
+              - { key: A, text: The Uffizi, distractor: SAME_CATEGORY }
+              - { key: B, text: The Louvre, correct: true }
+              - { key: C, text: The Prado, distractor: SAME_CATEGORY }
+              - { key: D, text: The Hermitage, distractor: SAME_CATEGORY }
+            explanation: It was stolen from the Louvre in 1911 and only recovered two years later.
+            topics: { art: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: starry-night-van-gogh
         statement: "«Звёздную ночь» (1889) написал Винсент ван Гог."
-        sources: [{ name: "Википедия: Звёздная ночь", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Звёздная ночь", type: REFERENCE, verified: false } ]
         questions:
           - id: starry-night-van-gogh-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: starry-night-van-gogh-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who painted The Starry Night?
+            options:
+              - { key: A, text: Claude Monet, distractor: SAME_CATEGORY }
+              - { key: B, text: Vincent van Gogh, correct: true }
+              - { key: C, text: Paul Gauguin, distractor: NEAR_MISS }
+              - { key: D, text: Edgar Degas, distractor: SAME_CATEGORY }
+            explanation: Painted at the asylum in Saint-Rémy; Gauguin had shared a house with Van Gogh in Arles shortly before.
+            topics: { art: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: scream-munch
         statement: "Картину «Крик» написал норвежец Эдвард Мунк."
-        sources: [{ name: "Википедия: Крик (картина)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Крик (картина)", type: REFERENCE, verified: false } ]
         questions:
           - id: scream-munch-ru-1
             language: ru
@@ -73,10 +113,30 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: scream-munch-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who painted The Scream?
+            options:
+              - { key: A, text: Edvard Munch, correct: true }
+              - { key: B, text: Gustav Klimt, distractor: SAME_CATEGORY }
+              - { key: C, text: Egon Schiele, distractor: SAME_CATEGORY }
+              - { key: D, text: Francisco Goya, distractor: SAME_CATEGORY }
+            explanation: Munch made several versions — it even lives on as the 😱 emoji.
+            topics: { art: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: sistine-michelangelo
         statement: "Потолок Сикстинской капеллы расписал Микеланджело."
-        sources: [{ name: "Википедия: Сикстинская капелла", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Сикстинская капелла", type: REFERENCE, verified: false } ]
         questions:
           - id: sistine-michelangelo-ru-1
             language: ru
@@ -96,10 +156,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: sistine-michelangelo-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who painted the ceiling of the Sistine Chapel?
+            options:
+              - { key: A, text: Raphael, distractor: NEAR_MISS }
+              - { key: B, text: Michelangelo, correct: true }
+              - { key: C, text: Leonardo da Vinci, distractor: SAME_CATEGORY }
+              - { key: D, text: Donatello, distractor: SAME_CATEGORY }
+            explanation: He worked on it for about four years, standing on scaffolding most of the time.
+            topics: { art: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: black-square-malevich
         statement: "«Чёрный квадрат» написал Казимир Малевич (1915)."
-        sources: [{ name: "Википедия: Чёрный квадрат", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Чёрный квадрат", type: REFERENCE, verified: false } ]
         questions:
           - id: black-square-malevich-ru-1
             language: ru
@@ -122,7 +202,7 @@ families:
 
       - id: dali-clocks
         statement: "Картина «Постоянство памяти» с «растекающимися» часами — работа Сальвадора Дали."
-        sources: [{ name: "Википедия: Постоянство памяти", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Постоянство памяти", type: REFERENCE, verified: false } ]
         questions:
           - id: dali-clocks-ru-1
             language: ru
@@ -142,3 +222,23 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: dali-clocks-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which artist painted the famous "melting" clocks?
+            options:
+              - { key: A, text: René Magritte, distractor: NEAR_MISS }
+              - { key: B, text: Salvador Dalí, correct: true }
+              - { key: C, text: Pablo Picasso, distractor: SAME_CATEGORY }
+              - { key: D, text: Joan Miró, distractor: SAME_CATEGORY }
+            explanation: The Persistence of Memory, 1931. Magritte, also a surrealist, painted The Son of Man with the apple.
+            topics: { art: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

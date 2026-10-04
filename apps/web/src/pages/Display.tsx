@@ -3,14 +3,19 @@ import { useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
 import type { GameResults, Snapshot } from "@quiz/shared";
 import { PhaseBar, StatCards } from "../components.tsx";
-import { t } from "../strings.ts";
+import { setLanguage, useT } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
 
 declare const __LAN_ORIGIN__: string;
 
 export function Display({ code }: { code: string }) {
+  const t = useT();
   const token = useMemo(() => new URLSearchParams(location.hash.slice(1)).get("t"), []);
   const { snapshot: s, status, timingAt } = useRoom(code, token);
+  const roomLanguage = s?.room.language;
+  useEffect(() => {
+    if (roomLanguage) setLanguage(roomLanguage);
+  }, [roomLanguage]);
 
   if (!token || status === "unauthorized") return <main className="center">{t.displayNoToken}</main>;
   if (status === "not-found") return <main className="center">{t.roomNotFound}</main>;
@@ -41,6 +46,7 @@ function joinOrigin() {
 }
 
 function Lobby({ code, s }: { code: string; s: Snapshot }) {
+  const t = useT();
   const joinUrl = `${joinOrigin()}/j/${code}`;
   const [qr, setQr] = useState<string | null>(null);
   useEffect(() => {
@@ -83,6 +89,7 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
 }
 
 function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
+  const t = useT();
   const q = s.question!;
   const reveal = s.reveal;
   const total = reveal ? Object.values(reveal.distribution).reduce((a, b) => a + b, 0) : 0;
@@ -122,6 +129,7 @@ function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
 }
 
 function Results({ results }: { results: GameResults }) {
+  const t = useT();
   const [winner, ...rest] = results.leaderboard;
   return (
     <div className="results">

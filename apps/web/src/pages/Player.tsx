@@ -6,15 +6,32 @@ import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { PhaseBar } from "../components.tsx";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
-import { t } from "../strings.ts";
+import { setLanguage, useT } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
 
 export function Player({ code }: { code: string }) {
+  const t = useT();
   const [me, setMe] = useState<PlayerSession | null>(() => session.load(code));
   const { snapshot, status, timingAt } = useRoom(code, me?.playerToken ?? null);
   const [editing, setEditing] = useState(false);
   // Own answers are never broadcast, so the snapshot only has them after a reconnect; keep the last submission.
   const [submitted, setSubmitted] = useState<OnboardingInput | null>(null);
+
+  // Learn the room's language (and which topics have content in it) before joining.
+  const [topics, setTopics] = useState<string[] | null>(null);
+  useEffect(() => {
+    api
+      .roomInfo(code)
+      .then((info) => {
+        setLanguage(info.language);
+        setTopics(info.topics);
+      })
+      .catch(() => setTopics([]));
+  }, [code]);
+  const roomLanguage = snapshot?.room.language;
+  useEffect(() => {
+    if (roomLanguage) setLanguage(roomLanguage);
+  }, [roomLanguage]);
 
   useEffect(() => {
     if (status === "unauthorized") {
@@ -45,6 +62,7 @@ export function Player({ code }: { code: string }) {
           code={code}
           token={me.playerToken}
           initial={submitted ?? you.onboarding}
+          availableTopics={topics}
           onDone={(input) => {
             setSubmitted(input);
             setEditing(false);
@@ -59,6 +77,7 @@ export function Player({ code }: { code: string }) {
 }
 
 function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSession) => void }) {
+  const t = useT();
   const [name, setName] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -104,6 +123,7 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
 }
 
 function useCommand(code: string, token: string) {
+  const t = useT();
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const run = async (f: () => Promise<unknown>) => {
@@ -122,6 +142,7 @@ function useCommand(code: string, token: string) {
 }
 
 function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: string; token: string; timingAt: number; onEdit: () => void }) {
+  const t = useT();
   const isHost = s.you.role === "player" && s.you.isHost;
   const cmd = useCommand(code, token);
   const game = s.game;
@@ -207,6 +228,7 @@ function QuestionBody({
   run: (f: () => Promise<unknown>) => Promise<void>;
   busy: boolean;
 }) {
+  const t = useT();
   const q = s.question;
   if (s.you.role === "player" && s.you.status === "PENDING") {
     return <section className="center grow">{t.pendingJoin}</section>;
@@ -271,6 +293,7 @@ function QuestionBody({
 }
 
 function HostBar({ s, host, busy }: { s: Snapshot; host: (c: HostCommand) => Promise<void>; busy: boolean }) {
+  const t = useT();
   const [confirmEnd, setConfirmEnd] = useState(false);
   const [softDismissed, setSoftDismissed] = useState(false);
   useEffect(() => {

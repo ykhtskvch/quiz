@@ -7,7 +7,7 @@ families:
     facts:
       - id: cheetah-fastest
         statement: "Гепард — самое быстрое наземное животное."
-        sources: [{ name: "Википедия: Гепард", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Гепард", type: REFERENCE, verified: false } ]
         questions:
           - id: cheetah-fastest-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: cheetah-fastest-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the fastest land animal?
+            options:
+              - { key: A, text: The lion, distractor: SAME_CATEGORY }
+              - { key: B, text: The cheetah, correct: true }
+              - { key: C, text: The wildebeest, distractor: NEAR_MISS }
+              - { key: D, text: The ostrich, distractor: SAME_CATEGORY }
+            explanation: Over short distances it reaches about 100 km/h (60 mph).
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: blue-whale
         statement: "Синий кит — самое крупное животное в истории Земли."
-        sources: [{ name: "Википедия: Синий кит", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Синий кит", type: REFERENCE, verified: false } ]
         questions:
           - id: blue-whale-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: blue-whale-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the largest animal that has ever lived on Earth?
+            options:
+              - { key: A, text: The African elephant, distractor: SAME_CATEGORY }
+              - { key: B, text: The blue whale, correct: true }
+              - { key: C, text: Argentinosaurus, distractor: NEAR_MISS }
+              - { key: D, text: The sperm whale, distractor: SAME_CATEGORY }
+            explanation: It is bigger than even the largest dinosaurs.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: ostrich-largest-bird
         statement: "Страус — самая крупная птица."
-        sources: [{ name: "Википедия: Африканский страус", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Африканский страус", type: REFERENCE, verified: false } ]
         questions:
           - id: ostrich-largest-bird-ru-1
             language: ru
@@ -73,13 +113,33 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: ostrich-largest-bird-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the largest bird?
+            options:
+              - { key: A, text: The emu, distractor: NEAR_MISS }
+              - { key: B, text: The ostrich, correct: true }
+              - { key: C, text: The albatross, distractor: SAME_CATEGORY }
+              - { key: D, text: The condor, distractor: SAME_CATEGORY }
+            explanation: The emu is second tallest; the albatross has the widest wingspan.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: animal-facts
     name: "Удивительные животные"
     facts:
       - id: octopus-hearts
         statement: "У осьминога три сердца."
-        sources: [{ name: "Википедия: Осьминоги", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Осьминоги", type: REFERENCE, verified: false } ]
         questions:
           - id: octopus-hearts-ru-1
             language: ru
@@ -99,10 +159,30 @@ families:
             effects: { I_KNOW_THIS: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: octopus-hearts-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many hearts does an octopus have?
+            options:
+              - { key: A, text: One, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Two, distractor: PLAUSIBLE }
+              - { key: C, text: Three, correct: true }
+              - { key: D, text: Eight, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Two pump blood through the gills, the third through the body. Eight is the number of arms.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: spider-legs
         statement: "У паука восемь ног; у насекомых — шесть."
-        sources: [{ name: "Википедия: Пауки", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пауки", type: REFERENCE, verified: false } ]
         questions:
           - id: spider-legs-ru-1
             language: ru
@@ -122,10 +202,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: spider-legs-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: How many legs does a spider have?
+            options:
+              - { key: A, text: Six, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Eight, correct: true }
+              - { key: C, text: Ten, distractor: PLAUSIBLE }
+              - { key: D, text: Twelve, distractor: PLAUSIBLE }
+            explanation: That's why spiders are arachnids, not insects.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: joey
         statement: "Детёныша кенгуру называют «джоуи»."
-        sources: [{ name: "Википедия: Кенгуру", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Кенгуру", type: REFERENCE, verified: false } ]
         questions:
           - id: joey-ru-1
             language: ru
@@ -145,10 +245,30 @@ families:
             effects: { I_KNOW_THIS: 0.8 }
             status: DRAFT
             generation_method: AI
+          - id: joey-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is a baby kangaroo called?
+            options:
+              - { key: A, text: A joey, correct: true }
+              - { key: B, text: A wallaby, distractor: NEAR_MISS }
+              - { key: C, text: A wombat, distractor: SAME_CATEGORY }
+              - { key: D, text: A dingo, distractor: SAME_CATEGORY }
+            explanation: Wallabies are smaller kangaroo species, a wombat is another marsupial, a dingo is a dog.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: koala-eucalyptus
         statement: "Коалы питаются почти исключительно листьями эвкалипта."
-        sources: [{ name: "Википедия: Коала", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Коала", type: REFERENCE, verified: false } ]
         questions:
           - id: koala-eucalyptus-ru-1
             language: ru
@@ -168,10 +288,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: koala-eucalyptus-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What do koalas eat?
+            options:
+              - { key: A, text: Bamboo, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Eucalyptus leaves, correct: true }
+              - { key: C, text: Insects, distractor: PLAUSIBLE }
+              - { key: D, text: Fruit, distractor: PLAUSIBLE }
+            explanation: Bamboo is the giant panda's food.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: wwf-panda
         statement: "Символ Всемирного фонда дикой природы (WWF) — большая панда."
-        sources: [{ name: "Википедия: Всемирный фонд дикой природы", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Всемирный фонд дикой природы", type: REFERENCE, verified: false } ]
         questions:
           - id: wwf-panda-ru-1
             language: ru
@@ -191,3 +331,23 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: wwf-panda-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which animal is the symbol of the WWF?
+            options:
+              - { key: A, text: The polar bear, distractor: SAME_CATEGORY }
+              - { key: B, text: The giant panda, correct: true }
+              - { key: C, text: The snow leopard, distractor: SAME_CATEGORY }
+              - { key: D, text: The tiger, distractor: SAME_CATEGORY }
+            explanation: The 1961 logo was inspired by Chi Chi, a panda at London Zoo.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

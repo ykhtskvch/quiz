@@ -6,6 +6,8 @@ import {
   NICKNAME_MAX,
   type AnalyticsEvent,
   type HostCommand,
+  type Language,
+  type RoomInfo,
   type OnboardingInput,
   type OptionKey,
   type QuestionRating,
@@ -13,6 +15,8 @@ import {
   type SessionFeedbackInput,
   type Snapshot,
 } from "@quiz/shared";
+import { BANK } from "@quiz/shared/bank-data";
+import { availableTopics, DEFAULT_ENGINE_CONFIG } from "@quiz/engine";
 import { writeAnalytics } from "./analytics.ts";
 import { newRoomState, Room, ROOM_STATE_VERSION, type Effect, type Result, type RoomState, type Viewer } from "./game.ts";
 
@@ -52,12 +56,19 @@ export class RoomDO extends DurableObject<Env> {
 
   // ---------- commands (RPC from the Worker) ----------
 
-  async init(code: string): Promise<Result<{ displayToken: string }>> {
+  async init(code: string, language: Language): Promise<Result<{ displayToken: string }>> {
     if (this.state) return { ok: false, status: 409, error: "room exists" };
     const displayToken = randomToken();
-    this.state = newRoomState(code, await sha256(displayToken), Date.now(), this.config);
+    this.state = newRoomState(code, await sha256(displayToken), Date.now(), this.config, language);
     await this.commit(new Room(this.state, this.config));
     return { ok: true, value: { displayToken } };
+  }
+
+  /** Public pre-join info (language + topics that have content in it). */
+  async info(): Promise<Result<RoomInfo>> {
+    if (!this.live()) return fail(404, "room not found");
+    const language = this.state!.language;
+    return { ok: true, value: { language, topics: availableTopics(BANK, { ...DEFAULT_ENGINE_CONFIG, language }) } };
   }
 
   async join(rawNickname: string): Promise<Result<{ playerId: string; playerToken: string; isHost: boolean }>> {

@@ -9,6 +9,7 @@ import {
   type GameConfig,
   type GameResults,
   type GameStatus,
+  type Language,
   type OnboardingInput,
   type OptionKey,
   type PersonalResult,
@@ -101,7 +102,7 @@ export type Game = {
 };
 
 /** Bump when RoomState changes shape; rooms stored in an older shape are treated as closed. */
-export const ROOM_STATE_VERSION = 5;
+export const ROOM_STATE_VERSION = 6;
 
 /** `activeFrom` for a player who hasn't finished onboarding during a game. */
 export const NOT_YET = Number.MAX_SAFE_INTEGER;
@@ -109,6 +110,7 @@ export const NOT_YET = Number.MAX_SAFE_INTEGER;
 export type RoomState = {
   version: number;
   code: string;
+  language: Language;
   createdAt: number;
   lastActivityAt: number;
   displayTokenHash: string;
@@ -137,10 +139,11 @@ const fail = (status: ErrorStatus, error: string): Result<never> => ({ ok: false
 
 const PHASE_DEADLINES: PhaseDeadline[] = ["PRESENTATION_END", "ANSWER_END", "REVEAL_END", "NEXT_QUESTION"];
 
-export function newRoomState(code: string, displayTokenHash: string, now: number, config: GameConfig): RoomState {
+export function newRoomState(code: string, displayTokenHash: string, now: number, config: GameConfig, language: Language = "ru"): RoomState {
   return {
     version: ROOM_STATE_VERSION,
     code,
+    language,
     createdAt: now,
     lastActivityAt: now,
     displayTokenHash,
@@ -382,7 +385,7 @@ export class Room {
             onboarding: me.onboarding,
           }
         : { role: "display" },
-      room: { code: this.s.code, status: this.roomStatus(), players: this.s.players.map((p) => this.publicPlayer(p)) },
+      room: { code: this.s.code, language: this.s.language, status: this.roomStatus(), players: this.s.players.map((p) => this.publicPlayer(p)) },
       game: g ? { number: g.number, status: g.status, softEndSuggested: g.softEndSuggested } : null,
       question: g?.status === "FINISHED" ? null : this.publicQuestion(now),
       reveal: q?.phase === "REVEALED" && g?.status !== "FINISHED" ? this.revealData(q) : null,
@@ -468,7 +471,7 @@ export class Room {
       usedQuestionIds: new Set(this.s.usedQuestionIds),
       usedFactIds: new Set(this.s.usedFactIds),
       state: g.composition,
-      config: this.engine,
+      config: { ...this.engine, language: this.s.language },
       rng: this.rng,
     });
     if (!selection) return this.finishGame(now, "BANK_EXHAUSTED"); // bank exhausted for this room

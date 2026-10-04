@@ -4,7 +4,7 @@ import { QuestionSchema, type Question, type Taxonomy } from "./schema.ts";
 
 const taxonomy: Taxonomy = {
   contexts: [{ code: "GLOBAL", name: "Global" }, { code: "POST_SOVIET", name: "Post-Soviet" }],
-  topics: [{ slug: "space", name: "Space", group: "Science", level: "A", target_questions: 15 }],
+  topics: [{ slug: "space", name: "Space", name_en: "Space", group: "Science", group_en: "Science", level: "A", target_questions: 15 }],
 };
 
 const question = (overrides: Partial<Question> = {}): Question =>

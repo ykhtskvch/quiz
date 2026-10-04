@@ -37,6 +37,7 @@ const config = { ...DEFAULT_ENGINE_CONFIG, allowDrafts: values.drafts };
 
 type Archetype = {
   name: string;
+  language?: "ru" | "en";
   players: number;
   ages: AgeBand[];
   pool: string[];
@@ -45,6 +46,24 @@ type Archetype = {
 };
 
 const ARCHETYPES: Archetype[] = [
+  {
+    name: "EN: 2 постсоветских + 3 британца",
+    language: "en",
+    players: 5,
+    ages: ["25_34", "35_44"],
+    pool: ["space", "british-culture", "world-pop", "world-cinema", "geography", "food", "american-pop-culture"],
+    backgrounds: ["POST_SOVIET"],
+    dignity: ["BALANCE", "POP"],
+  },
+  {
+    name: "EN: интернациональная, культуру пропустили",
+    language: "en",
+    players: 6,
+    ages: ["18_24", "25_34", "35_44"],
+    pool: ["world-cinema", "world-pop", "fandoms", "videogames", "science", "american-pop-culture", "nature"],
+    backgrounds: null,
+    dignity: ["BALANCE"],
+  },
   {
     name: "Ностальгия 35–44, постсоветские",
     players: 6,
@@ -95,7 +114,7 @@ function makePlayer(a: Archetype, i: number, rng: () => number): OnboardingInput
   return {
     ageBand: a.ages[i % a.ages.length],
     topics: liked.map((slug) => ({ slug, preference: "LIKE" as const, depth: pick<Depth>(["CASUAL", "INTERESTED", "EXPERT"], rng) })),
-    backgrounds: a.backgrounds,
+    backgrounds: a.name.startsWith("EN: 2 постсоветских") ? (i < 2 ? ["POST_SOVIET"] : ["UK"]) : a.backgrounds,
     dignity: pick(a.dignity, rng),
   };
 }
@@ -137,7 +156,7 @@ function simulate(a: Archetype, seed: number): Metrics {
   const topics: string[] = [];
 
   for (let i = 0; i < QUESTIONS; i++) {
-    const r = nextQuestion({ bank: BANK, profile, activePlayerIds: ids, usedQuestionIds: usedQ, usedFactIds: usedF, state, config, rng });
+    const r = nextQuestion({ bank: BANK, profile, activePlayerIds: ids, usedQuestionIds: usedQ, usedFactIds: usedF, state, config: { ...config, language: a.language ?? "ru" }, rng });
     if (!r) break;
     const q = r.question;
     usedQ.add(q.id);

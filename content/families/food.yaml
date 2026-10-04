@@ -7,7 +7,7 @@ families:
     facts:
       - id: margherita-queen
         statement: "Пицца «Маргарита» названа в честь итальянской королевы Маргариты Савойской."
-        sources: [{ name: "Википедия: Пицца «Маргарита»", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пицца «Маргарита»", type: REFERENCE, verified: false } ]
         questions:
           - id: margherita-queen-ru-1
             language: ru
@@ -27,10 +27,30 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
             status: DRAFT
             generation_method: AI
+          - id: margherita-queen-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who is the Margherita pizza named after?
+            options:
+              - { key: A, text: A queen of Italy, correct: true }
+              - { key: B, text: The pizza maker's wife, distractor: PLAUSIBLE }
+              - { key: C, text: The daisy flower, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: An opera heroine, distractor: PLAUSIBLE }
+            explanation: Legend says its tomato, mozzarella and basil echo the Italian flag. "Margherita" also means "daisy" in Italian.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: wasabi
         statement: "Васаби — японская приправа из растения, родственного хрену."
-        sources: [{ name: "Википедия: Васаби", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Васаби", type: REFERENCE, verified: false } ]
         questions:
           - id: wasabi-ru-1
             language: ru
@@ -50,10 +70,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: wasabi-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is wasabi?
+            options:
+              - { key: A, text: Japanese horseradish, correct: true }
+              - { key: B, text: Pickled ginger, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Soy sauce, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Seaweed, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Pickled ginger is gari; the seaweed wrapped around rolls is nori.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: paella-spain
         statement: "Паэлья — блюдо испанской (валенсийской) кухни."
-        sources: [{ name: "Википедия: Паэлья", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Паэлья", type: REFERENCE, verified: false } ]
         questions:
           - id: paella-spain-ru-1
             language: ru
@@ -73,10 +113,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: paella-spain-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which country does paella come from?
+            options:
+              - { key: A, text: Italy, distractor: NEAR_MISS }
+              - { key: B, text: Spain, correct: true }
+              - { key: C, text: Portugal, distractor: NEAR_MISS }
+              - { key: D, text: Mexico, distractor: SAME_CATEGORY }
+            explanation: It comes from Valencia and is named after the pan it is cooked in.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: guacamole-avocado
         statement: "Основа гуакамоле — авокадо."
-        sources: [{ name: "Википедия: Гуакамоле", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Гуакамоле", type: REFERENCE, verified: false } ]
         questions:
           - id: guacamole-avocado-ru-1
             language: ru
@@ -96,10 +156,30 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: guacamole-avocado-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the base of guacamole?
+            options:
+              - { key: A, text: Avocado, correct: true }
+              - { key: B, text: Chickpeas, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Aubergine, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Beans, distractor: SAME_CATEGORY }
+            explanation: Chickpeas make hummus, aubergine makes baba ganoush.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: saffron-expensive
         statement: "Шафран — самая дорогая пряность в мире."
-        sources: [{ name: "Википедия: Шафран (пряность)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Шафран (пряность)", type: REFERENCE, verified: false } ]
         questions:
           - id: saffron-expensive-ru-1
             language: ru
@@ -119,10 +199,30 @@ families:
             effects: { I_KNOW_THIS: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: saffron-expensive-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which is the most expensive spice in the world?
+            options:
+              - { key: A, text: Vanilla, distractor: NEAR_MISS }
+              - { key: B, text: Saffron, correct: true }
+              - { key: C, text: Cardamom, distractor: SAME_CATEGORY }
+              - { key: D, text: Cinnamon, distractor: SAME_CATEGORY }
+            explanation: It is picked by hand — the stigmas of crocus flowers. Vanilla is second.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: emmental-holes
         statement: "Швейцарский сыр эмменталь знаменит крупными дырками."
-        sources: [{ name: "Википедия: Эмменталь", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Эмменталь", type: REFERENCE, verified: false } ]
         questions:
           - id: emmental-holes-ru-1
             language: ru
@@ -142,3 +242,23 @@ families:
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: emmental-holes-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which Swiss cheese is famous for its big holes?
+            options:
+              - { key: A, text: Parmesan, distractor: SAME_CATEGORY }
+              - { key: B, text: Emmental, correct: true }
+              - { key: C, text: Camembert, distractor: SAME_CATEGORY }
+              - { key: D, text: Cheddar, distractor: SAME_CATEGORY }
+            explanation: The holes are gas bubbles formed while the cheese matures.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

@@ -3,6 +3,694 @@ import type { BankQuestion } from "./bank.ts";
 
 export const BANK: BankQuestion[] = [
   {
+    "id": "friends-central-perk-en-1",
+    "factId": "friends-central-perk",
+    "familyId": "us-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What is the name of the coffee shop in Friends?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monk's Café"
+      },
+      {
+        "key": "B",
+        "text": "Central Perk"
+      },
+      {
+        "key": "C",
+        "text": "The Peach Pit"
+      },
+      {
+        "key": "D",
+        "text": "Luke's Diner"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Monk's is Seinfeld's diner, the Peach Pit is Beverly Hills, 90210, Luke's is Gilmore Girls.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1,
+      "GLOBAL": 0.8
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "simpsons-springfield-en-1",
+    "factId": "simpsons-springfield",
+    "familyId": "us-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "In which town do the Simpsons live?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Shelbyville"
+      },
+      {
+        "key": "B",
+        "text": "Springfield"
+      },
+      {
+        "key": "C",
+        "text": "Quahog"
+      },
+      {
+        "key": "D",
+        "text": "South Park"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Shelbyville is Springfield's rival town; Quahog is Family Guy's.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1,
+      "GLOBAL": 0.8
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.8
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "seinfeld-nothing-en-1",
+    "factId": "seinfeld-nothing",
+    "familyId": "us-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which sitcom was famously described as \"a show about nothing\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Friends"
+      },
+      {
+        "key": "B",
+        "text": "Seinfeld"
+      },
+      {
+        "key": "C",
+        "text": "Cheers"
+      },
+      {
+        "key": "D",
+        "text": "Frasier"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The pitch even appears inside the show, when Jerry and George write a sitcom.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "the-office-dunder-mifflin-en-1",
+    "factId": "the-office-dunder-mifflin",
+    "familyId": "us-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What does Dunder Mifflin sell in The Office?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Insurance"
+      },
+      {
+        "key": "B",
+        "text": "Paper"
+      },
+      {
+        "key": "C",
+        "text": "Office furniture"
+      },
+      {
+        "key": "D",
+        "text": "Printers"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Based in Scranton, Pennsylvania, with Michael Scott in charge.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "walter-white-teacher-en-1",
+    "factId": "walter-white-teacher",
+    "familyId": "us-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What is Walter White's job at the start of Breaking Bad?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A pharmacist"
+      },
+      {
+        "key": "B",
+        "text": "A chemistry teacher"
+      },
+      {
+        "key": "C",
+        "text": "A police officer"
+      },
+      {
+        "key": "D",
+        "text": "A car wash owner"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He also works at a car wash — and later the family buys one.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1,
+      "GLOBAL": 0.8
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "oprah-car-en-1",
+    "factId": "oprah-car",
+    "familyId": "us-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which talk-show host shouted \"You get a car!\" to her whole audience?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ellen DeGeneres"
+      },
+      {
+        "key": "B",
+        "text": "Oprah Winfrey"
+      },
+      {
+        "key": "C",
+        "text": "Martha Stewart"
+      },
+      {
+        "key": "D",
+        "text": "Tyra Banks"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "All 276 people in the studio got a new Pontiac in 2004.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "super-bowl-en-1",
+    "factId": "super-bowl",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Which sport's championship game is the Super Bowl?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Baseball"
+      },
+      {
+        "key": "B",
+        "text": "American football"
+      },
+      {
+        "key": "C",
+        "text": "Basketball"
+      },
+      {
+        "key": "D",
+        "text": "Ice hockey"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The half-time show and the ads are almost as famous as the game.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "world-series-baseball-en-1",
+    "factId": "world-series-baseball",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "The World Series is the championship of which sport?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Basketball"
+      },
+      {
+        "key": "B",
+        "text": "Baseball"
+      },
+      {
+        "key": "C",
+        "text": "American football"
+      },
+      {
+        "key": "D",
+        "text": "Golf"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Despite the name, it is almost entirely American — one Canadian team takes part.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.4,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "thanksgiving-date-en-1",
+    "factId": "thanksgiving-date",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "When is Thanksgiving in the United States?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The last Monday of October"
+      },
+      {
+        "key": "B",
+        "text": "The fourth Thursday of November"
+      },
+      {
+        "key": "C",
+        "text": "The second Monday of October"
+      },
+      {
+        "key": "D",
+        "text": "1 December"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The second Monday of October is Canadian Thanksgiving.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hollywoodland-en-1",
+    "factId": "hollywoodland",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What did the Hollywood sign originally say?",
+    "options": [
+      {
+        "key": "A",
+        "text": "HOLLYWOOD STUDIOS"
+      },
+      {
+        "key": "B",
+        "text": "HOLLYWOODLAND"
+      },
+      {
+        "key": "C",
+        "text": "HOLLYWOOD HILLS"
+      },
+      {
+        "key": "D",
+        "text": "LOS ANGELES"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It was put up in 1923 to sell homes; \"LAND\" was removed in 1949.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "route-66-en-1",
+    "factId": "route-66",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Route 66 ran from Chicago to which coast city?",
+    "options": [
+      {
+        "key": "A",
+        "text": "San Francisco"
+      },
+      {
+        "key": "B",
+        "text": "Santa Monica (Los Angeles)"
+      },
+      {
+        "key": "C",
+        "text": "San Diego"
+      },
+      {
+        "key": "D",
+        "text": "Seattle"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Get your kicks on Route 66\" — the \"Mother Road\" opened in 1926.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "graceland-memphis-en-1",
+    "factId": "graceland-memphis",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In which city is Elvis Presley's Graceland?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nashville"
+      },
+      {
+        "key": "B",
+        "text": "Memphis"
+      },
+      {
+        "key": "C",
+        "text": "Las Vegas"
+      },
+      {
+        "key": "D",
+        "text": "New Orleans"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Nashville is country music's capital; Vegas is where Elvis did his famous residencies.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {
+      "80s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "statue-of-liberty-france-en-1",
+    "factId": "statue-of-liberty-france",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Which country gave the United States the Statue of Liberty?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The United Kingdom"
+      },
+      {
+        "key": "B",
+        "text": "France"
+      },
+      {
+        "key": "C",
+        "text": "Spain"
+      },
+      {
+        "key": "D",
+        "text": "Italy"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Designed by Frédéric Bartholdi; Gustave Eiffel engineered its iron frame.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1,
+      "GLOBAL": 0.8
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "disneyland-1955-en-1",
+    "factId": "disneyland-1955",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Where did the very first Disneyland open, in 1955?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Orlando, Florida"
+      },
+      {
+        "key": "B",
+        "text": "Anaheim, California"
+      },
+      {
+        "key": "C",
+        "text": "Paris, France"
+      },
+      {
+        "key": "D",
+        "text": "Tokyo, Japan"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Walt Disney World in Florida came later, in 1971.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "got-milk-en-1",
+    "factId": "got-milk",
+    "familyId": "us-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which drink was advertised with the slogan \"Got ___?\"",
+    "options": [
+      {
+        "key": "A",
+        "text": "Coke"
+      },
+      {
+        "key": "B",
+        "text": "Milk"
+      },
+      {
+        "key": "C",
+        "text": "Coffee"
+      },
+      {
+        "key": "D",
+        "text": "Juice"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Celebrities posed with milk moustaches for years.",
+    "topics": {
+      "american-pop-culture": 1
+    },
+    "contexts": {
+      "US": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "colosseum-purpose-ru-1",
     "factId": "colosseum-purpose",
     "familyId": "antiquity",
@@ -31,6 +719,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Гонки колесниц устраивали в Большом цирке.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "colosseum-purpose-en-1",
+    "factId": "colosseum-purpose",
+    "familyId": "antiquity",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the Colosseum built for?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Meetings of the Senate"
+      },
+      {
+        "key": "B",
+        "text": "Gladiator fights and public spectacles"
+      },
+      {
+        "key": "C",
+        "text": "As a temple to Jupiter"
+      },
+      {
+        "key": "D",
+        "text": "Chariot races"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Chariot races were held at the Circus Maximus.",
     "topics": {
       "ancient-world": 1
     },
@@ -92,6 +824,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "cheops-wonder-en-1",
+    "factId": "cheops-wonder",
+    "familyId": "antiquity",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of the Seven Wonders of the Ancient World still stands today?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Colossus of Rhodes"
+      },
+      {
+        "key": "B",
+        "text": "The Great Pyramid of Giza"
+      },
+      {
+        "key": "C",
+        "text": "The Hanging Gardens of Babylon"
+      },
+      {
+        "key": "D",
+        "text": "The Lighthouse of Alexandria"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It is also the oldest of the seven.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "veni-vidi-vici-ru-1",
     "factId": "veni-vidi-vici",
     "familyId": "antiquity",
@@ -120,6 +897,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Так Цезарь сообщил в Рим о быстрой победе в 47 году до н. э.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "veni-vidi-vici-en-1",
+    "factId": "veni-vidi-vici",
+    "familyId": "antiquity",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who said \"I came, I saw, I conquered\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Alexander the Great"
+      },
+      {
+        "key": "B",
+        "text": "Julius Caesar"
+      },
+      {
+        "key": "C",
+        "text": "Hannibal"
+      },
+      {
+        "key": "D",
+        "text": "Nero"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Caesar's report to Rome after a lightning victory in 47 BC: \"Veni, vidi, vici\".",
     "topics": {
       "ancient-world": 1
     },
@@ -181,6 +1002,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "olympics-greece-en-1",
+    "factId": "olympics-greece",
+    "familyId": "antiquity",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where did the Olympic Games begin?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ancient Rome"
+      },
+      {
+        "key": "B",
+        "text": "Ancient Greece"
+      },
+      {
+        "key": "C",
+        "text": "Ancient Egypt"
+      },
+      {
+        "key": "D",
+        "text": "Persia"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The first recorded Games were held at Olympia in 776 BC.",
+    "topics": {
+      "ancient-world": 1,
+      "sports": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "trojan-horse-ru-1",
     "factId": "trojan-horse",
     "familyId": "antiquity",
@@ -209,6 +1075,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Отсюда «троянский конь» — и в компьютерной безопасности тоже.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "trojan-horse-en-1",
+    "factId": "trojan-horse",
+    "familyId": "antiquity",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "According to legend, how did the Greeks get inside Troy?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Through a secret tunnel"
+      },
+      {
+        "key": "B",
+        "text": "Hidden inside a wooden horse"
+      },
+      {
+        "key": "C",
+        "text": "By bribing the guards"
+      },
+      {
+        "key": "D",
+        "text": "Disguised as merchants"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Hence the \"Trojan horse\" — in computer security too.",
     "topics": {
       "ancient-world": 1
     },
@@ -269,6 +1179,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "pompeii-vesuvius-en-1",
+    "factId": "pompeii-vesuvius",
+    "familyId": "antiquity",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which volcano destroyed Pompeii?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Etna"
+      },
+      {
+        "key": "B",
+        "text": "Vesuvius"
+      },
+      {
+        "key": "C",
+        "text": "Stromboli"
+      },
+      {
+        "key": "D",
+        "text": "Krakatoa"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Etna is in Sicily and still very active.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "mona-lisa-louvre-ru-1",
     "factId": "mona-lisa-louvre",
     "familyId": "painting",
@@ -297,6 +1251,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "В 1911 году картину украли из Лувра — и вернули только через два года.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mona-lisa-louvre-en-1",
+    "factId": "mona-lisa-louvre",
+    "familyId": "painting",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which museum is home to the Mona Lisa?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Uffizi"
+      },
+      {
+        "key": "B",
+        "text": "The Louvre"
+      },
+      {
+        "key": "C",
+        "text": "The Prado"
+      },
+      {
+        "key": "D",
+        "text": "The Hermitage"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It was stolen from the Louvre in 1911 and only recovered two years later.",
     "topics": {
       "art": 1
     },
@@ -357,6 +1355,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "starry-night-van-gogh-en-1",
+    "factId": "starry-night-van-gogh",
+    "familyId": "painting",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who painted The Starry Night?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Claude Monet"
+      },
+      {
+        "key": "B",
+        "text": "Vincent van Gogh"
+      },
+      {
+        "key": "C",
+        "text": "Paul Gauguin"
+      },
+      {
+        "key": "D",
+        "text": "Edgar Degas"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Painted at the asylum in Saint-Rémy; Gauguin had shared a house with Van Gogh in Arles shortly before.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "scream-munch-ru-1",
     "factId": "scream-munch",
     "familyId": "painting",
@@ -401,6 +1443,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "scream-munch-en-1",
+    "factId": "scream-munch",
+    "familyId": "painting",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who painted The Scream?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Edvard Munch"
+      },
+      {
+        "key": "B",
+        "text": "Gustav Klimt"
+      },
+      {
+        "key": "C",
+        "text": "Egon Schiele"
+      },
+      {
+        "key": "D",
+        "text": "Francisco Goya"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Munch made several versions — it even lives on as the 😱 emoji.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sistine-michelangelo-ru-1",
     "factId": "sistine-michelangelo",
     "familyId": "painting",
@@ -429,6 +1515,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Он работал над ним около четырёх лет, почти всё время стоя на лесах.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sistine-michelangelo-en-1",
+    "factId": "sistine-michelangelo",
+    "familyId": "painting",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who painted the ceiling of the Sistine Chapel?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Raphael"
+      },
+      {
+        "key": "B",
+        "text": "Michelangelo"
+      },
+      {
+        "key": "C",
+        "text": "Leonardo da Vinci"
+      },
+      {
+        "key": "D",
+        "text": "Donatello"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He worked on it for about four years, standing on scaffolding most of the time.",
     "topics": {
       "art": 1
     },
@@ -529,6 +1659,727 @@ export const BANK: BankQuestion[] = [
     "dignity": 5,
     "effects": {
       "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dali-clocks-en-1",
+    "factId": "dali-clocks",
+    "familyId": "painting",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which artist painted the famous \"melting\" clocks?",
+    "options": [
+      {
+        "key": "A",
+        "text": "René Magritte"
+      },
+      {
+        "key": "B",
+        "text": "Salvador Dalí"
+      },
+      {
+        "key": "C",
+        "text": "Pablo Picasso"
+      },
+      {
+        "key": "D",
+        "text": "Joan Miró"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Persistence of Memory, 1931. Magritte, also a surrealist, painted The Son of Man with the apple.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mind-the-gap-en-1",
+    "factId": "mind-the-gap",
+    "familyId": "london",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "On which transport system would you hear \"Mind the gap\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Paris Métro"
+      },
+      {
+        "key": "B",
+        "text": "The London Underground"
+      },
+      {
+        "key": "C",
+        "text": "The New York Subway"
+      },
+      {
+        "key": "D",
+        "text": "British Rail ferries"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The announcement started on the Tube in 1969.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "big-ben-bell-en-1",
+    "factId": "big-ben-bell",
+    "familyId": "london",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Strictly speaking, what is \"Big Ben\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The clock tower"
+      },
+      {
+        "key": "B",
+        "text": "The great bell"
+      },
+      {
+        "key": "C",
+        "text": "The clock face"
+      },
+      {
+        "key": "D",
+        "text": "The Houses of Parliament"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The tower itself was renamed the Elizabeth Tower in 2012.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "elizabeth-70-years-en-1",
+    "factId": "elizabeth-70-years",
+    "familyId": "royals",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Which British monarch reigned for 70 years?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Queen Victoria"
+      },
+      {
+        "key": "B",
+        "text": "Elizabeth II"
+      },
+      {
+        "key": "C",
+        "text": "George III"
+      },
+      {
+        "key": "D",
+        "text": "Henry VIII"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Victoria held the record before her, with 63 years.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "eastenders-square-en-1",
+    "factId": "eastenders-square",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which square is at the heart of EastEnders?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Coronation Square"
+      },
+      {
+        "key": "B",
+        "text": "Albert Square"
+      },
+      {
+        "key": "C",
+        "text": "Victoria Square"
+      },
+      {
+        "key": "D",
+        "text": "Trafalgar Square"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Walford is fictional, in London's East End; Coronation Street is a different soap altogether.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tardis-police-box-en-1",
+    "factId": "tardis-police-box",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What does the TARDIS in Doctor Who look like from the outside?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A red phone box"
+      },
+      {
+        "key": "B",
+        "text": "A blue police box"
+      },
+      {
+        "key": "C",
+        "text": "A London bus"
+      },
+      {
+        "key": "D",
+        "text": "A post box"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Bigger on the inside\" — the disguise got stuck in 1963.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "del-boy-van-en-1",
+    "factId": "del-boy-van",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What do Del Boy and Rodney drive in Only Fools and Horses?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A black cab"
+      },
+      {
+        "key": "B",
+        "text": "A yellow three-wheeled van"
+      },
+      {
+        "key": "C",
+        "text": "A Mini Cooper"
+      },
+      {
+        "key": "D",
+        "text": "An ice-cream van"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A Reliant Regal with \"New York – Paris – Peckham\" on the side.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blue-peter-badge-en-1",
+    "factId": "blue-peter-badge",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Which children's TV show is famous for giving out badges?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Grange Hill"
+      },
+      {
+        "key": "B",
+        "text": "Blue Peter"
+      },
+      {
+        "key": "C",
+        "text": "Teletubbies"
+      },
+      {
+        "key": "D",
+        "text": "Newsround"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It has been on air since 1958 — the longest-running children's TV show in the world.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mr-bean-atkinson-en-1",
+    "factId": "mr-bean-atkinson",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Who plays Mr. Bean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hugh Laurie"
+      },
+      {
+        "key": "B",
+        "text": "Rowan Atkinson"
+      },
+      {
+        "key": "C",
+        "text": "John Cleese"
+      },
+      {
+        "key": "D",
+        "text": "Stephen Fry"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Atkinson also played Blackadder.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1,
+      "GLOBAL": 0.8
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bake-off-star-baker-en-1",
+    "factId": "bake-off-star-baker",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What title goes to the best contestant each week on The Great British Bake Off?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Master Baker"
+      },
+      {
+        "key": "B",
+        "text": "Star Baker"
+      },
+      {
+        "key": "C",
+        "text": "Golden Whisk"
+      },
+      {
+        "key": "D",
+        "text": "Champion of the Tent"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The rarest prize is a Hollywood handshake.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wallace-wensleydale-en-1",
+    "factId": "wallace-wensleydale",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which cheese is Wallace, of Wallace & Gromit, famously fond of?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cheddar"
+      },
+      {
+        "key": "B",
+        "text": "Wensleydale"
+      },
+      {
+        "key": "C",
+        "text": "Stilton"
+      },
+      {
+        "key": "D",
+        "text": "Red Leicester"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The films gave a real boost to sales of Wensleydale.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bonfire-night-en-1",
+    "factId": "bonfire-night",
+    "familyId": "british-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Whose failed plot is remembered on Bonfire Night, 5 November?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Oliver Cromwell"
+      },
+      {
+        "key": "B",
+        "text": "Guy Fawkes"
+      },
+      {
+        "key": "C",
+        "text": "Robin Hood"
+      },
+      {
+        "key": "D",
+        "text": "Richard III"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Gunpowder Plot of 1605 tried to blow up Parliament.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mushy-peas-en-1",
+    "factId": "mushy-peas",
+    "familyId": "british-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which green side dish traditionally comes with fish and chips?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mushy peas"
+      },
+      {
+        "key": "B",
+        "text": "Brussels sprouts"
+      },
+      {
+        "key": "C",
+        "text": "Spinach"
+      },
+      {
+        "key": "D",
+        "text": "Broad beans"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Made from dried marrowfat peas.",
+    "topics": {
+      "british-culture": 1,
+      "food": 0.5
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "quid-en-1",
+    "factId": "quid",
+    "familyId": "british-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In British slang, what is a \"quid\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A penny"
+      },
+      {
+        "key": "B",
+        "text": "One pound"
+      },
+      {
+        "key": "C",
+        "text": "Five pounds"
+      },
+      {
+        "key": "D",
+        "text": "A pint"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A fiver is five pounds, a tenner ten.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "apples-and-pears-en-1",
+    "factId": "apples-and-pears",
+    "familyId": "british-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In Cockney rhyming slang, what are \"apples and pears\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Stairs"
+      },
+      {
+        "key": "B",
+        "text": "Pears"
+      },
+      {
+        "key": "C",
+        "text": "Prayers"
+      },
+      {
+        "key": "D",
+        "text": "Chairs"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "The rhyming word gets dropped: \"up the apples\" means upstairs.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "stonehenge-wiltshire-en-1",
+    "factId": "stonehenge-wiltshire",
+    "familyId": "british-life",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In which English county is Stonehenge?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cornwall"
+      },
+      {
+        "key": "B",
+        "text": "Wiltshire"
+      },
+      {
+        "key": "C",
+        "text": "Somerset"
+      },
+      {
+        "key": "D",
+        "text": "Kent"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "On Salisbury Plain; the stones were raised around 2500 BC.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
     "status": "DRAFT"
@@ -1117,6 +2968,56 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "masha-youtube-en-1",
+    "factId": "masha-youtube",
+    "familyId": "masha-i-medved",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "An episode of which Russian cartoon became one of the most-watched videos in YouTube history?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kikoriki"
+      },
+      {
+        "key": "B",
+        "text": "Masha and the Bear"
+      },
+      {
+        "key": "C",
+        "text": "The Fixies"
+      },
+      {
+        "key": "D",
+        "text": "Luntik"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The episode \"Recipe for Disaster\" (\"Masha Plus Porridge\") has billions of views.",
+    "topics": {
+      "cartoons": 1,
+      "internet-now": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.5
+    },
+    "generations": {
+      "10s": 1,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "lion-king-mufasa-ru-1",
     "factId": "lion-king-mufasa",
     "familyId": "lion-king",
@@ -1164,6 +3065,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "lion-king-mufasa-en-1",
+    "factId": "lion-king-mufasa",
+    "familyId": "lion-king",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the name of Simba's father in The Lion King?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Scar"
+      },
+      {
+        "key": "B",
+        "text": "Mufasa"
+      },
+      {
+        "key": "C",
+        "text": "Rafiki"
+      },
+      {
+        "key": "D",
+        "text": "Pumbaa"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Scar is his uncle and the villain, Rafiki the wise baboon, Pumbaa the warthog.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "shrek-fiona-night-ru-1",
     "factId": "shrek-fiona-night",
     "familyId": "shrek",
@@ -1192,6 +3140,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Дракон в мультфильме тоже есть — это будущая подруга Осла.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shrek-fiona-night-en-1",
+    "factId": "shrek-fiona-night",
+    "familyId": "shrek",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What did Princess Fiona turn into at night in Shrek?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A dragon"
+      },
+      {
+        "key": "B",
+        "text": "An ogre"
+      },
+      {
+        "key": "C",
+        "text": "A frog"
+      },
+      {
+        "key": "D",
+        "text": "A witch"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "There is a dragon in the film too — she ends up with Donkey.",
     "topics": {
       "cartoons": 1
     },
@@ -1305,6 +3299,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "berlin-wall-fall-en-1",
+    "factId": "berlin-wall-fall",
+    "familyId": "berlin",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which year did the Berlin Wall fall?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1985"
+      },
+      {
+        "key": "B",
+        "text": "1987"
+      },
+      {
+        "key": "C",
+        "text": "1989"
+      },
+      {
+        "key": "D",
+        "text": "1991"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Germany reunited a year later; the USSR collapsed in 1991.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "berlin-wall-built-ru-1",
     "factId": "berlin-wall-built",
     "familyId": "berlin",
@@ -1333,6 +3374,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "C",
     "explanation": "В 1949 году появились два немецких государства — ФРГ и ГДР; стена пришла через двенадцать лет.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "berlin-wall-built-en-1",
+    "factId": "berlin-wall-built",
+    "familyId": "berlin",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which year was the Berlin Wall built?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1949"
+      },
+      {
+        "key": "B",
+        "text": "1953"
+      },
+      {
+        "key": "C",
+        "text": "1961"
+      },
+      {
+        "key": "D",
+        "text": "1968"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The two German states were founded in 1949; the wall went up twelve years later.",
     "topics": {
       "cold-war": 1
     },
@@ -1401,6 +3490,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "berlin-four-sectors-en-1",
+    "factId": "berlin-four-sectors",
+    "familyId": "berlin",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Into how many occupation sectors was Berlin divided after the war?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Two"
+      },
+      {
+        "key": "B",
+        "text": "Three"
+      },
+      {
+        "key": "C",
+        "text": "Four"
+      },
+      {
+        "key": "D",
+        "text": "Five"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The three Western sectors became West Berlin, the Soviet one East Berlin.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "checkpoint-charlie-ru-1",
     "factId": "checkpoint-charlie",
     "familyId": "berlin",
@@ -1429,6 +3566,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "«Чарли» — буква C в радиоалфавите НАТО: это был третий пункт после «Альфы» и «Браво».",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "checkpoint-charlie-en-1",
+    "factId": "checkpoint-charlie",
+    "familyId": "berlin",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was Checkpoint Charlie?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A CIA spy base"
+      },
+      {
+        "key": "B",
+        "text": "A crossing point between West and East Berlin"
+      },
+      {
+        "key": "C",
+        "text": "An American airfield"
+      },
+      {
+        "key": "D",
+        "text": "Hitler's bunker"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Charlie\" is C in the NATO alphabet — the third checkpoint after Alpha and Bravo.",
     "topics": {
       "cold-war": 1
     },
@@ -1497,6 +3682,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "cuban-crisis-country-en-1",
+    "factId": "cuban-crisis-country",
+    "familyId": "cuban-crisis",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Soviet missiles in which country triggered the 1962 missile crisis?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Turkey"
+      },
+      {
+        "key": "B",
+        "text": "Cuba"
+      },
+      {
+        "key": "C",
+        "text": "Vietnam"
+      },
+      {
+        "key": "D",
+        "text": "Nicaragua"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "US missiles in Turkey were part of the story too: they were quietly removed as part of the deal.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "hotline-1963-ru-1",
     "factId": "hotline-1963",
     "familyId": "cuban-crisis",
@@ -1525,6 +3758,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Вопреки мифу о «красном телефоне», сначала это был телетайп.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hotline-1963-en-1",
+    "factId": "hotline-1963",
+    "familyId": "cuban-crisis",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was set up between Moscow and Washington soon after the Cuban Missile Crisis?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A direct passenger flight"
+      },
+      {
+        "key": "B",
+        "text": "A direct line between the leaders"
+      },
+      {
+        "key": "C",
+        "text": "A joint space programme"
+      },
+      {
+        "key": "D",
+        "text": "An exchange of embassies"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Despite the \"red telephone\" myth, it started as a teletype link.",
     "topics": {
       "cold-war": 1
     },
@@ -1592,6 +3873,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "iron-curtain-churchill-en-1",
+    "factId": "iron-curtain-churchill",
+    "familyId": "cold-war-start",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who gave the famous \"Iron Curtain\" speech?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Harry Truman"
+      },
+      {
+        "key": "B",
+        "text": "Winston Churchill"
+      },
+      {
+        "key": "C",
+        "text": "Franklin Roosevelt"
+      },
+      {
+        "key": "D",
+        "text": "John F. Kennedy"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Delivered in 1946 in Fulton, Missouri — with Truman in the audience.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "yalta-1945-ru-1",
     "factId": "yalta-1945",
     "familyId": "cold-war-start",
@@ -1620,6 +3948,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Тегеран был в 1943 году, а в Потсдаме летом 1945-го вместо Рузвельта был уже Трумэн.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "yalta-1945-en-1",
+    "factId": "yalta-1945",
+    "familyId": "cold-war-start",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where did Stalin, Roosevelt and Churchill meet in February 1945?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tehran"
+      },
+      {
+        "key": "B",
+        "text": "Yalta"
+      },
+      {
+        "key": "C",
+        "text": "Potsdam"
+      },
+      {
+        "key": "D",
+        "text": "Geneva"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Tehran was in 1943; at Potsdam in summer 1945 Truman had replaced Roosevelt.",
     "topics": {
       "cold-war": 1
     },
@@ -1687,6 +4063,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "soviet-bomb-1949-en-1",
+    "factId": "soviet-bomb-1949",
+    "familyId": "cold-war-start",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which year did the USSR test its first atomic bomb?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1945"
+      },
+      {
+        "key": "B",
+        "text": "1949"
+      },
+      {
+        "key": "C",
+        "text": "1953"
+      },
+      {
+        "key": "D",
+        "text": "1957"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The US did so in 1945; in 1953 the USSR tested its first hydrogen bomb.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "warsaw-pact-ru-1",
     "factId": "warsaw-pact",
     "familyId": "blocs",
@@ -1734,6 +4157,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "warsaw-pact-en-1",
+    "factId": "warsaw-pact",
+    "familyId": "blocs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the military alliance of socialist states — the counterpart to NATO — called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Comecon"
+      },
+      {
+        "key": "B",
+        "text": "The Warsaw Pact"
+      },
+      {
+        "key": "C",
+        "text": "The Comintern"
+      },
+      {
+        "key": "D",
+        "text": "The Commonwealth of Independent States"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Comecon was an economic union; the Comintern an association of communist parties (1919–1943).",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "korea-38-ru-1",
     "factId": "korea-38",
     "familyId": "blocs",
@@ -1762,6 +4232,55 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "По 17-й параллели разделили Вьетнам.",
+    "topics": {
+      "cold-war": 1,
+      "geography": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "korea-38-en-1",
+    "factId": "korea-38",
+    "familyId": "blocs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Along which parallel was Korea divided?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The 17th"
+      },
+      {
+        "key": "B",
+        "text": "The 38th"
+      },
+      {
+        "key": "C",
+        "text": "The 45th"
+      },
+      {
+        "key": "D",
+        "text": "The 49th"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Vietnam was divided along the 17th parallel.",
     "topics": {
       "cold-war": 1,
       "geography": 0.4
@@ -1832,6 +4351,55 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "olympic-boycott-1984-en-1",
+    "factId": "olympic-boycott-1984",
+    "familyId": "blocs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which Olympics did the USSR boycott?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Moscow 1980"
+      },
+      {
+        "key": "B",
+        "text": "Los Angeles 1984"
+      },
+      {
+        "key": "C",
+        "text": "Seoul 1988"
+      },
+      {
+        "key": "D",
+        "text": "Montreal 1976"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A response to the US boycott of Moscow 1980. North Korea boycotted Seoul 1988; the USSR went.",
+    "topics": {
+      "cold-war": 1,
+      "sports": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sdi-star-wars-ru-1",
     "factId": "sdi-star-wars",
     "familyId": "blocs",
@@ -1860,6 +4428,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Прозвище взяли у фильма Джорджа Лукаса 1977 года.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "BRIDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sdi-star-wars-en-1",
+    "factId": "sdi-star-wars",
+    "familyId": "blocs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Which Reagan programme was nicknamed \"Star Wars\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Moon programme"
+      },
+      {
+        "key": "B",
+        "text": "A space-based missile defence system"
+      },
+      {
+        "key": "C",
+        "text": "The Space Shuttle programme"
+      },
+      {
+        "key": "D",
+        "text": "A mission to Mars"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The nickname came from George Lucas's 1977 film.",
     "topics": {
       "cold-war": 1
     },
@@ -1975,6 +4591,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "prague-spring-en-1",
+    "factId": "prague-spring",
+    "familyId": "blocs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the 1968 period of reforms in Czechoslovakia called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Velvet Revolution"
+      },
+      {
+        "key": "B",
+        "text": "The Prague Spring"
+      },
+      {
+        "key": "C",
+        "text": "The Hungarian Autumn"
+      },
+      {
+        "key": "D",
+        "text": "Solidarity"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Velvet Revolution happened there too, but in 1989; Solidarity was a Polish trade union.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "lordi-finland-ru-1",
     "factId": "lordi-finland",
     "familyId": "eurovision-winners",
@@ -2003,6 +4666,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Песня Hard Rock Hallelujah — первая победа Финляндии на конкурсе.",
+    "topics": {
+      "eurovision": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lordi-finland-en-1",
+    "factId": "lordi-finland",
+    "familyId": "eurovision-winners",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country won Eurovision 2006 with a hard-rock band dressed as monsters?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Norway"
+      },
+      {
+        "key": "B",
+        "text": "Finland"
+      },
+      {
+        "key": "C",
+        "text": "Sweden"
+      },
+      {
+        "key": "D",
+        "text": "Iceland"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Hard Rock Hallelujah\" by Lordi — Finland's first ever win.",
     "topics": {
       "eurovision": 1
     },
@@ -2068,6 +4778,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "conchita-austria-en-1",
+    "factId": "conchita-austria",
+    "familyId": "eurovision-winners",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country did Conchita Wurst represent when she won Eurovision 2014?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Germany"
+      },
+      {
+        "key": "B",
+        "text": "Austria"
+      },
+      {
+        "key": "C",
+        "text": "Switzerland"
+      },
+      {
+        "key": "D",
+        "text": "The Netherlands"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The song was \"Rise Like a Phoenix\".",
+    "topics": {
+      "eurovision": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "hp-house-ru-1",
     "factId": "hp-house",
     "familyId": "harry-potter",
@@ -2096,6 +4852,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Распределяющая шляпа сначала хотела отправить его в Слизерин.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hp-house-en-1",
+    "factId": "hp-house",
+    "familyId": "harry-potter",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which Hogwarts house is Harry Potter in?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Slytherin"
+      },
+      {
+        "key": "B",
+        "text": "Gryffindor"
+      },
+      {
+        "key": "C",
+        "text": "Ravenclaw"
+      },
+      {
+        "key": "D",
+        "text": "Hufflepuff"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Sorting Hat almost put him in Slytherin.",
     "topics": {
       "fandoms": 1
     },
@@ -2162,6 +4965,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "hp-platform-en-1",
+    "factId": "hp-platform",
+    "familyId": "harry-potter",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which platform does the Hogwarts Express leave from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "7½"
+      },
+      {
+        "key": "B",
+        "text": "9¾"
+      },
+      {
+        "key": "C",
+        "text": "10⅓"
+      },
+      {
+        "key": "D",
+        "text": "13"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "King's Cross in London has a real sign — and a trolley disappearing into the wall.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "lotr-mount-doom-ru-1",
     "factId": "lotr-mount-doom",
     "familyId": "lotr",
@@ -2190,6 +5040,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Только в огне Ородруина, где кольцо и было выковано.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lotr-mount-doom-en-1",
+    "factId": "lotr-mount-doom",
+    "familyId": "lotr",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where can the One Ring be destroyed?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Rivendell"
+      },
+      {
+        "key": "B",
+        "text": "Mount Doom"
+      },
+      {
+        "key": "C",
+        "text": "Minas Tirith"
+      },
+      {
+        "key": "D",
+        "text": "The Shire"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Only in the fires of Orodruin, where it was forged.",
     "topics": {
       "fandoms": 1
     },
@@ -2256,6 +5152,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "twilight-jacob-en-1",
+    "factId": "twilight-jacob",
+    "familyId": "twilight",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was Jacob in Twilight?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A vampire"
+      },
+      {
+        "key": "B",
+        "text": "A werewolf"
+      },
+      {
+        "key": "C",
+        "text": "A warlock"
+      },
+      {
+        "key": "D",
+        "text": "An ordinary human"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Edward is the vampire; Bella took a long time choosing between them.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "got-mother-of-dragons-ru-1",
     "factId": "got-mother-of-dragons",
     "familyId": "got",
@@ -2284,6 +5228,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "У неё было три дракона: Дрогон, Рейегаль и Визерион.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "got-mother-of-dragons-en-1",
+    "factId": "got-mother-of-dragons",
+    "familyId": "got",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who is called the \"Mother of Dragons\" in Game of Thrones?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cersei Lannister"
+      },
+      {
+        "key": "B",
+        "text": "Daenerys Targaryen"
+      },
+      {
+        "key": "C",
+        "text": "Arya Stark"
+      },
+      {
+        "key": "D",
+        "text": "Sansa Stark"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Her three dragons were Drogon, Rhaegal and Viserion.",
     "topics": {
       "fandoms": 1
     },
@@ -2349,6 +5339,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "marvel-iron-man-en-1",
+    "factId": "marvel-iron-man",
+    "familyId": "marvel",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who is Tony Stark?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Captain America"
+      },
+      {
+        "key": "B",
+        "text": "Iron Man"
+      },
+      {
+        "key": "C",
+        "text": "Spider-Man"
+      },
+      {
+        "key": "D",
+        "text": "Thor"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Robert Downey Jr. played him in the films.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1,
+      "current": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "margherita-queen-ru-1",
     "factId": "margherita-queen",
     "familyId": "world-food",
@@ -2377,6 +5414,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "A",
     "explanation": "По легенде, цвета пиццы — томат, моцарелла и базилик — повторяют итальянский флаг. «Маргарита» по-итальянски ещё и «ромашка».",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "margherita-queen-en-1",
+    "factId": "margherita-queen",
+    "familyId": "world-food",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who is the Margherita pizza named after?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A queen of Italy"
+      },
+      {
+        "key": "B",
+        "text": "The pizza maker's wife"
+      },
+      {
+        "key": "C",
+        "text": "The daisy flower"
+      },
+      {
+        "key": "D",
+        "text": "An opera heroine"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Legend says its tomato, mozzarella and basil echo the Italian flag. \"Margherita\" also means \"daisy\" in Italian.",
     "topics": {
       "food": 1
     },
@@ -2438,6 +5520,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "wasabi-en-1",
+    "factId": "wasabi",
+    "familyId": "world-food",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is wasabi?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Japanese horseradish"
+      },
+      {
+        "key": "B",
+        "text": "Pickled ginger"
+      },
+      {
+        "key": "C",
+        "text": "Soy sauce"
+      },
+      {
+        "key": "D",
+        "text": "Seaweed"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Pickled ginger is gari; the seaweed wrapped around rolls is nori.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "paella-spain-ru-1",
     "factId": "paella-spain",
     "familyId": "world-food",
@@ -2466,6 +5592,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Родина — Валенсия; название происходит от сковороды, в которой её готовят.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "paella-spain-en-1",
+    "factId": "paella-spain",
+    "familyId": "world-food",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country does paella come from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Italy"
+      },
+      {
+        "key": "B",
+        "text": "Spain"
+      },
+      {
+        "key": "C",
+        "text": "Portugal"
+      },
+      {
+        "key": "D",
+        "text": "Mexico"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It comes from Valencia and is named after the pan it is cooked in.",
     "topics": {
       "food": 1
     },
@@ -2526,6 +5696,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "guacamole-avocado-en-1",
+    "factId": "guacamole-avocado",
+    "familyId": "world-food",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the base of guacamole?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Avocado"
+      },
+      {
+        "key": "B",
+        "text": "Chickpeas"
+      },
+      {
+        "key": "C",
+        "text": "Aubergine"
+      },
+      {
+        "key": "D",
+        "text": "Beans"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Chickpeas make hummus, aubergine makes baba ganoush.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "saffron-expensive-ru-1",
     "factId": "saffron-expensive",
     "familyId": "world-food",
@@ -2554,6 +5768,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Её собирают вручную — это рыльца цветков крокуса; ваниль — вторая по цене.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "saffron-expensive-en-1",
+    "factId": "saffron-expensive",
+    "familyId": "world-food",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which is the most expensive spice in the world?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Vanilla"
+      },
+      {
+        "key": "B",
+        "text": "Saffron"
+      },
+      {
+        "key": "C",
+        "text": "Cardamom"
+      },
+      {
+        "key": "D",
+        "text": "Cinnamon"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It is picked by hand — the stigmas of crocus flowers. Vanilla is second.",
     "topics": {
       "food": 1
     },
@@ -2614,6 +5872,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "emmental-holes-en-1",
+    "factId": "emmental-holes",
+    "familyId": "world-food",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which Swiss cheese is famous for its big holes?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Parmesan"
+      },
+      {
+        "key": "B",
+        "text": "Emmental"
+      },
+      {
+        "key": "C",
+        "text": "Camembert"
+      },
+      {
+        "key": "D",
+        "text": "Cheddar"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The holes are gas bubbles formed while the cheese matures.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "baikal-deepest-ru-1",
     "factId": "baikal-deepest",
     "familyId": "lakes-rivers",
@@ -2642,6 +5944,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Танганьика — второе по глубине; Каспий — самое большое по площади.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.5
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "baikal-deepest-en-1",
+    "factId": "baikal-deepest",
+    "familyId": "lakes-rivers",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which is the deepest lake on Earth?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Lake Tanganyika"
+      },
+      {
+        "key": "B",
+        "text": "Lake Baikal"
+      },
+      {
+        "key": "C",
+        "text": "The Caspian Sea"
+      },
+      {
+        "key": "D",
+        "text": "Lake Superior"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Tanganyika is the second deepest; the Caspian is the largest by area.",
     "topics": {
       "geography": 1
     },
@@ -2704,6 +6051,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "amazon-volume-en-1",
+    "factId": "amazon-volume",
+    "familyId": "lakes-rivers",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which river carries the most water in the world?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Nile"
+      },
+      {
+        "key": "B",
+        "text": "The Amazon"
+      },
+      {
+        "key": "C",
+        "text": "The Yangtze"
+      },
+      {
+        "key": "D",
+        "text": "The Mississippi"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Amazon and the Nile argue over length, but by volume the Amazon has no rival.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "tiber-rome-ru-1",
     "factId": "tiber-rome",
     "familyId": "lakes-rivers",
@@ -2732,6 +6124,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Через Флоренцию течёт Арно.",
+    "topics": {
+      "geography": 1,
+      "ancient-world": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tiber-rome-en-1",
+    "factId": "tiber-rome",
+    "familyId": "lakes-rivers",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which city does the Tiber flow through?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Florence"
+      },
+      {
+        "key": "B",
+        "text": "Rome"
+      },
+      {
+        "key": "C",
+        "text": "Milan"
+      },
+      {
+        "key": "D",
+        "text": "Venice"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Florence is on the Arno.",
     "topics": {
       "geography": 1,
       "ancient-world": 0.4
@@ -2794,6 +6231,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "australia-capital-en-1",
+    "factId": "australia-capital",
+    "familyId": "capitals",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the capital of Australia?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sydney"
+      },
+      {
+        "key": "B",
+        "text": "Melbourne"
+      },
+      {
+        "key": "C",
+        "text": "Canberra"
+      },
+      {
+        "key": "D",
+        "text": "Perth"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Canberra was built as a compromise so nobody had to choose between Sydney and Melbourne.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "turkey-capital-ru-1",
     "factId": "turkey-capital",
     "familyId": "capitals",
@@ -2822,6 +6304,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Стамбул — крупнейший город, но столицей Анкару сделал Ататюрк в 1923 году.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "turkey-capital-en-1",
+    "factId": "turkey-capital",
+    "familyId": "capitals",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the capital of Turkey?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Istanbul"
+      },
+      {
+        "key": "B",
+        "text": "Ankara"
+      },
+      {
+        "key": "C",
+        "text": "Izmir"
+      },
+      {
+        "key": "D",
+        "text": "Antalya"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Istanbul is the biggest city, but Atatürk made Ankara the capital in 1923.",
     "topics": {
       "geography": 1
     },
@@ -2884,6 +6411,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "kilimanjaro-en-1",
+    "factId": "kilimanjaro",
+    "familyId": "records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the highest mountain in Africa?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mount Kenya"
+      },
+      {
+        "key": "B",
+        "text": "Kilimanjaro"
+      },
+      {
+        "key": "C",
+        "text": "Toubkal"
+      },
+      {
+        "key": "D",
+        "text": "Mount Elbrus"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Mount Kenya is Africa's second highest; Toubkal is the top of the Atlas Mountains.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "vatican-smallest-ru-1",
     "factId": "vatican-smallest",
     "familyId": "records",
@@ -2928,6 +6500,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "vatican-smallest-en-1",
+    "factId": "vatican-smallest",
+    "familyId": "records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the smallest country in the world?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monaco"
+      },
+      {
+        "key": "B",
+        "text": "Vatican City"
+      },
+      {
+        "key": "C",
+        "text": "San Marino"
+      },
+      {
+        "key": "D",
+        "text": "Liechtenstein"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Less than half a square kilometre; Monaco comes second.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "greenland-island-ru-1",
     "factId": "greenland-island",
     "familyId": "records",
@@ -2956,6 +6572,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Австралия — материк, поэтому первое место у Гренландии; Новая Гвинея — второй.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "greenland-island-en-1",
+    "factId": "greenland-island",
+    "familyId": "records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the largest island in the world?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Australia"
+      },
+      {
+        "key": "B",
+        "text": "Greenland"
+      },
+      {
+        "key": "C",
+        "text": "New Guinea"
+      },
+      {
+        "key": "D",
+        "text": "Madagascar"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Australia counts as a continent, so first place goes to Greenland; New Guinea is second.",
     "topics": {
       "geography": 1
     },
@@ -3018,6 +6679,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "canada-second-area-en-1",
+    "factId": "canada-second-area",
+    "familyId": "records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which is the second-largest country by area, after Russia?",
+    "options": [
+      {
+        "key": "A",
+        "text": "China"
+      },
+      {
+        "key": "B",
+        "text": "Canada"
+      },
+      {
+        "key": "C",
+        "text": "The United States"
+      },
+      {
+        "key": "D",
+        "text": "Brazil"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "China and the US argue over third place, depending on how water is counted.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "india-population-ru-1",
     "factId": "india-population",
     "familyId": "records",
@@ -3046,6 +6752,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "По оценкам ООН, Индия обогнала Китай в 2023 году.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "india-population-en-1",
+    "factId": "india-population",
+    "familyId": "records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country has the largest population today?",
+    "options": [
+      {
+        "key": "A",
+        "text": "China"
+      },
+      {
+        "key": "B",
+        "text": "India"
+      },
+      {
+        "key": "C",
+        "text": "The United States"
+      },
+      {
+        "key": "D",
+        "text": "Indonesia"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "According to UN estimates, India overtook China in 2023.",
     "topics": {
       "geography": 1
     },
@@ -3152,6 +6903,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "bering-strait-en-1",
+    "factId": "bering-strait",
+    "familyId": "straits-cities",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which strait separates Asia from North America?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Strait of Gibraltar"
+      },
+      {
+        "key": "B",
+        "text": "The Bering Strait"
+      },
+      {
+        "key": "C",
+        "text": "The Strait of Magellan"
+      },
+      {
+        "key": "D",
+        "text": "The Bosphorus"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Named after Vitus Bering, a Dane in Russian service.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "istanbul-two-continents-ru-1",
     "factId": "istanbul-two-continents",
     "familyId": "straits-cities",
@@ -3180,6 +6975,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Европейскую и азиатскую части Стамбула разделяет пролив Босфор.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "istanbul-two-continents-en-1",
+    "factId": "istanbul-two-continents",
+    "familyId": "straits-cities",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which major city lies in both Europe and Asia?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Athens"
+      },
+      {
+        "key": "B",
+        "text": "Istanbul"
+      },
+      {
+        "key": "C",
+        "text": "Cairo"
+      },
+      {
+        "key": "D",
+        "text": "Baku"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Bosphorus separates its European and Asian sides.",
     "topics": {
       "geography": 1
     },
@@ -3242,6 +7082,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "machu-picchu-en-1",
+    "factId": "machu-picchu",
+    "familyId": "landmarks",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which country is Machu Picchu?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mexico"
+      },
+      {
+        "key": "B",
+        "text": "Peru"
+      },
+      {
+        "key": "C",
+        "text": "Bolivia"
+      },
+      {
+        "key": "D",
+        "text": "Chile"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A 15th-century Inca city in the Andes; Mexico has Maya and Aztec pyramids.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "angkor-wat-ru-1",
     "factId": "angkor-wat",
     "familyId": "landmarks",
@@ -3286,6 +7171,467 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "angkor-wat-en-1",
+    "factId": "angkor-wat",
+    "familyId": "landmarks",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which country is Angkor Wat?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Thailand"
+      },
+      {
+        "key": "B",
+        "text": "Cambodia"
+      },
+      {
+        "key": "C",
+        "text": "Vietnam"
+      },
+      {
+        "key": "D",
+        "text": "India"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It even appears on Cambodia's flag.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sputnik-meaning-en-1",
+    "factId": "sputnik-meaning",
+    "familyId": "russian-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What does the Russian word \"sputnik\" mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Rocket"
+      },
+      {
+        "key": "B",
+        "text": "Companion, fellow traveller"
+      },
+      {
+        "key": "C",
+        "text": "Star"
+      },
+      {
+        "key": "D",
+        "text": "Signal"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A satellite \"travels with\" the Earth — hence the name.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "poyekhali-en-1",
+    "factId": "poyekhali",
+    "familyId": "russian-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What did Yuri Gagarin's famous word \"Poyekhali!\" mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "\"Goodbye!\""
+      },
+      {
+        "key": "B",
+        "text": "\"Let's go!\""
+      },
+      {
+        "key": "C",
+        "text": "\"Hooray!\""
+      },
+      {
+        "key": "D",
+        "text": "\"Everything is fine!\""
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He said it as Vostok 1 lifted off on 12 April 1961.",
+    "topics": {
+      "space": 1,
+      "ussr-history": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bolshoi-meaning-en-1",
+    "factId": "bolshoi-meaning",
+    "familyId": "russian-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What does \"Bolshoi\" in the Bolshoi Theatre mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Royal"
+      },
+      {
+        "key": "B",
+        "text": "Big, grand"
+      },
+      {
+        "key": "C",
+        "text": "Old"
+      },
+      {
+        "key": "D",
+        "text": "National"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Its Moscow building opened in 1825; the company is one of the most famous in ballet.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "matryoshka-en-1",
+    "factId": "matryoshka",
+    "familyId": "russian-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What is a matryoshka?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A fur hat"
+      },
+      {
+        "key": "B",
+        "text": "A set of nesting wooden dolls"
+      },
+      {
+        "key": "C",
+        "text": "A balalaika"
+      },
+      {
+        "key": "D",
+        "text": "A samovar"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The first matryoshka was made in the 1890s.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nutcracker-tchaikovsky-en-1",
+    "factId": "nutcracker-tchaikovsky",
+    "familyId": "russian-culture-abroad",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Who composed The Nutcracker?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sergei Rachmaninoff"
+      },
+      {
+        "key": "B",
+        "text": "Pyotr Tchaikovsky"
+      },
+      {
+        "key": "C",
+        "text": "Igor Stravinsky"
+      },
+      {
+        "key": "D",
+        "text": "Nikolai Rimsky-Korsakov"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Tchaikovsky also wrote Swan Lake and The Sleeping Beauty.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tetris-korobeiniki-en-1",
+    "factId": "tetris-korobeiniki",
+    "familyId": "russian-culture-abroad",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "The famous Tetris theme tune is originally…",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Japanese pop song"
+      },
+      {
+        "key": "B",
+        "text": "A Russian folk song"
+      },
+      {
+        "key": "C",
+        "text": "A Bach piece"
+      },
+      {
+        "key": "D",
+        "text": "A Soviet national anthem"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Korobeiniki\" — \"The Peddlers\" — based on a 19th-century poem by Nekrasov.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tatu-uk-number-one-en-1",
+    "factId": "tatu-uk-number-one",
+    "familyId": "russian-culture-abroad",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Which Russian duo took \"All the Things She Said\" to No. 1 in the UK in 2003?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Serebro"
+      },
+      {
+        "key": "B",
+        "text": "t.A.T.u."
+      },
+      {
+        "key": "C",
+        "text": "Smash!!"
+      },
+      {
+        "key": "D",
+        "text": "Via Gra"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The English version of their Russian hit \"Ya soshla s uma\".",
+    "topics": {
+      "world-pop": 1,
+      "ru-pop-00s": 0.6
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "UK": 0.6,
+      "GLOBAL": 0.6
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kasparov-deep-blue-en-1",
+    "factId": "kasparov-deep-blue",
+    "familyId": "russian-culture-abroad",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Which world chess champion lost a match to IBM's Deep Blue in 1997?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Anatoly Karpov"
+      },
+      {
+        "key": "B",
+        "text": "Garry Kasparov"
+      },
+      {
+        "key": "C",
+        "text": "Bobby Fischer"
+      },
+      {
+        "key": "D",
+        "text": "Magnus Carlsen"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Kasparov had won their first match a year earlier.",
+    "topics": {
+      "sports": 1,
+      "science": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "borscht-beetroot-en-1",
+    "factId": "borscht-beetroot",
+    "familyId": "russian-culture-abroad",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Which vegetable gives borscht its deep red colour?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tomato"
+      },
+      {
+        "key": "B",
+        "text": "Beetroot"
+      },
+      {
+        "key": "C",
+        "text": "Red pepper"
+      },
+      {
+        "key": "D",
+        "text": "Red cabbage"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Tomato is often added too, but the colour comes from beetroot.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "cheetah-fastest-ru-1",
     "factId": "cheetah-fastest",
     "familyId": "animal-records",
@@ -3314,6 +7660,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "На короткой дистанции разгоняется примерно до 100 км/ч.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cheetah-fastest-en-1",
+    "factId": "cheetah-fastest",
+    "familyId": "animal-records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the fastest land animal?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The lion"
+      },
+      {
+        "key": "B",
+        "text": "The cheetah"
+      },
+      {
+        "key": "C",
+        "text": "The wildebeest"
+      },
+      {
+        "key": "D",
+        "text": "The ostrich"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Over short distances it reaches about 100 km/h (60 mph).",
     "topics": {
       "nature": 1
     },
@@ -3375,6 +7765,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "blue-whale-en-1",
+    "factId": "blue-whale",
+    "familyId": "animal-records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the largest animal that has ever lived on Earth?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The African elephant"
+      },
+      {
+        "key": "B",
+        "text": "The blue whale"
+      },
+      {
+        "key": "C",
+        "text": "Argentinosaurus"
+      },
+      {
+        "key": "D",
+        "text": "The sperm whale"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It is bigger than even the largest dinosaurs.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "ostrich-largest-bird-ru-1",
     "factId": "ostrich-largest-bird",
     "familyId": "animal-records",
@@ -3403,6 +7838,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Эму — вторая по росту; у альбатроса самый большой размах крыльев.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ostrich-largest-bird-en-1",
+    "factId": "ostrich-largest-bird",
+    "familyId": "animal-records",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the largest bird?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The emu"
+      },
+      {
+        "key": "B",
+        "text": "The ostrich"
+      },
+      {
+        "key": "C",
+        "text": "The albatross"
+      },
+      {
+        "key": "D",
+        "text": "The condor"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The emu is second tallest; the albatross has the widest wingspan.",
     "topics": {
       "nature": 1
     },
@@ -3463,6 +7942,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "octopus-hearts-en-1",
+    "factId": "octopus-hearts",
+    "familyId": "animal-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many hearts does an octopus have?",
+    "options": [
+      {
+        "key": "A",
+        "text": "One"
+      },
+      {
+        "key": "B",
+        "text": "Two"
+      },
+      {
+        "key": "C",
+        "text": "Three"
+      },
+      {
+        "key": "D",
+        "text": "Eight"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Two pump blood through the gills, the third through the body. Eight is the number of arms.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "spider-legs-ru-1",
     "factId": "spider-legs",
     "familyId": "animal-facts",
@@ -3491,6 +8014,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Поэтому пауки — не насекомые, а паукообразные.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "spider-legs-en-1",
+    "factId": "spider-legs",
+    "familyId": "animal-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many legs does a spider have?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Six"
+      },
+      {
+        "key": "B",
+        "text": "Eight"
+      },
+      {
+        "key": "C",
+        "text": "Ten"
+      },
+      {
+        "key": "D",
+        "text": "Twelve"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "That's why spiders are arachnids, not insects.",
     "topics": {
       "nature": 1
     },
@@ -3551,6 +8118,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "joey-en-1",
+    "factId": "joey",
+    "familyId": "animal-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is a baby kangaroo called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A joey"
+      },
+      {
+        "key": "B",
+        "text": "A wallaby"
+      },
+      {
+        "key": "C",
+        "text": "A wombat"
+      },
+      {
+        "key": "D",
+        "text": "A dingo"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Wallabies are smaller kangaroo species, a wombat is another marsupial, a dingo is a dog.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "koala-eucalyptus-ru-1",
     "factId": "koala-eucalyptus",
     "familyId": "animal-facts",
@@ -3595,6 +8206,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "koala-eucalyptus-en-1",
+    "factId": "koala-eucalyptus",
+    "familyId": "animal-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What do koalas eat?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bamboo"
+      },
+      {
+        "key": "B",
+        "text": "Eucalyptus leaves"
+      },
+      {
+        "key": "C",
+        "text": "Insects"
+      },
+      {
+        "key": "D",
+        "text": "Fruit"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Bamboo is the giant panda's food.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "wwf-panda-ru-1",
     "factId": "wwf-panda",
     "familyId": "animal-facts",
@@ -3623,6 +8278,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Логотип появился в 1961 году, его вдохновила панда Чи-Чи из Лондонского зоопарка.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wwf-panda-en-1",
+    "factId": "wwf-panda",
+    "familyId": "animal-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which animal is the symbol of the WWF?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The polar bear"
+      },
+      {
+        "key": "B",
+        "text": "The giant panda"
+      },
+      {
+        "key": "C",
+        "text": "The snow leopard"
+      },
+      {
+        "key": "D",
+        "text": "The tiger"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The 1961 logo was inspired by Chi Chi, a panda at London Zoo.",
     "topics": {
       "nature": 1
     },
@@ -4079,6 +8778,55 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "dial-up-phone-en-1",
+    "factId": "dial-up-phone",
+    "familyId": "dial-up",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What couldn't you do at home while someone was online with a dial-up modem?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Watch TV"
+      },
+      {
+        "key": "B",
+        "text": "Use the landline phone"
+      },
+      {
+        "key": "C",
+        "text": "Listen to the radio"
+      },
+      {
+        "key": "D",
+        "text": "Use the microwave"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The modem took over the phone line — screeching and hissing as it dialled.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "smiley-fahlman-ru-1",
     "factId": "smiley-fahlman",
     "familyId": "internet-history",
@@ -4107,6 +8855,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Тим Бернерс-Ли придумал веб, а Рэй Томлинсон — электронную почту со значком @.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 5,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "smiley-fahlman-en-1",
+    "factId": "smiley-fahlman",
+    "familyId": "internet-history",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who first proposed the :-) smiley?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tim Berners-Lee"
+      },
+      {
+        "key": "B",
+        "text": "Scott Fahlman"
+      },
+      {
+        "key": "C",
+        "text": "Ray Tomlinson"
+      },
+      {
+        "key": "D",
+        "text": "Bill Gates"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Berners-Lee invented the web; Tomlinson sent the first email with the @ sign.",
     "topics": {
       "old-internet": 1
     },
@@ -4220,6 +9014,55 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "youtube-year-en-1",
+    "factId": "youtube-year",
+    "familyId": "internet-history",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which year was YouTube launched?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2001"
+      },
+      {
+        "key": "B",
+        "text": "2005"
+      },
+      {
+        "key": "C",
+        "text": "2008"
+      },
+      {
+        "key": "D",
+        "text": "2010"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The first video, \"Me at the zoo\", is 19 seconds in front of the elephants.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "nokia-snake-ru-1",
     "factId": "nokia-snake",
     "familyId": "mobile-2000s",
@@ -4248,6 +9091,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "На 3310 стояла Snake II; телефон заодно прославился как «неубиваемый».",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nokia-snake-en-1",
+    "factId": "nokia-snake",
+    "familyId": "mobile-2000s",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which game did everyone play on the Nokia 3310?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tetris"
+      },
+      {
+        "key": "B",
+        "text": "Snake"
+      },
+      {
+        "key": "C",
+        "text": "Minesweeper"
+      },
+      {
+        "key": "D",
+        "text": "Solitaire"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It came with Snake II — and the phone itself became famous for being indestructible.",
     "topics": {
       "old-internet": 1
     },
@@ -4345,6 +9236,55 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Фразу «It really whips the llama's ass» плеер проигрывал при первом запуске.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "winamp-llama-en-1",
+    "factId": "winamp-llama",
+    "familyId": "winamp",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which animal appears in Winamp's famous slogan?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A camel"
+      },
+      {
+        "key": "B",
+        "text": "A llama"
+      },
+      {
+        "key": "C",
+        "text": "An alpaca"
+      },
+      {
+        "key": "D",
+        "text": "A donkey"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"It really whips the llama's ass\" — played when you first started it.",
     "topics": {
       "old-internet": 1
     },
@@ -7422,6 +12362,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "tamagotchi-country-en-1",
+    "factId": "tamagotchi-country",
+    "familyId": "90s-gadgets",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where was the Tamagotchi invented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "China"
+      },
+      {
+        "key": "B",
+        "text": "Japan"
+      },
+      {
+        "key": "C",
+        "text": "South Korea"
+      },
+      {
+        "key": "D",
+        "text": "The United States"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Released by Bandai in 1996 — followed by countless cheap copies.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "pager-ru-1",
     "factId": "pager",
     "familyId": "90s-gadgets",
@@ -8031,6 +13017,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "begemot-en-1",
+    "factId": "begemot",
+    "familyId": "bulgakov",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "In Bulgakov's The Master and Margarita, what is the name of the giant cat in Woland's retinue?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Azazello"
+      },
+      {
+        "key": "B",
+        "text": "Behemoth"
+      },
+      {
+        "key": "C",
+        "text": "Koroviev"
+      },
+      {
+        "key": "D",
+        "text": "Abaddon"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"I'm not causing any trouble, I'm not touching anyone, I'm fixing the primus stove.\"",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "natasha-pierre-ru-1",
     "factId": "natasha-pierre",
     "familyId": "tolstoy",
@@ -8485,6 +13516,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "gold-symbol-en-1",
+    "factId": "gold-symbol",
+    "familyId": "chemistry",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the chemical symbol for gold?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ag"
+      },
+      {
+        "key": "B",
+        "text": "Au"
+      },
+      {
+        "key": "C",
+        "text": "Go"
+      },
+      {
+        "key": "D",
+        "text": "Gd"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ag is silver (argentum), Gd is gadolinium.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "air-nitrogen-ru-1",
     "factId": "air-nitrogen",
     "familyId": "chemistry",
@@ -8513,6 +13589,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Кислорода — около 21 %, аргона — меньше процента.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "air-nitrogen-en-1",
+    "factId": "air-nitrogen",
+    "familyId": "chemistry",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which gas makes up most of Earth's atmosphere?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Oxygen"
+      },
+      {
+        "key": "B",
+        "text": "Nitrogen"
+      },
+      {
+        "key": "C",
+        "text": "Carbon dioxide"
+      },
+      {
+        "key": "D",
+        "text": "Argon"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Nitrogen is about 78%, oxygen about 21%, argon under 1%.",
     "topics": {
       "science": 1
     },
@@ -8574,6 +13695,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "diamond-hardest-en-1",
+    "factId": "diamond-hardest",
+    "familyId": "chemistry",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the hardest natural mineral?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Quartz"
+      },
+      {
+        "key": "B",
+        "text": "Diamond"
+      },
+      {
+        "key": "C",
+        "text": "Granite"
+      },
+      {
+        "key": "D",
+        "text": "Corundum"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Corundum (ruby and sapphire) is second.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "bones-206-ru-1",
     "factId": "bones-206",
     "familyId": "biology",
@@ -8602,6 +13767,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "У новорождённого их больше — около 270, часть потом срастается.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bones-206-en-1",
+    "factId": "bones-206",
+    "familyId": "biology",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many bones are in the adult human skeleton?",
+    "options": [
+      {
+        "key": "A",
+        "text": "106"
+      },
+      {
+        "key": "B",
+        "text": "206"
+      },
+      {
+        "key": "C",
+        "text": "306"
+      },
+      {
+        "key": "D",
+        "text": "412"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Newborns have around 270; some fuse as we grow.",
     "topics": {
       "science": 1
     },
@@ -8663,6 +13872,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "penicillin-fleming-en-1",
+    "factId": "penicillin-fleming",
+    "familyId": "biology",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who discovered penicillin?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Louis Pasteur"
+      },
+      {
+        "key": "B",
+        "text": "Alexander Fleming"
+      },
+      {
+        "key": "C",
+        "text": "Robert Koch"
+      },
+      {
+        "key": "D",
+        "text": "Ilya Mechnikov"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Fleming noticed that mould had killed the bacteria in a forgotten Petri dish.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "dna-watson-crick-ru-1",
     "factId": "dna-watson-crick",
     "familyId": "biology",
@@ -8691,6 +13945,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Важную роль сыграли снимки Розалинд Франклин.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dna-watson-crick-en-1",
+    "factId": "dna-watson-crick",
+    "familyId": "biology",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who described the double helix structure of DNA?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Marie and Pierre Curie"
+      },
+      {
+        "key": "B",
+        "text": "Watson and Crick"
+      },
+      {
+        "key": "C",
+        "text": "Mendel and Darwin"
+      },
+      {
+        "key": "D",
+        "text": "Pasteur and Koch"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Rosalind Franklin's X-ray images played a key role.",
     "topics": {
       "science": 1
     },
@@ -8752,6 +14050,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "light-speed-en-1",
+    "factId": "light-speed",
+    "familyId": "physics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Roughly how fast does light travel?",
+    "options": [
+      {
+        "key": "A",
+        "text": "300 km per second"
+      },
+      {
+        "key": "B",
+        "text": "300,000 km per second"
+      },
+      {
+        "key": "C",
+        "text": "3 million km per second"
+      },
+      {
+        "key": "D",
+        "text": "30,000 km per second"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Exactly 299,792,458 metres per second.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "newton-gravity-ru-1",
     "factId": "newton-gravity",
     "familyId": "physics",
@@ -8780,6 +14123,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Легенда о яблоке, упавшем ему на голову, скорее всего, приукрашена.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "newton-gravity-en-1",
+    "factId": "newton-gravity",
+    "familyId": "physics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who formulated the law of universal gravitation?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Galileo Galilei"
+      },
+      {
+        "key": "B",
+        "text": "Isaac Newton"
+      },
+      {
+        "key": "C",
+        "text": "Albert Einstein"
+      },
+      {
+        "key": "D",
+        "text": "Johannes Kepler"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The apple falling on his head is most likely an embellishment.",
     "topics": {
       "science": 1
     },
@@ -9624,6 +15011,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "gagarin-spacecraft-en-1",
+    "factId": "gagarin-spacecraft",
+    "familyId": "vostok-1",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the name of the spacecraft Yuri Gagarin flew into space?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Soyuz 1"
+      },
+      {
+        "key": "B",
+        "text": "Voskhod 1"
+      },
+      {
+        "key": "C",
+        "text": "Vostok 1"
+      },
+      {
+        "key": "D",
+        "text": "Mir"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "12 April 1961; the Voskhod flights came later, in 1964–65.",
+    "topics": {
+      "space": 1,
+      "ussr-history": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "gagarin-flight-duration-ru-1",
     "factId": "gagarin-flight-duration",
     "familyId": "vostok-1",
@@ -9652,6 +15085,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "A",
     "explanation": "Корабль совершил один виток вокруг Земли; суточный полёт выполнил следующий космонавт, Герман Титов.",
+    "topics": {
+      "space": 1,
+      "ussr-history": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gagarin-flight-duration-en-1",
+    "factId": "gagarin-flight-duration",
+    "familyId": "vostok-1",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How long was Yuri Gagarin's flight?",
+    "options": [
+      {
+        "key": "A",
+        "text": "108 minutes"
+      },
+      {
+        "key": "B",
+        "text": "45 minutes"
+      },
+      {
+        "key": "C",
+        "text": "About 5 hours"
+      },
+      {
+        "key": "D",
+        "text": "Almost a day"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "One orbit of the Earth; the next cosmonaut, Gherman Titov, stayed up for a full day.",
     "topics": {
       "space": 1,
       "ussr-history": 0.3
@@ -9810,6 +15290,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "leonov-first-spacewalk-en-1",
+    "factId": "leonov-first-spacewalk",
+    "familyId": "soviet-cosmonauts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who was the first person to walk in space?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yuri Gagarin"
+      },
+      {
+        "key": "B",
+        "text": "Gherman Titov"
+      },
+      {
+        "key": "C",
+        "text": "Neil Armstrong"
+      },
+      {
+        "key": "D",
+        "text": "Alexei Leonov"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "In 1965. His suit ballooned and he had to let air out to squeeze back into the airlock.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "polyakov-longest-flight-ru-1",
     "factId": "polyakov-longest-flight",
     "familyId": "soviet-cosmonauts",
@@ -9838,6 +15363,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "C",
     "explanation": "Поляков, врач по профессии, провёл на станции «Мир» больше года, чтобы проверить, выдержит ли человек полёт к Марсу. У Скотта Келли — 340 суток.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.5
+    },
+    "generations": {
+      "90s": 0.5
+    },
+    "difficulty": 5,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "polyakov-longest-flight-en-1",
+    "factId": "polyakov-longest-flight",
+    "familyId": "soviet-cosmonauts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who holds the record for the longest single spaceflight — about 437 days?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sergei Krikalev"
+      },
+      {
+        "key": "B",
+        "text": "Scott Kelly"
+      },
+      {
+        "key": "C",
+        "text": "Valeri Polyakov"
+      },
+      {
+        "key": "D",
+        "text": "Gennady Padalka"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Polyakov, a doctor, spent over a year on Mir to test whether humans could survive a trip to Mars. Scott Kelly managed 340 days.",
     "topics": {
       "space": 1
     },
@@ -9905,6 +15478,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "belka-strelka-en-1",
+    "factId": "belka-strelka",
+    "familyId": "space-dogs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What were the names of the dogs that, in 1960, became the first to return alive from orbit?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Pchyolka and Mushka"
+      },
+      {
+        "key": "B",
+        "text": "Belka and Strelka"
+      },
+      {
+        "key": "C",
+        "text": "Dezik and Tsygan"
+      },
+      {
+        "key": "D",
+        "text": "Chernushka and Zvyozdochka"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "All of them were real space dogs: Dezik and Tsygan flew a suborbital rocket in 1951, while Pchyolka and Mushka died on re-entry in December 1960.",
+    "topics": {
+      "space": 1,
+      "ussr-history": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "laika-sputnik-2-ru-1",
     "factId": "laika-sputnik-2",
     "familyId": "space-dogs",
@@ -9951,6 +15571,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "laika-sputnik-2-en-1",
+    "factId": "laika-sputnik-2",
+    "familyId": "space-dogs",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which spacecraft carried the dog Laika into space in 1957?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sputnik 1"
+      },
+      {
+        "key": "B",
+        "text": "Vostok 1"
+      },
+      {
+        "key": "C",
+        "text": "Luna 2"
+      },
+      {
+        "key": "D",
+        "text": "Sputnik 2"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Sputnik 1 had launched only a month earlier and carried no animals; Laika's craft was never designed to come back.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.5
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sputnik-1-year-ru-1",
     "factId": "sputnik-1-year",
     "familyId": "sputnik-1",
@@ -9979,6 +15645,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Сигнал «бип-бип» могли поймать радиолюбители по всему миру — с этого запуска принято отсчитывать космическую эру.",
+    "topics": {
+      "space": 1,
+      "cold-war": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sputnik-1-year-en-1",
+    "factId": "sputnik-1-year",
+    "familyId": "sputnik-1",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which year was the first artificial satellite launched?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1955"
+      },
+      {
+        "key": "B",
+        "text": "1957"
+      },
+      {
+        "key": "C",
+        "text": "1959"
+      },
+      {
+        "key": "D",
+        "text": "1961"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Radio amateurs around the world could pick up its beep-beep — the start of the Space Age.",
     "topics": {
       "space": 1,
       "cold-war": 0.4
@@ -10043,6 +15754,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "apollo-11-collins-en-1",
+    "factId": "apollo-11-collins",
+    "familyId": "apollo",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which Apollo 11 astronaut never set foot on the Moon?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Neil Armstrong"
+      },
+      {
+        "key": "B",
+        "text": "Buzz Aldrin"
+      },
+      {
+        "key": "C",
+        "text": "Michael Collins"
+      },
+      {
+        "key": "D",
+        "text": "Jim Lovell"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Collins waited in orbit in the command module. Jim Lovell commanded Apollo 13, which never landed.",
+    "topics": {
+      "space": 1,
+      "cold-war": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "US": 0.5
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "moonwalkers-count-ru-1",
     "factId": "moonwalkers-count",
     "familyId": "apollo",
@@ -10071,6 +15829,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "C",
     "explanation": "Шесть экспедиций высадились по два астронавта. Всего же к Луне слетали 24 человека — но многие оставались на орбите.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.8,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "moonwalkers-count-en-1",
+    "factId": "moonwalkers-count",
+    "familyId": "apollo",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many people have ever walked on the Moon?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2"
+      },
+      {
+        "key": "B",
+        "text": "6"
+      },
+      {
+        "key": "C",
+        "text": "12"
+      },
+      {
+        "key": "D",
+        "text": "24"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Six missions landed two astronauts each. 24 people flew to the Moon, but many stayed in orbit.",
     "topics": {
       "space": 1
     },
@@ -10133,6 +15936,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "last-moon-landing-year-en-1",
+    "factId": "last-moon-landing-year",
+    "familyId": "apollo",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which year did humans last land on the Moon?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1969"
+      },
+      {
+        "key": "B",
+        "text": "1972"
+      },
+      {
+        "key": "C",
+        "text": "1975"
+      },
+      {
+        "key": "D",
+        "text": "1986"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Apollo 17; Eugene Cernan was the last to walk on the surface.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "largest-planet-ru-1",
     "factId": "largest-planet",
     "familyId": "solar-system",
@@ -10177,6 +16025,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "largest-planet-en-1",
+    "factId": "largest-planet",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the largest planet in the Solar System?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Saturn"
+      },
+      {
+        "key": "B",
+        "text": "Neptune"
+      },
+      {
+        "key": "C",
+        "text": "Uranus"
+      },
+      {
+        "key": "D",
+        "text": "Jupiter"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Jupiter is about two and a half times as massive as all the other planets combined.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "hottest-planet-ru-1",
     "factId": "hottest-planet",
     "familyId": "solar-system",
@@ -10205,6 +16097,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Меркурий ближе к Солнцу, но плотная углекислотная атмосфера Венеры удерживает тепло — около 465 °C днём и ночью.",
+    "topics": {
+      "space": 1,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hottest-planet-en-1",
+    "factId": "hottest-planet",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which planet has the hottest surface in the Solar System?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mercury"
+      },
+      {
+        "key": "B",
+        "text": "Venus"
+      },
+      {
+        "key": "C",
+        "text": "Mars"
+      },
+      {
+        "key": "D",
+        "text": "Jupiter"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Mercury is closer to the Sun, but Venus's thick carbon dioxide atmosphere traps heat — about 465 °C day and night.",
     "topics": {
       "space": 1,
       "science": 0.4
@@ -10270,6 +16208,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "pluto-dwarf-planet-en-1",
+    "factId": "pluto-dwarf-planet",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "In which year did Pluto stop being classed as a planet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1996"
+      },
+      {
+        "key": "B",
+        "text": "2001"
+      },
+      {
+        "key": "C",
+        "text": "2006"
+      },
+      {
+        "key": "D",
+        "text": "2012"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The International Astronomical Union reclassified it as a dwarf planet — and textbooks had to be rewritten.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "mars-moons-ru-1",
     "factId": "mars-moons",
     "familyId": "solar-system",
@@ -10298,6 +16283,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "C",
     "explanation": "Имена означают «страх» и «ужас» — так звали сыновей бога войны Ареса, греческого Марса.",
+    "topics": {
+      "space": 1,
+      "ancient-world": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mars-moons-en-1",
+    "factId": "mars-moons",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What are the names of Mars's moons?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Io and Europa"
+      },
+      {
+        "key": "B",
+        "text": "Titan and Enceladus"
+      },
+      {
+        "key": "C",
+        "text": "Phobos and Deimos"
+      },
+      {
+        "key": "D",
+        "text": "Charon and Nix"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The names mean \"fear\" and \"dread\" — the sons of Ares, the Greek Mars.",
     "topics": {
       "space": 1,
       "ancient-world": 0.3
@@ -10361,6 +16392,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "saturn-rings-ice-en-1",
+    "factId": "saturn-rings-ice",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What are Saturn's rings mostly made of?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Particles of water ice"
+      },
+      {
+        "key": "B",
+        "text": "Hot gas"
+      },
+      {
+        "key": "C",
+        "text": "Iron meteorites"
+      },
+      {
+        "key": "D",
+        "text": "Volcanic ash"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "From grains of sand to house-sized chunks; ice reflects light well, which is why they shine.",
+    "topics": {
+      "space": 1,
+      "science": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sunlight-travel-time-ru-1",
     "factId": "sunlight-travel-time",
     "familyId": "solar-system",
@@ -10407,6 +16483,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "sunlight-travel-time-en-1",
+    "factId": "sunlight-travel-time",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Roughly how long does sunlight take to reach Earth?",
+    "options": [
+      {
+        "key": "A",
+        "text": "About 8 seconds"
+      },
+      {
+        "key": "B",
+        "text": "About 8 minutes"
+      },
+      {
+        "key": "C",
+        "text": "About an hour"
+      },
+      {
+        "key": "D",
+        "text": "About a day"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "If the Sun went out, we wouldn't know for about eight minutes.",
+    "topics": {
+      "space": 1,
+      "science": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "halley-comet-return-ru-1",
     "factId": "halley-comet-return",
     "familyId": "solar-system",
@@ -10435,6 +16557,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "C",
     "explanation": "Комета возвращается примерно раз в 76 лет; в прошлый раз её видели в 1986 году.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "halley-comet-return-en-1",
+    "factId": "halley-comet-return",
+    "familyId": "solar-system",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "When will Halley's Comet next come close to the Sun?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2034"
+      },
+      {
+        "key": "B",
+        "text": "2048"
+      },
+      {
+        "key": "C",
+        "text": "2061"
+      },
+      {
+        "key": "D",
+        "text": "2086"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It returns roughly every 76 years; the last visit was in 1986.",
     "topics": {
       "space": 1
     },
@@ -10550,6 +16719,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "iss-orbit-period-en-1",
+    "factId": "iss-orbit-period",
+    "familyId": "space-stations",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Roughly how long does the ISS take to orbit the Earth once?",
+    "options": [
+      {
+        "key": "A",
+        "text": "10 minutes"
+      },
+      {
+        "key": "B",
+        "text": "90 minutes"
+      },
+      {
+        "key": "C",
+        "text": "12 hours"
+      },
+      {
+        "key": "D",
+        "text": "A day"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The crew sees about 16 sunrises and sunsets every day.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "current": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "baikonur-country-ru-1",
     "factId": "baikonur-country",
     "familyId": "space-stations",
@@ -10644,6 +16859,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "jwst-launch-en-1",
+    "factId": "jwst-launch",
+    "familyId": "modern-spaceflight",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which space telescope was launched in 2021 as Hubble's successor?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Kepler"
+      },
+      {
+        "key": "B",
+        "text": "James Webb"
+      },
+      {
+        "key": "C",
+        "text": "Spitzer"
+      },
+      {
+        "key": "D",
+        "text": "Chandra"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It observes in infrared from 1.5 million km away, at the L2 Lagrange point.",
+    "topics": {
+      "space": 1,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "current": 1
+    },
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "crew-dragon-2020-ru-1",
     "factId": "crew-dragon-2020",
     "familyId": "modern-spaceflight",
@@ -10672,6 +16934,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "D",
     "explanation": "Это был первый с 2011 года запуск астронавтов с территории США. Starliner — конкурирующий корабль Boeing.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "US": 0.4
+    },
+    "generations": {
+      "current": 1
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crew-dragon-2020-en-1",
+    "factId": "crew-dragon-2020",
+    "familyId": "modern-spaceflight",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which SpaceX spacecraft first carried astronauts to the ISS in 2020?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Starliner"
+      },
+      {
+        "key": "B",
+        "text": "Orion"
+      },
+      {
+        "key": "C",
+        "text": "Starship"
+      },
+      {
+        "key": "D",
+        "text": "Crew Dragon"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "The first crewed launch from US soil since 2011. Starliner is Boeing's rival capsule.",
     "topics": {
       "space": 1
     },
@@ -10739,6 +17049,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "voyager-1-heliopause-en-1",
+    "factId": "voyager-1-heliopause",
+    "familyId": "modern-spaceflight",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which spacecraft was the first to reach interstellar space, in 2012?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Voyager 1"
+      },
+      {
+        "key": "B",
+        "text": "Voyager 2"
+      },
+      {
+        "key": "C",
+        "text": "Pioneer 10"
+      },
+      {
+        "key": "D",
+        "text": "New Horizons"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Launched back in 1977; Voyager 2 crossed the same boundary in 2018.",
+    "topics": {
+      "space": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "olympic-rings-ru-1",
     "factId": "olympic-rings",
     "familyId": "sport-facts",
@@ -10767,6 +17124,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Символ придумал Пьер де Кубертен.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "olympic-rings-en-1",
+    "factId": "olympic-rings",
+    "familyId": "sport-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many rings are on the Olympic flag?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Four"
+      },
+      {
+        "key": "B",
+        "text": "Five"
+      },
+      {
+        "key": "C",
+        "text": "Six"
+      },
+      {
+        "key": "D",
+        "text": "Seven"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The symbol was designed by Pierre de Coubertin.",
     "topics": {
       "sports": 1
     },
@@ -10827,6 +17228,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "grand-slam-four-en-1",
+    "factId": "grand-slam-four",
+    "familyId": "sport-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many tournaments make up tennis's Grand Slam?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Three"
+      },
+      {
+        "key": "B",
+        "text": "Four"
+      },
+      {
+        "key": "C",
+        "text": "Five"
+      },
+      {
+        "key": "D",
+        "text": "Six"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Australian Open, Roland Garros, Wimbledon and the US Open.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "marathon-distance-ru-1",
     "factId": "marathon-distance",
     "familyId": "sport-facts",
@@ -10871,6 +17316,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "marathon-distance-en-1",
+    "factId": "marathon-distance",
+    "familyId": "sport-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How long is a marathon?",
+    "options": [
+      {
+        "key": "A",
+        "text": "21.1 km"
+      },
+      {
+        "key": "B",
+        "text": "42.195 km"
+      },
+      {
+        "key": "C",
+        "text": "50 km"
+      },
+      {
+        "key": "D",
+        "text": "Exactly 40 km"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "21.1 km is a half marathon; 42.195 km is 26.2 miles.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "chess-stalemate-ru-1",
     "factId": "chess-stalemate",
     "familyId": "sport-facts",
@@ -10899,6 +17388,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Цугцванг — когда ходить можно, но любой ход ухудшает позицию.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "chess-stalemate-en-1",
+    "factId": "chess-stalemate",
+    "familyId": "sport-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In chess, what is it called when a player has no legal move but is not in check?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Checkmate"
+      },
+      {
+        "key": "B",
+        "text": "Stalemate"
+      },
+      {
+        "key": "C",
+        "text": "Zugzwang"
+      },
+      {
+        "key": "D",
+        "text": "Castling"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It's a draw. Zugzwang is when you can move, but every move makes things worse.",
     "topics": {
       "sports": 1
     },
@@ -10964,6 +17498,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "schumacher-titles-en-1",
+    "factId": "schumacher-titles",
+    "familyId": "sport-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many Formula 1 world championships did Michael Schumacher win?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Five"
+      },
+      {
+        "key": "B",
+        "text": "Seven"
+      },
+      {
+        "key": "C",
+        "text": "Nine"
+      },
+      {
+        "key": "D",
+        "text": "Four"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Lewis Hamilton has the same number.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.6,
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "jordan-bulls-ru-1",
     "factId": "jordan-bulls",
     "familyId": "sport-facts",
@@ -10992,6 +17574,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "В «Вашингтоне» он доигрывал карьеру уже без титулов.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jordan-bulls-en-1",
+    "factId": "jordan-bulls",
+    "familyId": "sport-facts",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "With which team did Michael Jordan win all of his NBA titles?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Los Angeles Lakers"
+      },
+      {
+        "key": "B",
+        "text": "Chicago Bulls"
+      },
+      {
+        "key": "C",
+        "text": "Boston Celtics"
+      },
+      {
+        "key": "D",
+        "text": "Washington Wizards"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He finished his career in Washington, without a title.",
     "topics": {
       "sports": 1
     },
@@ -12438,6 +19066,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "chernobyl-year-en-1",
+    "factId": "chernobyl-year",
+    "familyId": "chernobyl",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "In which year did the Chernobyl disaster happen?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1979"
+      },
+      {
+        "key": "B",
+        "text": "1986"
+      },
+      {
+        "key": "C",
+        "text": "1989"
+      },
+      {
+        "key": "D",
+        "text": "1991"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "26 April 1986; HBO's 2019 series made it famous all over again.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {
+      "80s": 1,
+      "10s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "tetris-pajitnov-ru-1",
     "factId": "tetris-pajitnov",
     "familyId": "games",
@@ -12466,6 +19142,55 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Алексей Пажитнов написал его в 1984 году в Вычислительном центре Академии наук.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tetris-pajitnov-en-1",
+    "factId": "tetris-pajitnov",
+    "familyId": "games",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Where was Tetris invented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Japan"
+      },
+      {
+        "key": "B",
+        "text": "The USSR"
+      },
+      {
+        "key": "C",
+        "text": "The United States"
+      },
+      {
+        "key": "D",
+        "text": "Finland"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Alexey Pajitnov wrote it in 1984 at the Soviet Academy of Sciences in Moscow.",
     "topics": {
       "videogames": 1
     },
@@ -12534,6 +19259,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "mario-plumber-en-1",
+    "factId": "mario-plumber",
+    "familyId": "games",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is Nintendo's Mario by trade?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A carpenter"
+      },
+      {
+        "key": "B",
+        "text": "A plumber"
+      },
+      {
+        "key": "C",
+        "text": "A chef"
+      },
+      {
+        "key": "D",
+        "text": "A firefighter"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "In his very first game, Donkey Kong (1981), he was a carpenter.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sims-simlish-ru-1",
     "factId": "sims-simlish",
     "familyId": "games",
@@ -12562,6 +19334,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Язык специально сделали бессмысленным, чтобы игру не нужно было переводить.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sims-simlish-en-1",
+    "factId": "sims-simlish",
+    "familyId": "games",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What language do the characters in The Sims speak?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Esperanto"
+      },
+      {
+        "key": "B",
+        "text": "Simlish"
+      },
+      {
+        "key": "C",
+        "text": "Klingon"
+      },
+      {
+        "key": "D",
+        "text": "Elvish"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It was made deliberately meaningless so the game wouldn't need translating.",
     "topics": {
       "videogames": 1
     },
@@ -12628,6 +19447,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "minecraft-creeper-en-1",
+    "factId": "minecraft-creeper",
+    "familyId": "games",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the green, exploding monster in Minecraft called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enderman"
+      },
+      {
+        "key": "B",
+        "text": "Creeper"
+      },
+      {
+        "key": "C",
+        "text": "Zombie"
+      },
+      {
+        "key": "D",
+        "text": "Ghast"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The creeper started as a bug: a pig model that came out tall instead of long.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1,
+      "current": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sonic-sega-ru-1",
     "factId": "sonic-sega",
     "familyId": "games",
@@ -12656,6 +19522,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Его придумали как ответ Марио от Nintendo.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sonic-sega-en-1",
+    "factId": "sonic-sega",
+    "familyId": "games",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Sonic the Hedgehog is the mascot of which company?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nintendo"
+      },
+      {
+        "key": "B",
+        "text": "Sega"
+      },
+      {
+        "key": "C",
+        "text": "Sony"
+      },
+      {
+        "key": "D",
+        "text": "Atari"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He was created as Sega's answer to Nintendo's Mario.",
     "topics": {
       "videogames": 1
     },
@@ -12720,6 +19632,52 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "cs-teams-en-1",
+    "factId": "cs-teams",
+    "familyId": "games",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which two teams fight in Counter-Strike?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Pirates and sailors"
+      },
+      {
+        "key": "B",
+        "text": "Terrorists and counter-terrorists"
+      },
+      {
+        "key": "C",
+        "text": "Zombies and survivors"
+      },
+      {
+        "key": "D",
+        "text": "Orcs and humans"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Zombies and survivors is Left 4 Dead; orcs and humans is Warcraft.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "titanic-jack-ru-1",
     "factId": "titanic-jack",
     "familyId": "titanic",
@@ -12748,6 +19706,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Кэл — жених Розы; Гэтсби и Абигнейл — другие роли Ди Каприо.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "titanic-jack-en-1",
+    "factId": "titanic-jack",
+    "familyId": "titanic",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the name of Leonardo DiCaprio's character in Titanic?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cal Hockley"
+      },
+      {
+        "key": "B",
+        "text": "Jack Dawson"
+      },
+      {
+        "key": "C",
+        "text": "Jay Gatsby"
+      },
+      {
+        "key": "D",
+        "text": "Frank Abagnale"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Cal is Rose's fiancé; Gatsby and Abagnale are other DiCaprio roles.",
     "topics": {
       "world-cinema": 1
     },
@@ -12815,6 +19820,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "titanic-oscars-en-1",
+    "factId": "titanic-oscars",
+    "familyId": "titanic",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How many Oscars did Titanic win?",
+    "options": [
+      {
+        "key": "A",
+        "text": "7"
+      },
+      {
+        "key": "B",
+        "text": "9"
+      },
+      {
+        "key": "C",
+        "text": "11"
+      },
+      {
+        "key": "D",
+        "text": "14"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It had 14 nominations; 11 wins is a record it shares with Ben-Hur and The Return of the King.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "matrix-red-pill-ru-1",
     "factId": "matrix-red-pill",
     "familyId": "matrix",
@@ -12843,6 +19896,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Синяя — остаться в иллюзии, красная — узнать, «насколько глубока кроличья нора».",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "matrix-red-pill-en-1",
+    "factId": "matrix-red-pill",
+    "familyId": "matrix",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which pill does Neo take in The Matrix?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The blue pill"
+      },
+      {
+        "key": "B",
+        "text": "The red pill"
+      },
+      {
+        "key": "C",
+        "text": "The green pill"
+      },
+      {
+        "key": "D",
+        "text": "The white pill"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Blue means staying in the illusion; red means seeing how deep the rabbit hole goes.",
     "topics": {
       "world-cinema": 1
     },
@@ -12909,6 +20009,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "godfather-brando-en-1",
+    "factId": "godfather-brando",
+    "familyId": "godfather",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who played Vito Corleone in the first Godfather film?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Al Pacino"
+      },
+      {
+        "key": "B",
+        "text": "Marlon Brando"
+      },
+      {
+        "key": "C",
+        "text": "Robert De Niro"
+      },
+      {
+        "key": "D",
+        "text": "Jack Nicholson"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Al Pacino played his son Michael; De Niro played the young Vito in Part II.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "i-am-your-father-ru-1",
     "factId": "i-am-your-father",
     "familyId": "star-wars",
@@ -12937,6 +20084,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Лея — тоже его дочь, но знаменитое признание адресовано Люку.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "00s": 0.6,
+      "10s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "i-am-your-father-en-1",
+    "factId": "i-am-your-father",
+    "familyId": "star-wars",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Who does Darth Vader tell \"I am your father\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Han Solo"
+      },
+      {
+        "key": "B",
+        "text": "Luke Skywalker"
+      },
+      {
+        "key": "C",
+        "text": "Princess Leia"
+      },
+      {
+        "key": "D",
+        "text": "Obi-Wan Kenobi"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Leia is his daughter too, but the famous reveal is to Luke.",
     "topics": {
       "world-cinema": 1
     },
@@ -13005,6 +20200,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "delorean-88-en-1",
+    "factId": "delorean-88",
+    "familyId": "back-to-future",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "How fast did the DeLorean have to go to travel through time?",
+    "options": [
+      {
+        "key": "A",
+        "text": "100 mph"
+      },
+      {
+        "key": "B",
+        "text": "88 mph"
+      },
+      {
+        "key": "C",
+        "text": "77 mph"
+      },
+      {
+        "key": "D",
+        "text": "121 mph"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It also needed 1.21 gigawatts — hence the 121.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "psycho-hitchcock-ru-1",
     "factId": "psycho-hitchcock",
     "familyId": "directors",
@@ -13049,6 +20292,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "psycho-hitchcock-en-1",
+    "factId": "psycho-hitchcock",
+    "familyId": "directors",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who directed Psycho?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Stanley Kubrick"
+      },
+      {
+        "key": "B",
+        "text": "Alfred Hitchcock"
+      },
+      {
+        "key": "C",
+        "text": "Steven Spielberg"
+      },
+      {
+        "key": "D",
+        "text": "Francis Ford Coppola"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The shower scene is one of the most famous in film history.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "jaws-spielberg-ru-1",
     "factId": "jaws-spielberg",
     "familyId": "directors",
@@ -13077,6 +20364,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Лукас и Спилберг дружили; «Челюсти» считают первым летним блокбастером.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jaws-spielberg-en-1",
+    "factId": "jaws-spielberg",
+    "familyId": "directors",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who directed Jaws?",
+    "options": [
+      {
+        "key": "A",
+        "text": "George Lucas"
+      },
+      {
+        "key": "B",
+        "text": "Steven Spielberg"
+      },
+      {
+        "key": "C",
+        "text": "James Cameron"
+      },
+      {
+        "key": "D",
+        "text": "Ridley Scott"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Lucas and Spielberg were friends; Jaws is often called the first summer blockbuster.",
     "topics": {
       "world-cinema": 1
     },
@@ -13140,6 +20473,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "seven-samurai-remake-en-1",
+    "factId": "seven-samurai-remake",
+    "familyId": "directors",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which western is a remake of Kurosawa's Seven Samurai?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Good, the Bad and the Ugly"
+      },
+      {
+        "key": "B",
+        "text": "The Magnificent Seven"
+      },
+      {
+        "key": "C",
+        "text": "High Noon"
+      },
+      {
+        "key": "D",
+        "text": "Stagecoach"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The number seven is a hint for anyone who doesn't remember.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "forrest-chocolates-ru-1",
     "factId": "forrest-chocolates",
     "familyId": "quotes",
@@ -13168,6 +20546,52 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "A",
     "explanation": "«Никогда не знаешь, какая начинка тебе попадётся». Пробежки, пинг-понг и пёрышко в фильме тоже есть.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "forrest-chocolates-en-1",
+    "factId": "forrest-chocolates",
+    "familyId": "quotes",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What does Forrest Gump compare life to?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A box of chocolates"
+      },
+      {
+        "key": "B",
+        "text": "A long run"
+      },
+      {
+        "key": "C",
+        "text": "A game of ping-pong"
+      },
+      {
+        "key": "D",
+        "text": "A feather in the wind"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "\"You never know what you're gonna get.\" The running, ping-pong and feather are all in the film too.",
     "topics": {
       "world-cinema": 1
     },
@@ -13234,6 +20658,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "terminator-be-back-en-1",
+    "factId": "terminator-be-back",
+    "familyId": "quotes",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What does the Terminator say in the first film before driving a car into the police station?",
+    "options": [
+      {
+        "key": "A",
+        "text": "\"Hasta la vista, baby\""
+      },
+      {
+        "key": "B",
+        "text": "\"I'll be back\""
+      },
+      {
+        "key": "C",
+        "text": "\"Come with me if you want to live\""
+      },
+      {
+        "key": "D",
+        "text": "\"Here's Johnny!\""
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Hasta la vista, baby\" is from the sequel; \"Here's Johnny!\" is from The Shining.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "scarlett-tomorrow-ru-1",
     "factId": "scarlett-tomorrow",
     "familyId": "quotes",
@@ -13279,6 +20751,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "scarlett-tomorrow-en-1",
+    "factId": "scarlett-tomorrow",
+    "familyId": "quotes",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Whose line is \"I'll think about that tomorrow\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Holly Golightly"
+      },
+      {
+        "key": "B",
+        "text": "Scarlett O'Hara"
+      },
+      {
+        "key": "C",
+        "text": "Jane Eyre"
+      },
+      {
+        "key": "D",
+        "text": "Anna Karenina"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Gone with the Wind (1939), from Margaret Mitchell's novel — \"after all, tomorrow is another day.\"",
+    "topics": {
+      "world-cinema": 1,
+      "world-literature": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "schindler-red-coat-ru-1",
     "factId": "schindler-red-coat",
     "familyId": "details",
@@ -13307,6 +20824,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Один из самых известных приёмов Спилберга.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "schindler-red-coat-en-1",
+    "factId": "schindler-red-coat",
+    "familyId": "details",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In black-and-white Schindler's List, what colour is the little girl's coat?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Blue"
+      },
+      {
+        "key": "B",
+        "text": "Red"
+      },
+      {
+        "key": "C",
+        "text": "Yellow"
+      },
+      {
+        "key": "D",
+        "text": "Green"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "One of Spielberg's best-known touches.",
     "topics": {
       "world-cinema": 1
     },
@@ -13422,6 +20986,54 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "fifth-element-leeloo-en-1",
+    "factId": "fifth-element-leeloo",
+    "familyId": "details",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Who played Leeloo in The Fifth Element?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Uma Thurman"
+      },
+      {
+        "key": "B",
+        "text": "Milla Jovovich"
+      },
+      {
+        "key": "C",
+        "text": "Natalie Portman"
+      },
+      {
+        "key": "D",
+        "text": "Cate Blanchett"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Milla Jovovich was born in Kyiv and moved to the US with her family as a child.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.3
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "romeo-verona-ru-1",
     "factId": "romeo-verona",
     "familyId": "classics",
@@ -13450,6 +21062,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "В Венеции Шекспир поселил «Венецианского купца» и «Отелло».",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "romeo-verona-en-1",
+    "factId": "romeo-verona",
+    "familyId": "classics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which city is Romeo and Juliet set?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Venice"
+      },
+      {
+        "key": "B",
+        "text": "Verona"
+      },
+      {
+        "key": "C",
+        "text": "Florence"
+      },
+      {
+        "key": "D",
+        "text": "Rome"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Shakespeare set The Merchant of Venice and Othello in Venice.",
     "topics": {
       "world-literature": 1
     },
@@ -13510,6 +21166,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "don-quixote-windmills-en-1",
+    "factId": "don-quixote-windmills",
+    "familyId": "classics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What did Don Quixote attack, believing they were giants?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Windmills"
+      },
+      {
+        "key": "B",
+        "text": "A flock of sheep"
+      },
+      {
+        "key": "C",
+        "text": "Peasants"
+      },
+      {
+        "key": "D",
+        "text": "Trees"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "He fought a flock of sheep too — mistaking it for an army.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "baker-street-221b-ru-1",
     "factId": "baker-street-221b",
     "familyId": "classics",
@@ -13554,6 +21254,50 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "baker-street-221b-en-1",
+    "factId": "baker-street-221b",
+    "familyId": "classics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where did Sherlock Holmes live?",
+    "options": [
+      {
+        "key": "A",
+        "text": "10 Downing Street"
+      },
+      {
+        "key": "B",
+        "text": "221B Baker Street"
+      },
+      {
+        "key": "C",
+        "text": "7 Oxford Street"
+      },
+      {
+        "key": "D",
+        "text": "13 Piccadilly"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "10 Downing Street is the British Prime Minister's residence.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "saint-exupery-pilot-ru-1",
     "factId": "saint-exupery-pilot",
     "familyId": "classics",
@@ -13582,6 +21326,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Он пропал без вести в 1944 году во время разведывательного полёта.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "saint-exupery-pilot-en-1",
+    "factId": "saint-exupery-pilot",
+    "familyId": "classics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the author of The Little Prince by profession?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A doctor"
+      },
+      {
+        "key": "B",
+        "text": "A pilot"
+      },
+      {
+        "key": "C",
+        "text": "A sailor"
+      },
+      {
+        "key": "D",
+        "text": "A teacher"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He disappeared in 1944 on a reconnaissance flight.",
     "topics": {
       "world-literature": 1
     },
@@ -13644,6 +21433,51 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "1984-big-brother-en-1",
+    "factId": "1984-big-brother",
+    "familyId": "classics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Which novel gave us \"Big Brother is watching you\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Brave New World"
+      },
+      {
+        "key": "B",
+        "text": "Nineteen Eighty-Four"
+      },
+      {
+        "key": "C",
+        "text": "Fahrenheit 451"
+      },
+      {
+        "key": "D",
+        "text": "Animal Farm"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "All four are dystopias — and Orwell wrote Animal Farm too.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "BRIDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "robinson-friday-ru-1",
     "factId": "robinson-friday",
     "familyId": "classics",
@@ -13672,6 +21506,50 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Робинзон назвал его по дню недели, когда спас.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "robinson-friday-en-1",
+    "factId": "robinson-friday",
+    "familyId": "classics",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the name of Robinson Crusoe's companion?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monday"
+      },
+      {
+        "key": "B",
+        "text": "Friday"
+      },
+      {
+        "key": "C",
+        "text": "Sunday"
+      },
+      {
+        "key": "D",
+        "text": "Wednesday"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Crusoe named him after the day he rescued him.",
     "topics": {
       "world-literature": 1
     },
@@ -13735,6 +21613,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "moonwalk-en-1",
+    "factId": "moonwalk",
+    "familyId": "michael-jackson",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is Michael Jackson's famous gliding dance move called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The robot"
+      },
+      {
+        "key": "B",
+        "text": "The moonwalk"
+      },
+      {
+        "key": "C",
+        "text": "Breakdancing"
+      },
+      {
+        "key": "D",
+        "text": "Tecktonik"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He first showed it in 1983, performing \"Billie Jean\".",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "thriller-best-selling-ru-1",
     "factId": "thriller-best-selling",
     "familyId": "michael-jackson",
@@ -13763,6 +21688,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Back in Black и The Dark Side of the Moon обычно идут следом.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "thriller-best-selling-en-1",
+    "factId": "thriller-best-selling",
+    "familyId": "michael-jackson",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which is the best-selling album of all time?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Back in Black — AC/DC"
+      },
+      {
+        "key": "B",
+        "text": "Thriller — Michael Jackson"
+      },
+      {
+        "key": "C",
+        "text": "The Dark Side of the Moon — Pink Floyd"
+      },
+      {
+        "key": "D",
+        "text": "Bad — Michael Jackson"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Back in Black and The Dark Side of the Moon usually come next.",
     "topics": {
       "world-pop": 1
     },
@@ -13832,6 +21805,55 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "abba-waterloo-en-1",
+    "factId": "abba-waterloo",
+    "familyId": "abba",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "With which song did ABBA win Eurovision?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dancing Queen"
+      },
+      {
+        "key": "B",
+        "text": "Waterloo"
+      },
+      {
+        "key": "C",
+        "text": "Mamma Mia"
+      },
+      {
+        "key": "D",
+        "text": "SOS"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "That was 1974, in Brighton, England.",
+    "topics": {
+      "world-pop": 1,
+      "eurovision": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "mercury-zanzibar-ru-1",
     "factId": "mercury-zanzibar",
     "familyId": "queen",
@@ -13860,6 +21882,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Настоящее имя — Фаррух Булсара; школьные годы он провёл в Индии, а в Англию семья переехала в 1964-м.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mercury-zanzibar-en-1",
+    "factId": "mercury-zanzibar",
+    "familyId": "queen",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where was Freddie Mercury born?",
+    "options": [
+      {
+        "key": "A",
+        "text": "London"
+      },
+      {
+        "key": "B",
+        "text": "Zanzibar"
+      },
+      {
+        "key": "C",
+        "text": "Bombay"
+      },
+      {
+        "key": "D",
+        "text": "Cairo"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Born Farrokh Bulsara; he went to school in India, and the family moved to England in 1964.",
     "topics": {
       "world-pop": 1
     },
@@ -13927,6 +21997,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "posh-spice-en-1",
+    "factId": "posh-spice",
+    "familyId": "spice-girls",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was Victoria Beckham's nickname in the Spice Girls?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Baby Spice"
+      },
+      {
+        "key": "B",
+        "text": "Posh Spice"
+      },
+      {
+        "key": "C",
+        "text": "Ginger Spice"
+      },
+      {
+        "key": "D",
+        "text": "Sporty Spice"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The fifth was Scary Spice.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "britney-debut-ru-1",
     "factId": "britney-debut",
     "familyId": "britney",
@@ -13955,6 +22072,54 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "«Genie in a Bottle» — дебют Кристины Агилеры того же времени.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "britney-debut-en-1",
+    "factId": "britney-debut",
+    "familyId": "britney",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which song was Britney Spears's debut hit?",
+    "options": [
+      {
+        "key": "A",
+        "text": "\"Oops!... I Did It Again\""
+      },
+      {
+        "key": "B",
+        "text": "\"...Baby One More Time\""
+      },
+      {
+        "key": "C",
+        "text": "\"Toxic\""
+      },
+      {
+        "key": "D",
+        "text": "\"Genie in a Bottle\""
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Genie in a Bottle\" was Christina Aguilera's debut at the same time.",
     "topics": {
       "world-pop": 1
     },
@@ -14022,6 +22187,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "madonna-like-a-prayer-en-1",
+    "factId": "madonna-like-a-prayer",
+    "familyId": "madonna",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who sang \"Like a Prayer\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cyndi Lauper"
+      },
+      {
+        "key": "B",
+        "text": "Madonna"
+      },
+      {
+        "key": "C",
+        "text": "Whitney Houston"
+      },
+      {
+        "key": "D",
+        "text": "Cher"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The 1989 song and video were among the most talked-about of her career.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "psy-country-ru-1",
     "factId": "psy-country",
     "familyId": "psy",
@@ -14050,6 +22262,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Каннам — богатый район Сеула; клип первым на YouTube набрал миллиард просмотров.",
+    "topics": {
+      "world-pop": 1,
+      "internet-now": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "psy-country-en-1",
+    "factId": "psy-country",
+    "familyId": "psy",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country is PSY, of \"Gangnam Style\", from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Japan"
+      },
+      {
+        "key": "B",
+        "text": "South Korea"
+      },
+      {
+        "key": "C",
+        "text": "China"
+      },
+      {
+        "key": "D",
+        "text": "Thailand"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Gangnam is a wealthy district of Seoul; the video was the first on YouTube to hit a billion views.",
     "topics": {
       "world-pop": 1,
       "internet-now": 0.4
@@ -14116,6 +22375,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "macarena-spain-en-1",
+    "factId": "macarena-spain",
+    "familyId": "macarena",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country is Los del Río, the duo behind \"Macarena\", from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mexico"
+      },
+      {
+        "key": "B",
+        "text": "Spain"
+      },
+      {
+        "key": "C",
+        "text": "Argentina"
+      },
+      {
+        "key": "D",
+        "text": "Cuba"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The song came out in 1993 and went global with the 1996 remix.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "crazy-frog-axel-f-ru-1",
     "factId": "crazy-frog-axel-f",
     "familyId": "crazy-frog",
@@ -14144,6 +22450,55 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Оригинал написал Харольд Фальтермайер в 1984 году; Аксель Фоули — герой Эдди Мёрфи.",
+    "topics": {
+      "world-pop": 1,
+      "old-internet": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "80s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crazy-frog-axel-f-en-1",
+    "factId": "crazy-frog-axel-f",
+    "familyId": "crazy-frog",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Crazy Frog's hit \"Axel F\" is a cover of the theme from which film?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Back to the Future"
+      },
+      {
+        "key": "B",
+        "text": "Beverly Hills Cop"
+      },
+      {
+        "key": "C",
+        "text": "Ghostbusters"
+      },
+      {
+        "key": "D",
+        "text": "Top Gun"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Harold Faltermeyer wrote the original in 1984; Axel Foley is Eddie Murphy's character.",
     "topics": {
       "world-pop": 1,
       "old-internet": 0.4
@@ -14264,6 +22619,55 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "boney-m-rasputin-en-1",
+    "factId": "boney-m-rasputin",
+    "familyId": "boney-m",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Which Russian historical figure is the subject of a Boney M. hit?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Peter the Great"
+      },
+      {
+        "key": "B",
+        "text": "Grigori Rasputin"
+      },
+      {
+        "key": "C",
+        "text": "Ivan the Terrible"
+      },
+      {
+        "key": "D",
+        "text": "Yemelyan Pugachev"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "\"Ra-Ra-Rasputin, lover of the Russian queen…\" — from 1978.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 0.7,
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "beatles-liverpool-ru-1",
     "factId": "beatles-liverpool",
     "familyId": "beatles",
@@ -14292,6 +22696,51 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Клуб «Каверн» в Ливерпуле, где они играли, работает до сих пор.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "beatles-liverpool-en-1",
+    "factId": "beatles-liverpool",
+    "familyId": "beatles",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which city are The Beatles from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "London"
+      },
+      {
+        "key": "B",
+        "text": "Liverpool"
+      },
+      {
+        "key": "C",
+        "text": "Manchester"
+      },
+      {
+        "key": "D",
+        "text": "Birmingham"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Cavern Club, where they played, is still open.",
     "topics": {
       "world-pop": 1
     },
@@ -14356,6 +22805,53 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "always-love-you-dolly-en-1",
+    "factId": "always-love-you-dolly",
+    "familyId": "whitney",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who wrote \"I Will Always Love You\", which became Whitney Houston's huge hit?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Whitney Houston herself"
+      },
+      {
+        "key": "B",
+        "text": "Dolly Parton"
+      },
+      {
+        "key": "C",
+        "text": "Celine Dion"
+      },
+      {
+        "key": "D",
+        "text": "Mariah Carey"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Parton recorded it in 1974; Whitney sang it for The Bodyguard.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 5,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "ace-of-base-sweden-ru-1",
     "factId": "ace-of-base-sweden",
     "familyId": "ace-of-base",
@@ -14384,6 +22880,53 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "Ещё одна шведская поп-машина после ABBA и Roxette.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ace-of-base-sweden-en-1",
+    "factId": "ace-of-base-sweden",
+    "familyId": "ace-of-base",
+    "language": "en",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which country is Ace of Base from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Denmark"
+      },
+      {
+        "key": "B",
+        "text": "Sweden"
+      },
+      {
+        "key": "C",
+        "text": "Norway"
+      },
+      {
+        "key": "D",
+        "text": "Germany"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Another Swedish pop machine after ABBA and Roxette.",
     "topics": {
       "world-pop": 1
     },

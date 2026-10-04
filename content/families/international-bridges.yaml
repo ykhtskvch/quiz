@@ -1,0 +1,227 @@
+# EPIC 36 — bridges: post-Soviet things the whole world knows (EN-native)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: russian-words
+    name: "Russian words the world knows"
+    facts:
+      - id: sputnik-meaning
+        statement: "\"Sputnik\" means \"companion\" or \"fellow traveller\" in Russian."
+        sources: [{ name: "Wikipedia: Sputnik 1", type: REFERENCE, verified: false }]
+        questions:
+          - id: sputnik-meaning-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What does the Russian word \"sputnik\" mean?"
+            options:
+              - { key: A, text: "Rocket", distractor: PLAUSIBLE }
+              - { key: B, text: "Companion, fellow traveller", correct: true }
+              - { key: C, text: "Star", distractor: PLAUSIBLE }
+              - { key: D, text: "Signal", distractor: PLAUSIBLE }
+            explanation: "A satellite \"travels with\" the Earth — hence the name."
+            topics: { space: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: poyekhali
+        statement: "Gagarin's famous word at launch, \"Poyekhali!\", means \"Let's go!\"."
+        sources: [{ name: "Wikipedia: Vostok 1", type: REFERENCE, verified: false }]
+        questions:
+          - id: poyekhali-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What did Yuri Gagarin's famous word \"Poyekhali!\" mean?"
+            options:
+              - { key: A, text: "\"Goodbye!\"", distractor: PLAUSIBLE }
+              - { key: B, text: "\"Let's go!\"", correct: true }
+              - { key: C, text: "\"Hooray!\"", distractor: PLAUSIBLE }
+              - { key: D, text: "\"Everything is fine!\"", distractor: PLAUSIBLE }
+            explanation: "He said it as Vostok 1 lifted off on 12 April 1961."
+            topics: { space: 1.0, ussr-history: 0.4 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: bolshoi-meaning
+        statement: "\"Bolshoi\", as in the Bolshoi Theatre, means \"big\" or \"grand\"."
+        sources: [{ name: "Wikipedia: Bolshoi Theatre", type: REFERENCE, verified: false }]
+        questions:
+          - id: bolshoi-meaning-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What does \"Bolshoi\" in the Bolshoi Theatre mean?"
+            options:
+              - { key: A, text: "Royal", distractor: PLAUSIBLE }
+              - { key: B, text: "Big, grand", correct: true }
+              - { key: C, text: "Old", distractor: PLAUSIBLE }
+              - { key: D, text: "National", distractor: PLAUSIBLE }
+            explanation: "Its Moscow building opened in 1825; the company is one of the most famous in ballet."
+            topics: { art: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: matryoshka
+        statement: "A matryoshka is a set of wooden nesting dolls."
+        sources: [{ name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: false }]
+        questions:
+          - id: matryoshka-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What is a matryoshka?"
+            options:
+              - { key: A, text: "A fur hat", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "A set of nesting wooden dolls", correct: true }
+              - { key: C, text: "A balalaika", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "A samovar", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The first matryoshka was made in the 1890s."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: russian-culture-abroad
+    name: "Russian culture abroad"
+    facts:
+      - id: nutcracker-tchaikovsky
+        statement: "The ballet The Nutcracker was composed by Pyotr Tchaikovsky (1892)."
+        sources: [{ name: "Wikipedia: The Nutcracker", type: REFERENCE, verified: false }]
+        questions:
+          - id: nutcracker-tchaikovsky-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Who composed The Nutcracker?"
+            options:
+              - { key: A, text: "Sergei Rachmaninoff", distractor: SAME_CATEGORY }
+              - { key: B, text: "Pyotr Tchaikovsky", correct: true }
+              - { key: C, text: "Igor Stravinsky", distractor: SAME_CATEGORY }
+              - { key: D, text: "Nikolai Rimsky-Korsakov", distractor: SAME_CATEGORY }
+            explanation: "Tchaikovsky also wrote Swan Lake and The Sleeping Beauty."
+            topics: { art: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tetris-korobeiniki
+        statement: "The famous Tetris (Game Boy) theme is the Russian folk song \"Korobeiniki\"."
+        sources: [{ name: "Wikipedia: Korobeiniki", type: REFERENCE, verified: false }]
+        questions:
+          - id: tetris-korobeiniki-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "The famous Tetris theme tune is originally…"
+            options:
+              - { key: A, text: "A Japanese pop song", distractor: PLAUSIBLE }
+              - { key: B, text: "A Russian folk song", correct: true }
+              - { key: C, text: "A Bach piece", distractor: PLAUSIBLE }
+              - { key: D, text: "A Soviet national anthem", distractor: PLAUSIBLE }
+            explanation: "\"Korobeiniki\" — \"The Peddlers\" — based on a 19th-century poem by Nekrasov."
+            topics: { videogames: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tatu-uk-number-one
+        statement: "t.A.T.u.'s \"All the Things She Said\" went to No. 1 in the UK in 2003."
+        sources: [{ name: "Wikipedia: All the Things She Said", type: REFERENCE, verified: false }]
+        questions:
+          - id: tatu-uk-number-one-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which Russian duo took \"All the Things She Said\" to No. 1 in the UK in 2003?"
+            options:
+              - { key: A, text: "Serebro", distractor: SAME_CATEGORY }
+              - { key: B, text: "t.A.T.u.", correct: true }
+              - { key: C, text: "Smash!!", distractor: SAME_CATEGORY }
+              - { key: D, text: "Via Gra", distractor: SAME_CATEGORY }
+            explanation: "The English version of their Russian hit \"Ya soshla s uma\"."
+            topics: { world-pop: 1.0, ru-pop-00s: 0.6 }
+            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.6 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: kasparov-deep-blue
+        statement: "In 1997 IBM's Deep Blue beat world chess champion Garry Kasparov in a match."
+        sources: [{ name: "Wikipedia: Deep Blue versus Garry Kasparov", type: REFERENCE, verified: false }]
+        questions:
+          - id: kasparov-deep-blue-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which world chess champion lost a match to IBM's Deep Blue in 1997?"
+            options:
+              - { key: A, text: "Anatoly Karpov", distractor: SAME_CATEGORY }
+              - { key: B, text: "Garry Kasparov", correct: true }
+              - { key: C, text: "Bobby Fischer", distractor: SAME_CATEGORY }
+              - { key: D, text: "Magnus Carlsen", distractor: SAME_CATEGORY }
+            explanation: "Kasparov had won their first match a year earlier."
+            topics: { sports: 1.0, science: 0.5 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: borscht-beetroot
+        statement: "The main ingredient that gives borscht its red colour is beetroot."
+        sources: [{ name: "Wikipedia: Borscht", type: REFERENCE, verified: false }]
+        questions:
+          - id: borscht-beetroot-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which vegetable gives borscht its deep red colour?"
+            options:
+              - { key: A, text: "Tomato", distractor: NEAR_MISS }
+              - { key: B, text: "Beetroot", correct: true }
+              - { key: C, text: "Red pepper", distractor: PLAUSIBLE }
+              - { key: D, text: "Red cabbage", distractor: NEAR_MISS }
+            explanation: "Tomato is often added too, but the colour comes from beetroot."
+            topics: { food: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI

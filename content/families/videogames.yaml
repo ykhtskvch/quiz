@@ -7,7 +7,7 @@ families:
     facts:
       - id: tetris-pajitnov
         statement: "Тетрис придумал советский программист Алексей Пажитнов в 1984 году."
-        sources: [{ name: "Википедия: Тетрис", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Тетрис", type: REFERENCE, verified: false } ]
         questions:
           - id: tetris-pajitnov-ru-1
             language: ru
@@ -29,10 +29,32 @@ families:
             effects: { I_KNOW_THIS: 0.6, BRIDGE: 0.5 }
             status: DRAFT
             generation_method: AI
+          - id: tetris-pajitnov-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: Where was Tetris invented?
+            options:
+              - { key: A, text: Japan, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: The USSR, correct: true }
+              - { key: C, text: The United States, distractor: SAME_CATEGORY }
+              - { key: D, text: Finland, distractor: SAME_CATEGORY }
+            explanation: Alexey Pajitnov wrote it in 1984 at the Soviet Academy of Sciences in Moscow.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
+            generations: { 80s: 0.8, 90s: 0.8 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: mario-plumber
         statement: "Марио из игр Nintendo — водопроводчик."
-        sources: [{ name: "Википедия: Марио", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Марио", type: REFERENCE, verified: false } ]
         questions:
           - id: mario-plumber-ru-1
             language: ru
@@ -53,10 +75,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: mario-plumber-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is Nintendo's Mario by trade?
+            options:
+              - { key: A, text: A carpenter, distractor: NEAR_MISS }
+              - { key: B, text: A plumber, correct: true }
+              - { key: C, text: A chef, distractor: PLAUSIBLE }
+              - { key: D, text: A firefighter, distractor: PLAUSIBLE }
+            explanation: In his very first game, Donkey Kong (1981), he was a carpenter.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1, 00s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: sims-simlish
         statement: "Персонажи The Sims говорят на выдуманном языке симлиш."
-        sources: [{ name: "Википедия: Симлиш", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Симлиш", type: REFERENCE, verified: false } ]
         questions:
           - id: sims-simlish-ru-1
             language: ru
@@ -77,10 +120,31 @@ families:
             effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: sims-simlish-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What language do the characters in The Sims speak?
+            options:
+              - { key: A, text: Esperanto, distractor: NEAR_MISS }
+              - { key: B, text: Simlish, correct: true }
+              - { key: C, text: Klingon, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Elvish, distractor: CONTEXTUAL_CONFUSION }
+            explanation: It was made deliberately meaningless so the game wouldn't need translating.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: minecraft-creeper
         statement: "Зелёный взрывающийся монстр в Minecraft называется крипер."
-        sources: [{ name: "Википедия: Minecraft", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Minecraft", type: REFERENCE, verified: false } ]
         questions:
           - id: minecraft-creeper-ru-1
             language: ru
@@ -101,10 +165,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6 }
             status: DRAFT
             generation_method: AI
+          - id: minecraft-creeper-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What is the green, exploding monster in Minecraft called?
+            options:
+              - { key: A, text: Enderman, distractor: SAME_CATEGORY }
+              - { key: B, text: Creeper, correct: true }
+              - { key: C, text: Zombie, distractor: SAME_CATEGORY }
+              - { key: D, text: Ghast, distractor: SAME_CATEGORY }
+            explanation: "The creeper started as a bug: a pig model that came out tall instead of long."
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 10s: 1, current: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: sonic-sega
         statement: "Ёж Соник — талисман компании Sega."
-        sources: [{ name: "Википедия: Ёж Соник", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ёж Соник", type: REFERENCE, verified: false } ]
         questions:
           - id: sonic-sega-ru-1
             language: ru
@@ -125,10 +210,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: sonic-sega-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Sonic the Hedgehog is the mascot of which company?
+            options:
+              - { key: A, text: Nintendo, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Sega, correct: true }
+              - { key: C, text: Sony, distractor: SAME_CATEGORY }
+              - { key: D, text: Atari, distractor: SAME_CATEGORY }
+            explanation: He was created as Sega's answer to Nintendo's Mario.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: cs-teams
         statement: "В Counter-Strike играют две команды: террористы и спецназ (контртеррористы)."
-        sources: [{ name: "Википедия: Counter-Strike", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Counter-Strike", type: REFERENCE, verified: false } ]
         questions:
           - id: cs-teams-ru-1
             language: ru
@@ -149,3 +255,24 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: cs-teams-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which two teams fight in Counter-Strike?
+            options:
+              - { key: A, text: Pirates and sailors, distractor: PLAUSIBLE }
+              - { key: B, text: Terrorists and counter-terrorists, correct: true }
+              - { key: C, text: Zombies and survivors, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Orcs and humans, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Zombies and survivors is Left 4 Dead; orcs and humans is Warcraft.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

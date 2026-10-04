@@ -1,8 +1,16 @@
-// UI strings. Only Russian for now; kept in one place so EPIC 36 can add English.
-const nf = new Intl.NumberFormat("ru-RU");
+// UI strings for both room languages (EPIC 36). The active language comes from the room
+// (D-02); before a room is known it follows the home-page choice / browser language.
+import { useSyncExternalStore } from "react";
+import type { Language } from "@quiz/shared";
 
-export const t = {
+const ruNf = new Intl.NumberFormat("ru-RU");
+const enNf = new Intl.NumberFormat("en-GB");
+
+const ru = {
   appName: "Квиз для своих",
+  gameLanguage: "Язык игры",
+  languageName: { ru: "Русский", en: "English" } as Record<Language, string>,
+  languageHint: "На этом языке будут вопросы и интерфейс у всех игроков.",
   tagline: "Вопросы, которые собираются под вашу компанию",
   createRoom: "Создать игру",
   creating: "Создаём…",
@@ -33,8 +41,8 @@ export const t = {
   wrong: "Мимо",
   noAnswer: "Не успел ответить",
   correctAnswer: "Правильный ответ",
-  points: (n: number) => `+${nf.format(n)}`,
-  total: (n: number) => `Всего: ${nf.format(n)}`,
+  points: (n: number) => `+${ruNf.format(n)}`,
+  total: (n: number) => `Всего: ${ruNf.format(n)}`,
   nextQuestion: "Следующий вопрос…",
   skipped: "Вопрос пропущен",
   paused: "Пауза",
@@ -49,7 +57,7 @@ export const t = {
   lookAtScreen: "Смотри на общий экран",
   results: "Итоги",
   winner: "Победитель",
-  score: (n: number) => nf.format(n),
+  score: (n: number) => ruNf.format(n),
   correctOf: (c: number, a: number) => `${c} из ${a}`,
   yourPlace: (place: number, of: number) => `Твоё место: ${place} из ${of}`,
   playAgain: "Сыграть ещё",
@@ -126,3 +134,178 @@ export const t = {
   displayNoToken: "Этот экран открыт без ключа комнаты. Создай игру заново на этом устройстве.",
   errorGeneric: "Что-то пошло не так. Попробуй ещё раз.",
 };
+
+const en: Strings = {
+  appName: "Quiz for your crowd",
+  gameLanguage: "Game language",
+  languageName: { ru: "Русский", en: "English" },
+  languageHint: "Questions and every player's screen will be in this language.",
+  tagline: "Questions that tune themselves to your group",
+  createRoom: "Create a game",
+  creating: "Creating…",
+  haveCode: "Got a room code?",
+  join: "Join",
+  roomCode: "Room code",
+  yourName: "What's your name?",
+  namePlaceholder: "Name for this game",
+  joining: "Joining…",
+  scanToJoin: "Scan to play",
+  orOpen: "or open",
+  andEnterCode: "and enter the code",
+  players: "Players",
+  noPlayersYet: "Nobody yet — scan the QR code",
+  hostHint: "Whoever joins first runs the game",
+  host: "host",
+  offline: "offline",
+  waitingForHost: "Waiting for the host to start",
+  youAreHost: "You're running the game",
+  start: "Start",
+  needTwoPlayers: "Needs at least 2 ready players",
+  question: (n: number) => `Question ${n}`,
+  reading: "Reading the question…",
+  answered: (n: number, total: number) => `${n} of ${total} answered`,
+  answerAccepted: "Answer locked in",
+  waitForOthers: "Waiting for the others",
+  correct: "Correct!",
+  wrong: "Not quite",
+  noAnswer: "Out of time",
+  correctAnswer: "Correct answer",
+  points: (n: number) => `+${enNf.format(n)}`,
+  total: (n: number) => `Total: ${enNf.format(n)}`,
+  nextQuestion: "Next question…",
+  skipped: "Question skipped",
+  paused: "Paused",
+  pause: "Pause",
+  resume: "Resume",
+  skip: "Skip",
+  end: "End game",
+  confirmEnd: "Really end?",
+  softEnd: "It's been half an hour. End the game?",
+  softEndContinue: "Keep playing",
+  pendingJoin: "You're in from the next question",
+  lookAtScreen: "Look at the big screen",
+  results: "Results",
+  winner: "Winner",
+  score: (n: number) => enNf.format(n),
+  correctOf: (c: number, a: number) => `${c} of ${a}`,
+  yourPlace: (place: number, of: number) => `You placed ${place} of ${of}`,
+  playAgain: "Play again",
+  waitPlayAgain: "The host can start a new game",
+  questionsPlayed: (n: number) => `Questions played: ${n}`,
+  statHardest: "Toughest question",
+  statEveryone: "Everyone knew this",
+  statDivided: "Most divided",
+  statOnlyOne: "Only one person knew",
+  statFastest: "Fastest correct answer",
+  seconds: (ms: number) => `${(ms / 1000).toLocaleString("en-GB", { maximumFractionDigits: 1 })} s`,
+  back: "Back",
+  cancel: "Cancel",
+  next: "Next",
+  stepOf: (i: number, n: number) => `Step ${i} of ${n}`,
+  privateNote: "Only you can see your answers",
+  ageTitle: "How old are you?",
+  ageBand: { "13_17": "13–17", "18_24": "18–24", "25_34": "25–34", "35_44": "35–44", "45_54": "45–54", "55_PLUS": "55+" },
+  topicsTitle: "What are you into?",
+  topicsHint: (max: number) => `3–7 topics works best, ${max} at most. The more honest, the more questions that are "yours".`,
+  nextWithCount: (n: number) => `Next · ${n}`,
+  pickOne: "Pick at least one topic",
+  depthTitle: "How well do you know it?",
+  depth: { CASUAL: "A bit", INTERESTED: "Love it", EXPERT: "Expert" },
+  lessTitle: "Anything you'd like less of?",
+  lessHint: "These will come up less often, but won't disappear completely.",
+  skipStep: "Skip",
+  backgroundTitle: "Which culture did you grow up in?",
+  backgroundHint: "Pick any that apply, or skip.",
+  background: {
+    POST_SOVIET: "Post-Soviet countries",
+    UK: "United Kingdom",
+    US: "United States",
+    EUROPE: "Europe",
+    ASIA: "Asia",
+  },
+  dignityTitle: "What kind of quiz do you like?",
+  dignity: {
+    CLASSIC: { title: "More classic", hint: "history, science, literature, art" },
+    BALANCE: { title: "A bit of everything", hint: "serious stuff and pop culture" },
+    POP: { title: "More pop culture and nostalgia", hint: "hits, TV shows, ads, memes" },
+  },
+  editPrefs: "Change my interests",
+  readyCount: (r: number, n: number) => `${r} of ${n} ready`,
+  chipOnboarding: "choosing…",
+  stragglersHint: "Anyone still choosing will join from the next question",
+  readyWait: "All set! Waiting to start",
+  feedbackTitle: "How was it?",
+  fbPlayAgain: "Up for another game?",
+  fbDifferentGroup: "And with a different group?",
+  intent: { YES: "Yes", MAYBE: "Maybe", NO: "No" },
+  fbDifficulty: "Difficulty",
+  fbDifficultyValues: { TOO_EASY: "Too easy", JUST_RIGHT: "Just right", TOO_HARD: "Too hard" },
+  fbPace: "Pace",
+  fbPaceValues: { TOO_SLOW: "Too slow", JUST_RIGHT: "Just right", TOO_FAST: "Too fast" },
+  fbBalance: "Topics",
+  fbBalanceValues: { MORE_CLASSIC: "More classic", JUST_RIGHT: "Just right", MORE_POP: "More pop culture" },
+  fbNeedPlayAgain: "Answer the first question",
+  send: "Send",
+  feedbackThanks: "Thank you! This helps make the quiz better.",
+  rateTitle: "Rate the questions",
+  rateHint: "Bad ones get sent back for a rewrite.",
+  rating: {
+    GREAT: { icon: "👍", label: "Great question" },
+    FINE: { icon: "👌", label: "Fine question" },
+    BAD: { icon: "👎", label: "Bad question" },
+  },
+  reconnecting: "Connection lost. Reconnecting…",
+  roomNotFound: "Room not found. Check the code.",
+  displayNoToken: "This screen was opened without the room key. Create the game again on this device.",
+  errorGeneric: "Something went wrong. Please try again.",
+};
+
+export type Strings = typeof ru;
+const STRINGS: Record<Language, Strings> = { ru, en };
+
+// ---------- active language (tiny external store) ----------
+
+const KEY = "quiz.language";
+function initial(): Language {
+  try {
+    const saved = localStorage.getItem(KEY);
+    if (saved === "ru" || saved === "en") return saved;
+  } catch {
+    // storage unavailable
+  }
+  return navigator.language?.toLowerCase().startsWith("ru") ? "ru" : "en";
+}
+
+let current: Language = initial();
+document.documentElement.lang = current;
+document.title = STRINGS[current].appName;
+const listeners = new Set<() => void>();
+
+export function setLanguage(lang: Language, remember = false) {
+  if (remember) {
+    try {
+      localStorage.setItem(KEY, lang);
+    } catch {
+      // ignore
+    }
+  }
+  if (lang === current) return;
+  current = lang;
+  document.documentElement.lang = lang;
+  document.title = STRINGS[lang].appName;
+  listeners.forEach((l) => l());
+}
+
+export function useLanguage(): Language {
+  return useSyncExternalStore(
+    (cb) => {
+      listeners.add(cb);
+      return () => listeners.delete(cb);
+    },
+    () => current,
+  );
+}
+
+export function useT(): Strings {
+  return STRINGS[useLanguage()];
+}

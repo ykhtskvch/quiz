@@ -4,6 +4,10 @@ import type { QuestionRating, SessionFeedbackInput } from "./feedback.ts";
 import type { OnboardingInput } from "./onboarding.ts";
 
 export type OptionKey = "A" | "B" | "C" | "D";
+
+/** D-02: a room's only "mode" is its language — UI and questions. */
+export type Language = "ru" | "en";
+export const LANGUAGES: Language[] = ["ru", "en"];
 export const OPTION_KEYS: OptionKey[] = ["A", "B", "C", "D"];
 
 export type RoomStatus = "WAITING" | "ACTIVE" | "CLOSED";
@@ -70,7 +74,7 @@ export type Snapshot = {
         /** Own answers only — lets the phone prefill "change my preferences". */
         onboarding: OnboardingInput | null;
       };
-  room: { code: string; status: RoomStatus; players: PublicPlayer[] };
+  room: { code: string; language: Language; status: RoomStatus; players: PublicPlayer[] };
   game: { number: number; status: GameStatus; softEndSuggested: boolean } | null;
   question: PublicQuestion | null;
   reveal: Reveal | null;
@@ -113,7 +117,10 @@ export type ClientMessage = { type: "SYNC" };
 
 // ---------- HTTP ----------
 
-export type CreateRoomResponse = { roomCode: string; displayToken: string };
+export type CreateRoomRequest = { language?: Language };
+export type CreateRoomResponse = { roomCode: string; displayToken: string; language: Language };
+/** Public, pre-join room info: lets the phone render in the room's language and show only topics with content. */
+export type RoomInfo = { language: Language; topics: string[] };
 export type JoinRequest = { nickname: string };
 export type JoinResponse = { playerId: string; playerToken: string; isHost: boolean };
 export type AnswerRequest = { optionKey: OptionKey };

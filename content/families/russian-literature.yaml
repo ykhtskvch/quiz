@@ -7,7 +7,7 @@ families:
     facts:
       - id: onegin-genre
         statement: "«Евгений Онегин» — роман в стихах."
-        sources: [{ name: "Википедия: Евгений Онегин", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Евгений Онегин", type: REFERENCE, verified: false } ]
         questions:
           - id: onegin-genre-ru-1
             language: ru
@@ -30,7 +30,7 @@ families:
 
       - id: onegin-duel
         statement: "Онегин убивает на дуэли Ленского."
-        sources: [{ name: "Википедия: Евгений Онегин", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Евгений Онегин", type: REFERENCE, verified: false } ]
         questions:
           - id: onegin-duel-ru-1
             language: ru
@@ -53,7 +53,7 @@ families:
 
       - id: pushkin-dantes
         statement: "Пушкина смертельно ранил на дуэли в 1837 году Жорж Дантес."
-        sources: [{ name: "Википедия: Дуэль Пушкина и Дантеса", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Дуэль Пушкина и Дантеса", type: REFERENCE, verified: false } ]
         questions:
           - id: pushkin-dantes-ru-1
             language: ru
@@ -76,7 +76,7 @@ families:
 
       - id: arina-rodionovna
         statement: "Няню Пушкина звали Арина Родионовна."
-        sources: [{ name: "Википедия: Арина Родионовна", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Арина Родионовна", type: REFERENCE, verified: false } ]
         questions:
           - id: arina-rodionovna-ru-1
             language: ru
@@ -102,7 +102,7 @@ families:
     facts:
       - id: chichikov-souls
         statement: "Чичиков в «Мёртвых душах» скупает умерших крестьян, которые по ревизии числятся живыми."
-        sources: [{ name: "Википедия: Мёртвые души", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Мёртвые души", type: REFERENCE, verified: false } ]
         questions:
           - id: chichikov-souls-ru-1
             language: ru
@@ -128,7 +128,7 @@ families:
     facts:
       - id: begemot
         statement: "Кота из свиты Воланда в «Мастере и Маргарите» зовут Бегемот."
-        sources: [{ name: "Википедия: Бегемот (Мастер и Маргарита)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Бегемот (Мастер и Маргарита)", type: REFERENCE, verified: false } ]
         questions:
           - id: begemot-ru-1
             language: ru
@@ -149,13 +149,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: begemot-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: In Bulgakov's The Master and Margarita, what is the name of the giant cat in Woland's retinue?
+            options:
+              - { key: A, text: Azazello, distractor: SAME_CATEGORY }
+              - { key: B, text: Behemoth, correct: true }
+              - { key: C, text: Koroviev, distractor: SAME_CATEGORY }
+              - { key: D, text: Abaddon, distractor: SAME_CATEGORY }
+            explanation: "\"I'm not causing any trouble, I'm not touching anyone, I'm fixing the primus stove.\""
+            topics: { russian-literature: 1 }
+            contexts: { POST_SOVIET: 1, GLOBAL: 0.4 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: tolstoy
     name: "Толстой"
     facts:
       - id: natasha-pierre
         statement: "В эпилоге «Войны и мира» Наташа Ростова — жена Пьера Безухова."
-        sources: [{ name: "Википедия: Война и мир", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Война и мир", type: REFERENCE, verified: false } ]
         questions:
           - id: natasha-pierre-ru-1
             language: ru
@@ -178,7 +199,7 @@ families:
 
       - id: anna-karenina-first-line
         statement: "Роман «Анна Каренина» начинается фразой «Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему»."
-        sources: [{ name: "Википедия: Анна Каренина", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Анна Каренина", type: REFERENCE, verified: false } ]
         questions:
           - id: anna-karenina-first-line-ru-1
             language: ru
@@ -204,7 +225,7 @@ families:
     facts:
       - id: raskolnikov-name
         statement: "Главного героя «Преступления и наказания» зовут Родион Раскольников."
-        sources: [{ name: "Википедия: Преступление и наказание", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Преступление и наказание", type: REFERENCE, verified: false } ]
         questions:
           - id: raskolnikov-name-ru-1
             language: ru
@@ -230,7 +251,7 @@ families:
     facts:
       - id: karetu-mne
         statement: "Фразой «Карету мне, карету!» Чацкий уезжает в финале «Горя от ума»."
-        sources: [{ name: "Википедия: Горе от ума", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Горе от ума", type: REFERENCE, verified: false } ]
         questions:
           - id: karetu-mne-ru-1
             language: ru
@@ -256,7 +277,7 @@ families:
     facts:
       - id: bazarov
         statement: "Нигилиста в «Отцах и детях» Тургенева зовут Евгений Базаров."
-        sources: [{ name: "Википедия: Отцы и дети (роман)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Отцы и дети (роман)", type: REFERENCE, verified: false } ]
         questions:
           - id: bazarov-ru-1
             language: ru
@@ -279,7 +300,7 @@ families:
 
       - id: mumu-gerasim
         statement: "Хозяина собаки Муму в рассказе Тургенева зовут Герасим."
-        sources: [{ name: "Википедия: Муму", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Муму", type: REFERENCE, verified: false } ]
         questions:
           - id: mumu-gerasim-ru-1
             language: ru
@@ -305,7 +326,7 @@ families:
     facts:
       - id: geroy-author
         statement: "«Герой нашего времени» написал Михаил Лермонтов."
-        sources: [{ name: "Википедия: Герой нашего времени", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Герой нашего времени", type: REFERENCE, verified: false } ]
         questions:
           - id: geroy-author-ru-1
             language: ru
@@ -331,7 +352,7 @@ families:
     facts:
       - id: vishnevy-sad-lopakhin
         statement: "В «Вишнёвом саде» Чехова имение с садом покупает на торгах Лопахин."
-        sources: [{ name: "Википедия: Вишнёвый сад", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Вишнёвый сад", type: REFERENCE, verified: false } ]
         questions:
           - id: vishnevy-sad-lopakhin-ru-1
             language: ru
@@ -357,7 +378,7 @@ families:
     facts:
       - id: velikiy-kombinator
         statement: "«Великим комбинатором» в романах Ильфа и Петрова называют Остапа Бендера."
-        sources: [{ name: "Википедия: Остап Бендер", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Остап Бендер", type: REFERENCE, verified: false } ]
         questions:
           - id: velikiy-kombinator-ru-1
             language: ru

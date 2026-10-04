@@ -37,8 +37,10 @@ export const CulturalContextSchema = z.object({
 export const TopicSchema = z.object({
   slug,
   name: z.string(),
+  name_en: z.string(),
   emoji: z.string().optional(),
   group: z.string(),
+  group_en: z.string(),
   level: z.enum(["A", "B"]),
   implied_context: z.string().optional(),
   target_questions: z.number().int().positive(),

@@ -7,7 +7,7 @@ families:
     facts:
       - id: hp-house
         statement: "Гарри Поттер учится на факультете Гриффиндор."
-        sources: [{ name: "Википедия: Гриффиндор", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Гриффиндор", type: REFERENCE, verified: false } ]
         questions:
           - id: hp-house-ru-1
             language: ru
@@ -28,10 +28,31 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: hp-house-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which Hogwarts house is Harry Potter in?
+            options:
+              - { key: A, text: Slytherin, distractor: NEAR_MISS }
+              - { key: B, text: Gryffindor, correct: true }
+              - { key: C, text: Ravenclaw, distractor: SAME_CATEGORY }
+              - { key: D, text: Hufflepuff, distractor: SAME_CATEGORY }
+            explanation: The Sorting Hat almost put him in Slytherin.
+            topics: { fandoms: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1, 10s: 0.6 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: hp-platform
         statement: "Поезд в Хогвартс отправляется с платформы 9¾ вокзала Кингс-Кросс."
-        sources: [{ name: "Википедия: Хогвартс-экспресс", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Хогвартс-экспресс", type: REFERENCE, verified: false } ]
         questions:
           - id: hp-platform-ru-1
             language: ru
@@ -52,13 +73,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: hp-platform-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Which platform does the Hogwarts Express leave from?
+            options:
+              - { key: A, text: 7½, distractor: PLAUSIBLE }
+              - { key: B, text: 9¾, correct: true }
+              - { key: C, text: 10⅓, distractor: PLAUSIBLE }
+              - { key: D, text: "13", distractor: PLAUSIBLE }
+            explanation: King's Cross in London has a real sign — and a trolley disappearing into the wall.
+            topics: { fandoms: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1, 10s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: lotr
     name: "«Властелин колец»"
     facts:
       - id: lotr-mount-doom
         statement: "Фродо несёт Кольцо Всевластья, чтобы уничтожить его в Роковой горе в Мордоре."
-        sources: [{ name: "Википедия: Кольцо Всевластья", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Кольцо Всевластья", type: REFERENCE, verified: false } ]
         questions:
           - id: lotr-mount-doom-ru-1
             language: ru
@@ -79,13 +121,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: lotr-mount-doom-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Where can the One Ring be destroyed?
+            options:
+              - { key: A, text: Rivendell, distractor: SAME_CATEGORY }
+              - { key: B, text: Mount Doom, correct: true }
+              - { key: C, text: Minas Tirith, distractor: SAME_CATEGORY }
+              - { key: D, text: The Shire, distractor: SAME_CATEGORY }
+            explanation: Only in the fires of Orodruin, where it was forged.
+            topics: { fandoms: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: twilight
     name: "«Сумерки»"
     facts:
       - id: twilight-jacob
         statement: "В «Сумерках» Эдвард — вампир, а Джейкоб — оборотень."
-        sources: [{ name: "Википедия: Сумерки (серия романов)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Сумерки (серия романов)", type: REFERENCE, verified: false } ]
         questions:
           - id: twilight-jacob-ru-1
             language: ru
@@ -106,13 +169,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
             status: DRAFT
             generation_method: AI
+          - id: twilight-jacob-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: What was Jacob in Twilight?
+            options:
+              - { key: A, text: A vampire, distractor: NEAR_MISS }
+              - { key: B, text: A werewolf, correct: true }
+              - { key: C, text: A warlock, distractor: PLAUSIBLE }
+              - { key: D, text: An ordinary human, distractor: PLAUSIBLE }
+            explanation: Edward is the vampire; Bella took a long time choosing between them.
+            topics: { fandoms: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1, 10s: 0.6 }
+            difficulty: 2
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: got
     name: "«Игра престолов»"
     facts:
       - id: got-mother-of-dragons
         statement: "«Матерью драконов» в «Игре престолов» называют Дейенерис Таргариен."
-        sources: [{ name: "Википедия: Дейенерис Таргариен", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Дейенерис Таргариен", type: REFERENCE, verified: false } ]
         questions:
           - id: got-mother-of-dragons-ru-1
             language: ru
@@ -133,13 +217,34 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: DRAFT
             generation_method: AI
+          - id: got-mother-of-dragons-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who is called the "Mother of Dragons" in Game of Thrones?
+            options:
+              - { key: A, text: Cersei Lannister, distractor: SAME_CATEGORY }
+              - { key: B, text: Daenerys Targaryen, correct: true }
+              - { key: C, text: Arya Stark, distractor: SAME_CATEGORY }
+              - { key: D, text: Sansa Stark, distractor: SAME_CATEGORY }
+            explanation: Her three dragons were Drogon, Rhaegal and Viserion.
+            topics: { fandoms: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 10s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
   - family: marvel
     name: "Marvel"
     facts:
       - id: marvel-iron-man
         statement: "Тони Старк — Железный человек."
-        sources: [{ name: "Википедия: Железный человек", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Железный человек", type: REFERENCE, verified: false } ]
         questions:
           - id: marvel-iron-man-ru-1
             language: ru
@@ -160,3 +265,24 @@ families:
             effects: { SHARED_KNOWLEDGE: 1.0 }
             status: DRAFT
             generation_method: AI
+          - id: marvel-iron-man-en-1
+            language: en
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: Who is Tony Stark?
+            options:
+              - { key: A, text: Captain America, distractor: SAME_CATEGORY }
+              - { key: B, text: Iron Man, correct: true }
+              - { key: C, text: Spider-Man, distractor: SAME_CATEGORY }
+              - { key: D, text: Thor, distractor: SAME_CATEGORY }
+            explanation: Robert Downey Jr. played him in the films.
+            topics: { fandoms: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 10s: 1, current: 0.6 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."

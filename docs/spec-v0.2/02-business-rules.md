@@ -270,7 +270,7 @@
 - **C-006 — Private personalisation.**
 - **C-007 — Serious question tone.**
 - **C-008 — Free product.**
-- **C-009 — Russian first.** `[D-04]` MVP — только русский язык комнаты и русскоязычный банк.
+- **C-009 — Russian first.** `[D-04]` MVP начинался с русского; с EPIC 36 доступен и английский язык комнаты (переводы GLOBAL/bridge-вопросов и EN-native темы).
 
 ## 26. Open Business Rules
 

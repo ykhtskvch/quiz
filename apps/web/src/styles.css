@@ -883,3 +883,10 @@ button.link {
   border-color: var(--accent);
   opacity: 1;
 }
+
+/* ---------- EPIC 36: language picker ---------- */
+
+.lang-pick {
+  display: grid;
+  gap: 0.4rem;
+}
