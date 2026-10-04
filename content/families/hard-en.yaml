@@ -75,7 +75,8 @@ families:
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Check the winners of series 1–3 and 6."]
+            review_notes:
+              - "Сверка Claude 2026-10-04: confirmed (en.wikipedia: The Great British Bake Off) — S1 Edd Kimber, S2 Jo Wheatley, S3 John Whaite, S6 Nadiya Hussain."
 
       - id: everton-toffees
         statement: "Everton FC is nicknamed \"the Toffees\"."
@@ -117,7 +118,7 @@ families:
               - { key: B, text: "Muriel", correct: true }
               - { key: C, text: "Morris", distractor: PLAUSIBLE }
               - { key: D, text: "Michael", distractor: PLAUSIBLE }
-            explanation: "It comes up in the episode where Chandler and Joey bet the apartment in a trivia game. Chandler is not proud of it."
+            explanation: "His full name is Chandler Muriel Bing — and he is not proud of it."
             topics: { american-pop-culture: 1.0 }
             contexts: { US: 1.0 }
             generations: { 90s: 1.0, 00s: 0.6 }
@@ -126,6 +127,8 @@ families:
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-04: Muriel confirmed (en.wikipedia: Chandler Bing); the episode claim could not be confirmed, so it was removed."
 
       - id: kramer-cosmo
         statement: "In Seinfeld, Kramer's first name is Cosmo."
@@ -174,7 +177,8 @@ families:
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Check the Rocky and Bullwinkle explanation."]
+            review_notes:
+              - "Сверка Claude 2026-10-04: confirmed (en.wikipedia: Homer Simpson) — a nod to Bullwinkle J. Moose and Rocket J. Squirrel."
 
       - id: tonight-show-steve-allen
         statement: "Steve Allen was the first host of The Tonight Show, from 1954."

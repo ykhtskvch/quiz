@@ -7,7 +7,7 @@ families:
     facts:
       - id: ussr-founded-1922
         statement: "СССР образован 30 декабря 1922 года."
-        sources: [ { name: "Википедия: Образование СССР", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Образование СССР", type: REFERENCE, verified: false }]
         questions:
           - id: ussr-founded-1922-ru-1
             language: ru
@@ -31,7 +31,7 @@ families:
 
       - id: belovezhskie
         statement: "Беловежские соглашения 8 декабря 1991 года подписали руководители России, Украины и Белоруссии."
-        sources: [ { name: "Википедия: Беловежские соглашения", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Беловежские соглашения", type: REFERENCE, verified: false }]
         questions:
           - id: belovezhskie-ru-1
             language: ru
@@ -55,7 +55,7 @@ families:
 
       - id: gorbachev-president
         statement: "Михаил Горбачёв — первый и единственный президент СССР."
-        sources: [ { name: "Википедия: Президент СССР", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Президент СССР", type: REFERENCE, verified: false }]
         questions:
           - id: gorbachev-president-ru-1
             language: ru
@@ -79,7 +79,7 @@ families:
 
       - id: leningrad-renamed
         statement: "Ленинграду вернули название Санкт-Петербург в 1991 году."
-        sources: [ { name: "Википедия: Санкт-Петербург", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Санкт-Петербург", type: REFERENCE, verified: false }]
         questions:
           - id: leningrad-renamed-ru-1
             language: ru
@@ -106,7 +106,7 @@ families:
     facts:
       - id: nep-lenin
         statement: "Новую экономическую политику (НЭП) ввели в 1921 году при Ленине."
-        sources: [ { name: "Википедия: Новая экономическая политика", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Новая экономическая политика", type: REFERENCE, verified: false }]
         questions:
           - id: nep-lenin-ru-1
             language: ru
@@ -130,7 +130,7 @@ families:
 
       - id: ottepel-ehrenburg
         statement: "Название «оттепель» для хрущёвского периода взято из повести Ильи Эренбурга «Оттепель» (1954)."
-        sources: [ { name: "Википедия: Хрущёвская оттепель", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Хрущёвская оттепель", type: REFERENCE, verified: false }]
         questions:
           - id: ottepel-ehrenburg-ru-1
             language: ru
@@ -154,7 +154,7 @@ families:
 
       - id: zastoy-brezhnev
         statement: "Период правления Брежнева (1964–1982) принято называть «застоем»."
-        sources: [ { name: "Википедия: Застой", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Застой", type: REFERENCE, verified: false }]
         questions:
           - id: zastoy-brezhnev-ru-1
             language: ru
@@ -178,7 +178,7 @@ families:
 
       - id: glasnost
         statement: "Политику открытости при Горбачёве называли «гласностью»."
-        sources: [ { name: "Википедия: Гласность", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Гласность", type: REFERENCE, verified: false }]
         questions:
           - id: glasnost-ru-1
             language: ru
@@ -202,7 +202,7 @@ families:
 
       - id: khrushchev-corn
         statement: "Хрущёв продвигал кукурузу как «царицу полей»."
-        sources: [ { name: "Википедия: Кукурузная кампания", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Кукурузная кампания", type: REFERENCE, verified: false }]
         questions:
           - id: khrushchev-corn-ru-1
             language: ru
@@ -229,7 +229,7 @@ families:
     facts:
       - id: tselina-kazakhstan
         statement: "Целинные земли в 1950-х осваивали прежде всего в Казахстане, а также в Сибири и на Алтае."
-        sources: [ { name: "Википедия: Освоение целины", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Освоение целины", type: REFERENCE, verified: false }]
         questions:
           - id: tselina-kazakhstan-ru-1
             language: ru
@@ -241,7 +241,7 @@ families:
               - { key: B, text: "В Казахстане", correct: true }
               - { key: C, text: "В Прибалтике", distractor: PLAUSIBLE }
               - { key: D, text: "На Кавказе", distractor: PLAUSIBLE }
-            explanation: "Кампания началась в 1954 году; в Казахстане до сих пор есть город Целиноград (ныне Астана)."
+            explanation: "Кампания началась в 1954 году. Нынешняя столица Казахстана Астана в 1961–1992 годах называлась Целиноград."
             topics: { ussr-history: 1.0 }
             contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
             generations: { 80s: 0.8 }
@@ -250,11 +250,12 @@ families:
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
             status: DRAFT
             generation_method: AI
-            review_notes: [ "AI doubt: Проверить: Астана в 1961–1992 называлась Целиноград — убедиться, прежде чем оставлять в пояснении." ]
+            review_notes:
+              - "Сверка Claude 2026-10-04: в пояснении было «до сих пор есть город Целиноград» — это неверно, переписано."
 
       - id: bam
         statement: "БАМ — Байкало-Амурская магистраль."
-        sources: [ { name: "Википедия: Байкало-Амурская магистраль", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Байкало-Амурская магистраль", type: REFERENCE, verified: false }]
         questions:
           - id: bam-ru-1
             language: ru
@@ -278,7 +279,7 @@ families:
 
       - id: vdnkh
         statement: "ВДНХ — Выставка достижений народного хозяйства."
-        sources: [ { name: "Википедия: ВДНХ", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: ВДНХ", type: REFERENCE, verified: false }]
         questions:
           - id: vdnkh-ru-1
             language: ru
@@ -303,7 +304,7 @@ families:
 
       - id: rabochiy-kolkhoznitsa
         statement: "Скульптура Веры Мухиной «Рабочий и колхозница» стала эмблемой киностудии «Мосфильм»."
-        sources: [ { name: "Википедия: Рабочий и колхозница", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Рабочий и колхозница", type: REFERENCE, verified: false }]
         questions:
           - id: rabochiy-kolkhoznitsa-ru-1
             language: ru
@@ -330,7 +331,7 @@ families:
     facts:
       - id: olympic-mishka
         statement: "Символ Олимпийских игр 1980 года в Москве — медвежонок Мишка."
-        sources: [ { name: "Википедия: Олимпийский Мишка", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Олимпийский Мишка", type: REFERENCE, verified: false }]
         questions:
           - id: olympic-mishka-ru-1
             language: ru
@@ -357,7 +358,7 @@ families:
     facts:
       - id: chernobyl-year
         statement: "Авария на Чернобыльской АЭС произошла 26 апреля 1986 года."
-        sources: [ { name: "Википедия: Авария на Чернобыльской АЭС", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Авария на Чернобыльской АЭС", type: REFERENCE, verified: false }]
         questions:
           - id: chernobyl-year-ru-1
             language: ru

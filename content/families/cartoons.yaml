@@ -7,7 +7,7 @@ families:
     facts:
       - id: nu-pogodi-wolf-voice
         statement: "Волка в «Ну, погоди!» озвучивал Анатолий Папанов."
-        sources: [ { name: "Википедия: Ну, погоди!", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Ну, погоди!", type: REFERENCE, verified: false }]
         questions:
           - id: nu-pogodi-wolf-voice-ru-1
             language: ru
@@ -35,7 +35,7 @@ families:
     facts:
       - id: vinni-pukh-voice
         statement: "Винни-Пуха в советском мультфильме (1969–1972) озвучил Евгений Леонов."
-        sources: [ { name: "Википедия: Винни-Пух (мультфильм)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Винни-Пух (мультфильм)", type: REFERENCE, verified: false }]
         questions:
           - id: vinni-pukh-voice-ru-1
             language: ru
@@ -62,7 +62,7 @@ families:
     facts:
       - id: prostokvashino-cat
         statement: "Кота из Простоквашино зовут Матроскин."
-        sources: [ { name: "Википедия: Трое из Простоквашино", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Трое из Простоквашино", type: REFERENCE, verified: false }]
         questions:
           - id: prostokvashino-cat-ru-1
             language: ru
@@ -89,7 +89,7 @@ families:
     facts:
       - id: gena-job
         statement: "Крокодил Гена работал в зоопарке крокодилом."
-        sources: [ { name: "Википедия: Крокодил Гена (мультфильм)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Крокодил Гена (мультфильм)", type: REFERENCE, verified: false }]
         questions:
           - id: gena-job-ru-1
             language: ru
@@ -116,7 +116,7 @@ families:
     facts:
       - id: ezhik-norshtein
         statement: "Режиссёр мультфильма «Ёжик в тумане» (1975) — Юрий Норштейн."
-        sources: [ { name: "Википедия: Ёжик в тумане", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Ёжик в тумане", type: REFERENCE, verified: false }]
         questions:
           - id: ezhik-norshtein-ru-1
             language: ru
@@ -142,8 +142,8 @@ families:
     name: "Советский «Карлсон»"
     facts:
       - id: karlson-cure
-        statement: "В мультфильме «Карлсон вернулся» больной Карлсон требует себе варенья."
-        sources: [ { name: "Википедия: Карлсон вернулся", type: REFERENCE, verified: false } ]
+        statement: "В мультфильме «Малыш и Карлсон» (1968) Карлсон объявляет себя «самым тяжелобольным человеком» и лечится вареньем."
+        sources: [{ name: "Википедия: Карлсон вернулся", type: REFERENCE, verified: false }]
         questions:
           - id: karlson-cure-ru-1
             language: ru
@@ -155,7 +155,7 @@ families:
               - { key: B, text: "Вареньем", correct: true }
               - { key: C, text: "Плюшками", distractor: NEAR_MISS }
               - { key: D, text: "Шоколадом", distractor: SAME_CATEGORY }
-            explanation: "Плюшки тоже были — их Карлсон «уплетал» вместе с фрекен Бок."
+            explanation: "Это сцена из первого мультфильма, «Малыш и Карлсон» (1968). Плюшки и фрекен Бок появились во втором — «Карлсон вернулся»."
             topics: { cartoons: 1.0 }
             contexts: { POST_SOVIET: 1.0 }
             generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
@@ -164,14 +164,15 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
             status: DRAFT
             generation_method: AI
-            review_notes: [ "AI doubt: Проверить точную сцену: именно «Карлсон вернулся» и именно варенье как лекарство." ]
+            review_notes:
+              - "Сверка Claude 2026-10-04: сцена с вареньем — в «Малыш и Карлсон» (1968), не в «Карлсон вернулся» (ru.wikipedia, сюжеты обоих фильмов); факт и пояснение исправлены."
 
   - family: bremenskie
     name: "«Бременские музыканты»"
     facts:
       - id: bremenskie-trubadur
         statement: "В советских «Бременских музыкантах» в Принцессу влюблён Трубадур."
-        sources: [ { name: "Википедия: Бременские музыканты (мультфильм)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Бременские музыканты (мультфильм)", type: REFERENCE, verified: false }]
         questions:
           - id: bremenskie-trubadur-ru-1
             language: ru
@@ -198,7 +199,7 @@ families:
     facts:
       - id: ptitsa-govorun
         statement: "В «Тайне третьей планеты» звучит фраза: «Птица Говорун отличается умом и сообразительностью»."
-        sources: [ { name: "Википедия: Тайна третьей планеты", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Тайна третьей планеты", type: REFERENCE, verified: false }]
         questions:
           - id: ptitsa-govorun-ru-1
             language: ru
@@ -225,7 +226,7 @@ families:
     facts:
       - id: shchas-spoyu
         statement: "«Щас спою!» в мультфильме «Жил-был пёс» говорит Волк, которого озвучил Армен Джигарханян."
-        sources: [ { name: "Википедия: Жил-был пёс", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Жил-был пёс", type: REFERENCE, verified: false }]
         questions:
           - id: shchas-spoyu-ru-1
             language: ru
@@ -252,7 +253,7 @@ families:
     facts:
       - id: malovato-budet
         statement: "Герой мультфильма «Падал прошлогодний снег» постоянно повторяет «Маловато будет!»."
-        sources: [ { name: "Википедия: Падал прошлогодний снег", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Падал прошлогодний снег", type: REFERENCE, verified: false }]
         questions:
           - id: malovato-budet-ru-1
             language: ru
@@ -280,7 +281,7 @@ families:
     facts:
       - id: smeshariki-hedgehog
         statement: "Ежа из «Смешариков» зовут Ёжик; Крош — кролик, Бараш — баран, Копатыч — медведь."
-        sources: [ { name: "Википедия: Смешарики", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Смешарики", type: REFERENCE, verified: false }]
         questions:
           - id: smeshariki-hedgehog-ru-1
             language: ru
@@ -307,7 +308,7 @@ families:
     facts:
       - id: masha-youtube
         statement: "Серия «Маша плюс каша» мультфильма «Маша и Медведь» — одно из самых просматриваемых видео в истории YouTube."
-        sources: [ { name: "Википедия: Маша и Медведь", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Маша и Медведь", type: REFERENCE, verified: false }]
         questions:
           - id: masha-youtube-ru-1
             language: ru
@@ -357,7 +358,7 @@ families:
     facts:
       - id: lion-king-mufasa
         statement: "Отца Симбы в «Короле Льве» зовут Муфаса, а его дядю — Шрам."
-        sources: [ { name: "Википедия: Король Лев", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Король Лев", type: REFERENCE, verified: false }]
         questions:
           - id: lion-king-mufasa-ru-1
             language: ru
@@ -405,7 +406,7 @@ families:
     facts:
       - id: shrek-fiona-night
         statement: "В «Шреке» принцесса Фиона по ночам превращается в огра."
-        sources: [ { name: "Википедия: Шрек", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Шрек", type: REFERENCE, verified: false }]
         questions:
           - id: shrek-fiona-night-ru-1
             language: ru
@@ -453,7 +454,7 @@ families:
     facts:
       - id: duck-tales-scrooge
         statement: "Богатого дядюшку Билли, Вилли и Дилли в русском дубляже «Утиных историй» зовут Скрудж Макдак."
-        sources: [ { name: "Википедия: Утиные истории", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Утиные истории", type: REFERENCE, verified: false }]
         questions:
           - id: duck-tales-scrooge-ru-1
             language: ru

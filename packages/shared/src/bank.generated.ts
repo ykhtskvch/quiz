@@ -2655,7 +2655,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Плюшки тоже были — их Карлсон «уплетал» вместе с фрекен Бок.",
+    "explanation": "Это сцена из первого мультфильма, «Малыш и Карлсон» (1968). Плюшки и фрекен Бок появились во втором — «Карлсон вернулся».",
     "topics": {
       "cartoons": 1
     },
@@ -7426,7 +7426,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "It comes up in the episode where Chandler and Joey bet the apartment in a trivia game. Chandler is not proud of it.",
+    "explanation": "His full name is Chandler Muriel Bing — and he is not proud of it.",
     "topics": {
       "american-pop-culture": 1
     },
@@ -9946,7 +9946,7 @@ export const BANK: BankQuestion[] = [
     "originLanguage": "ru",
     "cultureSpecificity": "LOCAL",
     "isBridge": false,
-    "text": "Сколько платили за сданную пустую пол-литровую бутылку из-под лимонада в 1980-е?",
+    "text": "Сколько платили за сданную пустую пол-литровую бутылку из-под лимонада в 1970-е?",
     "options": [
       {
         "key": "A",
@@ -9966,7 +9966,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Десяток бутылок — и можно было купить что-то серьёзное. Очереди у пунктов приёма стеклотары были отдельным жанром.",
+    "explanation": "Десяток бутылок — и можно было купить что-то серьёзное. К началу 80-х приём подорожал до 20 копеек, а молочная бутылка 0,5 л стоила 15.",
     "topics": {
       "ussr-everyday": 1
     },
@@ -23451,7 +23451,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Кампания началась в 1954 году; в Казахстане до сих пор есть город Целиноград (ныне Астана).",
+    "explanation": "Кампания началась в 1954 году. Нынешняя столица Казахстана Астана в 1961–1992 годах называлась Целиноград.",
     "topics": {
       "ussr-history": 1
     },
@@ -24826,7 +24826,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "А ещё нужны были 1,21 гигаватта — отсюда «121».",
+    "explanation": "А ещё нужны были 1,21 гигаватта энергии — Док добывал их из плутония, а потом из молнии.",
     "topics": {
       "world-cinema": 1
     },
@@ -24874,7 +24874,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "It also needed 1.21 gigawatts — hence the 121.",
+    "explanation": "It also needed 1.21 gigawatts — from plutonium, or from a lightning strike.",
     "topics": {
       "world-cinema": 1
     },
@@ -27342,7 +27342,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Клуб «Каверн» в Ливерпуле, где они играли, работает до сих пор.",
+    "explanation": "Клуб «Каверн», где они играли, снесли в 1973 году, но восстановили рядом — он снова работает.",
     "topics": {
       "world-pop": 1
     },
@@ -27387,7 +27387,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "The Cavern Club, where they played, is still open.",
+    "explanation": "The Cavern Club, where they played, was demolished in 1973 — a rebuilt Cavern stands nearby and is open again.",
     "topics": {
       "world-pop": 1
     },

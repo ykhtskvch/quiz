@@ -153,20 +153,20 @@ families:
             generation_method: AI
 
       - id: bottle-deposit-12-kop
-        statement: "В СССР при сдаче пустой стеклянной бутылки 0,5 л из-под пива или лимонада возвращали 12 копеек."
+        statement: "В СССР в 1960–1970-е годы за сданную пустую бутылку 0,5 л из-под пива или лимонада возвращали 12 копеек; к началу 1980-х — 20 копеек."
         sources: [{ name: "Википедия: Стеклотара", type: REFERENCE, verified: false }]
         questions:
           - id: bottle-deposit-12-kop-ru-1
             language: ru
             origin_language: ru
             culture_specificity: LOCAL
-            text: "Сколько платили за сданную пустую пол-литровую бутылку из-под лимонада в 1980-е?"
+            text: "Сколько платили за сданную пустую пол-литровую бутылку из-под лимонада в 1970-е?"
             options:
               - { key: A, text: "5 копеек", distractor: PLAUSIBLE }
               - { key: B, text: "12 копеек", correct: true }
               - { key: C, text: "20 копеек", distractor: PLAUSIBLE }
               - { key: D, text: "50 копеек", distractor: PLAUSIBLE }
-            explanation: "Десяток бутылок — и можно было купить что-то серьёзное. Очереди у пунктов приёма стеклотары были отдельным жанром."
+            explanation: "Десяток бутылок — и можно было купить что-то серьёзное. К началу 80-х приём подорожал до 20 копеек, а молочная бутылка 0,5 л стоила 15."
             topics: { ussr-everyday: 1.0 }
             contexts: { POST_SOVIET: 1.0 }
             generations: { 80s: 1.0 }
@@ -175,7 +175,8 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
             status: DRAFT
             generation_method: AI
-            review_notes: [ "AI doubt: Проверить цену: 12 копеек для бутылки 0,5 л в 1980-е; для разных бутылок цены отличались." ]
+            review_notes:
+              - "Сверка Claude 2026-10-04: по ru.wikipedia (Стеклотара) 12 коп. — 1960–70-е, в первой половине 1980-х — 20 коп.; вопрос перенесён в 1970-е, иначе вариант «20 копеек» тоже был бы верным."
 
       - id: phone-07-long-distance
         statement: "В СССР междугородный телефонный разговор через телефонистку заказывали по номеру 07."
@@ -200,7 +201,9 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 0.6, HERO_CANDIDATE: 0.6 }
             status: DRAFT
             generation_method: AI
-            review_notes: [ "AI doubt: Проверить, что 07 был единым номером заказа междугородных разговоров по всему СССР." ]
+            review_notes:
+              - "AI doubt: Проверить, что 07 был единым номером заказа междугородных разговоров по всему СССР."
+              - "Сверка Claude 2026-10-04: источник в Википедии не нашла — проверить по другим источникам или снять вопрос."
 
   - family: hard-russia-90s-life
     name: "Россия 90-х — сложные"
