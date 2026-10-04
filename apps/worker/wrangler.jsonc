@@ -7,10 +7,35 @@
     "bindings": [{ "name": "ROOMS", "class_name": "RoomDO" }]
   },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RoomDO"] }],
-  // Anonymous analytics. `database_id` is a placeholder until the production database exists;
-  // local dev only needs the name (npm run db:migrate:local).
+  // Anonymous analytics. Local dev only needs the name (npm run db:migrate:local).
   "d1_databases": [
     { "binding": "DB", "database_name": "quiz-analytics", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "migrations" }
   ],
-  "observability": { "enabled": true }
+  "observability": { "enabled": true },
+
+  "env": {
+    // https://quiz-staging.<account>.workers.dev — playtests (12-system-design §12).
+    // The worker serves the built web app; /api/* goes to the worker first.
+    "staging": {
+      "name": "quiz-staging",
+      "assets": {
+        "directory": "../web/dist",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": ["/api/*"]
+      },
+      "durable_objects": {
+        "bindings": [{ "name": "ROOMS", "class_name": "RoomDO" }]
+      },
+      "migrations": [{ "tag": "v1", "new_sqlite_classes": ["RoomDO"] }],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "quiz-analytics-staging",
+          "database_id": "4a119122-04b1-457e-8fe0-1dc3fe241d13",
+          "migrations_dir": "migrations"
+        }
+      ],
+      "observability": { "enabled": true }
+    }
+  }
 }
