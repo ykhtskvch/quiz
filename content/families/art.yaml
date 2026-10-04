@@ -1,0 +1,144 @@
+# C2 — art (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: painting
+    name: "Живопись"
+    facts:
+      - id: mona-lisa-louvre
+        statement: "«Мона Лиза» Леонардо да Винчи хранится в Лувре."
+        sources: [{ name: "Википедия: Мона Лиза", type: REFERENCE, verified: false }]
+        questions:
+          - id: mona-lisa-louvre-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком музее хранится «Мона Лиза»?"
+            options:
+              - { key: A, text: "В Уффици", distractor: SAME_CATEGORY }
+              - { key: B, text: "В Лувре", correct: true }
+              - { key: C, text: "В Прадо", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Эрмитаже", distractor: SAME_CATEGORY }
+            explanation: "В 1911 году картину украли из Лувра — и вернули только через два года."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: starry-night-van-gogh
+        statement: "«Звёздную ночь» (1889) написал Винсент ван Гог."
+        sources: [{ name: "Википедия: Звёздная ночь", type: REFERENCE, verified: false }]
+        questions:
+          - id: starry-night-van-gogh-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто написал «Звёздную ночь»?"
+            options:
+              - { key: A, text: "Клод Моне", distractor: SAME_CATEGORY }
+              - { key: B, text: "Винсент ван Гог", correct: true }
+              - { key: C, text: "Поль Гоген", distractor: NEAR_MISS }
+              - { key: D, text: "Эдгар Дега", distractor: SAME_CATEGORY }
+            explanation: "Картина написана в лечебнице в Сен-Реми; Гоген жил с ван Гогом в Арле незадолго до этого."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: scream-munch
+        statement: "Картину «Крик» написал норвежец Эдвард Мунк."
+        sources: [{ name: "Википедия: Крик (картина)", type: REFERENCE, verified: false }]
+        questions:
+          - id: scream-munch-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто написал «Крик»?"
+            options:
+              - { key: A, text: "Эдвард Мунк", correct: true }
+              - { key: B, text: "Густав Климт", distractor: SAME_CATEGORY }
+              - { key: C, text: "Эгон Шиле", distractor: SAME_CATEGORY }
+              - { key: D, text: "Франсиско Гойя", distractor: SAME_CATEGORY }
+            explanation: "Мунк сделал несколько версий картины; её узнают даже по эмодзи 😱."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: sistine-michelangelo
+        statement: "Потолок Сикстинской капеллы расписал Микеланджело."
+        sources: [{ name: "Википедия: Сикстинская капелла", type: REFERENCE, verified: false }]
+        questions:
+          - id: sistine-michelangelo-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто расписал потолок Сикстинской капеллы?"
+            options:
+              - { key: A, text: "Рафаэль", distractor: NEAR_MISS }
+              - { key: B, text: "Микеланджело", correct: true }
+              - { key: C, text: "Леонардо да Винчи", distractor: SAME_CATEGORY }
+              - { key: D, text: "Донателло", distractor: SAME_CATEGORY }
+            explanation: "Он работал над ним около четырёх лет, почти всё время стоя на лесах."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: black-square-malevich
+        statement: "«Чёрный квадрат» написал Казимир Малевич (1915)."
+        sources: [{ name: "Википедия: Чёрный квадрат", type: REFERENCE, verified: false }]
+        questions:
+          - id: black-square-malevich-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Кто написал «Чёрный квадрат»?"
+            options:
+              - { key: A, text: "Василий Кандинский", distractor: SAME_CATEGORY }
+              - { key: B, text: "Казимир Малевич", correct: true }
+              - { key: C, text: "Марк Шагал", distractor: SAME_CATEGORY }
+              - { key: D, text: "Эль Лисицкий", distractor: SAME_CATEGORY }
+            explanation: "Картину впервые показали в 1915 году; позже Малевич написал ещё несколько вариантов."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 0.7, POST_SOVIET: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: dali-clocks
+        statement: "Картина «Постоянство памяти» с «растекающимися» часами — работа Сальвадора Дали."
+        sources: [{ name: "Википедия: Постоянство памяти", type: REFERENCE, verified: false }]
+        questions:
+          - id: dali-clocks-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "На картине какого художника изображены «растекающиеся» часы?"
+            options:
+              - { key: A, text: "Рене Магритта", distractor: NEAR_MISS }
+              - { key: B, text: "Сальвадора Дали", correct: true }
+              - { key: C, text: "Пабло Пикассо", distractor: SAME_CATEGORY }
+              - { key: D, text: "Жоана Миро", distractor: SAME_CATEGORY }
+            explanation: "«Постоянство памяти», 1931 год. Магритт — тоже сюрреалист, автор «Сына человеческого» с яблоком."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI

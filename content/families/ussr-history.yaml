@@ -1,0 +1,381 @@
+# C2 — ussr-history
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: ussr-start-end
+    name: "Образование и распад СССР"
+    facts:
+      - id: ussr-founded-1922
+        statement: "СССР образован 30 декабря 1922 года."
+        sources: [{ name: "Википедия: Образование СССР", type: REFERENCE, verified: false }]
+        questions:
+          - id: ussr-founded-1922-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "В каком году был образован СССР?"
+            options:
+              - { key: A, text: "В 1917", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "В 1918", distractor: PLAUSIBLE }
+              - { key: C, text: "В 1922", correct: true }
+              - { key: D, text: "В 1924", distractor: NEAR_MISS }
+            explanation: "1917 — год революции; Союз Советских Социалистических Республик появился через пять лет."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: belovezhskie
+        statement: "Беловежские соглашения 8 декабря 1991 года подписали руководители России, Украины и Белоруссии."
+        sources: [{ name: "Википедия: Беловежские соглашения", type: REFERENCE, verified: false }]
+        questions:
+          - id: belovezhskie-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Руководители каких республик подписали Беловежские соглашения в 1991 году?"
+            options:
+              - { key: A, text: "России, Украины и Белоруссии", correct: true }
+              - { key: B, text: "России, Украины и Казахстана", distractor: NEAR_MISS }
+              - { key: C, text: "России, Белоруссии и Казахстана", distractor: NEAR_MISS }
+              - { key: D, text: "Всех пятнадцати республик", distractor: PLAUSIBLE }
+            explanation: "Встреча прошла в Беловежской пуще; через несколько недель Союз прекратил существование."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: gorbachev-president
+        statement: "Михаил Горбачёв — первый и единственный президент СССР."
+        sources: [{ name: "Википедия: Президент СССР", type: REFERENCE, verified: false }]
+        questions:
+          - id: gorbachev-president-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Кто был единственным президентом СССР?"
+            options:
+              - { key: A, text: "Борис Ельцин", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Михаил Горбачёв", correct: true }
+              - { key: C, text: "Леонид Брежнев", distractor: PLAUSIBLE }
+              - { key: D, text: "Юрий Андропов", distractor: PLAUSIBLE }
+            explanation: "Пост президента ввели в 1990 году; остальные руководители были генеральными секретарями."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: leningrad-renamed
+        statement: "Ленинграду вернули название Санкт-Петербург в 1991 году."
+        sources: [{ name: "Википедия: Санкт-Петербург", type: REFERENCE, verified: false }]
+        questions:
+          - id: leningrad-renamed-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "В каком году Ленинграду вернули название Санкт-Петербург?"
+            options:
+              - { key: A, text: "В 1989", distractor: PLAUSIBLE }
+              - { key: B, text: "В 1991", correct: true }
+              - { key: C, text: "В 1993", distractor: PLAUSIBLE }
+              - { key: D, text: "В 1996", distractor: PLAUSIBLE }
+            explanation: "Решение приняли по итогам городского референдума."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: ussr-eras
+    name: "Эпохи советской истории"
+    facts:
+      - id: nep-lenin
+        statement: "Новую экономическую политику (НЭП) ввели в 1921 году при Ленине."
+        sources: [{ name: "Википедия: Новая экономическая политика", type: REFERENCE, verified: false }]
+        questions:
+          - id: nep-lenin-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "При каком руководителе страны ввели НЭП?"
+            options:
+              - { key: A, text: "При Сталине", distractor: NEAR_MISS }
+              - { key: B, text: "При Ленине", correct: true }
+              - { key: C, text: "При Хрущёве", distractor: PLAUSIBLE }
+              - { key: D, text: "При Троцком", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "НЭП разрешил частную торговлю после разрухи Гражданской войны; при Сталине его свернули."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ottepel-ehrenburg
+        statement: "Название «оттепель» для хрущёвского периода взято из повести Ильи Эренбурга «Оттепель» (1954)."
+        sources: [{ name: "Википедия: Хрущёвская оттепель", type: REFERENCE, verified: false }]
+        questions:
+          - id: ottepel-ehrenburg-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Название эпохи «оттепель» взято из повести какого писателя?"
+            options:
+              - { key: A, text: "Александра Солженицына", distractor: SAME_CATEGORY }
+              - { key: B, text: "Ильи Эренбурга", correct: true }
+              - { key: C, text: "Бориса Пастернака", distractor: SAME_CATEGORY }
+              - { key: D, text: "Александра Твардовского", distractor: SAME_CATEGORY }
+            explanation: "Повесть вышла в 1954 году, вскоре после смерти Сталина."
+            topics: { ussr-history: 1.0, russian-literature: 0.4 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: zastoy-brezhnev
+        statement: "Период правления Брежнева (1964–1982) принято называть «застоем»."
+        sources: [{ name: "Википедия: Застой", type: REFERENCE, verified: false }]
+        questions:
+          - id: zastoy-brezhnev-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Как принято называть период правления Брежнева?"
+            options:
+              - { key: A, text: "«Оттепель»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«Застой»", correct: true }
+              - { key: C, text: "«Перестройка»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«НЭП»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Оттепель» — Хрущёв, «перестройка» — Горбачёв, НЭП — 1920-е."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: glasnost
+        statement: "Политику открытости при Горбачёве называли «гласностью»."
+        sources: [{ name: "Википедия: Гласность", type: REFERENCE, verified: false }]
+        questions:
+          - id: glasnost-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Как называли политику открытости и отказа от цензуры при Горбачёве?"
+            options:
+              - { key: A, text: "«Оттепель»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«Гласность»", correct: true }
+              - { key: C, text: "«Застой»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Разрядка»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Разрядкой» называли смягчение отношений с Западом в 1970-х."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 1.0, 90s: 0.5 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: khrushchev-corn
+        statement: "Хрущёв продвигал кукурузу как «царицу полей»."
+        sources: [{ name: "Википедия: Кукурузная кампания", type: REFERENCE, verified: false }]
+        questions:
+          - id: khrushchev-corn-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Какую культуру Хрущёв продвигал как «царицу полей»?"
+            options:
+              - { key: A, text: "Пшеницу", distractor: PLAUSIBLE }
+              - { key: B, text: "Кукурузу", correct: true }
+              - { key: C, text: "Картофель", distractor: PLAUSIBLE }
+              - { key: D, text: "Подсолнечник", distractor: PLAUSIBLE }
+            explanation: "Кукурузу пытались сажать даже там, где она не вызревала."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: ussr-projects
+    name: "Великие стройки и символы"
+    facts:
+      - id: tselina-kazakhstan
+        statement: "Целинные земли в 1950-х осваивали прежде всего в Казахстане, а также в Сибири и на Алтае."
+        sources: [{ name: "Википедия: Освоение целины", type: REFERENCE, verified: false }]
+        questions:
+          - id: tselina-kazakhstan-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Где прежде всего осваивали целинные земли в 1950-х?"
+            options:
+              - { key: A, text: "На Украине", distractor: PLAUSIBLE }
+              - { key: B, text: "В Казахстане", correct: true }
+              - { key: C, text: "В Прибалтике", distractor: PLAUSIBLE }
+              - { key: D, text: "На Кавказе", distractor: PLAUSIBLE }
+            explanation: "Кампания началась в 1954 году; в Казахстане до сих пор есть город Целиноград (ныне Астана)."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить: Астана в 1961–1992 называлась Целиноград — убедиться, прежде чем оставлять в пояснении."]
+
+      - id: bam
+        statement: "БАМ — Байкало-Амурская магистраль."
+        sources: [{ name: "Википедия: Байкало-Амурская магистраль", type: REFERENCE, verified: false }]
+        questions:
+          - id: bam-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Как расшифровывается БАМ?"
+            options:
+              - { key: A, text: "Большая автомобильная магистраль", distractor: PLAUSIBLE }
+              - { key: B, text: "Байкало-Амурская магистраль", correct: true }
+              - { key: C, text: "Балтийско-Азиатский маршрут", distractor: PLAUSIBLE }
+              - { key: D, text: "Барнаульский авиационный маршрут", distractor: PLAUSIBLE }
+            explanation: "«Стройку века» вела вся страна, особенно в 1970-е."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: vdnkh
+        statement: "ВДНХ — Выставка достижений народного хозяйства."
+        sources: [{ name: "Википедия: ВДНХ", type: REFERENCE, verified: false }]
+        questions:
+          - id: vdnkh-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Как расшифровывается ВДНХ?"
+            options:
+              - { key: A, text: "Выставка достижений народного хозяйства", correct: true }
+              - { key: B, text: "Всесоюзный дом народного художника", distractor: PLAUSIBLE }
+              - { key: C, text: "Высшая дирекция народного хозяйства", distractor: PLAUSIBLE }
+              - { key: D, text: "Выставка древностей и народных художеств", distractor: PLAUSIBLE }
+            explanation: "Выставку открыли в 1939 году; в 2014-м ей вернули историческое название ВДНХ."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8, 10s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: rabochiy-kolkhoznitsa
+        statement: "Скульптура Веры Мухиной «Рабочий и колхозница» стала эмблемой киностудии «Мосфильм»."
+        sources: [{ name: "Википедия: Рабочий и колхозница", type: REFERENCE, verified: false }]
+        questions:
+          - id: rabochiy-kolkhoznitsa-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Эмблемой какой киностудии стала скульптура «Рабочий и колхозница»?"
+            options:
+              - { key: A, text: "«Ленфильм»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Мосфильм»", correct: true }
+              - { key: C, text: "«Союзмультфильм»", distractor: SAME_CATEGORY }
+              - { key: D, text: "Киностудия имени Горького", distractor: SAME_CATEGORY }
+            explanation: "Её видели в начале сотен советских фильмов."
+            topics: { ussr-history: 1.0, soviet-cinema: 0.5 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: olympics-80
+    name: "Олимпиада-80"
+    facts:
+      - id: olympic-mishka
+        statement: "Символ Олимпийских игр 1980 года в Москве — медвежонок Мишка."
+        sources: [{ name: "Википедия: Олимпийский Мишка", type: REFERENCE, verified: false }]
+        questions:
+          - id: olympic-mishka-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Кто был символом Олимпиады-80 в Москве?"
+            options:
+              - { key: A, text: "Волк из «Ну, погоди!»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Медвежонок Мишка", correct: true }
+              - { key: C, text: "Чебурашка", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Зайка", distractor: PLAUSIBLE }
+            explanation: "На закрытии Мишка улетел на воздушных шарах — и вся трибуна плакала."
+            topics: { ussr-history: 1.0, sports: 0.4 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.3 }
+            generations: { 80s: 0.8 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: chernobyl
+    name: "Чернобыль"
+    facts:
+      - id: chernobyl-year
+        statement: "Авария на Чернобыльской АЭС произошла 26 апреля 1986 года."
+        sources: [{ name: "Википедия: Авария на Чернобыльской АЭС", type: REFERENCE, verified: false }]
+        questions:
+          - id: chernobyl-year-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "В каком году произошла авария на Чернобыльской АЭС?"
+            options:
+              - { key: A, text: "В 1979", distractor: PLAUSIBLE }
+              - { key: B, text: "В 1986", correct: true }
+              - { key: C, text: "В 1989", distractor: PLAUSIBLE }
+              - { key: D, text: "В 1991", distractor: PLAUSIBLE }
+            explanation: "26 апреля 1986 года; в 2019 году о ней сняли известный сериал HBO."
+            topics: { ussr-history: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            generations: { 80s: 1.0, 10s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI

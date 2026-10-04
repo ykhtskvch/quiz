@@ -1,0 +1,409 @@
+# C2 — ru-pop-90s
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: ivanushki
+    name: "«Иванушки International»"
+    facts:
+      - id: ivanushki-producer
+        statement: "Продюсер группы «Иванушки International» — Игорь Матвиенко."
+        sources: [{ name: "Википедия: Иванушки International", type: REFERENCE, verified: false }]
+        questions:
+          - id: ivanushki-producer-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто продюсировал группу «Иванушки International»?"
+            options:
+              - { key: A, text: "Максим Фадеев", distractor: SAME_CATEGORY }
+              - { key: B, text: "Игорь Матвиенко", correct: true }
+              - { key: C, text: "Юрий Айзеншпис", distractor: SAME_CATEGORY }
+              - { key: D, text: "Бари Алибасов", distractor: SAME_CATEGORY }
+            explanation: "Матвиенко стоял и за «Любэ», а позже — за первой «Фабрикой звёзд»."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ivanushki-tuchi
+        statement: "Песню «Тучи» исполнял(а) «Иванушки International»."
+        sources: [{ name: "Википедия: Иванушки International", type: REFERENCE, verified: false }]
+        questions:
+          - id: ivanushki-tuchi-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Тучи»?"
+            options:
+              - { key: A, text: "«Иванушки International»", correct: true }
+              - { key: B, text: "«На-На»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Руки Вверх!»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Кар-Мэн»", distractor: SAME_CATEGORY }
+            explanation: "Песня 1996 года сделала группу звёздами; рыжий Андрей Григорьев-Апполонов, Кирилл Андреев и Игорь Сорин."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: ruki-vverh
+    name: "«Руки Вверх!»"
+    facts:
+      - id: ruki-vverh-kroshka
+        statement: "Песню «Крошка моя» исполнял(а) «Руки Вверх!»."
+        sources: [{ name: "Википедия: Руки Вверх!", type: REFERENCE, verified: false }]
+        questions:
+          - id: ruki-vverh-kroshka-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Крошка моя»?"
+            options:
+              - { key: A, text: "«Руки Вверх!»", correct: true }
+              - { key: B, text: "Hi-Fi", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Отпетые мошенники»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Дискотека Авария»", distractor: SAME_CATEGORY }
+            explanation: "Группа Сергея Жукова из Самары — главный саундтрек школьных дискотек конца 90-х."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить год и что группа действительно из Самары."]
+
+  - family: na-na
+    name: "«На-На»"
+    facts:
+      - id: na-na-alibasov
+        statement: "Продюсер группы «На-На» — Бари Алибасов."
+        sources: [{ name: "Википедия: На-На", type: REFERENCE, verified: false }]
+        questions:
+          - id: na-na-alibasov-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто создал и продюсировал группу «На-На»?"
+            options:
+              - { key: A, text: "Игорь Матвиенко", distractor: SAME_CATEGORY }
+              - { key: B, text: "Бари Алибасов", correct: true }
+              - { key: C, text: "Юрий Айзеншпис", distractor: SAME_CATEGORY }
+              - { key: D, text: "Андрей Разин", distractor: NEAR_MISS }
+            explanation: "Андрей Разин — продюсер «Ласкового мая», ещё одного проекта эпохи."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: pugacheva-90s
+    name: "Алла Пугачёва в 90-е"
+    facts:
+      - id: pozovi-menya-snezhina
+        statement: "Песню «Позови меня с собой», хит Аллы Пугачёвой 1990-х, написала Татьяна Снежина."
+        sources: [{ name: "Википедия: Позови меня с собой", type: REFERENCE, verified: false }]
+        questions:
+          - id: pozovi-menya-snezhina-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто написал песню «Позови меня с собой», ставшую хитом Аллы Пугачёвой?"
+            options:
+              - { key: A, text: "Игорь Николаев", distractor: SAME_CATEGORY }
+              - { key: B, text: "Илья Резник", distractor: SAME_CATEGORY }
+              - { key: C, text: "Татьяна Снежина", correct: true }
+              - { key: D, text: "Лайма Вайкуле", distractor: PLAUSIBLE }
+            explanation: "Снежина написала её задолго до Пугачёвой; сама автор погибла в 1995 году."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 5
+            dignity: 3
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что Снежина — автор и музыки, и слов, и год гибели."]
+
+  - family: zemfira
+    name: "Земфира"
+    facts:
+      - id: zemfira-ufa
+        statement: "Земфира родом из Уфы."
+        sources: [{ name: "Википедия: Земфира", type: REFERENCE, verified: false }]
+        questions:
+          - id: zemfira-ufa-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Из какого города Земфира?"
+            options:
+              - { key: A, text: "Из Казани", distractor: NEAR_MISS }
+              - { key: B, text: "Из Уфы", correct: true }
+              - { key: C, text: "Из Самары", distractor: SAME_CATEGORY }
+              - { key: D, text: "Из Екатеринбурга", distractor: SAME_CATEGORY }
+            explanation: "Дебютный альбом «Земфира» вышел в 1999 году — с «Ариведерчи» и «СПИДом»."
+            topics: { ru-pop-90s: 1.0, ru-rock: 0.6 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: mumiy-troll-90s
+    name: "«Мумий Тролль»"
+    facts:
+      - id: mumiy-troll-city
+        statement: "Группа «Мумий Тролль» Ильи Лагутенко — из Владивостока."
+        sources: [{ name: "Википедия: Мумий Тролль", type: REFERENCE, verified: false }]
+        questions:
+          - id: mumiy-troll-city-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Из какого города группа «Мумий Тролль»?"
+            options:
+              - { key: A, text: "Из Екатеринбурга", distractor: NEAR_MISS }
+              - { key: B, text: "Из Владивостока", correct: true }
+              - { key: C, text: "Из Новосибирска", distractor: SAME_CATEGORY }
+              - { key: D, text: "Из Хабаровска", distractor: NEAR_MISS }
+            explanation: "Екатеринбург — родина «Наутилуса» и «Агаты Кристи», а «Мумий Тролль» приехал с Тихого океана."
+            topics: { ru-pop-90s: 1.0, ru-rock: 0.6 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: shura
+    name: "Шура"
+    facts:
+      - id: shura-kholodnaya-luna
+        statement: "Песню «Холодная луна» исполнял(а) Шура."
+        sources: [{ name: "Википедия: Шура (певец)", type: REFERENCE, verified: false }]
+        questions:
+          - id: shura-kholodnaya-luna-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Холодная луна»?"
+            options:
+              - { key: A, text: "Шура", correct: true }
+              - { key: B, text: "Андрей Губин", distractor: SAME_CATEGORY }
+              - { key: C, text: "Валерий Меладзе", distractor: SAME_CATEGORY }
+              - { key: D, text: "Филипп Киркоров", distractor: SAME_CATEGORY }
+            explanation: "Шура — певец с узнаваемым голосом и улыбкой без передних зубов, звезда конца 90-х."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: kirkorov
+    name: "Филипп Киркоров"
+    facts:
+      - id: kirkorov-zayka
+        statement: "Песню «Зайка моя» исполнял(а) Филипп Киркоров."
+        sources: [{ name: "Википедия: Киркоров, Филипп Бедросович", type: REFERENCE, verified: false }]
+        questions:
+          - id: kirkorov-zayka-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Зайка моя»?"
+            options:
+              - { key: A, text: "Филипп Киркоров", correct: true }
+              - { key: B, text: "Андрей Губин", distractor: SAME_CATEGORY }
+              - { key: C, text: "Шура", distractor: SAME_CATEGORY }
+              - { key: D, text: "Валерий Леонтьев", distractor: SAME_CATEGORY }
+            explanation: "«Я твой зайчик, ты мой зайчик» — один из главных хитов середины 90-х."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: laskovy-may
+    name: "«Ласковый май»"
+    facts:
+      - id: laskovy-may-roses
+        statement: "Песню «Белые розы» исполнял(а) «Ласковый май»."
+        sources: [{ name: "Википедия: Ласковый май", type: REFERENCE, verified: false }]
+        questions:
+          - id: laskovy-may-roses-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Белые розы»?"
+            options:
+              - { key: A, text: "«Ласковый май»", correct: true }
+              - { key: B, text: "«Мираж»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Комбинация»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Кар-Мэн»", distractor: SAME_CATEGORY }
+            explanation: "Голосом группы был Юрий Шатунов; песню пели во дворах всей страны."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.8 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: kombinatsiya
+    name: "«Комбинация»"
+    facts:
+      - id: kombinatsiya-bukhgalter
+        statement: "Песню «Бухгалтер» исполнял(а) «Комбинация»."
+        sources: [{ name: "Википедия: Комбинация (группа)", type: REFERENCE, verified: false }]
+        questions:
+          - id: kombinatsiya-bukhgalter-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Бухгалтер»?"
+            options:
+              - { key: A, text: "«Комбинация»", correct: true }
+              - { key: B, text: "«Мираж»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Блестящие»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Стрелки»", distractor: SAME_CATEGORY }
+            explanation: "«Бухгалтер, милый мой бухгалтер» — саратовская группа, взлетевшая в начале 90-х."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: meladze-90s
+    name: "Валерий Меладзе"
+    facts:
+      - id: samba-motylka
+        statement: "Песню «Самба белого мотылька» исполнял(а) Валерий Меладзе."
+        sources: [{ name: "Википедия: Меладзе, Валерий Шотаевич", type: REFERENCE, verified: false }]
+        questions:
+          - id: samba-motylka-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Самба белого мотылька»?"
+            options:
+              - { key: A, text: "Валерий Меладзе", correct: true }
+              - { key: B, text: "Леонид Агутин", distractor: SAME_CATEGORY }
+              - { key: C, text: "Валерий Леонтьев", distractor: SAME_CATEGORY }
+              - { key: D, text: "Филипп Киркоров", distractor: SAME_CATEGORY }
+            explanation: "Песни для Валерия писал брат Константин — тот самый, что позже создаст «ВИА Гру»."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: vetlitskaya
+    name: "Наталья Ветлицкая"
+    facts:
+      - id: vetlitskaya-glaza
+        statement: "Песню «Посмотри в глаза» исполнял(а) Наталья Ветлицкая."
+        sources: [{ name: "Википедия: Ветлицкая, Наталья Игоревна", type: REFERENCE, verified: false }]
+        questions:
+          - id: vetlitskaya-glaza-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Посмотри в глаза»?"
+            options:
+              - { key: A, text: "Наталья Ветлицкая", correct: true }
+              - { key: B, text: "Ирина Аллегрова", distractor: SAME_CATEGORY }
+              - { key: C, text: "Алёна Апина", distractor: SAME_CATEGORY }
+              - { key: D, text: "Анжелика Варум", distractor: SAME_CATEGORY }
+            explanation: "До сольной карьеры Ветлицкая пела в группе «Мираж»."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что Ветлицкая пела в «Мираже» (она была одной из солисток)."]
+
+  - family: agutin
+    name: "Леонид Агутин"
+    facts:
+      - id: agutin-hop-hey
+        statement: "«Хоп хей, лала лей» — хит Леонида Агутина начала 1990-х («Босоногий мальчик»)."
+        sources: [{ name: "Википедия: Агутин, Леонид Николаевич", type: REFERENCE, verified: false }]
+        questions:
+          - id: agutin-hop-hey-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "У кого в припеве «Хоп хей, лала лей»?"
+            options:
+              - { key: A, text: "Андрей Губин", distractor: SAME_CATEGORY }
+              - { key: B, text: "Леонид Агутин", correct: true }
+              - { key: C, text: "Дмитрий Маликов", distractor: SAME_CATEGORY }
+              - { key: D, text: "Владимир Пресняков", distractor: SAME_CATEGORY }
+            explanation: "Песня «Босоногий мальчик» сделала Агутина звездой в 1993 году."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что строка «хоп хей, лала лей» из песни «Босоногий мальчик» и год."]
+
+  - family: kar-men
+    name: "«Кар-Мэн»"
+    facts:
+      - id: kar-men-london
+        statement: "Песню «Лондон, гудбай!» исполнял(а) «Кар-Мэн»."
+        sources: [{ name: "Википедия: Кар-Мэн", type: REFERENCE, verified: false }]
+        questions:
+          - id: kar-men-london-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто исполнял песню «Лондон, гудбай!»?"
+            options:
+              - { key: A, text: "«Кар-Мэн»", correct: true }
+              - { key: B, text: "«Мираж»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Технология»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Ласковый май»", distractor: SAME_CATEGORY }
+            explanation: "Богдан Титомир и Сергей Лемох придумали «экзотик-поп»: каждая песня — про новую страну."
+            topics: { ru-pop-90s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI

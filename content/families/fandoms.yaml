@@ -1,0 +1,162 @@
+# C2 — fandoms (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: harry-potter
+    name: "Гарри Поттер"
+    facts:
+      - id: hp-house
+        statement: "Гарри Поттер учится на факультете Гриффиндор."
+        sources: [{ name: "Википедия: Гриффиндор", type: REFERENCE, verified: false }]
+        questions:
+          - id: hp-house-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "На каком факультете Хогвартса учится Гарри Поттер?"
+            options:
+              - { key: A, text: "Слизерин", distractor: NEAR_MISS }
+              - { key: B, text: "Гриффиндор", correct: true }
+              - { key: C, text: "Когтевран", distractor: SAME_CATEGORY }
+              - { key: D, text: "Пуффендуй", distractor: SAME_CATEGORY }
+            explanation: "Распределяющая шляпа сначала хотела отправить его в Слизерин."
+            topics: { fandoms: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.6 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: hp-platform
+        statement: "Поезд в Хогвартс отправляется с платформы 9¾ вокзала Кингс-Кросс."
+        sources: [{ name: "Википедия: Хогвартс-экспресс", type: REFERENCE, verified: false }]
+        questions:
+          - id: hp-platform-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "С какой платформы отправляется поезд в Хогвартс?"
+            options:
+              - { key: A, text: "7½", distractor: PLAUSIBLE }
+              - { key: B, text: "9¾", correct: true }
+              - { key: C, text: "10⅓", distractor: PLAUSIBLE }
+              - { key: D, text: "13", distractor: PLAUSIBLE }
+            explanation: "На вокзале Кингс-Кросс в Лондоне есть настоящая табличка и тележка «в стене»."
+            topics: { fandoms: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: lotr
+    name: "«Властелин колец»"
+    facts:
+      - id: lotr-mount-doom
+        statement: "Фродо несёт Кольцо Всевластья, чтобы уничтожить его в Роковой горе в Мордоре."
+        sources: [{ name: "Википедия: Кольцо Всевластья", type: REFERENCE, verified: false }]
+        questions:
+          - id: lotr-mount-doom-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Где можно уничтожить Кольцо Всевластья?"
+            options:
+              - { key: A, text: "В Ривенделле", distractor: SAME_CATEGORY }
+              - { key: B, text: "В Роковой горе", correct: true }
+              - { key: C, text: "В Минас-Тирите", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Шире", distractor: SAME_CATEGORY }
+            explanation: "Только в огне Ородруина, где кольцо и было выковано."
+            topics: { fandoms: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: twilight
+    name: "«Сумерки»"
+    facts:
+      - id: twilight-jacob
+        statement: "В «Сумерках» Эдвард — вампир, а Джейкоб — оборотень."
+        sources: [{ name: "Википедия: Сумерки (серия романов)", type: REFERENCE, verified: false }]
+        questions:
+          - id: twilight-jacob-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кем был Джейкоб в «Сумерках»?"
+            options:
+              - { key: A, text: "Вампиром", distractor: NEAR_MISS }
+              - { key: B, text: "Оборотнем", correct: true }
+              - { key: C, text: "Колдуном", distractor: PLAUSIBLE }
+              - { key: D, text: "Обычным человеком", distractor: PLAUSIBLE }
+            explanation: "Вампир — это Эдвард; Белла долго выбирала между ними."
+            topics: { fandoms: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.6 }
+            difficulty: 2
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: got
+    name: "«Игра престолов»"
+    facts:
+      - id: got-mother-of-dragons
+        statement: "«Матерью драконов» в «Игре престолов» называют Дейенерис Таргариен."
+        sources: [{ name: "Википедия: Дейенерис Таргариен", type: REFERENCE, verified: false }]
+        questions:
+          - id: got-mother-of-dragons-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кого в «Игре престолов» называют «Матерью драконов»?"
+            options:
+              - { key: A, text: "Серсею Ланнистер", distractor: SAME_CATEGORY }
+              - { key: B, text: "Дейенерис Таргариен", correct: true }
+              - { key: C, text: "Арью Старк", distractor: SAME_CATEGORY }
+              - { key: D, text: "Сансу Старк", distractor: SAME_CATEGORY }
+            explanation: "У неё было три дракона: Дрогон, Рейегаль и Визерион."
+            topics: { fandoms: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 10s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: marvel
+    name: "Marvel"
+    facts:
+      - id: marvel-iron-man
+        statement: "Тони Старк — Железный человек."
+        sources: [{ name: "Википедия: Железный человек", type: REFERENCE, verified: false }]
+        questions:
+          - id: marvel-iron-man-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто такой Тони Старк?"
+            options:
+              - { key: A, text: "Капитан Америка", distractor: SAME_CATEGORY }
+              - { key: B, text: "Железный человек", correct: true }
+              - { key: C, text: "Человек-паук", distractor: SAME_CATEGORY }
+              - { key: D, text: "Тор", distractor: SAME_CATEGORY }
+            explanation: "В фильмах его играл Роберт Дауни-младший."
+            topics: { fandoms: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 10s: 1.0, current: 0.6 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI

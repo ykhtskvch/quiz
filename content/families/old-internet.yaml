@@ -1,0 +1,391 @@
+# C2 — old-internet
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: icq
+    name: "ICQ («аська»)"
+    facts:
+      - id: icq-sound
+        statement: "ICQ при новом сообщении издавала звук «О-оу!» (uh-oh)."
+        sources: [{ name: "Википедия: ICQ", type: REFERENCE, verified: false }]
+        questions:
+          - id: icq-sound-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Какой звук издавала ICQ, когда приходило новое сообщение?"
+            options:
+              - { key: A, text: "«Дзынь!»", distractor: PLAUSIBLE }
+              - { key: B, text: "«О-оу!»", correct: true }
+              - { key: C, text: "«Бип-бип»", distractor: PLAUSIBLE }
+              - { key: D, text: "Кваканье", distractor: PLAUSIBLE }
+            explanation: "Этот звук до сих пор узнают все, кто сидел в «аське» в нулевые."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: icq-logo
+        statement: "Логотип ICQ — зелёный цветок."
+        sources: [{ name: "Википедия: ICQ", type: REFERENCE, verified: false }]
+        questions:
+          - id: icq-logo-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Что было на логотипе ICQ?"
+            options:
+              - { key: A, text: "Синяя птичка", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Зелёный цветок", correct: true }
+              - { key: C, text: "Жёлтый смайлик", distractor: PLAUSIBLE }
+              - { key: D, text: "Красный конверт", distractor: PLAUSIBLE }
+            explanation: "Когда вы были не в сети, лепесток цветка становился красным."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить деталь про красный цветок в статусе «не в сети» или убрать её из пояснения."]
+
+      - id: icq-aska
+        statement: "В рунете «аськой» называли мессенджер ICQ."
+        sources: [{ name: "Википедия: ICQ", type: REFERENCE, verified: false }]
+        questions:
+          - id: icq-aska-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Какую программу в рунете называли «аськой»?"
+            options:
+              - { key: A, text: "Skype", distractor: SAME_CATEGORY }
+              - { key: B, text: "ICQ", correct: true }
+              - { key: C, text: "MSN Messenger", distractor: SAME_CATEGORY }
+              - { key: D, text: "Mail.ru Агент", distractor: NEAR_MISS }
+            explanation: "Название читалось «ай-си-кью» — отсюда «аська»."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, WHY_DO_I_REMEMBER_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: runet-social
+    name: "Соцсети рунета"
+    facts:
+      - id: odnoklassniki-founder
+        statement: "Сайт «Одноклассники» создал Альберт Попков в 2006 году."
+        sources: [{ name: "Википедия: Одноклассники (социальная сеть)", type: REFERENCE, verified: false }]
+        questions:
+          - id: odnoklassniki-founder-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто создал «Одноклассники»?"
+            options:
+              - { key: A, text: "Павел Дуров", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Альберт Попков", correct: true }
+              - { key: C, text: "Аркадий Волож", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Евгений Касперский", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Дуров в том же 2006 году запустил «ВКонтакте», Волож — основатель «Яндекса»."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: vk-year
+        statement: "«ВКонтакте» запущен в 2006 году."
+        sources: [{ name: "Википедия: ВКонтакте", type: REFERENCE, verified: false }]
+        questions:
+          - id: vk-year-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "В каком году появился «ВКонтакте»?"
+            options:
+              - { key: A, text: "2003", distractor: PLAUSIBLE }
+              - { key: B, text: "2006", correct: true }
+              - { key: C, text: "2009", distractor: PLAUSIBLE }
+              - { key: D, text: "2011", distractor: PLAUSIBLE }
+            explanation: "Сначала сайт был для студентов и выпускников вузов."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: preved
+    name: "«Превед, медвед!»"
+    facts:
+      - id: preved-medved-origin
+        statement: "Мем «Превед, медвед!» (2006) пошёл от картины американского художника Джона Лури с медведем."
+        sources: [{ name: "Википедия: Превед", type: REFERENCE, verified: false }]
+        questions:
+          - id: preved-medved-origin-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "С чего начался мем «Превед, медвед!»?"
+            options:
+              - { key: A, text: "С мультфильма «Маша и Медведь»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "С картины американского художника", correct: true }
+              - { key: C, text: "С рекламы пива", distractor: PLAUSIBLE }
+              - { key: D, text: "С фразы из «Нашей Russia»", distractor: PLAUSIBLE }
+            explanation: "На картине Джона Лури медведь застаёт врасплох парочку в лесу — подпись «Превед!» сделала её мемом."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить имя художника (Джон Лури) и название картины."]
+
+  - family: masyanya
+    name: "«Масяня»"
+    facts:
+      - id: masyanya-author
+        statement: "Флеш-мультфильмы про Масяню (с 2001 года) создал Олег Куваев."
+        sources: [{ name: "Википедия: Масяня", type: REFERENCE, verified: false }]
+        questions:
+          - id: masyanya-author-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто придумал Масяню?"
+            options:
+              - { key: A, text: "Артемий Лебедев", distractor: SAME_CATEGORY }
+              - { key: B, text: "Олег Куваев", correct: true }
+              - { key: C, text: "Дмитрий Пучков (Гоблин)", distractor: SAME_CATEGORY }
+              - { key: D, text: "Александр Татарский", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Масяня жила в Петербурге, а мультфильмы расходились по интернету и на дисках."
+            topics: { old-internet: 1.0, cartoons: 0.4 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: yandex
+    name: "«Яндекс»"
+    facts:
+      - id: yandex-name
+        statement: "Название «Яндекс» создатели расшифровывали как «Yet Another iNDEXer» — «ещё один индексатор»."
+        sources: [{ name: "Википедия: Яндекс", type: REFERENCE, verified: false }]
+        questions:
+          - id: yandex-name-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как, по версии создателей, расшифровывается «Яндекс»?"
+            options:
+              - { key: A, text: "«Языковой индекс»", distractor: PLAUSIBLE }
+              - { key: B, text: "«Yet another indexer»", correct: true }
+              - { key: C, text: "«Ya — index»", distractor: PLAUSIBLE }
+              - { key: D, text: "«Яндекс — найдётся всё»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Слово придумал Илья Сегалович; русская буква «Я» вместо «Yet another» добавила игры слов."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 00s: 0.6, 10s: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: dial-up
+    name: "Модемный интернет"
+    facts:
+      - id: dial-up-phone
+        statement: "При модемном (dial-up) подключении телефонная линия была занята: звонить по домашнему телефону было нельзя."
+        sources: [{ name: "Википедия: Dial-up", type: REFERENCE, verified: false }]
+        questions:
+          - id: dial-up-phone-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Что нельзя было делать дома, пока кто-то «сидит в интернете» через модем?"
+            options:
+              - { key: A, text: "Смотреть телевизор", distractor: PLAUSIBLE }
+              - { key: B, text: "Звонить по домашнему телефону", correct: true }
+              - { key: C, text: "Слушать радио", distractor: PLAUSIBLE }
+              - { key: D, text: "Включать микроволновку", distractor: PLAUSIBLE }
+            explanation: "Модем занимал телефонную линию — и звонил, свистя и шипя."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.8 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: internet-history
+    name: "История интернета"
+    facts:
+      - id: smiley-fahlman
+        statement: "Смайлик :-) в 1982 году предложил Скотт Фалман из Университета Карнеги — Меллона."
+        sources: [{ name: "Википедия: Смайлик", type: REFERENCE, verified: false }]
+        questions:
+          - id: smiley-fahlman-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто первым предложил смайлик :-)?"
+            options:
+              - { key: A, text: "Тим Бернерс-Ли", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Скотт Фалман", correct: true }
+              - { key: C, text: "Рэй Томлинсон", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Билл Гейтс", distractor: SAME_CATEGORY }
+            explanation: "Тим Бернерс-Ли придумал веб, а Рэй Томлинсон — электронную почту со значком @."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 1.0 }
+            difficulty: 5
+            dignity: 4
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ru-domain-year
+        statement: "Домен .ru зарегистрирован 7 апреля 1994 года — эту дату отмечают как день рождения рунета."
+        sources: [{ name: "Википедия: .ru", type: REFERENCE, verified: false }]
+        questions:
+          - id: ru-domain-year-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "В каком году появился домен .ru?"
+            options:
+              - { key: A, text: "1991", distractor: PLAUSIBLE }
+              - { key: B, text: "1994", correct: true }
+              - { key: C, text: "1997", distractor: PLAUSIBLE }
+              - { key: D, text: "2000", distractor: PLAUSIBLE }
+            explanation: "7 апреля в рунете отмечают как его день рождения."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: youtube-year
+        statement: "YouTube появился в 2005 году."
+        sources: [{ name: "Википедия: YouTube", type: REFERENCE, verified: false }]
+        questions:
+          - id: youtube-year-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком году появился YouTube?"
+            options:
+              - { key: A, text: "2001", distractor: PLAUSIBLE }
+              - { key: B, text: "2005", correct: true }
+              - { key: C, text: "2008", distractor: PLAUSIBLE }
+              - { key: D, text: "2010", distractor: PLAUSIBLE }
+            explanation: "Первое видео — «Me at the zoo», 19 секунд у вольера со слонами."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: mobile-2000s
+    name: "Телефоны нулевых"
+    facts:
+      - id: nokia-snake
+        statement: "На телефоне Nokia 3310 была предустановлена игра «Змейка» (Snake II)."
+        sources: [{ name: "Википедия: Nokia 3310", type: REFERENCE, verified: false }]
+        questions:
+          - id: nokia-snake-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В какую игру играли на Nokia 3310?"
+            options:
+              - { key: A, text: "Тетрис", distractor: NEAR_MISS }
+              - { key: B, text: "«Змейка»", correct: true }
+              - { key: C, text: "«Сапёр»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Пасьянс»", distractor: SAME_CATEGORY }
+            explanation: "На 3310 стояла Snake II; телефон заодно прославился как «неубиваемый»."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: sms-cyrillic-70
+        statement: "В одну SMS помещалось 160 латинских символов, но только 70 кириллических."
+        sources: [{ name: "Википедия: SMS", type: REFERENCE, verified: false }]
+        questions:
+          - id: sms-cyrillic-70-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Сколько символов кириллицей помещалось в одну SMS?"
+            options:
+              - { key: A, text: "160", distractor: NEAR_MISS }
+              - { key: B, text: "70", correct: true }
+              - { key: C, text: "140", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "100", distractor: PLAUSIBLE }
+            explanation: "Латиницей — 160, поэтому многие писали «транслитом», чтобы платить за одну SMS, а не за три."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: winamp
+    name: "Winamp"
+    facts:
+      - id: winamp-llama
+        statement: "Фирменный слоган Winamp — «It really whips the llama's ass»; на нём фигурирует лама."
+        sources: [{ name: "Википедия: Winamp", type: REFERENCE, verified: false }]
+        questions:
+          - id: winamp-llama-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое животное упоминается в знаменитом слогане плеера Winamp?"
+            options:
+              - { key: A, text: "Верблюд", distractor: PLAUSIBLE }
+              - { key: B, text: "Лама", correct: true }
+              - { key: C, text: "Альпака", distractor: NEAR_MISS }
+              - { key: D, text: "Ослик", distractor: PLAUSIBLE }
+            explanation: "Фразу «It really whips the llama's ass» плеер проигрывал при первом запуске."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 1.0 }
+            generations: { 00s: 1.0, 90s: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI

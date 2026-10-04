@@ -1,0 +1,196 @@
+# C2 — science (wildcard-friendly GLOBAL questions)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: chemistry
+    name: "Химия"
+    facts:
+      - id: gold-symbol
+        statement: "Химический символ золота — Au (от лат. aurum)."
+        sources: [{ name: "Википедия: Золото", type: REFERENCE, verified: false }]
+        questions:
+          - id: gold-symbol-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой химический символ у золота?"
+            options:
+              - { key: A, text: "Ag", distractor: NEAR_MISS }
+              - { key: B, text: "Au", correct: true }
+              - { key: C, text: "Go", distractor: PLAUSIBLE }
+              - { key: D, text: "Gd", distractor: SAME_CATEGORY }
+            explanation: "Ag — серебро (argentum), Gd — гадолиний."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: air-nitrogen
+        statement: "Больше всего в атмосфере Земли азота — около 78 %."
+        sources: [{ name: "Википедия: Атмосфера Земли", type: REFERENCE, verified: false }]
+        questions:
+          - id: air-nitrogen-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какого газа больше всего в атмосфере Земли?"
+            options:
+              - { key: A, text: "Кислорода", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Азота", correct: true }
+              - { key: C, text: "Углекислого газа", distractor: PLAUSIBLE }
+              - { key: D, text: "Аргона", distractor: SAME_CATEGORY }
+            explanation: "Кислорода — около 21 %, аргона — меньше процента."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.5, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: diamond-hardest
+        statement: "Алмаз — самый твёрдый природный минерал."
+        sources: [{ name: "Википедия: Алмаз", type: REFERENCE, verified: false }]
+        questions:
+          - id: diamond-hardest-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой природный минерал самый твёрдый?"
+            options:
+              - { key: A, text: "Кварц", distractor: SAME_CATEGORY }
+              - { key: B, text: "Алмаз", correct: true }
+              - { key: C, text: "Гранит", distractor: PLAUSIBLE }
+              - { key: D, text: "Корунд", distractor: NEAR_MISS }
+            explanation: "Корунд (рубин и сапфир) — второй по твёрдости."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: biology
+    name: "Биология и медицина"
+    facts:
+      - id: bones-206
+        statement: "В скелете взрослого человека 206 костей."
+        sources: [{ name: "Википедия: Скелет человека", type: REFERENCE, verified: false }]
+        questions:
+          - id: bones-206-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Сколько костей в скелете взрослого человека?"
+            options:
+              - { key: A, text: "106", distractor: PLAUSIBLE }
+              - { key: B, text: "206", correct: true }
+              - { key: C, text: "306", distractor: PLAUSIBLE }
+              - { key: D, text: "412", distractor: PLAUSIBLE }
+            explanation: "У новорождённого их больше — около 270, часть потом срастается."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: penicillin-fleming
+        statement: "Пенициллин открыл Александр Флеминг в 1928 году."
+        sources: [{ name: "Википедия: Пенициллин", type: REFERENCE, verified: false }]
+        questions:
+          - id: penicillin-fleming-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто открыл пенициллин?"
+            options:
+              - { key: A, text: "Луи Пастер", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Александр Флеминг", correct: true }
+              - { key: C, text: "Роберт Кох", distractor: SAME_CATEGORY }
+              - { key: D, text: "Илья Мечников", distractor: SAME_CATEGORY }
+            explanation: "Флеминг заметил, что плесень убила бактерии в забытой чашке Петри."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: dna-watson-crick
+        statement: "Структуру ДНК — двойную спираль — описали Джеймс Уотсон и Фрэнсис Крик в 1953 году."
+        sources: [{ name: "Википедия: Дезоксирибонуклеиновая кислота", type: REFERENCE, verified: false }]
+        questions:
+          - id: dna-watson-crick-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто описал двойную спираль ДНК?"
+            options:
+              - { key: A, text: "Мария Кюри и Пьер Кюри", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Уотсон и Крик", correct: true }
+              - { key: C, text: "Мендель и Дарвин", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Пастер и Кох", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Важную роль сыграли снимки Розалинд Франклин."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: physics
+    name: "Физика"
+    facts:
+      - id: light-speed
+        statement: "Скорость света в вакууме — около 300 000 км/с."
+        sources: [{ name: "Википедия: Скорость света", type: REFERENCE, verified: false }]
+        questions:
+          - id: light-speed-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Чему примерно равна скорость света?"
+            options:
+              - { key: A, text: "300 км/с", distractor: PLAUSIBLE }
+              - { key: B, text: "300 000 км/с", correct: true }
+              - { key: C, text: "3 млн км/с", distractor: PLAUSIBLE }
+              - { key: D, text: "30 000 км/с", distractor: PLAUSIBLE }
+            explanation: "Точно — 299 792 458 м/с."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: newton-gravity
+        statement: "Закон всемирного тяготения и законы движения сформулировал Исаак Ньютон."
+        sources: [{ name: "Википедия: Ньютон, Исаак", type: REFERENCE, verified: false }]
+        questions:
+          - id: newton-gravity-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто сформулировал закон всемирного тяготения?"
+            options:
+              - { key: A, text: "Галилео Галилей", distractor: NEAR_MISS }
+              - { key: B, text: "Исаак Ньютон", correct: true }
+              - { key: C, text: "Альберт Эйнштейн", distractor: SAME_CATEGORY }
+              - { key: D, text: "Иоганн Кеплер", distractor: NEAR_MISS }
+            explanation: "Легенда о яблоке, упавшем ему на голову, скорее всего, приукрашена."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI

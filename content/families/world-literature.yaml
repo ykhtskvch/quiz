@@ -1,0 +1,145 @@
+# C2 — world-literature (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: classics
+    name: "Мировая классика"
+    facts:
+      - id: romeo-verona
+        statement: "Действие «Ромео и Джульетты» Шекспира происходит в Вероне."
+        sources: [{ name: "Википедия: Ромео и Джульетта", type: REFERENCE, verified: false }]
+        questions:
+          - id: romeo-verona-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком городе происходит действие «Ромео и Джульетты»?"
+            options:
+              - { key: A, text: "В Венеции", distractor: NEAR_MISS }
+              - { key: B, text: "В Вероне", correct: true }
+              - { key: C, text: "Во Флоренции", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Риме", distractor: SAME_CATEGORY }
+            explanation: "В Венеции Шекспир поселил «Венецианского купца» и «Отелло»."
+            topics: { world-literature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: don-quixote-windmills
+        statement: "Дон Кихот принимает ветряные мельницы за великанов и бросается с ними в бой."
+        sources: [{ name: "Википедия: Дон Кихот", type: REFERENCE, verified: false }]
+        questions:
+          - id: don-quixote-windmills-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "С чем сражался Дон Кихот, приняв это за великанов?"
+            options:
+              - { key: A, text: "С ветряными мельницами", correct: true }
+              - { key: B, text: "Со стадом овец", distractor: NEAR_MISS }
+              - { key: C, text: "С крестьянами", distractor: PLAUSIBLE }
+              - { key: D, text: "С деревьями", distractor: PLAUSIBLE }
+            explanation: "Со стадом овец он тоже воевал — принял его за войско."
+            topics: { world-literature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: baker-street-221b
+        statement: "Шерлок Холмс жил на Бейкер-стрит, 221Б."
+        sources: [{ name: "Википедия: Бейкер-стрит, 221Б", type: REFERENCE, verified: false }]
+        questions:
+          - id: baker-street-221b-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Где жил Шерлок Холмс?"
+            options:
+              - { key: A, text: "Даунинг-стрит, 10", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Бейкер-стрит, 221Б", correct: true }
+              - { key: C, text: "Оксфорд-стрит, 7", distractor: PLAUSIBLE }
+              - { key: D, text: "Пикадилли, 13", distractor: PLAUSIBLE }
+            explanation: "Даунинг-стрит, 10 — резиденция британского премьер-министра."
+            topics: { world-literature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: saint-exupery-pilot
+        statement: "Антуан де Сент-Экзюпери, автор «Маленького принца», был лётчиком."
+        sources: [{ name: "Википедия: Сент-Экзюпери, Антуан де", type: REFERENCE, verified: false }]
+        questions:
+          - id: saint-exupery-pilot-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кем по профессии был автор «Маленького принца»?"
+            options:
+              - { key: A, text: "Врачом", distractor: PLAUSIBLE }
+              - { key: B, text: "Лётчиком", correct: true }
+              - { key: C, text: "Моряком", distractor: PLAUSIBLE }
+              - { key: D, text: "Учителем", distractor: PLAUSIBLE }
+            explanation: "Он пропал без вести в 1944 году во время разведывательного полёта."
+            topics: { world-literature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: 1984-big-brother
+        statement: "«Большой брат следит за тобой» — лозунг из романа Джорджа Оруэлла «1984»."
+        sources: [{ name: "Википедия: 1984 (роман)", type: REFERENCE, verified: false }]
+        questions:
+          - id: 1984-big-brother-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: "Из какого романа фраза «Большой брат следит за тобой»?"
+            options:
+              - { key: A, text: "«О дивный новый мир»", distractor: NEAR_MISS }
+              - { key: B, text: "«1984»", correct: true }
+              - { key: C, text: "«451 градус по Фаренгейту»", distractor: NEAR_MISS }
+              - { key: D, text: "«Скотный двор»", distractor: NEAR_MISS }
+            explanation: "Все варианты — антиутопии; «Скотный двор» тоже написал Оруэлл."
+            topics: { world-literature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, BRIDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: robinson-friday
+        statement: "Спутника Робинзона Крузо зовут Пятница."
+        sources: [{ name: "Википедия: Робинзон Крузо", type: REFERENCE, verified: false }]
+        questions:
+          - id: robinson-friday-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как звали спутника Робинзона Крузо?"
+            options:
+              - { key: A, text: "Понедельник", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Пятница", correct: true }
+              - { key: C, text: "Воскресенье", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Среда", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Робинзон назвал его по дню недели, когда спас."
+            topics: { world-literature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI

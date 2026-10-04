@@ -1,0 +1,144 @@
+# C2 — food (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: world-food
+    name: "Кухни мира"
+    facts:
+      - id: margherita-queen
+        statement: "Пицца «Маргарита» названа в честь итальянской королевы Маргариты Савойской."
+        sources: [{ name: "Википедия: Пицца «Маргарита»", type: REFERENCE, verified: false }]
+        questions:
+          - id: margherita-queen-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В честь кого названа пицца «Маргарита»?"
+            options:
+              - { key: A, text: "Королевы Италии", correct: true }
+              - { key: B, text: "Жены пиццайоло", distractor: PLAUSIBLE }
+              - { key: C, text: "Цветка ромашки", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Героини оперы", distractor: PLAUSIBLE }
+            explanation: "По легенде, цвета пиццы — томат, моцарелла и базилик — повторяют итальянский флаг. «Маргарита» по-итальянски ещё и «ромашка»."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: wasabi
+        statement: "Васаби — японская приправа из растения, родственного хрену."
+        sources: [{ name: "Википедия: Васаби", type: REFERENCE, verified: false }]
+        questions:
+          - id: wasabi-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Что такое васаби?"
+            options:
+              - { key: A, text: "Японский хрен", correct: true }
+              - { key: B, text: "Маринованный имбирь", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Соевый соус", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Морские водоросли", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Маринованный имбирь — это гари, водоросли для роллов — нори."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: paella-spain
+        statement: "Паэлья — блюдо испанской (валенсийской) кухни."
+        sources: [{ name: "Википедия: Паэлья", type: REFERENCE, verified: false }]
+        questions:
+          - id: paella-spain-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Из какой страны паэлья?"
+            options:
+              - { key: A, text: "Из Италии", distractor: NEAR_MISS }
+              - { key: B, text: "Из Испании", correct: true }
+              - { key: C, text: "Из Португалии", distractor: NEAR_MISS }
+              - { key: D, text: "Из Мексики", distractor: SAME_CATEGORY }
+            explanation: "Родина — Валенсия; название происходит от сковороды, в которой её готовят."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: guacamole-avocado
+        statement: "Основа гуакамоле — авокадо."
+        sources: [{ name: "Википедия: Гуакамоле", type: REFERENCE, verified: false }]
+        questions:
+          - id: guacamole-avocado-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Из чего делают основу гуакамоле?"
+            options:
+              - { key: A, text: "Из авокадо", correct: true }
+              - { key: B, text: "Из нута", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Из баклажанов", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Из фасоли", distractor: SAME_CATEGORY }
+            explanation: "Из нута делают хумус, а из баклажанов — бабагануш."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: saffron-expensive
+        statement: "Шафран — самая дорогая пряность в мире."
+        sources: [{ name: "Википедия: Шафран (пряность)", type: REFERENCE, verified: false }]
+        questions:
+          - id: saffron-expensive-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая пряность самая дорогая в мире?"
+            options:
+              - { key: A, text: "Ваниль", distractor: NEAR_MISS }
+              - { key: B, text: "Шафран", correct: true }
+              - { key: C, text: "Кардамон", distractor: SAME_CATEGORY }
+              - { key: D, text: "Корица", distractor: SAME_CATEGORY }
+            explanation: "Её собирают вручную — это рыльца цветков крокуса; ваниль — вторая по цене."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: emmental-holes
+        statement: "Швейцарский сыр эмменталь знаменит крупными дырками."
+        sources: [{ name: "Википедия: Эмменталь", type: REFERENCE, verified: false }]
+        questions:
+          - id: emmental-holes-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой швейцарский сыр знаменит крупными дырками?"
+            options:
+              - { key: A, text: "Пармезан", distractor: SAME_CATEGORY }
+              - { key: B, text: "Эмменталь", correct: true }
+              - { key: C, text: "Камамбер", distractor: SAME_CATEGORY }
+              - { key: D, text: "Чеддер", distractor: SAME_CATEGORY }
+            explanation: "Дырки образуют пузырьки газа при созревании."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI

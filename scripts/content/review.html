@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Проверка вопросов</title>
+    <style>
+      :root {
+        --bg: #16131f;
+        --surface: #221d30;
+        --surface-2: #2d2640;
+        --text: #f4f1fa;
+        --muted: #a49cb8;
+        --accent: #ffcc4d;
+        --accent-text: #1d1700;
+        --ok: #4ade80;
+        --bad: #f87171;
+        --warn: #fbbf24;
+        color-scheme: dark;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--bg); color: var(--text); }
+      header {
+        position: sticky; top: 0; z-index: 2; display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center;
+        padding: 0.75rem 1.25rem; background: var(--surface); border-bottom: 1px solid var(--surface-2);
+      }
+      header h1 { font-size: 1.05rem; margin: 0 1rem 0 0; }
+      .stat { color: var(--muted); font-size: 0.9rem; }
+      .stat strong { color: var(--text); }
+      main { max-width: 900px; margin: 0 auto; padding: 1.25rem; display: grid; gap: 1rem; }
+      label { font-size: 0.8rem; color: var(--muted); display: grid; gap: 0.3rem; }
+      input, textarea, select {
+        font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--surface-2);
+        border-radius: 10px; padding: 0.5rem 0.65rem; width: 100%;
+      }
+      textarea { resize: vertical; min-height: 2.6rem; line-height: 1.4; }
+      input:focus, textarea:focus, select:focus { outline: none; border-color: var(--accent); }
+      header input, header select { width: auto; }
+      button {
+        font: inherit; font-weight: 600; border: 0; border-radius: 10px; padding: 0.6rem 1rem; cursor: pointer;
+        background: var(--surface-2); color: var(--text);
+      }
+      button.primary { background: var(--accent); color: var(--accent-text); }
+      button.danger { background: transparent; border: 1px solid var(--bad); color: var(--bad); }
+      button:disabled { opacity: 0.4; cursor: default; }
+      .card { background: var(--surface); border-radius: 16px; padding: 1.25rem; display: grid; gap: 1rem; }
+      .meta { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; font-size: 0.85rem; }
+      .chip { background: var(--surface-2); border-radius: 999px; padding: 0.2rem 0.65rem; }
+      .chip.status-DRAFT { background: #3b3352; }
+      .chip.status-APPROVED { background: #14532d; }
+      .chip.status-RETIRED { background: #4c1d1d; }
+      .notes { border-left: 3px solid var(--warn); background: #2c2614; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.9rem; }
+      .notes p, .issues p { margin: 0.2rem 0; }
+      .issues { border-left: 3px solid var(--bad); background: #2c1515; padding: 0.6rem 0.8rem; border-radius: 8px; font-size: 0.9rem; }
+      .row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+      .row3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+      .options { display: grid; gap: 0.4rem; }
+      .option { display: grid; grid-template-columns: auto auto 1fr auto; gap: 0.5rem; align-items: center; }
+      .option .key { font-weight: 800; width: 1.5rem; text-align: center; }
+      .option .type { font-size: 0.75rem; color: var(--muted); min-width: 9rem; text-align: right; }
+      .option.correct input[type="text"] { border-color: var(--ok); }
+      .links { display: flex; gap: 0.75rem; font-size: 0.85rem; }
+      .links a { color: var(--accent); }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+      .actions .spacer { flex: 1; }
+      .msg { font-size: 0.9rem; }
+      .msg.error { color: var(--bad); }
+      .msg.ok { color: var(--ok); }
+      .empty { text-align: center; color: var(--muted); padding: 3rem 1rem; }
+      .nav { display: flex; gap: 0.5rem; align-items: center; color: var(--muted); font-size: 0.9rem; }
+      kbd { background: var(--surface-2); border-radius: 4px; padding: 0 0.3rem; font-size: 0.8rem; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Проверка вопросов</h1>
+      <label style="grid-auto-flow: column; align-items: center">Кто проверяет <input id="reviewer" placeholder="имя" size="10" /></label>
+      <select id="file"></select>
+      <select id="status">
+        <option value="DRAFT">Черновики</option>
+        <option value="APPROVED">Одобренные</option>
+        <option value="RETIRED">Снятые</option>
+        <option value="">Все</option>
+      </select>
+      <span class="stat" id="progress"></span>
+      <span class="stat" id="pace"></span>
+    </header>
+    <main id="main"></main>
+
+    <script>
+      const $ = (s) => document.querySelector(s);
+      const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+      const DISTRACTOR = {
+        PLAUSIBLE: "правдоподобный",
+        COMMON_MISCONCEPTION: "частое заблуждение",
+        NEAR_MISS: "почти верно",
+        SAME_CATEGORY: "та же категория",
+        CONTEXTUAL_CONFUSION: "путаница по контексту",
+      };
+      const store = {
+        get: (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
+        set: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
+      };
+
+      let all = [];
+      let issues = {};
+      let cursor = 0;
+      let shownAt = performance.now();
+      const times = JSON.parse(store.get("review.times", "[]"));
+
+      $("#reviewer").value = store.get("review.reviewer", "");
+      $("#reviewer").addEventListener("input", (e) => store.set("review.reviewer", e.target.value));
+      $("#file").addEventListener("change", () => { cursor = 0; render(); });
+      $("#status").addEventListener("change", () => { cursor = 0; render(); });
+
+      async function load(keepId) {
+        const r = await fetch("/api/questions").then((x) => x.json());
+        all = r.items;
+        issues = r.issues;
+        const files = [...new Set(all.map((q) => q.file))];
+        const current = $("#file").value;
+        $("#file").innerHTML = `<option value="">Все файлы</option>` + files.map((f) => `<option ${f === current ? "selected" : ""}>${esc(f)}</option>`).join("");
+        const list = visible();
+        if (keepId) cursor = Math.max(0, list.findIndex((q) => q.id === keepId));
+        render();
+      }
+
+      function visible() {
+        const f = $("#file").value;
+        const s = $("#status").value;
+        return all.filter((q) => (!f || q.file === f) && (!s || q.status === s));
+      }
+
+      function stats() {
+        const approved = all.filter((q) => q.status === "APPROVED").length;
+        const draft = all.filter((q) => q.status === "DRAFT").length;
+        $("#progress").innerHTML = `Одобрено <strong>${approved}</strong> · черновиков <strong>${draft}</strong> · всего ${all.length}`;
+        if (times.length) {
+          const avg = times.reduce((a, b) => a + b, 0) / times.length;
+          const left = Math.round((avg * draft) / 60000);
+          $("#pace").innerHTML = `≈ <strong>${Math.round(avg / 1000)} с</strong> на вопрос · на остаток ≈ ${left} мин`;
+        }
+      }
+
+      function render() {
+        stats();
+        const list = visible();
+        if (!list.length) {
+          $("#main").innerHTML = `<p class="empty">Здесь пусто. ${$("#status").value === "DRAFT" ? "Все черновики проверены 🎉" : ""}</p>`;
+          return;
+        }
+        cursor = Math.min(cursor, list.length - 1);
+        const q = list[cursor];
+        shownAt = performance.now();
+        const src = q.sources[0] ?? {};
+        const searchName = (src.name ?? "").replace(/^Википедия:\s*/, "");
+        const wiki = `https://ru.wikipedia.org/w/index.php?search=${encodeURIComponent(searchName || q.statement)}`;
+        const google = `https://www.google.com/search?q=${encodeURIComponent(q.statement)}`;
+        const notes = q.review_notes ?? [];
+        const qIssues = issues[q.id] ?? [];
+        const sel = (name, v) => `<select data-f="${name}">${[1, 2, 3, 4, 5].map((n) => `<option ${n === v ? "selected" : ""}>${n}</option>`).join("")}</select>`;
+
+        $("#main").innerHTML = `
+          <div class="nav">
+            <button id="prev" ${cursor === 0 ? "disabled" : ""}>←</button>
+            <span>${cursor + 1} из ${list.length}</span>
+            <button id="next" ${cursor >= list.length - 1 ? "disabled" : ""}>→</button>
+            <span style="margin-left:auto"><kbd>⌘</kbd>+<kbd>Enter</kbd> — одобрить</span>
+          </div>
+          <article class="card">
+            <div class="meta">
+              <span class="chip status-${q.status}">${q.status}</span>
+              <span class="chip">${esc(q.file)}</span>
+              <span class="chip">${esc(q.family)}</span>
+              ${Object.keys(q.topics).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}
+              <span class="chip">${esc(q.culture_specificity)}</span>
+              ${q.timeSensitive ? `<span class="chip">устаревает</span>` : ""}
+            </div>
+            ${notes.length ? `<div class="notes"><strong>Сомнения:</strong>${notes.map((n) => `<p>${esc(n)}</p>`).join("")}</div>` : ""}
+            ${qIssues.length ? `<div class="issues">${qIssues.map((n) => `<p>${esc(n)}</p>`).join("")}</div>` : ""}
+
+            <label>Факт <textarea data-f="statement" rows="2">${esc(q.statement)}</textarea></label>
+            <div class="row">
+              <label>Источник: ${esc(src.name ?? "—")} ${src.verified ? "✓" : ""}
+                <input data-f="sourceUrl" placeholder="вставь ссылку после проверки" value="${esc(src.url ?? "")}" />
+              </label>
+              <div class="links" style="align-self:end; padding-bottom:0.55rem">
+                <a href="${wiki}" target="_blank" rel="noreferrer">Найти в Википедии ↗</a>
+                <a href="${google}" target="_blank" rel="noreferrer">Google ↗</a>
+              </div>
+            </div>
+
+            <label>Вопрос <textarea data-f="text" rows="2">${esc(q.text)}</textarea></label>
+            <div class="options">
+              ${q.options.map((o) => `
+                <div class="option ${o.correct ? "correct" : ""}">
+                  <input type="radio" name="correct" value="${o.key}" ${o.correct ? "checked" : ""} title="правильный" />
+                  <span class="key">${o.key}</span>
+                  <input type="text" data-opt="${o.key}" value="${esc(o.text)}" />
+                  <span class="type">${o.correct ? "✓ верный" : esc(DISTRACTOR[o.distractor] ?? o.distractor ?? "")}</span>
+                </div>`).join("")}
+            </div>
+            <label>Пояснение <textarea data-f="explanation" rows="2">${esc(q.explanation)}</textarea></label>
+            <div class="row3">
+              <label>Сложность (1 — все знают, 5 — знатоки) ${sel("difficulty", q.difficulty)}</label>
+              <label>Dignity (5 — классика, 1 — поп/мусор) ${sel("dignity", q.dignity)}</label>
+              <label>Заметка <input data-f="note" placeholder="что не так" /></label>
+            </div>
+            <div class="actions">
+              <button class="primary" id="approve">Одобрить ✓</button>
+              <button id="save">Сохранить черновик</button>
+              <span class="spacer"></span>
+              <button class="danger" id="retire">Снять вопрос</button>
+            </div>
+            <p class="msg" id="msg"></p>
+          </article>`;
+
+        $("#prev").onclick = () => { cursor--; render(); };
+        $("#next").onclick = () => { cursor++; render(); };
+        $("#approve").onclick = () => submit(q, "approve");
+        $("#save").onclick = () => submit(q, "save");
+        $("#retire").onclick = () => submit(q, "retire");
+        document.querySelectorAll('input[name="correct"]').forEach((r) =>
+          r.addEventListener("change", () => document.querySelectorAll(".option").forEach((el) => el.classList.toggle("correct", el.contains(r) && r.checked))),
+        );
+      }
+
+      function collect(q) {
+        const f = (name) => document.querySelector(`[data-f="${name}"]`);
+        return {
+          text: f("text").value,
+          explanation: f("explanation").value,
+          statement: f("statement").value,
+          sourceUrl: f("sourceUrl").value,
+          difficulty: Number(f("difficulty").value),
+          dignity: Number(f("dignity").value),
+          note: f("note").value,
+          options: q.options.map((o) => ({ key: o.key, text: document.querySelector(`[data-opt="${o.key}"]`).value })),
+          correctKey: document.querySelector('input[name="correct"]:checked')?.value,
+        };
+      }
+
+      async function submit(q, action) {
+        const msg = $("#msg");
+        const reviewer = $("#reviewer").value.trim();
+        if (action !== "save" && !reviewer) {
+          msg.className = "msg error";
+          msg.textContent = "Впиши своё имя вверху — оно попадёт в штамп проверки.";
+          $("#reviewer").focus();
+          return;
+        }
+        const payload = { action, reviewer, ...collect(q) };
+        const r = await fetch(`/api/questions/${q.id}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+        const data = await r.json();
+        if (!r.ok) {
+          msg.className = "msg error";
+          msg.textContent = data.error ?? "Не удалось сохранить";
+          return;
+        }
+        if (action !== "save") {
+          times.push(performance.now() - shownAt);
+          store.set("review.times", JSON.stringify(times.slice(-200)));
+        }
+        // Approved/retired cards leave the "Черновики" filter, so the next one slides into place.
+        await load(action === "save" ? q.id : undefined);
+        if (action === "save") {
+          $("#msg").className = "msg ok";
+          $("#msg").textContent = "Сохранено";
+        }
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === "Enter") $("#approve")?.click();
+      });
+
+      load();
+    </script>
+  </body>
+</html>

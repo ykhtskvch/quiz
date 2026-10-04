@@ -1,0 +1,394 @@
+# C2 — russia-90s-life
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: mmm
+    name: "МММ"
+    facts:
+      - id: lyonya-golubkov
+        statement: "Героем рекламы МММ был Лёня Голубков: «Я не халявщик, я партнёр!»."
+        sources: [{ name: "Википедия: МММ (финансовая пирамида)", type: REFERENCE, verified: false }]
+        questions:
+          - id: lyonya-golubkov-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как звали героя рекламы МММ — «не халявщика, а партнёра»?"
+            options:
+              - { key: A, text: "Вася Пупкин", distractor: PLAUSIBLE }
+              - { key: B, text: "Лёня Голубков", correct: true }
+              - { key: C, text: "Петя Сидоров", distractor: PLAUSIBLE }
+              - { key: D, text: "Коля Иванов", distractor: PLAUSIBLE }
+            explanation: "Роль сыграл актёр Владимир Пермяков; реклама шла в 1992–1994 годах."
+            topics: { russia-90s-life: 1.0, ads-90s-00s: 0.6 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: ruble-90s
+    name: "Рубль в 90-е"
+    facts:
+      - id: denomination-1998
+        statement: "При деноминации 1998 года 1000 старых рублей обменивали на 1 новый."
+        sources: [{ name: "Википедия: Деноминация рубля в 1998 году", type: REFERENCE, verified: false }]
+        questions:
+          - id: denomination-1998-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Во сколько раз «укоротили» рубль при деноминации 1998 года?"
+            options:
+              - { key: A, text: "В 10 раз", distractor: PLAUSIBLE }
+              - { key: B, text: "В 100 раз", distractor: PLAUSIBLE }
+              - { key: C, text: "В 1000 раз", correct: true }
+              - { key: D, text: "В 10 000 раз", distractor: PLAUSIBLE }
+            explanation: "С цен и купюр просто убрали три нуля."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: default-1998-month
+        statement: "Дефолт 1998 года объявлен 17 августа."
+        sources: [{ name: "Википедия: Экономический кризис в России (1998)", type: REFERENCE, verified: false }]
+        questions:
+          - id: default-1998-month-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "В каком месяце 1998 года случился дефолт?"
+            options:
+              - { key: A, text: "В марте", distractor: PLAUSIBLE }
+              - { key: B, text: "В июне", distractor: PLAUSIBLE }
+              - { key: C, text: "В августе", correct: true }
+              - { key: D, text: "В декабре", distractor: PLAUSIBLE }
+            explanation: "17 августа 1998 года — после этого рубль за несколько недель подешевел в несколько раз."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: voucher-nominal
+        statement: "Номинал приватизационного чека (ваучера) 1992 года — 10 000 рублей."
+        sources: [{ name: "Википедия: Приватизационный чек", type: REFERENCE, verified: false }]
+        questions:
+          - id: voucher-nominal-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой номинал был у приватизационного ваучера 1992 года?"
+            options:
+              - { key: A, text: "1 000 рублей", distractor: PLAUSIBLE }
+              - { key: B, text: "10 000 рублей", correct: true }
+              - { key: C, text: "100 000 рублей", distractor: PLAUSIBLE }
+              - { key: D, text: "1 000 000 рублей", distractor: PLAUSIBLE }
+            explanation: "Обещали, что на ваучер можно будет купить две «Волги»."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить формулировку про «две „Волги“» — это известная цитата, но приписать её корректно."]
+
+  - family: dendy
+    name: "Приставки 90-х"
+    facts:
+      - id: dendy-clone
+        statement: "Приставка Dendy — клон японской Nintendo Famicom (NES)."
+        sources: [{ name: "Википедия: Dendy", type: REFERENCE, verified: false }]
+        questions:
+          - id: dendy-clone-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Клоном какой приставки была «Денди»?"
+            options:
+              - { key: A, text: "Sega Mega Drive", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Nintendo Famicom (NES)", correct: true }
+              - { key: C, text: "Sony PlayStation", distractor: SAME_CATEGORY }
+              - { key: D, text: "Game Boy", distractor: SAME_CATEGORY }
+            explanation: "«Денди, Денди, мы все любим Денди!» — а внутри был 8-битный японский Famicom."
+            topics: { russia-90s-life: 1.0, videogames: 0.7 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: new-russians
+    name: "«Новые русские»"
+    facts:
+      - id: malinovy-pidzhak
+        statement: "Символ «новых русских» 1990-х — малиновый пиджак."
+        sources: [{ name: "Википедия: Новые русские", type: REFERENCE, verified: false }]
+        questions:
+          - id: malinovy-pidzhak-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какого цвета пиджак стал символом «новых русских»?"
+            options:
+              - { key: A, text: "Белого", distractor: PLAUSIBLE }
+              - { key: B, text: "Малинового", correct: true }
+              - { key: C, text: "Леопардового", distractor: PLAUSIBLE }
+              - { key: D, text: "Золотого", distractor: PLAUSIBLE }
+            explanation: "К пиджаку полагались золотая цепь и толстый мобильный телефон."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: chelnoki
+        statement: "«Челноками» в 90-е называли торговцев, возивших товар из Турции, Китая и Польши в огромных клетчатых сумках."
+        sources: [{ name: "Википедия: Челночная торговля", type: REFERENCE, verified: false }]
+        questions:
+          - id: chelnoki-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кого в 90-е называли «челноками»?"
+            options:
+              - { key: A, text: "Таксистов-«бомбил»", distractor: PLAUSIBLE }
+              - { key: B, text: "Торговцев, возивших товар из-за границы в клетчатых сумках", correct: true }
+              - { key: C, text: "Ткачей на фабриках", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Пилотов частных авиакомпаний", distractor: PLAUSIBLE }
+            explanation: "Ездили туда-обратно, как челнок в ткацком станке."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: 90s-gadgets
+    name: "Гаджеты 90-х"
+    facts:
+      - id: tamagotchi-country
+        statement: "Тамагочи придумали в Японии (Bandai, 1996)."
+        sources: [{ name: "Википедия: Тамагочи", type: REFERENCE, verified: false }]
+        questions:
+          - id: tamagotchi-country-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Где придумали тамагочи?"
+            options:
+              - { key: A, text: "В Китае", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "В Японии", correct: true }
+              - { key: C, text: "В Южной Корее", distractor: SAME_CATEGORY }
+              - { key: D, text: "В США", distractor: SAME_CATEGORY }
+            explanation: "Японская компания Bandai выпустила их в 1996 году; на рынках продавали дешёвые китайские копии."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pager
+        statement: "Пейджер принимал короткие текстовые сообщения, которые диктовали оператору."
+        sources: [{ name: "Википедия: Пейджер", type: REFERENCE, verified: false }]
+        questions:
+          - id: pager-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Что умел пейджер?"
+            options:
+              - { key: A, text: "Звонить", distractor: PLAUSIBLE }
+              - { key: B, text: "Принимать короткие сообщения, которые диктовали оператору", correct: true }
+              - { key: C, text: "Выходить в интернет", distractor: PLAUSIBLE }
+              - { key: D, text: "Фотографировать", distractor: PLAUSIBLE }
+            explanation: "Звонишь оператору, диктуешь текст — и он появляется на экранчике у адресата."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.5 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: 90s-gum
+    name: "Жвачки 90-х"
+    facts:
+      - id: love-is-country
+        statement: "Жвачка «Love is…» с комиксами-вкладышами в 90-е производилась в Турции."
+        sources: [{ name: "Википедия: Love is…", type: REFERENCE, verified: false }]
+        questions:
+          - id: love-is-country-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Из какой страны была жвачка «Love is…» в 90-е?"
+            options:
+              - { key: A, text: "Из Италии", distractor: PLAUSIBLE }
+              - { key: B, text: "Из Турции", correct: true }
+              - { key: C, text: "Из США", distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "Из Германии", distractor: PLAUSIBLE }
+            explanation: "Сами комиксы придумала новозеландская художница Ким Казали."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить производителя жвачки «Love is…» и что она турецкая; проверить имя художницы (Ким Казали)."]
+
+      - id: turbo-inserts
+        statement: "Во вкладышах жвачки Turbo были картинки машин."
+        sources: [{ name: "Википедия: Turbo (жевательная резинка)", type: REFERENCE, verified: false }]
+        questions:
+          - id: turbo-inserts-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что было на вкладышах жвачки Turbo?"
+            options:
+              - { key: A, text: "Футболисты", distractor: PLAUSIBLE }
+              - { key: B, text: "Машины", correct: true }
+              - { key: C, text: "Герои Диснея", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Комиксы про любовь", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Вкладышами менялись и играли «на щелбаны»; Диснея собирали из жвачки Donald."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: 90s-ads
+    name: "Реклама 90-х"
+    facts:
+      - id: invite-dobav-vody
+        statement: "Растворимый напиток Invite рекламировали слоганом «Просто добавь воды!»."
+        sources: [{ name: "Википедия: Invite (напиток)", type: REFERENCE, verified: false }]
+        questions:
+          - id: invite-dobav-vody-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой растворимый напиток рекламировали слоганом «Просто добавь воды!»?"
+            options:
+              - { key: A, text: "Yupi", distractor: SAME_CATEGORY }
+              - { key: B, text: "Invite", correct: true }
+              - { key: C, text: "Zuko", distractor: SAME_CATEGORY }
+              - { key: D, text: "Tang", distractor: SAME_CATEGORY }
+            explanation: "Порошок разводили водой — а дети ели его прямо из пакетика."
+            topics: { russia-90s-life: 1.0, ads-90s-00s: 0.7 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что слоган «Просто добавь воды» именно у Invite, а не у Yupi."]
+
+      - id: snickers-poryadok
+        statement: "Snickers в 90-е рекламировали слоганом «Съел — и порядок!»."
+        sources: [{ name: "Википедия: Snickers", type: REFERENCE, verified: false }]
+        questions:
+          - id: snickers-poryadok-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой батончик рекламировали слоганом «Съел — и порядок!»?"
+            options:
+              - { key: A, text: "Mars", distractor: NEAR_MISS }
+              - { key: B, text: "Snickers", correct: true }
+              - { key: C, text: "Twix", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Bounty", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "У Twix была «сладкая парочка», у Bounty — «райское наслаждение»."
+            topics: { russia-90s-life: 1.0, ads-90s-00s: 0.7 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: mcdonalds-pushkinskaya
+    name: "Первый «Макдоналдс»"
+    facts:
+      - id: mcdonalds-1990
+        statement: "Первый в СССР «Макдоналдс» открылся 31 января 1990 года на Пушкинской площади в Москве."
+        sources: [{ name: "Википедия: Макдоналдс в России", type: REFERENCE, verified: false }]
+        questions:
+          - id: mcdonalds-1990-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Где в 1990 году открылся первый «Макдоналдс» в СССР?"
+            options:
+              - { key: A, text: "На Арбате", distractor: NEAR_MISS }
+              - { key: B, text: "На Пушкинской площади в Москве", correct: true }
+              - { key: C, text: "На Невском проспекте", distractor: SAME_CATEGORY }
+              - { key: D, text: "На ВДНХ", distractor: PLAUSIBLE }
+            explanation: "В первый день в очереди стояли около 30 тысяч человек."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: vhs-translators
+    name: "Видеокассеты 90-х"
+    facts:
+      - id: volodarsky-clothespin
+        statement: "О Леониде Володарском, одном из самых известных переводчиков видеокассет, ходила легенда, что он переводил с прищепкой на носу."
+        sources: [{ name: "Википедия: Володарский, Леонид Вениаминович", type: REFERENCE, verified: false }]
+        questions:
+          - id: volodarsky-clothespin-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "О каком переводчике видеокассет ходила легенда, что он переводил с прищепкой на носу?"
+            options:
+              - { key: A, text: "Андрее Гаврилове", distractor: NEAR_MISS }
+              - { key: B, text: "Леониде Володарском", correct: true }
+              - { key: C, text: "Дмитрии Пучкове", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Василии Горчакове", distractor: NEAR_MISS }
+            explanation: "Легенда не подтвердилась: «гнусавость» объясняли особенностями голоса и записи."
+            topics: { russia-90s-life: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что легенда о прищепке связана именно с Володарским и чем объясняют его голос."]

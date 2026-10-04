@@ -1,0 +1,378 @@
+# C2 — cold-war and the 20th century
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: berlin
+    name: "Разделённый Берлин"
+    facts:
+      - id: berlin-wall-fall
+        statement: "Берлинская стена пала 9 ноября 1989 года."
+        sources: [{ name: "Википедия: Берлинская стена", type: REFERENCE, verified: false }]
+        questions:
+          - id: berlin-wall-fall-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком году пала Берлинская стена?"
+            options:
+              - { key: A, text: "В 1985", distractor: PLAUSIBLE }
+              - { key: B, text: "В 1987", distractor: PLAUSIBLE }
+              - { key: C, text: "В 1989", correct: true }
+              - { key: D, text: "В 1991", distractor: COMMON_MISCONCEPTION }
+            explanation: "Германия объединилась годом позже, а СССР распался в 1991-м."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: berlin-wall-built
+        statement: "Берлинскую стену возвели в августе 1961 года."
+        sources: [{ name: "Википедия: Берлинская стена", type: REFERENCE, verified: false }]
+        questions:
+          - id: berlin-wall-built-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком году построили Берлинскую стену?"
+            options:
+              - { key: A, text: "В 1949", distractor: NEAR_MISS }
+              - { key: B, text: "В 1953", distractor: PLAUSIBLE }
+              - { key: C, text: "В 1961", correct: true }
+              - { key: D, text: "В 1968", distractor: PLAUSIBLE }
+            explanation: "В 1949 году появились два немецких государства — ФРГ и ГДР; стена пришла через двенадцать лет."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: berlin-four-sectors
+        statement: "После Второй мировой войны Берлин разделили на четыре оккупационных сектора: советский, американский, британский и французский."
+        sources: [{ name: "Википедия: Западный Берлин", type: REFERENCE, verified: false }]
+        questions:
+          - id: berlin-four-sectors-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "На сколько оккупационных секторов разделили Берлин после войны?"
+            options:
+              - { key: A, text: "На два", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "На три", distractor: NEAR_MISS }
+              - { key: C, text: "На четыре", correct: true }
+              - { key: D, text: "На пять", distractor: PLAUSIBLE }
+            explanation: "Три западных сектора позже стали Западным Берлином, советский — Восточным."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: checkpoint-charlie
+        statement: "«Чекпойнт Чарли» — самый известный пропускной пункт между Западным и Восточным Берлином."
+        sources: [{ name: "Википедия: Чекпойнт Чарли", type: REFERENCE, verified: false }]
+        questions:
+          - id: checkpoint-charlie-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Чем был «Чекпойнт Чарли»?"
+            options:
+              - { key: A, text: "Шпионской базой ЦРУ", distractor: PLAUSIBLE }
+              - { key: B, text: "Пунктом пропуска между Западным и Восточным Берлином", correct: true }
+              - { key: C, text: "Американским аэродромом", distractor: PLAUSIBLE }
+              - { key: D, text: "Бункером Гитлера", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Чарли» — буква C в радиоалфавите НАТО: это был третий пункт после «Альфы» и «Браво»."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: cuban-crisis
+    name: "Карибский кризис"
+    facts:
+      - id: cuban-crisis-country
+        statement: "Карибский кризис 1962 года начался из-за размещения советских ракет на Кубе."
+        sources: [{ name: "Википедия: Карибский кризис", type: REFERENCE, verified: false }]
+        questions:
+          - id: cuban-crisis-country-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Размещение советских ракет в какой стране вызвало Карибский кризис 1962 года?"
+            options:
+              - { key: A, text: "В Турции", distractor: NEAR_MISS }
+              - { key: B, text: "На Кубе", correct: true }
+              - { key: C, text: "Во Вьетнаме", distractor: PLAUSIBLE }
+              - { key: D, text: "В Никарагуа", distractor: PLAUSIBLE }
+            explanation: "Американские ракеты в Турции тоже были частью истории: их тихо убрали в рамках сделки."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: hotline-1963
+        statement: "После Карибского кризиса, в 1963 году, между Москвой и Вашингтоном установили прямую линию связи — «горячую линию»."
+        sources: [{ name: "Википедия: Горячая линия Вашингтон — Москва", type: REFERENCE, verified: false }]
+        questions:
+          - id: hotline-1963-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Что появилось между Москвой и Вашингтоном вскоре после Карибского кризиса?"
+            options:
+              - { key: A, text: "Прямой авиарейс", distractor: PLAUSIBLE }
+              - { key: B, text: "Прямая линия связи между лидерами", correct: true }
+              - { key: C, text: "Совместная космическая программа", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Обмен посольствами", distractor: PLAUSIBLE }
+            explanation: "Вопреки мифу о «красном телефоне», сначала это был телетайп."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что первая «горячая линия» была телетайпной, а не телефонной."]
+
+  - family: cold-war-start
+    name: "Начало холодной войны"
+    facts:
+      - id: iron-curtain-churchill
+        statement: "Речь о «железном занавесе» произнёс Уинстон Черчилль в Фултоне в 1946 году."
+        sources: [{ name: "Википедия: Фултонская речь", type: REFERENCE, verified: false }]
+        questions:
+          - id: iron-curtain-churchill-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кто произнёс знаменитую речь о «железном занавесе»?"
+            options:
+              - { key: A, text: "Гарри Трумэн", distractor: NEAR_MISS }
+              - { key: B, text: "Уинстон Черчилль", correct: true }
+              - { key: C, text: "Франклин Рузвельт", distractor: SAME_CATEGORY }
+              - { key: D, text: "Джон Кеннеди", distractor: SAME_CATEGORY }
+            explanation: "Речь прозвучала в 1946 году в Фултоне, штат Миссури; Трумэн сидел в зале."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: yalta-1945
+        statement: "В феврале 1945 года Сталин, Рузвельт и Черчилль встретились в Ялте."
+        sources: [{ name: "Википедия: Ялтинская конференция", type: REFERENCE, verified: false }]
+        questions:
+          - id: yalta-1945-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Где в феврале 1945 года встретились Сталин, Рузвельт и Черчилль?"
+            options:
+              - { key: A, text: "В Тегеране", distractor: NEAR_MISS }
+              - { key: B, text: "В Ялте", correct: true }
+              - { key: C, text: "В Потсдаме", distractor: NEAR_MISS }
+              - { key: D, text: "В Женеве", distractor: PLAUSIBLE }
+            explanation: "Тегеран был в 1943 году, а в Потсдаме летом 1945-го вместо Рузвельта был уже Трумэн."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: soviet-bomb-1949
+        statement: "Первую атомную бомбу СССР испытал в 1949 году."
+        sources: [{ name: "Википедия: РДС-1", type: REFERENCE, verified: false }]
+        questions:
+          - id: soviet-bomb-1949-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В каком году СССР испытал первую атомную бомбу?"
+            options:
+              - { key: A, text: "В 1945", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "В 1949", correct: true }
+              - { key: C, text: "В 1953", distractor: NEAR_MISS }
+              - { key: D, text: "В 1957", distractor: PLAUSIBLE }
+            explanation: "США — в 1945 году; в 1953-м СССР испытал первую водородную бомбу."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: blocs
+    name: "Блоки и противостояние"
+    facts:
+      - id: warsaw-pact
+        statement: "Военный блок социалистических стран — Организация Варшавского договора (1955)."
+        sources: [{ name: "Википедия: Организация Варшавского договора", type: REFERENCE, verified: false }]
+        questions:
+          - id: warsaw-pact-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как назывался военный блок социалистических стран — противовес НАТО?"
+            options:
+              - { key: A, text: "Совет экономической взаимопомощи", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Организация Варшавского договора", correct: true }
+              - { key: C, text: "Коминтерн", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Содружество Независимых Государств", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "СЭВ — экономическое объединение, Коминтерн — союз компартий 1919–1943 годов."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: korea-38
+        statement: "Корею после Второй мировой войны разделили по 38-й параллели."
+        sources: [{ name: "Википедия: 38-я параллель", type: REFERENCE, verified: false }]
+        questions:
+          - id: korea-38-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "По какой параллели разделили Корею?"
+            options:
+              - { key: A, text: "По 17-й", distractor: NEAR_MISS }
+              - { key: B, text: "По 38-й", correct: true }
+              - { key: C, text: "По 45-й", distractor: PLAUSIBLE }
+              - { key: D, text: "По 49-й", distractor: PLAUSIBLE }
+            explanation: "По 17-й параллели разделили Вьетнам."
+            topics: { cold-war: 1.0, geography: 0.4 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: olympic-boycott-1984
+        statement: "СССР бойкотировал летнюю Олимпиаду 1984 года в Лос-Анджелесе."
+        sources: [{ name: "Википедия: Бойкот летних Олимпийских игр 1984 года", type: REFERENCE, verified: false }]
+        questions:
+          - id: olympic-boycott-1984-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какую Олимпиаду бойкотировал СССР?"
+            options:
+              - { key: A, text: "Москва-1980", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Лос-Анджелес-1984", correct: true }
+              - { key: C, text: "Сеул-1988", distractor: NEAR_MISS }
+              - { key: D, text: "Монреаль-1976", distractor: PLAUSIBLE }
+            explanation: "Ответ на американский бойкот Москвы-1980. Сеул-1988 бойкотировала КНДР, а СССР туда поехал."
+            topics: { cold-war: 1.0, sports: 0.5 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 4
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: sdi-star-wars
+        statement: "Американскую Стратегическую оборонную инициативу Рейгана (1983) прозвали «Звёздными войнами»."
+        sources: [{ name: "Википедия: Стратегическая оборонная инициатива", type: REFERENCE, verified: false }]
+        questions:
+          - id: sdi-star-wars-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: "Какую программу Рейгана прозвали «Звёздными войнами»?"
+            options:
+              - { key: A, text: "Лунную программу", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Систему противоракетной обороны в космосе", correct: true }
+              - { key: C, text: "Программу «Спейс шаттл»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Полёт к Марсу", distractor: PLAUSIBLE }
+            explanation: "Прозвище взяли у фильма Джорджа Лукаса 1977 года."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_FIGURED_IT_OUT: 0.6, BRIDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: khrushchev-shoe
+        statement: "Широко известна история о том, как Хрущёв в 1960 году стучал ботинком по столу на заседании Генассамблеи ООН."
+        sources: [{ name: "Википедия: Кузькина мать", type: REFERENCE, verified: false }]
+        questions:
+          - id: khrushchev-shoe-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Кто, по знаменитой истории, стучал ботинком на заседании Генассамблеи ООН в 1960 году?"
+            options:
+              - { key: A, text: "Леонид Брежнев", distractor: SAME_CATEGORY }
+              - { key: B, text: "Никита Хрущёв", correct: true }
+              - { key: C, text: "Фидель Кастро", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Андрей Громыко", distractor: SAME_CATEGORY }
+            explanation: "Подробности до сих пор спорят — но фраза «покажем кузькину мать» с этим эпизодом связана накрепко."
+            topics: { cold-war: 1.0 }
+            contexts: { POST_SOVIET: 1.0, GLOBAL: 0.6 }
+            generations: { 80s: 0.6 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить источник: эпизод известен, но детали спорны; источник статьи — уточнить (возможно, «Хрущёв, Никита Сергеевич»)."]
+
+      - id: prague-spring
+        statement: "Период реформ в Чехословакии 1968 года назван «Пражской весной»."
+        sources: [{ name: "Википедия: Пражская весна", type: REFERENCE, verified: false }]
+        questions:
+          - id: prague-spring-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как назвали период реформ в Чехословакии в 1968 году?"
+            options:
+              - { key: A, text: "«Бархатная революция»", distractor: NEAR_MISS }
+              - { key: B, text: "«Пражская весна»", correct: true }
+              - { key: C, text: "«Венгерская осень»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Солидарность»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Бархатная революция» случилась там же, но в 1989-м; «Солидарность» — польский профсоюз."
+            topics: { cold-war: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            generations: { 80s: 0.6 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI

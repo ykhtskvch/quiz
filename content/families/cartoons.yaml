@@ -1,0 +1,412 @@
+# C2 — cartoons (Soviet and world animation, cross-generation)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: nu-pogodi
+    name: "«Ну, погоди!»"
+    facts:
+      - id: nu-pogodi-wolf-voice
+        statement: "Волка в «Ну, погоди!» озвучивал Анатолий Папанов."
+        sources: [{ name: "Википедия: Ну, погоди!", type: REFERENCE, verified: false }]
+        questions:
+          - id: nu-pogodi-wolf-voice-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Кто озвучивал Волка в «Ну, погоди!»?"
+            options:
+              - { key: A, text: "Евгений Леонов", distractor: NEAR_MISS }
+              - { key: B, text: "Анатолий Папанов", correct: true }
+              - { key: C, text: "Юрий Никулин", distractor: SAME_CATEGORY }
+              - { key: D, text: "Георгий Вицин", distractor: SAME_CATEGORY }
+            explanation: "Леонов тоже голос эпохи — он озвучил советского Винни-Пуха."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, BRIDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: vinni-pukh
+    name: "Советский «Винни-Пух»"
+    facts:
+      - id: vinni-pukh-voice
+        statement: "Винни-Пуха в советском мультфильме (1969–1972) озвучил Евгений Леонов."
+        sources: [{ name: "Википедия: Винни-Пух (мультфильм)", type: REFERENCE, verified: false }]
+        questions:
+          - id: vinni-pukh-voice-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто озвучил Винни-Пуха в советском мультфильме?"
+            options:
+              - { key: A, text: "Анатолий Папанов", distractor: NEAR_MISS }
+              - { key: B, text: "Василий Ливанов", distractor: NEAR_MISS }
+              - { key: C, text: "Евгений Леонов", correct: true }
+              - { key: D, text: "Андрей Миронов", distractor: SAME_CATEGORY }
+            explanation: "Василий Ливанов озвучил другого любителя сладкого — Карлсона."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: prostokvashino
+    name: "«Трое из Простоквашино»"
+    facts:
+      - id: prostokvashino-cat
+        statement: "Кота из Простоквашино зовут Матроскин."
+        sources: [{ name: "Википедия: Трое из Простоквашино", type: REFERENCE, verified: false }]
+        questions:
+          - id: prostokvashino-cat-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как звали кота из Простоквашино?"
+            options:
+              - { key: A, text: "Леопольд", distractor: SAME_CATEGORY }
+              - { key: B, text: "Матроскин", correct: true }
+              - { key: C, text: "Гав", distractor: SAME_CATEGORY }
+              - { key: D, text: "Базилио", distractor: SAME_CATEGORY }
+            explanation: "Матроскина озвучил Олег Табаков — и подарил коту свою интонацию."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: cheburashka
+    name: "Чебурашка и крокодил Гена"
+    facts:
+      - id: gena-job
+        statement: "Крокодил Гена работал в зоопарке крокодилом."
+        sources: [{ name: "Википедия: Крокодил Гена (мультфильм)", type: REFERENCE, verified: false }]
+        questions:
+          - id: gena-job-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кем работал крокодил Гена?"
+            options:
+              - { key: A, text: "Почтальоном", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Крокодилом в зоопарке", correct: true }
+              - { key: C, text: "Клоуном в цирке", distractor: PLAUSIBLE }
+              - { key: D, text: "Воспитателем в детском саду", distractor: PLAUSIBLE }
+            explanation: "Он ходил на работу в зоопарк и «работал крокодилом» — а вечерами играл в шахматы сам с собой."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 2
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: ezhik-v-tumane
+    name: "«Ёжик в тумане»"
+    facts:
+      - id: ezhik-norshtein
+        statement: "Режиссёр мультфильма «Ёжик в тумане» (1975) — Юрий Норштейн."
+        sources: [{ name: "Википедия: Ёжик в тумане", type: REFERENCE, verified: false }]
+        questions:
+          - id: ezhik-norshtein-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто снял мультфильм «Ёжик в тумане»?"
+            options:
+              - { key: A, text: "Фёдор Хитрук", distractor: NEAR_MISS }
+              - { key: B, text: "Гарри Бардин", distractor: SAME_CATEGORY }
+              - { key: C, text: "Юрий Норштейн", correct: true }
+              - { key: D, text: "Эдуард Успенский", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Мультфильм снят по сказке Сергея Козлова; в международных опросах его называли лучшим мультфильмом всех времён."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: karlson
+    name: "Советский «Карлсон»"
+    facts:
+      - id: karlson-cure
+        statement: "В мультфильме «Карлсон вернулся» больной Карлсон требует себе варенья."
+        sources: [{ name: "Википедия: Карлсон вернулся", type: REFERENCE, verified: false }]
+        questions:
+          - id: karlson-cure-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Каким «лекарством» лечился Карлсон в советском мультфильме?"
+            options:
+              - { key: A, text: "Мёдом", distractor: SAME_CATEGORY }
+              - { key: B, text: "Вареньем", correct: true }
+              - { key: C, text: "Плюшками", distractor: NEAR_MISS }
+              - { key: D, text: "Шоколадом", distractor: SAME_CATEGORY }
+            explanation: "Плюшки тоже были — их Карлсон «уплетал» вместе с фрекен Бок."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить точную сцену: именно «Карлсон вернулся» и именно варенье как лекарство."]
+
+  - family: bremenskie
+    name: "«Бременские музыканты»"
+    facts:
+      - id: bremenskie-trubadur
+        statement: "В советских «Бременских музыкантах» в Принцессу влюблён Трубадур."
+        sources: [{ name: "Википедия: Бременские музыканты (мультфильм)", type: REFERENCE, verified: false }]
+        questions:
+          - id: bremenskie-trubadur-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто в «Бременских музыкантах» влюбился в Принцессу?"
+            options:
+              - { key: A, text: "Сыщик", distractor: SAME_CATEGORY }
+              - { key: B, text: "Атаман", distractor: SAME_CATEGORY }
+              - { key: C, text: "Трубадур", correct: true }
+              - { key: D, text: "Петух", distractor: SAME_CATEGORY }
+            explanation: "Мультфильм-мюзикл 1969 года; песни Геннадия Гладкова до сих пор поют на детских утренниках."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: tayna-tretyey-planety
+    name: "«Тайна третьей планеты»"
+    facts:
+      - id: ptitsa-govorun
+        statement: "В «Тайне третьей планеты» звучит фраза: «Птица Говорун отличается умом и сообразительностью»."
+        sources: [{ name: "Википедия: Тайна третьей планеты", type: REFERENCE, verified: false }]
+        questions:
+          - id: ptitsa-govorun-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Чем, по словам героев «Тайны третьей планеты», отличается птица Говорун?"
+            options:
+              - { key: A, text: "Красотой и голосом", distractor: PLAUSIBLE }
+              - { key: B, text: "Умом и сообразительностью", correct: true }
+              - { key: C, text: "Скоростью и ловкостью", distractor: PLAUSIBLE }
+              - { key: D, text: "Памятью и терпением", distractor: PLAUSIBLE }
+            explanation: "Мультфильм 1981 года по Киру Булычёву: Алиса, капитан Зелёный и Громозека."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: zhil-byl-pes
+    name: "«Жил-был пёс»"
+    facts:
+      - id: shchas-spoyu
+        statement: "«Щас спою!» в мультфильме «Жил-был пёс» говорит Волк, которого озвучил Армен Джигарханян."
+        sources: [{ name: "Википедия: Жил-был пёс", type: REFERENCE, verified: false }]
+        questions:
+          - id: shchas-spoyu-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто говорит «Щас спою!» в мультфильме «Жил-был пёс»?"
+            options:
+              - { key: A, text: "Пёс", distractor: NEAR_MISS }
+              - { key: B, text: "Волк", correct: true }
+              - { key: C, text: "Кот", distractor: PLAUSIBLE }
+              - { key: D, text: "Хозяин", distractor: PLAUSIBLE }
+            explanation: "Волка озвучил Армен Джигарханян, а Пса — Георгий Бурков."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: proshlogodniy-sneg
+    name: "«Падал прошлогодний снег»"
+    facts:
+      - id: malovato-budet
+        statement: "Герой мультфильма «Падал прошлогодний снег» постоянно повторяет «Маловато будет!»."
+        sources: [{ name: "Википедия: Падал прошлогодний снег", type: REFERENCE, verified: false }]
+        questions:
+          - id: malovato-budet-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какую фразу постоянно повторяет герой мультфильма «Падал прошлогодний снег»?"
+            options:
+              - { key: A, text: "«Щас спою!»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«Маловато будет!»", correct: true }
+              - { key: C, text: "«Ты заходи, если что»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Ну, погоди!»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Мультфильм 1983 года Александра Татарского; главного героя озвучил Станислав Садальский."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.5 }
+            difficulty: 3
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что героя озвучил Садальский (а текст от автора — Валентина Талызина)."]
+
+  - family: smeshariki
+    name: "«Смешарики»"
+    facts:
+      - id: smeshariki-hedgehog
+        statement: "Ежа из «Смешариков» зовут Ёжик; Крош — кролик, Бараш — баран, Копатыч — медведь."
+        sources: [{ name: "Википедия: Смешарики", type: REFERENCE, verified: false }]
+        questions:
+          - id: smeshariki-hedgehog-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как зовут ежа из «Смешариков»?"
+            options:
+              - { key: A, text: "Крош", distractor: SAME_CATEGORY }
+              - { key: B, text: "Ёжик", correct: true }
+              - { key: C, text: "Бараш", distractor: SAME_CATEGORY }
+              - { key: D, text: "Копатыч", distractor: SAME_CATEGORY }
+            explanation: "Самое простое имя у самого застенчивого героя. Крош — кролик, Бараш — баран-поэт, Копатыч — медведь-огородник."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.8 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, BRIDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: masha-i-medved
+    name: "«Маша и Медведь»"
+    facts:
+      - id: masha-youtube
+        statement: "Серия «Маша плюс каша» мультфильма «Маша и Медведь» — одно из самых просматриваемых видео в истории YouTube."
+        sources: [{ name: "Википедия: Маша и Медведь", type: REFERENCE, verified: false }]
+        questions:
+          - id: masha-youtube-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Серия какого российского мультфильма стала одним из самых просматриваемых видео в истории YouTube?"
+            options:
+              - { key: A, text: "«Смешарики»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Маша и Медведь»", correct: true }
+              - { key: C, text: "«Фиксики»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Лунтик»", distractor: SAME_CATEGORY }
+            explanation: "Серия «Маша плюс каша» набрала несколько миллиардов просмотров."
+            topics: { cartoons: 1.0, internet-now: 0.4 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.5 }
+            generations: { 10s: 1.0, current: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: lion-king
+    name: "«Король Лев»"
+    facts:
+      - id: lion-king-mufasa
+        statement: "Отца Симбы в «Короле Льве» зовут Муфаса, а его дядю — Шрам."
+        sources: [{ name: "Википедия: Король Лев", type: REFERENCE, verified: false }]
+        questions:
+          - id: lion-king-mufasa-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как звали отца Симбы в «Короле Льве»?"
+            options:
+              - { key: A, text: "Шрам", distractor: NEAR_MISS }
+              - { key: B, text: "Муфаса", correct: true }
+              - { key: C, text: "Рафики", distractor: SAME_CATEGORY }
+              - { key: D, text: "Пумба", distractor: SAME_CATEGORY }
+            explanation: "Шрам — его дядя и главный злодей, Рафики — мудрый бабуин, Пумба — бородавочник."
+            topics: { cartoons: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: shrek
+    name: "«Шрек»"
+    facts:
+      - id: shrek-fiona-night
+        statement: "В «Шреке» принцесса Фиона по ночам превращается в огра."
+        sources: [{ name: "Википедия: Шрек", type: REFERENCE, verified: false }]
+        questions:
+          - id: shrek-fiona-night-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В кого по ночам превращалась принцесса Фиона в «Шреке»?"
+            options:
+              - { key: A, text: "В дракона", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "В огра", correct: true }
+              - { key: C, text: "В лягушку", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "В ведьму", distractor: PLAUSIBLE }
+            explanation: "Дракон в мультфильме тоже есть — это будущая подруга Осла."
+            topics: { cartoons: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: duck-tales
+    name: "«Утиные истории»"
+    facts:
+      - id: duck-tales-scrooge
+        statement: "Богатого дядюшку Билли, Вилли и Дилли в русском дубляже «Утиных историй» зовут Скрудж Макдак."
+        sources: [{ name: "Википедия: Утиные истории", type: REFERENCE, verified: false }]
+        questions:
+          - id: duck-tales-scrooge-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Как звали дядюшку-миллиардера Билли, Вилли и Дилли в «Утиных историях»?"
+            options:
+              - { key: A, text: "Дональд Дак", distractor: NEAR_MISS }
+              - { key: B, text: "Скрудж Макдак", correct: true }
+              - { key: C, text: "Зигзаг Маккряк", distractor: SAME_CATEGORY }
+              - { key: D, text: "Гироскоп Шестерёнкин", distractor: SAME_CATEGORY }
+            explanation: "Дональд — тоже их дядя, но небогатый. Зигзаг Маккряк — пилот, Гироскоп — изобретатель."
+            topics: { cartoons: 1.0 }
+            contexts: { POST_SOVIET: 0.8, GLOBAL: 0.6 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI

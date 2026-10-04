@@ -1,0 +1,406 @@
+# C2 — ru-tv-90s-00s
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: tv-kukly
+    name: "«Куклы»"
+    facts:
+      - id: kukly-channel
+        statement: "Программа «Куклы» выходила на телеканале НТВ (1994–2002)."
+        sources: [{ name: "Википедия: Куклы (телепередача)", type: REFERENCE, verified: false }]
+        questions:
+          - id: kukly-channel-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "На каком телеканале выходила сатирическая программа «Куклы»?"
+            options:
+              - { key: A, text: "ОРТ", distractor: SAME_CATEGORY }
+              - { key: B, text: "НТВ", correct: true }
+              - { key: C, text: "РТР", distractor: SAME_CATEGORY }
+              - { key: D, text: "ТВ-6", distractor: NEAR_MISS }
+            explanation: "Программа выходила с 1994 по 2002 год; её прототипом была британская Spitting Image."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: pole-chudes
+    name: "«Поле чудес»"
+    facts:
+      - id: pole-chudes-first-host
+        statement: "Первым ведущим «Поля чудес» (1990) был Владислав Листьев; Леонид Якубович ведёт программу с 1991 года."
+        sources: [{ name: "Википедия: Поле чудес", type: REFERENCE, verified: false }]
+        questions:
+          - id: pole-chudes-first-host-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто был самым первым ведущим «Поля чудес»?"
+            options:
+              - { key: A, text: "Леонид Якубович", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Владислав Листьев", correct: true }
+              - { key: C, text: "Леонид Ярмольник", distractor: PLAUSIBLE }
+              - { key: D, text: "Валдис Пельш", distractor: SAME_CATEGORY }
+            explanation: "Листьев придумал и запустил программу в 1990 году, а через год передал её Якубовичу."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pole-chudes-format
+        statement: "«Поле чудес» создано по мотивам американского шоу Wheel of Fortune."
+        sources: [{ name: "Википедия: Поле чудес", type: REFERENCE, verified: false }]
+        questions:
+          - id: pole-chudes-format-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "По мотивам какого американского шоу придумали «Поле чудес»?"
+            options:
+              - { key: A, text: "Jeopardy!", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Wheel of Fortune", correct: true }
+              - { key: C, text: "The Price Is Right", distractor: SAME_CATEGORY }
+              - { key: D, text: "Family Feud", distractor: SAME_CATEGORY }
+            explanation: "Jeopardy! — это прообраз «Своей игры», а Family Feud — «Ста к одному»."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0, US: 0.4 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: svoya-igra
+    name: "«Своя игра»"
+    facts:
+      - id: svoya-igra-host
+        statement: "Ведущий «Своей игры» с 1994 года — Пётр Кулешов."
+        sources: [{ name: "Википедия: Своя игра", type: REFERENCE, verified: false }]
+        questions:
+          - id: svoya-igra-host-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто ведёт «Свою игру»?"
+            options:
+              - { key: A, text: "Владимир Ворошилов", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Пётр Кулешов", correct: true }
+              - { key: C, text: "Николай Фоменко", distractor: SAME_CATEGORY }
+              - { key: D, text: "Леонид Якубович", distractor: SAME_CATEGORY }
+            explanation: "Ворошилов — создатель и голос «Что? Где? Когда?»."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: chgk
+    name: "«Что? Где? Когда?»"
+    facts:
+      - id: chgk-owl
+        statement: "Главный приз «Что? Где? Когда?» — «Хрустальная сова»; сова — символ игры."
+        sources: [{ name: "Википедия: Что? Где? Когда?", type: REFERENCE, verified: false }]
+        questions:
+          - id: chgk-owl-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Какая птица — символ телеигры «Что? Где? Когда?»?"
+            options:
+              - { key: A, text: "Ворон", distractor: PLAUSIBLE }
+              - { key: B, text: "Сова", correct: true }
+              - { key: C, text: "Орёл", distractor: PLAUSIBLE }
+              - { key: D, text: "Сокол", distractor: PLAUSIBLE }
+            explanation: "Лучшим знатокам вручают «Хрустальную сову»."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.8, 00s: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: dom-2
+    name: "«Дом-2»"
+    facts:
+      - id: dom-2-channel
+        statement: "Реалити-шоу «Дом-2» выходило на телеканале ТНТ с 2004 года."
+        sources: [{ name: "Википедия: Дом-2", type: REFERENCE, verified: false }]
+        questions:
+          - id: dom-2-channel-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "На каком телеканале выходило реалити-шоу «Дом-2»?"
+            options:
+              - { key: A, text: "СТС", distractor: SAME_CATEGORY }
+              - { key: B, text: "ТНТ", correct: true }
+              - { key: C, text: "Муз-ТВ", distractor: SAME_CATEGORY }
+              - { key: D, text: "Первый канал", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Шоу стартовало в 2004 году и шло больше пятнадцати лет."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0, 10s: 0.6 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: posledniy-geroy
+    name: "«Последний герой»"
+    facts:
+      - id: posledniy-geroy-host
+        statement: "Первый сезон «Последнего героя» (2001) вёл Сергей Бодров-младший."
+        sources: [{ name: "Википедия: Последний герой (телешоу)", type: REFERENCE, verified: false }]
+        questions:
+          - id: posledniy-geroy-host-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто вёл первый сезон шоу «Последний герой»?"
+            options:
+              - { key: A, text: "Дмитрий Нагиев", distractor: PLAUSIBLE }
+              - { key: B, text: "Сергей Бодров", correct: true }
+              - { key: C, text: "Николай Фоменко", distractor: PLAUSIBLE }
+              - { key: D, text: "Владимир Пресняков", distractor: PLAUSIBLE }
+            explanation: "Первый сезон снимали в 2001 году в Панаме; это была адаптация шоу Survivor."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что первый сезон снимали в Панаме, и что никто из вариантов не вёл именно первый сезон."]
+
+  - family: gorodok
+    name: "«Городок»"
+    facts:
+      - id: gorodok-hosts
+        statement: "«Городок» вели Юрий Стоянов и Илья Олейников."
+        sources: [{ name: "Википедия: Городок (телепередача)", type: REFERENCE, verified: false }]
+        questions:
+          - id: gorodok-hosts-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто вёл «Городок» вместе с Юрием Стояновым?"
+            options:
+              - { key: A, text: "Михаил Евдокимов", distractor: SAME_CATEGORY }
+              - { key: B, text: "Илья Олейников", correct: true }
+              - { key: C, text: "Евгений Петросян", distractor: SAME_CATEGORY }
+              - { key: D, text: "Ефим Шифрин", distractor: SAME_CATEGORY }
+            explanation: "Программа выходила с 1993 по 2012 год."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: spokoynoy-nochi
+    name: "«Спокойной ночи, малыши!»"
+    facts:
+      - id: spokoynoy-nochi-filya
+        statement: "Щенок из «Спокойной ночи, малыши!» — Филя; Хрюша — поросёнок, Степашка — зайчик, Каркуша — ворона."
+        sources: [{ name: "Википедия: Спокойной ночи, малыши!", type: REFERENCE, verified: false }]
+        questions:
+          - id: spokoynoy-nochi-filya-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Кто из героев «Спокойной ночи, малыши!» — щенок?"
+            options:
+              - { key: A, text: "Хрюша", distractor: SAME_CATEGORY }
+              - { key: B, text: "Степашка", distractor: SAME_CATEGORY }
+              - { key: C, text: "Филя", correct: true }
+              - { key: D, text: "Каркуша", distractor: SAME_CATEGORY }
+            explanation: "Передача выходит с 1964 года — её смотрели и родители, и дети, и внуки."
+            topics: { ru-tv-90s-00s: 1.0, cartoons: 0.4 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8, 00s: 0.6, 10s: 0.4 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: v-mire-zhivotnykh
+    name: "«В мире животных»"
+    facts:
+      - id: drozdov
+        statement: "Программу «В мире животных» много лет вёл Николай Дроздов."
+        sources: [{ name: "Википедия: В мире животных", type: REFERENCE, verified: false }]
+        questions:
+          - id: drozdov-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто много лет вёл программу «В мире животных»?"
+            options:
+              - { key: A, text: "Николай Дроздов", correct: true }
+              - { key: B, text: "Юрий Сенкевич", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Александр Масляков", distractor: SAME_CATEGORY }
+              - { key: D, text: "Валдис Пельш", distractor: SAME_CATEGORY }
+            explanation: "Юрий Сенкевич вёл другую любимую программу — «Клуб кинопутешествий»."
+            topics: { ru-tv-90s-00s: 1.0, nature: 0.5 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.8 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: santa-barbara
+    name: "«Санта-Барбара»"
+    facts:
+      - id: santa-barbara-family
+        statement: "В центре сериала «Санта-Барбара» — богатая семья Кэпвеллов."
+        sources: [{ name: "Википедия: Санта-Барбара (телесериал)", type: REFERENCE, verified: false }]
+        questions:
+          - id: santa-barbara-family-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Вокруг какой семьи строился сериал «Санта-Барбара»?"
+            options:
+              - { key: A, text: "Карринтоны", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Кэпвеллы", correct: true }
+              - { key: C, text: "Юинги", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Форрестеры", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Карринтоны — это «Династия», Юинги — «Даллас», Форрестеры — «Дерзкие и красивые»."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0, US: 0.5 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 4
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: telenovelas
+    name: "Латиноамериканские сериалы на советском и российском ТВ"
+    facts:
+      - id: izaura-country
+        statement: "Сериал «Рабыня Изаура» снят в Бразилии."
+        sources: [{ name: "Википедия: Рабыня Изаура (телесериал, 1976)", type: REFERENCE, verified: false }]
+        questions:
+          - id: izaura-country-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "В какой стране сняли сериал «Рабыня Изаура»?"
+            options:
+              - { key: A, text: "В Мексике", distractor: NEAR_MISS }
+              - { key: B, text: "В Бразилии", correct: true }
+              - { key: C, text: "В Аргентине", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Венесуэле", distractor: SAME_CATEGORY }
+            explanation: "В СССР его показали в 1988 году — это была первая «мыльная опера» на советском ТВ."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Проверить, что «Рабыня Изаура» действительно была первой латиноамериканской «мыльной оперой» на советском ТВ."]
+
+      - id: bogatye-marianna
+        statement: "Главную героиню мексиканского сериала «Богатые тоже плачут» зовут Марианна."
+        sources: [{ name: "Википедия: Богатые тоже плачут", type: REFERENCE, verified: false }]
+        questions:
+          - id: bogatye-marianna-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как звали главную героиню сериала «Богатые тоже плачут»?"
+            options:
+              - { key: A, text: "Изаура", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Марианна", correct: true }
+              - { key: C, text: "Кассандра", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Мануэла", distractor: SAME_CATEGORY }
+            explanation: "Изаура и Кассандра — героини других сериалов, которые смотрела вся страна."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: ugaday-melodiyu
+    name: "«Угадай мелодию»"
+    facts:
+      - id: ugaday-pelsh
+        statement: "Ведущий «Угадай мелодию» (с 1995 года) — Валдис Пельш."
+        sources: [{ name: "Википедия: Угадай мелодию", type: REFERENCE, verified: false }]
+        questions:
+          - id: ugaday-pelsh-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто вёл «Угадай мелодию»?"
+            options:
+              - { key: A, text: "Леонид Якубович", distractor: SAME_CATEGORY }
+              - { key: B, text: "Валдис Пельш", correct: true }
+              - { key: C, text: "Дмитрий Дибров", distractor: SAME_CATEGORY }
+              - { key: D, text: "Александр Масляков", distractor: SAME_CATEGORY }
+            explanation: "Пельш — ещё и участник группы «Несчастный случай»."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.5 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: o-schastlivchik
+    name: "«О, счастливчик!»"
+    facts:
+      - id: o-schastlivchik
+        statement: "Российская версия Who Wants to Be a Millionaire? сначала выходила на НТВ под названием «О, счастливчик!» с Дмитрием Дибровым."
+        sources: [{ name: "Википедия: Кто хочет стать миллионером? (Россия)", type: REFERENCE, verified: false }]
+        questions:
+          - id: o-schastlivchik-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как назывался российский «Кто хочет стать миллионером?» в первые годы?"
+            options:
+              - { key: A, text: "«Слабое звено»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "«О, счастливчик!»", correct: true }
+              - { key: C, text: "«Сто к одному»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Алчность»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "С 2001 года шоу переехало на Первый канал и стало «Кто хочет стать миллионером?» с Максимом Галкиным."
+            topics: { ru-tv-90s-00s: 1.0 }
+            contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 0.8, RUSSIA_2000S: 0.6 }
+            generations: { 90s: 0.8, 00s: 0.8 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI

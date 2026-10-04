@@ -1,0 +1,54 @@
+# C2 — eurovision (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: eurovision-winners
+    name: "Победители «Евровидения»"
+    facts:
+      - id: lordi-finland
+        statement: "В 2006 году «Евровидение» выиграла финская группа Lordi в костюмах монстров."
+        sources: [{ name: "Википедия: Lordi", type: REFERENCE, verified: false }]
+        questions:
+          - id: lordi-finland-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая страна победила на «Евровидении-2006» с хард-рок-группой в костюмах монстров?"
+            options:
+              - { key: A, text: "Норвегия", distractor: SAME_CATEGORY }
+              - { key: B, text: "Финляндия", correct: true }
+              - { key: C, text: "Швеция", distractor: SAME_CATEGORY }
+              - { key: D, text: "Исландия", distractor: SAME_CATEGORY }
+            explanation: "Песня Hard Rock Hallelujah — первая победа Финляндии на конкурсе."
+            topics: { eurovision: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 1
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: conchita-austria
+        statement: "Кончита Вурст победила на «Евровидении-2014», представляя Австрию."
+        sources: [{ name: "Википедия: Кончита Вурст", type: REFERENCE, verified: false }]
+        questions:
+          - id: conchita-austria-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какую страну представляла Кончита Вурст, победившая на «Евровидении-2014»?"
+            options:
+              - { key: A, text: "Германию", distractor: NEAR_MISS }
+              - { key: B, text: "Австрию", correct: true }
+              - { key: C, text: "Швейцарию", distractor: NEAR_MISS }
+              - { key: D, text: "Нидерланды", distractor: SAME_CATEGORY }
+            explanation: "Песня Rise Like a Phoenix."
+            topics: { eurovision: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 10s: 1.0 }
+            difficulty: 3
+            dignity: 1
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI

@@ -1,0 +1,144 @@
+# C2 — ancient-world (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: antiquity
+    name: "Древний мир"
+    facts:
+      - id: colosseum-purpose
+        statement: "Колизей в Риме строили для гладиаторских боёв и других зрелищ."
+        sources: [{ name: "Википедия: Колизей", type: REFERENCE, verified: false }]
+        questions:
+          - id: colosseum-purpose-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Для чего построили Колизей?"
+            options:
+              - { key: A, text: "Для заседаний сената", distractor: PLAUSIBLE }
+              - { key: B, text: "Для гладиаторских боёв и зрелищ", correct: true }
+              - { key: C, text: "Как храм Юпитера", distractor: PLAUSIBLE }
+              - { key: D, text: "Для гонок на колесницах", distractor: NEAR_MISS }
+            explanation: "Гонки колесниц устраивали в Большом цирке."
+            topics: { ancient-world: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: cheops-wonder
+        statement: "Пирамида Хеопса — единственное из семи чудес света, сохранившееся до наших дней."
+        sources: [{ name: "Википедия: Семь чудес света", type: REFERENCE, verified: false }]
+        questions:
+          - id: cheops-wonder-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое из семи чудес света сохранилось до наших дней?"
+            options:
+              - { key: A, text: "Колосс Родосский", distractor: SAME_CATEGORY }
+              - { key: B, text: "Пирамида Хеопса", correct: true }
+              - { key: C, text: "Висячие сады Семирамиды", distractor: SAME_CATEGORY }
+              - { key: D, text: "Александрийский маяк", distractor: SAME_CATEGORY }
+            explanation: "Она же — самое древнее из семи чудес."
+            topics: { ancient-world: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: veni-vidi-vici
+        statement: "«Пришёл, увидел, победил» (Veni, vidi, vici) — слова Юлия Цезаря."
+        sources: [{ name: "Википедия: Veni, vidi, vici", type: REFERENCE, verified: false }]
+        questions:
+          - id: veni-vidi-vici-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кому принадлежат слова «Пришёл, увидел, победил»?"
+            options:
+              - { key: A, text: "Александру Македонскому", distractor: SAME_CATEGORY }
+              - { key: B, text: "Юлию Цезарю", correct: true }
+              - { key: C, text: "Ганнибалу", distractor: SAME_CATEGORY }
+              - { key: D, text: "Нерону", distractor: SAME_CATEGORY }
+            explanation: "Так Цезарь сообщил в Рим о быстрой победе в 47 году до н. э."
+            topics: { ancient-world: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: olympics-greece
+        statement: "Олимпийские игры зародились в Древней Греции, в Олимпии."
+        sources: [{ name: "Википедия: Олимпийские игры в Древней Греции", type: REFERENCE, verified: false }]
+        questions:
+          - id: olympics-greece-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Где зародились Олимпийские игры?"
+            options:
+              - { key: A, text: "В Древнем Риме", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "В Древней Греции", correct: true }
+              - { key: C, text: "В Древнем Египте", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Персии", distractor: SAME_CATEGORY }
+            explanation: "Первые известные игры — 776 год до н. э."
+            topics: { ancient-world: 1.0, sports: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: trojan-horse
+        statement: "По легенде, греки проникли в Трою, спрятавшись в деревянном коне."
+        sources: [{ name: "Википедия: Троянский конь", type: REFERENCE, verified: false }]
+        questions:
+          - id: trojan-horse-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как, по легенде, греки проникли в Трою?"
+            options:
+              - { key: A, text: "Через подземный ход", distractor: PLAUSIBLE }
+              - { key: B, text: "Спрятавшись в деревянном коне", correct: true }
+              - { key: C, text: "Подкупив стражу", distractor: PLAUSIBLE }
+              - { key: D, text: "Переодевшись купцами", distractor: PLAUSIBLE }
+            explanation: "Отсюда «троянский конь» — и в компьютерной безопасности тоже."
+            topics: { ancient-world: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pompeii-vesuvius
+        statement: "Помпеи погибли при извержении Везувия в 79 году н. э."
+        sources: [{ name: "Википедия: Помпеи", type: REFERENCE, verified: false }]
+        questions:
+          - id: pompeii-vesuvius-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Извержение какого вулкана уничтожило Помпеи?"
+            options:
+              - { key: A, text: "Этны", distractor: NEAR_MISS }
+              - { key: B, text: "Везувия", correct: true }
+              - { key: C, text: "Стромболи", distractor: SAME_CATEGORY }
+              - { key: D, text: "Кракатау", distractor: SAME_CATEGORY }
+            explanation: "Этна — на Сицилии и до сих пор очень активна."
+            topics: { ancient-world: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 5
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI

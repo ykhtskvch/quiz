@@ -16,7 +16,8 @@
     "smoke": "node scripts/dev/smoke.ts",
     "analytics": "node scripts/dev/analytics-report.ts",
     "db:migrate:local": "npm run db:migrate:local -w @quiz/worker",
-    "deploy:staging": "npm run build -w @quiz/web && npm run deploy:staging -w @quiz/worker"
+    "deploy:staging": "npm run build -w @quiz/web && npm run deploy:staging -w @quiz/worker",
+    "content:review": "node scripts/content/review.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

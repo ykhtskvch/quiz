@@ -1,0 +1,426 @@
+# C2 — soviet-cinema
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: ironiya-sudby
+    name: "«Ирония судьбы, или С лёгким паром!»"
+    facts:
+      - id: ironiya-sudby-city
+        statement: "В «Иронии судьбы» Женя Лукашин после бани улетает из Москвы в Ленинград."
+        sources: [{ name: "Википедия: Ирония судьбы, или С лёгким паром!", type: REFERENCE, verified: false }]
+        questions:
+          - id: ironiya-sudby-city-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "В какой город по ошибке улетает Женя Лукашин в «Иронии судьбы»?"
+            options:
+              - { key: A, text: "Ленинград", correct: true }
+              - { key: B, text: "Киев", distractor: SAME_CATEGORY }
+              - { key: C, text: "Ригу", distractor: SAME_CATEGORY }
+              - { key: D, text: "Минск", distractor: SAME_CATEGORY }
+            explanation: "Улица Строителей, дом 25, квартира 12 нашлась и там — типовые дома и одинаковые замки сделали своё дело."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: gaidai
+    name: "Фильмы Леонида Гайдая"
+    facts:
+      - id: brilliantovaya-ruka-director
+        statement: "Режиссёр фильма «Бриллиантовая рука» (1968) — Леонид Гайдай."
+        sources: [{ name: "Википедия: Бриллиантовая рука", type: REFERENCE, verified: false }]
+        questions:
+          - id: brilliantovaya-ruka-director-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто снял «Бриллиантовую руку»?"
+            options:
+              - { key: A, text: "Эльдар Рязанов", distractor: SAME_CATEGORY }
+              - { key: B, text: "Леонид Гайдай", correct: true }
+              - { key: C, text: "Георгий Данелия", distractor: SAME_CATEGORY }
+              - { key: D, text: "Владимир Меньшов", distractor: SAME_CATEGORY }
+            explanation: "Гайдай же снял «Кавказскую пленницу», «Операцию „Ы“» и «Ивана Васильевича»."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: kavkazskaya-plennitsa-folklore
+        statement: "В «Кавказской пленнице» Шурик едет на Кавказ собирать фольклор — легенды, тосты, обычаи."
+        sources: [{ name: "Википедия: Кавказская пленница, или Новые приключения Шурика", type: REFERENCE, verified: false }]
+        questions:
+          - id: kavkazskaya-plennitsa-folklore-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Зачем Шурик поехал на Кавказ в «Кавказской пленнице»?"
+            options:
+              - { key: A, text: "На археологические раскопки", distractor: PLAUSIBLE }
+              - { key: B, text: "Собирать фольклор: легенды, тосты, обычаи", correct: true }
+              - { key: C, text: "На свадьбу друга", distractor: PLAUSIBLE }
+              - { key: D, text: "Лечиться в санатории", distractor: PLAUSIBLE }
+            explanation: "Отсюда знаменитый тост про маленькую, но очень гордую птичку."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: shurik-actor
+        statement: "Роль Шурика в фильмах Гайдая сыграл Александр Демьяненко."
+        sources: [{ name: "Википедия: Демьяненко, Александр Сергеевич", type: REFERENCE, verified: false }]
+        questions:
+          - id: shurik-actor-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто сыграл Шурика в «Операции „Ы“» и «Кавказской пленнице»?"
+            options:
+              - { key: A, text: "Андрей Миронов", distractor: SAME_CATEGORY }
+              - { key: B, text: "Юрий Никулин", distractor: SAME_CATEGORY }
+              - { key: C, text: "Александр Демьяненко", correct: true }
+              - { key: D, text: "Олег Даль", distractor: SAME_CATEGORY }
+            explanation: "Роль так приклеилась к актёру, что его и в жизни часто звали Шуриком."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ivan-vasilievich-bulgakov
+        statement: "Фильм «Иван Васильевич меняет профессию» снят по пьесе Михаила Булгакова «Иван Васильевич»."
+        sources: [{ name: "Википедия: Иван Васильевич меняет профессию", type: REFERENCE, verified: false }]
+        questions:
+          - id: ivan-vasilievich-bulgakov-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "По пьесе какого писателя снят «Иван Васильевич меняет профессию»?"
+            options:
+              - { key: A, text: "Михаила Зощенко", distractor: PLAUSIBLE }
+              - { key: B, text: "Ильфа и Петрова", distractor: PLAUSIBLE }
+              - { key: C, text: "Михаила Булгакова", correct: true }
+              - { key: D, text: "Николая Гоголя", distractor: PLAUSIBLE }
+            explanation: "У Булгакова пьеса называлась просто «Иван Васильевич»; действие Гайдай перенёс в 1970-е."
+            topics: { soviet-cinema: 1.0, russian-literature: 0.5 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.8, BRIDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: moscow-tears-oscar
+    name: "«Москва слезам не верит»"
+    facts:
+      - id: moscow-tears-oscar-1981
+        statement: "«Москва слезам не верит» получил «Оскар» как лучший фильм на иностранном языке на церемонии 1981 года."
+        sources: [{ name: "Википедия: Москва слезам не верит", type: REFERENCE, verified: false }]
+        questions:
+          - id: moscow-tears-oscar-1981-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой фильм из СССР получил «Оскар» на церемонии 1981 года?"
+            options:
+              - { key: A, text: "«Война и мир»", distractor: NEAR_MISS }
+              - { key: B, text: "«Москва слезам не верит»", correct: true }
+              - { key: C, text: "«Дерсу Узала»", distractor: NEAR_MISS }
+              - { key: D, text: "«Ирония судьбы»", distractor: SAME_CATEGORY }
+            explanation: "«Война и мир» Бондарчука и «Дерсу Узала» тоже получили «Оскар» — но в 1969 и 1976 годах."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: dzhentlmeny-udachi
+    name: "«Джентльмены удачи»"
+    facts:
+      - id: troshkin-job
+        statement: "В «Джентльменах удачи» Трошкин, двойник Доцента, работает заведующим детским садом."
+        sources: [{ name: "Википедия: Джентльмены удачи", type: REFERENCE, verified: false }]
+        questions:
+          - id: troshkin-job-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кем работал Трошкин — двойник Доцента в «Джентльменах удачи»?"
+            options:
+              - { key: A, text: "Учителем физкультуры", distractor: PLAUSIBLE }
+              - { key: B, text: "Сторожем в музее", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Заведующим детским садом", correct: true }
+              - { key: D, text: "Водителем автобуса", distractor: PLAUSIBLE }
+            explanation: "Отсюда его педагогический подход к уголовникам: «Кто не будет слушаться — тот не пойдёт гулять»."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.6, SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: beloe-solntse
+    name: "«Белое солнце пустыни»"
+    facts:
+      - id: vostok-delo-tonkoe
+        statement: "Фразу «Восток — дело тонкое, Петруха!» в «Белом солнце пустыни» говорит красноармеец Сухов."
+        sources: [{ name: "Википедия: Белое солнце пустыни", type: REFERENCE, verified: false }]
+        questions:
+          - id: vostok-delo-tonkoe-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто в «Белом солнце пустыни» говорит: «Восток — дело тонкое, Петруха!»?"
+            options:
+              - { key: A, text: "Таможенник Верещагин", distractor: NEAR_MISS }
+              - { key: B, text: "Красноармеец Сухов", correct: true }
+              - { key: C, text: "Абдулла", distractor: SAME_CATEGORY }
+              - { key: D, text: "Саид", distractor: SAME_CATEGORY }
+            explanation: "Верещагину принадлежит другая знаменитая фраза: «Я мзду не беру. Мне за державу обидно»."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: sluzhebny-roman
+    name: "«Служебный роман»"
+    facts:
+      - id: kalugina-nickname
+        statement: "В «Служебном романе» подчинённые за глаза называют директора Людмилу Калугину «мымрой»."
+        sources: [{ name: "Википедия: Служебный роман", type: REFERENCE, verified: false }]
+        questions:
+          - id: kalugina-nickname-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как подчинённые за глаза называли Людмилу Прокофьевну Калугину в «Служебном романе»?"
+            options:
+              - { key: A, text: "Снежная королева", distractor: PLAUSIBLE }
+              - { key: B, text: "Кобра", distractor: PLAUSIBLE }
+              - { key: C, text: "Мымра", correct: true }
+              - { key: D, text: "Грымза", distractor: NEAR_MISS }
+            explanation: "«Наша мымра» — так Новосельцев описывает начальницу, а потом в неё влюбляется."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.7, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: 17-mgnoveniy
+    name: "«Семнадцать мгновений весны»"
+    facts:
+      - id: shtirlits-actor
+        statement: "Штирлица в «Семнадцати мгновениях весны» сыграл Вячеслав Тихонов."
+        sources: [{ name: "Википедия: Семнадцать мгновений весны", type: REFERENCE, verified: false }]
+        questions:
+          - id: shtirlits-actor-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто сыграл Штирлица в «Семнадцати мгновениях весны»?"
+            options:
+              - { key: A, text: "Олег Табаков", distractor: NEAR_MISS }
+              - { key: B, text: "Вячеслав Тихонов", correct: true }
+              - { key: C, text: "Леонид Броневой", distractor: NEAR_MISS }
+              - { key: D, text: "Юрий Визбор", distractor: NEAR_MISS }
+            explanation: "Табаков сыграл Шелленберга, Броневой — Мюллера, а Визбор — Бормана."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: kin-dza-dza
+    name: "«Кин-дза-дза!»"
+    facts:
+      - id: kin-dza-dza-money
+        statement: "В «Кин-дза-дза!» деньги называются «чатлы», а «кц» — это спички."
+        sources: [{ name: "Википедия: Кин-дза-дза!", type: REFERENCE, verified: false }]
+        questions:
+          - id: kin-dza-dza-money-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как назывались деньги на планете Плюк в «Кин-дза-дза!»?"
+            options:
+              - { key: A, text: "Кц", distractor: NEAR_MISS }
+              - { key: B, text: "Чатлы", correct: true }
+              - { key: C, text: "Пепелацы", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Гравицапы", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Кц» — это спички, самая большая ценность на Плюке. Пепелац — летательный аппарат, а гравицапа — его деталь."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: zori-tikhie
+    name: "«А зори здесь тихие…»"
+    facts:
+      - id: zori-five-girls
+        statement: "В «А зори здесь тихие…» под командованием старшины Васкова пять девушек-зенитчиц."
+        sources: [{ name: "Википедия: А зори здесь тихие… (фильм, 1972)", type: REFERENCE, verified: false }]
+        questions:
+          - id: zori-five-girls-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Сколько девушек-зенитчиц уходят со старшиной Васковым в «А зори здесь тихие…»?"
+            options:
+              - { key: A, text: "Три", distractor: PLAUSIBLE }
+              - { key: B, text: "Четыре", distractor: NEAR_MISS }
+              - { key: C, text: "Пять", correct: true }
+              - { key: D, text: "Семь", distractor: PLAUSIBLE }
+            explanation: "Фильм Станислава Ростоцкого 1972 года по повести Бориса Васильева."
+            topics: { soviet-cinema: 1.0, russian-literature: 0.4 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 3
+            dignity: 5
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: mimino
+    name: "«Мимино»"
+    facts:
+      - id: mimino-job
+        statement: "Герой фильма «Мимино» Валико Мизандари — вертолётчик; «мимино» по-грузински значит «сокол»."
+        sources: [{ name: "Википедия: Мимино", type: REFERENCE, verified: false }]
+        questions:
+          - id: mimino-job-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кем работает главный герой фильма «Мимино»?"
+            options:
+              - { key: A, text: "Таксистом", distractor: PLAUSIBLE }
+              - { key: B, text: "Пилотом вертолёта", correct: true }
+              - { key: C, text: "Водителем грузовика", distractor: PLAUSIBLE }
+              - { key: D, text: "Поваром", distractor: PLAUSIBLE }
+            explanation: "«Мимино» по-грузински — «сокол»: такое прозвище у вертолётчика Валико Мизандари."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: beregis-avtomobilya
+    name: "«Берегись автомобиля»"
+    facts:
+      - id: detochkin-money
+        statement: "Юрий Деточкин в «Берегись автомобиля» угоняет машины у жуликов, а деньги от продажи перечисляет в детские дома."
+        sources: [{ name: "Википедия: Берегись автомобиля", type: REFERENCE, verified: false }]
+        questions:
+          - id: detochkin-money-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Куда Юрий Деточкин из «Берегись автомобиля» отправлял деньги за угнанные машины?"
+            options:
+              - { key: A, text: "В народный театр", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "В детские дома", correct: true }
+              - { key: C, text: "В фонд мира", distractor: PLAUSIBLE }
+              - { key: D, text: "Себе на кооперативную квартиру", distractor: PLAUSIBLE }
+            explanation: "Народный театр в фильме тоже есть — там Деточкин играет Гамлета."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: chelovek-amfibiya
+    name: "«Человек-амфибия»"
+    facts:
+      - id: ikhtiandr
+        statement: "Главного героя фильма «Человек-амфибия» (1961) зовут Ихтиандр."
+        sources: [{ name: "Википедия: Человек-амфибия (фильм)", type: REFERENCE, verified: false }]
+        questions:
+          - id: ikhtiandr-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как зовут главного героя фильма «Человек-амфибия»?"
+            options:
+              - { key: A, text: "Садко", distractor: PLAUSIBLE }
+              - { key: B, text: "Ихтиандр", correct: true }
+              - { key: C, text: "Посейдон", distractor: PLAUSIBLE }
+              - { key: D, text: "Тритон", distractor: PLAUSIBLE }
+            explanation: "Фильм снят по роману Александра Беляева; песня «Эй, моряк, ты слишком долго плавал» оттуда же."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: operatsiya-y
+    name: "«Операция „Ы“ и другие приключения Шурика»"
+    facts:
+      - id: operatsiya-y-trus
+        statement: "В «Операции „Ы“» Трус, Балбес и Бывалый пытаются ограбить склад, который сторожит баба Нюра."
+        sources: [{ name: "Википедия: Операция «Ы» и другие приключения Шурика", type: REFERENCE, verified: false }]
+        questions:
+          - id: operatsiya-y-trus-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как зовут сторожиху склада, который в «Операции „Ы“» собираются ограбить Трус, Балбес и Бывалый?"
+            options:
+              - { key: A, text: "Тётя Маня", distractor: PLAUSIBLE }
+              - { key: B, text: "Баба Нюра", correct: true }
+              - { key: C, text: "Баба Клава", distractor: PLAUSIBLE }
+              - { key: D, text: "Тётя Шура", distractor: PLAUSIBLE }
+            explanation: "В ночь «операции» вместо бабы Нюры на складе дежурит Шурик — и срывает ограбление."
+            topics: { soviet-cinema: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.6, 90s: 0.6, 00s: 0.4 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI

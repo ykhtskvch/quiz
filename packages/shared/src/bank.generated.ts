@@ -3,6 +3,4369 @@ import type { BankQuestion } from "./bank.ts";
 
 export const BANK: BankQuestion[] = [
   {
+    "id": "colosseum-purpose-ru-1",
+    "factId": "colosseum-purpose",
+    "familyId": "antiquity",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Для чего построили Колизей?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Для заседаний сената"
+      },
+      {
+        "key": "B",
+        "text": "Для гладиаторских боёв и зрелищ"
+      },
+      {
+        "key": "C",
+        "text": "Как храм Юпитера"
+      },
+      {
+        "key": "D",
+        "text": "Для гонок на колесницах"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Гонки колесниц устраивали в Большом цирке.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cheops-wonder-ru-1",
+    "factId": "cheops-wonder",
+    "familyId": "antiquity",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое из семи чудес света сохранилось до наших дней?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Колосс Родосский"
+      },
+      {
+        "key": "B",
+        "text": "Пирамида Хеопса"
+      },
+      {
+        "key": "C",
+        "text": "Висячие сады Семирамиды"
+      },
+      {
+        "key": "D",
+        "text": "Александрийский маяк"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Она же — самое древнее из семи чудес.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "veni-vidi-vici-ru-1",
+    "factId": "veni-vidi-vici",
+    "familyId": "antiquity",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кому принадлежат слова «Пришёл, увидел, победил»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Александру Македонскому"
+      },
+      {
+        "key": "B",
+        "text": "Юлию Цезарю"
+      },
+      {
+        "key": "C",
+        "text": "Ганнибалу"
+      },
+      {
+        "key": "D",
+        "text": "Нерону"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Так Цезарь сообщил в Рим о быстрой победе в 47 году до н. э.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "olympics-greece-ru-1",
+    "factId": "olympics-greece",
+    "familyId": "antiquity",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где зародились Олимпийские игры?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Древнем Риме"
+      },
+      {
+        "key": "B",
+        "text": "В Древней Греции"
+      },
+      {
+        "key": "C",
+        "text": "В Древнем Египте"
+      },
+      {
+        "key": "D",
+        "text": "В Персии"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Первые известные игры — 776 год до н. э.",
+    "topics": {
+      "ancient-world": 1,
+      "sports": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "trojan-horse-ru-1",
+    "factId": "trojan-horse",
+    "familyId": "antiquity",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как, по легенде, греки проникли в Трою?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Через подземный ход"
+      },
+      {
+        "key": "B",
+        "text": "Спрятавшись в деревянном коне"
+      },
+      {
+        "key": "C",
+        "text": "Подкупив стражу"
+      },
+      {
+        "key": "D",
+        "text": "Переодевшись купцами"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Отсюда «троянский конь» — и в компьютерной безопасности тоже.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pompeii-vesuvius-ru-1",
+    "factId": "pompeii-vesuvius",
+    "familyId": "antiquity",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Извержение какого вулкана уничтожило Помпеи?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Этны"
+      },
+      {
+        "key": "B",
+        "text": "Везувия"
+      },
+      {
+        "key": "C",
+        "text": "Стромболи"
+      },
+      {
+        "key": "D",
+        "text": "Кракатау"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Этна — на Сицилии и до сих пор очень активна.",
+    "topics": {
+      "ancient-world": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mona-lisa-louvre-ru-1",
+    "factId": "mona-lisa-louvre",
+    "familyId": "painting",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком музее хранится «Мона Лиза»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Уффици"
+      },
+      {
+        "key": "B",
+        "text": "В Лувре"
+      },
+      {
+        "key": "C",
+        "text": "В Прадо"
+      },
+      {
+        "key": "D",
+        "text": "В Эрмитаже"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В 1911 году картину украли из Лувра — и вернули только через два года.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "starry-night-van-gogh-ru-1",
+    "factId": "starry-night-van-gogh",
+    "familyId": "painting",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто написал «Звёздную ночь»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Клод Моне"
+      },
+      {
+        "key": "B",
+        "text": "Винсент ван Гог"
+      },
+      {
+        "key": "C",
+        "text": "Поль Гоген"
+      },
+      {
+        "key": "D",
+        "text": "Эдгар Дега"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Картина написана в лечебнице в Сен-Реми; Гоген жил с ван Гогом в Арле незадолго до этого.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "scream-munch-ru-1",
+    "factId": "scream-munch",
+    "familyId": "painting",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто написал «Крик»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Эдвард Мунк"
+      },
+      {
+        "key": "B",
+        "text": "Густав Климт"
+      },
+      {
+        "key": "C",
+        "text": "Эгон Шиле"
+      },
+      {
+        "key": "D",
+        "text": "Франсиско Гойя"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Мунк сделал несколько версий картины; её узнают даже по эмодзи 😱.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sistine-michelangelo-ru-1",
+    "factId": "sistine-michelangelo",
+    "familyId": "painting",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто расписал потолок Сикстинской капеллы?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Рафаэль"
+      },
+      {
+        "key": "B",
+        "text": "Микеланджело"
+      },
+      {
+        "key": "C",
+        "text": "Леонардо да Винчи"
+      },
+      {
+        "key": "D",
+        "text": "Донателло"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Он работал над ним около четырёх лет, почти всё время стоя на лесах.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "black-square-malevich-ru-1",
+    "factId": "black-square-malevich",
+    "familyId": "painting",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто написал «Чёрный квадрат»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Василий Кандинский"
+      },
+      {
+        "key": "B",
+        "text": "Казимир Малевич"
+      },
+      {
+        "key": "C",
+        "text": "Марк Шагал"
+      },
+      {
+        "key": "D",
+        "text": "Эль Лисицкий"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Картину впервые показали в 1915 году; позже Малевич написал ещё несколько вариантов.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 0.7,
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dali-clocks-ru-1",
+    "factId": "dali-clocks",
+    "familyId": "painting",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На картине какого художника изображены «растекающиеся» часы?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Рене Магритта"
+      },
+      {
+        "key": "B",
+        "text": "Сальвадора Дали"
+      },
+      {
+        "key": "C",
+        "text": "Пабло Пикассо"
+      },
+      {
+        "key": "D",
+        "text": "Жоана Миро"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Постоянство памяти», 1931 год. Магритт — тоже сюрреалист, автор «Сына человеческого» с яблоком.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nu-pogodi-wolf-voice-ru-1",
+    "factId": "nu-pogodi-wolf-voice",
+    "familyId": "nu-pogodi",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Кто озвучивал Волка в «Ну, погоди!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Евгений Леонов"
+      },
+      {
+        "key": "B",
+        "text": "Анатолий Папанов"
+      },
+      {
+        "key": "C",
+        "text": "Юрий Никулин"
+      },
+      {
+        "key": "D",
+        "text": "Георгий Вицин"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Леонов тоже голос эпохи — он озвучил советского Винни-Пуха.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "BRIDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vinni-pukh-voice-ru-1",
+    "factId": "vinni-pukh-voice",
+    "familyId": "vinni-pukh",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто озвучил Винни-Пуха в советском мультфильме?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Анатолий Папанов"
+      },
+      {
+        "key": "B",
+        "text": "Василий Ливанов"
+      },
+      {
+        "key": "C",
+        "text": "Евгений Леонов"
+      },
+      {
+        "key": "D",
+        "text": "Андрей Миронов"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Василий Ливанов озвучил другого любителя сладкого — Карлсона.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "prostokvashino-cat-ru-1",
+    "factId": "prostokvashino-cat",
+    "familyId": "prostokvashino",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как звали кота из Простоквашино?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Леопольд"
+      },
+      {
+        "key": "B",
+        "text": "Матроскин"
+      },
+      {
+        "key": "C",
+        "text": "Гав"
+      },
+      {
+        "key": "D",
+        "text": "Базилио"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Матроскина озвучил Олег Табаков — и подарил коту свою интонацию.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gena-job-ru-1",
+    "factId": "gena-job",
+    "familyId": "cheburashka",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кем работал крокодил Гена?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Почтальоном"
+      },
+      {
+        "key": "B",
+        "text": "Крокодилом в зоопарке"
+      },
+      {
+        "key": "C",
+        "text": "Клоуном в цирке"
+      },
+      {
+        "key": "D",
+        "text": "Воспитателем в детском саду"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Он ходил на работу в зоопарк и «работал крокодилом» — а вечерами играл в шахматы сам с собой.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ezhik-norshtein-ru-1",
+    "factId": "ezhik-norshtein",
+    "familyId": "ezhik-v-tumane",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто снял мультфильм «Ёжик в тумане»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Фёдор Хитрук"
+      },
+      {
+        "key": "B",
+        "text": "Гарри Бардин"
+      },
+      {
+        "key": "C",
+        "text": "Юрий Норштейн"
+      },
+      {
+        "key": "D",
+        "text": "Эдуард Успенский"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Мультфильм снят по сказке Сергея Козлова; в международных опросах его называли лучшим мультфильмом всех времён.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "karlson-cure-ru-1",
+    "factId": "karlson-cure",
+    "familyId": "karlson",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Каким «лекарством» лечился Карлсон в советском мультфильме?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Мёдом"
+      },
+      {
+        "key": "B",
+        "text": "Вареньем"
+      },
+      {
+        "key": "C",
+        "text": "Плюшками"
+      },
+      {
+        "key": "D",
+        "text": "Шоколадом"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Плюшки тоже были — их Карлсон «уплетал» вместе с фрекен Бок.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bremenskie-trubadur-ru-1",
+    "factId": "bremenskie-trubadur",
+    "familyId": "bremenskie",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто в «Бременских музыкантах» влюбился в Принцессу?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Сыщик"
+      },
+      {
+        "key": "B",
+        "text": "Атаман"
+      },
+      {
+        "key": "C",
+        "text": "Трубадур"
+      },
+      {
+        "key": "D",
+        "text": "Петух"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Мультфильм-мюзикл 1969 года; песни Геннадия Гладкова до сих пор поют на детских утренниках.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ptitsa-govorun-ru-1",
+    "factId": "ptitsa-govorun",
+    "familyId": "tayna-tretyey-planety",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Чем, по словам героев «Тайны третьей планеты», отличается птица Говорун?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Красотой и голосом"
+      },
+      {
+        "key": "B",
+        "text": "Умом и сообразительностью"
+      },
+      {
+        "key": "C",
+        "text": "Скоростью и ловкостью"
+      },
+      {
+        "key": "D",
+        "text": "Памятью и терпением"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Мультфильм 1981 года по Киру Булычёву: Алиса, капитан Зелёный и Громозека.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shchas-spoyu-ru-1",
+    "factId": "shchas-spoyu",
+    "familyId": "zhil-byl-pes",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто говорит «Щас спою!» в мультфильме «Жил-был пёс»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пёс"
+      },
+      {
+        "key": "B",
+        "text": "Волк"
+      },
+      {
+        "key": "C",
+        "text": "Кот"
+      },
+      {
+        "key": "D",
+        "text": "Хозяин"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Волка озвучил Армен Джигарханян, а Пса — Георгий Бурков.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "malovato-budet-ru-1",
+    "factId": "malovato-budet",
+    "familyId": "proshlogodniy-sneg",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какую фразу постоянно повторяет герой мультфильма «Падал прошлогодний снег»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Щас спою!»"
+      },
+      {
+        "key": "B",
+        "text": "«Маловато будет!»"
+      },
+      {
+        "key": "C",
+        "text": "«Ты заходи, если что»"
+      },
+      {
+        "key": "D",
+        "text": "«Ну, погоди!»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Мультфильм 1983 года Александра Татарского; главного героя озвучил Станислав Садальский.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "smeshariki-hedgehog-ru-1",
+    "factId": "smeshariki-hedgehog",
+    "familyId": "smeshariki",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как зовут ежа из «Смешариков»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Крош"
+      },
+      {
+        "key": "B",
+        "text": "Ёжик"
+      },
+      {
+        "key": "C",
+        "text": "Бараш"
+      },
+      {
+        "key": "D",
+        "text": "Копатыч"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Самое простое имя у самого застенчивого героя. Крош — кролик, Бараш — баран-поэт, Копатыч — медведь-огородник.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "BRIDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "masha-youtube-ru-1",
+    "factId": "masha-youtube",
+    "familyId": "masha-i-medved",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Серия какого российского мультфильма стала одним из самых просматриваемых видео в истории YouTube?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Смешарики»"
+      },
+      {
+        "key": "B",
+        "text": "«Маша и Медведь»"
+      },
+      {
+        "key": "C",
+        "text": "«Фиксики»"
+      },
+      {
+        "key": "D",
+        "text": "«Лунтик»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Серия «Маша плюс каша» набрала несколько миллиардов просмотров.",
+    "topics": {
+      "cartoons": 1,
+      "internet-now": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.5
+    },
+    "generations": {
+      "10s": 1,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lion-king-mufasa-ru-1",
+    "factId": "lion-king-mufasa",
+    "familyId": "lion-king",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как звали отца Симбы в «Короле Льве»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Шрам"
+      },
+      {
+        "key": "B",
+        "text": "Муфаса"
+      },
+      {
+        "key": "C",
+        "text": "Рафики"
+      },
+      {
+        "key": "D",
+        "text": "Пумба"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Шрам — его дядя и главный злодей, Рафики — мудрый бабуин, Пумба — бородавочник.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shrek-fiona-night-ru-1",
+    "factId": "shrek-fiona-night",
+    "familyId": "shrek",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В кого по ночам превращалась принцесса Фиона в «Шреке»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В дракона"
+      },
+      {
+        "key": "B",
+        "text": "В огра"
+      },
+      {
+        "key": "C",
+        "text": "В лягушку"
+      },
+      {
+        "key": "D",
+        "text": "В ведьму"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Дракон в мультфильме тоже есть — это будущая подруга Осла.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "duck-tales-scrooge-ru-1",
+    "factId": "duck-tales-scrooge",
+    "familyId": "duck-tales",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как звали дядюшку-миллиардера Билли, Вилли и Дилли в «Утиных историях»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Дональд Дак"
+      },
+      {
+        "key": "B",
+        "text": "Скрудж Макдак"
+      },
+      {
+        "key": "C",
+        "text": "Зигзаг Маккряк"
+      },
+      {
+        "key": "D",
+        "text": "Гироскоп Шестерёнкин"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Дональд — тоже их дядя, но небогатый. Зигзаг Маккряк — пилот, Гироскоп — изобретатель.",
+    "topics": {
+      "cartoons": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 0.8,
+      "GLOBAL": 0.6
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "berlin-wall-fall-ru-1",
+    "factId": "berlin-wall-fall",
+    "familyId": "berlin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком году пала Берлинская стена?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 1985"
+      },
+      {
+        "key": "B",
+        "text": "В 1987"
+      },
+      {
+        "key": "C",
+        "text": "В 1989"
+      },
+      {
+        "key": "D",
+        "text": "В 1991"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Германия объединилась годом позже, а СССР распался в 1991-м.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "berlin-wall-built-ru-1",
+    "factId": "berlin-wall-built",
+    "familyId": "berlin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком году построили Берлинскую стену?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 1949"
+      },
+      {
+        "key": "B",
+        "text": "В 1953"
+      },
+      {
+        "key": "C",
+        "text": "В 1961"
+      },
+      {
+        "key": "D",
+        "text": "В 1968"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "В 1949 году появились два немецких государства — ФРГ и ГДР; стена пришла через двенадцать лет.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "berlin-four-sectors-ru-1",
+    "factId": "berlin-four-sectors",
+    "familyId": "berlin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На сколько оккупационных секторов разделили Берлин после войны?",
+    "options": [
+      {
+        "key": "A",
+        "text": "На два"
+      },
+      {
+        "key": "B",
+        "text": "На три"
+      },
+      {
+        "key": "C",
+        "text": "На четыре"
+      },
+      {
+        "key": "D",
+        "text": "На пять"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Три западных сектора позже стали Западным Берлином, советский — Восточным.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "checkpoint-charlie-ru-1",
+    "factId": "checkpoint-charlie",
+    "familyId": "berlin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чем был «Чекпойнт Чарли»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Шпионской базой ЦРУ"
+      },
+      {
+        "key": "B",
+        "text": "Пунктом пропуска между Западным и Восточным Берлином"
+      },
+      {
+        "key": "C",
+        "text": "Американским аэродромом"
+      },
+      {
+        "key": "D",
+        "text": "Бункером Гитлера"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Чарли» — буква C в радиоалфавите НАТО: это был третий пункт после «Альфы» и «Браво».",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cuban-crisis-country-ru-1",
+    "factId": "cuban-crisis-country",
+    "familyId": "cuban-crisis",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Размещение советских ракет в какой стране вызвало Карибский кризис 1962 года?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Турции"
+      },
+      {
+        "key": "B",
+        "text": "На Кубе"
+      },
+      {
+        "key": "C",
+        "text": "Во Вьетнаме"
+      },
+      {
+        "key": "D",
+        "text": "В Никарагуа"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Американские ракеты в Турции тоже были частью истории: их тихо убрали в рамках сделки.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hotline-1963-ru-1",
+    "factId": "hotline-1963",
+    "familyId": "cuban-crisis",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что появилось между Москвой и Вашингтоном вскоре после Карибского кризиса?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Прямой авиарейс"
+      },
+      {
+        "key": "B",
+        "text": "Прямая линия связи между лидерами"
+      },
+      {
+        "key": "C",
+        "text": "Совместная космическая программа"
+      },
+      {
+        "key": "D",
+        "text": "Обмен посольствами"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Вопреки мифу о «красном телефоне», сначала это был телетайп.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "iron-curtain-churchill-ru-1",
+    "factId": "iron-curtain-churchill",
+    "familyId": "cold-war-start",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто произнёс знаменитую речь о «железном занавесе»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Гарри Трумэн"
+      },
+      {
+        "key": "B",
+        "text": "Уинстон Черчилль"
+      },
+      {
+        "key": "C",
+        "text": "Франклин Рузвельт"
+      },
+      {
+        "key": "D",
+        "text": "Джон Кеннеди"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Речь прозвучала в 1946 году в Фултоне, штат Миссури; Трумэн сидел в зале.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "yalta-1945-ru-1",
+    "factId": "yalta-1945",
+    "familyId": "cold-war-start",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где в феврале 1945 года встретились Сталин, Рузвельт и Черчилль?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Тегеране"
+      },
+      {
+        "key": "B",
+        "text": "В Ялте"
+      },
+      {
+        "key": "C",
+        "text": "В Потсдаме"
+      },
+      {
+        "key": "D",
+        "text": "В Женеве"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Тегеран был в 1943 году, а в Потсдаме летом 1945-го вместо Рузвельта был уже Трумэн.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "soviet-bomb-1949-ru-1",
+    "factId": "soviet-bomb-1949",
+    "familyId": "cold-war-start",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком году СССР испытал первую атомную бомбу?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 1945"
+      },
+      {
+        "key": "B",
+        "text": "В 1949"
+      },
+      {
+        "key": "C",
+        "text": "В 1953"
+      },
+      {
+        "key": "D",
+        "text": "В 1957"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "США — в 1945 году; в 1953-м СССР испытал первую водородную бомбу.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "warsaw-pact-ru-1",
+    "factId": "warsaw-pact",
+    "familyId": "blocs",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как назывался военный блок социалистических стран — противовес НАТО?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Совет экономической взаимопомощи"
+      },
+      {
+        "key": "B",
+        "text": "Организация Варшавского договора"
+      },
+      {
+        "key": "C",
+        "text": "Коминтерн"
+      },
+      {
+        "key": "D",
+        "text": "Содружество Независимых Государств"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "СЭВ — экономическое объединение, Коминтерн — союз компартий 1919–1943 годов.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "korea-38-ru-1",
+    "factId": "korea-38",
+    "familyId": "blocs",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "По какой параллели разделили Корею?",
+    "options": [
+      {
+        "key": "A",
+        "text": "По 17-й"
+      },
+      {
+        "key": "B",
+        "text": "По 38-й"
+      },
+      {
+        "key": "C",
+        "text": "По 45-й"
+      },
+      {
+        "key": "D",
+        "text": "По 49-й"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "По 17-й параллели разделили Вьетнам.",
+    "topics": {
+      "cold-war": 1,
+      "geography": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "olympic-boycott-1984-ru-1",
+    "factId": "olympic-boycott-1984",
+    "familyId": "blocs",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую Олимпиаду бойкотировал СССР?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Москва-1980"
+      },
+      {
+        "key": "B",
+        "text": "Лос-Анджелес-1984"
+      },
+      {
+        "key": "C",
+        "text": "Сеул-1988"
+      },
+      {
+        "key": "D",
+        "text": "Монреаль-1976"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ответ на американский бойкот Москвы-1980. Сеул-1988 бойкотировала КНДР, а СССР туда поехал.",
+    "topics": {
+      "cold-war": 1,
+      "sports": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sdi-star-wars-ru-1",
+    "factId": "sdi-star-wars",
+    "familyId": "blocs",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Какую программу Рейгана прозвали «Звёздными войнами»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Лунную программу"
+      },
+      {
+        "key": "B",
+        "text": "Систему противоракетной обороны в космосе"
+      },
+      {
+        "key": "C",
+        "text": "Программу «Спейс шаттл»"
+      },
+      {
+        "key": "D",
+        "text": "Полёт к Марсу"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Прозвище взяли у фильма Джорджа Лукаса 1977 года.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "BRIDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "khrushchev-shoe-ru-1",
+    "factId": "khrushchev-shoe",
+    "familyId": "blocs",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто, по знаменитой истории, стучал ботинком на заседании Генассамблеи ООН в 1960 году?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Леонид Брежнев"
+      },
+      {
+        "key": "B",
+        "text": "Никита Хрущёв"
+      },
+      {
+        "key": "C",
+        "text": "Фидель Кастро"
+      },
+      {
+        "key": "D",
+        "text": "Андрей Громыко"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Подробности до сих пор спорят — но фраза «покажем кузькину мать» с этим эпизодом связана накрепко.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "prague-spring-ru-1",
+    "factId": "prague-spring",
+    "familyId": "blocs",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как назвали период реформ в Чехословакии в 1968 году?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Бархатная революция»"
+      },
+      {
+        "key": "B",
+        "text": "«Пражская весна»"
+      },
+      {
+        "key": "C",
+        "text": "«Венгерская осень»"
+      },
+      {
+        "key": "D",
+        "text": "«Солидарность»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Бархатная революция» случилась там же, но в 1989-м; «Солидарность» — польский профсоюз.",
+    "topics": {
+      "cold-war": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lordi-finland-ru-1",
+    "factId": "lordi-finland",
+    "familyId": "eurovision-winners",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая страна победила на «Евровидении-2006» с хард-рок-группой в костюмах монстров?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Норвегия"
+      },
+      {
+        "key": "B",
+        "text": "Финляндия"
+      },
+      {
+        "key": "C",
+        "text": "Швеция"
+      },
+      {
+        "key": "D",
+        "text": "Исландия"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня Hard Rock Hallelujah — первая победа Финляндии на конкурсе.",
+    "topics": {
+      "eurovision": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "conchita-austria-ru-1",
+    "factId": "conchita-austria",
+    "familyId": "eurovision-winners",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую страну представляла Кончита Вурст, победившая на «Евровидении-2014»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Германию"
+      },
+      {
+        "key": "B",
+        "text": "Австрию"
+      },
+      {
+        "key": "C",
+        "text": "Швейцарию"
+      },
+      {
+        "key": "D",
+        "text": "Нидерланды"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня Rise Like a Phoenix.",
+    "topics": {
+      "eurovision": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hp-house-ru-1",
+    "factId": "hp-house",
+    "familyId": "harry-potter",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На каком факультете Хогвартса учится Гарри Поттер?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Слизерин"
+      },
+      {
+        "key": "B",
+        "text": "Гриффиндор"
+      },
+      {
+        "key": "C",
+        "text": "Когтевран"
+      },
+      {
+        "key": "D",
+        "text": "Пуффендуй"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Распределяющая шляпа сначала хотела отправить его в Слизерин.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hp-platform-ru-1",
+    "factId": "hp-platform",
+    "familyId": "harry-potter",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "С какой платформы отправляется поезд в Хогвартс?",
+    "options": [
+      {
+        "key": "A",
+        "text": "7½"
+      },
+      {
+        "key": "B",
+        "text": "9¾"
+      },
+      {
+        "key": "C",
+        "text": "10⅓"
+      },
+      {
+        "key": "D",
+        "text": "13"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На вокзале Кингс-Кросс в Лондоне есть настоящая табличка и тележка «в стене».",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lotr-mount-doom-ru-1",
+    "factId": "lotr-mount-doom",
+    "familyId": "lotr",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где можно уничтожить Кольцо Всевластья?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Ривенделле"
+      },
+      {
+        "key": "B",
+        "text": "В Роковой горе"
+      },
+      {
+        "key": "C",
+        "text": "В Минас-Тирите"
+      },
+      {
+        "key": "D",
+        "text": "В Шире"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Только в огне Ородруина, где кольцо и было выковано.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "twilight-jacob-ru-1",
+    "factId": "twilight-jacob",
+    "familyId": "twilight",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кем был Джейкоб в «Сумерках»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Вампиром"
+      },
+      {
+        "key": "B",
+        "text": "Оборотнем"
+      },
+      {
+        "key": "C",
+        "text": "Колдуном"
+      },
+      {
+        "key": "D",
+        "text": "Обычным человеком"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Вампир — это Эдвард; Белла долго выбирала между ними.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "got-mother-of-dragons-ru-1",
+    "factId": "got-mother-of-dragons",
+    "familyId": "got",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кого в «Игре престолов» называют «Матерью драконов»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Серсею Ланнистер"
+      },
+      {
+        "key": "B",
+        "text": "Дейенерис Таргариен"
+      },
+      {
+        "key": "C",
+        "text": "Арью Старк"
+      },
+      {
+        "key": "D",
+        "text": "Сансу Старк"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "У неё было три дракона: Дрогон, Рейегаль и Визерион.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "marvel-iron-man-ru-1",
+    "factId": "marvel-iron-man",
+    "familyId": "marvel",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто такой Тони Старк?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Капитан Америка"
+      },
+      {
+        "key": "B",
+        "text": "Железный человек"
+      },
+      {
+        "key": "C",
+        "text": "Человек-паук"
+      },
+      {
+        "key": "D",
+        "text": "Тор"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В фильмах его играл Роберт Дауни-младший.",
+    "topics": {
+      "fandoms": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1,
+      "current": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "margherita-queen-ru-1",
+    "factId": "margherita-queen",
+    "familyId": "world-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В честь кого названа пицца «Маргарита»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Королевы Италии"
+      },
+      {
+        "key": "B",
+        "text": "Жены пиццайоло"
+      },
+      {
+        "key": "C",
+        "text": "Цветка ромашки"
+      },
+      {
+        "key": "D",
+        "text": "Героини оперы"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "По легенде, цвета пиццы — томат, моцарелла и базилик — повторяют итальянский флаг. «Маргарита» по-итальянски ещё и «ромашка».",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wasabi-ru-1",
+    "factId": "wasabi",
+    "familyId": "world-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что такое васаби?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Японский хрен"
+      },
+      {
+        "key": "B",
+        "text": "Маринованный имбирь"
+      },
+      {
+        "key": "C",
+        "text": "Соевый соус"
+      },
+      {
+        "key": "D",
+        "text": "Морские водоросли"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Маринованный имбирь — это гари, водоросли для роллов — нори.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "paella-spain-ru-1",
+    "factId": "paella-spain",
+    "familyId": "world-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из какой страны паэлья?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Италии"
+      },
+      {
+        "key": "B",
+        "text": "Из Испании"
+      },
+      {
+        "key": "C",
+        "text": "Из Португалии"
+      },
+      {
+        "key": "D",
+        "text": "Из Мексики"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Родина — Валенсия; название происходит от сковороды, в которой её готовят.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "guacamole-avocado-ru-1",
+    "factId": "guacamole-avocado",
+    "familyId": "world-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из чего делают основу гуакамоле?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из авокадо"
+      },
+      {
+        "key": "B",
+        "text": "Из нута"
+      },
+      {
+        "key": "C",
+        "text": "Из баклажанов"
+      },
+      {
+        "key": "D",
+        "text": "Из фасоли"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Из нута делают хумус, а из баклажанов — бабагануш.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "saffron-expensive-ru-1",
+    "factId": "saffron-expensive",
+    "familyId": "world-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая пряность самая дорогая в мире?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ваниль"
+      },
+      {
+        "key": "B",
+        "text": "Шафран"
+      },
+      {
+        "key": "C",
+        "text": "Кардамон"
+      },
+      {
+        "key": "D",
+        "text": "Корица"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Её собирают вручную — это рыльца цветков крокуса; ваниль — вторая по цене.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "emmental-holes-ru-1",
+    "factId": "emmental-holes",
+    "familyId": "world-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой швейцарский сыр знаменит крупными дырками?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пармезан"
+      },
+      {
+        "key": "B",
+        "text": "Эмменталь"
+      },
+      {
+        "key": "C",
+        "text": "Камамбер"
+      },
+      {
+        "key": "D",
+        "text": "Чеддер"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Дырки образуют пузырьки газа при созревании.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "baikal-deepest-ru-1",
+    "factId": "baikal-deepest",
+    "familyId": "lakes-rivers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое озеро — самое глубокое на Земле?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Танганьика"
+      },
+      {
+        "key": "B",
+        "text": "Байкал"
+      },
+      {
+        "key": "C",
+        "text": "Каспийское море"
+      },
+      {
+        "key": "D",
+        "text": "Верхнее"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Танганьика — второе по глубине; Каспий — самое большое по площади.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.5
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "amazon-volume-ru-1",
+    "factId": "amazon-volume",
+    "familyId": "lakes-rivers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая река самая полноводная в мире?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Нил"
+      },
+      {
+        "key": "B",
+        "text": "Амазонка"
+      },
+      {
+        "key": "C",
+        "text": "Янцзы"
+      },
+      {
+        "key": "D",
+        "text": "Миссисипи"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "За длину Амазонка спорит с Нилом, а вот по объёму воды у неё конкурентов нет.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tiber-rome-ru-1",
+    "factId": "tiber-rome",
+    "familyId": "lakes-rivers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Через какой город протекает Тибр?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Флоренцию"
+      },
+      {
+        "key": "B",
+        "text": "Рим"
+      },
+      {
+        "key": "C",
+        "text": "Милан"
+      },
+      {
+        "key": "D",
+        "text": "Венецию"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Через Флоренцию течёт Арно.",
+    "topics": {
+      "geography": 1,
+      "ancient-world": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "australia-capital-ru-1",
+    "factId": "australia-capital",
+    "familyId": "capitals",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой город — столица Австралии?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Сидней"
+      },
+      {
+        "key": "B",
+        "text": "Мельбурн"
+      },
+      {
+        "key": "C",
+        "text": "Канберра"
+      },
+      {
+        "key": "D",
+        "text": "Перт"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Канберру построили специально, чтобы не выбирать между Сиднеем и Мельбурном.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "turkey-capital-ru-1",
+    "factId": "turkey-capital",
+    "familyId": "capitals",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой город — столица Турции?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Стамбул"
+      },
+      {
+        "key": "B",
+        "text": "Анкара"
+      },
+      {
+        "key": "C",
+        "text": "Измир"
+      },
+      {
+        "key": "D",
+        "text": "Анталья"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Стамбул — крупнейший город, но столицей Анкару сделал Ататюрк в 1923 году.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kilimanjaro-ru-1",
+    "factId": "kilimanjaro",
+    "familyId": "records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая гора — самая высокая в Африке?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Гора Кения"
+      },
+      {
+        "key": "B",
+        "text": "Килиманджаро"
+      },
+      {
+        "key": "C",
+        "text": "Тубкаль"
+      },
+      {
+        "key": "D",
+        "text": "Эльбрус"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Гора Кения — вторая по высоте в Африке; Тубкаль — высшая точка Атласских гор.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vatican-smallest-ru-1",
+    "factId": "vatican-smallest",
+    "familyId": "records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое государство — самое маленькое в мире?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Монако"
+      },
+      {
+        "key": "B",
+        "text": "Ватикан"
+      },
+      {
+        "key": "C",
+        "text": "Сан-Марино"
+      },
+      {
+        "key": "D",
+        "text": "Лихтенштейн"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Площадь Ватикана — меньше половины квадратного километра; Монако второе.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "greenland-island-ru-1",
+    "factId": "greenland-island",
+    "familyId": "records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой остров — самый большой в мире?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Австралия"
+      },
+      {
+        "key": "B",
+        "text": "Гренландия"
+      },
+      {
+        "key": "C",
+        "text": "Новая Гвинея"
+      },
+      {
+        "key": "D",
+        "text": "Мадагаскар"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Австралия — материк, поэтому первое место у Гренландии; Новая Гвинея — второй.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "canada-second-area-ru-1",
+    "factId": "canada-second-area",
+    "familyId": "records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая страна — вторая по площади после России?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Китай"
+      },
+      {
+        "key": "B",
+        "text": "Канада"
+      },
+      {
+        "key": "C",
+        "text": "США"
+      },
+      {
+        "key": "D",
+        "text": "Бразилия"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Китай и США спорят за третье место — в зависимости от того, как считать водные пространства.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "india-population-ru-1",
+    "factId": "india-population",
+    "familyId": "records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая страна сейчас самая населённая в мире?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Китай"
+      },
+      {
+        "key": "B",
+        "text": "Индия"
+      },
+      {
+        "key": "C",
+        "text": "США"
+      },
+      {
+        "key": "D",
+        "text": "Индонезия"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "По оценкам ООН, Индия обогнала Китай в 2023 году.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "russia-time-zones-ru-1",
+    "factId": "russia-time-zones",
+    "familyId": "records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Сколько часовых поясов в России?",
+    "options": [
+      {
+        "key": "A",
+        "text": "9"
+      },
+      {
+        "key": "B",
+        "text": "11"
+      },
+      {
+        "key": "C",
+        "text": "12"
+      },
+      {
+        "key": "D",
+        "text": "13"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "От Калининграда до Камчатки разница — 10 часов.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 0.6,
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bering-strait-ru-1",
+    "factId": "bering-strait",
+    "familyId": "straits-cities",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой пролив разделяет Евразию и Северную Америку?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Гибралтарский"
+      },
+      {
+        "key": "B",
+        "text": "Берингов"
+      },
+      {
+        "key": "C",
+        "text": "Магелланов"
+      },
+      {
+        "key": "D",
+        "text": "Босфор"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Назван в честь Витуса Беринга, датчанина на русской службе.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "istanbul-two-continents-ru-1",
+    "factId": "istanbul-two-continents",
+    "familyId": "straits-cities",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой крупный город стоит сразу в Европе и Азии?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Афины"
+      },
+      {
+        "key": "B",
+        "text": "Стамбул"
+      },
+      {
+        "key": "C",
+        "text": "Каир"
+      },
+      {
+        "key": "D",
+        "text": "Баку"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Европейскую и азиатскую части Стамбула разделяет пролив Босфор.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "machu-picchu-ru-1",
+    "factId": "machu-picchu",
+    "familyId": "landmarks",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В какой стране находится Мачу-Пикчу?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Мексике"
+      },
+      {
+        "key": "B",
+        "text": "В Перу"
+      },
+      {
+        "key": "C",
+        "text": "В Боливии"
+      },
+      {
+        "key": "D",
+        "text": "В Чили"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Город инков XV века в Андах; в Мексике — пирамиды майя и ацтеков.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "angkor-wat-ru-1",
+    "factId": "angkor-wat",
+    "familyId": "landmarks",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В какой стране находится Ангкор-Ват?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Таиланде"
+      },
+      {
+        "key": "B",
+        "text": "В Камбодже"
+      },
+      {
+        "key": "C",
+        "text": "Во Вьетнаме"
+      },
+      {
+        "key": "D",
+        "text": "В Индии"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ангкор-Ват изображён даже на флаге Камбоджи.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cheetah-fastest-ru-1",
+    "factId": "cheetah-fastest",
+    "familyId": "animal-records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое наземное животное самое быстрое?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Лев"
+      },
+      {
+        "key": "B",
+        "text": "Гепард"
+      },
+      {
+        "key": "C",
+        "text": "Антилопа гну"
+      },
+      {
+        "key": "D",
+        "text": "Страус"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На короткой дистанции разгоняется примерно до 100 км/ч.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blue-whale-ru-1",
+    "factId": "blue-whale",
+    "familyId": "animal-records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое животное самое большое из когда-либо живших на Земле?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Африканский слон"
+      },
+      {
+        "key": "B",
+        "text": "Синий кит"
+      },
+      {
+        "key": "C",
+        "text": "Аргентинозавр"
+      },
+      {
+        "key": "D",
+        "text": "Кашалот"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Он крупнее даже самых больших динозавров.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ostrich-largest-bird-ru-1",
+    "factId": "ostrich-largest-bird",
+    "familyId": "animal-records",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая птица самая крупная?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Эму"
+      },
+      {
+        "key": "B",
+        "text": "Страус"
+      },
+      {
+        "key": "C",
+        "text": "Альбатрос"
+      },
+      {
+        "key": "D",
+        "text": "Кондор"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Эму — вторая по росту; у альбатроса самый большой размах крыльев.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "octopus-hearts-ru-1",
+    "factId": "octopus-hearts",
+    "familyId": "animal-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько сердец у осьминога?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Одно"
+      },
+      {
+        "key": "B",
+        "text": "Два"
+      },
+      {
+        "key": "C",
+        "text": "Три"
+      },
+      {
+        "key": "D",
+        "text": "Восемь"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Два качают кровь через жабры, третье — по всему телу. Восемь — это щупальца.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "spider-legs-ru-1",
+    "factId": "spider-legs",
+    "familyId": "animal-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько ног у паука?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Шесть"
+      },
+      {
+        "key": "B",
+        "text": "Восемь"
+      },
+      {
+        "key": "C",
+        "text": "Десять"
+      },
+      {
+        "key": "D",
+        "text": "Двенадцать"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Поэтому пауки — не насекомые, а паукообразные.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "joey-ru-1",
+    "factId": "joey",
+    "familyId": "animal-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как называют детёныша кенгуру?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Джоуи"
+      },
+      {
+        "key": "B",
+        "text": "Кенгурёнок-валлаби"
+      },
+      {
+        "key": "C",
+        "text": "Вомбат"
+      },
+      {
+        "key": "D",
+        "text": "Динго"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Валлаби — это отдельные виды небольших кенгуру, вомбат — другое сумчатое, динго — собака.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "koala-eucalyptus-ru-1",
+    "factId": "koala-eucalyptus",
+    "familyId": "animal-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чем питаются коалы?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Бамбуком"
+      },
+      {
+        "key": "B",
+        "text": "Листьями эвкалипта"
+      },
+      {
+        "key": "C",
+        "text": "Насекомыми"
+      },
+      {
+        "key": "D",
+        "text": "Фруктами"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Бамбук — еда большой панды.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wwf-panda-ru-1",
+    "factId": "wwf-panda",
+    "familyId": "animal-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое животное — символ Всемирного фонда дикой природы (WWF)?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Белый медведь"
+      },
+      {
+        "key": "B",
+        "text": "Большая панда"
+      },
+      {
+        "key": "C",
+        "text": "Снежный барс"
+      },
+      {
+        "key": "D",
+        "text": "Тигр"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Логотип появился в 1961 году, его вдохновила панда Чи-Чи из Лондонского зоопарка.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "icq-sound-ru-1",
+    "factId": "icq-sound",
+    "familyId": "icq",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Какой звук издавала ICQ, когда приходило новое сообщение?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Дзынь!»"
+      },
+      {
+        "key": "B",
+        "text": "«О-оу!»"
+      },
+      {
+        "key": "C",
+        "text": "«Бип-бип»"
+      },
+      {
+        "key": "D",
+        "text": "Кваканье"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Этот звук до сих пор узнают все, кто сидел в «аське» в нулевые.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.6
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "icq-logo-ru-1",
+    "factId": "icq-logo",
+    "familyId": "icq",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Что было на логотипе ICQ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Синяя птичка"
+      },
+      {
+        "key": "B",
+        "text": "Зелёный цветок"
+      },
+      {
+        "key": "C",
+        "text": "Жёлтый смайлик"
+      },
+      {
+        "key": "D",
+        "text": "Красный конверт"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Когда вы были не в сети, лепесток цветка становился красным.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.6
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "icq-aska-ru-1",
+    "factId": "icq-aska",
+    "familyId": "icq",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Какую программу в рунете называли «аськой»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Skype"
+      },
+      {
+        "key": "B",
+        "text": "ICQ"
+      },
+      {
+        "key": "C",
+        "text": "MSN Messenger"
+      },
+      {
+        "key": "D",
+        "text": "Mail.ru Агент"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Название читалось «ай-си-кью» — отсюда «аська».",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.6
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "odnoklassniki-founder-ru-1",
+    "factId": "odnoklassniki-founder",
+    "familyId": "runet-social",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто создал «Одноклассники»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Павел Дуров"
+      },
+      {
+        "key": "B",
+        "text": "Альберт Попков"
+      },
+      {
+        "key": "C",
+        "text": "Аркадий Волож"
+      },
+      {
+        "key": "D",
+        "text": "Евгений Касперский"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Дуров в том же 2006 году запустил «ВКонтакте», Волож — основатель «Яндекса».",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_2000S": 1
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vk-year-ru-1",
+    "factId": "vk-year",
+    "familyId": "runet-social",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "В каком году появился «ВКонтакте»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2003"
+      },
+      {
+        "key": "B",
+        "text": "2006"
+      },
+      {
+        "key": "C",
+        "text": "2009"
+      },
+      {
+        "key": "D",
+        "text": "2011"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Сначала сайт был для студентов и выпускников вузов.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_2000S": 1
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "preved-medved-origin-ru-1",
+    "factId": "preved-medved-origin",
+    "familyId": "preved",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "С чего начался мем «Превед, медвед!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "С мультфильма «Маша и Медведь»"
+      },
+      {
+        "key": "B",
+        "text": "С картины американского художника"
+      },
+      {
+        "key": "C",
+        "text": "С рекламы пива"
+      },
+      {
+        "key": "D",
+        "text": "С фразы из «Нашей Russia»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На картине Джона Лури медведь застаёт врасплох парочку в лесу — подпись «Превед!» сделала её мемом.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_2000S": 1
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "masyanya-author-ru-1",
+    "factId": "masyanya-author",
+    "familyId": "masyanya",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто придумал Масяню?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Артемий Лебедев"
+      },
+      {
+        "key": "B",
+        "text": "Олег Куваев"
+      },
+      {
+        "key": "C",
+        "text": "Дмитрий Пучков (Гоблин)"
+      },
+      {
+        "key": "D",
+        "text": "Александр Татарский"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Масяня жила в Петербурге, а мультфильмы расходились по интернету и на дисках.",
+    "topics": {
+      "old-internet": 1,
+      "cartoons": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_2000S": 1
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "yandex-name-ru-1",
+    "factId": "yandex-name",
+    "familyId": "yandex",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как, по версии создателей, расшифровывается «Яндекс»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Языковой индекс»"
+      },
+      {
+        "key": "B",
+        "text": "«Yet another indexer»"
+      },
+      {
+        "key": "C",
+        "text": "«Ya — index»"
+      },
+      {
+        "key": "D",
+        "text": "«Яндекс — найдётся всё»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Слово придумал Илья Сегалович; русская буква «Я» вместо «Yet another» добавила игры слов.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "00s": 0.6,
+      "10s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dial-up-phone-ru-1",
+    "factId": "dial-up-phone",
+    "familyId": "dial-up",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что нельзя было делать дома, пока кто-то «сидит в интернете» через модем?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Смотреть телевизор"
+      },
+      {
+        "key": "B",
+        "text": "Звонить по домашнему телефону"
+      },
+      {
+        "key": "C",
+        "text": "Слушать радио"
+      },
+      {
+        "key": "D",
+        "text": "Включать микроволновку"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Модем занимал телефонную линию — и звонил, свистя и шипя.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "smiley-fahlman-ru-1",
+    "factId": "smiley-fahlman",
+    "familyId": "internet-history",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто первым предложил смайлик :-)?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Тим Бернерс-Ли"
+      },
+      {
+        "key": "B",
+        "text": "Скотт Фалман"
+      },
+      {
+        "key": "C",
+        "text": "Рэй Томлинсон"
+      },
+      {
+        "key": "D",
+        "text": "Билл Гейтс"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Тим Бернерс-Ли придумал веб, а Рэй Томлинсон — электронную почту со значком @.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 5,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ru-domain-year-ru-1",
+    "factId": "ru-domain-year",
+    "familyId": "internet-history",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "В каком году появился домен .ru?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1991"
+      },
+      {
+        "key": "B",
+        "text": "1994"
+      },
+      {
+        "key": "C",
+        "text": "1997"
+      },
+      {
+        "key": "D",
+        "text": "2000"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "7 апреля в рунете отмечают как его день рождения.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "youtube-year-ru-1",
+    "factId": "youtube-year",
+    "familyId": "internet-history",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком году появился YouTube?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2001"
+      },
+      {
+        "key": "B",
+        "text": "2005"
+      },
+      {
+        "key": "C",
+        "text": "2008"
+      },
+      {
+        "key": "D",
+        "text": "2010"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Первое видео — «Me at the zoo», 19 секунд у вольера со слонами.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nokia-snake-ru-1",
+    "factId": "nokia-snake",
+    "familyId": "mobile-2000s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В какую игру играли на Nokia 3310?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Тетрис"
+      },
+      {
+        "key": "B",
+        "text": "«Змейка»"
+      },
+      {
+        "key": "C",
+        "text": "«Сапёр»"
+      },
+      {
+        "key": "D",
+        "text": "«Пасьянс»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На 3310 стояла Snake II; телефон заодно прославился как «неубиваемый».",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sms-cyrillic-70-ru-1",
+    "factId": "sms-cyrillic-70",
+    "familyId": "mobile-2000s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Сколько символов кириллицей помещалось в одну SMS?",
+    "options": [
+      {
+        "key": "A",
+        "text": "160"
+      },
+      {
+        "key": "B",
+        "text": "70"
+      },
+      {
+        "key": "C",
+        "text": "140"
+      },
+      {
+        "key": "D",
+        "text": "100"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Латиницей — 160, поэтому многие писали «транслитом», чтобы платить за одну SMS, а не за три.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "winamp-llama-ru-1",
+    "factId": "winamp-llama",
+    "familyId": "winamp",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое животное упоминается в знаменитом слогане плеера Winamp?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Верблюд"
+      },
+      {
+        "key": "B",
+        "text": "Лама"
+      },
+      {
+        "key": "C",
+        "text": "Альпака"
+      },
+      {
+        "key": "D",
+        "text": "Ослик"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Фразу «It really whips the llama's ass» плеер проигрывал при первом запуске.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "tatu-eurovision-2003-place-ru-1",
     "factId": "tatu-eurovision-2003-place",
     "familyId": "tatu",
@@ -1220,6 +5583,4001 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "ivanushki-producer-ru-1",
+    "factId": "ivanushki-producer",
+    "familyId": "ivanushki",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто продюсировал группу «Иванушки International»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Максим Фадеев"
+      },
+      {
+        "key": "B",
+        "text": "Игорь Матвиенко"
+      },
+      {
+        "key": "C",
+        "text": "Юрий Айзеншпис"
+      },
+      {
+        "key": "D",
+        "text": "Бари Алибасов"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Матвиенко стоял и за «Любэ», а позже — за первой «Фабрикой звёзд».",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ivanushki-tuchi-ru-1",
+    "factId": "ivanushki-tuchi",
+    "familyId": "ivanushki",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Тучи»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Иванушки International»"
+      },
+      {
+        "key": "B",
+        "text": "«На-На»"
+      },
+      {
+        "key": "C",
+        "text": "«Руки Вверх!»"
+      },
+      {
+        "key": "D",
+        "text": "«Кар-Мэн»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Песня 1996 года сделала группу звёздами; рыжий Андрей Григорьев-Апполонов, Кирилл Андреев и Игорь Сорин.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ruki-vverh-kroshka-ru-1",
+    "factId": "ruki-vverh-kroshka",
+    "familyId": "ruki-vverh",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Крошка моя»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Руки Вверх!»"
+      },
+      {
+        "key": "B",
+        "text": "Hi-Fi"
+      },
+      {
+        "key": "C",
+        "text": "«Отпетые мошенники»"
+      },
+      {
+        "key": "D",
+        "text": "«Дискотека Авария»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Группа Сергея Жукова из Самары — главный саундтрек школьных дискотек конца 90-х.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "na-na-alibasov-ru-1",
+    "factId": "na-na-alibasov",
+    "familyId": "na-na",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто создал и продюсировал группу «На-На»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Игорь Матвиенко"
+      },
+      {
+        "key": "B",
+        "text": "Бари Алибасов"
+      },
+      {
+        "key": "C",
+        "text": "Юрий Айзеншпис"
+      },
+      {
+        "key": "D",
+        "text": "Андрей Разин"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Андрей Разин — продюсер «Ласкового мая», ещё одного проекта эпохи.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pozovi-menya-snezhina-ru-1",
+    "factId": "pozovi-menya-snezhina",
+    "familyId": "pugacheva-90s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто написал песню «Позови меня с собой», ставшую хитом Аллы Пугачёвой?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Игорь Николаев"
+      },
+      {
+        "key": "B",
+        "text": "Илья Резник"
+      },
+      {
+        "key": "C",
+        "text": "Татьяна Снежина"
+      },
+      {
+        "key": "D",
+        "text": "Лайма Вайкуле"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Снежина написала её задолго до Пугачёвой; сама автор погибла в 1995 году.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 5,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "zemfira-ufa-ru-1",
+    "factId": "zemfira-ufa",
+    "familyId": "zemfira",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Из какого города Земфира?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Казани"
+      },
+      {
+        "key": "B",
+        "text": "Из Уфы"
+      },
+      {
+        "key": "C",
+        "text": "Из Самары"
+      },
+      {
+        "key": "D",
+        "text": "Из Екатеринбурга"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Дебютный альбом «Земфира» вышел в 1999 году — с «Ариведерчи» и «СПИДом».",
+    "topics": {
+      "ru-pop-90s": 1,
+      "ru-rock": 0.6
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mumiy-troll-city-ru-1",
+    "factId": "mumiy-troll-city",
+    "familyId": "mumiy-troll-90s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Из какого города группа «Мумий Тролль»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Екатеринбурга"
+      },
+      {
+        "key": "B",
+        "text": "Из Владивостока"
+      },
+      {
+        "key": "C",
+        "text": "Из Новосибирска"
+      },
+      {
+        "key": "D",
+        "text": "Из Хабаровска"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Екатеринбург — родина «Наутилуса» и «Агаты Кристи», а «Мумий Тролль» приехал с Тихого океана.",
+    "topics": {
+      "ru-pop-90s": 1,
+      "ru-rock": 0.6
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shura-kholodnaya-luna-ru-1",
+    "factId": "shura-kholodnaya-luna",
+    "familyId": "shura",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Холодная луна»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Шура"
+      },
+      {
+        "key": "B",
+        "text": "Андрей Губин"
+      },
+      {
+        "key": "C",
+        "text": "Валерий Меладзе"
+      },
+      {
+        "key": "D",
+        "text": "Филипп Киркоров"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Шура — певец с узнаваемым голосом и улыбкой без передних зубов, звезда конца 90-х.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kirkorov-zayka-ru-1",
+    "factId": "kirkorov-zayka",
+    "familyId": "kirkorov",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Зайка моя»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Филипп Киркоров"
+      },
+      {
+        "key": "B",
+        "text": "Андрей Губин"
+      },
+      {
+        "key": "C",
+        "text": "Шура"
+      },
+      {
+        "key": "D",
+        "text": "Валерий Леонтьев"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "«Я твой зайчик, ты мой зайчик» — один из главных хитов середины 90-х.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "laskovy-may-roses-ru-1",
+    "factId": "laskovy-may-roses",
+    "familyId": "laskovy-may",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Белые розы»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Ласковый май»"
+      },
+      {
+        "key": "B",
+        "text": "«Мираж»"
+      },
+      {
+        "key": "C",
+        "text": "«Комбинация»"
+      },
+      {
+        "key": "D",
+        "text": "«Кар-Мэн»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Голосом группы был Юрий Шатунов; песню пели во дворах всей страны.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.8
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kombinatsiya-bukhgalter-ru-1",
+    "factId": "kombinatsiya-bukhgalter",
+    "familyId": "kombinatsiya",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Бухгалтер»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Комбинация»"
+      },
+      {
+        "key": "B",
+        "text": "«Мираж»"
+      },
+      {
+        "key": "C",
+        "text": "«Блестящие»"
+      },
+      {
+        "key": "D",
+        "text": "«Стрелки»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "«Бухгалтер, милый мой бухгалтер» — саратовская группа, взлетевшая в начале 90-х.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "samba-motylka-ru-1",
+    "factId": "samba-motylka",
+    "familyId": "meladze-90s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Самба белого мотылька»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Валерий Меладзе"
+      },
+      {
+        "key": "B",
+        "text": "Леонид Агутин"
+      },
+      {
+        "key": "C",
+        "text": "Валерий Леонтьев"
+      },
+      {
+        "key": "D",
+        "text": "Филипп Киркоров"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Песни для Валерия писал брат Константин — тот самый, что позже создаст «ВИА Гру».",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vetlitskaya-glaza-ru-1",
+    "factId": "vetlitskaya-glaza",
+    "familyId": "vetlitskaya",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Посмотри в глаза»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Наталья Ветлицкая"
+      },
+      {
+        "key": "B",
+        "text": "Ирина Аллегрова"
+      },
+      {
+        "key": "C",
+        "text": "Алёна Апина"
+      },
+      {
+        "key": "D",
+        "text": "Анжелика Варум"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "До сольной карьеры Ветлицкая пела в группе «Мираж».",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "agutin-hop-hey-ru-1",
+    "factId": "agutin-hop-hey",
+    "familyId": "agutin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "У кого в припеве «Хоп хей, лала лей»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Андрей Губин"
+      },
+      {
+        "key": "B",
+        "text": "Леонид Агутин"
+      },
+      {
+        "key": "C",
+        "text": "Дмитрий Маликов"
+      },
+      {
+        "key": "D",
+        "text": "Владимир Пресняков"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня «Босоногий мальчик» сделала Агутина звездой в 1993 году.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kar-men-london-ru-1",
+    "factId": "kar-men-london",
+    "familyId": "kar-men",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Лондон, гудбай!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Кар-Мэн»"
+      },
+      {
+        "key": "B",
+        "text": "«Мираж»"
+      },
+      {
+        "key": "C",
+        "text": "«Технология»"
+      },
+      {
+        "key": "D",
+        "text": "«Ласковый май»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Богдан Титомир и Сергей Лемох придумали «экзотик-поп»: каждая песня — про новую страну.",
+    "topics": {
+      "ru-pop-90s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kukly-channel-ru-1",
+    "factId": "kukly-channel",
+    "familyId": "tv-kukly",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "На каком телеканале выходила сатирическая программа «Куклы»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ОРТ"
+      },
+      {
+        "key": "B",
+        "text": "НТВ"
+      },
+      {
+        "key": "C",
+        "text": "РТР"
+      },
+      {
+        "key": "D",
+        "text": "ТВ-6"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Программа выходила с 1994 по 2002 год; её прототипом была британская Spitting Image.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pole-chudes-first-host-ru-1",
+    "factId": "pole-chudes-first-host",
+    "familyId": "pole-chudes",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто был самым первым ведущим «Поля чудес»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Леонид Якубович"
+      },
+      {
+        "key": "B",
+        "text": "Владислав Листьев"
+      },
+      {
+        "key": "C",
+        "text": "Леонид Ярмольник"
+      },
+      {
+        "key": "D",
+        "text": "Валдис Пельш"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Листьев придумал и запустил программу в 1990 году, а через год передал её Якубовичу.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pole-chudes-format-ru-1",
+    "factId": "pole-chudes-format",
+    "familyId": "pole-chudes",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "По мотивам какого американского шоу придумали «Поле чудес»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Jeopardy!"
+      },
+      {
+        "key": "B",
+        "text": "Wheel of Fortune"
+      },
+      {
+        "key": "C",
+        "text": "The Price Is Right"
+      },
+      {
+        "key": "D",
+        "text": "Family Feud"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Jeopardy! — это прообраз «Своей игры», а Family Feud — «Ста к одному».",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1,
+      "US": 0.4
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "svoya-igra-host-ru-1",
+    "factId": "svoya-igra-host",
+    "familyId": "svoya-igra",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто ведёт «Свою игру»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Владимир Ворошилов"
+      },
+      {
+        "key": "B",
+        "text": "Пётр Кулешов"
+      },
+      {
+        "key": "C",
+        "text": "Николай Фоменко"
+      },
+      {
+        "key": "D",
+        "text": "Леонид Якубович"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ворошилов — создатель и голос «Что? Где? Когда?».",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "chgk-owl-ru-1",
+    "factId": "chgk-owl",
+    "familyId": "chgk",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Какая птица — символ телеигры «Что? Где? Когда?»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ворон"
+      },
+      {
+        "key": "B",
+        "text": "Сова"
+      },
+      {
+        "key": "C",
+        "text": "Орёл"
+      },
+      {
+        "key": "D",
+        "text": "Сокол"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Лучшим знатокам вручают «Хрустальную сову».",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.8,
+      "00s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dom-2-channel-ru-1",
+    "factId": "dom-2-channel",
+    "familyId": "dom-2",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "На каком телеканале выходило реалити-шоу «Дом-2»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "СТС"
+      },
+      {
+        "key": "B",
+        "text": "ТНТ"
+      },
+      {
+        "key": "C",
+        "text": "Муз-ТВ"
+      },
+      {
+        "key": "D",
+        "text": "Первый канал"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Шоу стартовало в 2004 году и шло больше пятнадцати лет.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_2000S": 1
+    },
+    "generations": {
+      "00s": 1,
+      "10s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "posledniy-geroy-host-ru-1",
+    "factId": "posledniy-geroy-host",
+    "familyId": "posledniy-geroy",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто вёл первый сезон шоу «Последний герой»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Дмитрий Нагиев"
+      },
+      {
+        "key": "B",
+        "text": "Сергей Бодров"
+      },
+      {
+        "key": "C",
+        "text": "Николай Фоменко"
+      },
+      {
+        "key": "D",
+        "text": "Владимир Пресняков"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Первый сезон снимали в 2001 году в Панаме; это была адаптация шоу Survivor.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_2000S": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gorodok-hosts-ru-1",
+    "factId": "gorodok-hosts",
+    "familyId": "gorodok",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто вёл «Городок» вместе с Юрием Стояновым?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Михаил Евдокимов"
+      },
+      {
+        "key": "B",
+        "text": "Илья Олейников"
+      },
+      {
+        "key": "C",
+        "text": "Евгений Петросян"
+      },
+      {
+        "key": "D",
+        "text": "Ефим Шифрин"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Программа выходила с 1993 по 2012 год.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "spokoynoy-nochi-filya-ru-1",
+    "factId": "spokoynoy-nochi-filya",
+    "familyId": "spokoynoy-nochi",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Кто из героев «Спокойной ночи, малыши!» — щенок?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Хрюша"
+      },
+      {
+        "key": "B",
+        "text": "Степашка"
+      },
+      {
+        "key": "C",
+        "text": "Филя"
+      },
+      {
+        "key": "D",
+        "text": "Каркуша"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Передача выходит с 1964 года — её смотрели и родители, и дети, и внуки.",
+    "topics": {
+      "ru-tv-90s-00s": 1,
+      "cartoons": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8,
+      "00s": 0.6,
+      "10s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "BRIDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "drozdov-ru-1",
+    "factId": "drozdov",
+    "familyId": "v-mire-zhivotnykh",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто много лет вёл программу «В мире животных»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Николай Дроздов"
+      },
+      {
+        "key": "B",
+        "text": "Юрий Сенкевич"
+      },
+      {
+        "key": "C",
+        "text": "Александр Масляков"
+      },
+      {
+        "key": "D",
+        "text": "Валдис Пельш"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Юрий Сенкевич вёл другую любимую программу — «Клуб кинопутешествий».",
+    "topics": {
+      "ru-tv-90s-00s": 1,
+      "nature": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "santa-barbara-family-ru-1",
+    "factId": "santa-barbara-family",
+    "familyId": "santa-barbara",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Вокруг какой семьи строился сериал «Санта-Барбара»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Карринтоны"
+      },
+      {
+        "key": "B",
+        "text": "Кэпвеллы"
+      },
+      {
+        "key": "C",
+        "text": "Юинги"
+      },
+      {
+        "key": "D",
+        "text": "Форрестеры"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Карринтоны — это «Династия», Юинги — «Даллас», Форрестеры — «Дерзкие и красивые».",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1,
+      "US": 0.5
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "izaura-country-ru-1",
+    "factId": "izaura-country",
+    "familyId": "telenovelas",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "В какой стране сняли сериал «Рабыня Изаура»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Мексике"
+      },
+      {
+        "key": "B",
+        "text": "В Бразилии"
+      },
+      {
+        "key": "C",
+        "text": "В Аргентине"
+      },
+      {
+        "key": "D",
+        "text": "В Венесуэле"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В СССР его показали в 1988 году — это была первая «мыльная опера» на советском ТВ.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bogatye-marianna-ru-1",
+    "factId": "bogatye-marianna",
+    "familyId": "telenovelas",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как звали главную героиню сериала «Богатые тоже плачут»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Изаура"
+      },
+      {
+        "key": "B",
+        "text": "Марианна"
+      },
+      {
+        "key": "C",
+        "text": "Кассандра"
+      },
+      {
+        "key": "D",
+        "text": "Мануэла"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Изаура и Кассандра — героини других сериалов, которые смотрела вся страна.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ugaday-pelsh-ru-1",
+    "factId": "ugaday-pelsh",
+    "familyId": "ugaday-melodiyu",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто вёл «Угадай мелодию»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Леонид Якубович"
+      },
+      {
+        "key": "B",
+        "text": "Валдис Пельш"
+      },
+      {
+        "key": "C",
+        "text": "Дмитрий Дибров"
+      },
+      {
+        "key": "D",
+        "text": "Александр Масляков"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Пельш — ещё и участник группы «Несчастный случай».",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "o-schastlivchik-ru-1",
+    "factId": "o-schastlivchik",
+    "familyId": "o-schastlivchik",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как назывался российский «Кто хочет стать миллионером?» в первые годы?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Слабое звено»"
+      },
+      {
+        "key": "B",
+        "text": "«О, счастливчик!»"
+      },
+      {
+        "key": "C",
+        "text": "«Сто к одному»"
+      },
+      {
+        "key": "D",
+        "text": "«Алчность»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "С 2001 года шоу переехало на Первый канал и стало «Кто хочет стать миллионером?» с Максимом Галкиным.",
+    "topics": {
+      "ru-tv-90s-00s": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 0.8,
+      "RUSSIA_2000S": 0.6
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.8
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lyonya-golubkov-ru-1",
+    "factId": "lyonya-golubkov",
+    "familyId": "mmm",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как звали героя рекламы МММ — «не халявщика, а партнёра»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Вася Пупкин"
+      },
+      {
+        "key": "B",
+        "text": "Лёня Голубков"
+      },
+      {
+        "key": "C",
+        "text": "Петя Сидоров"
+      },
+      {
+        "key": "D",
+        "text": "Коля Иванов"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Роль сыграл актёр Владимир Пермяков; реклама шла в 1992–1994 годах.",
+    "topics": {
+      "russia-90s-life": 1,
+      "ads-90s-00s": 0.6
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "denomination-1998-ru-1",
+    "factId": "denomination-1998",
+    "familyId": "ruble-90s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Во сколько раз «укоротили» рубль при деноминации 1998 года?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 10 раз"
+      },
+      {
+        "key": "B",
+        "text": "В 100 раз"
+      },
+      {
+        "key": "C",
+        "text": "В 1000 раз"
+      },
+      {
+        "key": "D",
+        "text": "В 10 000 раз"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "С цен и купюр просто убрали три нуля.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "default-1998-month-ru-1",
+    "factId": "default-1998-month",
+    "familyId": "ruble-90s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "В каком месяце 1998 года случился дефолт?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В марте"
+      },
+      {
+        "key": "B",
+        "text": "В июне"
+      },
+      {
+        "key": "C",
+        "text": "В августе"
+      },
+      {
+        "key": "D",
+        "text": "В декабре"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "17 августа 1998 года — после этого рубль за несколько недель подешевел в несколько раз.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "voucher-nominal-ru-1",
+    "factId": "voucher-nominal",
+    "familyId": "ruble-90s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какой номинал был у приватизационного ваучера 1992 года?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 000 рублей"
+      },
+      {
+        "key": "B",
+        "text": "10 000 рублей"
+      },
+      {
+        "key": "C",
+        "text": "100 000 рублей"
+      },
+      {
+        "key": "D",
+        "text": "1 000 000 рублей"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Обещали, что на ваучер можно будет купить две «Волги».",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dendy-clone-ru-1",
+    "factId": "dendy-clone",
+    "familyId": "dendy",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Клоном какой приставки была «Денди»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sega Mega Drive"
+      },
+      {
+        "key": "B",
+        "text": "Nintendo Famicom (NES)"
+      },
+      {
+        "key": "C",
+        "text": "Sony PlayStation"
+      },
+      {
+        "key": "D",
+        "text": "Game Boy"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Денди, Денди, мы все любим Денди!» — а внутри был 8-битный японский Famicom.",
+    "topics": {
+      "russia-90s-life": 1,
+      "videogames": 0.7
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "malinovy-pidzhak-ru-1",
+    "factId": "malinovy-pidzhak",
+    "familyId": "new-russians",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какого цвета пиджак стал символом «новых русских»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Белого"
+      },
+      {
+        "key": "B",
+        "text": "Малинового"
+      },
+      {
+        "key": "C",
+        "text": "Леопардового"
+      },
+      {
+        "key": "D",
+        "text": "Золотого"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "К пиджаку полагались золотая цепь и толстый мобильный телефон.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "chelnoki-ru-1",
+    "factId": "chelnoki",
+    "familyId": "new-russians",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кого в 90-е называли «челноками»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Таксистов-«бомбил»"
+      },
+      {
+        "key": "B",
+        "text": "Торговцев, возивших товар из-за границы в клетчатых сумках"
+      },
+      {
+        "key": "C",
+        "text": "Ткачей на фабриках"
+      },
+      {
+        "key": "D",
+        "text": "Пилотов частных авиакомпаний"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ездили туда-обратно, как челнок в ткацком станке.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tamagotchi-country-ru-1",
+    "factId": "tamagotchi-country",
+    "familyId": "90s-gadgets",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где придумали тамагочи?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Китае"
+      },
+      {
+        "key": "B",
+        "text": "В Японии"
+      },
+      {
+        "key": "C",
+        "text": "В Южной Корее"
+      },
+      {
+        "key": "D",
+        "text": "В США"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Японская компания Bandai выпустила их в 1996 году; на рынках продавали дешёвые китайские копии.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pager-ru-1",
+    "factId": "pager",
+    "familyId": "90s-gadgets",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Что умел пейджер?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Звонить"
+      },
+      {
+        "key": "B",
+        "text": "Принимать короткие сообщения, которые диктовали оператору"
+      },
+      {
+        "key": "C",
+        "text": "Выходить в интернет"
+      },
+      {
+        "key": "D",
+        "text": "Фотографировать"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Звонишь оператору, диктуешь текст — и он появляется на экранчике у адресата.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.5
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "love-is-country-ru-1",
+    "factId": "love-is-country",
+    "familyId": "90s-gum",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Из какой страны была жвачка «Love is…» в 90-е?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Италии"
+      },
+      {
+        "key": "B",
+        "text": "Из Турции"
+      },
+      {
+        "key": "C",
+        "text": "Из США"
+      },
+      {
+        "key": "D",
+        "text": "Из Германии"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Сами комиксы придумала новозеландская художница Ким Казали.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "turbo-inserts-ru-1",
+    "factId": "turbo-inserts",
+    "familyId": "90s-gum",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что было на вкладышах жвачки Turbo?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Футболисты"
+      },
+      {
+        "key": "B",
+        "text": "Машины"
+      },
+      {
+        "key": "C",
+        "text": "Герои Диснея"
+      },
+      {
+        "key": "D",
+        "text": "Комиксы про любовь"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Вкладышами менялись и играли «на щелбаны»; Диснея собирали из жвачки Donald.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "invite-dobav-vody-ru-1",
+    "factId": "invite-dobav-vody",
+    "familyId": "90s-ads",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какой растворимый напиток рекламировали слоганом «Просто добавь воды!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yupi"
+      },
+      {
+        "key": "B",
+        "text": "Invite"
+      },
+      {
+        "key": "C",
+        "text": "Zuko"
+      },
+      {
+        "key": "D",
+        "text": "Tang"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Порошок разводили водой — а дети ели его прямо из пакетика.",
+    "topics": {
+      "russia-90s-life": 1,
+      "ads-90s-00s": 0.7
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "snickers-poryadok-ru-1",
+    "factId": "snickers-poryadok",
+    "familyId": "90s-ads",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какой батончик рекламировали слоганом «Съел — и порядок!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Mars"
+      },
+      {
+        "key": "B",
+        "text": "Snickers"
+      },
+      {
+        "key": "C",
+        "text": "Twix"
+      },
+      {
+        "key": "D",
+        "text": "Bounty"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "У Twix была «сладкая парочка», у Bounty — «райское наслаждение».",
+    "topics": {
+      "russia-90s-life": 1,
+      "ads-90s-00s": 0.7
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mcdonalds-1990-ru-1",
+    "factId": "mcdonalds-1990",
+    "familyId": "mcdonalds-pushkinskaya",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Где в 1990 году открылся первый «Макдоналдс» в СССР?",
+    "options": [
+      {
+        "key": "A",
+        "text": "На Арбате"
+      },
+      {
+        "key": "B",
+        "text": "На Пушкинской площади в Москве"
+      },
+      {
+        "key": "C",
+        "text": "На Невском проспекте"
+      },
+      {
+        "key": "D",
+        "text": "На ВДНХ"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В первый день в очереди стояли около 30 тысяч человек.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "volodarsky-clothespin-ru-1",
+    "factId": "volodarsky-clothespin",
+    "familyId": "vhs-translators",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "О каком переводчике видеокассет ходила легенда, что он переводил с прищепкой на носу?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Андрее Гаврилове"
+      },
+      {
+        "key": "B",
+        "text": "Леониде Володарском"
+      },
+      {
+        "key": "C",
+        "text": "Дмитрии Пучкове"
+      },
+      {
+        "key": "D",
+        "text": "Василии Горчакове"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Легенда не подтвердилась: «гнусавость» объясняли особенностями голоса и записи.",
+    "topics": {
+      "russia-90s-life": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "RUSSIA_1990S": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "onegin-genre-ru-1",
+    "factId": "onegin-genre",
+    "familyId": "pushkin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "К какому жанру относится «Евгений Онегин»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Поэма"
+      },
+      {
+        "key": "B",
+        "text": "Роман в стихах"
+      },
+      {
+        "key": "C",
+        "text": "Повесть"
+      },
+      {
+        "key": "D",
+        "text": "Драма"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Так определил жанр сам Пушкин: «не роман, а роман в стихах — дьявольская разница».",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "onegin-duel-ru-1",
+    "factId": "onegin-duel",
+    "familyId": "pushkin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кого Онегин убил на дуэли?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Грушницкого"
+      },
+      {
+        "key": "B",
+        "text": "Ленского"
+      },
+      {
+        "key": "C",
+        "text": "Зарецкого"
+      },
+      {
+        "key": "D",
+        "text": "Дантеса"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Грушницкого застрелил Печорин, Зарецкий был секундантом Ленского, а Дантес — убийца самого Пушкина.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pushkin-dantes-ru-1",
+    "factId": "pushkin-dantes",
+    "familyId": "pushkin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто смертельно ранил Пушкина на дуэли?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Николай Мартынов"
+      },
+      {
+        "key": "B",
+        "text": "Жорж Дантес"
+      },
+      {
+        "key": "C",
+        "text": "Луи Геккерен"
+      },
+      {
+        "key": "D",
+        "text": "Константин Данзас"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Мартынов застрелил Лермонтова, Геккерен — приёмный отец Дантеса, Данзас — секундант Пушкина.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "arina-rodionovna-ru-1",
+    "factId": "arina-rodionovna",
+    "familyId": "pushkin",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как звали няню Пушкина?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Татьяна Ларина"
+      },
+      {
+        "key": "B",
+        "text": "Арина Родионовна"
+      },
+      {
+        "key": "C",
+        "text": "Марфа Васильевна"
+      },
+      {
+        "key": "D",
+        "text": "Евдокия Петровна"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Выпьем, добрая подружка бедной юности моей…» — это ей.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "chichikov-souls-ru-1",
+    "factId": "chichikov-souls",
+    "familyId": "gogol",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Что скупал Чичиков в «Мёртвых душах»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Старинные иконы"
+      },
+      {
+        "key": "B",
+        "text": "Умерших крестьян, которые числились живыми"
+      },
+      {
+        "key": "C",
+        "text": "Чужие долги"
+      },
+      {
+        "key": "D",
+        "text": "Землю под строительство"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Под залог «душ» можно было получить деньги в Опекунском совете.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "begemot-ru-1",
+    "factId": "begemot",
+    "familyId": "bulgakov",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Как звали кота из свиты Воланда?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Азазелло"
+      },
+      {
+        "key": "B",
+        "text": "Бегемот"
+      },
+      {
+        "key": "C",
+        "text": "Коровьев"
+      },
+      {
+        "key": "D",
+        "text": "Абадонна"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Не шалю, никого не трогаю, починяю примус».",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "natasha-pierre-ru-1",
+    "factId": "natasha-pierre",
+    "familyId": "tolstoy",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "За кого в итоге вышла замуж Наташа Ростова в «Войне и мире»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "За Андрея Болконского"
+      },
+      {
+        "key": "B",
+        "text": "За Пьера Безухова"
+      },
+      {
+        "key": "C",
+        "text": "За Анатоля Курагина"
+      },
+      {
+        "key": "D",
+        "text": "За Бориса Друбецкого"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "С Андреем Болконским Наташа была помолвлена, а Курагин пытался её увезти.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "anna-karenina-first-line-ru-1",
+    "factId": "anna-karenina-first-line",
+    "familyId": "tolstoy",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Какой роман начинается фразой «Все счастливые семьи похожи друг на друга…»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Война и мир»"
+      },
+      {
+        "key": "B",
+        "text": "«Анна Каренина»"
+      },
+      {
+        "key": "C",
+        "text": "«Воскресение»"
+      },
+      {
+        "key": "D",
+        "text": "«Отцы и дети»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Одна из самых цитируемых первых строк мировой литературы.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.7
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "raskolnikov-name-ru-1",
+    "factId": "raskolnikov-name",
+    "familyId": "dostoevsky",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как зовут главного героя «Преступления и наказания»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Родион Раскольников"
+      },
+      {
+        "key": "B",
+        "text": "Лев Мышкин"
+      },
+      {
+        "key": "C",
+        "text": "Дмитрий Карамазов"
+      },
+      {
+        "key": "D",
+        "text": "Николай Ставрогин"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Мышкин — «Идиот», Карамазов — «Братья Карамазовы», Ставрогин — «Бесы».",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "karetu-mne-ru-1",
+    "factId": "karetu-mne",
+    "familyId": "griboedov",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто в финале «Горя от ума» восклицает: «Карету мне, карету!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Фамусов"
+      },
+      {
+        "key": "B",
+        "text": "Чацкий"
+      },
+      {
+        "key": "C",
+        "text": "Молчалин"
+      },
+      {
+        "key": "D",
+        "text": "Скалозуб"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Чацкий уезжает из Москвы — «вон из Москвы! сюда я больше не ездок».",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bazarov-ru-1",
+    "factId": "bazarov",
+    "familyId": "turgenev",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как зовут нигилиста из «Отцов и детей»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Аркадий Кирсанов"
+      },
+      {
+        "key": "B",
+        "text": "Евгений Базаров"
+      },
+      {
+        "key": "C",
+        "text": "Павел Кирсанов"
+      },
+      {
+        "key": "D",
+        "text": "Илья Обломов"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Аркадий — его друг и «ученик», Павел Петрович — главный оппонент.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mumu-gerasim-ru-1",
+    "factId": "mumu-gerasim",
+    "familyId": "turgenev",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как звали хозяина Муму?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Герасим"
+      },
+      {
+        "key": "B",
+        "text": "Ванька Жуков"
+      },
+      {
+        "key": "C",
+        "text": "Каштанка"
+      },
+      {
+        "key": "D",
+        "text": "Филипп"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Ванька Жуков и Каштанка — герои Чехова.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "geroy-author-ru-1",
+    "factId": "geroy-author",
+    "familyId": "lermontov",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто написал «Героя нашего времени»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Александр Пушкин"
+      },
+      {
+        "key": "B",
+        "text": "Михаил Лермонтов"
+      },
+      {
+        "key": "C",
+        "text": "Николай Гоголь"
+      },
+      {
+        "key": "D",
+        "text": "Иван Тургенев"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Главный герой — Печорин; роман вышел в 1840 году.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vishnevy-sad-lopakhin-ru-1",
+    "factId": "vishnevy-sad-lopakhin",
+    "familyId": "chekhov",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто купил вишнёвый сад в пьесе Чехова?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Гаев"
+      },
+      {
+        "key": "B",
+        "text": "Лопахин"
+      },
+      {
+        "key": "C",
+        "text": "Петя Трофимов"
+      },
+      {
+        "key": "D",
+        "text": "Фирс"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Сын крепостного покупает имение, где его отец и дед были рабами.",
+    "topics": {
+      "russian-literature": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "velikiy-kombinator-ru-1",
+    "factId": "velikiy-kombinator",
+    "familyId": "ilf-petrov",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кого называли «великим комбинатором»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Кису Воробьянинова"
+      },
+      {
+        "key": "B",
+        "text": "Остапа Бендера"
+      },
+      {
+        "key": "C",
+        "text": "Отца Фёдора"
+      },
+      {
+        "key": "D",
+        "text": "Шуру Балаганова"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Двенадцать стульев» и «Золотой телёнок» — две книги о его приключениях.",
+    "topics": {
+      "russian-literature": 1,
+      "soviet-cinema": 0.3
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.4
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gold-symbol-ru-1",
+    "factId": "gold-symbol",
+    "familyId": "chemistry",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой химический символ у золота?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ag"
+      },
+      {
+        "key": "B",
+        "text": "Au"
+      },
+      {
+        "key": "C",
+        "text": "Go"
+      },
+      {
+        "key": "D",
+        "text": "Gd"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ag — серебро (argentum), Gd — гадолиний.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "air-nitrogen-ru-1",
+    "factId": "air-nitrogen",
+    "familyId": "chemistry",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какого газа больше всего в атмосфере Земли?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Кислорода"
+      },
+      {
+        "key": "B",
+        "text": "Азота"
+      },
+      {
+        "key": "C",
+        "text": "Углекислого газа"
+      },
+      {
+        "key": "D",
+        "text": "Аргона"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Кислорода — около 21 %, аргона — меньше процента.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "diamond-hardest-ru-1",
+    "factId": "diamond-hardest",
+    "familyId": "chemistry",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой природный минерал самый твёрдый?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Кварц"
+      },
+      {
+        "key": "B",
+        "text": "Алмаз"
+      },
+      {
+        "key": "C",
+        "text": "Гранит"
+      },
+      {
+        "key": "D",
+        "text": "Корунд"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Корунд (рубин и сапфир) — второй по твёрдости.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bones-206-ru-1",
+    "factId": "bones-206",
+    "familyId": "biology",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько костей в скелете взрослого человека?",
+    "options": [
+      {
+        "key": "A",
+        "text": "106"
+      },
+      {
+        "key": "B",
+        "text": "206"
+      },
+      {
+        "key": "C",
+        "text": "306"
+      },
+      {
+        "key": "D",
+        "text": "412"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "У новорождённого их больше — около 270, часть потом срастается.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "penicillin-fleming-ru-1",
+    "factId": "penicillin-fleming",
+    "familyId": "biology",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто открыл пенициллин?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Луи Пастер"
+      },
+      {
+        "key": "B",
+        "text": "Александр Флеминг"
+      },
+      {
+        "key": "C",
+        "text": "Роберт Кох"
+      },
+      {
+        "key": "D",
+        "text": "Илья Мечников"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Флеминг заметил, что плесень убила бактерии в забытой чашке Петри.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dna-watson-crick-ru-1",
+    "factId": "dna-watson-crick",
+    "familyId": "biology",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто описал двойную спираль ДНК?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Мария Кюри и Пьер Кюри"
+      },
+      {
+        "key": "B",
+        "text": "Уотсон и Крик"
+      },
+      {
+        "key": "C",
+        "text": "Мендель и Дарвин"
+      },
+      {
+        "key": "D",
+        "text": "Пастер и Кох"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Важную роль сыграли снимки Розалинд Франклин.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "light-speed-ru-1",
+    "factId": "light-speed",
+    "familyId": "physics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чему примерно равна скорость света?",
+    "options": [
+      {
+        "key": "A",
+        "text": "300 км/с"
+      },
+      {
+        "key": "B",
+        "text": "300 000 км/с"
+      },
+      {
+        "key": "C",
+        "text": "3 млн км/с"
+      },
+      {
+        "key": "D",
+        "text": "30 000 км/с"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Точно — 299 792 458 м/с.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "newton-gravity-ru-1",
+    "factId": "newton-gravity",
+    "familyId": "physics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто сформулировал закон всемирного тяготения?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Галилео Галилей"
+      },
+      {
+        "key": "B",
+        "text": "Исаак Ньютон"
+      },
+      {
+        "key": "C",
+        "text": "Альберт Эйнштейн"
+      },
+      {
+        "key": "D",
+        "text": "Иоганн Кеплер"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Легенда о яблоке, упавшем ему на голову, скорее всего, приукрашена.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ironiya-sudby-city-ru-1",
+    "factId": "ironiya-sudby-city",
+    "familyId": "ironiya-sudby",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "В какой город по ошибке улетает Женя Лукашин в «Иронии судьбы»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ленинград"
+      },
+      {
+        "key": "B",
+        "text": "Киев"
+      },
+      {
+        "key": "C",
+        "text": "Ригу"
+      },
+      {
+        "key": "D",
+        "text": "Минск"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Улица Строителей, дом 25, квартира 12 нашлась и там — типовые дома и одинаковые замки сделали своё дело.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "brilliantovaya-ruka-director-ru-1",
+    "factId": "brilliantovaya-ruka-director",
+    "familyId": "gaidai",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто снял «Бриллиантовую руку»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Эльдар Рязанов"
+      },
+      {
+        "key": "B",
+        "text": "Леонид Гайдай"
+      },
+      {
+        "key": "C",
+        "text": "Георгий Данелия"
+      },
+      {
+        "key": "D",
+        "text": "Владимир Меньшов"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Гайдай же снял «Кавказскую пленницу», «Операцию „Ы“» и «Ивана Васильевича».",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kavkazskaya-plennitsa-folklore-ru-1",
+    "factId": "kavkazskaya-plennitsa-folklore",
+    "familyId": "gaidai",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Зачем Шурик поехал на Кавказ в «Кавказской пленнице»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "На археологические раскопки"
+      },
+      {
+        "key": "B",
+        "text": "Собирать фольклор: легенды, тосты, обычаи"
+      },
+      {
+        "key": "C",
+        "text": "На свадьбу друга"
+      },
+      {
+        "key": "D",
+        "text": "Лечиться в санатории"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Отсюда знаменитый тост про маленькую, но очень гордую птичку.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shurik-actor-ru-1",
+    "factId": "shurik-actor",
+    "familyId": "gaidai",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто сыграл Шурика в «Операции „Ы“» и «Кавказской пленнице»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Андрей Миронов"
+      },
+      {
+        "key": "B",
+        "text": "Юрий Никулин"
+      },
+      {
+        "key": "C",
+        "text": "Александр Демьяненко"
+      },
+      {
+        "key": "D",
+        "text": "Олег Даль"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Роль так приклеилась к актёру, что его и в жизни часто звали Шуриком.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ivan-vasilievich-bulgakov-ru-1",
+    "factId": "ivan-vasilievich-bulgakov",
+    "familyId": "gaidai",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "По пьесе какого писателя снят «Иван Васильевич меняет профессию»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Михаила Зощенко"
+      },
+      {
+        "key": "B",
+        "text": "Ильфа и Петрова"
+      },
+      {
+        "key": "C",
+        "text": "Михаила Булгакова"
+      },
+      {
+        "key": "D",
+        "text": "Николая Гоголя"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "У Булгакова пьеса называлась просто «Иван Васильевич»; действие Гайдай перенёс в 1970-е.",
+    "topics": {
+      "soviet-cinema": 1,
+      "russian-literature": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "BRIDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "moscow-tears-oscar-1981-ru-1",
+    "factId": "moscow-tears-oscar-1981",
+    "familyId": "moscow-tears-oscar",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какой фильм из СССР получил «Оскар» на церемонии 1981 года?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Война и мир»"
+      },
+      {
+        "key": "B",
+        "text": "«Москва слезам не верит»"
+      },
+      {
+        "key": "C",
+        "text": "«Дерсу Узала»"
+      },
+      {
+        "key": "D",
+        "text": "«Ирония судьбы»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Война и мир» Бондарчука и «Дерсу Узала» тоже получили «Оскар» — но в 1969 и 1976 годах.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "troshkin-job-ru-1",
+    "factId": "troshkin-job",
+    "familyId": "dzhentlmeny-udachi",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кем работал Трошкин — двойник Доцента в «Джентльменах удачи»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Учителем физкультуры"
+      },
+      {
+        "key": "B",
+        "text": "Сторожем в музее"
+      },
+      {
+        "key": "C",
+        "text": "Заведующим детским садом"
+      },
+      {
+        "key": "D",
+        "text": "Водителем автобуса"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Отсюда его педагогический подход к уголовникам: «Кто не будет слушаться — тот не пойдёт гулять».",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vostok-delo-tonkoe-ru-1",
+    "factId": "vostok-delo-tonkoe",
+    "familyId": "beloe-solntse",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто в «Белом солнце пустыни» говорит: «Восток — дело тонкое, Петруха!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Таможенник Верещагин"
+      },
+      {
+        "key": "B",
+        "text": "Красноармеец Сухов"
+      },
+      {
+        "key": "C",
+        "text": "Абдулла"
+      },
+      {
+        "key": "D",
+        "text": "Саид"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Верещагину принадлежит другая знаменитая фраза: «Я мзду не беру. Мне за державу обидно».",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kalugina-nickname-ru-1",
+    "factId": "kalugina-nickname",
+    "familyId": "sluzhebny-roman",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как подчинённые за глаза называли Людмилу Прокофьевну Калугину в «Служебном романе»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Снежная королева"
+      },
+      {
+        "key": "B",
+        "text": "Кобра"
+      },
+      {
+        "key": "C",
+        "text": "Мымра"
+      },
+      {
+        "key": "D",
+        "text": "Грымза"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "«Наша мымра» — так Новосельцев описывает начальницу, а потом в неё влюбляется.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shtirlits-actor-ru-1",
+    "factId": "shtirlits-actor",
+    "familyId": "17-mgnoveniy",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто сыграл Штирлица в «Семнадцати мгновениях весны»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Олег Табаков"
+      },
+      {
+        "key": "B",
+        "text": "Вячеслав Тихонов"
+      },
+      {
+        "key": "C",
+        "text": "Леонид Броневой"
+      },
+      {
+        "key": "D",
+        "text": "Юрий Визбор"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Табаков сыграл Шелленберга, Броневой — Мюллера, а Визбор — Бормана.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kin-dza-dza-money-ru-1",
+    "factId": "kin-dza-dza-money",
+    "familyId": "kin-dza-dza",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как назывались деньги на планете Плюк в «Кин-дза-дза!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Кц"
+      },
+      {
+        "key": "B",
+        "text": "Чатлы"
+      },
+      {
+        "key": "C",
+        "text": "Пепелацы"
+      },
+      {
+        "key": "D",
+        "text": "Гравицапы"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Кц» — это спички, самая большая ценность на Плюке. Пепелац — летательный аппарат, а гравицапа — его деталь.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "zori-five-girls-ru-1",
+    "factId": "zori-five-girls",
+    "familyId": "zori-tikhie",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Сколько девушек-зенитчиц уходят со старшиной Васковым в «А зори здесь тихие…»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Три"
+      },
+      {
+        "key": "B",
+        "text": "Четыре"
+      },
+      {
+        "key": "C",
+        "text": "Пять"
+      },
+      {
+        "key": "D",
+        "text": "Семь"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Фильм Станислава Ростоцкого 1972 года по повести Бориса Васильева.",
+    "topics": {
+      "soviet-cinema": 1,
+      "russian-literature": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mimino-job-ru-1",
+    "factId": "mimino-job",
+    "familyId": "mimino",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кем работает главный герой фильма «Мимино»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Таксистом"
+      },
+      {
+        "key": "B",
+        "text": "Пилотом вертолёта"
+      },
+      {
+        "key": "C",
+        "text": "Водителем грузовика"
+      },
+      {
+        "key": "D",
+        "text": "Поваром"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Мимино» по-грузински — «сокол»: такое прозвище у вертолётчика Валико Мизандари.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "detochkin-money-ru-1",
+    "factId": "detochkin-money",
+    "familyId": "beregis-avtomobilya",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Куда Юрий Деточкин из «Берегись автомобиля» отправлял деньги за угнанные машины?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В народный театр"
+      },
+      {
+        "key": "B",
+        "text": "В детские дома"
+      },
+      {
+        "key": "C",
+        "text": "В фонд мира"
+      },
+      {
+        "key": "D",
+        "text": "Себе на кооперативную квартиру"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Народный театр в фильме тоже есть — там Деточкин играет Гамлета.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ikhtiandr-ru-1",
+    "factId": "ikhtiandr",
+    "familyId": "chelovek-amfibiya",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как зовут главного героя фильма «Человек-амфибия»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Садко"
+      },
+      {
+        "key": "B",
+        "text": "Ихтиандр"
+      },
+      {
+        "key": "C",
+        "text": "Посейдон"
+      },
+      {
+        "key": "D",
+        "text": "Тритон"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Фильм снят по роману Александра Беляева; песня «Эй, моряк, ты слишком долго плавал» оттуда же.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "operatsiya-y-trus-ru-1",
+    "factId": "operatsiya-y-trus",
+    "familyId": "operatsiya-y",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как зовут сторожиху склада, который в «Операции „Ы“» собираются ограбить Трус, Балбес и Бывалый?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Тётя Маня"
+      },
+      {
+        "key": "B",
+        "text": "Баба Нюра"
+      },
+      {
+        "key": "C",
+        "text": "Баба Клава"
+      },
+      {
+        "key": "D",
+        "text": "Тётя Шура"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В ночь «операции» вместо бабы Нюры на складе дежурит Шурик — и срывает ограбление.",
+    "topics": {
+      "soviet-cinema": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.6,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "gagarin-spacecraft-ru-1",
     "factId": "gagarin-spacecraft",
     "familyId": "vostok-1",
@@ -2376,6 +10734,3670 @@ export const BANK: BankQuestion[] = [
     "effects": {
       "I_KNOW_THIS": 0.8,
       "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "olympic-rings-ru-1",
+    "factId": "olympic-rings",
+    "familyId": "sport-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько колец на олимпийском флаге?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Четыре"
+      },
+      {
+        "key": "B",
+        "text": "Пять"
+      },
+      {
+        "key": "C",
+        "text": "Шесть"
+      },
+      {
+        "key": "D",
+        "text": "Семь"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Символ придумал Пьер де Кубертен.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "grand-slam-four-ru-1",
+    "factId": "grand-slam-four",
+    "familyId": "sport-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько турниров входит в теннисный Большой шлем?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Три"
+      },
+      {
+        "key": "B",
+        "text": "Четыре"
+      },
+      {
+        "key": "C",
+        "text": "Пять"
+      },
+      {
+        "key": "D",
+        "text": "Шесть"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Australian Open, Ролан Гаррос, Уимблдон и US Open.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "marathon-distance-ru-1",
+    "factId": "marathon-distance",
+    "familyId": "sport-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая длина у марафонской дистанции?",
+    "options": [
+      {
+        "key": "A",
+        "text": "21 км 97 м"
+      },
+      {
+        "key": "B",
+        "text": "42 км 195 м"
+      },
+      {
+        "key": "C",
+        "text": "50 км"
+      },
+      {
+        "key": "D",
+        "text": "40 км ровно"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "21,1 км — полумарафон.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "chess-stalemate-ru-1",
+    "factId": "chess-stalemate",
+    "familyId": "sport-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как называется положение в шахматах, когда ходить некуда, но шаха нет?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Мат"
+      },
+      {
+        "key": "B",
+        "text": "Пат"
+      },
+      {
+        "key": "C",
+        "text": "Цугцванг"
+      },
+      {
+        "key": "D",
+        "text": "Рокировка"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Цугцванг — когда ходить можно, но любой ход ухудшает позицию.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "schumacher-titles-ru-1",
+    "factId": "schumacher-titles",
+    "familyId": "sport-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько раз Михаэль Шумахер становился чемпионом мира «Формулы-1»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пять"
+      },
+      {
+        "key": "B",
+        "text": "Семь"
+      },
+      {
+        "key": "C",
+        "text": "Девять"
+      },
+      {
+        "key": "D",
+        "text": "Четыре"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Столько же титулов у Льюиса Хэмилтона.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.6,
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jordan-bulls-ru-1",
+    "factId": "jordan-bulls",
+    "familyId": "sport-facts",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "За какой клуб Майкл Джордан выиграл все свои чемпионские титулы НБА?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Лос-Анджелес Лейкерс»"
+      },
+      {
+        "key": "B",
+        "text": "«Чикаго Буллз»"
+      },
+      {
+        "key": "C",
+        "text": "«Бостон Селтикс»"
+      },
+      {
+        "key": "D",
+        "text": "«Вашингтон Уизардс»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В «Вашингтоне» он доигрывал карьеру уже без титулов.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gazirovka-price-ru-1",
+    "factId": "gazirovka-price",
+    "familyId": "soviet-prices",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Сколько стоил стакан газировки с сиропом в советском автомате?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 копейку"
+      },
+      {
+        "key": "B",
+        "text": "3 копейки"
+      },
+      {
+        "key": "C",
+        "text": "5 копеек"
+      },
+      {
+        "key": "D",
+        "text": "10 копеек"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Без сиропа — копейка. А стакан был один на всех: его мыли тут же, в автомате.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "taksofon-2-kop-ru-1",
+    "factId": "taksofon-2-kop",
+    "familyId": "soviet-prices",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какой монетой платили за звонок из советского уличного таксофона?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 копейкой"
+      },
+      {
+        "key": "B",
+        "text": "2 копейками"
+      },
+      {
+        "key": "C",
+        "text": "3 копейками"
+      },
+      {
+        "key": "D",
+        "text": "10 копейками"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Двушку» берегли специально для автомата — отсюда и выражение «позвонить с двушки».",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "kopeyka-vaz-2101-ru-1",
+    "factId": "kopeyka-vaz-2101",
+    "familyId": "soviet-cars",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какую машину в народе называли «копейкой»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ВАЗ-2106"
+      },
+      {
+        "key": "B",
+        "text": "ВАЗ-2101"
+      },
+      {
+        "key": "C",
+        "text": "«Москвич-412»"
+      },
+      {
+        "key": "D",
+        "text": "ГАЗ-24 «Волга»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "По последней цифре индекса: 2101 — «копейка», 2106 — «шестёрка».",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pioneer-tie-ends-ru-1",
+    "factId": "pioneer-tie-ends",
+    "familyId": "pioneers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что символизировали три конца пионерского галстука?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Три цвета советского флага"
+      },
+      {
+        "key": "B",
+        "text": "Три поколения: коммунистов, комсомольцев и пионеров"
+      },
+      {
+        "key": "C",
+        "text": "Три закона пионеров"
+      },
+      {
+        "key": "D",
+        "text": "«Учиться, учиться и учиться»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Красный цвет галстука объясняли как частицу знамени.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "oktyabrenok-badge-ru-1",
+    "factId": "oktyabrenok-badge",
+    "familyId": "pioneers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Чей портрет был на значке октябрёнка?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Юрия Гагарина"
+      },
+      {
+        "key": "B",
+        "text": "Ленина в детстве"
+      },
+      {
+        "key": "C",
+        "text": "Павлика Морозова"
+      },
+      {
+        "key": "D",
+        "text": "Ленина в зрелые годы"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На пионерском значке Ленин уже взрослый, а у октябрят — кудрявый мальчик Володя.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vsegda-gotov-ru-1",
+    "factId": "vsegda-gotov",
+    "familyId": "pioneers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что отвечали пионеры на призыв «Будь готов!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Готов!»"
+      },
+      {
+        "key": "B",
+        "text": "«Всегда готов!»"
+      },
+      {
+        "key": "C",
+        "text": "«Служу Советскому Союзу!»"
+      },
+      {
+        "key": "D",
+        "text": "«Ура!»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Служу Советскому Союзу!» — ответ военнослужащего на благодарность.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "artek-crimea-ru-1",
+    "factId": "artek-crimea",
+    "familyId": "pioneers",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Где находился главный пионерский лагерь страны — «Артек»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Под Сочи"
+      },
+      {
+        "key": "B",
+        "text": "В Крыму"
+      },
+      {
+        "key": "C",
+        "text": "В Прибалтике"
+      },
+      {
+        "key": "D",
+        "text": "В Подмосковье"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Лагерь основан в 1925 году у горы Аю-Даг.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "avoska-ru-1",
+    "factId": "avoska",
+    "familyId": "soviet-life",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Что такое «авоська»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Сетчатая сумка для продуктов"
+      },
+      {
+        "key": "B",
+        "text": "Талон на дефицитный товар"
+      },
+      {
+        "key": "C",
+        "text": "Очередь, занятая с утра"
+      },
+      {
+        "key": "D",
+        "text": "Шапка-ушанка"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Носили «на авось» — вдруг по дороге что-то «выбросят» в магазине.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "khrushchevka-ru-1",
+    "factId": "khrushchevka",
+    "familyId": "soviet-life",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Как в народе называют типовые пятиэтажки 1960-х?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Сталинки»"
+      },
+      {
+        "key": "B",
+        "text": "«Хрущёвки»"
+      },
+      {
+        "key": "C",
+        "text": "«Брежневки»"
+      },
+      {
+        "key": "D",
+        "text": "«Корабли»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Сталинки» строили раньше, «брежневки» и «корабли» — позже и выше.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6,
+      "00s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "beryozka-shop-ru-1",
+    "factId": "beryozka-shop",
+    "familyId": "soviet-life",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "За что продавали товары в магазинах «Берёзка»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "За талоны"
+      },
+      {
+        "key": "B",
+        "text": "За валюту и специальные чеки"
+      },
+      {
+        "key": "C",
+        "text": "Только по записи в профкоме"
+      },
+      {
+        "key": "D",
+        "text": "За сданную макулатуру"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "За макулатуру тоже кое-что давали — абонементы на дефицитные книги.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gto-ru-1",
+    "factId": "gto",
+    "familyId": "soviet-life",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Как расшифровывается ГТО?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Готов к труду и обороне»"
+      },
+      {
+        "key": "B",
+        "text": "«Государственный трудовой отряд»"
+      },
+      {
+        "key": "C",
+        "text": "«Гимнастика, туризм, оборона»"
+      },
+      {
+        "key": "D",
+        "text": "«Город трудовой отваги»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Нормы ГТО появились в 1931 году и вернулись в школы в 2014-м.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1,
+      "10s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sgushchenka-label-ru-1",
+    "factId": "sgushchenka-label",
+    "familyId": "soviet-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какого цвета была этикетка советской сгущёнки?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Красно-белая"
+      },
+      {
+        "key": "B",
+        "text": "Бело-голубая"
+      },
+      {
+        "key": "C",
+        "text": "Жёлто-зелёная"
+      },
+      {
+        "key": "D",
+        "text": "Коричневая"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Её узнают до сих пор — многие производители копируют дизайн.",
+    "topics": {
+      "ussr-everyday": 1,
+      "food": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lemonade-buratino-ru-1",
+    "factId": "lemonade-buratino",
+    "familyId": "soviet-food",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Какой советский лимонад назван в честь сказочного героя?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Тархун»"
+      },
+      {
+        "key": "B",
+        "text": "«Буратино»"
+      },
+      {
+        "key": "C",
+        "text": "«Дюшес»"
+      },
+      {
+        "key": "D",
+        "text": "«Байкал»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Тархун» — в честь растения, «Дюшес» — в честь сорта груши, «Байкал» — в честь озера.",
+    "topics": {
+      "ussr-everyday": 1,
+      "food": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "elektronika-egg-game-ru-1",
+    "factId": "elektronika-egg-game",
+    "familyId": "soviet-kids",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Кто ловил яйца в электронной игре «Ну, погоди!»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Заяц"
+      },
+      {
+        "key": "B",
+        "text": "Волк"
+      },
+      {
+        "key": "C",
+        "text": "Кот"
+      },
+      {
+        "key": "D",
+        "text": "Медведь"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Игра «Электроника» была копией японской Nintendo Game & Watch.",
+    "topics": {
+      "ussr-everyday": 1,
+      "videogames": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "murzilka-ru-1",
+    "factId": "murzilka",
+    "familyId": "soviet-kids",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": true,
+    "text": "Как называется детский журнал, герой которого — жёлтый пушистый человечек в берете?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Весёлые картинки»"
+      },
+      {
+        "key": "B",
+        "text": "«Мурзилка»"
+      },
+      {
+        "key": "C",
+        "text": "«Пионер»"
+      },
+      {
+        "key": "D",
+        "text": "«Костёр»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Журнал выходит с 1924 года — это один из самых старых детских журналов.",
+    "topics": {
+      "ussr-everyday": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ussr-founded-1922-ru-1",
+    "factId": "ussr-founded-1922",
+    "familyId": "ussr-start-end",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "В каком году был образован СССР?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 1917"
+      },
+      {
+        "key": "B",
+        "text": "В 1918"
+      },
+      {
+        "key": "C",
+        "text": "В 1922"
+      },
+      {
+        "key": "D",
+        "text": "В 1924"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "1917 — год революции; Союз Советских Социалистических Республик появился через пять лет.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "belovezhskie-ru-1",
+    "factId": "belovezhskie",
+    "familyId": "ussr-start-end",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Руководители каких республик подписали Беловежские соглашения в 1991 году?",
+    "options": [
+      {
+        "key": "A",
+        "text": "России, Украины и Белоруссии"
+      },
+      {
+        "key": "B",
+        "text": "России, Украины и Казахстана"
+      },
+      {
+        "key": "C",
+        "text": "России, Белоруссии и Казахстана"
+      },
+      {
+        "key": "D",
+        "text": "Всех пятнадцати республик"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Встреча прошла в Беловежской пуще; через несколько недель Союз прекратил существование.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gorbachev-president-ru-1",
+    "factId": "gorbachev-president",
+    "familyId": "ussr-start-end",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто был единственным президентом СССР?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Борис Ельцин"
+      },
+      {
+        "key": "B",
+        "text": "Михаил Горбачёв"
+      },
+      {
+        "key": "C",
+        "text": "Леонид Брежнев"
+      },
+      {
+        "key": "D",
+        "text": "Юрий Андропов"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Пост президента ввели в 1990 году; остальные руководители были генеральными секретарями.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "leningrad-renamed-ru-1",
+    "factId": "leningrad-renamed",
+    "familyId": "ussr-start-end",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "В каком году Ленинграду вернули название Санкт-Петербург?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 1989"
+      },
+      {
+        "key": "B",
+        "text": "В 1991"
+      },
+      {
+        "key": "C",
+        "text": "В 1993"
+      },
+      {
+        "key": "D",
+        "text": "В 1996"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Решение приняли по итогам городского референдума.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nep-lenin-ru-1",
+    "factId": "nep-lenin",
+    "familyId": "ussr-eras",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "При каком руководителе страны ввели НЭП?",
+    "options": [
+      {
+        "key": "A",
+        "text": "При Сталине"
+      },
+      {
+        "key": "B",
+        "text": "При Ленине"
+      },
+      {
+        "key": "C",
+        "text": "При Хрущёве"
+      },
+      {
+        "key": "D",
+        "text": "При Троцком"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "НЭП разрешил частную торговлю после разрухи Гражданской войны; при Сталине его свернули.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ottepel-ehrenburg-ru-1",
+    "factId": "ottepel-ehrenburg",
+    "familyId": "ussr-eras",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Название эпохи «оттепель» взято из повести какого писателя?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Александра Солженицына"
+      },
+      {
+        "key": "B",
+        "text": "Ильи Эренбурга"
+      },
+      {
+        "key": "C",
+        "text": "Бориса Пастернака"
+      },
+      {
+        "key": "D",
+        "text": "Александра Твардовского"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Повесть вышла в 1954 году, вскоре после смерти Сталина.",
+    "topics": {
+      "ussr-history": 1,
+      "russian-literature": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 5,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "zastoy-brezhnev-ru-1",
+    "factId": "zastoy-brezhnev",
+    "familyId": "ussr-eras",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как принято называть период правления Брежнева?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Оттепель»"
+      },
+      {
+        "key": "B",
+        "text": "«Застой»"
+      },
+      {
+        "key": "C",
+        "text": "«Перестройка»"
+      },
+      {
+        "key": "D",
+        "text": "«НЭП»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Оттепель» — Хрущёв, «перестройка» — Горбачёв, НЭП — 1920-е.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "glasnost-ru-1",
+    "factId": "glasnost",
+    "familyId": "ussr-eras",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как называли политику открытости и отказа от цензуры при Горбачёве?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Оттепель»"
+      },
+      {
+        "key": "B",
+        "text": "«Гласность»"
+      },
+      {
+        "key": "C",
+        "text": "«Застой»"
+      },
+      {
+        "key": "D",
+        "text": "«Разрядка»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Разрядкой» называли смягчение отношений с Западом в 1970-х.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.5
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "khrushchev-corn-ru-1",
+    "factId": "khrushchev-corn",
+    "familyId": "ussr-eras",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Какую культуру Хрущёв продвигал как «царицу полей»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пшеницу"
+      },
+      {
+        "key": "B",
+        "text": "Кукурузу"
+      },
+      {
+        "key": "C",
+        "text": "Картофель"
+      },
+      {
+        "key": "D",
+        "text": "Подсолнечник"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Кукурузу пытались сажать даже там, где она не вызревала.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tselina-kazakhstan-ru-1",
+    "factId": "tselina-kazakhstan",
+    "familyId": "ussr-projects",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Где прежде всего осваивали целинные земли в 1950-х?",
+    "options": [
+      {
+        "key": "A",
+        "text": "На Украине"
+      },
+      {
+        "key": "B",
+        "text": "В Казахстане"
+      },
+      {
+        "key": "C",
+        "text": "В Прибалтике"
+      },
+      {
+        "key": "D",
+        "text": "На Кавказе"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Кампания началась в 1954 году; в Казахстане до сих пор есть город Целиноград (ныне Астана).",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bam-ru-1",
+    "factId": "bam",
+    "familyId": "ussr-projects",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Как расшифровывается БАМ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Большая автомобильная магистраль"
+      },
+      {
+        "key": "B",
+        "text": "Байкало-Амурская магистраль"
+      },
+      {
+        "key": "C",
+        "text": "Балтийско-Азиатский маршрут"
+      },
+      {
+        "key": "D",
+        "text": "Барнаульский авиационный маршрут"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Стройку века» вела вся страна, особенно в 1970-е.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vdnkh-ru-1",
+    "factId": "vdnkh",
+    "familyId": "ussr-projects",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Как расшифровывается ВДНХ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Выставка достижений народного хозяйства"
+      },
+      {
+        "key": "B",
+        "text": "Всесоюзный дом народного художника"
+      },
+      {
+        "key": "C",
+        "text": "Высшая дирекция народного хозяйства"
+      },
+      {
+        "key": "D",
+        "text": "Выставка древностей и народных художеств"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Выставку открыли в 1939 году; в 2014-м ей вернули историческое название ВДНХ.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8,
+      "10s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "rabochiy-kolkhoznitsa-ru-1",
+    "factId": "rabochiy-kolkhoznitsa",
+    "familyId": "ussr-projects",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Эмблемой какой киностудии стала скульптура «Рабочий и колхозница»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Ленфильм»"
+      },
+      {
+        "key": "B",
+        "text": "«Мосфильм»"
+      },
+      {
+        "key": "C",
+        "text": "«Союзмультфильм»"
+      },
+      {
+        "key": "D",
+        "text": "Киностудия имени Горького"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Её видели в начале сотен советских фильмов.",
+    "topics": {
+      "ussr-history": 1,
+      "soviet-cinema": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "olympic-mishka-ru-1",
+    "factId": "olympic-mishka",
+    "familyId": "olympics-80",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Кто был символом Олимпиады-80 в Москве?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Волк из «Ну, погоди!»"
+      },
+      {
+        "key": "B",
+        "text": "Медвежонок Мишка"
+      },
+      {
+        "key": "C",
+        "text": "Чебурашка"
+      },
+      {
+        "key": "D",
+        "text": "Зайка"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На закрытии Мишка улетел на воздушных шарах — и вся трибуна плакала.",
+    "topics": {
+      "ussr-history": 1,
+      "sports": 0.4
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.3
+    },
+    "generations": {
+      "80s": 0.8
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "chernobyl-year-ru-1",
+    "factId": "chernobyl-year",
+    "familyId": "chernobyl",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "В каком году произошла авария на Чернобыльской АЭС?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В 1979"
+      },
+      {
+        "key": "B",
+        "text": "В 1986"
+      },
+      {
+        "key": "C",
+        "text": "В 1989"
+      },
+      {
+        "key": "D",
+        "text": "В 1991"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "26 апреля 1986 года; в 2019 году о ней сняли известный сериал HBO.",
+    "topics": {
+      "ussr-history": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "GLOBAL": 0.6
+    },
+    "generations": {
+      "80s": 1,
+      "10s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tetris-pajitnov-ru-1",
+    "factId": "tetris-pajitnov",
+    "familyId": "games",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Где придумали тетрис?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Японии"
+      },
+      {
+        "key": "B",
+        "text": "В СССР"
+      },
+      {
+        "key": "C",
+        "text": "В США"
+      },
+      {
+        "key": "D",
+        "text": "В Финляндии"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Алексей Пажитнов написал его в 1984 году в Вычислительном центре Академии наук.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mario-plumber-ru-1",
+    "factId": "mario-plumber",
+    "familyId": "games",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кем по профессии работает Марио из игр Nintendo?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Плотником"
+      },
+      {
+        "key": "B",
+        "text": "Водопроводчиком"
+      },
+      {
+        "key": "C",
+        "text": "Поваром"
+      },
+      {
+        "key": "D",
+        "text": "Пожарным"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В самой первой игре, Donkey Kong (1981), он был плотником.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sims-simlish-ru-1",
+    "factId": "sims-simlish",
+    "familyId": "games",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На каком языке говорят персонажи The Sims?",
+    "options": [
+      {
+        "key": "A",
+        "text": "На эсперанто"
+      },
+      {
+        "key": "B",
+        "text": "На симлише"
+      },
+      {
+        "key": "C",
+        "text": "На клингонском"
+      },
+      {
+        "key": "D",
+        "text": "На эльфийском"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Язык специально сделали бессмысленным, чтобы игру не нужно было переводить.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "minecraft-creeper-ru-1",
+    "factId": "minecraft-creeper",
+    "familyId": "games",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как называется зелёный взрывающийся монстр в Minecraft?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Эндермен"
+      },
+      {
+        "key": "B",
+        "text": "Крипер"
+      },
+      {
+        "key": "C",
+        "text": "Зомби"
+      },
+      {
+        "key": "D",
+        "text": "Гаст"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Крипер появился из-за ошибки: модель свиньи получилась вытянутой вверх.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1,
+      "current": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sonic-sega-ru-1",
+    "factId": "sonic-sega",
+    "familyId": "games",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чьим талисманом стал ёж Соник?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nintendo"
+      },
+      {
+        "key": "B",
+        "text": "Sega"
+      },
+      {
+        "key": "C",
+        "text": "Sony"
+      },
+      {
+        "key": "D",
+        "text": "Atari"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Его придумали как ответ Марио от Nintendo.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cs-teams-ru-1",
+    "factId": "cs-teams",
+    "familyId": "games",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какие две команды сражаются в Counter-Strike?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пираты и моряки"
+      },
+      {
+        "key": "B",
+        "text": "Террористы и спецназ"
+      },
+      {
+        "key": "C",
+        "text": "Зомби и выжившие"
+      },
+      {
+        "key": "D",
+        "text": "Орки и люди"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Зомби и выжившие — Left 4 Dead, орки и люди — Warcraft.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "titanic-jack-ru-1",
+    "factId": "titanic-jack",
+    "familyId": "titanic",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как зовут героя Леонардо Ди Каприо в «Титанике»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Кэл Хокли"
+      },
+      {
+        "key": "B",
+        "text": "Джек Доусон"
+      },
+      {
+        "key": "C",
+        "text": "Джей Гэтсби"
+      },
+      {
+        "key": "D",
+        "text": "Фрэнк Абигнейл"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Кэл — жених Розы; Гэтсби и Абигнейл — другие роли Ди Каприо.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "titanic-oscars-ru-1",
+    "factId": "titanic-oscars",
+    "familyId": "titanic",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Сколько «Оскаров» получил «Титаник»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "7"
+      },
+      {
+        "key": "B",
+        "text": "9"
+      },
+      {
+        "key": "C",
+        "text": "11"
+      },
+      {
+        "key": "D",
+        "text": "14"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Номинаций было 14; 11 статуэток — рекорд, который он делит с «Бен-Гуром» и «Возвращением короля».",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "matrix-red-pill-ru-1",
+    "factId": "matrix-red-pill",
+    "familyId": "matrix",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую таблетку выбирает Нео в «Матрице»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Синюю"
+      },
+      {
+        "key": "B",
+        "text": "Красную"
+      },
+      {
+        "key": "C",
+        "text": "Зелёную"
+      },
+      {
+        "key": "D",
+        "text": "Белую"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Синяя — остаться в иллюзии, красная — узнать, «насколько глубока кроличья нора».",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "godfather-brando-ru-1",
+    "factId": "godfather-brando",
+    "familyId": "godfather",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто сыграл Вито Корлеоне в первом «Крёстном отце»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Аль Пачино"
+      },
+      {
+        "key": "B",
+        "text": "Марлон Брандо"
+      },
+      {
+        "key": "C",
+        "text": "Роберт Де Ниро"
+      },
+      {
+        "key": "D",
+        "text": "Джек Николсон"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Аль Пачино сыграл сына, Майкла, а Де Ниро — молодого Вито во второй части.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "i-am-your-father-ru-1",
+    "factId": "i-am-your-father",
+    "familyId": "star-wars",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Кому Дарт Вейдер говорит: «Я твой отец»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Хану Соло"
+      },
+      {
+        "key": "B",
+        "text": "Люку Скайуокеру"
+      },
+      {
+        "key": "C",
+        "text": "Принцессе Лее"
+      },
+      {
+        "key": "D",
+        "text": "Оби-Вану Кеноби"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Лея — тоже его дочь, но знаменитое признание адресовано Люку.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "00s": 0.6,
+      "10s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "delorean-88-ru-1",
+    "factId": "delorean-88",
+    "familyId": "back-to-future",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "До какой скорости нужно было разогнать DeLorean, чтобы попасть в другое время?",
+    "options": [
+      {
+        "key": "A",
+        "text": "100 миль в час"
+      },
+      {
+        "key": "B",
+        "text": "88 миль в час"
+      },
+      {
+        "key": "C",
+        "text": "77 миль в час"
+      },
+      {
+        "key": "D",
+        "text": "121 миля в час"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "А ещё нужны были 1,21 гигаватта — отсюда «121».",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "psycho-hitchcock-ru-1",
+    "factId": "psycho-hitchcock",
+    "familyId": "directors",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто снял фильм «Психо»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Стэнли Кубрик"
+      },
+      {
+        "key": "B",
+        "text": "Альфред Хичкок"
+      },
+      {
+        "key": "C",
+        "text": "Стивен Спилберг"
+      },
+      {
+        "key": "D",
+        "text": "Фрэнсис Форд Коппола"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Сцена в душе — одна из самых известных в истории кино.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jaws-spielberg-ru-1",
+    "factId": "jaws-spielberg",
+    "familyId": "directors",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто снял «Челюсти»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Джордж Лукас"
+      },
+      {
+        "key": "B",
+        "text": "Стивен Спилберг"
+      },
+      {
+        "key": "C",
+        "text": "Джеймс Кэмерон"
+      },
+      {
+        "key": "D",
+        "text": "Ридли Скотт"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Лукас и Спилберг дружили; «Челюсти» считают первым летним блокбастером.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "seven-samurai-remake-ru-1",
+    "factId": "seven-samurai-remake",
+    "familyId": "directors",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой вестерн — ремейк «Семи самураев» Куросавы?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Хороший, плохой, злой»"
+      },
+      {
+        "key": "B",
+        "text": "«Великолепная семёрка»"
+      },
+      {
+        "key": "C",
+        "text": "«Ровно в полдень»"
+      },
+      {
+        "key": "D",
+        "text": "«Дилижанс»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Число семь — подсказка для тех, кто не помнит.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "forrest-chocolates-ru-1",
+    "factId": "forrest-chocolates",
+    "familyId": "quotes",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "С чем Форрест Гамп сравнивает жизнь?",
+    "options": [
+      {
+        "key": "A",
+        "text": "С коробкой конфет"
+      },
+      {
+        "key": "B",
+        "text": "С пробежкой"
+      },
+      {
+        "key": "C",
+        "text": "С игрой в пинг-понг"
+      },
+      {
+        "key": "D",
+        "text": "С перышком на ветру"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "«Никогда не знаешь, какая начинка тебе попадётся». Пробежки, пинг-понг и пёрышко в фильме тоже есть.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "terminator-be-back-ru-1",
+    "factId": "terminator-be-back",
+    "familyId": "quotes",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что говорит Терминатор в первом фильме, прежде чем въехать на машине в полицейский участок?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Hasta la vista, baby»"
+      },
+      {
+        "key": "B",
+        "text": "«I'll be back»"
+      },
+      {
+        "key": "C",
+        "text": "«Come with me if you want to live»"
+      },
+      {
+        "key": "D",
+        "text": "«Here's Johnny!»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Hasta la vista, baby» — из второй части, а «Here's Johnny!» — из «Сияния».",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "scarlett-tomorrow-ru-1",
+    "factId": "scarlett-tomorrow",
+    "familyId": "quotes",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чья фраза «Я подумаю об этом завтра»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Холли Голайтли"
+      },
+      {
+        "key": "B",
+        "text": "Скарлетт О'Хара"
+      },
+      {
+        "key": "C",
+        "text": "Джейн Эйр"
+      },
+      {
+        "key": "D",
+        "text": "Анны Карениной"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Фильм 1939 года по роману Маргарет Митчелл.",
+    "topics": {
+      "world-cinema": 1,
+      "world-literature": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "schindler-red-coat-ru-1",
+    "factId": "schindler-red-coat",
+    "familyId": "details",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какого цвета пальто у девочки в чёрно-белом «Списке Шиндлера»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Синего"
+      },
+      {
+        "key": "B",
+        "text": "Красного"
+      },
+      {
+        "key": "C",
+        "text": "Жёлтого"
+      },
+      {
+        "key": "D",
+        "text": "Зелёного"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Один из самых известных приёмов Спилберга.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "amelie-montmartre-ru-1",
+    "factId": "amelie-montmartre",
+    "familyId": "details",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "В каком районе Парижа живёт Амели?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Латинском квартале"
+      },
+      {
+        "key": "B",
+        "text": "На Монмартре"
+      },
+      {
+        "key": "C",
+        "text": "В Марэ"
+      },
+      {
+        "key": "D",
+        "text": "В Сен-Жермене"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Кафе «Две мельницы», где она работает, существует на самом деле.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 0.6,
+      "EUROPE": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "fifth-element-leeloo-ru-1",
+    "factId": "fifth-element-leeloo",
+    "familyId": "details",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Кто сыграл Лилу в «Пятом элементе»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ума Турман"
+      },
+      {
+        "key": "B",
+        "text": "Милла Йовович"
+      },
+      {
+        "key": "C",
+        "text": "Натали Портман"
+      },
+      {
+        "key": "D",
+        "text": "Кейт Бланшетт"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Милла Йовович родилась в Киеве и в детстве переехала с семьёй в США.",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.3
+    },
+    "generations": {
+      "90s": 0.8,
+      "00s": 0.5
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "romeo-verona-ru-1",
+    "factId": "romeo-verona",
+    "familyId": "classics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком городе происходит действие «Ромео и Джульетты»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Венеции"
+      },
+      {
+        "key": "B",
+        "text": "В Вероне"
+      },
+      {
+        "key": "C",
+        "text": "Во Флоренции"
+      },
+      {
+        "key": "D",
+        "text": "В Риме"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В Венеции Шекспир поселил «Венецианского купца» и «Отелло».",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "don-quixote-windmills-ru-1",
+    "factId": "don-quixote-windmills",
+    "familyId": "classics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "С чем сражался Дон Кихот, приняв это за великанов?",
+    "options": [
+      {
+        "key": "A",
+        "text": "С ветряными мельницами"
+      },
+      {
+        "key": "B",
+        "text": "Со стадом овец"
+      },
+      {
+        "key": "C",
+        "text": "С крестьянами"
+      },
+      {
+        "key": "D",
+        "text": "С деревьями"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Со стадом овец он тоже воевал — принял его за войско.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "baker-street-221b-ru-1",
+    "factId": "baker-street-221b",
+    "familyId": "classics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где жил Шерлок Холмс?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Даунинг-стрит, 10"
+      },
+      {
+        "key": "B",
+        "text": "Бейкер-стрит, 221Б"
+      },
+      {
+        "key": "C",
+        "text": "Оксфорд-стрит, 7"
+      },
+      {
+        "key": "D",
+        "text": "Пикадилли, 13"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Даунинг-стрит, 10 — резиденция британского премьер-министра.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "saint-exupery-pilot-ru-1",
+    "factId": "saint-exupery-pilot",
+    "familyId": "classics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кем по профессии был автор «Маленького принца»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Врачом"
+      },
+      {
+        "key": "B",
+        "text": "Лётчиком"
+      },
+      {
+        "key": "C",
+        "text": "Моряком"
+      },
+      {
+        "key": "D",
+        "text": "Учителем"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Он пропал без вести в 1944 году во время разведывательного полёта.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "1984-big-brother-ru-1",
+    "factId": "1984-big-brother",
+    "familyId": "classics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Из какого романа фраза «Большой брат следит за тобой»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«О дивный новый мир»"
+      },
+      {
+        "key": "B",
+        "text": "«1984»"
+      },
+      {
+        "key": "C",
+        "text": "«451 градус по Фаренгейту»"
+      },
+      {
+        "key": "D",
+        "text": "«Скотный двор»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Все варианты — антиутопии; «Скотный двор» тоже написал Оруэлл.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 5,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "BRIDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "robinson-friday-ru-1",
+    "factId": "robinson-friday",
+    "familyId": "classics",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как звали спутника Робинзона Крузо?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Понедельник"
+      },
+      {
+        "key": "B",
+        "text": "Пятница"
+      },
+      {
+        "key": "C",
+        "text": "Воскресенье"
+      },
+      {
+        "key": "D",
+        "text": "Среда"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Робинзон назвал его по дню недели, когда спас.",
+    "topics": {
+      "world-literature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 5,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "moonwalk-ru-1",
+    "factId": "moonwalk",
+    "familyId": "michael-jackson",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как называется знаменитое «скользящее» движение Майкла Джексона?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Робот»"
+      },
+      {
+        "key": "B",
+        "text": "«Лунная походка»"
+      },
+      {
+        "key": "C",
+        "text": "«Брейк»"
+      },
+      {
+        "key": "D",
+        "text": "«Тектоник»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Впервые он показал её в 1983 году под «Billie Jean».",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 1
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "thriller-best-selling-ru-1",
+    "factId": "thriller-best-selling",
+    "familyId": "michael-jackson",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой альбом — самый продаваемый в истории?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Back in Black — AC/DC"
+      },
+      {
+        "key": "B",
+        "text": "Thriller — Майкл Джексон"
+      },
+      {
+        "key": "C",
+        "text": "The Dark Side of the Moon — Pink Floyd"
+      },
+      {
+        "key": "D",
+        "text": "Bad — Майкл Джексон"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Back in Black и The Dark Side of the Moon обычно идут следом.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "abba-waterloo-ru-1",
+    "factId": "abba-waterloo",
+    "familyId": "abba",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "С какой песней ABBA победила на «Евровидении»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dancing Queen"
+      },
+      {
+        "key": "B",
+        "text": "Waterloo"
+      },
+      {
+        "key": "C",
+        "text": "Mamma Mia"
+      },
+      {
+        "key": "D",
+        "text": "SOS"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Это был 1974 год; конкурс проходил в английском Брайтоне.",
+    "topics": {
+      "world-pop": 1,
+      "eurovision": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mercury-zanzibar-ru-1",
+    "factId": "mercury-zanzibar",
+    "familyId": "queen",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где родился Фредди Меркьюри?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Лондоне"
+      },
+      {
+        "key": "B",
+        "text": "На Занзибаре"
+      },
+      {
+        "key": "C",
+        "text": "В Бомбее"
+      },
+      {
+        "key": "D",
+        "text": "В Каире"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Настоящее имя — Фаррух Булсара; школьные годы он провёл в Индии, а в Англию семья переехала в 1964-м.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.8,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "posh-spice-ru-1",
+    "factId": "posh-spice",
+    "familyId": "spice-girls",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое прозвище было у Виктории Бекхэм в Spice Girls?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Baby Spice"
+      },
+      {
+        "key": "B",
+        "text": "Posh Spice"
+      },
+      {
+        "key": "C",
+        "text": "Ginger Spice"
+      },
+      {
+        "key": "D",
+        "text": "Sporty Spice"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ещё были Scary Spice — всего пятеро.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "britney-debut-ru-1",
+    "factId": "britney-debut",
+    "familyId": "britney",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая песня стала дебютным хитом Бритни Спирс?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Oops!... I Did It Again»"
+      },
+      {
+        "key": "B",
+        "text": "«...Baby One More Time»"
+      },
+      {
+        "key": "C",
+        "text": "«Toxic»"
+      },
+      {
+        "key": "D",
+        "text": "«Genie in a Bottle»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Genie in a Bottle» — дебют Кристины Агилеры того же времени.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1,
+      "00s": 0.8
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "madonna-like-a-prayer-ru-1",
+    "factId": "madonna-like-a-prayer",
+    "familyId": "madonna",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто исполнял песню «Like a Prayer»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Синди Лопер"
+      },
+      {
+        "key": "B",
+        "text": "Мадонна"
+      },
+      {
+        "key": "C",
+        "text": "Уитни Хьюстон"
+      },
+      {
+        "key": "D",
+        "text": "Шер"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня и клип 1989 года стали одними из самых обсуждаемых в карьере певицы.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "psy-country-ru-1",
+    "factId": "psy-country",
+    "familyId": "psy",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из какой страны PSY — автор «Gangnam Style»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Японии"
+      },
+      {
+        "key": "B",
+        "text": "Из Южной Кореи"
+      },
+      {
+        "key": "C",
+        "text": "Из Китая"
+      },
+      {
+        "key": "D",
+        "text": "Из Таиланда"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Каннам — богатый район Сеула; клип первым на YouTube набрал миллиард просмотров.",
+    "topics": {
+      "world-pop": 1,
+      "internet-now": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "macarena-spain-ru-1",
+    "factId": "macarena-spain",
+    "familyId": "macarena",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из какой страны дуэт Los del Río, исполнивший «Макарену»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Мексики"
+      },
+      {
+        "key": "B",
+        "text": "Из Испании"
+      },
+      {
+        "key": "C",
+        "text": "Из Аргентины"
+      },
+      {
+        "key": "D",
+        "text": "Из Кубы"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня вышла в 1993 году, а мировым хитом стала в ремиксе 1996-го.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crazy-frog-axel-f-ru-1",
+    "factId": "crazy-frog-axel-f",
+    "familyId": "crazy-frog",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Мелодия из какого фильма стала хитом Crazy Frog «Axel F»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Назад в будущее»"
+      },
+      {
+        "key": "B",
+        "text": "«Полицейский из Беверли-Хиллз»"
+      },
+      {
+        "key": "C",
+        "text": "«Охотники за привидениями»"
+      },
+      {
+        "key": "D",
+        "text": "«Лучший стрелок»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Оригинал написал Харольд Фальтермайер в 1984 году; Аксель Фоули — герой Эдди Мёрфи.",
+    "topics": {
+      "world-pop": 1,
+      "old-internet": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1,
+      "80s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "modern-talking-country-ru-1",
+    "factId": "modern-talking-country",
+    "familyId": "modern-talking",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Из какой страны дуэт Modern Talking?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Италии"
+      },
+      {
+        "key": "B",
+        "text": "Из Германии"
+      },
+      {
+        "key": "C",
+        "text": "Из Швеции"
+      },
+      {
+        "key": "D",
+        "text": "Из Нидерландов"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В СССР их кассеты были почти у всех; Италия — родина итало-диско, Швеция — ABBA.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 0.6,
+      "POST_SOVIET": 1,
+      "EUROPE": 0.8
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "boney-m-rasputin-ru-1",
+    "factId": "boney-m-rasputin",
+    "familyId": "boney-m",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Какой русский исторический персонаж стал героем хита Boney M.?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пётр I"
+      },
+      {
+        "key": "B",
+        "text": "Григорий Распутин"
+      },
+      {
+        "key": "C",
+        "text": "Иван Грозный"
+      },
+      {
+        "key": "D",
+        "text": "Емельян Пугачёв"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Ra-Ra-Rasputin, lover of the Russian queen…» — песня 1978 года.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 0.7,
+      "POST_SOVIET": 1
+    },
+    "generations": {
+      "80s": 0.8,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "beatles-liverpool-ru-1",
+    "factId": "beatles-liverpool",
+    "familyId": "beatles",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из какого города The Beatles?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Лондона"
+      },
+      {
+        "key": "B",
+        "text": "Из Ливерпуля"
+      },
+      {
+        "key": "C",
+        "text": "Из Манчестера"
+      },
+      {
+        "key": "D",
+        "text": "Из Бирмингема"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Клуб «Каверн» в Ливерпуле, где они играли, работает до сих пор.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "always-love-you-dolly-ru-1",
+    "factId": "always-love-you-dolly",
+    "familyId": "whitney",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто написал «I Will Always Love You», ставшую хитом Уитни Хьюстон?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Сама Уитни Хьюстон"
+      },
+      {
+        "key": "B",
+        "text": "Долли Партон"
+      },
+      {
+        "key": "C",
+        "text": "Селин Дион"
+      },
+      {
+        "key": "D",
+        "text": "Мэрайя Кэри"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Партон записала её ещё в 1974 году; Уитни спела её для фильма «Телохранитель».",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 5,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 1,
+      "HERO_CANDIDATE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ace-of-base-sweden-ru-1",
+    "factId": "ace-of-base-sweden",
+    "familyId": "ace-of-base",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из какой страны группа Ace of Base?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из Дании"
+      },
+      {
+        "key": "B",
+        "text": "Из Швеции"
+      },
+      {
+        "key": "C",
+        "text": "Из Норвегии"
+      },
+      {
+        "key": "D",
+        "text": "Из Германии"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Ещё одна шведская поп-машина после ABBA и Roxette.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
     "status": "DRAFT"

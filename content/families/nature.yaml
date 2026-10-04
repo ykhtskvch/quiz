@@ -1,0 +1,193 @@
+# C2 — nature (wildcard-friendly GLOBAL questions)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: animal-records
+    name: "Рекорды животных"
+    facts:
+      - id: cheetah-fastest
+        statement: "Гепард — самое быстрое наземное животное."
+        sources: [{ name: "Википедия: Гепард", type: REFERENCE, verified: false }]
+        questions:
+          - id: cheetah-fastest-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое наземное животное самое быстрое?"
+            options:
+              - { key: A, text: "Лев", distractor: SAME_CATEGORY }
+              - { key: B, text: "Гепард", correct: true }
+              - { key: C, text: "Антилопа гну", distractor: NEAR_MISS }
+              - { key: D, text: "Страус", distractor: SAME_CATEGORY }
+            explanation: "На короткой дистанции разгоняется примерно до 100 км/ч."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: blue-whale
+        statement: "Синий кит — самое крупное животное в истории Земли."
+        sources: [{ name: "Википедия: Синий кит", type: REFERENCE, verified: false }]
+        questions:
+          - id: blue-whale-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое животное самое большое из когда-либо живших на Земле?"
+            options:
+              - { key: A, text: "Африканский слон", distractor: SAME_CATEGORY }
+              - { key: B, text: "Синий кит", correct: true }
+              - { key: C, text: "Аргентинозавр", distractor: NEAR_MISS }
+              - { key: D, text: "Кашалот", distractor: SAME_CATEGORY }
+            explanation: "Он крупнее даже самых больших динозавров."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ostrich-largest-bird
+        statement: "Страус — самая крупная птица."
+        sources: [{ name: "Википедия: Африканский страус", type: REFERENCE, verified: false }]
+        questions:
+          - id: ostrich-largest-bird-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая птица самая крупная?"
+            options:
+              - { key: A, text: "Эму", distractor: NEAR_MISS }
+              - { key: B, text: "Страус", correct: true }
+              - { key: C, text: "Альбатрос", distractor: SAME_CATEGORY }
+              - { key: D, text: "Кондор", distractor: SAME_CATEGORY }
+            explanation: "Эму — вторая по росту; у альбатроса самый большой размах крыльев."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: animal-facts
+    name: "Удивительные животные"
+    facts:
+      - id: octopus-hearts
+        statement: "У осьминога три сердца."
+        sources: [{ name: "Википедия: Осьминоги", type: REFERENCE, verified: false }]
+        questions:
+          - id: octopus-hearts-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Сколько сердец у осьминога?"
+            options:
+              - { key: A, text: "Одно", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Два", distractor: PLAUSIBLE }
+              - { key: C, text: "Три", correct: true }
+              - { key: D, text: "Восемь", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Два качают кровь через жабры, третье — по всему телу. Восемь — это щупальца."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: spider-legs
+        statement: "У паука восемь ног; у насекомых — шесть."
+        sources: [{ name: "Википедия: Пауки", type: REFERENCE, verified: false }]
+        questions:
+          - id: spider-legs-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Сколько ног у паука?"
+            options:
+              - { key: A, text: "Шесть", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Восемь", correct: true }
+              - { key: C, text: "Десять", distractor: PLAUSIBLE }
+              - { key: D, text: "Двенадцать", distractor: PLAUSIBLE }
+            explanation: "Поэтому пауки — не насекомые, а паукообразные."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: joey
+        statement: "Детёныша кенгуру называют «джоуи»."
+        sources: [{ name: "Википедия: Кенгуру", type: REFERENCE, verified: false }]
+        questions:
+          - id: joey-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как называют детёныша кенгуру?"
+            options:
+              - { key: A, text: "Джоуи", correct: true }
+              - { key: B, text: "Кенгурёнок-валлаби", distractor: NEAR_MISS }
+              - { key: C, text: "Вомбат", distractor: SAME_CATEGORY }
+              - { key: D, text: "Динго", distractor: SAME_CATEGORY }
+            explanation: "Валлаби — это отдельные виды небольших кенгуру, вомбат — другое сумчатое, динго — собака."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: koala-eucalyptus
+        statement: "Коалы питаются почти исключительно листьями эвкалипта."
+        sources: [{ name: "Википедия: Коала", type: REFERENCE, verified: false }]
+        questions:
+          - id: koala-eucalyptus-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Чем питаются коалы?"
+            options:
+              - { key: A, text: "Бамбуком", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Листьями эвкалипта", correct: true }
+              - { key: C, text: "Насекомыми", distractor: PLAUSIBLE }
+              - { key: D, text: "Фруктами", distractor: PLAUSIBLE }
+            explanation: "Бамбук — еда большой панды."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: wwf-panda
+        statement: "Символ Всемирного фонда дикой природы (WWF) — большая панда."
+        sources: [{ name: "Википедия: Всемирный фонд дикой природы", type: REFERENCE, verified: false }]
+        questions:
+          - id: wwf-panda-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое животное — символ Всемирного фонда дикой природы (WWF)?"
+            options:
+              - { key: A, text: "Белый медведь", distractor: SAME_CATEGORY }
+              - { key: B, text: "Большая панда", correct: true }
+              - { key: C, text: "Снежный барс", distractor: SAME_CATEGORY }
+              - { key: D, text: "Тигр", distractor: SAME_CATEGORY }
+            explanation: "Логотип появился в 1961 году, его вдохновила панда Чи-Чи из Лондонского зоопарка."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI

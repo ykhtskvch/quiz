@@ -1,0 +1,151 @@
+# C2 — videogames (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: games
+    name: "Видеоигры"
+    facts:
+      - id: tetris-pajitnov
+        statement: "Тетрис придумал советский программист Алексей Пажитнов в 1984 году."
+        sources: [{ name: "Википедия: Тетрис", type: REFERENCE, verified: false }]
+        questions:
+          - id: tetris-pajitnov-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Где придумали тетрис?"
+            options:
+              - { key: A, text: "В Японии", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "В СССР", correct: true }
+              - { key: C, text: "В США", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Финляндии", distractor: SAME_CATEGORY }
+            explanation: "Алексей Пажитнов написал его в 1984 году в Вычислительном центре Академии наук."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.6 }
+            generations: { 80s: 0.8, 90s: 0.8 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: mario-plumber
+        statement: "Марио из игр Nintendo — водопроводчик."
+        sources: [{ name: "Википедия: Марио", type: REFERENCE, verified: false }]
+        questions:
+          - id: mario-plumber-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Кем по профессии работает Марио из игр Nintendo?"
+            options:
+              - { key: A, text: "Плотником", distractor: NEAR_MISS }
+              - { key: B, text: "Водопроводчиком", correct: true }
+              - { key: C, text: "Поваром", distractor: PLAUSIBLE }
+              - { key: D, text: "Пожарным", distractor: PLAUSIBLE }
+            explanation: "В самой первой игре, Donkey Kong (1981), он был плотником."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0, 00s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: sims-simlish
+        statement: "Персонажи The Sims говорят на выдуманном языке симлиш."
+        sources: [{ name: "Википедия: Симлиш", type: REFERENCE, verified: false }]
+        questions:
+          - id: sims-simlish-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "На каком языке говорят персонажи The Sims?"
+            options:
+              - { key: A, text: "На эсперанто", distractor: NEAR_MISS }
+              - { key: B, text: "На симлише", correct: true }
+              - { key: C, text: "На клингонском", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "На эльфийском", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Язык специально сделали бессмысленным, чтобы игру не нужно было переводить."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: minecraft-creeper
+        statement: "Зелёный взрывающийся монстр в Minecraft называется крипер."
+        sources: [{ name: "Википедия: Minecraft", type: REFERENCE, verified: false }]
+        questions:
+          - id: minecraft-creeper-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как называется зелёный взрывающийся монстр в Minecraft?"
+            options:
+              - { key: A, text: "Эндермен", distractor: SAME_CATEGORY }
+              - { key: B, text: "Крипер", correct: true }
+              - { key: C, text: "Зомби", distractor: SAME_CATEGORY }
+              - { key: D, text: "Гаст", distractor: SAME_CATEGORY }
+            explanation: "Крипер появился из-за ошибки: модель свиньи получилась вытянутой вверх."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 10s: 1.0, current: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: sonic-sega
+        statement: "Ёж Соник — талисман компании Sega."
+        sources: [{ name: "Википедия: Ёж Соник", type: REFERENCE, verified: false }]
+        questions:
+          - id: sonic-sega-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Чьим талисманом стал ёж Соник?"
+            options:
+              - { key: A, text: "Nintendo", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Sega", correct: true }
+              - { key: C, text: "Sony", distractor: SAME_CATEGORY }
+              - { key: D, text: "Atari", distractor: SAME_CATEGORY }
+            explanation: "Его придумали как ответ Марио от Nintendo."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: cs-teams
+        statement: "В Counter-Strike играют две команды: террористы и спецназ (контртеррористы)."
+        sources: [{ name: "Википедия: Counter-Strike", type: REFERENCE, verified: false }]
+        questions:
+          - id: cs-teams-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какие две команды сражаются в Counter-Strike?"
+            options:
+              - { key: A, text: "Пираты и моряки", distractor: PLAUSIBLE }
+              - { key: B, text: "Террористы и спецназ", correct: true }
+              - { key: C, text: "Зомби и выжившие", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Орки и люди", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Зомби и выжившие — Left 4 Dead, орки и люди — Warcraft."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI

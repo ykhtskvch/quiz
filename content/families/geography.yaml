@@ -1,0 +1,367 @@
+# C2 — geography
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: lakes-rivers
+    name: "Озёра и реки"
+    facts:
+      - id: baikal-deepest
+        statement: "Байкал — самое глубокое озеро на Земле (около 1640 м)."
+        sources: [{ name: "Википедия: Байкал", type: REFERENCE, verified: false }]
+        questions:
+          - id: baikal-deepest-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое озеро — самое глубокое на Земле?"
+            options:
+              - { key: A, text: "Танганьика", distractor: NEAR_MISS }
+              - { key: B, text: "Байкал", correct: true }
+              - { key: C, text: "Каспийское море", distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "Верхнее", distractor: PLAUSIBLE }
+            explanation: "Танганьика — второе по глубине; Каспий — самое большое по площади."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.5 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: amazon-volume
+        statement: "Амазонка — самая полноводная река мира."
+        sources: [{ name: "Википедия: Амазонка", type: REFERENCE, verified: false }]
+        questions:
+          - id: amazon-volume-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая река самая полноводная в мире?"
+            options:
+              - { key: A, text: "Нил", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Амазонка", correct: true }
+              - { key: C, text: "Янцзы", distractor: SAME_CATEGORY }
+              - { key: D, text: "Миссисипи", distractor: SAME_CATEGORY }
+            explanation: "За длину Амазонка спорит с Нилом, а вот по объёму воды у неё конкурентов нет."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: tiber-rome
+        statement: "Река Тибр протекает через Рим."
+        sources: [{ name: "Википедия: Тибр", type: REFERENCE, verified: false }]
+        questions:
+          - id: tiber-rome-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Через какой город протекает Тибр?"
+            options:
+              - { key: A, text: "Флоренцию", distractor: NEAR_MISS }
+              - { key: B, text: "Рим", correct: true }
+              - { key: C, text: "Милан", distractor: SAME_CATEGORY }
+              - { key: D, text: "Венецию", distractor: SAME_CATEGORY }
+            explanation: "Через Флоренцию течёт Арно."
+            topics: { geography: 1.0, ancient-world: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: capitals
+    name: "Столицы"
+    facts:
+      - id: australia-capital
+        statement: "Столица Австралии — Канберра."
+        sources: [{ name: "Википедия: Канберра", type: REFERENCE, verified: false }]
+        questions:
+          - id: australia-capital-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой город — столица Австралии?"
+            options:
+              - { key: A, text: "Сидней", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Мельбурн", distractor: NEAR_MISS }
+              - { key: C, text: "Канберра", correct: true }
+              - { key: D, text: "Перт", distractor: SAME_CATEGORY }
+            explanation: "Канберру построили специально, чтобы не выбирать между Сиднеем и Мельбурном."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: turkey-capital
+        statement: "Столица Турции — Анкара."
+        sources: [{ name: "Википедия: Анкара", type: REFERENCE, verified: false }]
+        questions:
+          - id: turkey-capital-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой город — столица Турции?"
+            options:
+              - { key: A, text: "Стамбул", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Анкара", correct: true }
+              - { key: C, text: "Измир", distractor: SAME_CATEGORY }
+              - { key: D, text: "Анталья", distractor: SAME_CATEGORY }
+            explanation: "Стамбул — крупнейший город, но столицей Анкару сделал Ататюрк в 1923 году."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: records
+    name: "Географические рекорды"
+    facts:
+      - id: kilimanjaro
+        statement: "Высочайшая вершина Африки — Килиманджаро (5895 м)."
+        sources: [{ name: "Википедия: Килиманджаро", type: REFERENCE, verified: false }]
+        questions:
+          - id: kilimanjaro-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая гора — самая высокая в Африке?"
+            options:
+              - { key: A, text: "Гора Кения", distractor: NEAR_MISS }
+              - { key: B, text: "Килиманджаро", correct: true }
+              - { key: C, text: "Тубкаль", distractor: SAME_CATEGORY }
+              - { key: D, text: "Эльбрус", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Гора Кения — вторая по высоте в Африке; Тубкаль — высшая точка Атласских гор."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: vatican-smallest
+        statement: "Ватикан — самое маленькое государство мира."
+        sources: [{ name: "Википедия: Ватикан", type: REFERENCE, verified: false }]
+        questions:
+          - id: vatican-smallest-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какое государство — самое маленькое в мире?"
+            options:
+              - { key: A, text: "Монако", distractor: NEAR_MISS }
+              - { key: B, text: "Ватикан", correct: true }
+              - { key: C, text: "Сан-Марино", distractor: SAME_CATEGORY }
+              - { key: D, text: "Лихтенштейн", distractor: SAME_CATEGORY }
+            explanation: "Площадь Ватикана — меньше половины квадратного километра; Монако второе."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: greenland-island
+        statement: "Гренландия — самый большой остров в мире (Австралию считают материком)."
+        sources: [{ name: "Википедия: Гренландия", type: REFERENCE, verified: false }]
+        questions:
+          - id: greenland-island-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой остров — самый большой в мире?"
+            options:
+              - { key: A, text: "Австралия", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Гренландия", correct: true }
+              - { key: C, text: "Новая Гвинея", distractor: NEAR_MISS }
+              - { key: D, text: "Мадагаскар", distractor: SAME_CATEGORY }
+            explanation: "Австралия — материк, поэтому первое место у Гренландии; Новая Гвинея — второй."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: canada-second-area
+        statement: "Канада — вторая по площади страна мира после России."
+        sources: [{ name: "Википедия: Канада", type: REFERENCE, verified: false }]
+        questions:
+          - id: canada-second-area-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая страна — вторая по площади после России?"
+            options:
+              - { key: A, text: "Китай", distractor: NEAR_MISS }
+              - { key: B, text: "Канада", correct: true }
+              - { key: C, text: "США", distractor: NEAR_MISS }
+              - { key: D, text: "Бразилия", distractor: SAME_CATEGORY }
+            explanation: "Китай и США спорят за третье место — в зависимости от того, как считать водные пространства."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: india-population
+        statement: "С 2023 года Индия — самая населённая страна мира, обогнав Китай."
+        time_sensitive: true
+        sources: [{ name: "Википедия: Население Индии", type: REFERENCE, verified: false }]
+        questions:
+          - id: india-population-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая страна сейчас самая населённая в мире?"
+            options:
+              - { key: A, text: "Китай", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Индия", correct: true }
+              - { key: C, text: "США", distractor: SAME_CATEGORY }
+              - { key: D, text: "Индонезия", distractor: SAME_CATEGORY }
+            explanation: "По оценкам ООН, Индия обогнала Китай в 2023 году."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Факт меняется со временем — перепроверить на дату ревью."]
+
+      - id: russia-time-zones
+        statement: "В России 11 часовых поясов."
+        time_sensitive: true
+        sources: [{ name: "Википедия: Время в России", type: REFERENCE, verified: false }]
+        questions:
+          - id: russia-time-zones-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Сколько часовых поясов в России?"
+            options:
+              - { key: A, text: "9", distractor: PLAUSIBLE }
+              - { key: B, text: "11", correct: true }
+              - { key: C, text: "12", distractor: NEAR_MISS }
+              - { key: D, text: "13", distractor: PLAUSIBLE }
+            explanation: "От Калининграда до Камчатки разница — 10 часов."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 0.6, POST_SOVIET: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Число поясов менялось (2010, 2014) — перепроверить на дату ревью."]
+
+  - family: straits-cities
+    name: "Проливы и города"
+    facts:
+      - id: bering-strait
+        statement: "Евразию и Северную Америку разделяет Берингов пролив."
+        sources: [{ name: "Википедия: Берингов пролив", type: REFERENCE, verified: false }]
+        questions:
+          - id: bering-strait-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой пролив разделяет Евразию и Северную Америку?"
+            options:
+              - { key: A, text: "Гибралтарский", distractor: SAME_CATEGORY }
+              - { key: B, text: "Берингов", correct: true }
+              - { key: C, text: "Магелланов", distractor: SAME_CATEGORY }
+              - { key: D, text: "Босфор", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Назван в честь Витуса Беринга, датчанина на русской службе."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: istanbul-two-continents
+        statement: "Стамбул — крупнейший город, расположенный одновременно в Европе и Азии."
+        sources: [{ name: "Википедия: Стамбул", type: REFERENCE, verified: false }]
+        questions:
+          - id: istanbul-two-continents-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какой крупный город стоит сразу в Европе и Азии?"
+            options:
+              - { key: A, text: "Афины", distractor: PLAUSIBLE }
+              - { key: B, text: "Стамбул", correct: true }
+              - { key: C, text: "Каир", distractor: PLAUSIBLE }
+              - { key: D, text: "Баку", distractor: PLAUSIBLE }
+            explanation: "Европейскую и азиатскую части Стамбула разделяет пролив Босфор."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: landmarks
+    name: "Достопримечательности мира"
+    facts:
+      - id: machu-picchu
+        statement: "Мачу-Пикчу — город инков в Перу."
+        sources: [{ name: "Википедия: Мачу-Пикчу", type: REFERENCE, verified: false }]
+        questions:
+          - id: machu-picchu-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В какой стране находится Мачу-Пикчу?"
+            options:
+              - { key: A, text: "В Мексике", distractor: NEAR_MISS }
+              - { key: B, text: "В Перу", correct: true }
+              - { key: C, text: "В Боливии", distractor: NEAR_MISS }
+              - { key: D, text: "В Чили", distractor: SAME_CATEGORY }
+            explanation: "Город инков XV века в Андах; в Мексике — пирамиды майя и ацтеков."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: angkor-wat
+        statement: "Храмовый комплекс Ангкор-Ват находится в Камбодже."
+        sources: [{ name: "Википедия: Ангкор-Ват", type: REFERENCE, verified: false }]
+        questions:
+          - id: angkor-wat-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "В какой стране находится Ангкор-Ват?"
+            options:
+              - { key: A, text: "В Таиланде", distractor: NEAR_MISS }
+              - { key: B, text: "В Камбодже", correct: true }
+              - { key: C, text: "Во Вьетнаме", distractor: SAME_CATEGORY }
+              - { key: D, text: "В Индии", distractor: SAME_CATEGORY }
+            explanation: "Ангкор-Ват изображён даже на флаге Камбоджи."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7 }
+            status: DRAFT
+            generation_method: AI

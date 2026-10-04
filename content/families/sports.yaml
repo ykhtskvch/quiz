@@ -1,0 +1,147 @@
+# C2 — sports (wildcard-friendly)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: sport-facts
+    name: "Спорт"
+    facts:
+      - id: olympic-rings
+        statement: "Олимпийских колец пять — по числу обитаемых континентов."
+        sources: [{ name: "Википедия: Олимпийские символы", type: REFERENCE, verified: false }]
+        questions:
+          - id: olympic-rings-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Сколько колец на олимпийском флаге?"
+            options:
+              - { key: A, text: "Четыре", distractor: PLAUSIBLE }
+              - { key: B, text: "Пять", correct: true }
+              - { key: C, text: "Шесть", distractor: PLAUSIBLE }
+              - { key: D, text: "Семь", distractor: PLAUSIBLE }
+            explanation: "Символ придумал Пьер де Кубертен."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: grand-slam-four
+        statement: "Большой шлем в теннисе — четыре турнира: Australian Open, Ролан Гаррос, Уимблдон и US Open."
+        sources: [{ name: "Википедия: Большой шлем (теннис)", type: REFERENCE, verified: false }]
+        questions:
+          - id: grand-slam-four-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Сколько турниров входит в теннисный Большой шлем?"
+            options:
+              - { key: A, text: "Три", distractor: PLAUSIBLE }
+              - { key: B, text: "Четыре", correct: true }
+              - { key: C, text: "Пять", distractor: PLAUSIBLE }
+              - { key: D, text: "Шесть", distractor: PLAUSIBLE }
+            explanation: "Australian Open, Ролан Гаррос, Уимблдон и US Open."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: marathon-distance
+        statement: "Марафонская дистанция — 42 км 195 м."
+        sources: [{ name: "Википедия: Марафон", type: REFERENCE, verified: false }]
+        questions:
+          - id: marathon-distance-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Какая длина у марафонской дистанции?"
+            options:
+              - { key: A, text: "21 км 97 м", distractor: NEAR_MISS }
+              - { key: B, text: "42 км 195 м", correct: true }
+              - { key: C, text: "50 км", distractor: PLAUSIBLE }
+              - { key: D, text: "40 км ровно", distractor: PLAUSIBLE }
+            explanation: "21,1 км — полумарафон."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: chess-stalemate
+        statement: "Пат в шахматах — положение, когда у стороны нет ходов, но её король не под шахом; это ничья."
+        sources: [{ name: "Википедия: Пат (шахматы)", type: REFERENCE, verified: false }]
+        questions:
+          - id: chess-stalemate-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Как называется положение в шахматах, когда ходить некуда, но шаха нет?"
+            options:
+              - { key: A, text: "Мат", distractor: NEAR_MISS }
+              - { key: B, text: "Пат", correct: true }
+              - { key: C, text: "Цугцванг", distractor: NEAR_MISS }
+              - { key: D, text: "Рокировка", distractor: SAME_CATEGORY }
+            explanation: "Цугцванг — когда ходить можно, но любой ход ухудшает позицию."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: schumacher-titles
+        statement: "Михаэль Шумахер — семикратный чемпион мира «Формулы-1»."
+        sources: [{ name: "Википедия: Шумахер, Михаэль", type: REFERENCE, verified: false }]
+        questions:
+          - id: schumacher-titles-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "Сколько раз Михаэль Шумахер становился чемпионом мира «Формулы-1»?"
+            options:
+              - { key: A, text: "Пять", distractor: PLAUSIBLE }
+              - { key: B, text: "Семь", correct: true }
+              - { key: C, text: "Девять", distractor: PLAUSIBLE }
+              - { key: D, text: "Четыре", distractor: PLAUSIBLE }
+            explanation: "Столько же титулов у Льюиса Хэмилтона."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 0.6, 00s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Рекорд по титулам может измениться — перепроверить на дату ревью."]
+
+      - id: jordan-bulls
+        statement: "Майкл Джордан шесть раз выигрывал чемпионат НБА с «Чикаго Буллз»."
+        sources: [{ name: "Википедия: Джордан, Майкл", type: REFERENCE, verified: false }]
+        questions:
+          - id: jordan-bulls-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: GLOBAL
+            text: "За какой клуб Майкл Джордан выиграл все свои чемпионские титулы НБА?"
+            options:
+              - { key: A, text: "«Лос-Анджелес Лейкерс»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Чикаго Буллз»", correct: true }
+              - { key: C, text: "«Бостон Селтикс»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Вашингтон Уизардс»", distractor: NEAR_MISS }
+            explanation: "В «Вашингтоне» он доигрывал карьеру уже без титулов."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI

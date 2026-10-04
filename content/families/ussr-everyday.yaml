@@ -1,0 +1,385 @@
+# C2 — ussr-everyday
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: soviet-prices
+    name: "Советские цены"
+    facts:
+      - id: gazirovka-price
+        statement: "В советском автомате газировка без сиропа стоила 1 копейку, с сиропом — 3 копейки."
+        sources: [{ name: "Википедия: Автомат с газированной водой", type: REFERENCE, verified: false }]
+        questions:
+          - id: gazirovka-price-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Сколько стоил стакан газировки с сиропом в советском автомате?"
+            options:
+              - { key: A, text: "1 копейку", distractor: NEAR_MISS }
+              - { key: B, text: "3 копейки", correct: true }
+              - { key: C, text: "5 копеек", distractor: PLAUSIBLE }
+              - { key: D, text: "10 копеек", distractor: PLAUSIBLE }
+            explanation: "Без сиропа — копейка. А стакан был один на всех: его мыли тут же, в автомате."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: taksofon-2-kop
+        statement: "Звонок из советского городского таксофона стоил 2 копейки."
+        sources: [{ name: "Википедия: Таксофон", type: REFERENCE, verified: false }]
+        questions:
+          - id: taksofon-2-kop-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой монетой платили за звонок из советского уличного таксофона?"
+            options:
+              - { key: A, text: "1 копейкой", distractor: PLAUSIBLE }
+              - { key: B, text: "2 копейками", correct: true }
+              - { key: C, text: "3 копейками", distractor: NEAR_MISS }
+              - { key: D, text: "10 копейками", distractor: PLAUSIBLE }
+            explanation: "«Двушку» берегли специально для автомата — отсюда и выражение «позвонить с двушки»."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: soviet-cars
+    name: "Советские автомобили"
+    facts:
+      - id: kopeyka-vaz-2101
+        statement: "«Копейкой» называли ВАЗ-2101 — первую модель «Жигулей»."
+        sources: [{ name: "Википедия: ВАЗ-2101", type: REFERENCE, verified: false }]
+        questions:
+          - id: kopeyka-vaz-2101-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какую машину в народе называли «копейкой»?"
+            options:
+              - { key: A, text: "ВАЗ-2106", distractor: NEAR_MISS }
+              - { key: B, text: "ВАЗ-2101", correct: true }
+              - { key: C, text: "«Москвич-412»", distractor: SAME_CATEGORY }
+              - { key: D, text: "ГАЗ-24 «Волга»", distractor: SAME_CATEGORY }
+            explanation: "По последней цифре индекса: 2101 — «копейка», 2106 — «шестёрка»."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: pioneers
+    name: "Октябрята и пионеры"
+    facts:
+      - id: pioneer-tie-ends
+        statement: "Три конца пионерского галстука символизировали единство трёх поколений: коммунистов, комсомольцев и пионеров."
+        sources: [{ name: "Википедия: Пионерский галстук", type: REFERENCE, verified: false }]
+        questions:
+          - id: pioneer-tie-ends-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что символизировали три конца пионерского галстука?"
+            options:
+              - { key: A, text: "Три цвета советского флага", distractor: PLAUSIBLE }
+              - { key: B, text: "Три поколения: коммунистов, комсомольцев и пионеров", correct: true }
+              - { key: C, text: "Три закона пионеров", distractor: PLAUSIBLE }
+              - { key: D, text: "«Учиться, учиться и учиться»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Красный цвет галстука объясняли как частицу знамени."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: oktyabrenok-badge
+        statement: "На значке октябрёнка — красная звезда с портретом Ленина в детстве."
+        sources: [{ name: "Википедия: Октябрята", type: REFERENCE, verified: false }]
+        questions:
+          - id: oktyabrenok-badge-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Чей портрет был на значке октябрёнка?"
+            options:
+              - { key: A, text: "Юрия Гагарина", distractor: PLAUSIBLE }
+              - { key: B, text: "Ленина в детстве", correct: true }
+              - { key: C, text: "Павлика Морозова", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Ленина в зрелые годы", distractor: NEAR_MISS }
+            explanation: "На пионерском значке Ленин уже взрослый, а у октябрят — кудрявый мальчик Володя."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: vsegda-gotov
+        statement: "На призыв «Будь готов!» пионеры отвечали «Всегда готов!»."
+        sources: [{ name: "Википедия: Пионерская организация имени В. И. Ленина", type: REFERENCE, verified: false }]
+        questions:
+          - id: vsegda-gotov-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что отвечали пионеры на призыв «Будь готов!»?"
+            options:
+              - { key: A, text: "«Готов!»", distractor: NEAR_MISS }
+              - { key: B, text: "«Всегда готов!»", correct: true }
+              - { key: C, text: "«Служу Советскому Союзу!»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Ура!»", distractor: PLAUSIBLE }
+            explanation: "«Служу Советскому Союзу!» — ответ военнослужащего на благодарность."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: artek-crimea
+        statement: "Пионерский лагерь «Артек» находится в Крыму."
+        sources: [{ name: "Википедия: Артек", type: REFERENCE, verified: false }]
+        questions:
+          - id: artek-crimea-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Где находился главный пионерский лагерь страны — «Артек»?"
+            options:
+              - { key: A, text: "Под Сочи", distractor: NEAR_MISS }
+              - { key: B, text: "В Крыму", correct: true }
+              - { key: C, text: "В Прибалтике", distractor: PLAUSIBLE }
+              - { key: D, text: "В Подмосковье", distractor: PLAUSIBLE }
+            explanation: "Лагерь основан в 1925 году у горы Аю-Даг."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: soviet-life
+    name: "Советская жизнь"
+    facts:
+      - id: avoska
+        statement: "«Авоська» — сетчатая хозяйственная сумка; название от слова «авось»."
+        sources: [{ name: "Википедия: Авоська", type: REFERENCE, verified: false }]
+        questions:
+          - id: avoska-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Что такое «авоська»?"
+            options:
+              - { key: A, text: "Сетчатая сумка для продуктов", correct: true }
+              - { key: B, text: "Талон на дефицитный товар", distractor: PLAUSIBLE }
+              - { key: C, text: "Очередь, занятая с утра", distractor: PLAUSIBLE }
+              - { key: D, text: "Шапка-ушанка", distractor: PLAUSIBLE }
+            explanation: "Носили «на авось» — вдруг по дороге что-то «выбросят» в магазине."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: khrushchevka
+        statement: "Типовые панельные пятиэтажки 1960-х в народе называют «хрущёвками»."
+        sources: [{ name: "Википедия: Хрущёвка", type: REFERENCE, verified: false }]
+        questions:
+          - id: khrushchevka-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Как в народе называют типовые пятиэтажки 1960-х?"
+            options:
+              - { key: A, text: "«Сталинки»", distractor: NEAR_MISS }
+              - { key: B, text: "«Хрущёвки»", correct: true }
+              - { key: C, text: "«Брежневки»", distractor: NEAR_MISS }
+              - { key: D, text: "«Корабли»", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "«Сталинки» строили раньше, «брежневки» и «корабли» — позже и выше."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 0.8, 90s: 0.6, 00s: 0.4 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: beryozka-shop
+        statement: "В магазинах «Берёзка» дефицитные товары продавали за валюту и чеки Внешпосылторга."
+        sources: [{ name: "Википедия: Берёзка (сеть магазинов)", type: REFERENCE, verified: false }]
+        questions:
+          - id: beryozka-shop-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "За что продавали товары в магазинах «Берёзка»?"
+            options:
+              - { key: A, text: "За талоны", distractor: NEAR_MISS }
+              - { key: B, text: "За валюту и специальные чеки", correct: true }
+              - { key: C, text: "Только по записи в профкоме", distractor: PLAUSIBLE }
+              - { key: D, text: "За сданную макулатуру", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "За макулатуру тоже кое-что давали — абонементы на дефицитные книги."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: gto
+        statement: "ГТО расшифровывается как «Готов к труду и обороне»."
+        sources: [{ name: "Википедия: Готов к труду и обороне", type: REFERENCE, verified: false }]
+        questions:
+          - id: gto-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Как расшифровывается ГТО?"
+            options:
+              - { key: A, text: "«Готов к труду и обороне»", correct: true }
+              - { key: B, text: "«Государственный трудовой отряд»", distractor: PLAUSIBLE }
+              - { key: C, text: "«Гимнастика, туризм, оборона»", distractor: PLAUSIBLE }
+              - { key: D, text: "«Город трудовой отваги»", distractor: PLAUSIBLE }
+            explanation: "Нормы ГТО появились в 1931 году и вернулись в школы в 2014-м."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0, 10s: 0.5 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: soviet-food
+    name: "Советская еда и напитки"
+    facts:
+      - id: sgushchenka-label
+        statement: "Классическая этикетка советской сгущёнки — бело-голубая."
+        sources: [{ name: "Википедия: Сгущённое молоко", type: REFERENCE, verified: false }]
+        questions:
+          - id: sgushchenka-label-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какого цвета была этикетка советской сгущёнки?"
+            options:
+              - { key: A, text: "Красно-белая", distractor: PLAUSIBLE }
+              - { key: B, text: "Бело-голубая", correct: true }
+              - { key: C, text: "Жёлто-зелёная", distractor: PLAUSIBLE }
+              - { key: D, text: "Коричневая", distractor: PLAUSIBLE }
+            explanation: "Её узнают до сих пор — многие производители копируют дизайн."
+            topics: { ussr-everyday: 1.0, food: 0.4 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: lemonade-buratino
+        statement: "Лимонад «Буратино» назван в честь сказочного героя с длинным носом."
+        sources: [{ name: "Википедия: Буратино (напиток)", type: REFERENCE, verified: false }]
+        questions:
+          - id: lemonade-buratino-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Какой советский лимонад назван в честь сказочного героя?"
+            options:
+              - { key: A, text: "«Тархун»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Буратино»", correct: true }
+              - { key: C, text: "«Дюшес»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Байкал»", distractor: SAME_CATEGORY }
+            explanation: "«Тархун» — в честь растения, «Дюшес» — в честь сорта груши, «Байкал» — в честь озера."
+            topics: { ussr-everyday: 1.0, food: 0.4 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: soviet-kids
+    name: "Советское детство"
+    facts:
+      - id: elektronika-egg-game
+        statement: "В электронной игре «Ну, погоди!» (Электроника ИМ-02) Волк ловит корзиной яйца."
+        sources: [{ name: "Википедия: Ну, погоди! (игра)", type: REFERENCE, verified: false }]
+        questions:
+          - id: elektronika-egg-game-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Кто ловил яйца в электронной игре «Ну, погоди!»?"
+            options:
+              - { key: A, text: "Заяц", distractor: NEAR_MISS }
+              - { key: B, text: "Волк", correct: true }
+              - { key: C, text: "Кот", distractor: PLAUSIBLE }
+              - { key: D, text: "Медведь", distractor: PLAUSIBLE }
+            explanation: "Игра «Электроника» была копией японской Nintendo Game & Watch."
+            topics: { ussr-everyday: 1.0, videogames: 0.5 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 1.0 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: murzilka
+        statement: "Детский журнал «Мурзилка» назван по имени своего героя — жёлтого пушистого человечка в берете."
+        sources: [{ name: "Википедия: Мурзилка", type: REFERENCE, verified: false }]
+        questions:
+          - id: murzilka-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            is_bridge: true
+            text: "Как называется детский журнал, герой которого — жёлтый пушистый человечек в берете?"
+            options:
+              - { key: A, text: "«Весёлые картинки»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Мурзилка»", correct: true }
+              - { key: C, text: "«Пионер»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Костёр»", distractor: SAME_CATEGORY }
+            explanation: "Журнал выходит с 1924 года — это один из самых старых детских журналов."
+            topics: { ussr-everyday: 1.0 }
+            contexts: { POST_SOVIET: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
