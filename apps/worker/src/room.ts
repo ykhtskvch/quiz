@@ -18,6 +18,7 @@ import {
 import { BANK } from "@quiz/shared/bank-data";
 import { availableTopics, DEFAULT_ENGINE_CONFIG } from "@quiz/engine";
 import { writeAnalytics } from "./analytics.ts";
+import type { RateLimiterDO } from "./limiter-do.ts";
 import { newRoomState, Room, ROOM_STATE_VERSION, type Effect, type Result, type RoomState, type Viewer } from "./game.ts";
 
 export type { Result };
@@ -26,10 +27,8 @@ export interface Env {
   ROOMS: DurableObjectNamespace<RoomDO>;
   /** Anonymous analytics; optional so a missing binding never breaks gameplay. */
   DB?: D1Database;
-  /** Per-IP rate limiters (NFR-016); optional so tests and old configs run without them. */
-  RL_CREATE?: RateLimit;
-  RL_ROOM?: RateLimit;
-  RL_ACTION?: RateLimit;
+  /** Per-IP request counters (NFR-016); optional so a missing binding never blocks gameplay. */
+  LIMITER?: DurableObjectNamespace<RateLimiterDO>;
 }
 
 type Attachment = { role: "display" } | { role: "player"; playerId: string };

@@ -12,9 +12,11 @@ import {
   LANGUAGES,
   type OptionKey,
 } from "@quiz/shared";
+import { RateLimiterDO } from "./limiter-do.ts";
+import type { Bucket } from "./ratelimit.ts";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
-export { RoomDO };
+export { RateLimiterDO, RoomDO };
 
 type C = Context<{ Bindings: Env }>;
 
@@ -29,19 +31,20 @@ const reply = <T>(c: C, r: Result<T>) => (r.ok ? c.json(r.value as object) : c.j
 // code-guesser hits; token-authorised actions only need a flood guard.
 const UNAUTHENTICATED_ROOM_PATHS = new Set([undefined, "players", "ws", "state"]);
 
-function limiterFor(c: C): RateLimit | undefined {
+function bucketFor(c: C): Bucket | undefined {
   const parts = c.req.path.split("/").filter(Boolean); // ["api", "rooms", code?, sub?]
   if (parts[1] !== "rooms") return undefined;
-  if (parts.length === 2) return c.req.method === "POST" ? c.env.RL_CREATE : undefined;
-  return UNAUTHENTICATED_ROOM_PATHS.has(parts[3]) ? c.env.RL_ROOM : c.env.RL_ACTION;
+  if (parts.length === 2) return c.req.method === "POST" ? "create" : undefined;
+  return UNAUTHENTICATED_ROOM_PATHS.has(parts[3]) ? "room" : "action";
 }
 
 app.use("*", async (c, next) => {
-  const limiter = limiterFor(c);
-  if (limiter) {
+  const bucket = bucketFor(c);
+  if (bucket && c.env.LIMITER) {
     const ip = c.req.header("CF-Connecting-IP") ?? "local";
-    const { success } = await limiter.limit({ key: ip });
-    if (!success) {
+    // Fail open: a hiccup in the counter must never stop a game.
+    const allowed = await c.env.LIMITER.get(c.env.LIMITER.idFromName(ip)).hit(bucket).catch(() => true);
+    if (!allowed) {
       c.header("Retry-After", "60");
       return c.json({ error: "too many requests" }, 429);
     }
