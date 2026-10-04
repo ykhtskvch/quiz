@@ -14077,7 +14077,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "D",
-    "explanation": "До t.A.T.u. Шаповалов работал психологом и в рекламе — отсюда провокационный имидж группы.",
+    "explanation": "До t.A.T.u. Шаповалов работал врачом-психиатром и детским психотерапевтом, а потом в рекламе — отсюда провокационный имидж группы.",
     "topics": {
       "ru-pop-00s": 1
     },
@@ -14612,7 +14612,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Сценическое имя он позже сделал официальным.",
+    "explanation": "Виктор Николаевич Белан; в 2008 году он сделал сценическое имя официальным.",
     "topics": {
       "ru-pop-00s": 1,
       "celebrities": 0.5
@@ -15102,7 +15102,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Дуэт прославился кавер-версией песни Belle из мюзикла «Нотр-Дам де Пари». Влад Соколовский — участник «Банды» с «Фабрики».",
+    "explanation": "Дуэт прославился кавер-версией песни Belle из мюзикла «Нотр-Дам де Пари». Влад Соколовский — из дуэта «БиС» с седьмой «Фабрики звёзд».",
     "topics": {
       "ru-pop-00s": 1
     },
@@ -20475,7 +20475,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "C",
-    "explanation": "Шесть экспедиций высадились по два астронавта. Всего же к Луне слетали 24 человека — но многие оставались на орбите.",
+    "explanation": "Шесть экспедиций высадились по два астронавта. К Луне летали больше: 24 человека на «Аполлонах» и ещё четверо на «Артемиде-2» в 2026 году — но без посадки.",
     "topics": {
       "space": 1
     },
@@ -20520,7 +20520,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "C",
-    "explanation": "Six missions landed two astronauts each. 24 people flew to the Moon, but many stayed in orbit.",
+    "explanation": "Six missions landed two astronauts each. More people have flown to the Moon: 24 on Apollo, plus the four Artemis II astronauts in 2026 — none of whom landed.",
     "topics": {
       "space": 1
     },

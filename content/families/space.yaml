@@ -7,7 +7,7 @@ families:
     facts:
       - id: gagarin-spacecraft
         statement: "Юрий Гагарин совершил первый полёт человека в космос 12 апреля 1961 года на корабле «Восток-1»."
-        sources: [ { name: "Википедия: Восток-1", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Восток-1", type: REFERENCE, verified: false }]
         questions:
           - id: gagarin-spacecraft-ru-1
             language: ru
@@ -50,7 +50,7 @@ families:
 
       - id: gagarin-flight-duration
         statement: "Полёт Гагарина длился 108 минут — один виток вокруг Земли."
-        sources: [ { name: "Википедия: Восток-1", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Восток-1", type: REFERENCE, verified: false }]
         questions:
           - id: gagarin-flight-duration-ru-1
             language: ru
@@ -93,7 +93,7 @@ families:
 
       - id: korolev-chief-designer
         statement: "Советскую космическую программу времён полёта Гагарина возглавлял главный конструктор Сергей Королёв."
-        sources: [ { name: "Википедия: Королёв, Сергей Павлович", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Королёв, Сергей Павлович", type: REFERENCE, verified: false }]
         questions:
           - id: korolev-chief-designer-ru-1
             language: ru
@@ -119,7 +119,7 @@ families:
     facts:
       - id: tereshkova-callsign
         statement: "Позывной Валентины Терешковой в полёте на «Востоке-6» (1963) — «Чайка»."
-        sources: [ { name: "Википедия: Восток-6", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Восток-6", type: REFERENCE, verified: false }]
         questions:
           - id: tereshkova-callsign-ru-1
             language: ru
@@ -142,7 +142,7 @@ families:
 
       - id: leonov-first-spacewalk
         statement: "Первым в открытый космос вышел Алексей Леонов 18 марта 1965 года (корабль «Восход-2»)."
-        sources: [ { name: "Википедия: Леонов, Алексей Архипович", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Леонов, Алексей Архипович", type: REFERENCE, verified: false }]
         questions:
           - id: leonov-first-spacewalk-ru-1
             language: ru
@@ -185,7 +185,7 @@ families:
 
       - id: polyakov-longest-flight
         statement: "Рекорд самого продолжительного одиночного космического полёта — около 437 суток — принадлежит Валерию Полякову (станция «Мир», 1994–1995)."
-        sources: [ { name: "Википедия: Поляков, Валерий Владимирович", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Поляков, Валерий Владимирович", type: REFERENCE, verified: false }]
         questions:
           - id: polyakov-longest-flight-ru-1
             language: ru
@@ -237,7 +237,7 @@ families:
     facts:
       - id: belka-strelka
         statement: "Белка и Стрелка в августе 1960 года первыми слетали на орбиту и благополучно вернулись."
-        sources: [ { name: "Википедия: Белка и Стрелка", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Белка и Стрелка", type: REFERENCE, verified: false }]
         questions:
           - id: belka-strelka-ru-1
             language: ru
@@ -280,7 +280,7 @@ families:
 
       - id: laika-sputnik-2
         statement: "Лайка полетела в космос на «Спутнике-2» в ноябре 1957 года."
-        sources: [ { name: "Википедия: Лайка (собака-космонавт)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Лайка (собака-космонавт)", type: REFERENCE, verified: false }]
         questions:
           - id: laika-sputnik-2-ru-1
             language: ru
@@ -326,7 +326,7 @@ families:
     facts:
       - id: sputnik-1-year
         statement: "Первый искусственный спутник Земли запущен в СССР 4 октября 1957 года."
-        sources: [ { name: "Википедия: Спутник-1", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Спутник-1", type: REFERENCE, verified: false }]
         questions:
           - id: sputnik-1-year-ru-1
             language: ru
@@ -372,7 +372,7 @@ families:
     facts:
       - id: apollo-11-collins
         statement: "Из экипажа «Аполлона-11» на Луну не высаживался Майкл Коллинз — он оставался на орбите в командном модуле."
-        sources: [ { name: "Википедия: Аполлон-11", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Аполлон-11", type: REFERENCE, verified: false }]
         questions:
           - id: apollo-11-collins-ru-1
             language: ru
@@ -414,8 +414,8 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: moonwalkers-count
-        statement: "По Луне ходили 12 человек (миссии «Аполлон» 1969–1972); всего к Луне летали 24 человека."
-        sources: [ { name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: false } ]
+        statement: "По Луне ходили 12 человек (миссии «Аполлон» 1969–1972). Всего к Луне летали 28 человек: 24 по «Аполлонам» и 4 — экипаж «Артемиды-2» (облёт Луны, апрель 2026)."
+        sources: [{ name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: false }]
         questions:
           - id: moonwalkers-count-ru-1
             language: ru
@@ -427,7 +427,7 @@ families:
               - { key: B, text: "6", distractor: PLAUSIBLE }
               - { key: C, text: "12", correct: true }
               - { key: D, text: "24", distractor: NEAR_MISS }
-            explanation: "Шесть экспедиций высадились по два астронавта. Всего же к Луне слетали 24 человека — но многие оставались на орбите."
+            explanation: "Шесть экспедиций высадились по два астронавта. К Луне летали больше: 24 человека на «Аполлонах» и ещё четверо на «Артемиде-2» в 2026 году — но без посадки."
             topics: { space: 1.0 }
             contexts: { GLOBAL: 1.0 }
             difficulty: 4
@@ -436,7 +436,8 @@ families:
             time_sensitive: true
             status: DRAFT
             generation_method: AI
-            review_notes: [ "AI doubt: факт изменится после высадки «Артемиды» — проверить на дату ревью; time_sensitive выставлен." ]
+            review_notes:
+              - "Сверка Claude 2026-10-04: «Артемида-2» облетела Луну 1–11 апреля 2026 без посадки (en.wikipedia: Artemis II) — 12 по-прежнему верно; «к Луне летали» исправлено с 24 на 28."
           - id: moonwalkers-count-en-1
             language: en
             origin_language: ru
@@ -447,7 +448,7 @@ families:
               - { key: B, text: "6", distractor: PLAUSIBLE }
               - { key: C, text: "12", correct: true }
               - { key: D, text: "24", distractor: NEAR_MISS }
-            explanation: Six missions landed two astronauts each. 24 people flew to the Moon, but many stayed in orbit.
+            explanation: "Six missions landed two astronauts each. More people have flown to the Moon: 24 on Apollo, plus the four Artemis II astronauts in 2026 — none of whom landed."
             topics: { space: 1 }
             contexts: { GLOBAL: 1 }
             difficulty: 4
@@ -457,12 +458,12 @@ families:
             status: DRAFT
             generation_method: AI
             review_notes:
-              - "AI doubt: факт изменится после высадки «Артемиды» — проверить на дату ревью; time_sensitive выставлен."
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+              - "Сверка Claude 2026-10-04: Artemis II flew around the Moon in April 2026 without landing; 12 still correct, explanation updated."
 
       - id: last-moon-landing-year
         statement: "Последняя на сегодня высадка людей на Луну — «Аполлон-17», декабрь 1972 года."
-        sources: [ { name: "Википедия: Аполлон-17", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Аполлон-17", type: REFERENCE, verified: false }]
         questions:
           - id: last-moon-landing-year-ru-1
             language: ru
@@ -483,7 +484,8 @@ families:
             time_sensitive: true
             status: DRAFT
             generation_method: AI
-            review_notes: [ "AI doubt: вопрос устареет после высадки по программе «Артемида» — проверить на дату ревью." ]
+            review_notes:
+              - "Сверка Claude 2026-10-04: «Артемида-2» (апрель 2026) — облёт без посадки, следующая высадка — «Артемида-3»; ответ 1972 верен."
           - id: last-moon-landing-year-en-1
             language: en
             origin_language: ru
@@ -504,15 +506,15 @@ families:
             status: DRAFT
             generation_method: AI
             review_notes:
-              - "AI doubt: вопрос устареет после высадки по программе «Артемида» — проверить на дату ревью."
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+              - "Сверка Claude 2026-10-04: Artemis II (April 2026) was a flyby; 1972 still correct."
 
   - family: solar-system
     name: "Солнечная система"
     facts:
       - id: largest-planet
         statement: "Самая большая планета Солнечной системы — Юпитер."
-        sources: [ { name: "Википедия: Юпитер", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Юпитер", type: REFERENCE, verified: false }]
         questions:
           - id: largest-planet-ru-1
             language: ru
@@ -555,7 +557,7 @@ families:
 
       - id: hottest-planet
         statement: "Самая горячая планета Солнечной системы — Венера (около 465 °C на поверхности), а не Меркурий."
-        sources: [ { name: "Википедия: Венера", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Венера", type: REFERENCE, verified: false }]
         questions:
           - id: hottest-planet-ru-1
             language: ru
@@ -598,7 +600,7 @@ families:
 
       - id: pluto-dwarf-planet
         statement: "В 2006 году Международный астрономический союз перевёл Плутон в категорию карликовых планет."
-        sources: [ { name: "Википедия: Плутон", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Плутон", type: REFERENCE, verified: false }]
         questions:
           - id: pluto-dwarf-planet-ru-1
             language: ru
@@ -645,7 +647,7 @@ families:
 
       - id: mars-moons
         statement: "Спутники Марса — Фобос и Деймос."
-        sources: [ { name: "Википедия: Спутники Марса", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Спутники Марса", type: REFERENCE, verified: false }]
         questions:
           - id: mars-moons-ru-1
             language: ru
@@ -688,7 +690,7 @@ families:
 
       - id: saturn-rings-ice
         statement: "Кольца Сатурна состоят в основном из частиц водяного льда."
-        sources: [ { name: "Википедия: Кольца Сатурна", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Кольца Сатурна", type: REFERENCE, verified: false }]
         questions:
           - id: saturn-rings-ice-ru-1
             language: ru
@@ -731,7 +733,7 @@ families:
 
       - id: sunlight-travel-time
         statement: "Свет от Солнца до Земли идёт примерно 8 минут 20 секунд."
-        sources: [ { name: "Википедия: Астрономическая единица", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Астрономическая единица", type: REFERENCE, verified: false }]
         questions:
           - id: sunlight-travel-time-ru-1
             language: ru
@@ -774,7 +776,7 @@ families:
 
       - id: halley-comet-return
         statement: "Комета Галлея возвращается примерно раз в 76 лет; следующее прохождение перигелия — в 2061 году."
-        sources: [ { name: "Википедия: Комета Галлея", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Комета Галлея", type: REFERENCE, verified: false }]
         questions:
           - id: halley-comet-return-ru-1
             language: ru
@@ -822,7 +824,7 @@ families:
     facts:
       - id: mir-deorbit
         statement: "Станцию «Мир» свели с орбиты 23 марта 2001 года; несгоревшие обломки упали в Тихий океан."
-        sources: [ { name: "Википедия: Мир (орбитальная станция)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Мир (орбитальная станция)", type: REFERENCE, verified: false }]
         questions:
           - id: mir-deorbit-ru-1
             language: ru
@@ -846,7 +848,7 @@ families:
 
       - id: iss-orbit-period
         statement: "МКС облетает Землю примерно за 90 минут — около 16 витков в сутки."
-        sources: [ { name: "Википедия: Международная космическая станция", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Международная космическая станция", type: REFERENCE, verified: false }]
         questions:
           - id: iss-orbit-period-ru-1
             language: ru
@@ -891,7 +893,7 @@ families:
 
       - id: baikonur-country
         statement: "Космодром Байконур находится на территории Казахстана; Россия арендует его."
-        sources: [ { name: "Википедия: Байконур (космодром)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Байконур (космодром)", type: REFERENCE, verified: false }]
         questions:
           - id: baikonur-country-ru-1
             language: ru
@@ -917,7 +919,7 @@ families:
     facts:
       - id: jwst-launch
         statement: "Космический телескоп «Джеймс Уэбб» запущен в декабре 2021 года как преемник «Хаббла»."
-        sources: [ { name: "Википедия: Джеймс Уэбб (телескоп)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Джеймс Уэбб (телескоп)", type: REFERENCE, verified: false }]
         questions:
           - id: jwst-launch-ru-1
             language: ru
@@ -962,7 +964,7 @@ families:
 
       - id: crew-dragon-2020
         statement: "В 2020 году корабль SpaceX Crew Dragon впервые доставил астронавтов на МКС."
-        sources: [ { name: "Википедия: SpaceX Demo-2", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: SpaceX Demo-2", type: REFERENCE, verified: false }]
         questions:
           - id: crew-dragon-2020-ru-1
             language: ru
@@ -1007,7 +1009,7 @@ families:
 
       - id: voyager-1-heliopause
         statement: "«Вояджер-1» в 2012 году первым из аппаратов пересёк гелиопаузу и вышел в межзвёздное пространство; «Вояджер-2» — в 2018 году."
-        sources: [ { name: "Википедия: Вояджер-1", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Вояджер-1", type: REFERENCE, verified: false }]
         questions:
           - id: voyager-1-heliopause-ru-1
             language: ru

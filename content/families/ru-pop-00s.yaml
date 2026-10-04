@@ -67,7 +67,7 @@ families:
               - { key: B, text: "Максим Фадеев", distractor: SAME_CATEGORY }
               - { key: C, text: "Игорь Крутой", distractor: SAME_CATEGORY }
               - { key: D, text: "Иван Шаповалов", correct: true }
-            explanation: "До t.A.T.u. Шаповалов работал психологом и в рекламе — отсюда провокационный имидж группы."
+            explanation: "До t.A.T.u. Шаповалов работал врачом-психиатром и детским психотерапевтом, а потом в рекламе — отсюда провокационный имидж группы."
             topics: { ru-pop-00s: 1.0 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
             generations: { 00s: 1.0 }
@@ -76,7 +76,8 @@ families:
             effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.6 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: проверить, что Шаповалов действительно работал психологом и в рекламе, — иначе переписать пояснение."]
+            review_notes:
+              - "Сверка Claude 2026-10-04: подтверждено (ru.wikipedia: Шаповалов, Иван Николаевич) — психиатр в Балакове, частная детская психотерапия, с 1994 года реклама; пояснение уточнено."
 
   - family: fabrika-zvezd
     name: "«Фабрика звёзд»"
@@ -128,6 +129,8 @@ families:
             effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-04: подтверждено (ru.wikipedia: Фабрика звёзд) — победители 1-го сезона «Корни»."
 
       - id: fabrika-zvezd-host
         statement: "Ведущая первых сезонов «Фабрики звёзд» — Яна Чурикова."
@@ -176,7 +179,7 @@ families:
             effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Star Academy восходит к испанскому Operación Triunfo — проверить, что формулировка «адаптация Star Academy» корректна."]
+            review_notes: [ "AI doubt: Star Academy восходит к испанскому Operación Triunfo — проверить, что формулировка «адаптация Star Academy» корректна." ]
 
   - family: timati
     name: "Тимати"
@@ -349,7 +352,7 @@ families:
               - { key: B, text: "Виктор Белан", correct: true }
               - { key: C, text: "Дмитрий Белан", distractor: NEAR_MISS }
               - { key: D, text: "Виктор Билан", distractor: NEAR_MISS }
-            explanation: "Сценическое имя он позже сделал официальным."
+            explanation: "Виктор Николаевич Белан; в 2008 году он сделал сценическое имя официальным."
             topics: { ru-pop-00s: 1.0, celebrities: 0.5 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
             generations: { 00s: 1.0 }
@@ -358,7 +361,8 @@ families:
             effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: проверить, что Билан официально сменил паспортное имя и в каком году."]
+            review_notes:
+              - "Сверка Claude 2026-10-04: подтверждено (ru.wikipedia: Дима Билан) — имя сменил официально в июне 2008."
 
   - family: uma2rman
     name: "Uma2rman"
@@ -488,6 +492,8 @@ families:
             effects: { SHARED_KNOWLEDGE: 0.8, WHY_DO_I_REMEMBER_THIS: 0.6 }
             status: DRAFT
             generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-04: в статье о Серёге связи песни (2004) с фильмом «Бумер» нет — пояснение не противоречит; авторство музыки фильма Шнуровым не сверено."
 
   - family: glukoza
     name: "Глюк'oZa"
@@ -611,7 +617,7 @@ families:
               - { key: B, text: "С Владом Топаловым", correct: true }
               - { key: C, text: "С Димой Биланом", distractor: SAME_CATEGORY }
               - { key: D, text: "С Тимати", distractor: SAME_CATEGORY }
-            explanation: "Дуэт прославился кавер-версией песни Belle из мюзикла «Нотр-Дам де Пари». Влад Соколовский — участник «Банды» с «Фабрики»."
+            explanation: "Дуэт прославился кавер-версией песни Belle из мюзикла «Нотр-Дам де Пари». Влад Соколовский — из дуэта «БиС» с седьмой «Фабрики звёзд»."
             topics: { ru-pop-00s: 1.0 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
             generations: { 00s: 1.0 }
@@ -620,6 +626,8 @@ families:
             effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.5 }
             status: DRAFT
             generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-04: исправлено пояснение — Соколовский был не в «Банде», а в «БиС» (7-я «Фабрика», 2007; ru.wikipedia: Фабрика звёзд)."
 
   - family: maksim
     name: "МакSим"

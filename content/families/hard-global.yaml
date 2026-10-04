@@ -7,7 +7,7 @@ families:
     facts:
       - id: berlin-airlift
         statement: "В 1948–1949 годах во время блокады Западного Берлина западные союзники снабжали город по воздуху — «Берлинский воздушный мост»."
-        sources: [ { name: "Википедия: Берлинский воздушный мост", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Берлинский воздушный мост", type: REFERENCE, verified: false }]
         questions:
           - id: berlin-airlift-ru-1
             language: ru
@@ -52,7 +52,7 @@ families:
 
       - id: u2-powers
         statement: "В 1960 году над Свердловском сбили американский самолёт-разведчик U-2; пилот Фрэнсис Пауэрс попал в плен."
-        sources: [ { name: "Википедия: Инцидент с U-2 (1960)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Инцидент с U-2 (1960)", type: REFERENCE, verified: false }]
         questions:
           - id: u2-powers-ru-1
             language: ru
@@ -97,7 +97,7 @@ families:
 
       - id: reykjavik-1986
         statement: "В октябре 1986 года Горбачёв и Рейган встретились в Рейкьявике и едва не договорились о полном ядерном разоружении."
-        sources: [ { name: "Википедия: Рейкьявикская встреча", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Рейкьявикская встреча", type: REFERENCE, verified: false }]
         questions:
           - id: reykjavik-1986-ru-1
             language: ru
@@ -142,7 +142,7 @@ families:
 
       - id: prague-spring-dubcek
         statement: "Лидером Чехословакии во время «Пражской весны» 1968 года был Александр Дубчек."
-        sources: [ { name: "Википедия: Пражская весна", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Пражская весна", type: REFERENCE, verified: false }]
         questions:
           - id: prague-spring-dubcek-ru-1
             language: ru
@@ -190,7 +190,7 @@ families:
     facts:
       - id: john-glenn-orbit
         statement: "Первым американцем на околоземной орбите стал Джон Гленн 20 февраля 1962 года."
-        sources: [ { name: "Википедия: Гленн, Джон", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Гленн, Джон", type: REFERENCE, verified: false }]
         questions:
           - id: john-glenn-orbit-ru-1
             language: ru
@@ -233,7 +233,7 @@ families:
 
       - id: apollo-11-eagle
         statement: "Лунный модуль «Аполлона-11» назывался «Игл» (Eagle), командный модуль — «Колумбия»."
-        sources: [ { name: "Википедия: Аполлон-11", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Аполлон-11", type: REFERENCE, verified: false }]
         questions:
           - id: apollo-11-eagle-ru-1
             language: ru
@@ -276,7 +276,7 @@ families:
 
       - id: luna-9-soft-landing
         statement: "Первую мягкую посадку на Луну совершила советская станция «Луна-9» 3 февраля 1966 года."
-        sources: [ { name: "Википедия: Луна-9", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Луна-9", type: REFERENCE, verified: false }]
         questions:
           - id: luna-9-soft-landing-ru-1
             language: ru
@@ -319,7 +319,7 @@ families:
 
       - id: salyut-1-first-station
         statement: "Первой в мире орбитальной станцией стал советский «Салют-1», запущенный в 1971 году."
-        sources: [ { name: "Википедия: Салют-1", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Салют-1", type: REFERENCE, verified: false }]
         questions:
           - id: salyut-1-first-station-ru-1
             language: ru
@@ -365,7 +365,7 @@ families:
     facts:
       - id: france-most-time-zones
         statement: "С учётом заморских территорий больше всего часовых поясов у Франции — 12."
-        sources: [ { name: "Википедия: Часовые пояса Франции", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Часовые пояса Франции", type: REFERENCE, verified: false }]
         questions:
           - id: france-most-time-zones-ru-1
             language: ru
@@ -408,7 +408,7 @@ families:
 
       - id: danube-most-countries
         statement: "Дунай протекает по территории 10 стран — больше, чем любая другая река мира."
-        sources: [ { name: "Википедия: Дунай", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Дунай", type: REFERENCE, verified: false }]
         questions:
           - id: danube-most-countries-ru-1
             language: ru
@@ -451,7 +451,7 @@ families:
 
       - id: lesotho-enclave
         statement: "Лесото со всех сторон окружено территорией ЮАР."
-        sources: [ { name: "Википедия: Лесото", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Лесото", type: REFERENCE, verified: false }]
         questions:
           - id: lesotho-enclave-ru-1
             language: ru
@@ -493,8 +493,8 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: seychelles-smallest-africa
-        statement: "Самое маленькое по площади государство Африки — Сейшельские Острова (около 455 км²)."
-        sources: [ { name: "Википедия: Сейшельские Острова", type: REFERENCE, verified: false } ]
+        statement: "Самое маленькое по площади государство Африки — Сейшельские Острова (около 459 км²)."
+        sources: [{ name: "Википедия: Сейшельские Острова", type: REFERENCE, verified: false }]
         questions:
           - id: seychelles-smallest-africa-ru-1
             language: ru
@@ -514,6 +514,8 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
             status: DRAFT
             generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-04: площадь 459 км² (ru.wikipedia), исправлено с 455."
           - id: seychelles-smallest-africa-en-1
             language: en
             origin_language: ru
@@ -534,13 +536,14 @@ families:
             generation_method: AI
             review_notes:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+              - "Сверка Claude 2026-10-04: area 459 km² (was 455)."
 
   - family: hard-world-cinema
     name: "Мировое кино — сложные"
     facts:
       - id: parasite-best-picture
         statement: "«Паразиты» Пон Джун Хо (2019) стали первым фильмом не на английском языке, получившим «Оскар» за лучший фильм."
-        sources: [ { name: "Википедия: Паразиты (фильм)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Паразиты (фильм)", type: REFERENCE, verified: false }]
         questions:
           - id: parasite-best-picture-ru-1
             language: ru
@@ -585,7 +588,7 @@ families:
 
       - id: alien-weyland-yutani
         statement: "В фильмах «Чужой» действует корпорация «Вейланд-Ютани» (Weyland-Yutani)."
-        sources: [ { name: "Википедия: Вейланд-Ютани", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Вейланд-Ютани", type: REFERENCE, verified: false }]
         questions:
           - id: alien-weyland-yutani-ru-1
             language: ru
@@ -630,7 +633,7 @@ families:
 
       - id: avatar-2-billion
         statement: "«Аватар» (2009) первым в истории собрал в прокате больше 2 миллиардов долларов."
-        sources: [ { name: "Википедия: Аватар (фильм, 2009)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Аватар (фильм, 2009)", type: REFERENCE, verified: false }]
         questions:
           - id: avatar-2-billion-ru-1
             language: ru
@@ -675,7 +678,7 @@ families:
 
       - id: jaws-bruce
         statement: "Механическую акулу на съёмках «Челюстей» прозвали Брюсом — в честь адвоката Спилберга."
-        sources: [ { name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false }]
         questions:
           - id: jaws-bruce-ru-1
             language: ru
@@ -723,7 +726,7 @@ families:
     facts:
       - id: simpsons-groening
         statement: "Создатель «Симпсонов» — Мэтт Грейнинг."
-        sources: [ { name: "Википедия: Грейнинг, Мэтт", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Грейнинг, Мэтт", type: REFERENCE, verified: false }]
         questions:
           - id: simpsons-groening-ru-1
             language: ru
@@ -768,7 +771,7 @@ families:
 
       - id: aladdin-iago
         statement: "Попугая злодея Джафара в диснеевском «Аладдине» зовут Яго."
-        sources: [ { name: "Википедия: Аладдин (мультфильм, 1992)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Аладдин (мультфильм, 1992)", type: REFERENCE, verified: false }]
         questions:
           - id: aladdin-iago-ru-1
             language: ru
@@ -813,7 +816,7 @@ families:
 
       - id: spirited-away-chihiro
         statement: "Героиню «Унесённых призраками» Хаяо Миядзаки зовут Тихиро."
-        sources: [ { name: "Википедия: Унесённые призраками", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Унесённые призраками", type: REFERENCE, verified: false }]
         questions:
           - id: spirited-away-chihiro-ru-1
             language: ru
@@ -861,7 +864,7 @@ families:
     facts:
       - id: beatles-quarrymen
         statement: "Группа Джона Леннона, в которой он познакомился с Полом Маккартни, называлась The Quarrymen."
-        sources: [ { name: "Википедия: The Quarrymen", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: The Quarrymen", type: REFERENCE, verified: false }]
         questions:
           - id: beatles-quarrymen-ru-1
             language: ru
@@ -906,7 +909,7 @@ families:
 
       - id: nirvana-aberdeen
         statement: "Группа Nirvana образовалась в 1987 году в городе Абердин, штат Вашингтон."
-        sources: [ { name: "Википедия: Nirvana", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Nirvana", type: REFERENCE, verified: false }]
         questions:
           - id: nirvana-aberdeen-ru-1
             language: ru
@@ -951,7 +954,7 @@ families:
 
       - id: sting-sumner
         statement: "Настоящее имя Стинга — Гордон Самнер."
-        sources: [ { name: "Википедия: Стинг", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Стинг", type: REFERENCE, verified: false }]
         questions:
           - id: sting-sumner-ru-1
             language: ru
