@@ -83,6 +83,10 @@
         <option value="RETIRED">Снятые</option>
         <option value="">Все</option>
       </select>
+      <select id="order">
+        <option value="file">По порядку в файлах</option>
+        <option value="share">Сначала частые в игре</option>
+      </select>
       <span class="stat" id="progress"></span>
       <span class="stat" id="pace"></span>
     </header>
@@ -113,6 +117,8 @@
       $("#reviewer").addEventListener("input", (e) => store.set("review.reviewer", e.target.value));
       $("#file").addEventListener("change", () => { cursor = 0; render(); });
       $("#status").addEventListener("change", () => { cursor = 0; render(); });
+      $("#order").value = store.get("review.order", "file");
+      $("#order").addEventListener("change", (e) => { store.set("review.order", e.target.value); cursor = 0; render(); });
 
       async function load(keepId) {
         const r = await fetch("/api/questions").then((x) => x.json());
@@ -129,7 +135,9 @@
       function visible() {
         const f = $("#file").value;
         const s = $("#status").value;
-        return all.filter((q) => (!f || q.file === f) && (!s || q.status === s));
+        const list = all.filter((q) => (!f || q.file === f) && (!s || q.status === s));
+        // Stable sort: equally frequent questions keep their file order.
+        return $("#order").value === "share" ? list.sort((a, b) => b.share - a.share) : list;
       }
 
       function stats() {
@@ -176,6 +184,7 @@
               ${Object.keys(q.topics).map((t) => `<span class="chip">${esc(t)}</span>`).join("")}
               <span class="chip">${esc(q.culture_specificity)}</span>
               ${q.timeSensitive ? `<span class="chip">устаревает</span>` : ""}
+              ${q.share ? `<span class="chip" title="по симулятору, npm run content:priority">в ${Math.max(1, Math.round(q.share * 100))}% игр</span>` : ""}
             </div>
             ${notes.length ? `<div class="notes"><strong>Сомнения:</strong>${notes.map((n) => `<p>${esc(n)}</p>`).join("")}</div>` : ""}
             ${qIssues.length ? `<div class="issues">${qIssues.map((n) => `<p>${esc(n)}</p>`).join("")}</div>` : ""}

@@ -1,7 +1,11 @@
 // Composition Engine simulator (09-system-design §7): plays many virtual rooms against the real
 // bank and prints the Engine §16 metrics — the fastest way to find content gaps before a playtest.
 //
-//   node scripts/dev/simulate.ts [--runs 200] [--questions 25] [--drafts] [--seed 1]
+//   node scripts/dev/simulate.ts [--runs 200] [--questions 25] [--drafts] [--seed 1] [--priority]
+//
+// --priority also writes content/review-priority.json: the share of simulated games each question
+// appears in, so the review tool can put the questions a playtest will actually see first.
+import { writeFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { BANK } from "../../packages/shared/src/bank.generated.ts";
 import {
@@ -29,6 +33,7 @@ const { values } = parseArgs({
     questions: { type: "string", default: "25" },
     seed: { type: "string", default: "1" },
     drafts: { type: "boolean", default: true },
+    priority: { type: "boolean", default: false },
   },
 });
 const RUNS = Number(values.runs);
@@ -106,6 +111,9 @@ const ARCHETYPES: Archetype[] = [
   },
 ];
 
+/** Games each question appeared in, across all archetypes (for --priority). */
+const appearances = new Map<string, number>();
+
 const pick = <T>(xs: T[], rng: () => number) => xs[Math.floor(rng() * xs.length)];
 
 function makePlayer(a: Archetype, i: number, rng: () => number): OnboardingInput {
@@ -162,6 +170,7 @@ function simulate(a: Archetype, seed: number): Metrics {
     if (!r) break;
     const q = r.question;
     usedQ.add(q.id);
+    appearances.set(q.id, (appearances.get(q.id) ?? 0) + 1);
     usedF.add(q.factId);
     topics.push(primaryTopic(q));
     difficultySum += q.difficulty;
@@ -237,3 +246,16 @@ for (const r of rows) {
 console.log("\nЦели (05-engine §2, §16): точность 50–70 %, покрытие и Hero-цели → 100 %, банк не заканчивается.");
 console.log(hints.length ? "\n" + hints.map((h) => "• " + h).join("\n") : "\nВсе метрики в целевых диапазонах.");
 
+if (values.priority) {
+  const games = RUNS * ARCHETYPES.length;
+  const items = [...appearances]
+    .map(([id, n]) => ({ id, share: Math.round((n / games) * 1000) / 1000 }))
+    .sort((a, b) => b.share - a.share);
+  const out = "content/review-priority.json";
+  writeFileSync(out, JSON.stringify({ games, rooms: ARCHETYPES.map((a) => a.name), items }, null, 1) + "\n");
+  // How many questions make up 80 % of everything a playtest will show.
+  const total = items.reduce((s, i) => s + i.share, 0);
+  let acc = 0;
+  const core = items.findIndex((i) => (acc += i.share) >= total * 0.8) + 1;
+  console.log(`\n${out}: ${items.length} of ${BANK.length} questions ever appear; ${core} of them make up 80 % of what players see.`);
+}

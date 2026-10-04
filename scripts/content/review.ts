@@ -2,7 +2,7 @@
 //   npm run content:review   →  http://127.0.0.1:4400
 // Reads content/families/*.yaml, shows question cards, writes edits back with the YAML document
 // API (comments kept), and validates after every save. Binds to localhost only.
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { createServer, type IncomingMessage, type ServerResponse } from "node:http";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -23,6 +23,14 @@ function files(): string[] {
     .map((f) => path.join(FAMILIES_DIR, f));
 }
 
+/** Share of simulated games each question appears in (`npm run content:priority`); empty if never run. */
+function priorities(): Map<string, number> {
+  const file = path.join(FAMILIES_DIR, "..", "review-priority.json");
+  if (!existsSync(file)) return new Map();
+  const { items } = JSON.parse(readFileSync(file, "utf8")) as { items: { id: string; share: number }[] };
+  return new Map(items.map((i) => [i.id, i.share]));
+}
+
 function readDoc(file: string): Document {
   return parseDocument(readFileSync(file, "utf8"));
 }
@@ -32,6 +40,7 @@ function index(): { items: unknown[]; where: Map<string, Located>; issues: Map<s
   const items: unknown[] = [];
   const where = new Map<string, Located>();
   const loaded: LoadedFile[] = [];
+  const share = priorities();
   for (const file of files()) {
     const raw = readDoc(file).toJS();
     const parsed = ContentFileSchema.safeParse(raw);
@@ -48,6 +57,7 @@ function index(): { items: unknown[]; where: Map<string, Located>; issues: Map<s
             statement: fact.statement,
             sources: fact.sources ?? [],
             timeSensitive: Boolean(fact.time_sensitive),
+            share: share.get(q.id) ?? 0,
             ...q,
           });
         }),
