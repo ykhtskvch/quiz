@@ -9,7 +9,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🏛️",
     "group": "История",
     "groupEn": "History",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "russia-pre-1917",
@@ -18,7 +19,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "👑",
     "group": "История",
     "groupEn": "History",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": false
   },
   {
     "slug": "ussr-history",
@@ -27,7 +29,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🏭",
     "group": "История",
     "groupEn": "History",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "cold-war",
@@ -36,7 +39,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🧊",
     "group": "История",
     "groupEn": "History",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "ussr-everyday",
@@ -45,7 +49,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🪆",
     "group": "История",
     "groupEn": "History",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "russia-90s-life",
@@ -54,7 +59,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📼",
     "group": "История",
     "groupEn": "History",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "space",
@@ -63,7 +69,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🚀",
     "group": "Наука и мир",
     "groupEn": "Science & the world",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "science",
@@ -72,7 +79,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🔬",
     "group": "Наука и мир",
     "groupEn": "Science & the world",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "geography",
@@ -81,7 +89,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🌍",
     "group": "Наука и мир",
     "groupEn": "Science & the world",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "nature",
@@ -90,7 +99,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🐾",
     "group": "Наука и мир",
     "groupEn": "Science & the world",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "russian-literature",
@@ -99,7 +109,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📖",
     "group": "Литература и искусство",
     "groupEn": "Literature & art",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "world-literature",
@@ -108,7 +119,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📚",
     "group": "Литература и искусство",
     "groupEn": "Literature & art",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "art",
@@ -117,7 +129,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎨",
     "group": "Литература и искусство",
     "groupEn": "Literature & art",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "soviet-cinema",
@@ -126,7 +139,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎞️",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "world-cinema",
@@ -135,7 +149,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎬",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "ru-tv-90s-00s",
@@ -144,7 +159,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📺",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "ru-series",
@@ -153,7 +169,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🛋️",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": false
   },
   {
     "slug": "world-series",
@@ -162,7 +179,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🍿",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "cartoons",
@@ -171,7 +189,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🐻",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "ads-90s-00s",
@@ -180,7 +199,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📢",
     "group": "Кино и ТВ",
     "groupEn": "Film & TV",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": false
   },
   {
     "slug": "ru-pop-90s",
@@ -189,7 +209,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "💿",
     "group": "Музыка",
     "groupEn": "Music",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "ru-pop-00s",
@@ -198,7 +219,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎤",
     "group": "Музыка",
     "groupEn": "Music",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": true
   },
   {
     "slug": "ru-rock",
@@ -207,7 +229,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎸",
     "group": "Музыка",
     "groupEn": "Music",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": "POST_SOVIET",
+    "featured": false
   },
   {
     "slug": "world-pop",
@@ -216,7 +239,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎧",
     "group": "Музыка",
     "groupEn": "Music",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "eurovision",
@@ -225,7 +249,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🌟",
     "group": "Музыка",
     "groupEn": "Music",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "music-now",
@@ -234,7 +259,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎙️",
     "group": "Музыка",
     "groupEn": "Music",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "old-internet",
@@ -243,7 +269,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "💾",
     "group": "Интернет и игры",
     "groupEn": "Internet & games",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "internet-now",
@@ -252,7 +279,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📱",
     "group": "Интернет и игры",
     "groupEn": "Internet & games",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "videogames",
@@ -261,7 +289,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🎮",
     "group": "Интернет и игры",
     "groupEn": "Internet & games",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "fandoms",
@@ -270,7 +299,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🧙",
     "group": "Интернет и игры",
     "groupEn": "Internet & games",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "food",
@@ -279,7 +309,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🍲",
     "group": "Жизнь",
     "groupEn": "Life",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "fashion-brands",
@@ -288,7 +319,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "👗",
     "group": "Жизнь",
     "groupEn": "Life",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "celebrities",
@@ -297,7 +329,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "📸",
     "group": "Жизнь",
     "groupEn": "Life",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "football",
@@ -306,7 +339,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "⚽",
     "group": "Жизнь",
     "groupEn": "Life",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "sports",
@@ -315,7 +349,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🏅",
     "group": "Жизнь",
     "groupEn": "Life",
-    "impliedContext": null
+    "impliedContext": null,
+    "featured": false
   },
   {
     "slug": "british-culture",
@@ -324,7 +359,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🇬🇧",
     "group": "Британия и США",
     "groupEn": "Britain & the US",
-    "impliedContext": "UK"
+    "impliedContext": "UK",
+    "featured": true
   },
   {
     "slug": "american-pop-culture",
@@ -333,7 +369,8 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "🇺🇸",
     "group": "Британия и США",
     "groupEn": "Britain & the US",
-    "impliedContext": "US"
+    "impliedContext": "US",
+    "featured": true
   }
 ];
 

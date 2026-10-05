@@ -10,8 +10,13 @@ export type GameConfig = {
   disconnectGraceMs: number;
   softEndAfterMs: number;
   roomExpiryMs: number;
-  baseScore: number;
-  speedBonusMax: number;
+  /** A game is this many questions long (playtest 1: players need to see their progress). */
+  questionsPerGame: number;
+  /**
+   * Points for a correct answer by how much of the answer time was used: up to `fastUpTo` of it →
+   * `fast`, up to `midUpTo` → `mid`, later → `late`. Wrong or no answer → 0. Small, visible numbers.
+   */
+  points: { fast: number; mid: number; late: number; fastUpTo: number; midUpTo: number };
   /** Below this many active players, single-person stats are hidden (BR-129). */
   singlePersonStatsMinPlayers: number;
 };
@@ -25,7 +30,15 @@ export const DEFAULT_CONFIG: GameConfig = {
   disconnectGraceMs: 25_000,
   softEndAfterMs: 30 * 60_000,
   roomExpiryMs: 6 * 60 * 60_000,
-  baseScore: 1000,
-  speedBonusMax: 150,
+  questionsPerGame: 20,
+  points: { fast: 3, mid: 2, late: 1, fastUpTo: 0.5, midUpTo: 0.75 },
   singlePersonStatsMinPlayers: 4,
 };
+
+/** Points for one answer (see GameConfig.points). */
+export function pointsFor(config: GameConfig, correct: boolean, responseMs: number, answerMs: number): number {
+  if (!correct) return 0;
+  const used = answerMs > 0 ? responseMs / answerMs : 1;
+  const p = config.points;
+  return used <= p.fastUpTo ? p.fast : used <= p.midUpTo ? p.mid : p.late;
+}

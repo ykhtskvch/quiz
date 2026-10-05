@@ -150,8 +150,10 @@ const maxResult = await maxWs.waitFor("PERSONAL_RESULT");
 const annaRight = reveal.correctKey === "B";
 const maxRight = reveal.correctKey === "A";
 const pts = annaResult.payload.result.points;
-check(annaResult.payload.result.correct === annaRight && (annaRight ? pts > 1000 && pts <= 1150 : pts === 0), `Аня: ${annaRight ? "correct" : "wrong"}, ${pts} points`);
-check(maxResult.payload.result.correct === maxRight && (maxRight ? maxResult.payload.result.points > 1000 : maxResult.payload.result.points === 0), `Макс: ${maxRight ? "correct" : "wrong"}, ${maxResult.payload.result.points} points`);
+// 3 / 2 / 1 for a right answer depending on speed, 0 for a wrong one.
+const validPoints = (right: boolean, p: number) => (right ? [1, 2, 3].includes(p) : p === 0);
+check(annaResult.payload.result.correct === annaRight && validPoints(annaRight, pts), `Аня: ${annaRight ? "correct" : "wrong"}, ${pts} points`);
+check(maxResult.payload.result.correct === maxRight && validPoints(maxRight, maxResult.payload.result.points), `Макс: ${maxRight ? "correct" : "wrong"}, ${maxResult.payload.result.points} points`);
 check(!display.events.some((e) => e.type === "PERSONAL_RESULT" || e.type === "ANSWER_ACCEPTED"), "display gets no private events");
 check(![...display.raw, ...annaWs.raw].some((r) => /heroPlayerId|"selection"|composition/.test(r)), "no engine internals reach any client");
 

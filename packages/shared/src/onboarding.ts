@@ -25,7 +25,9 @@ export type OnboardingInput = {
   dignity: DignityChoice;
 };
 
-export const MAX_LIKED_TOPICS = 12;
+/** Playtest 1: a limit makes each choice mean something — "less of" everything changes nothing. */
+export const MAX_LIKED_TOPICS = 5;
+export const MAX_LESS_TOPICS = 5;
 
 const topicSlugs = new Set(TOPICS.map((t) => t.slug));
 
@@ -57,6 +59,7 @@ export function parseOnboarding(raw: unknown): { ok: true; value: OnboardingInpu
   const liked = topics.filter((t) => t.preference === "LIKE").length;
   if (liked === 0) return { ok: false, error: "pick at least one topic" };
   if (liked > MAX_LIKED_TOPICS) return { ok: false, error: `at most ${MAX_LIKED_TOPICS} topics` };
+  if (topics.length - liked > MAX_LESS_TOPICS) return { ok: false, error: `at most ${MAX_LESS_TOPICS} "less of" topics` };
 
   let backgrounds: BackgroundContext[] | null = null;
   if (r.backgrounds !== null && r.backgrounds !== undefined) {

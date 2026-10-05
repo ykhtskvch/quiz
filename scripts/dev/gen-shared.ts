@@ -19,6 +19,7 @@ const topics = taxonomy.topics.map((t) => ({
   group: t.group,
   groupEn: t.group_en,
   impliedContext: t.implied_context ?? null,
+  featured: t.level === "A",
 }));
 writeFileSync(
   "packages/shared/src/taxonomy.generated.ts",

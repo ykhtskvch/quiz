@@ -7,6 +7,8 @@ export type TaxonomyTopic = {
   groupEn: string;
   /** Used to infer a player's cultural background when they skip that step (D-01). */
   impliedContext: string | null;
+  /** Level-A topic: shown in onboarding before "show all topics". */
+  featured: boolean;
 };
 
 export type TaxonomyContext = { code: string; name: string; parent: string | null };

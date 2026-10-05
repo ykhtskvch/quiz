@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import {
   AGE_BANDS,
   BACKGROUND_CONTEXTS,
+  MAX_LESS_TOPICS,
   MAX_LIKED_TOPICS,
   TOPICS,
   type AgeBand,
@@ -51,10 +52,16 @@ export function Onboarding({
   const [liked, setLiked] = useState<Map<string, Depth>>(
     () =>
       new Map(
-        initial?.topics.flatMap((x) => (x.preference === "LIKE" && topicBySlug.has(x.slug) ? [[x.slug, x.depth] as const] : [])) ?? [],
+        // Older answers could have up to 12 topics; keep the first ones within today's limit.
+        (initial?.topics.flatMap((x) => (x.preference === "LIKE" && topicBySlug.has(x.slug) ? [[x.slug, x.depth] as const] : [])) ?? []).slice(
+          0,
+          MAX_LIKED_TOPICS,
+        ),
       ),
   );
-  const [less, setLess] = useState<Set<string>>(() => new Set(initial?.topics.filter((x) => x.preference === "LESS_OF").map((x) => x.slug)));
+  const [less, setLess] = useState<Set<string>>(
+    () => new Set(initial?.topics.filter((x) => x.preference === "LESS_OF").map((x) => x.slug).slice(0, MAX_LESS_TOPICS)),
+  );
   const [backgrounds, setBackgrounds] = useState<Set<BackgroundContext>>(() => new Set(initial?.backgrounds ?? []));
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -142,6 +149,7 @@ export function Onboarding({
           <TopicGrid
             topics={offered}
             selected={new Set(liked.keys())}
+            max={MAX_LIKED_TOPICS}
             onToggle={(slug) => {
               const copy = new Map(liked);
               if (copy.has(slug)) copy.delete(slug);
@@ -182,8 +190,15 @@ export function Onboarding({
       {step === "less" && (
         <>
           <h2>{t.lessTitle}</h2>
-          <p className="muted small">{t.lessHint}</p>
-          <TopicGrid topics={offered} selected={less} exclude={new Set(liked.keys())} variant="less" onToggle={(slug) => setLess(toggle(less, slug))} />
+          <p className="muted small">{t.lessHint(MAX_LESS_TOPICS)}</p>
+          <TopicGrid
+            topics={offered}
+            selected={less}
+            exclude={new Set(liked.keys())}
+            variant="less"
+            max={MAX_LESS_TOPICS}
+            onToggle={(slug) => setLess(less.has(slug) || less.size < MAX_LESS_TOPICS ? toggle(less, slug) : less)}
+          />
           <StickyNext onClick={next} label={less.size ? t.next : t.skipStep} />
         </>
       )}
@@ -226,27 +241,33 @@ export function Onboarding({
   );
 }
 
+/**
+ * Main (level-A) topics first; the rest behind "show all" so the list isn't a wall (playtest 1).
+ * Anything already selected always stays visible. At `max` selections the other cards lock.
+ */
 function TopicGrid({
   topics: all,
   selected,
   exclude,
   onToggle,
+  max,
   variant = "like",
 }: {
   topics: typeof TOPICS;
   selected: Set<string>;
   exclude?: Set<string>;
   onToggle: (slug: string) => void;
+  max: number;
   variant?: "like" | "less";
 }) {
+  const t = useT();
   const lang = useLanguage();
-  const byGroup = useMemo(
-    () =>
-      [...new Set(all.map((x) => x.group))]
-        .map((g) => ({ group: g, topics: all.filter((x) => x.group === g && !exclude?.has(x.slug)) }))
-        .filter((g) => g.topics.length),
-    [all, exclude],
-  );
+  const [expanded, setExpanded] = useState(false);
+  const pool = useMemo(() => all.filter((x) => !exclude?.has(x.slug)), [all, exclude]);
+  const shown = expanded ? pool : pool.filter((x) => x.featured || selected.has(x.slug));
+  const hidden = pool.length - shown.length;
+  const full = selected.size >= max;
+  const byGroup = [...new Set(shown.map((x) => x.group))].map((g) => ({ group: g, topics: shown.filter((x) => x.group === g) }));
   return (
     <div className="topic-groups">
       {byGroup.map(({ group, topics }) => (
@@ -258,6 +279,7 @@ function TopicGrid({
                 key={x.slug}
                 className={`topic-card ${selected.has(x.slug) ? `selected ${variant}` : ""}`}
                 aria-pressed={selected.has(x.slug)}
+                disabled={full && !selected.has(x.slug)}
                 onClick={() => onToggle(x.slug)}
               >
                 <span className="emoji" aria-hidden>
@@ -269,6 +291,12 @@ function TopicGrid({
           </div>
         </div>
       ))}
+      {full && <p className="muted small">{t.limitReached(max)}</p>}
+      {hidden > 0 && (
+        <button className="link show-all" onClick={() => setExpanded(true)}>
+          {t.showAllTopics(hidden)}
+        </button>
+      )}
     </div>
   );
 }

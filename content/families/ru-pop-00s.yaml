@@ -7,7 +7,7 @@ families:
     facts:
       - id: tatu-eurovision-2003-place
         statement: "На «Евровидении-2003» t.A.T.u. с песней «Не верь, не бойся» заняли 3-е место (164 балла)."
-        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2003", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2003", type: REFERENCE, verified: false } ]
         questions:
           - id: tatu-eurovision-2003-place-ru-1
             language: ru
@@ -31,7 +31,7 @@ families:
 
       - id: tatu-members
         statement: "Участницы t.A.T.u. — Юлия Волкова и Елена Катина; обе до этого пели в ансамбле «Непоседы»."
-        sources: [{ name: "Википедия: t.A.T.u.", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: t.A.T.u.", type: REFERENCE, verified: false } ]
         questions:
           - id: tatu-members-ru-1
             language: ru
@@ -55,7 +55,7 @@ families:
 
       - id: tatu-producer
         statement: "Продюсер и автор концепции t.A.T.u. — Иван Шаповалов."
-        sources: [{ name: "Википедия: Шаповалов, Иван Николаевич", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Шаповалов, Иван Николаевич", type: REFERENCE, verified: false } ]
         questions:
           - id: tatu-producer-ru-1
             language: ru
@@ -84,7 +84,7 @@ families:
     facts:
       - id: fabrika-zvezd-channel
         statement: "«Фабрика звёзд» выходила на Первом канале; первый сезон — 2002 год."
-        sources: [{ name: "Википедия: Фабрика звёзд (Россия)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Фабрика звёзд (Россия)", type: REFERENCE, verified: false } ]
         questions:
           - id: fabrika-zvezd-channel-ru-1
             language: ru
@@ -108,7 +108,7 @@ families:
 
       - id: fabrika-zvezd-1-winner
         statement: "Победитель первой «Фабрики звёзд» (2002) — группа «Корни»."
-        sources: [{ name: "Википедия: Фабрика звёзд 1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Фабрика звёзд 1", type: REFERENCE, verified: true } ]
         questions:
           - id: fabrika-zvezd-1-winner-ru-1
             language: ru
@@ -124,17 +124,19 @@ families:
             topics: { ru-pop-00s: 1.0, ru-tv-90s-00s: 0.6 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
             generations: { 00s: 1.0 }
-            difficulty: 3
+            difficulty: 1
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: подтверждено (ru.wikipedia: Фабрика звёзд) — победители 1-го сезона «Корни»."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: fabrika-zvezd-host
         statement: "Ведущая первых сезонов «Фабрики звёзд» — Яна Чурикова."
-        sources: [{ name: "Википедия: Чурикова, Яна Александровна", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Чурикова, Яна Александровна", type: REFERENCE, verified: false } ]
         questions:
           - id: fabrika-zvezd-host-ru-1
             language: ru
@@ -158,7 +160,7 @@ families:
 
       - id: fabrika-zvezd-format
         statement: "«Фабрика звёзд» — российская адаптация формата Star Academy."
-        sources: [{ name: "Википедия: Star Academy", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Star Academy", type: REFERENCE, verified: false } ]
         questions:
           - id: fabrika-zvezd-format-ru-1
             language: ru
@@ -186,7 +188,7 @@ families:
     facts:
       - id: timati-banda
         statement: "Тимати участвовал в «Фабрике звёзд-4» (2004) в составе группы «Банда»."
-        sources: [{ name: "Википедия: Тимати", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Тимати", type: REFERENCE, verified: true } ]
         questions:
           - id: timati-banda-ru-1
             language: ru
@@ -205,15 +207,19 @@ families:
             difficulty: 3
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 1.0, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: via-gra
     name: "«ВИА Гра»"
     facts:
       - id: via-gra-founder
         statement: "Группу «ВИА Гра» в 2000 году создали Константин Меладзе и Дмитрий Костюк; Меладзе — автор большинства песен."
-        sources: [{ name: "Википедия: ВИА Гра", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: ВИА Гра", type: REFERENCE, verified: false } ]
         questions:
           - id: via-gra-founder-ru-1
             language: ru
@@ -237,7 +243,7 @@ families:
 
       - id: via-gra-first-singer
         statement: "Алёна Винницкая — участница «ВИА Гры» с момента основания (2000); Вера Брежнева и Анна Седокова пришли в 2002 году."
-        sources: [{ name: "Википедия: ВИА Гра", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: ВИА Гра", type: REFERENCE, verified: false } ]
         questions:
           - id: via-gra-first-singer-ru-1
             language: ru
@@ -261,7 +267,7 @@ families:
 
       - id: via-gra-name
         statement: "Название «ВИА Гра» обыгрывает советскую аббревиатуру ВИА — вокально-инструментальный ансамбль."
-        sources: [{ name: "Википедия: Вокально-инструментальный ансамбль", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Вокально-инструментальный ансамбль", type: REFERENCE, verified: false } ]
         questions:
           - id: via-gra-name-ru-1
             language: ru
@@ -289,7 +295,7 @@ families:
     facts:
       - id: serebro-producer
         statement: "Продюсер группы «Серебро» — Максим Фадеев; на «Евровидении-2007» группа заняла 3-е место с песней Song #1."
-        sources: [{ name: "Википедия: Серебро (группа)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Серебро (группа)", type: REFERENCE, verified: false } ]
         questions:
           - id: serebro-producer-ru-1
             language: ru
@@ -316,7 +322,7 @@ families:
     facts:
       - id: dima-bilan-eurovision-2008
         statement: "Дима Билан победил на «Евровидении-2008» в Белграде с песней Believe."
-        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2008", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2008", type: REFERENCE, verified: false } ]
         questions:
           - id: dima-bilan-eurovision-2008-ru-1
             language: ru
@@ -340,7 +346,7 @@ families:
 
       - id: dima-bilan-real-name
         statement: "Настоящее имя Димы Билана — Виктор Белан."
-        sources: [{ name: "Википедия: Дима Билан", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Дима Билан", type: REFERENCE, verified: true } ]
         questions:
           - id: dima-bilan-real-name-ru-1
             language: ru
@@ -356,20 +362,22 @@ families:
             topics: { ru-pop-00s: 1.0, celebrities: 0.5 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_2000S: 1.0 }
             generations: { 00s: 1.0 }
-            difficulty: 4
+            difficulty: 2
             dignity: 1
             effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: подтверждено (ru.wikipedia: Дима Билан) — имя сменил официально в июне 2008."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: uma2rman
     name: "Uma2rman"
     facts:
       - id: uma2rman-founders
         statement: "Группу Uma2rman основали братья Владимир и Сергей Кристовские из Нижнего Новгорода."
-        sources: [{ name: "Википедия: Uma2rman", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Uma2rman", type: REFERENCE, verified: false } ]
         questions:
           - id: uma2rman-founders-ru-1
             language: ru
@@ -393,7 +401,7 @@ families:
 
       - id: uma2rman-nochnoy-dozor
         statement: "Uma2rman записали песню «Ночной дозор» для одноимённого фильма Тимура Бекмамбетова (2004)."
-        sources: [{ name: "Википедия: Ночной дозор (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ночной дозор (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: uma2rman-nochnoy-dozor-ru-1
             language: ru
@@ -420,7 +428,7 @@ families:
     facts:
       - id: zveri-rayony-kvartaly
         statement: "Песню «Районы-кварталы» исполняет группа «Звери»."
-        sources: [{ name: "Википедия: Звери (группа)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Звери (группа)", type: REFERENCE, verified: false } ]
         questions:
           - id: zveri-rayony-kvartaly-ru-1
             language: ru
@@ -444,7 +452,7 @@ families:
 
       - id: zveri-roma-real-name
         statement: "Настоящее имя Ромы Зверя — Роман Билык; он родом из Таганрога."
-        sources: [{ name: "Википедия: Рома Зверь", type: REFERENCE, verified: true }]
+        sources: [ { name: "Википедия: Рома Зверь", type: REFERENCE, verified: true } ]
         questions:
           - id: zveri-roma-real-name-ru-1
             language: ru
@@ -475,7 +483,7 @@ families:
     facts:
       - id: seryoga-chorny-bumer
         statement: "Песню «Чёрный бумер» исполняет рэпер Серёга."
-        sources: [{ name: "Википедия: Серёга", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Серёга", type: REFERENCE, verified: false } ]
         questions:
           - id: seryoga-chorny-bumer-ru-1
             language: ru
@@ -504,7 +512,7 @@ families:
     facts:
       - id: glukoza-animated-image
         statement: "В первых клипах проекта Глюк'oZa (2002–2003) вместо певицы был нарисованный мультипликационный персонаж."
-        sources: [{ name: "Википедия: Глюк’oZa", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Глюк’oZa", type: REFERENCE, verified: false } ]
         questions:
           - id: glukoza-animated-image-ru-1
             language: ru
@@ -531,7 +539,7 @@ families:
     facts:
       - id: mumiy-troll-eurovision-2001
         statement: "На «Евровидении-2001» Россию представлял «Мумий Тролль» с песней Lady Alpine Blue (12-е место)."
-        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2001", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2001", type: REFERENCE, verified: false } ]
         questions:
           - id: mumiy-troll-eurovision-2001-ru-1
             language: ru
@@ -555,7 +563,7 @@ families:
 
       - id: alsu-eurovision-2000
         statement: "Алсу заняла 2-е место на «Евровидении-2000» с песней Solo — первый «серебряный» результат России."
-        sources: [{ name: "Википедия: Россия на конкурсе песни Евровидение 2000", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2000", type: REFERENCE, verified: false } ]
         questions:
           - id: alsu-eurovision-2000-ru-1
             language: ru
@@ -582,7 +590,7 @@ families:
     facts:
       - id: polina-gagarina-fabrika-2
         statement: "Полина Гагарина победила во второй «Фабрике звёзд» (2003), а в 2015 году заняла 2-е место на «Евровидении» с песней A Million Voices."
-        sources: [{ name: "Википедия: Гагарина, Полина Сергеевна", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Гагарина, Полина Сергеевна", type: REFERENCE, verified: false } ]
         questions:
           - id: polina-gagarina-fabrika-2-ru-1
             language: ru
@@ -609,7 +617,7 @@ families:
     facts:
       - id: smash-members
         statement: "В дуэт Smash!! входили Сергей Лазарев и Влад Топалов; известность им принёс кавер на песню Belle."
-        sources: [{ name: "Википедия: Smash!!", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Smash!!", type: REFERENCE, verified: false } ]
         questions:
           - id: smash-members-ru-1
             language: ru
@@ -638,7 +646,7 @@ families:
     facts:
       - id: maksim-znaesh-li-ty
         statement: "Хит середины 2000-х «Знаешь ли ты» исполняет певица МакSим из Казани."
-        sources: [{ name: "Википедия: МакSим", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: МакSим", type: REFERENCE, verified: false } ]
         questions:
           - id: maksim-znaesh-li-ty-ru-1
             language: ru

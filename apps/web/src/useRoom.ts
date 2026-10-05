@@ -36,7 +36,7 @@ function apply(s: Snapshot, e: ServerEvent): Snapshot {
       return {
         ...next,
         room: { ...s.room, status: "ACTIVE" },
-        game: { number: e.payload.number, status: "ACTIVE", softEndSuggested: false },
+        game: { number: e.payload.number, status: "ACTIVE", softEndSuggested: false, totalQuestions: e.payload.totalQuestions },
         question: null,
         reveal: null,
         results: null,

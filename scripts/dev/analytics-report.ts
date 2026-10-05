@@ -34,7 +34,8 @@ const [sessions] = query<{ games: number; players: number; questions: number; mi
          AVG(players) AS players,
          AVG(questions_played) AS questions,
          AVG((ended_at - started_at) / 60000.0) AS minutes,
-         AVG(CASE WHEN ended_by = 'HOST' AND ended_at - started_at < 25 * 60000 THEN 1.0 ELSE 0 END) AS early
+         -- A game is a fixed number of questions; the host ending it before that is an early finish.
+         AVG(CASE WHEN ended_by = 'HOST' THEN 1.0 ELSE 0 END) AS early
   FROM game_sessions`);
 
 // ---------- core KPI: Play Again Intent ----------

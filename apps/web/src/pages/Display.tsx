@@ -1,7 +1,7 @@
 // Shared screen: lobby with QR, question phases, reveal, final results. Read-only — it never sends commands.
 import { useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
-import type { GameResults, Snapshot } from "@quiz/shared";
+import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
 import { PhaseBar, StatCards } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
@@ -83,6 +83,9 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
           </ul>
         )}
         <p className="muted small">{t.hostHint}</p>
+        <p className="scoring-rules">
+          {t.gameLength(DEFAULT_CONFIG.questionsPerGame)} {t.scoringRules}
+        </p>
       </section>
     </div>
   );
@@ -97,7 +100,7 @@ function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
   return (
     <div className="question-view">
       <div className="question-head">
-        <p className="muted">{t.question(q.number)}</p>
+        <p className="muted">{t.question(q.number, s.game?.totalQuestions ?? q.number)}</p>
         {q.phase === "ANSWERING" && <p className="counter">{t.answered(q.answered, q.activePlayers)}</p>}
       </div>
       <h1 className="question-text">{q.text}</h1>

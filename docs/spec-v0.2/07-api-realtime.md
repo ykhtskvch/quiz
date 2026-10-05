@@ -281,13 +281,14 @@ Dynamic selection учитывает actual accuracy, late join, topic streaks, 
 Deterministic, server-side. Input: `is_correct, response_time_ms, answer_window_ms`.
 
 ```
-base_score     = is_correct ? 1000 : 0
-remaining      = max(0, 1 − response_time_ms / answer_window_ms)
-speed_bonus    = is_correct ? round(150 × remaining) : 0
-total          = voided ? 0 : base_score + speed_bonus
+used   = response_time_ms / answer_window_ms
+points = !is_correct || voided ? 0
+       : used ≤ 0.5  ? 3
+       : used ≤ 0.75 ? 2
+       :               1
 ```
 
-При 15 с: 2 с → ≈ 130, 8 с → ≈ 70, 14 с → ≈ 10. Кривая — OBR-001.
+При 15 с: до 7,5 с → 3, до 11,25 с → 2, позже → 1. Маленькие числа, которые видно и легко посчитать (плейтест 1). Раньше: 1000 + до 150 за скорость.
 
 **Reading-speed fairness:** knowledge > reading speed — системное правило; бонус остаётся малой долей score.
 

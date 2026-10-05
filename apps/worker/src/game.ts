@@ -7,6 +7,7 @@ import {
   type BankQuestion,
   type BroadcastEvent,
   type GameConfig,
+  pointsFor,
   type GameResults,
   type GameStatus,
   type Language,
@@ -53,7 +54,7 @@ export type Player = {
   disconnectedAt: number | null;
 };
 
-export type Answer = { key: OptionKey; responseMs: number; base: number; bonus: number; voided: boolean };
+export type Answer = { key: OptionKey; responseMs: number; points: number; voided: boolean };
 
 export type QuestionRun = {
   number: number;
@@ -91,6 +92,8 @@ export type Game = {
   questions: QuestionRun[];
   paused: { kind: PhaseDeadline; remainingMs: number } | null;
   softEndSuggested: boolean;
+  /** Fixed at start so a config change never moves the goalposts mid-game. */
+  totalQuestions: number;
   results: GameResults | null;
   /** Aggregated private preferences; backend-only input for the Composition Engine. */
   profile: GroupProfile | null;
@@ -102,7 +105,7 @@ export type Game = {
 };
 
 /** Bump when RoomState changes shape; rooms stored in an older shape are treated as closed. */
-export const ROOM_STATE_VERSION = 6;
+export const ROOM_STATE_VERSION = 7;
 
 /** `activeFrom` for a player who hasn't finished onboarding during a game. */
 export const NOT_YET = Number.MAX_SAFE_INTEGER;
@@ -261,7 +264,7 @@ export class Room {
     if (existing) return ok({ optionKey: existing.key });
 
     this.touch(now);
-    q.answers[playerId] = { key, responseMs: Math.max(0, now - (q.answeringStartedAt ?? now)), base: 0, bonus: 0, voided: false };
+    q.answers[playerId] = { key, responseMs: Math.max(0, now - (q.answeringStartedAt ?? now)), points: 0, voided: false };
     this.private(playerId, { type: "ANSWER_ACCEPTED", payload: { optionKey: key } });
     this.broadcastCounts(now);
     if (this.allAnswered(q, now)) this.closeAnswering(q, now);
@@ -386,7 +389,7 @@ export class Room {
           }
         : { role: "display" },
       room: { code: this.s.code, language: this.s.language, status: this.roomStatus(), players: this.s.players.map((p) => this.publicPlayer(p)) },
-      game: g ? { number: g.number, status: g.status, softEndSuggested: g.softEndSuggested } : null,
+      game: g ? { number: g.number, status: g.status, softEndSuggested: g.softEndSuggested, totalQuestions: g.totalQuestions } : null,
       question: g?.status === "FINISHED" ? null : this.publicQuestion(now),
       reveal: q?.phase === "REVEALED" && g?.status !== "FINISHED" ? this.revealData(q) : null,
       mine: me
@@ -446,6 +449,7 @@ export class Room {
       questions: [],
       paused: null,
       softEndSuggested: false,
+      totalQuestions: this.config.questionsPerGame,
       results: null,
       profile: this.buildProfile(),
       composition: emptyCompositionState(),
@@ -454,7 +458,7 @@ export class Room {
     };
     this.s.deadlines = this.s.deadlines.filter((d) => d.kind === "EXPIRY" || d.kind === "DISCONNECT_GRACE");
     this.s.deadlines.push({ kind: "SOFT_END", at: now + this.config.softEndAfterMs });
-    this.broadcast({ type: "GAME_STARTED", seq: 0, payload: { number } });
+    this.broadcast({ type: "GAME_STARTED", seq: 0, payload: { number, totalQuestions: this.s.game.totalQuestions } });
     this.presentNext(now);
   }
 
@@ -462,6 +466,7 @@ export class Room {
     const g = this.s.game!;
     const prev = g.questions.at(-1);
     const number = (prev?.number ?? 0) + 1;
+    if (number > g.totalQuestions) return this.finishGame(now, "COMPLETED");
     const ready = this.s.players.filter((p) => p.onboarding && p.activeFrom <= number);
     const live = ready.filter((p) => p.connected || (p.disconnectedAt !== null && now - p.disconnectedAt < this.config.disconnectGraceMs));
     const selection = nextQuestion({
@@ -530,10 +535,7 @@ export class Room {
     this.clearPhaseDeadlines();
     q.phase = "REVEALED";
     for (const a of Object.values(q.answers)) {
-      const correct = a.key === q.correctKey;
-      a.base = correct ? this.config.baseScore : 0;
-      const remaining = Math.max(0, 1 - a.responseMs / q.answerMs);
-      a.bonus = correct ? Math.round(this.config.speedBonusMax * remaining) : 0;
+      a.points = pointsFor(this.config, a.key === q.correctKey, a.responseMs, q.answerMs);
     }
     const g = this.s.game!;
     const answers = Object.values(q.answers);
@@ -569,12 +571,11 @@ export class Room {
     q.phase = phase;
     for (const a of Object.values(q.answers)) {
       a.voided = true;
-      a.base = 0;
-      a.bonus = 0;
+      a.points = 0;
     }
   }
 
-  private finishGame(now: number, endedBy: "HOST" | "BANK_EXHAUSTED") {
+  private finishGame(now: number, endedBy: "COMPLETED" | "HOST" | "BANK_EXHAUSTED") {
     const g = this.s.game!;
     this.clearPhaseDeadlines();
     this.s.deadlines = this.s.deadlines.filter((d) => d.kind !== "SOFT_END");
@@ -613,8 +614,8 @@ export class Room {
         return {
           playerId: p.id,
           nickname: p.nickname,
-          score: mine.reduce((sum, a) => sum + a.base + a.bonus, 0),
-          correct: mine.filter((a) => a.base > 0).length,
+          score: mine.reduce((sum, a) => sum + a.points, 0),
+          correct: mine.filter((a) => a.points > 0).length,
           attempted: revealed.filter((q) => q.number >= p.activeFrom).length,
         };
       })
@@ -696,7 +697,7 @@ export class Room {
   }
 
   private personalResult(q: QuestionRun, a: Answer): PersonalResult {
-    return { correct: a.key === q.correctKey, baseScore: a.base, speedBonus: a.bonus, points: a.base + a.bonus };
+    return { correct: a.key === q.correctKey, points: a.points };
   }
 
   private totalScore(playerId: string): number {
@@ -704,7 +705,7 @@ export class Room {
     if (!g) return 0;
     return g.questions.reduce((sum, q) => {
       const a = q.answers[playerId];
-      return q.phase === "REVEALED" && a ? sum + a.base + a.bonus : sum;
+      return q.phase === "REVEALED" && a ? sum + a.points : sum;
     }, 0);
   }
 

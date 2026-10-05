@@ -20219,7 +20219,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "nutcracker-tchaikovsky-en-1",
@@ -20264,7 +20264,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "tetris-korobeiniki-en-1",
@@ -20310,7 +20310,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "tatu-uk-number-one-en-1",
@@ -20407,7 +20407,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "borscht-beetroot-en-1",
@@ -20452,7 +20452,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "cheetah-fastest-ru-1",
@@ -22362,14 +22362,14 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 3,
+    "difficulty": 1,
     "dignity": 1,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 1,
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "fabrika-zvezd-host-ru-1",
@@ -22516,7 +22516,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "via-gra-founder-ru-1",
@@ -22800,14 +22800,14 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 4,
+    "difficulty": 2,
     "dignity": 1,
     "effects": {
       "I_KNOW_THIS": 1,
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "uma2rman-founders-ru-1",
@@ -29585,7 +29585,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "jwst-launch-ru-1",

@@ -47,10 +47,10 @@ const onboarding: OnboardingInput = {
 };
 
 /** A room with N connected, onboarded players, game started at t=0, first question presenting. */
-function setup(nPlayers = 2) {
-  const state: RoomState = newRoomState("ABCDEF", "display-hash", 0, config);
+function setup(nPlayers = 2, cfg: GameConfig = config) {
+  const state: RoomState = newRoomState("ABCDEF", "display-hash", 0, cfg);
   const ids: string[] = [];
-  const at = (s: RoomState) => new Room(s, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
+  const at = (s: RoomState) => new Room(s, cfg, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
   for (let i = 0; i < nPlayers; i++) {
     const r = at(state);
     const p = r.join(`P${i}`, `p${i}`, `hash${i}`, 0);
@@ -97,16 +97,30 @@ describe("question cycle", () => {
     expect(q(state).phase).toBe("REVEALED");
   });
 
-  it("scores 1000 + up to 150 for speed, nothing for wrong answers", () => {
-    const { state, ids, room } = setup(3);
-    room().tick(3000);
-    room().answer(ids[0], "B", 3000); // instant
-    room().answer(ids[1], "B", 10_500); // half the window
-    room().answer(ids[2], "C", 3500); // wrong
+  it("scores 3 / 2 / 1 by speed for a correct answer and 0 for a wrong one", () => {
+    const { state, ids, room } = setup(5);
+    room().tick(3000); // answering opens; the window is 15 s
+    room().answer(ids[0], "B", 3000); // instant → 3
+    room().answer(ids[1], "B", 10_500); // exactly half the window → still 3
+    room().answer(ids[2], "B", 12_000); // 60 % → 2
+    room().answer(ids[3], "B", 16_500); // 90 % → 1
+    room().answer(ids[4], "C", 3500); // wrong → 0
     const a = q(state).answers;
-    expect(a[ids[0]].base + a[ids[0]].bonus).toBe(1150);
-    expect(a[ids[1]].base + a[ids[1]].bonus).toBe(1075);
-    expect(a[ids[2]].base + a[ids[2]].bonus).toBe(0);
+    expect(ids.map((id) => a[id].points)).toEqual([3, 3, 2, 1, 0]);
+  });
+
+  it("ends the game by itself after the last question", () => {
+    const { state, ids, room } = setup(2, { ...config, questionsPerGame: 2 });
+    expect(state.game!.totalQuestions).toBe(2);
+    for (const t of [3000, 16_000]) {
+      room().tick(t); // answering opens
+      room().answer(ids[0], "B", t);
+      room().answer(ids[1], "B", t); // both answered → revealed
+      room().tick(t + 10_000); // reveal ends → next question, or the end
+    }
+    expect(state.game!.status).toBe("FINISHED");
+    expect(state.game!.results!.questionsPlayed).toBe(2);
+    expect(state.game!.results!.leaderboard.map((l) => l.score)).toEqual([6, 6]);
   });
 
   it("keeps the first answer on a repeated tap", () => {
@@ -166,7 +180,7 @@ describe("host controls", () => {
     expect(state.game!.status).toBe("FINISHED");
     expect(state.game!.questions[1].phase).toBe("CANCELLED");
     expect(results.questionsPlayed).toBe(1);
-    expect(results.leaderboard.map((l) => l.score)).toEqual([1150, 1150]);
+    expect(results.leaderboard.map((l) => l.score)).toEqual([3, 3]);
     expect(state.deadlines.every((d) => d.kind === "EXPIRY")).toBe(true);
   });
 

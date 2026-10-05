@@ -4,6 +4,11 @@ import { useSyncExternalStore } from "react";
 import type { Language } from "@quiz/shared";
 
 const ruNf = new Intl.NumberFormat("ru-RU");
+/** 1 очко, 2 очка, 5 очков. */
+function ruPlural(n: number, one: string, few: string, many: string) {
+  const m10 = n % 10, m100 = n % 100;
+  return m10 === 1 && m100 !== 11 ? one : m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14) ? few : many;
+}
 const enNf = new Intl.NumberFormat("en-GB");
 
 const ru = {
@@ -32,7 +37,7 @@ const ru = {
   youAreHost: "Ты управляешь игрой",
   start: "Начать",
   needTwoPlayers: "Нужно минимум 2 готовых игрока",
-  question: (n: number) => `Вопрос ${n}`,
+  question: (n: number, total: number) => `Вопрос ${n} из ${total}`,
   reading: "Читаем вопрос…",
   answered: (n: number, total: number) => `Ответили ${n} из ${total}`,
   answerAccepted: "Ответ принят",
@@ -57,7 +62,9 @@ const ru = {
   lookAtScreen: "Смотри на общий экран",
   results: "Итоги",
   winner: "Победитель",
-  score: (n: number) => ruNf.format(n),
+  score: (n: number) => `${ruNf.format(n)} ${ruPlural(n, "очко", "очка", "очков")}`,
+  gameLength: (n: number) => `Игра — ${n} ${ruPlural(n, "вопрос", "вопроса", "вопросов")}.`,
+  scoringRules: "Очки за верный ответ: 3 — в первой половине времени, 2 — до трёх четвертей, 1 — в самом конце. Неверно — 0.",
   correctOf: (c: number, a: number) => `${c} из ${a}`,
   yourPlace: (place: number, of: number) => `Твоё место: ${place} из ${of}`,
   playAgain: "Сыграть ещё",
@@ -78,13 +85,15 @@ const ru = {
   ageTitle: "Сколько тебе лет?",
   ageBand: { "13_17": "13–17", "18_24": "18–24", "25_34": "25–34", "35_44": "35–44", "45_54": "45–54", "55_PLUS": "55+" },
   topicsTitle: "Что тебе интересно?",
-  topicsHint: (max: number) => `Лучше 3–7 тем, максимум ${max}. Чем точнее, тем больше вопросов «про тебя».`,
+  topicsHint: (max: number) => `До ${max} тем. Чем точнее, тем больше вопросов «про тебя».`,
+  showAllTopics: (n: number) => `Показать все темы · ещё ${n}`,
+  limitReached: (max: number) => `Уже ${max} — сними одну, чтобы выбрать другую.`,
   nextWithCount: (n: number) => `Дальше · ${n}`,
   pickOne: "Выбери хотя бы одну тему",
   depthTitle: "Насколько хорошо ты в этом разбираешься?",
   depth: { CASUAL: "Немного", INTERESTED: "Люблю", EXPERT: "Знаток" },
   lessTitle: "Чего хочется поменьше?",
-  lessHint: "Эти темы будут попадаться реже, но не исчезнут совсем.",
+  lessHint: (max: number) => `До ${max} тем. Они будут попадаться реже, но не исчезнут совсем.`,
   skipStep: "Пропустить",
   backgroundTitle: "В какой культуре прошли твои детство и юность?",
   backgroundHint: "Можно выбрать несколько или пропустить.",
@@ -162,7 +171,7 @@ const en: Strings = {
   youAreHost: "You're running the game",
   start: "Start",
   needTwoPlayers: "Needs at least 2 ready players",
-  question: (n: number) => `Question ${n}`,
+  question: (n: number, total: number) => `Question ${n} of ${total}`,
   reading: "Reading the question…",
   answered: (n: number, total: number) => `${n} of ${total} answered`,
   answerAccepted: "Answer locked in",
@@ -187,7 +196,9 @@ const en: Strings = {
   lookAtScreen: "Look at the big screen",
   results: "Results",
   winner: "Winner",
-  score: (n: number) => enNf.format(n),
+  score: (n: number) => `${enNf.format(n)} ${n === 1 ? "point" : "points"}`,
+  gameLength: (n: number) => `A game is ${n} questions.`,
+  scoringRules: "Points for a right answer: 3 in the first half of the time, 2 up to three quarters, 1 at the very end. Wrong — 0.",
   correctOf: (c: number, a: number) => `${c} of ${a}`,
   yourPlace: (place: number, of: number) => `You placed ${place} of ${of}`,
   playAgain: "Play again",
@@ -207,13 +218,15 @@ const en: Strings = {
   ageTitle: "How old are you?",
   ageBand: { "13_17": "13–17", "18_24": "18–24", "25_34": "25–34", "35_44": "35–44", "45_54": "45–54", "55_PLUS": "55+" },
   topicsTitle: "What are you into?",
-  topicsHint: (max: number) => `3–7 topics works best, ${max} at most. The more honest, the more questions that are "yours".`,
+  topicsHint: (max: number) => `Up to ${max} topics. The more honest, the more questions that are "yours".`,
+  showAllTopics: (n: number) => `Show all topics · ${n} more`,
+  limitReached: (max: number) => `That's ${max} — unselect one to pick another.`,
   nextWithCount: (n: number) => `Next · ${n}`,
   pickOne: "Pick at least one topic",
   depthTitle: "How well do you know it?",
   depth: { CASUAL: "A bit", INTERESTED: "Love it", EXPERT: "Expert" },
   lessTitle: "Anything you'd like less of?",
-  lessHint: "These will come up less often, but won't disappear completely.",
+  lessHint: (max: number) => `Up to ${max} topics. They'll come up less often, but won't disappear completely.`,
   skipStep: "Skip",
   backgroundTitle: "Which culture did you grow up in?",
   backgroundHint: "Pick any that apply, or skip.",

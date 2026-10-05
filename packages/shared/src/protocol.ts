@@ -43,7 +43,7 @@ export type Reveal = {
   distribution: Record<OptionKey, number>;
 };
 
-export type PersonalResult = { correct: boolean; baseScore: number; speedBonus: number; points: number };
+export type PersonalResult = { correct: boolean; points: number };
 
 export type StatQuestion = { number: number; text: string; correctText: string };
 
@@ -75,7 +75,7 @@ export type Snapshot = {
         onboarding: OnboardingInput | null;
       };
   room: { code: string; language: Language; status: RoomStatus; players: PublicPlayer[] };
-  game: { number: number; status: GameStatus; softEndSuggested: boolean } | null;
+  game: { number: number; status: GameStatus; softEndSuggested: boolean; totalQuestions: number } | null;
   question: PublicQuestion | null;
   reveal: Reveal | null;
   /** Player-only: own answer/result for the current question and running total. */
@@ -95,7 +95,7 @@ export type ServerEvent =
   | { type: "SNAPSHOT"; payload: Snapshot }
   | { type: "PLAYER_JOINED"; seq: number; payload: { player: PublicPlayer } }
   | { type: "PLAYER_STATUS"; seq: number; payload: { playerId: string; status: PlayerStatus; ready: boolean } }
-  | { type: "GAME_STARTED"; seq: number; payload: { number: number } }
+  | { type: "GAME_STARTED"; seq: number; payload: { number: number; totalQuestions: number } }
   | { type: "QUESTION_PRESENTED"; seq: number; payload: { question: PublicQuestion } }
   | { type: "ANSWER_PHASE_STARTED"; seq: number; payload: { options: { key: OptionKey; text: string }[]; timing: PhaseTiming; activePlayers: number } }
   | { type: "ANSWER_COUNT_UPDATED"; seq: number; payload: { answered: number; activePlayers: number } }
@@ -154,7 +154,7 @@ export type AnalyticsEvent =
       endedAt: number;
       players: number;
       questionsPlayed: number;
-      endedBy: "HOST" | "BANK_EXHAUSTED";
+      endedBy: "COMPLETED" | "HOST" | "BANK_EXHAUSTED";
       softEndShown: boolean;
     }
   | { kind: "SESSION_FEEDBACK"; gameUid: string; at: number; feedback: SessionFeedbackInput }

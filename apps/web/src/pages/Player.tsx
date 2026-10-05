@@ -1,7 +1,7 @@
 // Phone: join → wait → answer → result → final place. Host controls appear for the first player.
 import { useEffect, useState } from "react";
 import type { HostCommand, OnboardingInput, OptionKey, Snapshot } from "@quiz/shared";
-import { NICKNAME_MAX } from "@quiz/shared";
+import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { PhaseBar } from "../components.tsx";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
@@ -157,6 +157,9 @@ function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: s
         <p className="big-text">{t.readyWait}</p>
         <p>{isHost ? t.youAreHost : t.waitingForHost}</p>
         <p className="muted">{t.readyCount(ready, s.room.players.length)}</p>
+        <p className="muted small">
+          {t.gameLength(DEFAULT_CONFIG.questionsPerGame)} {t.scoringRules}
+        </p>
         {isHost && (
           <button className="primary big" disabled={cmd.busy || !enough} onClick={() => cmd.host("start")}>
             {t.start}
@@ -239,7 +242,7 @@ function QuestionBody({
   if (q.phase === "PRESENTING") {
     return (
       <section className="center grow">
-        <p className="muted small">{t.question(q.number)}</p>
+        <p className="muted small">{t.question(q.number, s.game?.totalQuestions ?? q.number)}</p>
         <p className="phone-question">{q.text}</p>
         <p className="muted">{t.reading}</p>
         <PhaseBar timing={q.timing} timingAt={timingAt} />

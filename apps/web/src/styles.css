@@ -716,6 +716,16 @@ button.link {
   line-height: 1.2;
 }
 
+.topic-card:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.topic-groups .show-all {
+  display: block;
+  margin: 1rem auto 0;
+}
+
 .topic-card .emoji {
   font-size: 1.5rem;
 }
@@ -889,4 +899,13 @@ button.link {
 .lang-pick {
   display: grid;
   gap: 0.4rem;
+}
+
+.scoring-rules {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  background: var(--surface-2);
+  font-size: 0.95rem;
+  line-height: 1.4;
 }

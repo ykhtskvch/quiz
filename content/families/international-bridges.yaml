@@ -7,7 +7,7 @@ families:
     facts:
       - id: sputnik-meaning
         statement: "\"Sputnik\" means \"companion\" or \"fellow traveller\" in Russian."
-        sources: [{ name: "Wikipedia: Sputnik 1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Sputnik 1", type: REFERENCE, verified: false } ]
         questions:
           - id: sputnik-meaning-en-1
             language: en
@@ -33,7 +33,7 @@ families:
 
       - id: poyekhali
         statement: "Gagarin's famous word at launch, \"Poyekhali!\", means \"Let's go!\"."
-        sources: [{ name: "Wikipedia: Vostok 1", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Vostok 1", type: REFERENCE, verified: false } ]
         questions:
           - id: poyekhali-en-1
             language: en
@@ -59,7 +59,7 @@ families:
 
       - id: bolshoi-meaning
         statement: "\"Bolshoi\", as in the Bolshoi Theatre, means \"big\" or \"grand\"."
-        sources: [{ name: "Wikipedia: Bolshoi Theatre", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Bolshoi Theatre", type: REFERENCE, verified: false } ]
         questions:
           - id: bolshoi-meaning-en-1
             language: en
@@ -85,7 +85,7 @@ families:
 
       - id: matryoshka
         statement: "A matryoshka is a set of wooden nesting dolls."
-        sources: [{ name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: true } ]
         questions:
           - id: matryoshka-en-1
             language: en
@@ -104,15 +104,19 @@ families:
             difficulty: 1
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 1.0 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: russian-culture-abroad
     name: "Russian culture abroad"
     facts:
       - id: nutcracker-tchaikovsky
         statement: "The ballet The Nutcracker was composed by Pyotr Tchaikovsky (1892)."
-        sources: [{ name: "Wikipedia: The Nutcracker", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Nutcracker", type: REFERENCE, verified: true } ]
         questions:
           - id: nutcracker-tchaikovsky-en-1
             language: en
@@ -131,12 +135,16 @@ families:
             difficulty: 2
             dignity: 5
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: tetris-korobeiniki
         statement: "The famous Tetris (Game Boy) theme is the Russian folk song \"Korobeiniki\"."
-        sources: [{ name: "Wikipedia: Korobeiniki", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Korobeiniki", type: REFERENCE, verified: true } ]
         questions:
           - id: tetris-korobeiniki-en-1
             language: en
@@ -155,12 +163,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_KNOW_THIS: 0.8, WHY_DO_I_REMEMBER_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: tatu-uk-number-one
         statement: "t.A.T.u.'s \"All the Things She Said\" went to No. 1 in the UK in 2003."
-        sources: [{ name: "Wikipedia: All the Things She Said", type: REFERENCE, verified: true }]
+        sources: [ { name: "Wikipedia: All the Things She Said", type: REFERENCE, verified: true } ]
         questions:
           - id: tatu-uk-number-one-en-1
             language: en
@@ -189,7 +201,7 @@ families:
 
       - id: kasparov-deep-blue
         statement: "In 1997 IBM's Deep Blue beat world chess champion Garry Kasparov in a match."
-        sources: [{ name: "Wikipedia: Deep Blue versus Garry Kasparov", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Deep Blue versus Garry Kasparov", type: REFERENCE, verified: true } ]
         questions:
           - id: kasparov-deep-blue-en-1
             language: en
@@ -209,12 +221,16 @@ families:
             difficulty: 3
             dignity: 4
             effects: { I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: borscht-beetroot
         statement: "The main ingredient that gives borscht its red colour is beetroot."
-        sources: [{ name: "Wikipedia: Borscht", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Borscht", type: REFERENCE, verified: true } ]
         questions:
           - id: borscht-beetroot-en-1
             language: en
@@ -233,5 +249,9 @@ families:
             difficulty: 1
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05

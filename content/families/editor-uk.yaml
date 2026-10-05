@@ -8,7 +8,7 @@ families:
       - id: polanski-green-leader
         statement: "Zack Polanski was elected leader of the Green Party of England and Wales in September 2025."
         time_sensitive: true
-        sources: [{ name: "Green Party: people", type: REFERENCE, url: "https://greenparty.org.uk/about/people/national-executive/", verified: false }]
+        sources: [ { name: "Green Party: people", type: REFERENCE, url: "https://greenparty.org.uk/about/people/national-executive/", verified: true } ]
         questions:
           - id: polanski-green-leader-en-1
             language: en
@@ -18,7 +18,7 @@ families:
             options:
               - { key: A, text: "Reform UK", distractor: SAME_CATEGORY }
               - { key: B, text: "The Green Party of England and Wales", correct: true }
-              - { key: C, text: "Plaid Cymru", distractor: SAME_CATEGORY }
+              - { key: C, text: "The Brown Party", distractor: SAME_CATEGORY }
               - { key: D, text: "The Liberal Democrats", distractor: SAME_CATEGORY }
             explanation: "He was elected leader in September 2025."
             topics: { british-culture: 1.0 }
@@ -27,12 +27,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: ed-balls-day
         statement: "On 28 April 2011 Ed Balls accidentally tweeted just his own name, \"Ed Balls\"; the date became Ed Balls Day."
-        sources: [{ name: "The Guardian: ten tweets in need of an edit", type: REFERENCE, url: "https://www.theguardian.com/technology/2022/apr/09/twitter-ten-tweets-in-need-of-edit-covfefe-oscars-selfie", verified: false }]
+        sources: [ { name: "The Guardian: ten tweets in need of an edit", type: REFERENCE, url: "https://www.theguardian.com/technology/2022/apr/09/twitter-ten-tweets-in-need-of-edit-covfefe-oscars-selfie", verified: true } ]
         questions:
           - id: ed-balls-day-en-1
             language: en
@@ -51,12 +55,16 @@ families:
             difficulty: 4
             dignity: 2
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: truss-lettuce
         statement: "In October 2022 the Daily Star livestreamed a lettuce to see whether it would outlast Liz Truss as Prime Minister; it did."
-        sources: [{ name: "The Guardian: inside the Daily Star's lettuce triumph", type: REFERENCE, url: "https://www.theguardian.com/media/2022/oct/21/inside-story-daily-star-lettuce-triumph-liz-truss", verified: false }]
+        sources: [ { name: "The Guardian: inside the Daily Star's lettuce triumph", type: REFERENCE, url: "https://www.theguardian.com/media/2022/oct/21/inside-story-daily-star-lettuce-triumph-liz-truss", verified: true } ]
         questions:
           - id: truss-lettuce-en-1
             language: en
@@ -75,13 +83,17 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: larry-chief-mouser
         statement: "Larry the cat at 10 Downing Street holds the title Chief Mouser to the Cabinet Office, given in 2011."
         time_sensitive: true
-        sources: [{ name: "GOV.UK: History of 10 Downing Street", type: REFERENCE, url: "https://www.gov.uk/government/history/10-downing-street", verified: false }]
+        sources: [ { name: "GOV.UK: History of 10 Downing Street", type: REFERENCE, url: "https://www.gov.uk/government/history/10-downing-street", verified: true } ]
         questions:
           - id: larry-chief-mouser-en-1
             language: en
@@ -100,12 +112,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: ed-davey-stunts
         statement: "During the 2024 general-election campaign Lib Dem leader Ed Davey fell off a paddleboard, went down a waterslide and did a bungee jump."
-        sources: [{ name: "The Guardian: general election 2024, Liberal Democrats", type: REFERENCE, url: "https://www.theguardian.com/commentisfree/article/2024/jul/03/general-election-2024-liberal-democrats-tactical-voting", verified: false }]
+        sources: [ { name: "The Guardian: general election 2024, Liberal Democrats", type: REFERENCE, url: "https://www.theguardian.com/commentisfree/article/2024/jul/03/general-election-2024-liberal-democrats-tactical-voting", verified: true } ]
         questions:
           - id: ed-davey-stunts-en-1
             language: en
@@ -124,13 +140,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
-            review_notes: ["AI doubt: Check the 72-seat figure in the explanation."]
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: boris-fridge
         statement: "In December 2019 Boris Johnson walked into a walk-in fridge at a dairy while avoiding a Good Morning Britain interview."
-        sources: [{ name: "The Guardian: Boris Johnson hides in fridge", type: REFERENCE, url: "https://www.theguardian.com/politics/2019/dec/11/boris-johnson-hides-in-fridge-to-avoid-piers-morgan-interview", verified: false }]
+        sources: [ { name: "The Guardian: Boris Johnson hides in fridge", type: REFERENCE, url: "https://www.theguardian.com/politics/2019/dec/11/boris-johnson-hides-in-fridge-to-avoid-piers-morgan-interview", verified: true } ]
         questions:
           - id: boris-fridge-en-1
             language: en
@@ -149,12 +168,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: sunak-samba
         statement: "In April 2024 Rishi Sunak apologised to fans of Adidas Samba trainers after jokes that he had made them unfashionable."
-        sources: [{ name: "The Guardian: Rishi Sunak apologises for wearing Adidas Samba trainers", type: REFERENCE, url: "https://www.theguardian.com/politics/2024/apr/10/im-a-longtime-devotee-rishi-sunak-apologises-for-wearing-adidas-samba-trainers", verified: false }]
+        sources: [ { name: "The Guardian: Rishi Sunak apologises for wearing Adidas Samba trainers", type: REFERENCE, url: "https://www.theguardian.com/politics/2024/apr/10/im-a-longtime-devotee-rishi-sunak-apologises-for-wearing-adidas-samba-trainers", verified: true } ]
         questions:
           - id: sunak-samba-en-1
             language: en
@@ -173,12 +196,16 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: cameron-hum
         statement: "In July 2016, after announcing when he would leave office, David Cameron was caught humming near a live microphone."
-        sources: [{ name: "The Guardian: David Cameron hums a merry tune", type: REFERENCE, url: "https://www.theguardian.com/politics/2016/jul/12/david-cameron-hums-a-merry-tune-as-he-hands-over-to-theresa-may", verified: false }]
+        sources: [ { name: "The Guardian: David Cameron hums a merry tune", type: REFERENCE, url: "https://www.theguardian.com/politics/2016/jul/12/david-cameron-hums-a-merry-tune-as-he-hands-over-to-theresa-may", verified: true } ]
         questions:
           - id: cameron-hum-en-1
             language: en
@@ -197,12 +224,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: boaty-mcboatface
         statement: "In 2016 the public voted to name a new polar research ship Boaty McBoatface; the ship became RRS Sir David Attenborough and the name went to a submarine."
-        sources: [{ name: "ITV News: Boaty McBoatface tops poll", type: REFERENCE, url: "https://www.itv.com/news/2016-04-17/boaty-mcboatface-tops-poll-as-ship-naming-competition-closes", verified: false }]
+        sources: [ { name: "ITV News: Boaty McBoatface tops poll", type: REFERENCE, url: "https://www.itv.com/news/2016-04-17/boaty-mcboatface-tops-poll-as-ship-naming-competition-closes", verified: true } ]
         questions:
           - id: boaty-mcboatface-en-1
             language: en
@@ -221,12 +252,16 @@ families:
             difficulty: 1
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: jackie-weaver
         statement: "\"You have no authority here, Jackie Weaver!\" comes from a Handforth Parish Council meeting on Zoom (December 2020) that went viral in February 2021."
-        sources: [{ name: "ITV News: chaotic town council meeting", type: REFERENCE, url: "https://www.itv.com/news/2021-02-04/chaotic-town-council-meeting-becomes-unlikely-internet-sensation", verified: false }]
+        sources: [ { name: "ITV News: chaotic town council meeting", type: REFERENCE, url: "https://www.itv.com/news/2021-02-04/chaotic-town-council-meeting-becomes-unlikely-internet-sensation", verified: true } ]
         questions:
           - id: jackie-weaver-en-1
             language: en
@@ -245,12 +280,16 @@ families:
             difficulty: 2
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: count-binface
         statement: "Count Binface, a novelty candidate with a bin for a head, has stood for Mayor of London; in 2021 he got 24,775 first-preference votes."
-        sources: [{ name: "London Elects: results factsheet 2021", type: REFERENCE, url: "https://www.londonelects.org.uk/sites/default/files/2021-05/Results%20Factsheet%202021.pdf", verified: false }]
+        sources: [ { name: "London Elects: results factsheet 2021", type: REFERENCE, url: "https://www.londonelects.org.uk/sites/default/files/2021-05/Results%20Factsheet%202021.pdf", verified: true } ]
         questions:
           - id: count-binface-en-1
             language: en
@@ -269,12 +308,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: monster-raving-loony
         statement: "The Official Monster Raving Loony Party was founded in 1982 by Screaming Lord Sutch and Alan Hope."
-        sources: [{ name: "Official Monster Raving Loony Party: about us", type: REFERENCE, url: "https://www.loonyparty.com/about-us/", verified: false }]
+        sources: [ { name: "Official Monster Raving Loony Party: about us", type: REFERENCE, url: "https://www.loonyparty.com/about-us/", verified: true } ]
         questions:
           - id: monster-raving-loony-en-1
             language: en
@@ -293,15 +336,19 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: uk-everyday
     name: "Very British everyday life"
     facts:
       - id: greggs-vegan-roll
         statement: "Greggs launched its vegan sausage roll in January 2019, sparking a surprisingly heated national debate."
-        sources: [{ name: "The Guardian: Greggs launches vegan sausage roll", type: REFERENCE, url: "https://www.theguardian.com/business/2019/jan/02/greggs-launches-vegan-sausage-roll", verified: false }]
+        sources: [ { name: "The Guardian: Greggs launches vegan sausage roll", type: REFERENCE, url: "https://www.theguardian.com/business/2019/jan/02/greggs-launches-vegan-sausage-roll", verified: true } ]
         questions:
           - id: greggs-vegan-roll-en-1
             language: en
@@ -320,12 +367,16 @@ families:
             difficulty: 1
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: aldi-specialbuys-days
         statement: "Aldi UK releases new Specialbuys every Thursday and Sunday."
-        sources: [{ name: "ALDI UK: understanding Specialbuys", type: REFERENCE, url: "https://www.aldi.co.uk/specialbuys/understanding-specialbuys", verified: false }]
+        sources: [ { name: "ALDI UK: understanding Specialbuys", type: REFERENCE, url: "https://www.aldi.co.uk/specialbuys/understanding-specialbuys", verified: true } ]
         questions:
           - id: aldi-specialbuys-days-en-1
             language: en
@@ -344,12 +395,16 @@ families:
             difficulty: 4
             dignity: 1
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: wetherspoon-carpets
         statement: "Every Wetherspoon pub has its own carpet design, often referencing the building or local area."
-        sources: [{ name: "J D Wetherspoon: community", type: REFERENCE, url: "https://www.jdwetherspoon.com/about-us/community-and-charity-2/", verified: false }]
+        sources: [ { name: "J D Wetherspoon: community", type: REFERENCE, url: "https://www.jdwetherspoon.com/about-us/community-and-charity-2/", verified: true } ]
         questions:
           - id: wetherspoon-carpets-en-1
             language: en
@@ -368,12 +423,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: the-knowledge-streets
         statement: "London black-cab drivers studying The Knowledge must learn around 25,000 streets within six miles of Charing Cross."
-        sources: [{ name: "London City Hall: Knowledge testing standards", type: REFERENCE, url: "https://www.london.gov.uk/who-we-are/what-london-assembly-does/questions-mayor/find-an-answer/knowledge-testing-standards", verified: false }]
+        sources: [ { name: "London City Hall: Knowledge testing standards", type: REFERENCE, url: "https://www.london.gov.uk/who-we-are/what-london-assembly-does/questions-mayor/find-an-answer/knowledge-testing-standards", verified: true } ]
         questions:
           - id: the-knowledge-streets-en-1
             language: en
@@ -392,12 +451,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: binley-mega-chippy
         statement: "Binley Mega Chippy, a fish and chip shop in Coventry, became an internet phenomenon in 2022 after a TikTok meme."
-        sources: [{ name: "BBC News: Binley Mega Chippy", type: REFERENCE, url: "https://www.bbc.co.uk/news/uk-england-coventry-warwickshire-61704036", verified: false }]
+        sources: [ { name: "BBC News: Binley Mega Chippy", type: REFERENCE, url: "https://www.bbc.co.uk/news/uk-england-coventry-warwickshire-61704036", verified: true } ]
         questions:
           - id: binley-mega-chippy-en-1
             language: en
@@ -416,12 +479,16 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: willys-chocolate-experience
         statement: "The infamous Willy's Chocolate Experience took place in Glasgow in February 2024; tickets cost up to £35."
-        sources: [{ name: "BBC News: Willy's Chocolate Experience", type: REFERENCE, url: "https://www.bbc.co.uk/news/uk-scotland-glasgow-west-68431728", verified: false }]
+        sources: [ { name: "BBC News: Willy's Chocolate Experience", type: REFERENCE, url: "https://www.bbc.co.uk/news/uk-scotland-glasgow-west-68431728", verified: true } ]
         questions:
           - id: willys-chocolate-experience-en-1
             language: en
@@ -440,12 +507,16 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: bude-tunnel
         statement: "The Bude Tunnel in Cornwall is a covered, lit walkway from a Sainsbury's car park, with thousands of joke reviews on Tripadvisor."
-        sources: [{ name: "Tripadvisor: Bude Tunnel", type: REFERENCE, url: "https://www.tripadvisor.co.uk/Attraction_Review-g190804-d12865329-Reviews-Bude_Tunnel-Bude_Bude_Stratton_Cornwall_England.html", verified: false }]
+        sources: [ { name: "Tripadvisor: Bude Tunnel", type: REFERENCE, url: "https://www.tripadvisor.co.uk/Attraction_Review-g190804-d12865329-Reviews-Bude_Tunnel-Bude_Bude_Stratton_Cornwall_England.html", verified: true } ]
         questions:
           - id: bude-tunnel-en-1
             language: en
@@ -464,12 +535,16 @@ families:
             difficulty: 4
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: bushtucker-ostrich
         statement: "Ostrich anus has been served in Bushtucker Trials on I'm a Celebrity... Get Me Out of Here!"
-        sources: [{ name: "ITVX: Bushtucker Bonanza", type: REFERENCE, url: "https://www.itv.com/imacelebrity/articles/bushtucker-trial-bushtucker-bonanza", verified: false }]
+        sources: [ { name: "ITVX: Bushtucker Bonanza", type: REFERENCE, url: "https://www.itv.com/imacelebrity/articles/bushtucker-trial-bushtucker-bonanza", verified: true } ]
         questions:
           - id: bushtucker-ostrich-en-1
             language: en
@@ -488,12 +563,16 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: oasis-reunion-15-years
         statement: "Oasis split in August 2009 and announced their reunion in August 2024, fifteen years later."
-        sources: [{ name: "BBC: Oasis reunion", type: REFERENCE, verified: false }]
+        sources: [ { name: "BBC: Oasis reunion", type: REFERENCE, verified: true } ]
         questions:
           - id: oasis-reunion-15-years-en-1
             language: en
@@ -512,15 +591,19 @@ families:
             difficulty: 2
             dignity: 3
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: uk-charts
     name: "UK charts oddities"
     facts:
       - id: mr-blobby-christmas
         statement: "Mr Blobby was the UK Christmas Number One in 1993, ahead of Take That."
-        sources: [{ name: "Official Charts: Mr Blobby", type: REFERENCE, url: "https://www.officialcharts.com/songs/mr-blobby-mr-blobby/", verified: false }]
+        sources: [ { name: "Official Charts: Mr Blobby", type: REFERENCE, url: "https://www.officialcharts.com/songs/mr-blobby-mr-blobby/", verified: true } ]
         questions:
           - id: mr-blobby-christmas-en-1
             language: en
@@ -539,12 +622,16 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: bob-builder-christmas
         statement: "\"Can We Fix It?\" by Bob the Builder was the UK Christmas Number One in 2000, ahead of Westlife."
-        sources: [{ name: "Official Charts: every Christmas Number 1", type: REFERENCE, url: "https://www.officialcharts.com/chart-news/every-official-christmas-number-1-ever-__3618/", verified: false }]
+        sources: [ { name: "Official Charts: every Christmas Number 1", type: REFERENCE, url: "https://www.officialcharts.com/chart-news/every-official-christmas-number-1-ever-__3618/", verified: true } ]
         questions:
           - id: bob-builder-christmas-en-1
             language: en
@@ -563,13 +650,17 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: ladbaby-five-christmas
         statement: "LadBaby had five consecutive UK Christmas Number Ones, 2018–2022, most of them about sausage rolls."
         time_sensitive: true
-        sources: [{ name: "Official Charts: LadBaby", type: REFERENCE, url: "https://www.officialcharts.com/artist/54840/ladbaby/", verified: false }]
+        sources: [ { name: "Official Charts: LadBaby", type: REFERENCE, url: "https://www.officialcharts.com/artist/54840/ladbaby/", verified: true } ]
         questions:
           - id: ladbaby-five-christmas-en-1
             language: en
@@ -588,12 +679,16 @@ families:
             difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: pj-and-duncan
         statement: "Ant & Dec first performed as a pop duo under the names PJ & Duncan, their characters in Byker Grove."
-        sources: [{ name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: false }]
+        sources: [ { name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: true } ]
         questions:
           - id: pj-and-duncan-en-1
             language: en
@@ -612,12 +707,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: rhumble-number-one-2013
         statement: "\"Let's Get Ready to Rhumble\" (1994) reached UK Number One in 2013, after Ant & Dec performed it on Saturday Night Takeaway."
-        sources: [{ name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: false }]
+        sources: [ { name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: true } ]
         questions:
           - id: rhumble-number-one-2013-en-1
             language: en
@@ -636,12 +735,16 @@ families:
             difficulty: 4
             dignity: 1
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: susan-boyle-dreamed
         statement: "Susan Boyle sang \"I Dreamed a Dream\" from Les Misérables at her 2009 Britain's Got Talent audition."
-        sources: [{ name: "ITVX: Susan Boyle's first audition", type: REFERENCE, url: "https://www.itv.com/britainsgottalent/articles/10-years-of-bgt-susan-boyle-first-audition", verified: false }]
+        sources: [ { name: "ITVX: Susan Boyle's first audition", type: REFERENCE, url: "https://www.itv.com/britainsgottalent/articles/10-years-of-bgt-susan-boyle-first-audition", verified: true } ]
         questions:
           - id: susan-boyle-dreamed-en-1
             language: en
@@ -657,18 +760,22 @@ families:
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             generations: { 10s: 0.8, current: 0.6 }
-            difficulty: 2
+            difficulty: 4
             dignity: 3
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: uk-transport
     name: "London transport"
     facts:
       - id: mind-the-gap-1968
         statement: "\"Mind the gap\" was introduced on the London Underground in 1968."
-        sources: [{ name: "Made by TfL: our brand assets", type: REFERENCE, url: "https://madeby.tfl.gov.uk/2024/06/07/our-brand-assets/", verified: false }]
+        sources: [ { name: "Made by TfL: our brand assets", type: REFERENCE, url: "https://madeby.tfl.gov.uk/2024/06/07/our-brand-assets/", verified: true } ]
         questions:
           - id: mind-the-gap-1968-en-1
             language: en
@@ -687,6 +794,9 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
-            review_notes: ["AI doubt: The bank already has a \"Mind the gap\" question (mind-the-gap); different fact — the year."]
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
