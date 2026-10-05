@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
-import { PhaseBar, StatCards } from "../components.tsx";
+import { AnswerTimer, NextUp, StatCards } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { useRoom } from "../useRoom.ts";
 
@@ -91,42 +91,61 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
   );
 }
 
+const KEYS = ["A", "B", "C", "D"] as const;
+
+/**
+ * Fixed stage (playtest 1): the question stays put at the top, the four option slots are reserved
+ * from the start and fill in when answering opens, and the bottom slot holds the timer, then the
+ * correct answer. Nothing moves between phases, so eyes stay where they were.
+ */
 function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
   const t = useT();
   const q = s.question!;
   const reveal = s.reveal;
   const total = reveal ? Object.values(reveal.distribution).reduce((a, b) => a + b, 0) : 0;
+  const correct = reveal ? q.options?.find((o) => o.key === reveal.correctKey) : undefined;
+  const questionsTotal = s.game?.totalQuestions ?? q.number;
 
   return (
     <div className="question-view">
       <div className="question-head">
-        <p className="muted">{t.question(q.number, s.game?.totalQuestions ?? q.number)}</p>
+        <p className="muted">{t.question(q.number, questionsTotal)}</p>
         {q.phase === "ANSWERING" && <p className="counter">{t.answered(q.answered, q.activePlayers)}</p>}
+        {reveal && <NextUp timing={q.timing} timingAt={timingAt} number={q.number} total={questionsTotal} />}
       </div>
       <h1 className="question-text">{q.text}</h1>
-      {q.phase === "PRESENTING" && <p className="muted">{t.reading}</p>}
-      {q.options && (
-        <ol className="options">
-          {q.options.map((o) => {
-            const isCorrect = reveal?.correctKey === o.key;
-            const votes = reveal?.distribution[o.key] ?? 0;
-            return (
-              <li key={o.key} className={reveal ? (isCorrect ? "correct" : "dim") : ""}>
-                <span className="key">{o.key}</span>
-                <span className="text">{o.text}</span>
-                {reveal && (
-                  <span className="votes">
-                    <span className="bar" style={{ width: total ? `${(votes / total) * 100}%` : 0 }} />
-                    {votes}
-                  </span>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      )}
-      {reveal && <p className="explanation">{reveal.explanation}</p>}
-      <PhaseBar timing={q.timing} timingAt={timingAt} showSeconds={q.phase === "ANSWERING"} />
+      <ol className="options">
+        {KEYS.map((key) => {
+          const o = q.options?.find((x) => x.key === key);
+          const isCorrect = reveal?.correctKey === key;
+          const votes = reveal?.distribution[key] ?? 0;
+          return (
+            <li key={key} className={!o ? "pending" : reveal ? (isCorrect ? "correct" : "dim") : ""}>
+              <span className="key">{key}</span>
+              <span className="text">{o?.text ?? ""}</span>
+              {reveal && (
+                <span className="votes">
+                  <span className="bar" style={{ width: total ? `${(votes / total) * 100}%` : 0 }} />
+                  {votes}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+      <div className="stage-foot">
+        {q.phase === "PRESENTING" && <p className="muted reading">{t.reading}</p>}
+        {q.phase === "ANSWERING" && <AnswerTimer timing={q.timing} timingAt={timingAt} />}
+        {reveal && correct && (
+          <div className="reveal-banner">
+            <p className="reveal-label">{t.correctAnswer}</p>
+            <p className="reveal-answer">
+              <span className="key">{correct.key}</span> {correct.text}
+            </p>
+            {reveal.explanation && <p className="explanation">{reveal.explanation}</p>}
+          </div>
+        )}
+      </div>
     </div>
   );
 }

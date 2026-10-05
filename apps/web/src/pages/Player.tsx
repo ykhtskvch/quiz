@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import type { HostCommand, OnboardingInput, OptionKey, Snapshot } from "@quiz/shared";
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
-import { PhaseBar } from "../components.tsx";
+import { AnswerTimer, NextUp } from "../components.tsx";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
 import { setLanguage, useT } from "../strings.ts";
@@ -147,6 +147,11 @@ function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: s
   const isHost = s.you.role === "player" && s.you.isHost;
   const cmd = useCommand(code, token);
   const game = s.game;
+  // Per game number, so a new game starts with a fresh form.
+  const [sentInGame, setSentInGame] = useState<number | null>(null);
+  const [ratingInGame, setRatingInGame] = useState<number | null>(null);
+  const feedbackSent = Boolean(s.mine?.feedbackGiven) || (game !== null && sentInGame === game.number);
+  const rating = game !== null && ratingInGame === game.number;
 
   // ---- lobby ----
   if (!game) {
@@ -190,8 +195,20 @@ function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: s
             </p>
           )}
         </section>
-        {mine && <SessionFeedback code={code} token={token} sent={s.mine?.feedbackGiven ?? false} />}
-        {mine && <QuestionRatings code={code} token={token} results={s.results} initial={s.mine?.ratings ?? {}} />}
+        {mine && !feedbackSent && <SessionFeedback code={code} token={token} onSent={() => game && setSentInGame(game.number)} />}
+        {mine && feedbackSent && (
+          <section className="after-feedback">
+            <p className="thanks">{t.feedbackThanks}</p>
+            {!isHost && <p className="muted center-text">{t.waitHostNewGame}</p>}
+            {!rating && s.results.questions.length > 0 && (
+              <div className="rate-offer">
+                <p>{t.rateOffer}</p>
+                <button onClick={() => game && setRatingInGame(game.number)}>{t.rateOfferButton}</button>
+              </div>
+            )}
+          </section>
+        )}
+        {mine && feedbackSent && rating && <QuestionRatings code={code} token={token} results={s.results} initial={s.mine?.ratings ?? {}} />}
         <section className="center-text finished-actions">
           {isHost && (
             <button className="primary big" disabled={cmd.busy} onClick={() => cmd.host("play-again")}>
@@ -239,59 +256,61 @@ function QuestionBody({
   }
   if (!q) return <section className="center grow muted">{t.nextQuestion}</section>;
 
-  if (q.phase === "PRESENTING") {
-    return (
-      <section className="center grow">
-        <p className="muted small">{t.question(q.number, s.game?.totalQuestions ?? q.number)}</p>
-        <p className="phone-question">{q.text}</p>
-        <p className="muted">{t.reading}</p>
-        <PhaseBar timing={q.timing} timingAt={timingAt} />
-      </section>
-    );
-  }
-
-  if (q.phase === "ANSWERING") {
-    const mine = s.mine?.answer ?? null;
-    const paused = s.game?.status === "PAUSED";
-    return (
-      <section className="grow answer-section">
-        <PhaseBar timing={q.timing} timingAt={timingAt} showSeconds />
-        <div className="answer-grid">
-          {q.options!.map((o) => (
-            <button
-              key={o.key}
-              className={`answer ${mine === o.key ? "chosen" : ""}`}
-              disabled={Boolean(mine) || busy || paused}
-              onClick={() => run(() => api.answer(code, token, o.key as OptionKey))}
-            >
-              <span className="key">{o.key}</span>
-              <span className="text">{o.text}</span>
-            </button>
-          ))}
-        </div>
-        {mine && (
-          <p className="center-text">
-            {t.answerAccepted}: <strong>{mine}</strong>. {t.waitForOthers}
-          </p>
-        )}
-      </section>
-    );
-  }
-
-  // REVEALED
+  // Fixed layout (playtest 1): the question stays on top in every phase; the timer slot and the
+  // option area are always there, so nothing jumps when answering opens or the answer is revealed.
+  const total = s.game?.totalQuestions ?? q.number;
+  const mine = s.mine?.answer ?? null;
+  const paused = s.game?.status === "PAUSED";
   const r = s.mine?.result;
-  const correctKey = s.reveal?.correctKey;
+  const correct = q.options?.find((o) => o.key === s.reveal?.correctKey);
   const kind = !r ? "none" : r.correct ? "right" : "wrong";
+
   return (
-    <section className={`center grow result ${kind}`}>
-      <p className="result-title">{kind === "right" ? t.correct : kind === "wrong" ? t.wrong : t.noAnswer}</p>
-      {r?.correct && <p className="points">{t.points(r.points)}</p>}
-      {correctKey && (
-        <p className="muted">
-          {t.correctAnswer}: {correctKey} — {q.options?.find((o) => o.key === correctKey)?.text}
-        </p>
+    <section className="grow phone-stage">
+      <p className="muted small">{t.question(q.number, total)}</p>
+      <p className="phone-question">{q.text}</p>
+      <div className="phone-timer">{q.phase === "ANSWERING" && <AnswerTimer timing={q.timing} timingAt={timingAt} />}</div>
+
+      {q.phase === "REVEALED" ? (
+        <div className={`result ${kind}`}>
+          <p className="result-title">{kind === "right" ? t.correct : kind === "wrong" ? t.wrong : t.noAnswer}</p>
+          {r?.correct && <p className="points">{t.points(r.points)}</p>}
+          {correct && (
+            <div className="reveal-banner">
+              <p className="reveal-label">{t.correctAnswer}</p>
+              <p className="reveal-answer">
+                <span className="key">{correct.key}</span> {correct.text}
+              </p>
+            </div>
+          )}
+          <NextUp timing={q.timing} timingAt={timingAt} number={q.number} total={total} />
+        </div>
+      ) : (
+        <>
+          <div className="answer-grid">
+            {(["A", "B", "C", "D"] as const).map((key) => {
+              const o = q.options?.find((x) => x.key === key);
+              return (
+                <button
+                  key={key}
+                  className={`answer ${!o ? "pending" : ""} ${mine === key ? "chosen" : ""}`}
+                  disabled={!o || Boolean(mine) || busy || paused}
+                  onClick={() => run(() => api.answer(code, token, key as OptionKey))}
+                >
+                  <span className="key">{key}</span>
+                  <span className="text">{o?.text ?? ""}</span>
+                </button>
+              );
+            })}
+          </div>
+          {q.phase === "PRESENTING" && <p className="muted center-text">{t.reading}</p>}
+          {mine && (
+            <p className="center-text">
+              {t.answerAccepted}: <strong>{mine}</strong>. {t.waitForOthers}
+            </p>
+          )}
+        </>
       )}
-      <PhaseBar timing={q.timing} timingAt={timingAt} />
     </section>
   );
 }

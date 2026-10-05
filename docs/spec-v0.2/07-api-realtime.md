@@ -114,7 +114,7 @@ POST /games/{gameSessionId}/start      (host)
 ## 7. Question Cycle
 
 ```
-QUEUED → PRESENTING → ANSWERING → REVEALED → (10–15 с) → next
+QUEUED → PRESENTING (4–9 с) → ANSWERING (15 с) → REVEALED (8 с) → next
                  ↘ SKIPPED     ↘ SKIPPED
 QUEUED → CANCELLED
 ```

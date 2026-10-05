@@ -1,4 +1,5 @@
 // Post-game offboarding (EPIC 28) and per-question ratings (EPIC 29) on the phone.
+// Two steps since playtest 1: the short form first, then question ratings as an opt-in.
 import { useState } from "react";
 import {
   BALANCE_RATINGS,
@@ -13,14 +14,11 @@ import {
 import { api } from "../api.ts";
 import { useT } from "../strings.ts";
 
-export function SessionFeedback({ code, token, sent }: { code: string; token: string; sent: boolean }) {
+export function SessionFeedback({ code, token, onSent }: { code: string; token: string; onSent: () => void }) {
   const t = useT();
   const [form, setForm] = useState<Partial<SessionFeedbackInput>>({});
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [done, setDone] = useState(sent);
-
-  if (done) return <p className="thanks">{t.feedbackThanks}</p>;
 
   const row = <K extends keyof SessionFeedbackInput>(key: K, label: string, values: readonly string[], labels: Record<string, string>) => (
     <div className="fb-row" key={key}>
@@ -41,7 +39,7 @@ export function SessionFeedback({ code, token, sent }: { code: string; token: st
     setError(null);
     try {
       await api.feedback(code, token, form as SessionFeedbackInput);
-      setDone(true);
+      onSent();
     } catch {
       setError(t.errorGeneric);
     } finally {

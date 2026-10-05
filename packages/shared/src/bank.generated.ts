@@ -1708,50 +1708,6 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
-    "id": "mind-the-gap-en-1",
-    "factId": "mind-the-gap",
-    "familyId": "london",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "LOCAL",
-    "isBridge": false,
-    "text": "On which transport system would you hear \"Mind the gap\"?",
-    "options": [
-      {
-        "key": "A",
-        "text": "The Paris Métro"
-      },
-      {
-        "key": "B",
-        "text": "The London Underground"
-      },
-      {
-        "key": "C",
-        "text": "The New York Subway"
-      },
-      {
-        "key": "D",
-        "text": "British Rail ferries"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "The phrase is so famous it is printed on London souvenirs.",
-    "topics": {
-      "british-culture": 1
-    },
-    "contexts": {
-      "UK": 1
-    },
-    "generations": {},
-    "difficulty": 1,
-    "dignity": 3,
-    "effects": {
-      "SHARED_KNOWLEDGE": 1
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
     "id": "big-ben-bell-en-1",
     "factId": "big-ben-bell",
     "familyId": "london",
@@ -1794,7 +1750,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "elizabeth-70-years-en-1",
@@ -1839,7 +1795,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "eastenders-square-en-1",
@@ -1884,7 +1840,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "tardis-police-box-en-1",
@@ -1928,7 +1884,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "del-boy-van-en-1",
@@ -1976,7 +1932,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "blue-peter-badge-en-1",
@@ -2024,7 +1980,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "mr-bean-atkinson-en-1",
@@ -2069,7 +2025,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bake-off-star-baker-en-1",
@@ -2115,7 +2071,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "wallace-wensleydale-en-1",
@@ -2160,7 +2116,7 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bonfire-night-en-1",
@@ -2204,7 +2160,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "mushy-peas-en-1",
@@ -2249,51 +2205,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
-    "id": "quid-en-1",
-    "factId": "quid",
-    "familyId": "british-life",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "LOCAL",
-    "isBridge": false,
-    "text": "In British slang, what is a \"quid\"?",
-    "options": [
-      {
-        "key": "A",
-        "text": "A penny"
-      },
-      {
-        "key": "B",
-        "text": "One pound"
-      },
-      {
-        "key": "C",
-        "text": "Five pounds"
-      },
-      {
-        "key": "D",
-        "text": "A pint"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "A fiver is five pounds, a tenner ten.",
-    "topics": {
-      "british-culture": 1
-    },
-    "contexts": {
-      "UK": 1
-    },
-    "generations": {},
-    "difficulty": 2,
-    "dignity": 3,
-    "effects": {
-      "SHARED_KNOWLEDGE": 0.7
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "apples-and-pears-en-1",
@@ -2338,7 +2250,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "stonehenge-wiltshire-en-1",
@@ -2382,7 +2294,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "nu-pogodi-wolf-voice-ru-1",
@@ -8903,7 +8815,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "C",
-        "text": "Plaid Cymru"
+        "text": "The Brown Party"
       },
       {
         "key": "D",
@@ -8929,7 +8841,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "ed-balls-day-en-1",
@@ -8977,7 +8889,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "truss-lettuce-en-1",
@@ -9025,7 +8937,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "larry-chief-mouser-en-1",
@@ -9073,7 +8985,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "ed-davey-stunts-en-1",
@@ -9121,7 +9033,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "boris-fridge-en-1",
@@ -9169,7 +9081,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "sunak-samba-en-1",
@@ -9217,7 +9129,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "cameron-hum-en-1",
@@ -9265,7 +9177,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "boaty-mcboatface-en-1",
@@ -9313,7 +9225,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "jackie-weaver-en-1",
@@ -9361,7 +9273,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "count-binface-en-1",
@@ -9409,7 +9321,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "monster-raving-loony-en-1",
@@ -9457,7 +9369,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "greggs-vegan-roll-en-1",
@@ -9505,7 +9417,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "aldi-specialbuys-days-en-1",
@@ -9553,7 +9465,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "wetherspoon-carpets-en-1",
@@ -9601,7 +9513,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "the-knowledge-streets-en-1",
@@ -9649,7 +9561,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "binley-mega-chippy-en-1",
@@ -9697,7 +9609,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "willys-chocolate-experience-en-1",
@@ -9745,7 +9657,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bude-tunnel-en-1",
@@ -9793,7 +9705,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bushtucker-ostrich-en-1",
@@ -9841,7 +9753,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "oasis-reunion-15-years-en-1",
@@ -9889,7 +9801,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "mr-blobby-christmas-en-1",
@@ -9937,7 +9849,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bob-builder-christmas-en-1",
@@ -9985,7 +9897,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "ladbaby-five-christmas-en-1",
@@ -10033,7 +9945,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "pj-and-duncan-en-1",
@@ -10081,7 +9993,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "rhumble-number-one-2013-en-1",
@@ -10129,7 +10041,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "susan-boyle-dreamed-en-1",
@@ -10170,14 +10082,14 @@ export const BANK: BankQuestion[] = [
       "10s": 0.8,
       "current": 0.6
     },
-    "difficulty": 2,
+    "difficulty": 4,
     "dignity": 3,
     "effects": {
       "I_KNOW_THIS": 0.7,
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "mind-the-gap-1968-en-1",
@@ -10225,7 +10137,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "wombat-cube-poo-en-1",
@@ -12141,7 +12053,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "blue-eiffel-65-en-1",
@@ -15671,7 +15583,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "fawlty-towers-12-en-1",
@@ -15718,7 +15630,7 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bake-off-edd-kimber-en-1",
@@ -15765,7 +15677,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "everton-toffees-en-1",
@@ -15810,7 +15722,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "chandler-muriel-en-1",
@@ -15858,7 +15770,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "kramer-cosmo-en-1",
@@ -15905,7 +15817,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "homer-jay-en-1",
@@ -15953,7 +15865,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "tonight-show-steve-allen-en-1",
@@ -15998,7 +15910,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "berlin-airlift-ru-1",
@@ -19744,7 +19656,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "tarkovsky-solaris-en-1",
@@ -19887,7 +19799,7 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "elton-john-ussr-1979-en-1",
@@ -19937,7 +19849,7 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "flight-of-the-bumblebee-en-1",
@@ -19984,7 +19896,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "nureyev-paris-1961-en-1",
@@ -20174,7 +20086,7 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "matryoshka-en-1",

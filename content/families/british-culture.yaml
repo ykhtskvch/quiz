@@ -7,7 +7,7 @@ families:
     facts:
       - id: mind-the-gap
         statement: "\"Mind the gap\" is the famous safety announcement on the London Underground."
-        sources: [{ name: "Wikipedia: Mind the gap", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Mind the gap", type: REFERENCE, verified: false } ]
         questions:
           - id: mind-the-gap-en-1
             language: en
@@ -25,12 +25,15 @@ families:
             difficulty: 1
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 1.0 }
-            status: DRAFT
+            status: RETIRED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: big-ben-bell
         statement: "Big Ben is the name of the great bell; the clock tower has been called the Elizabeth Tower since 2012."
-        sources: [{ name: "Wikipedia: Big Ben", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Big Ben", type: REFERENCE, verified: true } ]
         questions:
           - id: big-ben-bell-en-1
             language: en
@@ -48,15 +51,19 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_KNOW_THIS: 0.7, I_FIGURED_IT_OUT: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: royals
     name: "The Royal Family"
     facts:
       - id: elizabeth-70-years
         statement: "Queen Elizabeth II reigned for 70 years (1952–2022), the longest of any British monarch."
-        sources: [{ name: "Wikipedia: Elizabeth II", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Elizabeth II", type: REFERENCE, verified: true } ]
         questions:
           - id: elizabeth-70-years-en-1
             language: en
@@ -74,15 +81,19 @@ families:
             difficulty: 1
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 1.0 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: british-tv
     name: "British TV"
     facts:
       - id: eastenders-square
         statement: "EastEnders is set around Albert Square in the fictional Walford."
-        sources: [{ name: "Wikipedia: EastEnders", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: EastEnders", type: REFERENCE, verified: true } ]
         questions:
           - id: eastenders-square-en-1
             language: en
@@ -100,12 +111,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: tardis-police-box
         statement: "The TARDIS in Doctor Who looks like a 1960s blue police box."
-        sources: [{ name: "Wikipedia: TARDIS", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: TARDIS", type: REFERENCE, verified: true } ]
         questions:
           - id: tardis-police-box-en-1
             language: en
@@ -123,12 +138,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: del-boy-van
         statement: "In Only Fools and Horses, the Trotters drive a yellow three-wheeled Reliant Regal van."
-        sources: [{ name: "Wikipedia: Only Fools and Horses", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Only Fools and Horses", type: REFERENCE, verified: true } ]
         questions:
           - id: del-boy-van-en-1
             language: en
@@ -147,12 +166,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: blue-peter-badge
         statement: "The children's programme Blue Peter is famous for awarding its badges."
-        sources: [{ name: "Wikipedia: Blue Peter", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Blue Peter", type: REFERENCE, verified: true } ]
         questions:
           - id: blue-peter-badge-en-1
             language: en
@@ -172,12 +195,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: mr-bean-atkinson
         statement: "Mr. Bean is played by Rowan Atkinson."
-        sources: [{ name: "Wikipedia: Mr. Bean", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Mr. Bean", type: REFERENCE, verified: true } ]
         questions:
           - id: mr-bean-atkinson-en-1
             language: en
@@ -195,12 +222,16 @@ families:
             difficulty: 1
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 1.0 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: bake-off-star-baker
         statement: "Each week on The Great British Bake Off the best contestant is named Star Baker."
-        sources: [{ name: "Wikipedia: The Great British Bake Off", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Great British Bake Off", type: REFERENCE, verified: true } ]
         questions:
           - id: bake-off-star-baker-en-1
             language: en
@@ -219,12 +250,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: wallace-wensleydale
         statement: "Wallace of Wallace & Gromit is famously fond of Wensleydale cheese."
-        sources: [{ name: "Wikipedia: Wallace & Gromit", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Wallace & Gromit", type: REFERENCE, verified: true } ]
         questions:
           - id: wallace-wensleydale-en-1
             language: en
@@ -242,15 +277,19 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: british-life
     name: "British life"
     facts:
       - id: bonfire-night
         statement: "Bonfire Night on 5 November commemorates the failed Gunpowder Plot of Guy Fawkes in 1605."
-        sources: [{ name: "Wikipedia: Guy Fawkes Night", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Guy Fawkes Night", type: REFERENCE, verified: true } ]
         questions:
           - id: bonfire-night-en-1
             language: en
@@ -268,12 +307,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: mushy-peas
         statement: "Mushy peas are a classic side for fish and chips."
-        sources: [{ name: "Wikipedia: Mushy peas", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Mushy peas", type: REFERENCE, verified: true } ]
         questions:
           - id: mushy-peas-en-1
             language: en
@@ -291,12 +334,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: quid
         statement: "\"Quid\" is slang for one pound sterling."
-        sources: [{ name: "Wikipedia: Quid", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Quid", type: REFERENCE, verified: false } ]
         questions:
           - id: quid-en-1
             language: en
@@ -314,12 +361,15 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: RETIRED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: apples-and-pears
         statement: "In Cockney rhyming slang, \"apples and pears\" means stairs."
-        sources: [{ name: "Wikipedia: Cockney rhyming slang", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Cockney rhyming slang", type: REFERENCE, verified: true } ]
         questions:
           - id: apples-and-pears-en-1
             language: en
@@ -337,12 +387,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.6, I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: stonehenge-wiltshire
         statement: "Stonehenge is in Wiltshire."
-        sources: [{ name: "Wikipedia: Stonehenge", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Stonehenge", type: REFERENCE, verified: true } ]
         questions:
           - id: stonehenge-wiltshire-en-1
             language: en
@@ -360,5 +414,9 @@ families:
             difficulty: 3
             dignity: 5
             effects: { I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05

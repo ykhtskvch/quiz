@@ -235,14 +235,14 @@ input:focus {
   color: var(--muted);
 }
 
+/* Fixed stage (playtest 1): top-aligned, every slot reserved, so phases never shift the layout. */
 .question-view {
   max-width: 1400px;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
+  padding-top: 2vh;
+  display: grid;
+  align-content: start;
   gap: 1.5em;
-  min-height: calc(100dvh - 6vw);
-  justify-content: center;
 }
 
 .question-text {
@@ -270,6 +270,18 @@ input:focus {
   padding: 0.9em 1.1em;
   font-size: 1.5em;
   transition: opacity 0.3s;
+}
+
+.options li {
+  min-height: 3.4em;
+}
+
+.options li.pending .key {
+  opacity: 0.35;
+}
+
+.options li.pending {
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
 }
 
 .options li.dim {
@@ -325,14 +337,67 @@ li:nth-child(4) .key,
 }
 
 .counter {
-  font-size: 1.4em;
+  font-size: 1.3em;
   color: var(--muted);
 }
 
 .explanation {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: var(--muted);
-  max-width: 60ch;
+  max-width: 70ch;
+  margin: 0;
+}
+
+/* Bottom slot: "reading…", then the timer, then the correct answer — one place, fixed height. */
+.stage-foot {
+  min-height: 9em;
+  display: grid;
+  align-content: start;
+}
+
+.stage-foot .reading {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.reveal-banner {
+  display: grid;
+  gap: 0.35em;
+}
+
+.reveal-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85em;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.reveal-answer {
+  margin: 0;
+  font-size: 2.2em;
+  font-weight: 800;
+  color: var(--right);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.reveal-answer .key {
+  background: var(--right);
+  color: #06210f;
+  font-size: 0.7em;
+}
+
+.next-up {
+  margin: 0;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.next-up.soon {
+  color: var(--accent);
+  font-weight: 700;
 }
 
 @media (max-width: 900px) {
@@ -427,43 +492,63 @@ button.danger {
   font-size: 1.5em;
 }
 
-.phase-bar {
+/* Answer timer (playtest 1): fills left → right; last 5 s turn red and pulse. */
+.answer-timer {
   display: flex;
   align-items: center;
   gap: 0.75em;
   width: 100%;
 }
 
-.phase-bar .track {
+.answer-timer .track {
   flex: 1;
-  height: 0.5em;
+  height: 0.6em;
   background: var(--surface-2);
   border-radius: 999px;
   overflow: hidden;
 }
 
-.phase-bar .fill {
+.answer-timer .fill {
   height: 100%;
   background: var(--accent);
   border-radius: 999px;
   transition: width 0.1s linear;
 }
 
-.phase-bar.urgent .fill {
+.answer-timer.urgent .fill {
   background: var(--wrong);
+  animation: timer-pulse 0.6s ease-in-out infinite alternate;
 }
 
-.phase-bar .seconds {
+.answer-timer.urgent .seconds {
+  color: var(--wrong);
+}
+
+@keyframes timer-pulse {
+  to {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .answer-timer.urgent .fill {
+    animation: none;
+  }
+}
+
+.answer-timer .seconds {
   font-variant-numeric: tabular-nums;
   font-weight: 800;
   min-width: 2ch;
   text-align: right;
 }
 
+/* Fixed height: the right-hand slot changes per phase (counter, "next in…") without moving the question. */
 .question-head {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  height: 2.2em;
 }
 
 .question-head p {
@@ -575,10 +660,49 @@ button.danger {
   font-size: 1.1em;
 }
 
+/* Phone stage: question on top in every phase, timer slot always reserved, options below. */
+.phone-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.phone-stage > p {
+  margin: 0;
+}
+
 .phone-question {
   font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.35;
+}
+
+.phone-timer {
+  min-height: 1.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.answer.pending {
+  opacity: 0.4;
+}
+
+.phone-stage .result {
+  display: grid;
+  gap: 0.6rem;
+  justify-items: center;
+  text-align: center;
+  padding-top: 0.5rem;
+}
+
+.phone-stage .reveal-banner {
+  justify-items: center;
+  margin-top: 0.5rem;
+}
+
+.phone-stage .reveal-answer {
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 .points {
@@ -908,4 +1032,24 @@ button.link {
   background: var(--surface-2);
   font-size: 0.95rem;
   line-height: 1.4;
+}
+
+/* Offboarding in two steps (playtest 1): form → thanks → optional ratings. */
+.after-feedback {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.after-feedback p {
+  margin: 0;
+}
+
+.rate-offer {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: center;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 1.25rem 1rem;
 }

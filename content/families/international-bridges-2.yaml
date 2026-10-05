@@ -7,7 +7,7 @@ families:
     facts:
       - id: livanov-mbe
         statement: "Vasily Livanov, Sherlock Holmes in the Soviet TV films (1979–1986), was made an honorary MBE in 2006."
-        sources: [{ name: "Wikipedia: Vasily Livanov", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Vasily Livanov", type: REFERENCE, verified: false } ]
         questions:
           - id: livanov-mbe-en-1
             language: en
@@ -33,7 +33,7 @@ families:
 
       - id: bbc-war-and-peace-2016
         statement: "In 2016 the BBC adapted War and Peace with Paul Dano as Pierre and Lily James as Natasha."
-        sources: [{ name: "Wikipedia: War & Peace (2016 TV series)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: War & Peace (2016 TV series)", type: REFERENCE, verified: true } ]
         questions:
           - id: bbc-war-and-peace-2016-en-1
             language: en
@@ -53,12 +53,16 @@ families:
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: tarkovsky-solaris
         statement: "The 1972 Soviet film Solaris was directed by Andrei Tarkovsky; Steven Soderbergh remade it in 2002."
-        sources: [{ name: "Wikipedia: Solaris (1972 film)", type: REFERENCE, verified: true }]
+        sources: [ { name: "Wikipedia: Solaris (1972 film)", type: REFERENCE, verified: true } ]
         questions:
           - id: tarkovsky-solaris-en-1
             language: en
@@ -86,7 +90,7 @@ families:
 
       - id: potemkin-odessa-steps
         statement: "The famous Odessa Steps sequence comes from Sergei Eisenstein's Battleship Potemkin (1925)."
-        sources: [{ name: "Wikipedia: Battleship Potemkin", type: REFERENCE, verified: true }]
+        sources: [ { name: "Wikipedia: Battleship Potemkin", type: REFERENCE, verified: true } ]
         questions:
           - id: potemkin-odessa-steps-en-1
             language: en
@@ -114,7 +118,7 @@ families:
 
       - id: cheburashka-japan
         statement: "Cheburashka became hugely popular in Japan, which made its own stop-motion version in 2010."
-        sources: [{ name: "Wikipedia: Cheburashka", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Cheburashka", type: REFERENCE, verified: false } ]
         questions:
           - id: cheburashka-japan-en-1
             language: en
@@ -143,7 +147,7 @@ families:
     facts:
       - id: back-in-the-ussr
         statement: "\"Back in the U.S.S.R.\" (The Beatles, 1968) parodies Chuck Berry's \"Back in the U.S.A.\" and the Beach Boys."
-        sources: [{ name: "Wikipedia: Back in the U.S.S.R.", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Back in the U.S.S.R.", type: REFERENCE, verified: true } ]
         questions:
           - id: back-in-the-ussr-en-1
             language: en
@@ -163,12 +167,16 @@ families:
             difficulty: 2
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 0.8, BRIDGE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: elton-john-ussr-1979
         statement: "In May 1979 Elton John played concerts in Leningrad and Moscow, one of the first Western pop stars to tour the USSR."
-        sources: [{ name: "Wikipedia: Elton John's 1979 tour of the Soviet Union", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Elton John's 1979 tour of the Soviet Union", type: REFERENCE, verified: true } ]
         questions:
           - id: elton-john-ussr-1979-en-1
             language: en
@@ -188,13 +196,16 @@ families:
             difficulty: 4
             dignity: 4
             effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: [ "AI doubt: Check the tour dates and that only Ray Cooper accompanied him." ]
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: flight-of-the-bumblebee
         statement: "\"Flight of the Bumblebee\" was written by Nikolai Rimsky-Korsakov for his opera The Tale of Tsar Saltan."
-        sources: [{ name: "Wikipedia: Flight of the Bumblebee", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Flight of the Bumblebee", type: REFERENCE, verified: true } ]
         questions:
           - id: flight-of-the-bumblebee-en-1
             language: en
@@ -213,15 +224,19 @@ families:
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.6, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: bridges-people
     name: "People and words"
     facts:
       - id: nureyev-paris-1961
         statement: "Ballet dancer Rudolf Nureyev defected to the West at Le Bourget airport, Paris, in June 1961."
-        sources: [{ name: "Wikipedia: Rudolf Nureyev", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Rudolf Nureyev", type: REFERENCE, verified: false } ]
         questions:
           - id: nureyev-paris-1961-en-1
             language: en
@@ -245,7 +260,7 @@ families:
 
       - id: nabokov-lolita
         statement: "Lolita was written in English by the Russian-born writer Vladimir Nabokov."
-        sources: [{ name: "Wikipedia: Lolita", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Lolita", type: REFERENCE, verified: false } ]
         questions:
           - id: nabokov-lolita-en-1
             language: en
@@ -269,7 +284,7 @@ families:
 
       - id: theremin-termen
         statement: "The theremin, an electronic instrument played without being touched, was invented in 1920 by the Russian physicist Lev Termen (Leon Theremin)."
-        sources: [{ name: "Wikipedia: Theremin", type: REFERENCE, verified: true }]
+        sources: [ { name: "Wikipedia: Theremin", type: REFERENCE, verified: true } ]
         questions:
           - id: theremin-termen-en-1
             language: en
@@ -297,7 +312,7 @@ families:
 
       - id: mammoth-from-russian
         statement: "The English word \"mammoth\" came from Russian \"mamont\"."
-        sources: [{ name: "Wiktionary / OED: mammoth", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wiktionary / OED: mammoth", type: REFERENCE, verified: true } ]
         questions:
           - id: mammoth-from-russian-en-1
             language: en
@@ -316,6 +331,9 @@ families:
             difficulty: 4
             dignity: 4
             effects: { I_FIGURED_IT_OUT: 0.6, BRIDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: [ "AI doubt: The Russian word may itself come from Mansi; the question only says it came into English from Russian." ]
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05

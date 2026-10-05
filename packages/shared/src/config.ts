@@ -23,9 +23,11 @@ export type GameConfig = {
 
 export const DEFAULT_CONFIG: GameConfig = {
   minPlayers: 2,
-  presentation: { minMs: 2500, perCharMs: 35, maxMs: 7000 },
+  // Playtest 1: the reveal (10 s) outlasted reading the question (2.5–7 s) and felt rushed in
+  // between. Longer reading, a shorter reveal that ends with a visible "next question in 3".
+  presentation: { minMs: 4000, perCharMs: 45, maxMs: 9000 },
   answerMs: 15_000,
-  revealMs: 10_000,
+  revealMs: 8000,
   skipGapMs: 1500,
   disconnectGraceMs: 25_000,
   softEndAfterMs: 30 * 60_000,

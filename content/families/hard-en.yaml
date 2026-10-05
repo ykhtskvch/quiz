@@ -7,7 +7,7 @@ families:
     facts:
       - id: tube-circle-yellow
         statement: "The Circle line is shown in yellow on the London Underground map."
-        sources: [{ name: "Wikipedia: Circle line", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Circle line", type: REFERENCE, verified: true } ]
         questions:
           - id: tube-circle-yellow-en-1
             language: en
@@ -25,12 +25,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 5
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: fawlty-towers-12
         statement: "Only 12 episodes of Fawlty Towers were ever made, in two series (1975 and 1979)."
-        sources: [{ name: "Wikipedia: Fawlty Towers", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Fawlty Towers", type: REFERENCE, verified: true } ]
         questions:
           - id: fawlty-towers-12-en-1
             language: en
@@ -49,12 +53,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: bake-off-edd-kimber
         statement: "Edd Kimber won the first series of The Great British Bake Off in 2010."
-        sources: [{ name: "Wikipedia: The Great British Bake Off (series 1)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Great British Bake Off (series 1)", type: REFERENCE, verified: true } ]
         questions:
           - id: bake-off-edd-kimber-en-1
             language: en
@@ -73,14 +81,16 @@ families:
             difficulty: 5
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: confirmed (en.wikipedia: The Great British Bake Off) — S1 Edd Kimber, S2 Jo Wheatley, S3 John Whaite, S6 Nadiya Hussain."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: everton-toffees
         statement: "Everton FC is nicknamed \"the Toffees\"."
-        sources: [{ name: "Wikipedia: Everton F.C.", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Everton F.C.", type: REFERENCE, verified: true } ]
         questions:
           - id: everton-toffees-en-1
             language: en
@@ -98,15 +108,19 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: hard-american-pop-culture
     name: "American pop culture — hard"
     facts:
       - id: chandler-muriel
         statement: "In Friends, Chandler Bing's middle name is Muriel."
-        sources: [{ name: "Wikipedia: Chandler Bing", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Chandler Bing", type: REFERENCE, verified: true } ]
         questions:
           - id: chandler-muriel-en-1
             language: en
@@ -125,14 +139,16 @@ families:
             difficulty: 5
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: Muriel confirmed (en.wikipedia: Chandler Bing); the episode claim could not be confirmed, so it was removed."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: kramer-cosmo
         statement: "In Seinfeld, Kramer's first name is Cosmo."
-        sources: [{ name: "Wikipedia: Cosmo Kramer", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Cosmo Kramer", type: REFERENCE, verified: true } ]
         questions:
           - id: kramer-cosmo-en-1
             language: en
@@ -151,12 +167,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: homer-jay
         statement: "Homer Simpson's middle name is Jay."
-        sources: [{ name: "Wikipedia: Homer Simpson", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Homer Simpson", type: REFERENCE, verified: true } ]
         questions:
           - id: homer-jay-en-1
             language: en
@@ -175,14 +195,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: confirmed (en.wikipedia: Homer Simpson) — a nod to Bullwinkle J. Moose and Rocket J. Squirrel."
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: tonight-show-steve-allen
         statement: "Steve Allen was the first host of The Tonight Show, from 1954."
-        sources: [{ name: "Wikipedia: The Tonight Show", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Tonight Show", type: REFERENCE, verified: true } ]
         questions:
           - id: tonight-show-steve-allen-en-1
             language: en
@@ -200,5 +222,9 @@ families:
             difficulty: 5
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
