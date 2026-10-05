@@ -1,0 +1,692 @@
+# Editor's set — UK politics and very British things (EN-native)
+# Editor's picks, prepared with Claude; DRAFT until fact-checked (BR-130).
+
+families:
+  - family: uk-politics-oddities
+    name: "UK politics, the funny bits"
+    facts:
+      - id: polanski-green-leader
+        statement: "Zack Polanski was elected leader of the Green Party of England and Wales in September 2025."
+        time_sensitive: true
+        sources: [{ name: "Green Party: people", type: REFERENCE, url: "https://greenparty.org.uk/about/people/national-executive/", verified: false }]
+        questions:
+          - id: polanski-green-leader-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Zack Polanski is the leader of which UK political party?"
+            options:
+              - { key: A, text: "Reform UK", distractor: SAME_CATEGORY }
+              - { key: B, text: "The Green Party of England and Wales", correct: true }
+              - { key: C, text: "Plaid Cymru", distractor: SAME_CATEGORY }
+              - { key: D, text: "The Liberal Democrats", distractor: SAME_CATEGORY }
+            explanation: "He was elected leader in September 2025."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: ed-balls-day
+        statement: "On 28 April 2011 Ed Balls accidentally tweeted just his own name, \"Ed Balls\"; the date became Ed Balls Day."
+        sources: [{ name: "The Guardian: ten tweets in need of an edit", type: REFERENCE, url: "https://www.theguardian.com/technology/2022/apr/09/twitter-ten-tweets-in-need-of-edit-covfefe-oscars-selfie", verified: false }]
+        questions:
+          - id: ed-balls-day-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In what year did Ed Balls accidentally tweet simply \"Ed Balls\"?"
+            options:
+              - { key: A, text: "2008", distractor: PLAUSIBLE }
+              - { key: B, text: "2011", correct: true }
+              - { key: C, text: "2014", distractor: PLAUSIBLE }
+              - { key: D, text: "2016", distractor: PLAUSIBLE }
+            explanation: "He was apparently trying to search for his own name. Every 28 April is now Ed Balls Day."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: truss-lettuce
+        statement: "In October 2022 the Daily Star livestreamed a lettuce to see whether it would outlast Liz Truss as Prime Minister; it did."
+        sources: [{ name: "The Guardian: inside the Daily Star's lettuce triumph", type: REFERENCE, url: "https://www.theguardian.com/media/2022/oct/21/inside-story-daily-star-lettuce-triumph-liz-truss", verified: false }]
+        questions:
+          - id: truss-lettuce-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In 2022, what did a British newspaper livestream to see whether it would outlast Liz Truss as Prime Minister?"
+            options:
+              - { key: A, text: "A pint of milk", distractor: PLAUSIBLE }
+              - { key: B, text: "A loaf of bread", distractor: PLAUSIBLE }
+              - { key: C, text: "A lettuce", correct: true }
+              - { key: D, text: "A tin of baked beans", distractor: PLAUSIBLE }
+            explanation: "The lettuce won: Truss announced her resignation that same week."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: larry-chief-mouser
+        statement: "Larry the cat at 10 Downing Street holds the title Chief Mouser to the Cabinet Office, given in 2011."
+        time_sensitive: true
+        sources: [{ name: "GOV.UK: History of 10 Downing Street", type: REFERENCE, url: "https://www.gov.uk/government/history/10-downing-street", verified: false }]
+        questions:
+          - id: larry-chief-mouser-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What is the official title of Larry the cat at 10 Downing Street?"
+            options:
+              - { key: A, text: "Royal Rat Catcher", distractor: PLAUSIBLE }
+              - { key: B, text: "Minister for Mice", distractor: PLAUSIBLE }
+              - { key: C, text: "Chief Mouser to the Cabinet Office", correct: true }
+              - { key: D, text: "Downing Street Pet Secretary", distractor: PLAUSIBLE }
+            explanation: "He has had the title since 2011 and has outlasted several Prime Ministers."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: ed-davey-stunts
+        statement: "During the 2024 general-election campaign Lib Dem leader Ed Davey fell off a paddleboard, went down a waterslide and did a bungee jump."
+        sources: [{ name: "The Guardian: general election 2024, Liberal Democrats", type: REFERENCE, url: "https://www.theguardian.com/commentisfree/article/2024/jul/03/general-election-2024-liberal-democrats-tactical-voting", verified: false }]
+        questions:
+          - id: ed-davey-stunts-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which party leader spent the 2024 election campaign falling off a paddleboard, riding a waterslide and bungee jumping?"
+            options:
+              - { key: A, text: "Rishi Sunak", distractor: SAME_CATEGORY }
+              - { key: B, text: "Keir Starmer", distractor: SAME_CATEGORY }
+              - { key: C, text: "Nigel Farage", distractor: SAME_CATEGORY }
+              - { key: D, text: "Ed Davey", correct: true }
+            explanation: "The stunts were deliberate — and the Lib Dems went on to win 72 seats."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: ["AI doubt: Check the 72-seat figure in the explanation."]
+
+      - id: boris-fridge
+        statement: "In December 2019 Boris Johnson walked into a walk-in fridge at a dairy while avoiding a Good Morning Britain interview."
+        sources: [{ name: "The Guardian: Boris Johnson hides in fridge", type: REFERENCE, url: "https://www.theguardian.com/politics/2019/dec/11/boris-johnson-hides-in-fridge-to-avoid-piers-morgan-interview", verified: false }]
+        questions:
+          - id: boris-fridge-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Where did Boris Johnson appear to retreat in 2019 to avoid a Good Morning Britain interview?"
+            options:
+              - { key: A, text: "A toilet", distractor: PLAUSIBLE }
+              - { key: B, text: "A lift", distractor: PLAUSIBLE }
+              - { key: C, text: "A walk-in fridge", correct: true }
+              - { key: D, text: "A broom cupboard", distractor: PLAUSIBLE }
+            explanation: "It happened at a dairy in Yorkshire during the 2019 election campaign."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: sunak-samba
+        statement: "In April 2024 Rishi Sunak apologised to fans of Adidas Samba trainers after jokes that he had made them unfashionable."
+        sources: [{ name: "The Guardian: Rishi Sunak apologises for wearing Adidas Samba trainers", type: REFERENCE, url: "https://www.theguardian.com/politics/2024/apr/10/im-a-longtime-devotee-rishi-sunak-apologises-for-wearing-adidas-samba-trainers", verified: false }]
+        questions:
+          - id: sunak-samba-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which trainers did Rishi Sunak jokingly apologise for wearing, after people said he'd made them uncool?"
+            options:
+              - { key: A, text: "Crocs", distractor: PLAUSIBLE }
+              - { key: B, text: "Dr. Martens", distractor: PLAUSIBLE }
+              - { key: C, text: "New Balance 574", distractor: SAME_CATEGORY }
+              - { key: D, text: "Adidas Samba", correct: true }
+            explanation: "He insisted he was a \"longtime devotee\" of Adidas."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: cameron-hum
+        statement: "In July 2016, after announcing when he would leave office, David Cameron was caught humming near a live microphone."
+        sources: [{ name: "The Guardian: David Cameron hums a merry tune", type: REFERENCE, url: "https://www.theguardian.com/politics/2016/jul/12/david-cameron-hums-a-merry-tune-as-he-hands-over-to-theresa-may", verified: false }]
+        questions:
+          - id: cameron-hum-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What did David Cameron do near a live microphone right after announcing his departure in 2016?"
+            options:
+              - { key: A, text: "Swore", distractor: PLAUSIBLE }
+              - { key: B, text: "Phoned his wife", distractor: PLAUSIBLE }
+              - { key: C, text: "Hummed a little tune", correct: true }
+              - { key: D, text: "Asked where his car was", distractor: PLAUSIBLE }
+            explanation: "Nobody ever worked out which tune it was."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: boaty-mcboatface
+        statement: "In 2016 the public voted to name a new polar research ship Boaty McBoatface; the ship became RRS Sir David Attenborough and the name went to a submarine."
+        sources: [{ name: "ITV News: Boaty McBoatface tops poll", type: REFERENCE, url: "https://www.itv.com/news/2016-04-17/boaty-mcboatface-tops-poll-as-ship-naming-competition-closes", verified: false }]
+        questions:
+          - id: boaty-mcboatface-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What name did the British public famously vote for in 2016 for a new polar research ship?"
+            options:
+              - { key: A, text: "Floaty McFloatface", distractor: NEAR_MISS }
+              - { key: B, text: "HMS Internet", distractor: PLAUSIBLE }
+              - { key: C, text: "Boaty McBoatface", correct: true }
+              - { key: D, text: "David McBoatface", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The ship was named RRS Sir David Attenborough instead; Boaty McBoatface went to its little yellow submarine."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: jackie-weaver
+        statement: "\"You have no authority here, Jackie Weaver!\" comes from a Handforth Parish Council meeting on Zoom (December 2020) that went viral in February 2021."
+        sources: [{ name: "ITV News: chaotic town council meeting", type: REFERENCE, url: "https://www.itv.com/news/2021-02-04/chaotic-town-council-meeting-becomes-unlikely-internet-sensation", verified: false }]
+        questions:
+          - id: jackie-weaver-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "\"You have no authority here, Jackie Weaver!\" went viral from what kind of event?"
+            options:
+              - { key: A, text: "A House of Commons debate", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "An episode of Question Time", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "A school parents' evening", distractor: PLAUSIBLE }
+              - { key: D, text: "A parish council meeting on Zoom", correct: true }
+            explanation: "It was Handforth Parish Council in Cheshire; Jackie Weaver simply moved the shouting councillor to the waiting room."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: count-binface
+        statement: "Count Binface, a novelty candidate with a bin for a head, has stood for Mayor of London; in 2021 he got 24,775 first-preference votes."
+        sources: [{ name: "London Elects: results factsheet 2021", type: REFERENCE, url: "https://www.londonelects.org.uk/sites/default/files/2021-05/Results%20Factsheet%202021.pdf", verified: false }]
+        questions:
+          - id: count-binface-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which of these is a real candidate who has stood for Mayor of London?"
+            options:
+              - { key: A, text: "Lord Ballotface", distractor: NEAR_MISS }
+              - { key: B, text: "Duke Democracy", distractor: PLAUSIBLE }
+              - { key: C, text: "Count Binface", correct: true }
+              - { key: D, text: "Darth Westminster", distractor: PLAUSIBLE }
+            explanation: "He says he is an intergalactic space warrior. In 2021 nearly 25,000 Londoners gave him their first vote."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: monster-raving-loony
+        statement: "The Official Monster Raving Loony Party was founded in 1982 by Screaming Lord Sutch and Alan Hope."
+        sources: [{ name: "Official Monster Raving Loony Party: about us", type: REFERENCE, url: "https://www.loonyparty.com/about-us/", verified: false }]
+        questions:
+          - id: monster-raving-loony-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which of these British political parties actually exists?"
+            options:
+              - { key: A, text: "The Sensible People Party", distractor: PLAUSIBLE }
+              - { key: B, text: "The British Tea Party", distractor: PLAUSIBLE }
+              - { key: C, text: "The Official Monster Raving Loony Party", correct: true }
+              - { key: D, text: "The Mildly Annoyed Party", distractor: PLAUSIBLE }
+            explanation: "Founded in 1982 by Screaming Lord Sutch; it still stands candidates in elections."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+  - family: uk-everyday
+    name: "Very British everyday life"
+    facts:
+      - id: greggs-vegan-roll
+        statement: "Greggs launched its vegan sausage roll in January 2019, sparking a surprisingly heated national debate."
+        sources: [{ name: "The Guardian: Greggs launches vegan sausage roll", type: REFERENCE, url: "https://www.theguardian.com/business/2019/jan/02/greggs-launches-vegan-sausage-roll", verified: false }]
+        questions:
+          - id: greggs-vegan-roll-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which Greggs product caused a surprisingly heated national debate when it launched in 2019?"
+            options:
+              - { key: A, text: "A gluten-free steak bake", distractor: PLAUSIBLE }
+              - { key: B, text: "The vegan sausage roll", correct: true }
+              - { key: C, text: "A pineapple pasty", distractor: PLAUSIBLE }
+              - { key: D, text: "A cold sausage roll", distractor: PLAUSIBLE }
+            explanation: "Piers Morgan was furious; the roll became one of Greggs' bestsellers."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: aldi-specialbuys-days
+        statement: "Aldi UK releases new Specialbuys every Thursday and Sunday."
+        sources: [{ name: "ALDI UK: understanding Specialbuys", type: REFERENCE, url: "https://www.aldi.co.uk/specialbuys/understanding-specialbuys", verified: false }]
+        questions:
+          - id: aldi-specialbuys-days-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "On which two days does Aldi launch new Specialbuys in the middle aisle?"
+            options:
+              - { key: A, text: "Monday and Friday", distractor: PLAUSIBLE }
+              - { key: B, text: "Tuesday and Saturday", distractor: PLAUSIBLE }
+              - { key: C, text: "Thursday and Sunday", correct: true }
+              - { key: D, text: "Wednesday and Sunday", distractor: NEAR_MISS }
+            explanation: "The \"middle aisle of mystery\" restocks twice a week."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 4
+            dignity: 1
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: wetherspoon-carpets
+        statement: "Every Wetherspoon pub has its own carpet design, often referencing the building or local area."
+        sources: [{ name: "J D Wetherspoon: community", type: REFERENCE, url: "https://www.jdwetherspoon.com/about-us/community-and-charity-2/", verified: false }]
+        questions:
+          - id: wetherspoon-carpets-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What is unusual about the carpets in Wetherspoon pubs?"
+            options:
+              - { key: A, text: "They must all be burgundy", distractor: PLAUSIBLE }
+              - { key: B, text: "They are bought at auctions", distractor: PLAUSIBLE }
+              - { key: C, text: "They are replaced every year", distractor: PLAUSIBLE }
+              - { key: D, text: "Each pub has its own design", correct: true }
+            explanation: "The designs often nod to the building's history or the local area — there's even a book of them."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: the-knowledge-streets
+        statement: "London black-cab drivers studying The Knowledge must learn around 25,000 streets within six miles of Charing Cross."
+        sources: [{ name: "London City Hall: Knowledge testing standards", type: REFERENCE, url: "https://www.london.gov.uk/who-we-are/what-london-assembly-does/questions-mayor/find-an-answer/knowledge-testing-standards", verified: false }]
+        questions:
+          - id: the-knowledge-streets-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Roughly how many London streets must a black-cab driver learn for The Knowledge?"
+            options:
+              - { key: A, text: "2,500", distractor: PLAUSIBLE }
+              - { key: B, text: "8,000", distractor: PLAUSIBLE }
+              - { key: C, text: "25,000", correct: true }
+              - { key: D, text: "100,000", distractor: NEAR_MISS }
+            explanation: "Plus around 100,000 landmarks and places — it usually takes three to four years."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: binley-mega-chippy
+        statement: "Binley Mega Chippy, a fish and chip shop in Coventry, became an internet phenomenon in 2022 after a TikTok meme."
+        sources: [{ name: "BBC News: Binley Mega Chippy", type: REFERENCE, url: "https://www.bbc.co.uk/news/uk-england-coventry-warwickshire-61704036", verified: false }]
+        questions:
+          - id: binley-mega-chippy-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which city is home to the internet-famous Binley Mega Chippy?"
+            options:
+              - { key: A, text: "Birmingham", distractor: NEAR_MISS }
+              - { key: B, text: "Leicester", distractor: PLAUSIBLE }
+              - { key: C, text: "Stoke-on-Trent", distractor: PLAUSIBLE }
+              - { key: D, text: "Coventry", correct: true }
+            explanation: "In 2022 people travelled from all over the country to a perfectly ordinary chippy because of a TikTok song."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: willys-chocolate-experience
+        statement: "The infamous Willy's Chocolate Experience took place in Glasgow in February 2024; tickets cost up to £35."
+        sources: [{ name: "BBC News: Willy's Chocolate Experience", type: REFERENCE, url: "https://www.bbc.co.uk/news/uk-scotland-glasgow-west-68431728", verified: false }]
+        questions:
+          - id: willys-chocolate-experience-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which city hosted the infamous Willy's Chocolate Experience in 2024?"
+            options:
+              - { key: A, text: "Manchester", distractor: PLAUSIBLE }
+              - { key: B, text: "Birmingham", distractor: PLAUSIBLE }
+              - { key: C, text: "Glasgow", correct: true }
+              - { key: D, text: "Blackpool", distractor: PLAUSIBLE }
+            explanation: "AI-generated posters promised wonders; families paid up to £35 for a near-empty warehouse."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: bude-tunnel
+        statement: "The Bude Tunnel in Cornwall is a covered, lit walkway from a Sainsbury's car park, with thousands of joke reviews on Tripadvisor."
+        sources: [{ name: "Tripadvisor: Bude Tunnel", type: REFERENCE, url: "https://www.tripadvisor.co.uk/Attraction_Review-g190804-d12865329-Reviews-Bude_Tunnel-Bude_Bude_Stratton_Cornwall_England.html", verified: false }]
+        questions:
+          - id: bude-tunnel-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What is Cornwall's internet-famous Bude Tunnel actually?"
+            options:
+              - { key: A, text: "An abandoned railway tunnel", distractor: PLAUSIBLE }
+              - { key: B, text: "A wartime bunker", distractor: PLAUSIBLE }
+              - { key: C, text: "A cycle tunnel", distractor: PLAUSIBLE }
+              - { key: D, text: "A covered walkway by a Sainsbury's car park", correct: true }
+            explanation: "About 70 metres long, with fairy lights — and a rating many real attractions would envy."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 4
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: bushtucker-ostrich
+        statement: "Ostrich anus has been served in Bushtucker Trials on I'm a Celebrity... Get Me Out of Here!"
+        sources: [{ name: "ITVX: Bushtucker Bonanza", type: REFERENCE, url: "https://www.itv.com/imacelebrity/articles/bushtucker-trial-bushtucker-bonanza", verified: false }]
+        questions:
+          - id: bushtucker-ostrich-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which of these has genuinely been eaten in a Bushtucker Trial on I'm a Celebrity?"
+            options:
+              - { key: A, text: "A chocolate-covered kangaroo tail", distractor: PLAUSIBLE }
+              - { key: B, text: "A fried shoe sole", distractor: PLAUSIBLE }
+              - { key: C, text: "Ostrich anus", correct: true }
+              - { key: D, text: "Crocodile nose with Marmite", distractor: PLAUSIBLE }
+            explanation: "The only made-up option here is the funny-sounding one; the real menu is worse."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: oasis-reunion-15-years
+        statement: "Oasis split in August 2009 and announced their reunion in August 2024, fifteen years later."
+        sources: [{ name: "BBC: Oasis reunion", type: REFERENCE, verified: false }]
+        questions:
+          - id: oasis-reunion-15-years-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "When Oasis announced their reunion in 2024, roughly how long had it been since they last played together?"
+            options:
+              - { key: A, text: "5 years", distractor: PLAUSIBLE }
+              - { key: B, text: "10 years", distractor: PLAUSIBLE }
+              - { key: C, text: "15 years", correct: true }
+              - { key: D, text: "25 years", distractor: PLAUSIBLE }
+            explanation: "They split after a backstage fight in Paris in 2009; the reunion tour came in 2025."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+  - family: uk-charts
+    name: "UK charts oddities"
+    facts:
+      - id: mr-blobby-christmas
+        statement: "Mr Blobby was the UK Christmas Number One in 1993, ahead of Take That."
+        sources: [{ name: "Official Charts: Mr Blobby", type: REFERENCE, url: "https://www.officialcharts.com/songs/mr-blobby-mr-blobby/", verified: false }]
+        questions:
+          - id: mr-blobby-christmas-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Who had the UK Christmas Number One in 1993, beating Take That?"
+            options:
+              - { key: A, text: "Cliff Richard", distractor: SAME_CATEGORY }
+              - { key: B, text: "East 17", distractor: SAME_CATEGORY }
+              - { key: C, text: "Spice Girls", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Mr Blobby", correct: true }
+            explanation: "A pink, spotty character from Noel's House Party. The Spice Girls only appeared in 1996."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: bob-builder-christmas
+        statement: "\"Can We Fix It?\" by Bob the Builder was the UK Christmas Number One in 2000, ahead of Westlife."
+        sources: [{ name: "Official Charts: every Christmas Number 1", type: REFERENCE, url: "https://www.officialcharts.com/chart-news/every-official-christmas-number-1-ever-__3618/", verified: false }]
+        questions:
+          - id: bob-builder-christmas-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Who had the UK Christmas Number One in 2000?"
+            options:
+              - { key: A, text: "Britney Spears", distractor: SAME_CATEGORY }
+              - { key: B, text: "Westlife", distractor: NEAR_MISS }
+              - { key: C, text: "Robbie Williams", distractor: SAME_CATEGORY }
+              - { key: D, text: "Bob the Builder", correct: true }
+            explanation: "\"Can We Fix It?\" beat Westlife to the top spot."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: ladbaby-five-christmas
+        statement: "LadBaby had five consecutive UK Christmas Number Ones, 2018–2022, most of them about sausage rolls."
+        time_sensitive: true
+        sources: [{ name: "Official Charts: LadBaby", type: REFERENCE, url: "https://www.officialcharts.com/artist/54840/ladbaby/", verified: false }]
+        questions:
+          - id: ladbaby-five-christmas-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What chart record did LadBaby set in the UK?"
+            options:
+              - { key: A, text: "The longest-running Number One", distractor: PLAUSIBLE }
+              - { key: B, text: "Ten Number One albums in a row", distractor: PLAUSIBLE }
+              - { key: C, text: "Five Christmas Number Ones in a row", correct: true }
+              - { key: D, text: "The first Number One without a physical release", distractor: PLAUSIBLE }
+            explanation: "From 2018 to 2022 — nearly all of them about sausage rolls, for charity."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: pj-and-duncan
+        statement: "Ant & Dec first performed as a pop duo under the names PJ & Duncan, their characters in Byker Grove."
+        sources: [{ name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: false }]
+        questions:
+          - id: pj-and-duncan-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Under what names did Ant & Dec first perform as a pop duo?"
+            options:
+              - { key: A, text: "Gaz & Baz", distractor: PLAUSIBLE }
+              - { key: B, text: "Ant & Deck", distractor: NEAR_MISS }
+              - { key: C, text: "PJ & Duncan", correct: true }
+              - { key: D, text: "The Newcastle Boys", distractor: PLAUSIBLE }
+            explanation: "Those were their characters in the children's drama Byker Grove."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: rhumble-number-one-2013
+        statement: "\"Let's Get Ready to Rhumble\" (1994) reached UK Number One in 2013, after Ant & Dec performed it on Saturday Night Takeaway."
+        sources: [{ name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: false }]
+        questions:
+          - id: rhumble-number-one-2013-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "\"Let's Get Ready to Rhumble\" came out in 1994. In what year did it finally reach Number One?"
+            options:
+              - { key: A, text: "1994", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "1998", distractor: PLAUSIBLE }
+              - { key: C, text: "2004", distractor: PLAUSIBLE }
+              - { key: D, text: "2013", correct: true }
+            explanation: "Almost 19 years later, after they performed it on Saturday Night Takeaway."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 4
+            dignity: 1
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: susan-boyle-dreamed
+        statement: "Susan Boyle sang \"I Dreamed a Dream\" from Les Misérables at her 2009 Britain's Got Talent audition."
+        sources: [{ name: "ITVX: Susan Boyle's first audition", type: REFERENCE, url: "https://www.itv.com/britainsgottalent/articles/10-years-of-bgt-susan-boyle-first-audition", verified: false }]
+        questions:
+          - id: susan-boyle-dreamed-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which song did Susan Boyle sing at her famous Britain's Got Talent audition?"
+            options:
+              - { key: A, text: "Memory", distractor: SAME_CATEGORY }
+              - { key: B, text: "Somewhere Over the Rainbow", distractor: SAME_CATEGORY }
+              - { key: C, text: "I Dreamed a Dream", correct: true }
+              - { key: D, text: "Don't Cry for Me Argentina", distractor: SAME_CATEGORY }
+            explanation: "It's from Les Misérables; the audition became one of YouTube's early global hits."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+
+  - family: uk-transport
+    name: "London transport"
+    facts:
+      - id: mind-the-gap-1968
+        statement: "\"Mind the gap\" was introduced on the London Underground in 1968."
+        sources: [{ name: "Made by TfL: our brand assets", type: REFERENCE, url: "https://madeby.tfl.gov.uk/2024/06/07/our-brand-assets/", verified: false }]
+        questions:
+          - id: mind-the-gap-1968-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "When was \"Mind the gap\" first introduced on the London Underground?"
+            options:
+              - { key: A, text: "1933", distractor: PLAUSIBLE }
+              - { key: B, text: "1955", distractor: PLAUSIBLE }
+              - { key: C, text: "1968", correct: true }
+              - { key: D, text: "1984", distractor: PLAUSIBLE }
+            explanation: "The first recording was made by sound engineer Peter Lodge."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.8, current: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: ["AI doubt: The bank already has a \"Mind the gap\" question (mind-the-gap); different fact — the year."]

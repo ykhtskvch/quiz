@@ -26,8 +26,10 @@ families:
             difficulty: 4
             dignity: 4
             effects: { BRIDGE: 0.8, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: RETIRED
             generation_method: AI
+            review_notes:
+              - "Редакция 2026-10-05: снят из EN-версии — постсоветская культура остаётся в русской версии."
 
       - id: bbc-war-and-peace-2016
         statement: "In 2016 the BBC adapted War and Peace with Paul Dano as Pierre and Lily James as Natasha."
@@ -45,8 +47,8 @@ families:
               - { key: C, text: "Doctor Zhivago", distractor: SAME_CATEGORY }
               - { key: D, text: "The Brothers Karamazov", distractor: SAME_CATEGORY }
             explanation: "Anna Karenina was the 2012 film with Keira Knightley. Paul Dano played Pierre, Lily James played Natasha."
-            topics: { russian-literature: 0.8, world-cinema: 0.5 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            topics: { world-literature: 0.8, world-series: 0.5 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             generations: { 10s: 1.0 }
             difficulty: 3
             dignity: 4
@@ -56,7 +58,7 @@ families:
 
       - id: tarkovsky-solaris
         statement: "The 1972 Soviet film Solaris was directed by Andrei Tarkovsky; Steven Soderbergh remade it in 2002."
-        sources: [{ name: "Wikipedia: Solaris (1972 film)", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Solaris (1972 film)", type: REFERENCE, verified: true }]
         questions:
           - id: tarkovsky-solaris-en-1
             language: en
@@ -70,17 +72,21 @@ families:
               - { key: C, text: "Stanley Kubrick", distractor: CONTEXTUAL_CONFUSION }
               - { key: D, text: "Sergei Bondarchuk", distractor: SAME_CATEGORY }
             explanation: "It is often called the Soviet answer to Kubrick's 2001. Soderbergh remade it in 2002 with George Clooney."
-            topics: { world-cinema: 0.8, soviet-cinema: 0.8 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            topics: { world-cinema: 1 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 4
             dignity: 4
             effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: potemkin-odessa-steps
         statement: "The famous Odessa Steps sequence comes from Sergei Eisenstein's Battleship Potemkin (1925)."
-        sources: [{ name: "Wikipedia: Battleship Potemkin", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Battleship Potemkin", type: REFERENCE, verified: true }]
         questions:
           - id: potemkin-odessa-steps-en-1
             language: en
@@ -94,13 +100,17 @@ families:
               - { key: C, text: "Doctor Zhivago", distractor: CONTEXTUAL_CONFUSION }
               - { key: D, text: "The Untouchables", distractor: CONTEXTUAL_CONFUSION }
             explanation: "The pram rolling down the steps has been copied endlessly — most famously in The Untouchables (1987)."
-            topics: { world-cinema: 0.8, soviet-cinema: 0.6 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            topics: { world-cinema: 1 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: cheburashka-japan
         statement: "Cheburashka became hugely popular in Japan, which made its own stop-motion version in 2010."
@@ -123,8 +133,10 @@ families:
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: RETIRED
             generation_method: AI
+            review_notes:
+              - "Редакция 2026-10-05: снят из EN-версии — постсоветская культура остаётся в русской версии."
 
   - family: bridges-music
     name: "Music bridges"
@@ -146,7 +158,7 @@ families:
               - { key: D, text: "Drive My Car", distractor: SAME_CATEGORY }
             explanation: "It's a parody of Chuck Berry's \"Back in the U.S.A.\" and the Beach Boys. Paul McCartney finally played it on Red Square in 2003."
             topics: { world-pop: 1.0 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             generations: { 80s: 0.5 }
             difficulty: 2
             dignity: 4
@@ -171,14 +183,14 @@ families:
               - { key: D, text: "Paul McCartney", distractor: CONTEXTUAL_CONFUSION }
             explanation: "He toured with just a percussionist, Ray Cooper. The trip was filmed as the documentary To Russia… with Elton."
             topics: { world-pop: 1.0, cold-war: 0.4 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             generations: { 80s: 0.8 }
             difficulty: 4
             dignity: 4
             effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: Check the tour dates and that only Ray Cooper accompanied him."]
+            review_notes: [ "AI doubt: Check the tour dates and that only Ray Cooper accompanied him." ]
 
       - id: flight-of-the-bumblebee
         statement: "\"Flight of the Bumblebee\" was written by Nikolai Rimsky-Korsakov for his opera The Tale of Tsar Saltan."
@@ -196,8 +208,8 @@ families:
               - { key: C, text: "Sergei Rachmaninoff", distractor: SAME_CATEGORY }
               - { key: D, text: "Igor Stravinsky", distractor: SAME_CATEGORY }
             explanation: "It comes from his opera The Tale of Tsar Saltan, from Pushkin's fairy tale: the prince turns into a bumblebee."
-            topics: { art: 0.6, russian-literature: 0.4 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            topics: { art: 1 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.6, I_KNOW_THIS: 0.5 }
@@ -224,7 +236,7 @@ families:
               - { key: D, text: "New York", distractor: PLAUSIBLE }
             explanation: "He slipped away from his KGB minders at Le Bourget airport. He later danced for years at the Royal Ballet with Margot Fonteyn."
             topics: { cold-war: 0.8, art: 0.5 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 4
             dignity: 4
             effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
@@ -247,8 +259,8 @@ families:
               - { key: C, text: "Joseph Brodsky", distractor: SAME_CATEGORY }
               - { key: D, text: "Boris Pasternak", distractor: SAME_CATEGORY }
             explanation: "Nabokov wrote his first novels in Russian and switched to English in America. He later translated Lolita into Russian himself."
-            topics: { world-literature: 0.8, russian-literature: 0.8 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            topics: { world-literature: 1 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
@@ -257,7 +269,7 @@ families:
 
       - id: theremin-termen
         statement: "The theremin, an electronic instrument played without being touched, was invented in 1920 by the Russian physicist Lev Termen (Leon Theremin)."
-        sources: [{ name: "Wikipedia: Theremin", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Theremin", type: REFERENCE, verified: true }]
         questions:
           - id: theremin-termen-en-1
             language: en
@@ -267,17 +279,21 @@ families:
             text: "The theremin — the spooky instrument you play without touching it — was invented by…"
             options:
               - { key: A, text: "Nikola Tesla", distractor: SAME_CATEGORY }
-              - { key: B, text: "Lev Termen, a Russian physicist", correct: true }
+              - { key: B, text: "Lev Termen", correct: true }
               - { key: C, text: "Robert Moog", distractor: CONTEXTUAL_CONFUSION }
               - { key: D, text: "Thomas Edison", distractor: SAME_CATEGORY }
             explanation: "Termen showed it to Lenin in 1922. Robert Moog built theremins before he became famous for synthesisers."
             topics: { science: 1.0 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: mammoth-from-russian
         statement: "The English word \"mammoth\" came from Russian \"mamont\"."
@@ -296,10 +312,10 @@ families:
               - { key: D, text: "Ketchup", distractor: PLAUSIBLE }
             explanation: "Mammoth bones were dug up in Siberia, and the Russian word came with them. Kayak comes from Inuit languages, safari from Swahili."
             topics: { nature: 0.6, science: 0.4 }
-            contexts: { POST_SOVIET: 1.0, UK: 0.6, GLOBAL: 0.5 }
+            contexts: { POST_SOVIET: 0.6, UK: 0.6, GLOBAL: 1 }
             difficulty: 4
             dignity: 4
             effects: { I_FIGURED_IT_OUT: 0.6, BRIDGE: 0.5 }
             status: DRAFT
             generation_method: AI
-            review_notes: ["AI doubt: The Russian word may itself come from Mansi; the question only says it came into English from Russian."]
+            review_notes: [ "AI doubt: The Russian word may itself come from Mansi; the question only says it came into English from Russian." ]

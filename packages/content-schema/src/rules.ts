@@ -22,6 +22,7 @@ export function checkContent(files: LoadedFile[], taxonomy: Taxonomy): Issue[] {
 
   const topicSlugs = new Set(taxonomy.topics.map((t) => t.slug));
   const contextCodes = new Set(taxonomy.contexts.map((c) => c.code));
+  const postSovietTopics = new Set(taxonomy.topics.filter((t) => t.implied_context === "POST_SOVIET").map((t) => t.slug));
   const seen = { family: new Map<string, string>(), fact: new Map<string, string>(), question: new Map<string, string>() };
 
   const unique = (kind: keyof typeof seen, id: string, where: string) => {
@@ -63,6 +64,14 @@ export function checkContent(files: LoadedFile[], taxonomy: Taxonomy): Issue[] {
             if (local.length > 0 || (q.culture_specificity !== "GLOBAL" && !q.is_bridge)) {
               err(where, "translation is allowed only for GLOBAL or bridge questions (BR-127)");
             }
+          }
+
+          // The English version is for international rooms: post-Soviet culture stays in Russian.
+          // Things the whole world knows (Tetris, The Nutcracker) may appear, filed under global topics.
+          if (q.language === "en" && q.status !== "RETIRED") {
+            const psTopics = Object.keys(q.topics).filter((t) => postSovietTopics.has(t));
+            if (psTopics.length) err(where, `EN question uses post-Soviet topic(s) ${psTopics.join(", ")} — keep it in Russian or file it under a global topic`);
+            if ((q.contexts.POST_SOVIET ?? 0) > (q.contexts.GLOBAL ?? 0)) err(where, "EN question is mainly post-Soviet (POST_SOVIET > GLOBAL) — keep it in Russian");
           }
 
           for (const t of Object.keys(q.topics)) if (!topicSlugs.has(t)) err(where, `unknown topic "${t}"`);

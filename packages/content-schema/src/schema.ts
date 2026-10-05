@@ -103,6 +103,8 @@ export const QuestionSchema = z.object({
   generation_method: z.enum(["HUMAN", "AI", "HYBRID"]),
   reviewed: z.object({ by: z.string(), at: z.string() }).optional(),
   review_notes: z.array(z.string()).default([]),
+  /** How much the editor likes the question, 1–5. Editorial only; never shipped to the game. */
+  editor_rating: scale.optional(),
 });
 
 export const FactSchema = z.object({

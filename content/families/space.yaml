@@ -38,7 +38,7 @@ families:
               - { key: C, text: Vostok 1, correct: true }
               - { key: D, text: Mir, distractor: CONTEXTUAL_CONFUSION }
             explanation: 12 April 1961; the Voskhod flights came later, in 1964–65.
-            topics: { space: 1, ussr-history: 0.4 }
+            topics: { space: 1 }
             contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
             difficulty: 1
             dignity: 5
@@ -81,7 +81,7 @@ families:
               - { key: C, text: About 5 hours, distractor: PLAUSIBLE }
               - { key: D, text: Almost a day, distractor: PLAUSIBLE }
             explanation: One orbit of the Earth; the next cosmonaut, Gherman Titov, stayed up for a full day.
-            topics: { space: 1, ussr-history: 0.3 }
+            topics: { space: 1 }
             contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
             difficulty: 3
             dignity: 5
@@ -268,7 +268,7 @@ families:
               - { key: C, text: Dezik and Tsygan, distractor: SAME_CATEGORY }
               - { key: D, text: Chernushka and Zvyozdochka, distractor: SAME_CATEGORY }
             explanation: "All of them were real space dogs: Dezik and Tsygan flew a suborbital rocket in 1951, while Pchyolka and Mushka died on re-entry in December 1960."
-            topics: { space: 1, ussr-history: 0.3 }
+            topics: { space: 1 }
             contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
             difficulty: 2
             dignity: 4
@@ -372,7 +372,7 @@ families:
     facts:
       - id: apollo-11-collins
         statement: "Из экипажа «Аполлона-11» на Луну не высаживался Майкл Коллинз — он оставался на орбите в командном модуле."
-        sources: [{ name: "Википедия: Аполлон-11", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Аполлон-11", type: REFERENCE, verified: true }]
         questions:
           - id: apollo-11-collins-ru-1
             language: ru
@@ -390,8 +390,12 @@ families:
             difficulty: 3
             dignity: 5
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: apollo-11-collins-en-1
             language: en
             origin_language: ru
@@ -415,7 +419,7 @@ families:
 
       - id: moonwalkers-count
         statement: "По Луне ходили 12 человек (миссии «Аполлон» 1969–1972). Всего к Луне летали 28 человек: 24 по «Аполлонам» и 4 — экипаж «Артемиды-2» (облёт Луны, апрель 2026)."
-        sources: [{ name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: true }]
         questions:
           - id: moonwalkers-count-ru-1
             language: ru
@@ -434,10 +438,12 @@ families:
             dignity: 5
             effects: { I_FIGURED_IT_OUT: 0.8, I_KNOW_THIS: 0.5 }
             time_sensitive: true
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: «Артемида-2» облетела Луну 1–11 апреля 2026 без посадки (en.wikipedia: Artemis II) — 12 по-прежнему верно; «к Луне летали» исправлено с 24 на 28."
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: moonwalkers-count-en-1
             language: en
             origin_language: ru
@@ -463,7 +469,7 @@ families:
 
       - id: last-moon-landing-year
         statement: "Последняя на сегодня высадка людей на Луну — «Аполлон-17», декабрь 1972 года."
-        sources: [{ name: "Википедия: Аполлон-17", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Аполлон-17", type: REFERENCE, verified: true }]
         questions:
           - id: last-moon-landing-year-ru-1
             language: ru
@@ -482,10 +488,12 @@ families:
             dignity: 5
             effects: { I_KNOW_THIS: 0.8, I_FIGURED_IT_OUT: 0.3 }
             time_sensitive: true
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-04: «Артемида-2» (апрель 2026) — облёт без посадки, следующая высадка — «Артемида-3»; ответ 1972 верен."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: last-moon-landing-year-en-1
             language: en
             origin_language: ru
@@ -557,7 +565,7 @@ families:
 
       - id: hottest-planet
         statement: "Самая горячая планета Солнечной системы — Венера (около 465 °C на поверхности), а не Меркурий."
-        sources: [{ name: "Википедия: Венера", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Венера", type: REFERENCE, verified: true }]
         questions:
           - id: hottest-planet-ru-1
             language: ru
@@ -575,8 +583,12 @@ families:
             difficulty: 3
             dignity: 5
             effects: { I_FIGURED_IT_OUT: 0.7, I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: hottest-planet-en-1
             language: en
             origin_language: ru
@@ -600,7 +612,7 @@ families:
 
       - id: pluto-dwarf-planet
         statement: "В 2006 году Международный астрономический союз перевёл Плутон в категорию карликовых планет."
-        sources: [{ name: "Википедия: Плутон", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Плутон", type: REFERENCE, verified: true }]
         questions:
           - id: pluto-dwarf-planet-ru-1
             language: ru
@@ -620,8 +632,11 @@ families:
             difficulty: 3
             dignity: 4
             effects: { WHY_DO_I_REMEMBER_THIS: 0.6, BRIDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: pluto-dwarf-planet-en-1
             language: en
             origin_language: ru
@@ -647,7 +662,7 @@ families:
 
       - id: mars-moons
         statement: "Спутники Марса — Фобос и Деймос."
-        sources: [{ name: "Википедия: Спутники Марса", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Спутники Марса", type: REFERENCE, verified: true }]
         questions:
           - id: mars-moons-ru-1
             language: ru
@@ -665,8 +680,12 @@ families:
             difficulty: 3
             dignity: 5
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: mars-moons-en-1
             language: en
             origin_language: ru

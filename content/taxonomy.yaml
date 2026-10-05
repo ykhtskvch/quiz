@@ -45,7 +45,7 @@ topics:
   - { slug: eurovision, emoji: "🌟", name: "Евровидение", name_en: "Eurovision", group: "Музыка", group_en: "Music", level: B, target_questions: 8 }
   - { slug: music-now, emoji: "🎙️", name: "Рэп и современная музыка", name_en: "Rap & music now", group: "Музыка", group_en: "Music", level: B, target_questions: 8 }
   # Интернет и игры
-  - { slug: old-internet, emoji: "💾", name: "Старый интернет", name_en: "The old internet", group: "Интернет и игры", group_en: "Internet & games", level: A, target_questions: 15, implied_context: POST_SOVIET }
+  - { slug: old-internet, emoji: "💾", name: "Старый интернет", name_en: "The old internet", group: "Интернет и игры", group_en: "Internet & games", level: A, target_questions: 15 }
   - { slug: internet-now, emoji: "📱", name: "Мемы и интернет сейчас", name_en: "Memes & the internet now", group: "Интернет и игры", group_en: "Internet & games", level: B, target_questions: 8 }
   - { slug: videogames, emoji: "🎮", name: "Видеоигры", name_en: "Video games", group: "Интернет и игры", group_en: "Internet & games", level: B, target_questions: 8 }
   - { slug: fandoms, emoji: "🧙", name: "Фэнтези и фандомы", name_en: "Fantasy & fandoms", group: "Интернет и игры", group_en: "Internet & games", level: B, target_questions: 8 }

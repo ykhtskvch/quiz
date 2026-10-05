@@ -343,7 +343,7 @@ families:
               - { key: D, text: Luntik, distractor: SAME_CATEGORY }
             explanation: The episode "Recipe for Disaster" ("Masha Plus Porridge") has billions of views.
             topics: { cartoons: 1, internet-now: 0.4 }
-            contexts: { POST_SOVIET: 1, INTERNET_GLOBAL: 0.5 }
+            contexts: { POST_SOVIET: 0.6, INTERNET_GLOBAL: 0.5, GLOBAL: 1 }
             generations: { 10s: 1, current: 0.6 }
             difficulty: 2
             dignity: 3

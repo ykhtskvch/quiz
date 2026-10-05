@@ -68,6 +68,11 @@
       .msg.error { color: var(--bad); }
       .msg.ok { color: var(--ok); }
       .empty { text-align: center; color: var(--muted); padding: 3rem 1rem; }
+      .rating { display: flex; align-items: center; gap: 0.15rem; font-size: 0.9rem; color: var(--muted); }
+      .rating > span { margin-right: 0.5rem; }
+      .rating .star { background: none; border: none; padding: 0 0.1rem; font-size: 1.5rem; line-height: 1; color: var(--muted); opacity: 0.45; cursor: pointer; }
+      .rating .star.on { color: var(--accent); opacity: 1; }
+      .rating .link { background: none; border: none; color: var(--muted); text-decoration: underline; cursor: pointer; margin-left: 0.5rem; }
       .nav { display: flex; gap: 0.5rem; align-items: center; color: var(--muted); font-size: 0.9rem; }
       kbd { background: var(--surface-2); border-radius: 4px; padding: 0 0.3rem; font-size: 0.8rem; }
     </style>
@@ -86,6 +91,7 @@
       <select id="order">
         <option value="file">По порядку в файлах</option>
         <option value="share">Сначала частые в игре</option>
+        <option value="rating">Сначала любимые</option>
       </select>
       <span class="stat" id="progress"></span>
       <span class="stat" id="pace"></span>
@@ -111,6 +117,7 @@
       let issues = {};
       let cursor = 0;
       let shownAt = performance.now();
+      let currentRating = 0;
       const times = JSON.parse(store.get("review.times", "[]"));
 
       $("#reviewer").value = store.get("review.reviewer", "");
@@ -137,7 +144,10 @@
         const s = $("#status").value;
         const list = all.filter((q) => (!f || q.file === f) && (!s || q.status === s));
         // Stable sort: equally frequent questions keep their file order.
-        return $("#order").value === "share" ? list.sort((a, b) => b.share - a.share) : list;
+        const order = $("#order").value;
+        if (order === "share") return list.sort((a, b) => b.share - a.share);
+        if (order === "rating") return list.sort((a, b) => (b.editor_rating ?? 0) - (a.editor_rating ?? 0));
+        return list;
       }
 
       function stats() {
@@ -161,6 +171,7 @@
         cursor = Math.min(cursor, list.length - 1);
         const q = list[cursor];
         shownAt = performance.now();
+        currentRating = q.editor_rating ?? 0;
         const src = q.sources[0] ?? {};
         const searchName = (src.name ?? "").replace(/^Википедия:\s*/, "");
         const wiki = `https://ru.wikipedia.org/w/index.php?search=${encodeURIComponent(searchName || q.statement)}`;
@@ -216,6 +227,11 @@
               <label>Dignity (5 — классика, 1 — поп/мусор) ${sel("dignity", q.dignity)}</label>
               <label>Заметка <input data-f="note" placeholder="что не так" /></label>
             </div>
+            <div class="rating" role="radiogroup" aria-label="Насколько нравится">
+              <span>Насколько нравится</span>
+              ${[1, 2, 3, 4, 5].map((n) => `<button type="button" class="star ${n <= (q.editor_rating ?? 0) ? "on" : ""}" data-rating="${n}" aria-label="${n} из 5" title="${n} из 5 (клавиша ${n})">★</button>`).join("")}
+              <button type="button" class="link" id="clear-rating" ${q.editor_rating ? "" : "hidden"}>сбросить</button>
+            </div>
             <div class="actions">
               <button class="primary" id="approve">Одобрить ✓</button>
               <button id="save">Сохранить черновик</button>
@@ -230,6 +246,8 @@
         $("#approve").onclick = () => submit(q, "approve");
         $("#save").onclick = () => submit(q, "save");
         $("#retire").onclick = () => submit(q, "retire");
+        document.querySelectorAll(".star").forEach((b) => (b.onclick = () => rate(q, Number(b.dataset.rating))));
+        $("#clear-rating").onclick = () => rate(q, 0);
         document.querySelectorAll('input[name="correct"]').forEach((r) =>
           r.addEventListener("change", () => document.querySelectorAll(".option").forEach((el) => el.classList.toggle("correct", el.contains(r) && r.checked))),
         );
@@ -244,10 +262,28 @@
           sourceUrl: f("sourceUrl").value,
           difficulty: Number(f("difficulty").value),
           dignity: Number(f("dignity").value),
+          rating: currentRating,
           note: f("note").value,
           options: q.options.map((o) => ({ key: o.key, text: document.querySelector(`[data-opt="${o.key}"]`).value })),
           correctKey: document.querySelector('input[name="correct"]:checked')?.value,
         };
+      }
+
+      /** Saves only the rating, so unsaved edits in the form stay as they are. */
+      async function rate(q, n) {
+        const r = await fetch(`/api/questions/${q.id}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "save", rating: n }) });
+        const msg = $("#msg");
+        if (!r.ok) {
+          msg.className = "msg error";
+          msg.textContent = (await r.json()).error ?? "Не удалось сохранить оценку";
+          return;
+        }
+        q.editor_rating = n || undefined;
+        currentRating = n;
+        document.querySelectorAll(".star").forEach((b) => b.classList.toggle("on", Number(b.dataset.rating) <= n));
+        $("#clear-rating").hidden = !n;
+        msg.className = "msg ok";
+        msg.textContent = n ? `Оценка ${n} из 5 сохранена` : "Оценка сброшена";
       }
 
       async function submit(q, action) {
@@ -281,6 +317,9 @@
 
       document.addEventListener("keydown", (e) => {
         if ((e.metaKey || e.ctrlKey) && e.key === "Enter") $("#approve")?.click();
+        // 1–5 rates the question, unless you're typing somewhere.
+        const typing = ["INPUT", "TEXTAREA", "SELECT"].includes(document.activeElement?.tagName);
+        if (!typing && !e.metaKey && !e.ctrlKey && !e.altKey && /^[1-5]$/.test(e.key)) document.querySelector(`.star[data-rating="${e.key}"]`)?.click();
       });
 
       load();

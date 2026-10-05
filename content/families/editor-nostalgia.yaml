@@ -1,0 +1,1063 @@
+# Editor's set — 2000s nostalgia (EN-native)
+# Editor's picks, prepared with Claude; DRAFT until fact-checked (BR-130).
+
+families:
+  - family: nostalgia-phones
+    name: "Old phones"
+    facts:
+      - id: t9-meaning
+        statement: "T9 stands for \"Text on 9 keys\"."
+        sources: [{ name: "Wikipedia: T9 (predictive text)", type: REFERENCE, verified: false }]
+        questions:
+          - id: t9-meaning-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What does T9, the predictive text on old phones, stand for?"
+            options:
+              - { key: A, text: "Type 9", distractor: PLAUSIBLE }
+              - { key: B, text: "Turbo 9", distractor: PLAUSIBLE }
+              - { key: C, text: "Text on 9 keys", correct: true }
+              - { key: D, text: "Telephone 9", distractor: PLAUSIBLE }
+            explanation: "It guessed the word from one press per letter — and famously turned \"good\" into \"home\"."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: t9-meaning-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Как расшифровывается T9 — предиктивный набор на старых телефонах?
+            options:
+              - { key: A, text: Type 9, distractor: PLAUSIBLE }
+              - { key: B, text: Turbo 9, distractor: PLAUSIBLE }
+              - { key: C, text: Text on 9 keys — текст на 9 кнопках, correct: true }
+              - { key: D, text: Telephone 9, distractor: PLAUSIBLE }
+            explanation: Слово угадывалось по одному нажатию на букву — и иногда угадывалось очень смешно.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: nokia-3310-no-camera
+        statement: "The standard Nokia 3310 (2000) had SMS, a calculator and Snake II, but no camera."
+        sources: [{ name: "Wikipedia: Nokia 3310", type: REFERENCE, verified: false }]
+        questions:
+          - id: nokia-3310-no-camera-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which feature did the standard Nokia 3310 definitely NOT have?"
+            options:
+              - { key: A, text: "A calculator", distractor: SAME_CATEGORY }
+              - { key: B, text: "SMS", distractor: SAME_CATEGORY }
+              - { key: C, text: "Snake", distractor: SAME_CATEGORY }
+              - { key: D, text: "A camera", correct: true }
+            explanation: "Camera phones only arrived a couple of years later."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: nokia-3310-no-camera-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Чего точно НЕ было в обычной Nokia 3310?
+            options:
+              - { key: A, text: Калькулятора, distractor: SAME_CATEGORY }
+              - { key: B, text: SMS, distractor: SAME_CATEGORY }
+              - { key: C, text: «Змейки», distractor: SAME_CATEGORY }
+              - { key: D, text: Камеры, correct: true }
+            explanation: Телефоны с камерой появились только через пару лет.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: crazy-frog-ringtone
+        statement: "Crazy Frog became famous mainly as a mobile ringtone (2004–2005)."
+        sources: [{ name: "Wikipedia: Crazy Frog", type: REFERENCE, verified: false }]
+        questions:
+          - id: crazy-frog-ringtone-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Crazy Frog first became famous mainly as…"
+            options:
+              - { key: A, text: "A TV-show mascot", distractor: PLAUSIBLE }
+              - { key: B, text: "A Happy Meal toy", distractor: PLAUSIBLE }
+              - { key: C, text: "A ringtone", correct: true }
+              - { key: D, text: "A video-game character", distractor: PLAUSIBLE }
+            explanation: "The ringtone was advertised so relentlessly that Jamster ads became a joke in themselves."
+            topics: { old-internet: 0.6, world-pop: 0.5 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: The bank also has crazy-frog-axel-f (the cover of Axel F) — a different fact." ]
+          - id: crazy-frog-ringtone-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Crazy Frog сначала прославился прежде всего как…
+            options:
+              - { key: A, text: талисман телешоу, distractor: PLAUSIBLE }
+              - { key: B, text: игрушка из Happy Meal, distractor: PLAUSIBLE }
+              - { key: C, text: рингтон, correct: true }
+              - { key: D, text: персонаж видеоигры, distractor: PLAUSIBLE }
+            explanation: Рингтон рекламировали так настойчиво, что сама реклама стала мемом.
+            topics: { old-internet: 0.6, world-pop: 0.5 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: The bank also has crazy-frog-axel-f (the cover of Axel F) — a different fact."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: ringtone-paid
+        statement: "In the 2000s people paid to download ringtones to their phones."
+        sources: [{ name: "Wikipedia: Ringtone", type: REFERENCE, verified: false }]
+        questions:
+          - id: ringtone-paid-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What could you pay to put on an old mobile, then spend ages choosing the perfect few seconds of?"
+            options:
+              - { key: A, text: "A podcast", distractor: PLAUSIBLE }
+              - { key: B, text: "A widget", distractor: PLAUSIBLE }
+              - { key: C, text: "A ringtone", correct: true }
+              - { key: D, text: "A story", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Polyphonic ringtones were a huge business before smartphones."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: ringtone-paid-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что можно было за деньги поставить на старый мобильный, а потом долго выбирать идеальные несколько секунд?
+            options:
+              - { key: A, text: Подкаст, distractor: PLAUSIBLE }
+              - { key: B, text: Виджет, distractor: PLAUSIBLE }
+              - { key: C, text: Рингтон, correct: true }
+              - { key: D, text: Сторис, distractor: CONTEXTUAL_CONFUSION }
+            explanation: До смартфонов полифонические рингтоны были огромным бизнесом.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: bluetooth-file-transfer
+        statement: "In the 2000s \"send it by Bluetooth\" meant transferring a file directly from one phone to another."
+        sources: [{ name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false }]
+        questions:
+          - id: bluetooth-file-transfer-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What did \"send it by Bluetooth\" usually mean in the 2000s?"
+            options:
+              - { key: A, text: "Pay for something", distractor: PLAUSIBLE }
+              - { key: B, text: "Add someone on social media", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Send a file from one phone to another", correct: true }
+              - { key: D, text: "Connect to the internet", distractor: PLAUSIBLE }
+            explanation: "Usually a song, a ringtone or a very bad video — standing next to each other for five minutes."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: bluetooth-file-transfer-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что в 2000-е обычно значило «скинь по блютузу»?
+            options:
+              - { key: A, text: Заплатить за что-то, distractor: PLAUSIBLE }
+              - { key: B, text: Добавить в соцсети, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Передать файл с телефона на телефон, correct: true }
+              - { key: D, text: Подключиться к интернету, distractor: PLAUSIBLE }
+            explanation: Обычно песню, рингтон или очень плохое видео — стоя рядом минут пять.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: memory-card-mp3
+        statement: "Before streaming and cheap mobile data, a memory-card slot for storing MP3s was a valued phone feature."
+        sources: [{ name: "Wikipedia: microSD", type: REFERENCE, verified: false }]
+        questions:
+          - id: memory-card-mp3-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Before Spotify and cheap mobile data, which phone feature was especially prized?"
+            options:
+              - { key: A, text: "5G", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Face ID", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "A memory-card slot for MP3s", correct: true }
+              - { key: D, text: "An eSIM", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "More megabytes meant more songs on the bus."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: memory-card-mp3-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что особенно ценилось в телефоне до Spotify и дешёвого мобильного интернета?
+            options:
+              - { key: A, text: 5G, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Face ID, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Слот для карты памяти под MP3, correct: true }
+              - { key: D, text: eSIM, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Больше мегабайт — больше песен в автобусе.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: nostalgia-web
+    name: "The 2000s web"
+    facts:
+      - id: msn-nudge
+        statement: "In MSN Messenger, a Nudge shook the other person's chat window."
+        sources: [{ name: "Wikipedia: Windows Live Messenger", type: REFERENCE, verified: false }]
+        questions:
+          - id: msn-nudge-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "What did a \"Nudge\" do in MSN Messenger?"
+            options:
+              - { key: A, text: "Deleted a message", distractor: PLAUSIBLE }
+              - { key: B, text: "Sent a secret emoji", distractor: PLAUSIBLE }
+              - { key: C, text: "Shook the other person's chat window", correct: true }
+              - { key: D, text: "Showed who had viewed your profile", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The most annoying button of the 2000s."
+            topics: { old-internet: 1.0 }
+            contexts: { INTERNET_GLOBAL: 1.0, UK: 0.7, US: 0.7, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: myspace-top-8
+        statement: "MySpace let users rank their Top 8 friends on their profile."
+        sources: [{ name: "Wikipedia: Myspace", type: REFERENCE, verified: false }]
+        questions:
+          - id: myspace-top-8-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "What was a big social decision on MySpace?"
+            options:
+              - { key: A, text: "Choosing your password", distractor: PLAUSIBLE }
+              - { key: B, text: "Choosing your Top 8 friends", correct: true }
+              - { key: C, text: "Buying a verification badge", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Choosing your follower count", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Demoting someone from your Top 8 could end a friendship."
+            topics: { old-internet: 1.0 }
+            contexts: { INTERNET_GLOBAL: 1.0, UK: 0.7, US: 0.7, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: myspace-autoplay
+        statement: "MySpace profiles could play music automatically when opened."
+        sources: [{ name: "Wikipedia: Myspace", type: REFERENCE, verified: false }]
+        questions:
+          - id: myspace-autoplay-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "What could suddenly happen when you opened someone's MySpace profile?"
+            options:
+              - { key: A, text: "Their webcam switched on", distractor: PLAUSIBLE }
+              - { key: B, text: "Music started playing", correct: true }
+              - { key: C, text: "Your computer restarted", distractor: PLAUSIBLE }
+              - { key: D, text: "They got a text message", distractor: PLAUSIBLE }
+            explanation: "Usually at full volume, usually in a quiet office."
+            topics: { old-internet: 1.0 }
+            contexts: { INTERNET_GLOBAL: 1.0, UK: 0.7, US: 0.7, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: icq-uin
+        statement: "An ICQ number (UIN) was a numerical user ID."
+        sources: [{ name: "Wikipedia: ICQ", type: REFERENCE, verified: false }]
+        questions:
+          - id: icq-uin-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What was an ICQ number?"
+            options:
+              - { key: A, text: "A phone number", distractor: PLAUSIBLE }
+              - { key: B, text: "A chat password", distractor: PLAUSIBLE }
+              - { key: C, text: "A numerical user ID", correct: true }
+              - { key: D, text: "Your number of friends", distractor: PLAUSIBLE }
+            explanation: "Short numbers were a status symbol; some were even sold."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: The bank has ICQ questions in Russian (sound, logo, «аська») — this one is about the UIN." ]
+          - id: icq-uin-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что такое номер ICQ?
+            options:
+              - { key: A, text: Номер телефона, distractor: PLAUSIBLE }
+              - { key: B, text: Пароль от чата, distractor: PLAUSIBLE }
+              - { key: C, text: Числовой идентификатор пользователя, correct: true }
+              - { key: D, text: Количество друзей, distractor: PLAUSIBLE }
+            explanation: Короткие номера были статусной вещью — их даже продавали.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: The bank has ICQ questions in Russian (sound, logo, «аська») — this one is about the UIN."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: limewire-viruses
+        statement: "LimeWire was peer-to-peer file-sharing software; downloads were often mislabelled or carried viruses."
+        sources: [{ name: "Wikipedia: LimeWire", type: REFERENCE, verified: false }]
+        questions:
+          - id: limewire-viruses-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "What was a very realistic risk of downloading a song from LimeWire?"
+            options:
+              - { key: A, text: "It turned into a MIDI file", distractor: PLAUSIBLE }
+              - { key: B, text: "Your computer started talking", distractor: PLAUSIBLE }
+              - { key: C, text: "You got a virus or a completely different file", correct: true }
+              - { key: D, text: "The song expired after 24 hours", distractor: PLAUSIBLE }
+            explanation: "\"Linkin_Park_Numb_FINAL_real.mp3\" could be anything."
+            topics: { old-internet: 1.0 }
+            contexts: { INTERNET_GLOBAL: 1.0, UK: 0.7, US: 0.7, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: burn-a-cd
+        statement: "To \"burn a CD\" means to write music or data onto a recordable disc."
+        sources: [{ name: "Wikipedia: Optical disc recording", type: REFERENCE, verified: false }]
+        questions:
+          - id: burn-a-cd-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What did it mean to \"burn a CD\"?"
+            options:
+              - { key: A, text: "Literally set an old CD on fire", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Make a CD play faster", distractor: PLAUSIBLE }
+              - { key: C, text: "Write music or data onto a disc", correct: true }
+              - { key: D, text: "Wipe everything off it", distractor: PLAUSIBLE }
+            explanation: "The laser literally burns marks into the dye layer — hence the name."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: burn-a-cd-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что значило «прожечь диск»?
+            options:
+              - { key: A, text: Буквально поджечь старый CD, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Ускорить воспроизведение, distractor: PLAUSIBLE }
+              - { key: C, text: Записать на диск музыку или данные, correct: true }
+              - { key: D, text: Стереть с него всё, distractor: PLAUSIBLE }
+            explanation: Лазер действительно выжигает метки в слое красителя — отсюда и название.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: windows-xp-bliss
+        statement: "The green-hill Windows XP wallpaper is called Bliss."
+        sources: [{ name: "Wikipedia: Bliss (image)", type: REFERENCE, verified: false }]
+        questions:
+          - id: windows-xp-bliss-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What is the famous green-hill Windows XP wallpaper called?"
+            options:
+              - { key: A, text: "Freedom", distractor: PLAUSIBLE }
+              - { key: B, text: "Meadow", distractor: PLAUSIBLE }
+              - { key: C, text: "Bliss", correct: true }
+              - { key: D, text: "California", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Photographed in California's wine country in 1996 — possibly the most-viewed photo ever."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: windows-xp-bliss-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Как называются знаменитые обои Windows XP с зелёным холмом?
+            options:
+              - { key: A, text: Freedom, distractor: PLAUSIBLE }
+              - { key: B, text: Meadow, distractor: PLAUSIBLE }
+              - { key: C, text: Bliss, correct: true }
+              - { key: D, text: California, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Снимок сделан в винодельческом районе Калифорнии в 1996 году — возможно, самая просматриваемая фотография в истории.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: facebook-poke
+        statement: "Facebook's Poke had no specific purpose beyond getting someone's attention."
+        sources: [{ name: "Wikipedia: Facebook features", type: REFERENCE, verified: false }]
+        questions:
+          - id: facebook-poke-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "What did Facebook's \"Poke\" actually do?"
+            options:
+              - { key: A, text: "Blocked someone", distractor: PLAUSIBLE }
+              - { key: B, text: "Sent them a photo", distractor: PLAUSIBLE }
+              - { key: C, text: "Just got their attention", correct: true }
+              - { key: D, text: "Announced that you fancied them", distractor: PLAUSIBLE }
+            explanation: "Even Facebook never explained what it was for."
+            topics: { old-internet: 1.0 }
+            contexts: { INTERNET_GLOBAL: 1.0, UK: 0.7, US: 0.7, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: farmville
+        statement: "FarmVille (2009) had millions of Facebook users harvesting virtual crops."
+        sources: [{ name: "Wikipedia: FarmVille", type: REFERENCE, verified: false }]
+        questions:
+          - id: farmville-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "Which Facebook game had millions of people coming back to harvest virtual crops?"
+            options:
+              - { key: A, text: "Happy Farm", distractor: NEAR_MISS }
+              - { key: B, text: "Facebook Farmer", distractor: PLAUSIBLE }
+              - { key: C, text: "FarmVille", correct: true }
+              - { key: D, text: "Farm World", distractor: PLAUSIBLE }
+            explanation: "Happy Farm was real too — a Chinese game that inspired it."
+            topics: { old-internet: 0.6, videogames: 0.6 }
+            contexts: { INTERNET_GLOBAL: 1.0, UK: 0.7, US: 0.7, GLOBAL: 0.4 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: nero-burning-rom
+        statement: "Nero Burning ROM was software for burning CDs and DVDs."
+        sources: [{ name: "Wikipedia: Nero Burning ROM", type: REFERENCE, verified: false }]
+        questions:
+          - id: nero-burning-rom-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What was Nero Burning ROM mainly used for?"
+            options:
+              - { key: A, text: "Chatting", distractor: PLAUSIBLE }
+              - { key: B, text: "Editing photos", distractor: PLAUSIBLE }
+              - { key: C, text: "Burning CDs and DVDs", correct: true }
+              - { key: D, text: "Downloading music", distractor: NEAR_MISS }
+            explanation: "The name is a pun: Emperor Nero, who fiddled while Rome burned."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: nero-burning-rom-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Для чего в основном использовали Nero Burning ROM?
+            options:
+              - { key: A, text: Для переписки, distractor: PLAUSIBLE }
+              - { key: B, text: Для обработки фото, distractor: PLAUSIBLE }
+              - { key: C, text: Для записи CD и DVD, correct: true }
+              - { key: D, text: Для скачивания музыки, distractor: NEAR_MISS }
+            explanation: "Название — каламбур: император Нерон, при котором горел Рим."
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: mp3-downloads
+        statement: "MP3 became almost synonymous with downloaded music in the 2000s."
+        sources: [{ name: "Wikipedia: MP3", type: REFERENCE, verified: false }]
+        questions:
+          - id: mp3-downloads-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which file format was almost a synonym for downloaded music in the 2000s?"
+            options:
+              - { key: A, text: "WAV", distractor: SAME_CATEGORY }
+              - { key: B, text: "MIDI", distractor: SAME_CATEGORY }
+              - { key: C, text: "MP3", correct: true }
+              - { key: D, text: "TIFF", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "TIFF is an image format — a little trap."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: mp3-downloads-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой формат файла в 2000-е был почти синонимом скачанной музыки?
+            options:
+              - { key: A, text: WAV, distractor: SAME_CATEGORY }
+              - { key: B, text: MIDI, distractor: SAME_CATEGORY }
+              - { key: C, text: MP3, correct: true }
+              - { key: D, text: TIFF, distractor: CONTEXTUAL_CONFUSION }
+            explanation: TIFF — формат картинок, маленькая ловушка.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: skype-calls-abroad
+        statement: "Skype became one of the main ways to make cheap internet calls abroad."
+        sources: [{ name: "Wikipedia: Skype", type: REFERENCE, verified: false }]
+        questions:
+          - id: skype-calls-abroad-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which service became the go-to way to call abroad over the internet?"
+            options:
+              - { key: A, text: "ICQ", distractor: NEAR_MISS }
+              - { key: B, text: "Skype", correct: true }
+              - { key: C, text: "Napster", distractor: PLAUSIBLE }
+              - { key: D, text: "Winamp", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Launched in 2003 by developers from Estonia; Microsoft bought it in 2011."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: skype-calls-abroad-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой сервис стал главным способом звонить за границу через интернет?
+            options:
+              - { key: A, text: ICQ, distractor: NEAR_MISS }
+              - { key: B, text: Skype, correct: true }
+              - { key: C, text: Napster, distractor: PLAUSIBLE }
+              - { key: D, text: Winamp, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Запущен в 2003 году разработчиками из Эстонии; в 2011-м его купила Microsoft.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: nostalgia-games-toys
+    name: "2000s games and toys"
+    facts:
+      - id: sims-pool-ladder
+        statement: "A famous Sims joke: remove the ladder from the pool and the Sims can't get out."
+        sources: [{ name: "Wikipedia: The Sims", type: REFERENCE, verified: false }]
+        questions:
+          - id: sims-pool-ladder-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which way of getting rid of a Sim became a famous joke among players?"
+            options:
+              - { key: A, text: "Hide the fridge", distractor: PLAUSIBLE }
+              - { key: B, text: "Switch off the TV", distractor: PLAUSIBLE }
+              - { key: C, text: "Remove the pool ladder", correct: true }
+              - { key: D, text: "Sell their bed", distractor: PLAUSIBLE }
+            explanation: "Players have been doing it since the very first game in 2000."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: sims-pool-ladder-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой способ избавиться от сима стал знаменитой шуткой среди игроков?
+            options:
+              - { key: A, text: Спрятать холодильник, distractor: PLAUSIBLE }
+              - { key: B, text: Выключить телевизор, distractor: PLAUSIBLE }
+              - { key: C, text: Убрать лестницу из бассейна, correct: true }
+              - { key: D, text: Продать кровать, distractor: PLAUSIBLE }
+            explanation: Игроки делают это с самой первой части 2000 года.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 2
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: gta-sa-cj
+        statement: "The protagonist of GTA: San Andreas is Carl \"CJ\" Johnson."
+        sources: [{ name: "Wikipedia: Grand Theft Auto: San Andreas", type: REFERENCE, verified: false }]
+        questions:
+          - id: gta-sa-cj-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What's the name of the main character in GTA: San Andreas?"
+            options:
+              - { key: A, text: "Tommy", distractor: NEAR_MISS }
+              - { key: B, text: "Niko", distractor: NEAR_MISS }
+              - { key: C, text: "CJ", correct: true }
+              - { key: D, text: "Trevor", distractor: NEAR_MISS }
+            explanation: "Tommy is from Vice City, Niko from GTA IV, Trevor from GTA V."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: gta-sa-cj-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Как зовут главного героя GTA: San Andreas?"
+            options:
+              - { key: A, text: Томми, distractor: NEAR_MISS }
+              - { key: B, text: Нико, distractor: NEAR_MISS }
+              - { key: C, text: Си-Джей, correct: true }
+              - { key: D, text: Тревор, distractor: NEAR_MISS }
+            explanation: Томми — из Vice City, Нико — из GTA IV, Тревор — из GTA V.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: wii-sports-no-football
+        statement: "Wii Sports (2006) had tennis, baseball, bowling, golf and boxing — no football."
+        sources: [{ name: "Wikipedia: Wii Sports", type: REFERENCE, verified: false }]
+        questions:
+          - id: wii-sports-no-football-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which sport was NOT in the original Wii Sports?"
+            options:
+              - { key: A, text: "Bowling", distractor: SAME_CATEGORY }
+              - { key: B, text: "Tennis", distractor: SAME_CATEGORY }
+              - { key: C, text: "Boxing", distractor: SAME_CATEGORY }
+              - { key: D, text: "Football", correct: true }
+            explanation: "Tennis, baseball, bowling, golf and boxing — and a lot of broken TVs."
+            topics: { videogames: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: wii-sports-no-football-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какого вида спорта НЕ было в оригинальной Wii Sports?
+            options:
+              - { key: A, text: Боулинга, distractor: SAME_CATEGORY }
+              - { key: B, text: Тенниса, distractor: SAME_CATEGORY }
+              - { key: C, text: Бокса, distractor: SAME_CATEGORY }
+              - { key: D, text: Футбола, correct: true }
+            explanation: Теннис, бейсбол, боулинг, гольф и бокс — и много разбитых телевизоров.
+            topics: { videogames: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: tamagotchi-care
+        statement: "A Tamagotchi had to be fed and cleaned up after, and could die if neglected."
+        sources: [{ name: "Wikipedia: Tamagotchi", type: REFERENCE, verified: false }]
+        questions:
+          - id: tamagotchi-care-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which toy needed feeding and cleaning up after — and could die if you forgot?"
+            options:
+              - { key: A, text: "Furby", distractor: NEAR_MISS }
+              - { key: B, text: "Tamagotchi", correct: true }
+              - { key: C, text: "Game Boy", distractor: PLAUSIBLE }
+              - { key: D, text: "Polly Pocket", distractor: PLAUSIBLE }
+            explanation: "Schools banned them because children were nursing pets during lessons."
+            topics: { videogames: 0.5, old-internet: 0.5 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 90s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: tamagotchi-care-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какую игрушку надо было кормить, убирать за ней — а если забыть, она умирала?
+            options:
+              - { key: A, text: Ферби, distractor: NEAR_MISS }
+              - { key: B, text: Тамагочи, correct: true }
+              - { key: C, text: Game Boy, distractor: PLAUSIBLE }
+              - { key: D, text: Polly Pocket, distractor: PLAUSIBLE }
+            explanation: "В школах их запрещали: дети выхаживали питомцев прямо на уроках."
+            topics: { videogames: 0.5, old-internet: 0.5 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 90s: 1 }
+            difficulty: 1
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: furbish
+        statement: "Furbies spoke a made-up language called Furbish."
+        sources: [{ name: "Wikipedia: Furby", type: REFERENCE, verified: false }]
+        questions:
+          - id: furbish-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What was the language Furbies spoke called?"
+            options:
+              - { key: A, text: "Furbyish", distractor: NEAR_MISS }
+              - { key: B, text: "Furblish", distractor: NEAR_MISS }
+              - { key: C, text: "Furbish", correct: true }
+              - { key: D, text: "Furban", distractor: PLAUSIBLE }
+            explanation: "They gradually \"learned\" English — which was just a programmed trick."
+            topics: { videogames: 0.5, old-internet: 0.5 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 90s: 1.0 }
+            difficulty: 4
+            dignity: 1
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: furbish-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Как назывался язык, на котором говорили Ферби?
+            options:
+              - { key: A, text: Furbyish, distractor: NEAR_MISS }
+              - { key: B, text: Furblish, distractor: NEAR_MISS }
+              - { key: C, text: Furbish, correct: true }
+              - { key: D, text: Furban, distractor: PLAUSIBLE }
+            explanation: Со временем они «учились» человеческому языку — но это был просто запрограммированный трюк.
+            topics: { videogames: 0.5, old-internet: 0.5 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 90s: 1 }
+            difficulty: 4
+            dignity: 1
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: nostalgia-memes
+    name: "Early internet memes"
+    facts:
+      - id: rickroll
+        statement: "Rickrolling means tricking someone into opening Rick Astley's \"Never Gonna Give You Up\"."
+        sources: [{ name: "Wikipedia: Rickrolling", type: REFERENCE, verified: false }]
+        questions:
+          - id: rickroll-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which song plays when you get rickrolled?"
+            options:
+              - { key: A, text: "Take On Me", distractor: SAME_CATEGORY }
+              - { key: B, text: "Never Gonna Give You Up", correct: true }
+              - { key: C, text: "Wake Me Up Before You Go-Go", distractor: SAME_CATEGORY }
+              - { key: D, text: "I Want It That Way", distractor: SAME_CATEGORY }
+            explanation: "A 1987 hit that became the internet's favourite prank around 2007."
+            topics: { internet-now: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: rickroll-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая песня играет, когда тебя «рикроллят»?
+            options:
+              - { key: A, text: Take On Me, distractor: SAME_CATEGORY }
+              - { key: B, text: Never Gonna Give You Up, correct: true }
+              - { key: C, text: Wake Me Up Before You Go-Go, distractor: SAME_CATEGORY }
+              - { key: D, text: I Want It That Way, distractor: SAME_CATEGORY }
+            explanation: Хит 1987 года стал любимым интернет-розыгрышем около 2007-го.
+            topics: { internet-now: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: numa-numa
+        statement: "The 2004 \"Numa Numa\" video featured Gary Brolsma lip-syncing to \"Dragostea Din Tei\" by the Moldovan group O-Zone."
+        sources: [{ name: "Wikipedia: Numa Numa (video)", type: REFERENCE, verified: false }]
+        questions:
+          - id: numa-numa-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which song became famous through the \"Numa Numa\" video?"
+            options:
+              - { key: A, text: "Blue (Da Ba Dee)", distractor: SAME_CATEGORY }
+              - { key: B, text: "Dragostea Din Tei", correct: true }
+              - { key: C, text: "Barbie Girl", distractor: SAME_CATEGORY }
+              - { key: D, text: "Around the World", distractor: SAME_CATEGORY }
+            explanation: "Gary Brolsma lip-synced it at his desk in 2004."
+            topics: { internet-now: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1.0, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: numa-numa-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какую песню прославило видео «Numa Numa»?
+            options:
+              - { key: A, text: Blue (Da Ba Dee), distractor: SAME_CATEGORY }
+              - { key: B, text: Dragostea Din Tei, correct: true }
+              - { key: C, text: Barbie Girl, distractor: SAME_CATEGORY }
+              - { key: D, text: Around the World, distractor: SAME_CATEGORY }
+            explanation: Гэри Бролсма записал его за своим столом в 2004 году.
+            topics: { internet-now: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 00s: 1, 90s: 0.4 }
+            difficulty: 3
+            dignity: 1
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: the-dress
+        statement: "In 2015 the internet argued over whether a photographed dress was blue and black or white and gold."
+        sources: [{ name: "Wikipedia: The dress", type: REFERENCE, verified: false }]
+        questions:
+          - id: the-dress-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What did the internet argue about when \"The Dress\" went viral in 2015?"
+            options:
+              - { key: A, text: "Whether it was long or short", distractor: PLAUSIBLE }
+              - { key: B, text: "Whether it was expensive", distractor: PLAUSIBLE }
+              - { key: C, text: "Blue and black, or white and gold", correct: true }
+              - { key: D, text: "Whether it was real or computer-generated", distractor: PLAUSIBLE }
+            explanation: "It was blue and black — the brain's guess about the lighting changes what you see."
+            topics: { internet-now: 1.0 }
+            contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
+            generations: { 10s: 1.0 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: the-dress-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: О чём спорил весь интернет, когда в 2015 году завирусилось «то самое платье»?
+            options:
+              - { key: A, text: Длинное оно или короткое, distractor: PLAUSIBLE }
+              - { key: B, text: Дорогое ли оно, distractor: PLAUSIBLE }
+              - { key: C, text: Сине-чёрное оно или бело-золотое, correct: true }
+              - { key: D, text: Настоящее оно или нарисованное, distractor: PLAUSIBLE }
+            explanation: Оно сине-чёрное — а что видит человек, зависит от того, как мозг «угадывает» освещение.
+            topics: { internet-now: 1 }
+            contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
+            generations: { 10s: 1 }
+            difficulty: 1
+            dignity: 1
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."

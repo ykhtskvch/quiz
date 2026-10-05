@@ -82,6 +82,8 @@ type Edit = {
   correctKey?: string;
   difficulty?: number;
   dignity?: number;
+  /** 1–5, or 0 to clear. */
+  rating?: number;
   sourceUrl?: string;
   clearNotes?: boolean;
   note?: string;
@@ -98,6 +100,8 @@ function applyEdit(id: string, e: Edit): { ok: boolean; error?: string } {
   if (e.statement !== undefined) doc.setIn([...loc.factPath, "statement"], e.statement.trim());
   if (e.difficulty) doc.setIn(q("difficulty"), e.difficulty);
   if (e.dignity) doc.setIn(q("dignity"), e.dignity);
+  if (e.rating) doc.setIn(q("editor_rating"), e.rating);
+  else if (e.rating === 0) doc.deleteIn(q("editor_rating"));
   if (e.options) {
     e.options.forEach((o, i) => doc.setIn(q("options", i, "text"), o.text.trim()));
   }

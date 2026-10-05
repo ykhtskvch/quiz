@@ -7,7 +7,7 @@ families:
     facts:
       - id: baikal-deepest
         statement: "Байкал — самое глубокое озеро на Земле (около 1640 м)."
-        sources: [ { name: "Википедия: Байкал", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Байкал", type: REFERENCE, verified: false }]
         questions:
           - id: baikal-deepest-ru-1
             language: ru
@@ -50,7 +50,7 @@ families:
 
       - id: amazon-volume
         statement: "Амазонка — самая полноводная река мира."
-        sources: [ { name: "Википедия: Амазонка", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Амазонка", type: REFERENCE, verified: false }]
         questions:
           - id: amazon-volume-ru-1
             language: ru
@@ -93,7 +93,7 @@ families:
 
       - id: tiber-rome
         statement: "Река Тибр протекает через Рим."
-        sources: [ { name: "Википедия: Тибр", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Тибр", type: REFERENCE, verified: false }]
         questions:
           - id: tiber-rome-ru-1
             language: ru
@@ -139,7 +139,7 @@ families:
     facts:
       - id: australia-capital
         statement: "Столица Австралии — Канберра."
-        sources: [ { name: "Википедия: Канберра", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Канберра", type: REFERENCE, verified: false }]
         questions:
           - id: australia-capital-ru-1
             language: ru
@@ -182,7 +182,7 @@ families:
 
       - id: turkey-capital
         statement: "Столица Турции — Анкара."
-        sources: [ { name: "Википедия: Анкара", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Анкара", type: REFERENCE, verified: false }]
         questions:
           - id: turkey-capital-ru-1
             language: ru
@@ -228,7 +228,7 @@ families:
     facts:
       - id: kilimanjaro
         statement: "Высочайшая вершина Африки — Килиманджаро (5895 м)."
-        sources: [ { name: "Википедия: Килиманджаро", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Килиманджаро", type: REFERENCE, verified: false }]
         questions:
           - id: kilimanjaro-ru-1
             language: ru
@@ -271,7 +271,7 @@ families:
 
       - id: vatican-smallest
         statement: "Ватикан — самое маленькое государство мира."
-        sources: [ { name: "Википедия: Ватикан", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Ватикан", type: REFERENCE, verified: false }]
         questions:
           - id: vatican-smallest-ru-1
             language: ru
@@ -314,7 +314,7 @@ families:
 
       - id: greenland-island
         statement: "Гренландия — самый большой остров в мире (Австралию считают материком)."
-        sources: [ { name: "Википедия: Гренландия", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Гренландия", type: REFERENCE, verified: false }]
         questions:
           - id: greenland-island-ru-1
             language: ru
@@ -357,7 +357,7 @@ families:
 
       - id: canada-second-area
         statement: "Канада — вторая по площади страна мира после России."
-        sources: [ { name: "Википедия: Канада", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Канада", type: REFERENCE, verified: false }]
         questions:
           - id: canada-second-area-ru-1
             language: ru
@@ -401,7 +401,7 @@ families:
       - id: india-population
         statement: "С 2023 года Индия — самая населённая страна мира, обогнав Китай."
         time_sensitive: true
-        sources: [ { name: "Википедия: Население Индии", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Население Индии", type: REFERENCE, verified: false }]
         questions:
           - id: india-population-ru-1
             language: ru
@@ -447,7 +447,7 @@ families:
       - id: russia-time-zones
         statement: "В России 11 часовых поясов."
         time_sensitive: true
-        sources: [ { name: "Википедия: Время в России", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Время в России", type: REFERENCE, verified: true }]
         questions:
           - id: russia-time-zones-ru-1
             language: ru
@@ -465,16 +465,19 @@ families:
             difficulty: 3
             dignity: 4
             effects: { I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: [ "AI doubt: Число поясов менялось (2010, 2014) — перепроверить на дату ревью." ]
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: straits-cities
     name: "Проливы и города"
     facts:
       - id: bering-strait
         statement: "Евразию и Северную Америку разделяет Берингов пролив."
-        sources: [ { name: "Википедия: Берингов пролив", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Берингов пролив", type: REFERENCE, verified: false }]
         questions:
           - id: bering-strait-ru-1
             language: ru
@@ -517,7 +520,7 @@ families:
 
       - id: istanbul-two-continents
         statement: "Стамбул — крупнейший город, расположенный одновременно в Европе и Азии."
-        sources: [ { name: "Википедия: Стамбул", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Стамбул", type: REFERENCE, verified: false }]
         questions:
           - id: istanbul-two-continents-ru-1
             language: ru
@@ -563,7 +566,7 @@ families:
     facts:
       - id: machu-picchu
         statement: "Мачу-Пикчу — город инков в Перу."
-        sources: [ { name: "Википедия: Мачу-Пикчу", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Мачу-Пикчу", type: REFERENCE, verified: false }]
         questions:
           - id: machu-picchu-ru-1
             language: ru
@@ -606,7 +609,7 @@ families:
 
       - id: angkor-wat
         statement: "Храмовый комплекс Ангкор-Ват находится в Камбодже."
-        sources: [ { name: "Википедия: Ангкор-Ват", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Ангкор-Ват", type: REFERENCE, verified: false }]
         questions:
           - id: angkor-wat-ru-1
             language: ru

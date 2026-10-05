@@ -19,7 +19,7 @@ families:
               - { key: B, text: "The London Underground", correct: true }
               - { key: C, text: "The New York Subway", distractor: SAME_CATEGORY }
               - { key: D, text: "British Rail ferries", distractor: PLAUSIBLE }
-            explanation: "The announcement started on the Tube in 1969."
+            explanation: "The phrase is so famous it is printed on London souvenirs."
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             difficulty: 1

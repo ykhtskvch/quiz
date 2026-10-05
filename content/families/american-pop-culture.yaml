@@ -7,7 +7,7 @@ families:
     facts:
       - id: friends-central-perk
         statement: "In Friends the gang hangs out at the Central Perk coffee house."
-        sources: [{ name: "Wikipedia: Friends", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Friends", type: REFERENCE, verified: true }]
         questions:
           - id: friends-central-perk-en-1
             language: en
@@ -26,12 +26,15 @@ families:
             difficulty: 1
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: simpsons-springfield
         statement: "The Simpsons live in Springfield."
-        sources: [{ name: "Wikipedia: Springfield (The Simpsons)", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Springfield (The Simpsons)", type: REFERENCE, verified: true }]
         questions:
           - id: simpsons-springfield-en-1
             language: en
@@ -50,12 +53,15 @@ families:
             difficulty: 1
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 1.0 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: seinfeld-nothing
         statement: "Seinfeld was famously described as \"a show about nothing\"."
-        sources: [{ name: "Wikipedia: Seinfeld", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Seinfeld", type: REFERENCE, verified: true }]
         questions:
           - id: seinfeld-nothing-en-1
             language: en
@@ -74,12 +80,15 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: the-office-dunder-mifflin
         statement: "In the US version of The Office, the company is the Dunder Mifflin Paper Company."
-        sources: [{ name: "Wikipedia: The Office (American TV series)", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: The Office (American TV series)", type: REFERENCE, verified: true }]
         questions:
           - id: the-office-dunder-mifflin-en-1
             language: en
@@ -98,12 +107,15 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: walter-white-teacher
         statement: "Walter White in Breaking Bad starts out as a high-school chemistry teacher."
-        sources: [{ name: "Wikipedia: Walter White (Breaking Bad)", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Walter White (Breaking Bad)", type: REFERENCE, verified: true }]
         questions:
           - id: walter-white-teacher-en-1
             language: en
@@ -122,12 +134,15 @@ families:
             difficulty: 2
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: oprah-car
         statement: "In 2004 Oprah Winfrey gave every audience member a car: \"You get a car! You get a car!\"."
-        sources: [{ name: "Wikipedia: The Oprah Winfrey Show", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: The Oprah Winfrey Show", type: REFERENCE, verified: true }]
         questions:
           - id: oprah-car-en-1
             language: en
@@ -143,19 +158,21 @@ families:
             topics: { american-pop-culture: 1.0 }
             contexts: { US: 1.0 }
             generations: { 00s: 1.0 }
-            difficulty: 2
+            difficulty: 4
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: ["AI doubt: Check the number of cars (276) and the make (Pontiac G6)."]
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: us-life
     name: "American life"
     facts:
       - id: super-bowl
         statement: "The Super Bowl is the championship game of American football (the NFL)."
-        sources: [{ name: "Wikipedia: Super Bowl", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Super Bowl", type: REFERENCE, verified: true }]
         questions:
           - id: super-bowl-en-1
             language: en
@@ -173,12 +190,15 @@ families:
             difficulty: 1
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 1.0 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: world-series-baseball
         statement: "The World Series is the championship of Major League Baseball."
-        sources: [{ name: "Wikipedia: World Series", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: World Series", type: REFERENCE, verified: true }]
         questions:
           - id: world-series-baseball-en-1
             language: en
@@ -196,12 +216,15 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.4, SHARED_KNOWLEDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: thanksgiving-date
         statement: "In the US, Thanksgiving falls on the fourth Thursday of November."
-        sources: [{ name: "Wikipedia: Thanksgiving (United States)", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Thanksgiving (United States)", type: REFERENCE, verified: true }]
         questions:
           - id: thanksgiving-date-en-1
             language: en
@@ -219,12 +242,15 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: hollywoodland
         statement: "The Hollywood sign originally read \"HOLLYWOODLAND\" — it advertised a housing development in 1923."
-        sources: [{ name: "Wikipedia: Hollywood Sign", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Hollywood Sign", type: REFERENCE, verified: true }]
         questions:
           - id: hollywoodland-en-1
             language: en
@@ -242,12 +268,15 @@ families:
             difficulty: 4
             dignity: 2
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: route-66
         statement: "Route 66 ran from Chicago to Santa Monica, California."
-        sources: [{ name: "Wikipedia: U.S. Route 66", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: U.S. Route 66", type: REFERENCE, verified: true }]
         questions:
           - id: route-66-en-1
             language: en
@@ -265,8 +294,12 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_KNOW_THIS: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: graceland-memphis
         statement: "Elvis Presley's home, Graceland, is in Memphis, Tennessee."
@@ -294,7 +327,7 @@ families:
 
       - id: statue-of-liberty-france
         statement: "The Statue of Liberty was a gift from France (1886)."
-        sources: [{ name: "Wikipedia: Statue of Liberty", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Statue of Liberty", type: REFERENCE, verified: true }]
         questions:
           - id: statue-of-liberty-france-en-1
             language: en
@@ -312,12 +345,16 @@ families:
             difficulty: 1
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: disneyland-1955
         statement: "The first Disneyland opened in 1955 in Anaheim, California."
-        sources: [{ name: "Wikipedia: Disneyland", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Disneyland", type: REFERENCE, verified: true }]
         questions:
           - id: disneyland-1955-en-1
             language: en
@@ -335,12 +372,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
       - id: got-milk
         statement: "\"Got Milk?\" was a famous American advertising campaign for milk (from 1993)."
-        sources: [{ name: "Wikipedia: Got Milk?", type: REFERENCE, verified: false }]
+        sources: [{ name: "Wikipedia: Got Milk?", type: REFERENCE, verified: true }]
         questions:
           - id: got-milk-en-1
             language: en
@@ -359,5 +400,9 @@ families:
             difficulty: 2
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-05

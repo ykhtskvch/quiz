@@ -28,7 +28,7 @@ const rows: Row[] = files.flatMap((f) =>
 const playable = rows.filter((q) => (PLAYABLE_STATUSES as readonly string[]).includes(q.status));
 const bank = {
   built_at: new Date().toISOString(),
-  questions: playable.map(({ review_notes, reviewed, generation_method, ...q }) => q),
+  questions: playable.map(({ review_notes, reviewed, generation_method, editor_rating, ...q }) => q),
 };
 
 // ---------- coverage ----------

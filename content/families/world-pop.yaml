@@ -436,7 +436,7 @@ families:
     facts:
       - id: crazy-frog-axel-f
         statement: "Хит Crazy Frog «Axel F» (2005) — кавер на тему из фильма «Полицейский из Беверли-Хиллз»."
-        sources: [{ name: "Википедия: Axel F", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Axel F", type: REFERENCE, verified: true }]
         questions:
           - id: crazy-frog-axel-f-ru-1
             language: ru
@@ -476,10 +476,12 @@ families:
             difficulty: 4
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: modern-talking
     name: "Modern Talking"
@@ -548,7 +550,7 @@ families:
               - { key: D, text: Yemelyan Pugachev, distractor: SAME_CATEGORY }
             explanation: '"Ra-Ra-Rasputin, lover of the Russian queen…" — from 1978.'
             topics: { world-pop: 1 }
-            contexts: { GLOBAL: 0.7, POST_SOVIET: 1 }
+            contexts: { GLOBAL: 1, POST_SOVIET: 0.6 }
             generations: { 80s: 0.8, 90s: 0.6 }
             difficulty: 2
             dignity: 2

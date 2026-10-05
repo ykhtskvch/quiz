@@ -4,7 +4,10 @@ import { QuestionSchema, type Question, type Taxonomy } from "./schema.ts";
 
 const taxonomy: Taxonomy = {
   contexts: [{ code: "GLOBAL", name: "Global" }, { code: "POST_SOVIET", name: "Post-Soviet" }],
-  topics: [{ slug: "space", name: "Space", name_en: "Space", group: "Science", group_en: "Science", level: "A", target_questions: 15 }],
+  topics: [
+    { slug: "space", name: "Space", name_en: "Space", group: "Science", group_en: "Science", level: "A", target_questions: 15 },
+    { slug: "soviet-cinema", name: "Советское кино", name_en: "Soviet cinema", group: "Кино", group_en: "Film", level: "A", target_questions: 15, implied_context: "POST_SOVIET" },
+  ],
 };
 
 const question = (overrides: Partial<Question> = {}): Question =>
@@ -74,6 +77,16 @@ describe("checkContent", () => {
   it("allows translating a GLOBAL question", () => {
     const translated = question({ id: "q-en-1", language: "en" });
     expect(errors(file([question(), translated]))).toEqual([]);
+  });
+
+  it("keeps post-Soviet culture out of the English version", () => {
+    const byTopic = question({ id: "q-en-1", language: "en", origin_language: "en", topics: { "soviet-cinema": 1 } });
+    const byContext = question({ id: "q-en-2", language: "en", origin_language: "en", contexts: { POST_SOVIET: 1, GLOBAL: 0.5 } });
+    expect(errors(file([byTopic]))).toContainEqual(expect.stringContaining("post-Soviet topic"));
+    expect(errors(file([byContext]))).toContainEqual(expect.stringContaining("mainly post-Soviet"));
+    // The same question in Russian is fine, and a retired EN question is ignored.
+    expect(errors(file([question({ topics: { "soviet-cinema": 1 } })]))).toEqual([]);
+    expect(errors(file([{ ...byTopic, status: "RETIRED" }]))).toEqual([]);
   });
 
   it("requires a human stamp and a verified source before APPROVED (BR-130)", () => {

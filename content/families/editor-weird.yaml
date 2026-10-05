@@ -1,0 +1,1375 @@
+# Editor's set — weird but true (EN-native)
+# Editor's picks, prepared with Claude; DRAFT until fact-checked (BR-130).
+
+families:
+  - family: weird-nature-body
+    name: "Weird but true: nature and the body"
+    facts:
+      - id: wombat-cube-poo
+        statement: "Wombats produce cube-shaped poo."
+        sources: [{ name: "Wikipedia: Wombat", type: REFERENCE, verified: false }]
+        questions:
+          - id: wombat-cube-poo-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which animal produces almost cube-shaped poo?"
+            options:
+              - { key: A, text: "Koala", distractor: SAME_CATEGORY }
+              - { key: B, text: "Wombat", correct: true }
+              - { key: C, text: "Capybara", distractor: SAME_CATEGORY }
+              - { key: D, text: "Badger", distractor: SAME_CATEGORY }
+            explanation: "The cubes don't roll away, which helps wombats mark their territory."
+            topics: { nature: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: wombat-cube-poo-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какое животное оставляет почти кубические какашки?
+            options:
+              - { key: A, text: Коала, distractor: SAME_CATEGORY }
+              - { key: B, text: Вомбат, correct: true }
+              - { key: C, text: Капибара, distractor: SAME_CATEGORY }
+              - { key: D, text: Барсук, distractor: SAME_CATEGORY }
+            explanation: Кубики не скатываются — так вомбаты метят территорию.
+            topics: { nature: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: banana-berry
+        statement: "Botanically, a banana is a berry, while strawberries and raspberries are not."
+        sources: [{ name: "Wikipedia: Berry (botany)", type: REFERENCE, verified: false }]
+        questions:
+          - id: banana-berry-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these is botanically a berry?"
+            options:
+              - { key: A, text: "Strawberry", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Raspberry", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Banana", correct: true }
+              - { key: D, text: "Cherry", distractor: SAME_CATEGORY }
+            explanation: "Strawberries and raspberries aren't true berries; a cherry is a drupe."
+            topics: { nature: 0.6, science: 0.6 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: banana-berry-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого с точки зрения ботаники — ягода?
+            options:
+              - { key: A, text: Клубника, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Малина, distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: Банан, correct: true }
+              - { key: D, text: Вишня, distractor: SAME_CATEGORY }
+            explanation: Клубника и малина — не настоящие ягоды, а вишня — костянка.
+            topics: { nature: 0.6, science: 0.6 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: wrinkly-fingers
+        statement: "Fingers wrinkle in water because the nervous system constricts blood vessels under the skin."
+        sources: [{ name: "Wikipedia: Wrinkly fingers", type: REFERENCE, verified: false }]
+        questions:
+          - id: wrinkly-fingers-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Why do your fingers wrinkle after a long time in water?"
+            options:
+              - { key: A, text: "The skin soaks up water like a sponge", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Water dissolves the top layer", distractor: PLAUSIBLE }
+              - { key: C, text: "The nervous system narrows the blood vessels", correct: true }
+              - { key: D, text: "The body is trying to cool down", distractor: PLAUSIBLE }
+            explanation: "It doesn't happen if the nerves are damaged — so it's an active reaction, perhaps for better grip."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: wrinkly-fingers-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Почему пальцы сморщиваются после долгого пребывания в воде?
+            options:
+              - { key: A, text: "Кожа впитывает воду, как губка", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Вода растворяет верхний слой кожи, distractor: PLAUSIBLE }
+              - { key: C, text: Нервная система сужает сосуды, correct: true }
+              - { key: D, text: Организм пытается охладиться, distractor: PLAUSIBLE }
+            explanation: Если нервы повреждены, пальцы не сморщиваются — значит, это активная реакция; возможно, ради лучшего сцепления.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: onion-tears
+        statement: "Cutting an onion releases a volatile compound (syn-propanethial-S-oxide) that irritates the eyes."
+        sources: [{ name: "Wikipedia: Syn-Propanethial-S-oxide", type: REFERENCE, verified: false }]
+        questions:
+          - id: onion-tears-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Why does cutting an onion make your eyes water?"
+            options:
+              - { key: A, text: "Its smell", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Acid already stored inside the onion", distractor: NEAR_MISS }
+              - { key: C, text: "A volatile chemical formed when it is cut", correct: true }
+              - { key: D, text: "Pollen", distractor: PLAUSIBLE }
+            explanation: "The irritant only forms when the cells break — chilling the onion slows it down."
+            topics: { science: 0.6, food: 0.6 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: onion-tears-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Почему от нарезанного лука слезятся глаза?
+            options:
+              - { key: A, text: Из-за запаха, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Из-за кислоты, которая уже есть в луке", distractor: NEAR_MISS }
+              - { key: C, text: "Из-за летучего вещества, которое образуется при разрезании", correct: true }
+              - { key: D, text: Из-за пыльцы, distractor: PLAUSIBLE }
+            explanation: Раздражающее вещество появляется, только когда клетки разрушаются, — охлаждённый лук «плачет» меньше.
+            topics: { science: 0.6, food: 0.6 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: weird-tech-history
+    name: "Weird but true: tech"
+    facts:
+      - id: facebook-before-youtube
+        statement: "Facebook (2004) launched before YouTube (2005), Twitter (2006) and Instagram (2010)."
+        sources: [{ name: "Wikipedia: Facebook", type: REFERENCE, verified: false }]
+        questions:
+          - id: facebook-before-youtube-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these came first?"
+            options:
+              - { key: A, text: "YouTube", distractor: NEAR_MISS }
+              - { key: B, text: "Facebook", correct: true }
+              - { key: C, text: "Twitter", distractor: PLAUSIBLE }
+              - { key: D, text: "Instagram", distractor: PLAUSIBLE }
+            explanation: "Facebook 2004, YouTube 2005, Twitter 2006, Instagram 2010."
+            topics: { old-internet: 0.6, internet-now: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: facebook-before-youtube-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что появилось раньше всех?
+            options:
+              - { key: A, text: YouTube, distractor: NEAR_MISS }
+              - { key: B, text: Facebook, correct: true }
+              - { key: C, text: Twitter, distractor: PLAUSIBLE }
+              - { key: D, text: Instagram, distractor: PLAUSIBLE }
+            explanation: Facebook — 2004, YouTube — 2005, Twitter — 2006, Instagram — 2010.
+            topics: { old-internet: 0.6, internet-now: 0.5 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: wikipedia-before-iphone
+        statement: "Wikipedia (2001) launched before Spotify (2006), the iPhone (2007) and Instagram (2010)."
+        sources: [{ name: "Wikipedia: Wikipedia", type: REFERENCE, verified: false }]
+        questions:
+          - id: wikipedia-before-iphone-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these launched first?"
+            options:
+              - { key: A, text: "The iPhone", distractor: PLAUSIBLE }
+              - { key: B, text: "Spotify", distractor: PLAUSIBLE }
+              - { key: C, text: "Wikipedia", correct: true }
+              - { key: D, text: "Instagram", distractor: PLAUSIBLE }
+            explanation: "Wikipedia went live in January 2001."
+            topics: { old-internet: 0.6, internet-now: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: wikipedia-before-iphone-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого запустили раньше всех?
+            options:
+              - { key: A, text: iPhone, distractor: PLAUSIBLE }
+              - { key: B, text: Spotify, distractor: PLAUSIBLE }
+              - { key: C, text: Википедию, correct: true }
+              - { key: D, text: Instagram, distractor: PLAUSIBLE }
+            explanation: Википедия заработала в январе 2001 года.
+            topics: { old-internet: 0.6, internet-now: 0.5 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: winrar-not-social
+        statement: "MySpace, Bebo and Friendster were social networks; WinRAR is a file-compression program."
+        sources: [{ name: "Wikipedia: WinRAR", type: REFERENCE, verified: false }]
+        questions:
+          - id: winrar-not-social-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these was NOT a social network?"
+            options:
+              - { key: A, text: "MySpace", distractor: SAME_CATEGORY }
+              - { key: B, text: "Bebo", distractor: SAME_CATEGORY }
+              - { key: C, text: "Friendster", distractor: SAME_CATEGORY }
+              - { key: D, text: "WinRAR", correct: true }
+            explanation: "WinRAR is famous for its free trial that never actually ends."
+            topics: { old-internet: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: winrar-not-social-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого НЕ было социальной сетью?
+            options:
+              - { key: A, text: MySpace, distractor: SAME_CATEGORY }
+              - { key: B, text: Bebo, distractor: SAME_CATEGORY }
+              - { key: C, text: Friendster, distractor: SAME_CATEGORY }
+              - { key: D, text: WinRAR, correct: true }
+            explanation: WinRAR знаменит бесплатным пробным периодом, который никогда не заканчивается.
+            topics: { old-internet: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: save-icon-floppy
+        statement: "The usual Save icon is a floppy disk, a storage medium many younger users have never used."
+        sources: [{ name: "Wikipedia: Floppy disk", type: REFERENCE, verified: false }]
+        questions:
+          - id: save-icon-floppy-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which common computer icon shows a technology many younger users have never used?"
+            options:
+              - { key: A, text: "Search", distractor: PLAUSIBLE }
+              - { key: B, text: "Wi-Fi", distractor: PLAUSIBLE }
+              - { key: C, text: "Save", correct: true }
+              - { key: D, text: "Bluetooth", distractor: PLAUSIBLE }
+            explanation: "It's a 3.5-inch floppy disk — some kids think it's a 3D-printed save icon."
+            topics: { old-internet: 0.6, science: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: save-icon-floppy-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: На какой привычной компьютерной иконке нарисована вещь, которой многие молодые пользователи никогда не пользовались?
+            options:
+              - { key: A, text: Поиск, distractor: PLAUSIBLE }
+              - { key: B, text: Wi-Fi, distractor: PLAUSIBLE }
+              - { key: C, text: Сохранить, correct: true }
+              - { key: D, text: Bluetooth, distractor: PLAUSIBLE }
+            explanation: Это 3,5-дюймовая дискета — некоторые дети уверены, что это просто «иконка сохранения».
+            topics: { old-internet: 0.6, science: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: bluetooth-harald
+        statement: "Bluetooth is named after the 10th-century Danish king Harald \"Bluetooth\" Gormsson."
+        sources: [{ name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false }]
+        questions:
+          - id: bluetooth-harald-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Bluetooth is named after…"
+            options:
+              - { key: A, text: "The colour of its first logo", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "A type of radio wave", distractor: PLAUSIBLE }
+              - { key: C, text: "The nickname of a Scandinavian king", correct: true }
+              - { key: D, text: "A toothpaste brand", distractor: PLAUSIBLE }
+            explanation: "King Harald united Danish tribes — just as the tech unites devices. The logo combines his runic initials."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: bluetooth-harald-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Bluetooth назван в честь…
+            options:
+              - { key: A, text: цвета первого логотипа, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: типа радиоволн, distractor: PLAUSIBLE }
+              - { key: C, text: прозвища скандинавского короля, correct: true }
+              - { key: D, text: марки зубной пасты, distractor: PLAUSIBLE }
+            explanation: Король Харальд Синезубый объединил датские племена — как технология объединяет устройства. Логотип составлен из его рунических инициалов.
+            topics: { science: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: google-googol
+        statement: "The name Google comes from a misspelling of \"googol\", the number 10 to the power of 100."
+        sources: [{ name: "Wikipedia: Google", type: REFERENCE, verified: false }]
+        questions:
+          - id: google-googol-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which brand got its name from a misspelled very large number?"
+            options:
+              - { key: A, text: "Yahoo", distractor: SAME_CATEGORY }
+              - { key: B, text: "Google", correct: true }
+              - { key: C, text: "Amazon", distractor: SAME_CATEGORY }
+              - { key: D, text: "Spotify", distractor: SAME_CATEGORY }
+            explanation: "A googol is 1 followed by 100 zeros."
+            topics: { fashion-brands: 0.6, old-internet: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: google-googol-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой бренд получил название от неправильно написанного огромного числа?
+            options:
+              - { key: A, text: Yahoo, distractor: SAME_CATEGORY }
+              - { key: B, text: Google, correct: true }
+              - { key: C, text: Amazon, distractor: SAME_CATEGORY }
+              - { key: D, text: Spotify, distractor: SAME_CATEGORY }
+            explanation: Гугол — это единица со ста нулями.
+            topics: { fashion-brands: 0.6, old-internet: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: tech-flops-all-three
+        statement: "Google Glass, the Microsoft Zune and the Amazon Fire Phone were all discontinued commercial flops."
+        sources: [{ name: "Wikipedia: Amazon Fire Phone", type: REFERENCE, verified: false }]
+        questions:
+          - id: tech-flops-all-three-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these was a real tech product that flopped or was discontinued?"
+            options:
+              - { key: A, text: "Google Glass", distractor: NEAR_MISS }
+              - { key: B, text: "Microsoft Zune", distractor: NEAR_MISS }
+              - { key: C, text: "Amazon Fire Phone", distractor: NEAR_MISS }
+              - { key: D, text: "All three", correct: true }
+            explanation: "Zune was Microsoft's iPod rival; the Fire Phone lasted barely a year."
+            topics: { fashion-brands: 0.5, internet-now: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: tech-flops-all-three-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого — реальный технологический продукт, который провалился или был снят с продаж?
+            options:
+              - { key: A, text: Google Glass, distractor: NEAR_MISS }
+              - { key: B, text: Microsoft Zune, distractor: NEAR_MISS }
+              - { key: C, text: Amazon Fire Phone, distractor: NEAR_MISS }
+              - { key: D, text: Все три, correct: true }
+            explanation: Zune был ответом Microsoft на iPod, а Fire Phone продержался едва ли год.
+            topics: { fashion-brands: 0.5, internet-now: 0.5 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: weird-words
+    name: "Weird but true: words"
+    facts:
+      - id: karaoke-japanese
+        statement: "The word karaoke is Japanese: \"empty orchestra\"."
+        sources: [{ name: "Wikipedia: Karaoke", type: REFERENCE, verified: false }]
+        questions:
+          - id: karaoke-japanese-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which language does the word \"karaoke\" come from?"
+            options:
+              - { key: A, text: "Korean", distractor: NEAR_MISS }
+              - { key: B, text: "Chinese", distractor: NEAR_MISS }
+              - { key: C, text: "Japanese", correct: true }
+              - { key: D, text: "Italian", distractor: PLAUSIBLE }
+            explanation: "Kara means \"empty\", oke is short for \"orchestra\"."
+            topics: { world-pop: 0.5, geography: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: karaoke-japanese-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Из какого языка пришло слово «караоке»?
+            options:
+              - { key: A, text: Из корейского, distractor: NEAR_MISS }
+              - { key: B, text: Из китайского, distractor: NEAR_MISS }
+              - { key: C, text: Из японского, correct: true }
+              - { key: D, text: Из итальянского, distractor: PLAUSIBLE }
+            explanation: «Кара» — «пустой», «оке» — сокращение от «оркестр».
+            topics: { world-pop: 0.5, geography: 0.4 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: robot-capek
+        statement: "The word \"robot\" was popularised by Karel Čapek's 1920 play R.U.R.; Čapek was from Czechoslovakia."
+        sources: [{ name: "Wikipedia: R.U.R.", type: REFERENCE, verified: false }]
+        questions:
+          - id: robot-capek-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "The word \"robot\" became famous through a play by a writer from which country?"
+            options:
+              - { key: A, text: "Germany", distractor: PLAUSIBLE }
+              - { key: B, text: "The USA", distractor: PLAUSIBLE }
+              - { key: C, text: "Czechoslovakia", correct: true }
+              - { key: D, text: "Japan", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "It comes from the Czech robota, \"forced labour\"; Karel Čapek's brother Josef suggested it."
+            topics: { world-literature: 0.6, science: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: robot-capek-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Слово «робот» прославила пьеса писателя из какой страны?
+            options:
+              - { key: A, text: Германии, distractor: PLAUSIBLE }
+              - { key: B, text: США, distractor: PLAUSIBLE }
+              - { key: C, text: Чехословакии, correct: true }
+              - { key: D, text: Японии, distractor: CONTEXTUAL_CONFUSION }
+            explanation: От чешского robota — «подневольный труд». Слово Карелу Чапеку подсказал брат Йозеф.
+            topics: { world-literature: 0.6, science: 0.5 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 5
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: emoji-picture-character
+        statement: "The Japanese word emoji means \"picture\" (e) + \"character\" (moji); it is unrelated to the English \"emotion\"."
+        sources: [{ name: "Wikipedia: Emoji", type: REFERENCE, verified: false }]
+        questions:
+          - id: emoji-picture-character-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What does the Japanese word \"emoji\" literally mean?"
+            options:
+              - { key: A, text: "Emotional picture", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Tiny face", distractor: PLAUSIBLE }
+              - { key: C, text: "Picture + character", correct: true }
+              - { key: D, text: "Internet emotion", distractor: PLAUSIBLE }
+            explanation: "The likeness to \"emotion\" is pure coincidence."
+            topics: { internet-now: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: emoji-picture-character-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что буквально означает японское слово «эмодзи»?
+            options:
+              - { key: A, text: Эмоциональная картинка, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Маленькое лицо, distractor: PLAUSIBLE }
+              - { key: C, text: Картинка + знак, correct: true }
+              - { key: D, text: Интернет-эмоция, distractor: PLAUSIBLE }
+            explanation: Сходство с английским emotion — чистое совпадение.
+            topics: { internet-now: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: circle-back
+        statement: "In corporate English, \"circle back\" means to return to a topic later."
+        sources: [{ name: "Cambridge Dictionary: circle back", type: REFERENCE, verified: false }]
+        questions:
+          - id: circle-back-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "Which office phrase means \"let's come back to this later\"?"
+            options:
+              - { key: A, text: "Touch base", distractor: NEAR_MISS }
+              - { key: B, text: "Deep dive", distractor: PLAUSIBLE }
+              - { key: C, text: "Circle back", correct: true }
+              - { key: D, text: "Move the needle", distractor: PLAUSIBLE }
+            explanation: "\"Touch base\" is a quick check-in; \"circle back\" is the polite way to park something."
+            topics: { internet-now: 0.6 }
+            contexts: { GLOBAL: 0.6, UK: 0.8, US: 0.8 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: no-bandwidth
+        statement: "In office jargon, \"I don't have the bandwidth\" means having no time or capacity for something."
+        sources: [{ name: "Cambridge Dictionary: bandwidth", type: REFERENCE, verified: false }]
+        questions:
+          - id: no-bandwidth-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            text: "Which office phrase means \"I don't have time for this right now\"?"
+            options:
+              - { key: A, text: "My pipeline is blue", distractor: PLAUSIBLE }
+              - { key: B, text: "I don't have the bandwidth", correct: true }
+              - { key: C, text: "My calendar is red", distractor: PLAUSIBLE }
+              - { key: D, text: "I'm below the line", distractor: PLAUSIBLE }
+            explanation: "Borrowed from networking: you've run out of capacity."
+            topics: { internet-now: 0.6 }
+            contexts: { GLOBAL: 0.6, UK: 0.8, US: 0.8 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+
+  - family: weird-food
+    name: "Weird but true: food"
+    facts:
+      - id: crisps-saratoga
+        statement: "The most common origin story credits George Crum in Saratoga Springs, New York (1853), with inventing potato chips; the story is disputed."
+        sources: [{ name: "Wikipedia: Potato chip", type: REFERENCE, verified: false }]
+        questions:
+          - id: crisps-saratoga-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "According to the best-known origin story, where were potato crisps invented?"
+            options:
+              - { key: A, text: "Britain", distractor: NEAR_MISS }
+              - { key: B, text: "France", distractor: PLAUSIBLE }
+              - { key: C, text: "The USA", correct: true }
+              - { key: D, text: "Belgium", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The legend of chef George Crum in Saratoga Springs is popular but disputed — English cookbooks had crisps earlier."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: crisps-saratoga-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Где, по самой известной версии, изобрели картофельные чипсы?
+            options:
+              - { key: A, text: В Великобритании, distractor: NEAR_MISS }
+              - { key: B, text: Во Франции, distractor: PLAUSIBLE }
+              - { key: C, text: В США, correct: true }
+              - { key: D, text: В Бельгии, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Легенда о поваре Джордже Краме из Саратога-Спрингс популярна, но спорна — в английских поваренных книгах чипсы были раньше.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: carbonara-no-cream
+        statement: "Classic Roman carbonara uses eggs, pecorino, guanciale and pepper — no cream."
+        sources: [{ name: "Wikipedia: Carbonara", type: REFERENCE, verified: false }]
+        questions:
+          - id: carbonara-no-cream-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which ingredient does NOT go into a classic Italian carbonara?"
+            options:
+              - { key: A, text: "Eggs", distractor: SAME_CATEGORY }
+              - { key: B, text: "Pecorino", distractor: SAME_CATEGORY }
+              - { key: C, text: "Guanciale", distractor: SAME_CATEGORY }
+              - { key: D, text: "Cream", correct: true }
+            explanation: "The creaminess comes from eggs and cheese; Italians take the cream question very personally."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: carbonara-no-cream-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой ингредиент НЕ кладут в классическую итальянскую карбонару?
+            options:
+              - { key: A, text: Яйца, distractor: SAME_CATEGORY }
+              - { key: B, text: Пекорино, distractor: SAME_CATEGORY }
+              - { key: C, text: Гуанчиале, distractor: SAME_CATEGORY }
+              - { key: D, text: Сливки, correct: true }
+            explanation: Кремовость дают яйца и сыр; к вопросу о сливках итальянцы относятся очень лично.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: coca-cola-pharmacy
+        statement: "Coca-Cola was created in 1886 by pharmacist John Pemberton and first sold at a pharmacy soda fountain."
+        sources: [{ name: "Wikipedia: Coca-Cola", type: REFERENCE, verified: false }]
+        questions:
+          - id: coca-cola-pharmacy-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these products began life with pharmacy or medicinal associations?"
+            options:
+              - { key: A, text: "Nutella", distractor: PLAUSIBLE }
+              - { key: B, text: "Pringles", distractor: PLAUSIBLE }
+              - { key: C, text: "Coca-Cola", correct: true }
+              - { key: D, text: "Heinz Beans", distractor: PLAUSIBLE }
+            explanation: "Pharmacist John Pemberton sold it in Atlanta in 1886 as a tonic."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: coca-cola-pharmacy-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой из этих продуктов начинал как аптечное или лечебное средство?
+            options:
+              - { key: A, text: Nutella, distractor: PLAUSIBLE }
+              - { key: B, text: Pringles, distractor: PLAUSIBLE }
+              - { key: C, text: Coca-Cola, correct: true }
+              - { key: D, text: Фасоль Heinz, distractor: PLAUSIBLE }
+            explanation: Фармацевт Джон Пембертон продавал её в Атланте в 1886 году как тонизирующее средство.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: caesar-cardini
+        statement: "Caesar salad is named after restaurateur Caesar Cardini, who served it in Tijuana in the 1920s."
+        sources: [{ name: "Wikipedia: Caesar salad", type: REFERENCE, verified: false }]
+        questions:
+          - id: caesar-cardini-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Caesar salad isn't named after Julius Caesar. Who is it named after?"
+            options:
+              - { key: A, text: "A Roman emperor", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "A Hollywood actor", distractor: PLAUSIBLE }
+              - { key: C, text: "Restaurateur Caesar Cardini", correct: true }
+              - { key: D, text: "A French chef called César", distractor: PLAUSIBLE }
+            explanation: "Cardini, an Italian immigrant, ran a restaurant in Tijuana, Mexico."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: caesar-cardini-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Салат «Цезарь» назван не в честь Юлия Цезаря. А в честь кого?
+            options:
+              - { key: A, text: Римского императора, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Голливудского актёра, distractor: PLAUSIBLE }
+              - { key: C, text: Ресторатора Цезаря Кардини, correct: true }
+              - { key: D, text: Французского шефа по имени Сезар, distractor: PLAUSIBLE }
+            explanation: Итальянский эмигрант Кардини держал ресторан в мексиканской Тихуане.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: mamma-mia-not-pasta
+        statement: "Orecchiette, strozzapreti and radiatori are real pasta shapes."
+        sources: [{ name: "Wikipedia: List of pasta", type: REFERENCE, verified: false }]
+        questions:
+          - id: mamma-mia-not-pasta-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these is NOT a real type of pasta?"
+            options:
+              - { key: A, text: "Orecchiette", distractor: SAME_CATEGORY }
+              - { key: B, text: "Strozzapreti", distractor: SAME_CATEGORY }
+              - { key: C, text: "Radiatori", distractor: SAME_CATEGORY }
+              - { key: D, text: "Mamma Mia", correct: true }
+            explanation: "Radiatori really are shaped like little radiators."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: mamma-mia-not-pasta-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого НЕ настоящий вид пасты?
+            options:
+              - { key: A, text: Орекьетте, distractor: SAME_CATEGORY }
+              - { key: B, text: Строццапрети, distractor: SAME_CATEGORY }
+              - { key: C, text: Радиаторы, distractor: SAME_CATEGORY }
+              - { key: D, text: Мамма миа, correct: true }
+            explanation: Радиаторы и правда похожи на маленькие батареи отопления.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: strozzapreti-meaning
+        statement: "The pasta name strozzapreti means \"priest stranglers\"."
+        sources: [{ name: "Wikipedia: Strozzapreti", type: REFERENCE, verified: false }]
+        questions:
+          - id: strozzapreti-meaning-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What does the pasta name \"strozzapreti\" roughly mean?"
+            options:
+              - { key: A, text: "Little ears", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Angel hair", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Priest stranglers", correct: true }
+              - { key: D, text: "Grandmother's fingers", distractor: PLAUSIBLE }
+            explanation: "Legends say greedy priests choked on it. Little ears are orecchiette; angel hair is capellini."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: strozzapreti-meaning-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что примерно означает название пасты «строццапрети»?
+            options:
+              - { key: A, text: Маленькие ушки, distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: Волосы ангела, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Душители священников, correct: true }
+              - { key: D, text: Бабушкины пальчики, distractor: PLAUSIBLE }
+            explanation: По легенде, ею давились жадные священники. Ушки — это орекьетте, волосы ангела — капеллини.
+            topics: { food: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: weird-music
+    name: "Weird but true: music"
+    facts:
+      - id: blue-eiffel-65
+        statement: "\"Blue (Da Ba Dee)\" (1998) was performed by the Italian group Eiffel 65."
+        sources: [{ name: "Wikipedia: Blue (Da Ba Dee)", type: REFERENCE, verified: false }]
+        questions:
+          - id: blue-eiffel-65-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Who performed \"Blue (Da Ba Dee)\"?"
+            options:
+              - { key: A, text: "Aqua", distractor: SAME_CATEGORY }
+              - { key: B, text: "Vengaboys", distractor: SAME_CATEGORY }
+              - { key: C, text: "Eiffel 65", correct: true }
+              - { key: D, text: "Scooter", distractor: SAME_CATEGORY }
+            explanation: "An Italian trio from Turin; the song was a huge hit in 1999."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: blue-eiffel-65-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Кто исполнял «Blue (Da Ba Dee)»?
+            options:
+              - { key: A, text: Aqua, distractor: SAME_CATEGORY }
+              - { key: B, text: Vengaboys, distractor: SAME_CATEGORY }
+              - { key: C, text: Eiffel 65, correct: true }
+              - { key: D, text: Scooter, distractor: SAME_CATEGORY }
+            explanation: Итальянское трио из Турина; песня гремела в 1999 году.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: prisencolinensinainciusol
+        statement: "Adriano Celentano's \"Prisencolinensinainciusol\" (1972) is sung in made-up gibberish meant to sound like English."
+        sources: [{ name: "Wikipedia: Prisencolinensinainciusol", type: REFERENCE, verified: false }]
+        questions:
+          - id: prisencolinensinainciusol-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which famous song is sung in made-up words meant to sound like English?"
+            options:
+              - { key: A, text: "Macarena", distractor: PLAUSIBLE }
+              - { key: B, text: "Barbie Girl", distractor: PLAUSIBLE }
+              - { key: C, text: "Dragostea Din Tei", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Prisencolinensinainciusol", correct: true }
+            explanation: "Celentano wanted to show how English sounds to Italians who don't speak it. Dragostea Din Tei is in Romanian."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 80s: 0.4 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: prisencolinensinainciusol-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какую знаменитую песню поют на выдуманных словах, которые должны звучать как английские?
+            options:
+              - { key: A, text: Macarena, distractor: PLAUSIBLE }
+              - { key: B, text: Barbie Girl, distractor: PLAUSIBLE }
+              - { key: C, text: Dragostea Din Tei, distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: Prisencolinensinainciusol, correct: true }
+            explanation: Челентано хотел показать, как английский звучит для итальянцев, которые его не знают. Dragostea Din Tei поют по-румынски.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 80s: 0.4 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: weird-geography
+    name: "Weird but true: places"
+    facts:
+      - id: batman-boring-dull
+        statement: "Batman (Turkey), Boring (Oregon, USA) and Dull (Perthshire, Scotland) are all real places."
+        sources: [{ name: "Wikipedia: Boring, Oregon", type: REFERENCE, verified: false }]
+        questions:
+          - id: batman-boring-dull-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these is a real place name?"
+            options:
+              - { key: A, text: "Batman, in Turkey", distractor: NEAR_MISS }
+              - { key: B, text: "Boring, in the USA", distractor: NEAR_MISS }
+              - { key: C, text: "Dull, in Scotland", distractor: NEAR_MISS }
+              - { key: D, text: "All three", correct: true }
+            explanation: "Boring and Dull are even twinned — \"a pair for the ages\"."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: batman-boring-dull-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого — название реального места?
+            options:
+              - { key: A, text: Батман в Турции, distractor: NEAR_MISS }
+              - { key: B, text: Боринг («Скучный») в США, distractor: NEAR_MISS }
+              - { key: C, text: Далл («Унылый») в Шотландии, distractor: NEAR_MISS }
+              - { key: D, text: Все три, correct: true }
+            explanation: Боринг и Далл даже стали городами-побратимами.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: nepal-flag
+        statement: "Nepal's flag is the only national flag that is not a rectangle or square."
+        sources: [{ name: "Wikipedia: Flag of Nepal", type: REFERENCE, verified: false }]
+        questions:
+          - id: nepal-flag-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which national flag is the only one that isn't four-sided?"
+            options:
+              - { key: A, text: "Switzerland", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Vatican City", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Nepal", correct: true }
+              - { key: D, text: "Bhutan", distractor: NEAR_MISS }
+            explanation: "Two stacked triangles. Switzerland and Vatican City are square, but still four-sided."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: nepal-flag-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Флаг какой страны — единственный в мире не четырёхугольный?
+            options:
+              - { key: A, text: Швейцарии, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: Ватикана, distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: Непала, correct: true }
+              - { key: D, text: Бутана, distractor: NEAR_MISS }
+            explanation: Это два треугольника друг над другом. Флаги Швейцарии и Ватикана квадратные, но всё равно четырёхугольные.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: africa-four-hemispheres
+        statement: "Africa lies in all four hemispheres: the equator and the prime meridian both cross it."
+        sources: [{ name: "Wikipedia: Africa", type: REFERENCE, verified: false }]
+        questions:
+          - id: africa-four-hemispheres-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which continent lies in all four hemispheres?"
+            options:
+              - { key: A, text: "Europe", distractor: NEAR_MISS }
+              - { key: B, text: "South America", distractor: NEAR_MISS }
+              - { key: C, text: "Africa", correct: true }
+              - { key: D, text: "Australia", distractor: PLAUSIBLE }
+            explanation: "Both the equator and the Greenwich meridian cross Africa."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: Asia also technically reaches all four (Indonesia south of the equator, Chukotka west of 180°) — Asia is deliberately not an option." ]
+          - id: africa-four-hemispheres-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой материк лежит сразу во всех четырёх полушариях?
+            options:
+              - { key: A, text: Европа, distractor: NEAR_MISS }
+              - { key: B, text: Южная Америка, distractor: NEAR_MISS }
+              - { key: C, text: Африка, correct: true }
+              - { key: D, text: Австралия, distractor: PLAUSIBLE }
+            explanation: Африку пересекают и экватор, и Гринвичский меридиан.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Asia also technically reaches all four (Indonesia south of the equator, Chukotka west of 180°) — Asia is deliberately not an option."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: pacific-largest
+        statement: "The Pacific is the world's largest ocean."
+        sources: [{ name: "Wikipedia: Pacific Ocean", type: REFERENCE, verified: false }]
+        questions:
+          - id: pacific-largest-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which is the world's largest ocean?"
+            options:
+              - { key: A, text: "The Atlantic", distractor: NEAR_MISS }
+              - { key: B, text: "The Indian", distractor: PLAUSIBLE }
+              - { key: C, text: "The Pacific", correct: true }
+              - { key: D, text: "The Southern", distractor: PLAUSIBLE }
+            explanation: "It's bigger than all the land on Earth put together — a breather after a hard one."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: pacific-largest-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой океан самый большой?
+            options:
+              - { key: A, text: Атлантический, distractor: NEAR_MISS }
+              - { key: B, text: Индийский, distractor: PLAUSIBLE }
+              - { key: C, text: Тихий, correct: true }
+              - { key: D, text: Южный, distractor: PLAUSIBLE }
+            explanation: Он больше всей суши Земли вместе взятой — передышка после сложного вопроса.
+            topics: { geography: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 1
+            dignity: 4
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: weird-sport
+    name: "Weird but true: sport"
+    facts:
+      - id: old-olympic-events
+        statement: "Tug of war, obstacle swimming and live pigeon shooting were all events at early Olympic Games (Paris 1900 for the last two)."
+        sources: [{ name: "Wikipedia: 1900 Summer Olympics", type: REFERENCE, verified: false }]
+        questions:
+          - id: old-olympic-events-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these has genuinely appeared at the Olympic Games?"
+            options:
+              - { key: A, text: "Tug of war", distractor: NEAR_MISS }
+              - { key: B, text: "Obstacle swimming", distractor: NEAR_MISS }
+              - { key: C, text: "Live pigeon shooting", distractor: NEAR_MISS }
+              - { key: D, text: "All of the above", correct: true }
+            explanation: "Paris 1900 had swimming over and under boats in the Seine — and the only Olympic event where animals were deliberately killed."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: Live pigeon shooting's official Olympic status is disputed — check the source wording." ]
+          - id: old-olympic-events-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого действительно было на Олимпийских играх?
+            options:
+              - { key: A, text: Перетягивание каната, distractor: NEAR_MISS }
+              - { key: B, text: Плавание с препятствиями, distractor: NEAR_MISS }
+              - { key: C, text: Стрельба по живым голубям, distractor: NEAR_MISS }
+              - { key: D, text: Всё перечисленное, correct: true }
+            explanation: В Париже-1900 плавали над лодками и под ними прямо в Сене — и устроили единственное соревнование, где намеренно убивали животных.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 4
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Live pigeon shooting's official Olympic status is disputed — check the source wording."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: odd-sports-real
+        statement: "Chess boxing, wife carrying and underwater hockey are all real sports with championships."
+        sources: [{ name: "Wikipedia: Chess boxing", type: REFERENCE, verified: false }]
+        questions:
+          - id: odd-sports-real-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these sports actually exists?"
+            options:
+              - { key: A, text: "Chess boxing", distractor: NEAR_MISS }
+              - { key: B, text: "Wife carrying", distractor: NEAR_MISS }
+              - { key: C, text: "Underwater hockey", distractor: NEAR_MISS }
+              - { key: D, text: "All three", correct: true }
+            explanation: "Wife carrying has a world championship in Finland; the prize is the wife's weight in beer."
+            topics: { sports: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: odd-sports-real-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какой из этих видов спорта существует на самом деле?
+            options:
+              - { key: A, text: Шахбокс, distractor: NEAR_MISS }
+              - { key: B, text: Бег с женой на руках, distractor: NEAR_MISS }
+              - { key: C, text: Подводный хоккей, distractor: NEAR_MISS }
+              - { key: D, text: Все три, correct: true }
+            explanation: Чемпионат мира по бегу с женой проходит в Финляндии; приз — пиво весом с жену.
+            topics: { sports: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+  - family: weird-brands
+    name: "Weird but true: brands"
+    facts:
+      - id: ikea-bike-tv
+        statement: "IKEA has sold a bicycle (Sladda, 2016) and a TV built into furniture (Uppleva, 2012)."
+        sources: [{ name: "Wikipedia: IKEA", type: REFERENCE, verified: false }]
+        questions:
+          - id: ikea-bike-tv-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these has IKEA genuinely sold?"
+            options:
+              - { key: A, text: "A bicycle", distractor: NEAR_MISS }
+              - { key: B, text: "A television", distractor: NEAR_MISS }
+              - { key: C, text: "A car", distractor: PLAUSIBLE }
+              - { key: D, text: "Both a bicycle and a television", correct: true }
+            explanation: "The Sladda bike and the Uppleva TV-in-a-cabinet — both real, both flat-packed."
+            topics: { fashion-brands: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: Check product names and years (Sladda 2016, Uppleva 2012)." ]
+          - id: ikea-bike-tv-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что из этого IKEA действительно продавала?
+            options:
+              - { key: A, text: Велосипед, distractor: NEAR_MISS }
+              - { key: B, text: Телевизор, distractor: NEAR_MISS }
+              - { key: C, text: Автомобиль, distractor: PLAUSIBLE }
+              - { key: D, text: "И велосипед, и телевизор", correct: true }
+            explanation: Велосипед Sladda и телевизор Uppleva, встроенный в тумбу, — оба настоящие.
+            topics: { fashion-brands: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Check product names and years (Sladda 2016, Uppleva 2012)."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: luke-i-am-your-father
+        statement: "In The Empire Strikes Back, Darth Vader says \"No, I am your father\", not \"Luke, I am your father\"."
+        sources: [{ name: "Wikipedia: I am your father", type: REFERENCE, verified: false }]
+        questions:
+          - id: luke-i-am-your-father-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which famous Star Wars line is usually misquoted?"
+            options:
+              - { key: A, text: "\"May the Force be with you\"", distractor: SAME_CATEGORY }
+              - { key: B, text: "\"Luke, I am your father\"", correct: true }
+              - { key: C, text: "\"I have a bad feeling about this\"", distractor: SAME_CATEGORY }
+              - { key: D, text: "\"Do or do not. There is no try.\"", distractor: SAME_CATEGORY }
+            explanation: "Vader actually says \"No, I am your father\"."
+            topics: { world-cinema: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: luke-i-am-your-father-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какую знаменитую фразу из «Звёздных войн» обычно цитируют неправильно?
+            options:
+              - { key: A, text: «Да пребудет с тобой Сила», distractor: SAME_CATEGORY }
+              - { key: B, text: "«Люк, я твой отец»", correct: true }
+              - { key: C, text: «У меня плохое предчувствие», distractor: SAME_CATEGORY }
+              - { key: D, text: «Делай или не делай. Не надо пытаться», distractor: SAME_CATEGORY }
+            explanation: "На самом деле Вейдер говорит: «Нет, я твой отец»."
+            topics: { world-cinema: 1 }
+            contexts: { GLOBAL: 1 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."

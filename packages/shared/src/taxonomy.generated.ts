@@ -243,7 +243,7 @@ export const TOPICS: TaxonomyTopic[] = [
     "emoji": "💾",
     "group": "Интернет и игры",
     "groupEn": "Internet & games",
-    "impliedContext": "POST_SOVIET"
+    "impliedContext": null
   },
   {
     "slug": "internet-now",

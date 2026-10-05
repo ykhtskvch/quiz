@@ -392,8 +392,8 @@ families:
               - { key: C, text: "1989", distractor: PLAUSIBLE }
               - { key: D, text: "1991", distractor: PLAUSIBLE }
             explanation: 26 April 1986; HBO's 2019 series made it famous all over again.
-            topics: { ussr-history: 1 }
-            contexts: { POST_SOVIET: 1, GLOBAL: 0.6 }
+            topics: { cold-war: 0.6, science: 0.5 }
+            contexts: { POST_SOVIET: 0.6, GLOBAL: 1 }
             generations: { 80s: 1, 10s: 0.4 }
             difficulty: 2
             dignity: 4

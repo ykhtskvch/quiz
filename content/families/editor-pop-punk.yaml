@@ -1,0 +1,865 @@
+# Editor's set — 2000s pop-punk and emo, titles only (EN-native)
+# Editor's picks, prepared with Claude; DRAFT until fact-checked (BR-130).
+
+families:
+  - family: pop-punk-00s
+    name: "2000s pop-punk and emo"
+    facts:
+      - id: blink-whats-my-age-video
+        statement: "In the video for \"What's My Age Again?\" (1999), Blink-182 run naked through Los Angeles."
+        sources: [{ name: "Wikipedia: What's My Age Again?", type: REFERENCE, verified: false }]
+        questions:
+          - id: blink-whats-my-age-video-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In which Blink-182 video does the band run naked through Los Angeles?"
+            options:
+              - { key: A, text: "First Date", distractor: SAME_CATEGORY }
+              - { key: B, text: "What's My Age Again?", correct: true }
+              - { key: C, text: "Adam's Song", distractor: SAME_CATEGORY }
+              - { key: D, text: "The Rock Show", distractor: SAME_CATEGORY }
+            explanation: "The song is about a guy in his twenties who still acts like a teenager — very on brand."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: blink-whats-my-age-video-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: В каком клипе Blink-182 участники группы бегают голыми по Лос-Анджелесу?
+            options:
+              - { key: A, text: First Date, distractor: SAME_CATEGORY }
+              - { key: B, text: What's My Age Again?, correct: true }
+              - { key: C, text: Adam's Song, distractor: SAME_CATEGORY }
+              - { key: D, text: The Rock Show, distractor: SAME_CATEGORY }
+            explanation: Песня про парня за двадцать, который ведёт себя как подросток, — очень в их духе.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: blink-small-things-boybands
+        statement: "The video for Blink-182's \"All the Small Things\" (1999) parodies boy bands and pop stars of the time."
+        sources: [{ name: "Wikipedia: All the Small Things", type: REFERENCE, verified: false }]
+        questions:
+          - id: blink-small-things-boybands-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which Blink-182 video parodied the Backstreet Boys and other boy bands?"
+            options:
+              - { key: A, text: "Dammit", distractor: SAME_CATEGORY }
+              - { key: B, text: "All the Small Things", correct: true }
+              - { key: C, text: "I Miss You", distractor: SAME_CATEGORY }
+              - { key: D, text: "Feeling This", distractor: SAME_CATEGORY }
+            explanation: "The song itself is a sweet love song; the video makes fun of TRL-era pop."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: blink-small-things-boybands-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: В каком клипе Blink-182 пародировали Backstreet Boys и других бойз-бэндов?
+            options:
+              - { key: A, text: Dammit, distractor: SAME_CATEGORY }
+              - { key: B, text: All the Small Things, correct: true }
+              - { key: C, text: I Miss You, distractor: SAME_CATEGORY }
+              - { key: D, text: Feeling This, distractor: SAME_CATEGORY }
+            explanation: Сама песня — нежная, про любовь, а клип высмеивает поп эпохи MTV.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: american-idiot-green-day
+        statement: "\"American Idiot\" (2004) is by Green Day."
+        sources: [{ name: "Wikipedia: American Idiot (song)", type: REFERENCE, verified: false }]
+        questions:
+          - id: american-idiot-green-day-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which band recorded \"American Idiot\"?"
+            options:
+              - { key: A, text: "Sum 41", distractor: SAME_CATEGORY }
+              - { key: B, text: "Blink-182", distractor: SAME_CATEGORY }
+              - { key: C, text: "Green Day", correct: true }
+              - { key: D, text: "The Offspring", distractor: SAME_CATEGORY }
+            explanation: "The album later became a Broadway musical."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 1
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: american-idiot-green-day-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая группа записала «American Idiot»?
+            options:
+              - { key: A, text: Sum 41, distractor: SAME_CATEGORY }
+              - { key: B, text: Blink-182, distractor: SAME_CATEGORY }
+              - { key: C, text: Green Day, correct: true }
+              - { key: D, text: The Offspring, distractor: SAME_CATEGORY }
+            explanation: Позже по альбому поставили бродвейский мюзикл.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 1
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: september-ends-father
+        statement: "Billie Joe Armstrong wrote \"Wake Me Up When September Ends\" about his father, who died of cancer in September 1982."
+        sources: [{ name: "Wikipedia: Wake Me Up When September Ends", type: REFERENCE, verified: false }]
+        questions:
+          - id: september-ends-father-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What personal event is Green Day's \"Wake Me Up When September Ends\" rooted in?"
+            options:
+              - { key: A, text: "The end of summer", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "US politics", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Billie Joe Armstrong losing his father", correct: true }
+              - { key: D, text: "Finishing school", distractor: PLAUSIBLE }
+            explanation: "His father died when he was ten; the video, though, is about a soldier going to Iraq."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: september-ends-father-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: С каким личным событием связана песня Green Day «Wake Me Up When September Ends»?
+            options:
+              - { key: A, text: С концом лета, distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: С политикой США, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Со смертью отца Билли Джо Армстронга, correct: true }
+              - { key: D, text: С окончанием школы, distractor: PLAUSIBLE }
+            explanation: Отец умер, когда Билли Джо было десять. А клип при этом — про солдата, уходящего в Ирак.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: fat-lip-sum-41
+        statement: "\"Fat Lip\" (2001) is by Sum 41."
+        sources: [{ name: "Wikipedia: Fat Lip", type: REFERENCE, verified: false }]
+        questions:
+          - id: fat-lip-sum-41-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which band recorded \"Fat Lip\"?"
+            options:
+              - { key: A, text: "The Offspring", distractor: SAME_CATEGORY }
+              - { key: B, text: "Sum 41", correct: true }
+              - { key: C, text: "Bowling for Soup", distractor: SAME_CATEGORY }
+              - { key: D, text: "Yellowcard", distractor: SAME_CATEGORY }
+            explanation: "Canadian band from Ajax, Ontario; the song is a rap-rock teenage manifesto."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: fat-lip-sum-41-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая группа записала «Fat Lip»?
+            options:
+              - { key: A, text: The Offspring, distractor: SAME_CATEGORY }
+              - { key: B, text: Sum 41, correct: true }
+              - { key: C, text: Bowling for Soup, distractor: SAME_CATEGORY }
+              - { key: D, text: Yellowcard, distractor: SAME_CATEGORY }
+            explanation: Канадская группа из Эйджакса, Онтарио; песня — рэп-роковый подростковый манифест.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: sk8er-boi-story
+        statement: "In Avril Lavigne's \"Sk8er Boi\", a girl rejects a skater boy who later becomes a rock star."
+        sources: [{ name: "Wikipedia: Sk8er Boi", type: REFERENCE, verified: false }]
+        questions:
+          - id: sk8er-boi-story-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In Avril Lavigne's \"Sk8er Boi\", what happens to the boy?"
+            options:
+              - { key: A, text: "They start dating straight away", distractor: PLAUSIBLE }
+              - { key: B, text: "He gives up skating", distractor: PLAUSIBLE }
+              - { key: C, text: "She turns him down, and he later becomes a star", correct: true }
+              - { key: D, text: "He moves abroad", distractor: PLAUSIBLE }
+            explanation: "A 2002 hit that got its own film announcement twenty years later."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: Explanation: check the Sk8er Boi film announcement (2021) or remove it." ]
+          - id: sk8er-boi-story-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Что происходит с парнем в песне Аврил Лавин «Sk8er Boi»?
+            options:
+              - { key: A, text: Они сразу начинают встречаться, distractor: PLAUSIBLE }
+              - { key: B, text: Он бросает скейт, distractor: PLAUSIBLE }
+              - { key: C, text: "Она ему отказывает, а он потом становится звездой", correct: true }
+              - { key: D, text: Он уезжает за границу, distractor: PLAUSIBLE }
+            explanation: Хит 2002 года, по которому спустя почти двадцать лет объявили фильм.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Explanation: check the Sk8er Boi film announcement (2021) or remove it."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: complicated-fake
+        statement: "Avril Lavigne's \"Complicated\" (2002) complains about someone who acts fake around other people."
+        sources: [{ name: "Wikipedia: Complicated (Avril Lavigne song)", type: REFERENCE, verified: false }]
+        questions:
+          - id: complicated-fake-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In Avril Lavigne's \"Complicated\", what is she complaining about?"
+            options:
+              - { key: A, text: "Someone working too much", distractor: PLAUSIBLE }
+              - { key: B, text: "Someone acting fake around other people", correct: true }
+              - { key: C, text: "Someone always being late", distractor: PLAUSIBLE }
+              - { key: D, text: "Someone hiding a relationship", distractor: PLAUSIBLE }
+            explanation: "Her debut single — and still her signature song."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: complicated-fake-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: На что жалуется Аврил Лавин в песне «Complicated»?
+            options:
+              - { key: A, text: Что кто-то слишком много работает, distractor: PLAUSIBLE }
+              - { key: B, text: Что кто-то притворяется при других людях, correct: true }
+              - { key: C, text: Что кто-то вечно опаздывает, distractor: PLAUSIBLE }
+              - { key: D, text: Что кто-то скрывает отношения, distractor: PLAUSIBLE }
+            explanation: Её дебютный сингл — и до сих пор главная песня.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: hybrid-theory
+        statement: "Linkin Park's debut album is Hybrid Theory (2000)."
+        sources: [{ name: "Wikipedia: Hybrid Theory", type: REFERENCE, verified: false }]
+        questions:
+          - id: hybrid-theory-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What was Linkin Park's debut album called?"
+            options:
+              - { key: A, text: "Meteora", distractor: NEAR_MISS }
+              - { key: B, text: "Hybrid Theory", correct: true }
+              - { key: C, text: "Minutes to Midnight", distractor: NEAR_MISS }
+              - { key: D, text: "Reanimation", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "It's one of the best-selling debut albums ever. Reanimation was its remix version."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: hybrid-theory-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Как назывался дебютный альбом Linkin Park?
+            options:
+              - { key: A, text: Meteora, distractor: NEAR_MISS }
+              - { key: B, text: Hybrid Theory, correct: true }
+              - { key: C, text: Minutes to Midnight, distractor: NEAR_MISS }
+              - { key: D, text: Reanimation, distractor: CONTEXTUAL_CONFUSION }
+            explanation: Один из самых продаваемых дебютных альбомов в истории. Reanimation — его ремикс-версия.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: numb-expectations
+        statement: "Linkin Park's \"Numb\" (2003) is about the pressure of someone else's expectations and losing yourself."
+        sources: [{ name: "Wikipedia: Numb (Linkin Park song)", type: REFERENCE, verified: false }]
+        questions:
+          - id: numb-expectations-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What is Linkin Park's \"Numb\" mainly about?"
+            options:
+              - { key: A, text: "Being bored at work", distractor: PLAUSIBLE }
+              - { key: B, text: "Others' expectations and losing yourself", correct: true }
+              - { key: C, text: "A breakup", distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "Physical exhaustion", distractor: PLAUSIBLE }
+            explanation: "Later a huge mash-up hit with Jay-Z: \"Numb/Encore\"."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: numb-expectations-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: О чём в основном песня Linkin Park «Numb»?
+            options:
+              - { key: A, text: О скуке на работе, distractor: PLAUSIBLE }
+              - { key: B, text: О чужих ожиданиях и потере себя, correct: true }
+              - { key: C, text: О расставании, distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: О физической усталости, distractor: PLAUSIBLE }
+            explanation: Потом из неё вышел огромный мэшап с Jay-Z — «Numb/Encore».
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: the-anthem-good-charlotte
+        statement: "\"The Anthem\" (2002) is by Good Charlotte."
+        sources: [{ name: "Wikipedia: The Anthem (Good Charlotte song)", type: REFERENCE, verified: false }]
+        questions:
+          - id: the-anthem-good-charlotte-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which band recorded \"The Anthem\"?"
+            options:
+              - { key: A, text: "Simple Plan", distractor: SAME_CATEGORY }
+              - { key: B, text: "Good Charlotte", correct: true }
+              - { key: C, text: "Sum 41", distractor: SAME_CATEGORY }
+              - { key: D, text: "Jimmy Eat World", distractor: SAME_CATEGORY }
+            explanation: "A song about refusing the life plan everyone expects from you."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: the-anthem-good-charlotte-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая группа записала «The Anthem»?
+            options:
+              - { key: A, text: Simple Plan, distractor: SAME_CATEGORY }
+              - { key: B, text: Good Charlotte, correct: true }
+              - { key: C, text: Sum 41, distractor: SAME_CATEGORY }
+              - { key: D, text: Jimmy Eat World, distractor: SAME_CATEGORY }
+            explanation: Песня о том, чтобы не жить по сценарию, которого от тебя все ждут.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: im-just-a-kid-simple-plan
+        statement: "\"I'm Just a Kid\" (2002) is by Simple Plan."
+        sources: [{ name: "Wikipedia: I'm Just a Kid", type: REFERENCE, verified: false }]
+        questions:
+          - id: im-just-a-kid-simple-plan-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which band recorded \"I'm Just a Kid\"?"
+            options:
+              - { key: A, text: "Good Charlotte", distractor: SAME_CATEGORY }
+              - { key: B, text: "Simple Plan", correct: true }
+              - { key: C, text: "Fall Out Boy", distractor: SAME_CATEGORY }
+              - { key: D, text: "Weezer", distractor: SAME_CATEGORY }
+            explanation: "Canadians from Montreal; the song had a second life on the Cheaper by the Dozen soundtrack."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: [ "AI doubt: Check the Cheaper by the Dozen soundtrack claim." ]
+          - id: im-just-a-kid-simple-plan-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая группа записала «I'm Just a Kid»?
+            options:
+              - { key: A, text: Good Charlotte, distractor: SAME_CATEGORY }
+              - { key: B, text: Simple Plan, correct: true }
+              - { key: C, text: Fall Out Boy, distractor: SAME_CATEGORY }
+              - { key: D, text: Weezer, distractor: SAME_CATEGORY }
+            explanation: Канадцы из Монреаля; у песни была вторая жизнь в саундтреке фильма «Оптом дешевле».
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: Check the Cheaper by the Dozen soundtrack claim."
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: thats-what-you-get-paramore
+        statement: "\"That's What You Get\" (2008) is by Paramore."
+        sources: [{ name: "Wikipedia: That's What You Get (Paramore song)", type: REFERENCE, verified: false }]
+        questions:
+          - id: thats-what-you-get-paramore-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which band recorded \"That's What You Get\"?"
+            options:
+              - { key: A, text: "Evanescence", distractor: SAME_CATEGORY }
+              - { key: B, text: "Avril Lavigne", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Paramore", correct: true }
+              - { key: D, text: "The Veronicas", distractor: SAME_CATEGORY }
+            explanation: "From the album Riot!, alongside \"Misery Business\"."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: thats-what-you-get-paramore-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая группа записала «That's What You Get»?
+            options:
+              - { key: A, text: Evanescence, distractor: SAME_CATEGORY }
+              - { key: B, text: Аврил Лавин, distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: Paramore, correct: true }
+              - { key: D, text: The Veronicas, distractor: SAME_CATEGORY }
+            explanation: С альбома Riot! — вместе с «Misery Business».
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: sugar-fall-out-boy
+        statement: "\"Sugar, We're Goin Down\" (2005) is by Fall Out Boy."
+        sources: [{ name: "Wikipedia: Sugar, We're Goin Down", type: REFERENCE, verified: false }]
+        questions:
+          - id: sugar-fall-out-boy-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Who recorded \"Sugar, We're Goin Down\"?"
+            options:
+              - { key: A, text: "Panic! at the Disco", distractor: NEAR_MISS }
+              - { key: B, text: "My Chemical Romance", distractor: SAME_CATEGORY }
+              - { key: C, text: "Fall Out Boy", correct: true }
+              - { key: D, text: "All Time Low", distractor: SAME_CATEGORY }
+            explanation: "Panic! at the Disco were signed to Fall Out Boy's bassist Pete Wentz's label — hence the trap."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: sugar-fall-out-boy-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Кто записал «Sugar, We're Goin Down»?
+            options:
+              - { key: A, text: Panic! at the Disco, distractor: NEAR_MISS }
+              - { key: B, text: My Chemical Romance, distractor: SAME_CATEGORY }
+              - { key: C, text: Fall Out Boy, correct: true }
+              - { key: D, text: All Time Low, distractor: SAME_CATEGORY }
+            explanation: Panic! at the Disco подписались на лейбл басиста Fall Out Boy Пита Вентца — отсюда ловушка.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: black-parade-father
+        statement: "\"Welcome to the Black Parade\" (2006) opens with the narrator's father taking him as a boy to see a marching band."
+        sources: [{ name: "Wikipedia: Welcome to the Black Parade", type: REFERENCE, verified: false }]
+        questions:
+          - id: black-parade-father-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In My Chemical Romance's \"Welcome to the Black Parade\", who takes the narrator as a boy to see a marching band?"
+            options:
+              - { key: A, text: "His older brother", distractor: PLAUSIBLE }
+              - { key: B, text: "His teacher", distractor: PLAUSIBLE }
+              - { key: C, text: "His father", correct: true }
+              - { key: D, text: "His grandfather", distractor: PLAUSIBLE }
+            explanation: "The single note on the piano at the start is one of the most recognisable intros of the 2000s."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: black-parade-father-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Кто в песне My Chemical Romance «Welcome to the Black Parade» ведёт маленького героя посмотреть на марширующий оркестр?
+            options:
+              - { key: A, text: Старший брат, distractor: PLAUSIBLE }
+              - { key: B, text: Учитель, distractor: PLAUSIBLE }
+              - { key: C, text: Отец, correct: true }
+              - { key: D, text: Дедушка, distractor: PLAUSIBLE }
+            explanation: Одна нота на фортепиано в начале — одно из самых узнаваемых вступлений 2000-х.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: im-not-okay-mcr
+        statement: "\"I'm Not Okay (I Promise)\" (2004) is by My Chemical Romance."
+        sources: [{ name: "Wikipedia: I'm Not Okay (I Promise)", type: REFERENCE, verified: false }]
+        questions:
+          - id: im-not-okay-mcr-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Who recorded \"I'm Not Okay (I Promise)\"?"
+            options:
+              - { key: A, text: "Fall Out Boy", distractor: SAME_CATEGORY }
+              - { key: B, text: "My Chemical Romance", correct: true }
+              - { key: C, text: "Panic! at the Disco", distractor: SAME_CATEGORY }
+              - { key: D, text: "Taking Back Sunday", distractor: SAME_CATEGORY }
+            explanation: "Its video is styled as a trailer for an American teen film."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: im-not-okay-mcr-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Кто записал «I'm Not Okay (I Promise)»?
+            options:
+              - { key: A, text: Fall Out Boy, distractor: SAME_CATEGORY }
+              - { key: B, text: My Chemical Romance, correct: true }
+              - { key: C, text: Panic! at the Disco, distractor: SAME_CATEGORY }
+              - { key: D, text: Taking Back Sunday, distractor: SAME_CATEGORY }
+            explanation: Клип снят как трейлер американского подросткового фильма.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: sins-not-tragedies-wedding
+        statement: "The video and story of \"I Write Sins Not Tragedies\" (2005) by Panic! at the Disco are set at a wedding."
+        sources: [{ name: "Wikipedia: I Write Sins Not Tragedies", type: REFERENCE, verified: false }]
+        questions:
+          - id: sins-not-tragedies-wedding-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Where does the story of Panic! at the Disco's \"I Write Sins Not Tragedies\" take place?"
+            options:
+              - { key: A, text: "At a funeral", distractor: PLAUSIBLE }
+              - { key: B, text: "At school", distractor: PLAUSIBLE }
+              - { key: C, text: "At a wedding", correct: true }
+              - { key: D, text: "At an airport", distractor: PLAUSIBLE }
+            explanation: "A circus-themed wedding where the bride's secret comes out."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: sins-not-tragedies-wedding-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Где происходит история песни Panic! at the Disco «I Write Sins Not Tragedies»?
+            options:
+              - { key: A, text: На похоронах, distractor: PLAUSIBLE }
+              - { key: B, text: В школе, distractor: PLAUSIBLE }
+              - { key: C, text: На свадьбе, correct: true }
+              - { key: D, text: В аэропорту, distractor: PLAUSIBLE }
+            explanation: Цирковая свадьба, на которой раскрывается секрет невесты.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: somebody-told-me-killers
+        statement: "\"Somebody Told Me\" (2004) is by The Killers."
+        sources: [{ name: "Wikipedia: Somebody Told Me", type: REFERENCE, verified: false }]
+        questions:
+          - id: somebody-told-me-killers-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which band recorded \"Somebody Told Me\"?"
+            options:
+              - { key: A, text: "Franz Ferdinand", distractor: SAME_CATEGORY }
+              - { key: B, text: "Arctic Monkeys", distractor: SAME_CATEGORY }
+              - { key: C, text: "The Killers", correct: true }
+              - { key: D, text: "Kaiser Chiefs", distractor: SAME_CATEGORY }
+            explanation: "A Las Vegas band that sounded more British than the British ones."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: somebody-told-me-killers-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Какая группа записала «Somebody Told Me»?
+            options:
+              - { key: A, text: Franz Ferdinand, distractor: SAME_CATEGORY }
+              - { key: B, text: Arctic Monkeys, distractor: SAME_CATEGORY }
+              - { key: C, text: The Killers, correct: true }
+              - { key: D, text: Kaiser Chiefs, distractor: SAME_CATEGORY }
+            explanation: Группа из Лас-Вегаса, звучавшая британнее самих британцев.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 00s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: why-dont-you-get-a-job
+        statement: "The Offspring's \"Why Don't You Get a Job?\" (1998) is about partners who live off someone else."
+        sources: [{ name: "Wikipedia: Why Don't You Get a Job?", type: REFERENCE, verified: false }]
+        questions:
+          - id: why-dont-you-get-a-job-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What is The Offspring's \"Why Don't You Get a Job?\" mainly about?"
+            options:
+              - { key: A, text: "Someone made redundant", distractor: PLAUSIBLE }
+              - { key: B, text: "An unemployed musician", distractor: PLAUSIBLE }
+              - { key: C, text: "Partners who live off someone else", correct: true }
+              - { key: D, text: "A teenager skipping school", distractor: PLAUSIBLE }
+            explanation: "Both verses tell the same story — once about a girlfriend, once about a boyfriend."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: why-dont-you-get-a-job-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: О чём в основном песня The Offspring «Why Don't You Get a Job?»?
+            options:
+              - { key: A, text: "О человеке, которого сократили", distractor: PLAUSIBLE }
+              - { key: B, text: О безработном музыканте, distractor: PLAUSIBLE }
+              - { key: C, text: "О партнёрах, которые живут за чужой счёт", correct: true }
+              - { key: D, text: "О подростке, который прогуливает школу", distractor: PLAUSIBLE }
+            explanation: Оба куплета рассказывают одну историю — один про девушку, другой про парня.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+
+      - id: pretty-fly-white-guy
+        statement: "The Offspring's \"Pretty Fly (for a White Guy)\" (1998) mocks a suburban guy trying too hard to look street."
+        sources: [{ name: "Wikipedia: Pretty Fly (for a White Guy)", type: REFERENCE, verified: false }]
+        questions:
+          - id: pretty-fly-white-guy-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Who is being mocked in The Offspring's \"Pretty Fly (for a White Guy)\"?"
+            options:
+              - { key: A, text: "A rock star", distractor: PLAUSIBLE }
+              - { key: B, text: "A guy trying far too hard to look street", correct: true }
+              - { key: C, text: "A teacher", distractor: PLAUSIBLE }
+              - { key: D, text: "A wealthy musician", distractor: PLAUSIBLE }
+            explanation: "A 1998 hit that went to No. 1 in the UK."
+            topics: { world-pop: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            generations: { 90s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+          - id: pretty-fly-white-guy-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: Над кем смеётся песня The Offspring «Pretty Fly (for a White Guy)»?
+            options:
+              - { key: A, text: Над рок-звездой, distractor: PLAUSIBLE }
+              - { key: B, text: "Над парнем, который изо всех сил строит из себя «уличного»", correct: true }
+              - { key: C, text: Над учителем, distractor: PLAUSIBLE }
+              - { key: D, text: Над богатым музыкантом, distractor: PLAUSIBLE }
+            explanation: Хит 1998 года, добравшийся до первого места в Великобритании.
+            topics: { world-pop: 1 }
+            contexts: { GLOBAL: 1 }
+            generations: { 90s: 1 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."

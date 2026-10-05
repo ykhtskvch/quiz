@@ -1,0 +1,102 @@
+# Editor's set — post-Soviet internet nostalgia (RU only)
+# Editor's picks, prepared with Claude; DRAFT until fact-checked (BR-130).
+
+families:
+  - family: runet-2000s
+    name: "Рунет 2000-х"
+    facts:
+      - id: qip-client
+        statement: "QIP (Quiet Internet Pager) — популярный в рунете альтернативный клиент ICQ."
+        sources: [{ name: "Википедия: QIP", type: REFERENCE, verified: false }]
+        questions:
+          - id: qip-client-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Как назывался популярный в рунете альтернативный клиент для ICQ?"
+            options:
+              - { key: A, text: "ZIP", distractor: PLAUSIBLE }
+              - { key: B, text: "QIP", correct: true }
+              - { key: C, text: "RIP", distractor: PLAUSIBLE }
+              - { key: D, text: "SIP", distractor: SAME_CATEGORY }
+            explanation: "Quiet Internet Pager — российская программа, которой многие заменяли «родную» ICQ: без рекламы и с удобными статусами."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.4 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: zhzh-livejournal
+        statement: "«ЖЖ» — разговорное название LiveJournal («Живой журнал»)."
+        sources: [{ name: "Википедия: LiveJournal", type: REFERENCE, verified: false }]
+        questions:
+          - id: zhzh-livejournal-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что в рунете называли «ЖЖ»?"
+            options:
+              - { key: A, text: "Компьютерную игру", distractor: PLAUSIBLE }
+              - { key: B, text: "Музыкальную программу", distractor: PLAUSIBLE }
+              - { key: C, text: "LiveJournal", correct: true }
+              - { key: D, text: "Первый российский браузер", distractor: PLAUSIBLE }
+            explanation: "«Живой журнал» — главная блог-платформа рунета 2000-х: там спорили, знакомились и узнавали новости."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.4 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: bolvanka-blank-disc
+        statement: "«Болванкой» в 2000-е называли чистый CD или DVD для записи."
+        sources: [{ name: "Википедия: CD-R", type: REFERENCE, verified: false }]
+        questions:
+          - id: bolvanka-blank-disc-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что в 2000-е называли «болванкой»?"
+            options:
+              - { key: A, text: "Пустой текстовый файл", distractor: PLAUSIBLE }
+              - { key: B, text: "Дешёвый компьютер", distractor: PLAUSIBLE }
+              - { key: C, text: "Чистый CD или DVD для записи", correct: true }
+              - { key: D, text: "Неактивный аккаунт", distractor: PLAUSIBLE }
+            explanation: "Болванки покупали стопками — для музыки, фильмов и сборников «в машину»."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.4 }
+            generations: { 00s: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: HYBRID
+
+      - id: livejournal-before-vk
+        statement: "LiveJournal появился в 1999 году — раньше «ВКонтакте» (2006), Instagram (2010) и Telegram (2013)."
+        sources: [{ name: "Википедия: LiveJournal", type: REFERENCE, verified: false }]
+        questions:
+          - id: livejournal-before-vk-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: REGIONAL
+            text: "Что из этого появилось раньше всех?"
+            options:
+              - { key: A, text: "«ВКонтакте»", distractor: NEAR_MISS }
+              - { key: B, text: "Instagram", distractor: PLAUSIBLE }
+              - { key: C, text: "LiveJournal", correct: true }
+              - { key: D, text: "Telegram", distractor: PLAUSIBLE }
+            explanation: "LiveJournal запустили в 1999 году в США; рунет пришёл туда в начале 2000-х и вскоре стал его главной аудиторией."
+            topics: { old-internet: 1.0 }
+            contexts: { POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.4 }
+            generations: { 00s: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID

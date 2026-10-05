@@ -48,7 +48,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "simpsons-springfield-en-1",
@@ -96,7 +96,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "seinfeld-nothing-en-1",
@@ -142,7 +142,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "the-office-dunder-mifflin-en-1",
@@ -189,7 +189,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "walter-white-teacher-en-1",
@@ -236,7 +236,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "oprah-car-en-1",
@@ -276,13 +276,13 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 2,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "super-bowl-en-1",
@@ -327,7 +327,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "world-series-baseball-en-1",
@@ -372,7 +372,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "thanksgiving-date-en-1",
@@ -416,7 +416,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "hollywoodland-en-1",
@@ -461,7 +461,7 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "route-66-en-1",
@@ -505,7 +505,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "graceland-memphis-en-1",
@@ -596,7 +596,7 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "disneyland-1955-en-1",
@@ -641,7 +641,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "got-milk-en-1",
@@ -688,7 +688,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "colosseum-purpose-ru-1",
@@ -1735,7 +1735,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "The announcement started on the Tube in 1969.",
+    "explanation": "The phrase is so famous it is printed on London souvenirs.",
     "topics": {
       "british-culture": 1
     },
@@ -3001,8 +3001,9 @@ export const BANK: BankQuestion[] = [
       "internet-now": 0.4
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "INTERNET_GLOBAL": 0.5
+      "POST_SOVIET": 0.6,
+      "INTERNET_GLOBAL": 0.5,
+      "GLOBAL": 1
     },
     "generations": {
       "10s": 1,
@@ -4638,6 +4639,8419 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
+    "id": "t9-meaning-en-1",
+    "factId": "t9-meaning",
+    "familyId": "nostalgia-phones",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What does T9, the predictive text on old phones, stand for?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Type 9"
+      },
+      {
+        "key": "B",
+        "text": "Turbo 9"
+      },
+      {
+        "key": "C",
+        "text": "Text on 9 keys"
+      },
+      {
+        "key": "D",
+        "text": "Telephone 9"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It guessed the word from one press per letter — and famously turned \"good\" into \"home\".",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "t9-meaning-ru-1",
+    "factId": "t9-meaning",
+    "familyId": "nostalgia-phones",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как расшифровывается T9 — предиктивный набор на старых телефонах?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Type 9"
+      },
+      {
+        "key": "B",
+        "text": "Turbo 9"
+      },
+      {
+        "key": "C",
+        "text": "Text on 9 keys — текст на 9 кнопках"
+      },
+      {
+        "key": "D",
+        "text": "Telephone 9"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Слово угадывалось по одному нажатию на букву — и иногда угадывалось очень смешно.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nokia-3310-no-camera-en-1",
+    "factId": "nokia-3310-no-camera",
+    "familyId": "nostalgia-phones",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which feature did the standard Nokia 3310 definitely NOT have?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A calculator"
+      },
+      {
+        "key": "B",
+        "text": "SMS"
+      },
+      {
+        "key": "C",
+        "text": "Snake"
+      },
+      {
+        "key": "D",
+        "text": "A camera"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Camera phones only arrived a couple of years later.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nokia-3310-no-camera-ru-1",
+    "factId": "nokia-3310-no-camera",
+    "familyId": "nostalgia-phones",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чего точно НЕ было в обычной Nokia 3310?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Калькулятора"
+      },
+      {
+        "key": "B",
+        "text": "SMS"
+      },
+      {
+        "key": "C",
+        "text": "«Змейки»"
+      },
+      {
+        "key": "D",
+        "text": "Камеры"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Телефоны с камерой появились только через пару лет.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crazy-frog-ringtone-en-1",
+    "factId": "crazy-frog-ringtone",
+    "familyId": "nostalgia-phones",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Crazy Frog first became famous mainly as…",
+    "options": [
+      {
+        "key": "A",
+        "text": "A TV-show mascot"
+      },
+      {
+        "key": "B",
+        "text": "A Happy Meal toy"
+      },
+      {
+        "key": "C",
+        "text": "A ringtone"
+      },
+      {
+        "key": "D",
+        "text": "A video-game character"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The ringtone was advertised so relentlessly that Jamster ads became a joke in themselves.",
+    "topics": {
+      "old-internet": 0.6,
+      "world-pop": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crazy-frog-ringtone-ru-1",
+    "factId": "crazy-frog-ringtone",
+    "familyId": "nostalgia-phones",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Crazy Frog сначала прославился прежде всего как…",
+    "options": [
+      {
+        "key": "A",
+        "text": "талисман телешоу"
+      },
+      {
+        "key": "B",
+        "text": "игрушка из Happy Meal"
+      },
+      {
+        "key": "C",
+        "text": "рингтон"
+      },
+      {
+        "key": "D",
+        "text": "персонаж видеоигры"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Рингтон рекламировали так настойчиво, что сама реклама стала мемом.",
+    "topics": {
+      "old-internet": 0.6,
+      "world-pop": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ringtone-paid-en-1",
+    "factId": "ringtone-paid",
+    "familyId": "nostalgia-phones",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What could you pay to put on an old mobile, then spend ages choosing the perfect few seconds of?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A podcast"
+      },
+      {
+        "key": "B",
+        "text": "A widget"
+      },
+      {
+        "key": "C",
+        "text": "A ringtone"
+      },
+      {
+        "key": "D",
+        "text": "A story"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Polyphonic ringtones were a huge business before smartphones.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ringtone-paid-ru-1",
+    "factId": "ringtone-paid",
+    "familyId": "nostalgia-phones",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что можно было за деньги поставить на старый мобильный, а потом долго выбирать идеальные несколько секунд?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Подкаст"
+      },
+      {
+        "key": "B",
+        "text": "Виджет"
+      },
+      {
+        "key": "C",
+        "text": "Рингтон"
+      },
+      {
+        "key": "D",
+        "text": "Сторис"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "До смартфонов полифонические рингтоны были огромным бизнесом.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bluetooth-file-transfer-en-1",
+    "factId": "bluetooth-file-transfer",
+    "familyId": "nostalgia-phones",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What did \"send it by Bluetooth\" usually mean in the 2000s?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Pay for something"
+      },
+      {
+        "key": "B",
+        "text": "Add someone on social media"
+      },
+      {
+        "key": "C",
+        "text": "Send a file from one phone to another"
+      },
+      {
+        "key": "D",
+        "text": "Connect to the internet"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Usually a song, a ringtone or a very bad video — standing next to each other for five minutes.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bluetooth-file-transfer-ru-1",
+    "factId": "bluetooth-file-transfer",
+    "familyId": "nostalgia-phones",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что в 2000-е обычно значило «скинь по блютузу»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Заплатить за что-то"
+      },
+      {
+        "key": "B",
+        "text": "Добавить в соцсети"
+      },
+      {
+        "key": "C",
+        "text": "Передать файл с телефона на телефон"
+      },
+      {
+        "key": "D",
+        "text": "Подключиться к интернету"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Обычно песню, рингтон или очень плохое видео — стоя рядом минут пять.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "memory-card-mp3-en-1",
+    "factId": "memory-card-mp3",
+    "familyId": "nostalgia-phones",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Before Spotify and cheap mobile data, which phone feature was especially prized?",
+    "options": [
+      {
+        "key": "A",
+        "text": "5G"
+      },
+      {
+        "key": "B",
+        "text": "Face ID"
+      },
+      {
+        "key": "C",
+        "text": "A memory-card slot for MP3s"
+      },
+      {
+        "key": "D",
+        "text": "An eSIM"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "More megabytes meant more songs on the bus.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "memory-card-mp3-ru-1",
+    "factId": "memory-card-mp3",
+    "familyId": "nostalgia-phones",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что особенно ценилось в телефоне до Spotify и дешёвого мобильного интернета?",
+    "options": [
+      {
+        "key": "A",
+        "text": "5G"
+      },
+      {
+        "key": "B",
+        "text": "Face ID"
+      },
+      {
+        "key": "C",
+        "text": "Слот для карты памяти под MP3"
+      },
+      {
+        "key": "D",
+        "text": "eSIM"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Больше мегабайт — больше песен в автобусе.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "msn-nudge-en-1",
+    "factId": "msn-nudge",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What did a \"Nudge\" do in MSN Messenger?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Deleted a message"
+      },
+      {
+        "key": "B",
+        "text": "Sent a secret emoji"
+      },
+      {
+        "key": "C",
+        "text": "Shook the other person's chat window"
+      },
+      {
+        "key": "D",
+        "text": "Showed who had viewed your profile"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The most annoying button of the 2000s.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "INTERNET_GLOBAL": 1,
+      "UK": 0.7,
+      "US": 0.7,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "myspace-top-8-en-1",
+    "factId": "myspace-top-8",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What was a big social decision on MySpace?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Choosing your password"
+      },
+      {
+        "key": "B",
+        "text": "Choosing your Top 8 friends"
+      },
+      {
+        "key": "C",
+        "text": "Buying a verification badge"
+      },
+      {
+        "key": "D",
+        "text": "Choosing your follower count"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Demoting someone from your Top 8 could end a friendship.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "INTERNET_GLOBAL": 1,
+      "UK": 0.7,
+      "US": 0.7,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "myspace-autoplay-en-1",
+    "factId": "myspace-autoplay",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What could suddenly happen when you opened someone's MySpace profile?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Their webcam switched on"
+      },
+      {
+        "key": "B",
+        "text": "Music started playing"
+      },
+      {
+        "key": "C",
+        "text": "Your computer restarted"
+      },
+      {
+        "key": "D",
+        "text": "They got a text message"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Usually at full volume, usually in a quiet office.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "INTERNET_GLOBAL": 1,
+      "UK": 0.7,
+      "US": 0.7,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "icq-uin-en-1",
+    "factId": "icq-uin",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was an ICQ number?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A phone number"
+      },
+      {
+        "key": "B",
+        "text": "A chat password"
+      },
+      {
+        "key": "C",
+        "text": "A numerical user ID"
+      },
+      {
+        "key": "D",
+        "text": "Your number of friends"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Short numbers were a status symbol; some were even sold.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "icq-uin-ru-1",
+    "factId": "icq-uin",
+    "familyId": "nostalgia-web",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что такое номер ICQ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Номер телефона"
+      },
+      {
+        "key": "B",
+        "text": "Пароль от чата"
+      },
+      {
+        "key": "C",
+        "text": "Числовой идентификатор пользователя"
+      },
+      {
+        "key": "D",
+        "text": "Количество друзей"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Короткие номера были статусной вещью — их даже продавали.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "limewire-viruses-en-1",
+    "factId": "limewire-viruses",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What was a very realistic risk of downloading a song from LimeWire?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It turned into a MIDI file"
+      },
+      {
+        "key": "B",
+        "text": "Your computer started talking"
+      },
+      {
+        "key": "C",
+        "text": "You got a virus or a completely different file"
+      },
+      {
+        "key": "D",
+        "text": "The song expired after 24 hours"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "\"Linkin_Park_Numb_FINAL_real.mp3\" could be anything.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "INTERNET_GLOBAL": 1,
+      "UK": 0.7,
+      "US": 0.7,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "burn-a-cd-en-1",
+    "factId": "burn-a-cd",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What did it mean to \"burn a CD\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Literally set an old CD on fire"
+      },
+      {
+        "key": "B",
+        "text": "Make a CD play faster"
+      },
+      {
+        "key": "C",
+        "text": "Write music or data onto a disc"
+      },
+      {
+        "key": "D",
+        "text": "Wipe everything off it"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The laser literally burns marks into the dye layer — hence the name.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "burn-a-cd-ru-1",
+    "factId": "burn-a-cd",
+    "familyId": "nostalgia-web",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что значило «прожечь диск»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Буквально поджечь старый CD"
+      },
+      {
+        "key": "B",
+        "text": "Ускорить воспроизведение"
+      },
+      {
+        "key": "C",
+        "text": "Записать на диск музыку или данные"
+      },
+      {
+        "key": "D",
+        "text": "Стереть с него всё"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Лазер действительно выжигает метки в слое красителя — отсюда и название.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "windows-xp-bliss-en-1",
+    "factId": "windows-xp-bliss",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the famous green-hill Windows XP wallpaper called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Freedom"
+      },
+      {
+        "key": "B",
+        "text": "Meadow"
+      },
+      {
+        "key": "C",
+        "text": "Bliss"
+      },
+      {
+        "key": "D",
+        "text": "California"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Photographed in California's wine country in 1996 — possibly the most-viewed photo ever.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "windows-xp-bliss-ru-1",
+    "factId": "windows-xp-bliss",
+    "familyId": "nostalgia-web",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как называются знаменитые обои Windows XP с зелёным холмом?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Freedom"
+      },
+      {
+        "key": "B",
+        "text": "Meadow"
+      },
+      {
+        "key": "C",
+        "text": "Bliss"
+      },
+      {
+        "key": "D",
+        "text": "California"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Снимок сделан в винодельческом районе Калифорнии в 1996 году — возможно, самая просматриваемая фотография в истории.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "facebook-poke-en-1",
+    "factId": "facebook-poke",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "What did Facebook's \"Poke\" actually do?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Blocked someone"
+      },
+      {
+        "key": "B",
+        "text": "Sent them a photo"
+      },
+      {
+        "key": "C",
+        "text": "Just got their attention"
+      },
+      {
+        "key": "D",
+        "text": "Announced that you fancied them"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Even Facebook never explained what it was for.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "INTERNET_GLOBAL": 1,
+      "UK": 0.7,
+      "US": 0.7,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "farmville-en-1",
+    "factId": "farmville",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Which Facebook game had millions of people coming back to harvest virtual crops?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Happy Farm"
+      },
+      {
+        "key": "B",
+        "text": "Facebook Farmer"
+      },
+      {
+        "key": "C",
+        "text": "FarmVille"
+      },
+      {
+        "key": "D",
+        "text": "Farm World"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Happy Farm was real too — a Chinese game that inspired it.",
+    "topics": {
+      "old-internet": 0.6,
+      "videogames": 0.6
+    },
+    "contexts": {
+      "INTERNET_GLOBAL": 1,
+      "UK": 0.7,
+      "US": 0.7,
+      "GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nero-burning-rom-en-1",
+    "factId": "nero-burning-rom",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was Nero Burning ROM mainly used for?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Chatting"
+      },
+      {
+        "key": "B",
+        "text": "Editing photos"
+      },
+      {
+        "key": "C",
+        "text": "Burning CDs and DVDs"
+      },
+      {
+        "key": "D",
+        "text": "Downloading music"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The name is a pun: Emperor Nero, who fiddled while Rome burned.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nero-burning-rom-ru-1",
+    "factId": "nero-burning-rom",
+    "familyId": "nostalgia-web",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Для чего в основном использовали Nero Burning ROM?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Для переписки"
+      },
+      {
+        "key": "B",
+        "text": "Для обработки фото"
+      },
+      {
+        "key": "C",
+        "text": "Для записи CD и DVD"
+      },
+      {
+        "key": "D",
+        "text": "Для скачивания музыки"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Название — каламбур: император Нерон, при котором горел Рим.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mp3-downloads-en-1",
+    "factId": "mp3-downloads",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which file format was almost a synonym for downloaded music in the 2000s?",
+    "options": [
+      {
+        "key": "A",
+        "text": "WAV"
+      },
+      {
+        "key": "B",
+        "text": "MIDI"
+      },
+      {
+        "key": "C",
+        "text": "MP3"
+      },
+      {
+        "key": "D",
+        "text": "TIFF"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "TIFF is an image format — a little trap.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mp3-downloads-ru-1",
+    "factId": "mp3-downloads",
+    "familyId": "nostalgia-web",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой формат файла в 2000-е был почти синонимом скачанной музыки?",
+    "options": [
+      {
+        "key": "A",
+        "text": "WAV"
+      },
+      {
+        "key": "B",
+        "text": "MIDI"
+      },
+      {
+        "key": "C",
+        "text": "MP3"
+      },
+      {
+        "key": "D",
+        "text": "TIFF"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "TIFF — формат картинок, маленькая ловушка.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "skype-calls-abroad-en-1",
+    "factId": "skype-calls-abroad",
+    "familyId": "nostalgia-web",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which service became the go-to way to call abroad over the internet?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ICQ"
+      },
+      {
+        "key": "B",
+        "text": "Skype"
+      },
+      {
+        "key": "C",
+        "text": "Napster"
+      },
+      {
+        "key": "D",
+        "text": "Winamp"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Launched in 2003 by developers from Estonia; Microsoft bought it in 2011.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "skype-calls-abroad-ru-1",
+    "factId": "skype-calls-abroad",
+    "familyId": "nostalgia-web",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой сервис стал главным способом звонить за границу через интернет?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ICQ"
+      },
+      {
+        "key": "B",
+        "text": "Skype"
+      },
+      {
+        "key": "C",
+        "text": "Napster"
+      },
+      {
+        "key": "D",
+        "text": "Winamp"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Запущен в 2003 году разработчиками из Эстонии; в 2011-м его купила Microsoft.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sims-pool-ladder-en-1",
+    "factId": "sims-pool-ladder",
+    "familyId": "nostalgia-games-toys",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which way of getting rid of a Sim became a famous joke among players?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hide the fridge"
+      },
+      {
+        "key": "B",
+        "text": "Switch off the TV"
+      },
+      {
+        "key": "C",
+        "text": "Remove the pool ladder"
+      },
+      {
+        "key": "D",
+        "text": "Sell their bed"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Players have been doing it since the very first game in 2000.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sims-pool-ladder-ru-1",
+    "factId": "sims-pool-ladder",
+    "familyId": "nostalgia-games-toys",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой способ избавиться от сима стал знаменитой шуткой среди игроков?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Спрятать холодильник"
+      },
+      {
+        "key": "B",
+        "text": "Выключить телевизор"
+      },
+      {
+        "key": "C",
+        "text": "Убрать лестницу из бассейна"
+      },
+      {
+        "key": "D",
+        "text": "Продать кровать"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Игроки делают это с самой первой части 2000 года.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gta-sa-cj-en-1",
+    "factId": "gta-sa-cj",
+    "familyId": "nostalgia-games-toys",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What's the name of the main character in GTA: San Andreas?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tommy"
+      },
+      {
+        "key": "B",
+        "text": "Niko"
+      },
+      {
+        "key": "C",
+        "text": "CJ"
+      },
+      {
+        "key": "D",
+        "text": "Trevor"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Tommy is from Vice City, Niko from GTA IV, Trevor from GTA V.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gta-sa-cj-ru-1",
+    "factId": "gta-sa-cj",
+    "familyId": "nostalgia-games-toys",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как зовут главного героя GTA: San Andreas?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Томми"
+      },
+      {
+        "key": "B",
+        "text": "Нико"
+      },
+      {
+        "key": "C",
+        "text": "Си-Джей"
+      },
+      {
+        "key": "D",
+        "text": "Тревор"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Томми — из Vice City, Нико — из GTA IV, Тревор — из GTA V.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wii-sports-no-football-en-1",
+    "factId": "wii-sports-no-football",
+    "familyId": "nostalgia-games-toys",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which sport was NOT in the original Wii Sports?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bowling"
+      },
+      {
+        "key": "B",
+        "text": "Tennis"
+      },
+      {
+        "key": "C",
+        "text": "Boxing"
+      },
+      {
+        "key": "D",
+        "text": "Football"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Tennis, baseball, bowling, golf and boxing — and a lot of broken TVs.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wii-sports-no-football-ru-1",
+    "factId": "wii-sports-no-football",
+    "familyId": "nostalgia-games-toys",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какого вида спорта НЕ было в оригинальной Wii Sports?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Боулинга"
+      },
+      {
+        "key": "B",
+        "text": "Тенниса"
+      },
+      {
+        "key": "C",
+        "text": "Бокса"
+      },
+      {
+        "key": "D",
+        "text": "Футбола"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Теннис, бейсбол, боулинг, гольф и бокс — и много разбитых телевизоров.",
+    "topics": {
+      "videogames": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tamagotchi-care-en-1",
+    "factId": "tamagotchi-care",
+    "familyId": "nostalgia-games-toys",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which toy needed feeding and cleaning up after — and could die if you forgot?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Furby"
+      },
+      {
+        "key": "B",
+        "text": "Tamagotchi"
+      },
+      {
+        "key": "C",
+        "text": "Game Boy"
+      },
+      {
+        "key": "D",
+        "text": "Polly Pocket"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Schools banned them because children were nursing pets during lessons.",
+    "topics": {
+      "videogames": 0.5,
+      "old-internet": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tamagotchi-care-ru-1",
+    "factId": "tamagotchi-care",
+    "familyId": "nostalgia-games-toys",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую игрушку надо было кормить, убирать за ней — а если забыть, она умирала?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ферби"
+      },
+      {
+        "key": "B",
+        "text": "Тамагочи"
+      },
+      {
+        "key": "C",
+        "text": "Game Boy"
+      },
+      {
+        "key": "D",
+        "text": "Polly Pocket"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В школах их запрещали: дети выхаживали питомцев прямо на уроках.",
+    "topics": {
+      "videogames": 0.5,
+      "old-internet": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "furbish-en-1",
+    "factId": "furbish",
+    "familyId": "nostalgia-games-toys",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the language Furbies spoke called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Furbyish"
+      },
+      {
+        "key": "B",
+        "text": "Furblish"
+      },
+      {
+        "key": "C",
+        "text": "Furbish"
+      },
+      {
+        "key": "D",
+        "text": "Furban"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "They gradually \"learned\" English — which was just a programmed trick.",
+    "topics": {
+      "videogames": 0.5,
+      "old-internet": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "furbish-ru-1",
+    "factId": "furbish",
+    "familyId": "nostalgia-games-toys",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как назывался язык, на котором говорили Ферби?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Furbyish"
+      },
+      {
+        "key": "B",
+        "text": "Furblish"
+      },
+      {
+        "key": "C",
+        "text": "Furbish"
+      },
+      {
+        "key": "D",
+        "text": "Furban"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Со временем они «учились» человеческому языку — но это был просто запрограммированный трюк.",
+    "topics": {
+      "videogames": 0.5,
+      "old-internet": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "rickroll-en-1",
+    "factId": "rickroll",
+    "familyId": "nostalgia-memes",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which song plays when you get rickrolled?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Take On Me"
+      },
+      {
+        "key": "B",
+        "text": "Never Gonna Give You Up"
+      },
+      {
+        "key": "C",
+        "text": "Wake Me Up Before You Go-Go"
+      },
+      {
+        "key": "D",
+        "text": "I Want It That Way"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A 1987 hit that became the internet's favourite prank around 2007.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "rickroll-ru-1",
+    "factId": "rickroll",
+    "familyId": "nostalgia-memes",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая песня играет, когда тебя «рикроллят»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Take On Me"
+      },
+      {
+        "key": "B",
+        "text": "Never Gonna Give You Up"
+      },
+      {
+        "key": "C",
+        "text": "Wake Me Up Before You Go-Go"
+      },
+      {
+        "key": "D",
+        "text": "I Want It That Way"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Хит 1987 года стал любимым интернет-розыгрышем около 2007-го.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "numa-numa-en-1",
+    "factId": "numa-numa",
+    "familyId": "nostalgia-memes",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which song became famous through the \"Numa Numa\" video?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Blue (Da Ba Dee)"
+      },
+      {
+        "key": "B",
+        "text": "Dragostea Din Tei"
+      },
+      {
+        "key": "C",
+        "text": "Barbie Girl"
+      },
+      {
+        "key": "D",
+        "text": "Around the World"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Gary Brolsma lip-synced it at his desk in 2004.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "numa-numa-ru-1",
+    "factId": "numa-numa",
+    "familyId": "nostalgia-memes",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую песню прославило видео «Numa Numa»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Blue (Da Ba Dee)"
+      },
+      {
+        "key": "B",
+        "text": "Dragostea Din Tei"
+      },
+      {
+        "key": "C",
+        "text": "Barbie Girl"
+      },
+      {
+        "key": "D",
+        "text": "Around the World"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Гэри Бролсма записал его за своим столом в 2004 году.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "00s": 1,
+      "90s": 0.4
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "the-dress-en-1",
+    "factId": "the-dress",
+    "familyId": "nostalgia-memes",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What did the internet argue about when \"The Dress\" went viral in 2015?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Whether it was long or short"
+      },
+      {
+        "key": "B",
+        "text": "Whether it was expensive"
+      },
+      {
+        "key": "C",
+        "text": "Blue and black, or white and gold"
+      },
+      {
+        "key": "D",
+        "text": "Whether it was real or computer-generated"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It was blue and black — the brain's guess about the lighting changes what you see.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "the-dress-ru-1",
+    "factId": "the-dress",
+    "familyId": "nostalgia-memes",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "О чём спорил весь интернет, когда в 2015 году завирусилось «то самое платье»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Длинное оно или короткое"
+      },
+      {
+        "key": "B",
+        "text": "Дорогое ли оно"
+      },
+      {
+        "key": "C",
+        "text": "Сине-чёрное оно или бело-золотое"
+      },
+      {
+        "key": "D",
+        "text": "Настоящее оно или нарисованное"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Оно сине-чёрное — а что видит человек, зависит от того, как мозг «угадывает» освещение.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "INTERNET_GLOBAL": 0.8
+    },
+    "generations": {
+      "10s": 1
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blink-whats-my-age-video-en-1",
+    "factId": "blink-whats-my-age-video",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In which Blink-182 video does the band run naked through Los Angeles?",
+    "options": [
+      {
+        "key": "A",
+        "text": "First Date"
+      },
+      {
+        "key": "B",
+        "text": "What's My Age Again?"
+      },
+      {
+        "key": "C",
+        "text": "Adam's Song"
+      },
+      {
+        "key": "D",
+        "text": "The Rock Show"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The song is about a guy in his twenties who still acts like a teenager — very on brand.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blink-whats-my-age-video-ru-1",
+    "factId": "blink-whats-my-age-video",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком клипе Blink-182 участники группы бегают голыми по Лос-Анджелесу?",
+    "options": [
+      {
+        "key": "A",
+        "text": "First Date"
+      },
+      {
+        "key": "B",
+        "text": "What's My Age Again?"
+      },
+      {
+        "key": "C",
+        "text": "Adam's Song"
+      },
+      {
+        "key": "D",
+        "text": "The Rock Show"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня про парня за двадцать, который ведёт себя как подросток, — очень в их духе.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blink-small-things-boybands-en-1",
+    "factId": "blink-small-things-boybands",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which Blink-182 video parodied the Backstreet Boys and other boy bands?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dammit"
+      },
+      {
+        "key": "B",
+        "text": "All the Small Things"
+      },
+      {
+        "key": "C",
+        "text": "I Miss You"
+      },
+      {
+        "key": "D",
+        "text": "Feeling This"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The song itself is a sweet love song; the video makes fun of TRL-era pop.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blink-small-things-boybands-ru-1",
+    "factId": "blink-small-things-boybands",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В каком клипе Blink-182 пародировали Backstreet Boys и других бойз-бэндов?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dammit"
+      },
+      {
+        "key": "B",
+        "text": "All the Small Things"
+      },
+      {
+        "key": "C",
+        "text": "I Miss You"
+      },
+      {
+        "key": "D",
+        "text": "Feeling This"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Сама песня — нежная, про любовь, а клип высмеивает поп эпохи MTV.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "american-idiot-green-day-en-1",
+    "factId": "american-idiot-green-day",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which band recorded \"American Idiot\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sum 41"
+      },
+      {
+        "key": "B",
+        "text": "Blink-182"
+      },
+      {
+        "key": "C",
+        "text": "Green Day"
+      },
+      {
+        "key": "D",
+        "text": "The Offspring"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The album later became a Broadway musical.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "american-idiot-green-day-ru-1",
+    "factId": "american-idiot-green-day",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая группа записала «American Idiot»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sum 41"
+      },
+      {
+        "key": "B",
+        "text": "Blink-182"
+      },
+      {
+        "key": "C",
+        "text": "Green Day"
+      },
+      {
+        "key": "D",
+        "text": "The Offspring"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Позже по альбому поставили бродвейский мюзикл.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "september-ends-father-en-1",
+    "factId": "september-ends-father",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What personal event is Green Day's \"Wake Me Up When September Ends\" rooted in?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The end of summer"
+      },
+      {
+        "key": "B",
+        "text": "US politics"
+      },
+      {
+        "key": "C",
+        "text": "Billie Joe Armstrong losing his father"
+      },
+      {
+        "key": "D",
+        "text": "Finishing school"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "His father died when he was ten; the video, though, is about a soldier going to Iraq.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "september-ends-father-ru-1",
+    "factId": "september-ends-father",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "С каким личным событием связана песня Green Day «Wake Me Up When September Ends»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "С концом лета"
+      },
+      {
+        "key": "B",
+        "text": "С политикой США"
+      },
+      {
+        "key": "C",
+        "text": "Со смертью отца Билли Джо Армстронга"
+      },
+      {
+        "key": "D",
+        "text": "С окончанием школы"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Отец умер, когда Билли Джо было десять. А клип при этом — про солдата, уходящего в Ирак.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "fat-lip-sum-41-en-1",
+    "factId": "fat-lip-sum-41",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which band recorded \"Fat Lip\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Offspring"
+      },
+      {
+        "key": "B",
+        "text": "Sum 41"
+      },
+      {
+        "key": "C",
+        "text": "Bowling for Soup"
+      },
+      {
+        "key": "D",
+        "text": "Yellowcard"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Canadian band from Ajax, Ontario; the song is a rap-rock teenage manifesto.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "fat-lip-sum-41-ru-1",
+    "factId": "fat-lip-sum-41",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая группа записала «Fat Lip»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Offspring"
+      },
+      {
+        "key": "B",
+        "text": "Sum 41"
+      },
+      {
+        "key": "C",
+        "text": "Bowling for Soup"
+      },
+      {
+        "key": "D",
+        "text": "Yellowcard"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Канадская группа из Эйджакса, Онтарио; песня — рэп-роковый подростковый манифест.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sk8er-boi-story-en-1",
+    "factId": "sk8er-boi-story",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In Avril Lavigne's \"Sk8er Boi\", what happens to the boy?",
+    "options": [
+      {
+        "key": "A",
+        "text": "They start dating straight away"
+      },
+      {
+        "key": "B",
+        "text": "He gives up skating"
+      },
+      {
+        "key": "C",
+        "text": "She turns him down, and he later becomes a star"
+      },
+      {
+        "key": "D",
+        "text": "He moves abroad"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "A 2002 hit that got its own film announcement twenty years later.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sk8er-boi-story-ru-1",
+    "factId": "sk8er-boi-story",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что происходит с парнем в песне Аврил Лавин «Sk8er Boi»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Они сразу начинают встречаться"
+      },
+      {
+        "key": "B",
+        "text": "Он бросает скейт"
+      },
+      {
+        "key": "C",
+        "text": "Она ему отказывает, а он потом становится звездой"
+      },
+      {
+        "key": "D",
+        "text": "Он уезжает за границу"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Хит 2002 года, по которому спустя почти двадцать лет объявили фильм.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "complicated-fake-en-1",
+    "factId": "complicated-fake",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In Avril Lavigne's \"Complicated\", what is she complaining about?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Someone working too much"
+      },
+      {
+        "key": "B",
+        "text": "Someone acting fake around other people"
+      },
+      {
+        "key": "C",
+        "text": "Someone always being late"
+      },
+      {
+        "key": "D",
+        "text": "Someone hiding a relationship"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Her debut single — and still her signature song.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "complicated-fake-ru-1",
+    "factId": "complicated-fake",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На что жалуется Аврил Лавин в песне «Complicated»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Что кто-то слишком много работает"
+      },
+      {
+        "key": "B",
+        "text": "Что кто-то притворяется при других людях"
+      },
+      {
+        "key": "C",
+        "text": "Что кто-то вечно опаздывает"
+      },
+      {
+        "key": "D",
+        "text": "Что кто-то скрывает отношения"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Её дебютный сингл — и до сих пор главная песня.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hybrid-theory-en-1",
+    "factId": "hybrid-theory",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was Linkin Park's debut album called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Meteora"
+      },
+      {
+        "key": "B",
+        "text": "Hybrid Theory"
+      },
+      {
+        "key": "C",
+        "text": "Minutes to Midnight"
+      },
+      {
+        "key": "D",
+        "text": "Reanimation"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It's one of the best-selling debut albums ever. Reanimation was its remix version.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hybrid-theory-ru-1",
+    "factId": "hybrid-theory",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как назывался дебютный альбом Linkin Park?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Meteora"
+      },
+      {
+        "key": "B",
+        "text": "Hybrid Theory"
+      },
+      {
+        "key": "C",
+        "text": "Minutes to Midnight"
+      },
+      {
+        "key": "D",
+        "text": "Reanimation"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Один из самых продаваемых дебютных альбомов в истории. Reanimation — его ремикс-версия.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "numb-expectations-en-1",
+    "factId": "numb-expectations",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is Linkin Park's \"Numb\" mainly about?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Being bored at work"
+      },
+      {
+        "key": "B",
+        "text": "Others' expectations and losing yourself"
+      },
+      {
+        "key": "C",
+        "text": "A breakup"
+      },
+      {
+        "key": "D",
+        "text": "Physical exhaustion"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Later a huge mash-up hit with Jay-Z: \"Numb/Encore\".",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "numb-expectations-ru-1",
+    "factId": "numb-expectations",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "О чём в основном песня Linkin Park «Numb»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "О скуке на работе"
+      },
+      {
+        "key": "B",
+        "text": "О чужих ожиданиях и потере себя"
+      },
+      {
+        "key": "C",
+        "text": "О расставании"
+      },
+      {
+        "key": "D",
+        "text": "О физической усталости"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Потом из неё вышел огромный мэшап с Jay-Z — «Numb/Encore».",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "the-anthem-good-charlotte-en-1",
+    "factId": "the-anthem-good-charlotte",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which band recorded \"The Anthem\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Simple Plan"
+      },
+      {
+        "key": "B",
+        "text": "Good Charlotte"
+      },
+      {
+        "key": "C",
+        "text": "Sum 41"
+      },
+      {
+        "key": "D",
+        "text": "Jimmy Eat World"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A song about refusing the life plan everyone expects from you.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "the-anthem-good-charlotte-ru-1",
+    "factId": "the-anthem-good-charlotte",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая группа записала «The Anthem»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Simple Plan"
+      },
+      {
+        "key": "B",
+        "text": "Good Charlotte"
+      },
+      {
+        "key": "C",
+        "text": "Sum 41"
+      },
+      {
+        "key": "D",
+        "text": "Jimmy Eat World"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Песня о том, чтобы не жить по сценарию, которого от тебя все ждут.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "im-just-a-kid-simple-plan-en-1",
+    "factId": "im-just-a-kid-simple-plan",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which band recorded \"I'm Just a Kid\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Good Charlotte"
+      },
+      {
+        "key": "B",
+        "text": "Simple Plan"
+      },
+      {
+        "key": "C",
+        "text": "Fall Out Boy"
+      },
+      {
+        "key": "D",
+        "text": "Weezer"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Canadians from Montreal; the song had a second life on the Cheaper by the Dozen soundtrack.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "im-just-a-kid-simple-plan-ru-1",
+    "factId": "im-just-a-kid-simple-plan",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая группа записала «I'm Just a Kid»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Good Charlotte"
+      },
+      {
+        "key": "B",
+        "text": "Simple Plan"
+      },
+      {
+        "key": "C",
+        "text": "Fall Out Boy"
+      },
+      {
+        "key": "D",
+        "text": "Weezer"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Канадцы из Монреаля; у песни была вторая жизнь в саундтреке фильма «Оптом дешевле».",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "thats-what-you-get-paramore-en-1",
+    "factId": "thats-what-you-get-paramore",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which band recorded \"That's What You Get\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Evanescence"
+      },
+      {
+        "key": "B",
+        "text": "Avril Lavigne"
+      },
+      {
+        "key": "C",
+        "text": "Paramore"
+      },
+      {
+        "key": "D",
+        "text": "The Veronicas"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "From the album Riot!, alongside \"Misery Business\".",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "thats-what-you-get-paramore-ru-1",
+    "factId": "thats-what-you-get-paramore",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая группа записала «That's What You Get»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Evanescence"
+      },
+      {
+        "key": "B",
+        "text": "Аврил Лавин"
+      },
+      {
+        "key": "C",
+        "text": "Paramore"
+      },
+      {
+        "key": "D",
+        "text": "The Veronicas"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "С альбома Riot! — вместе с «Misery Business».",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sugar-fall-out-boy-en-1",
+    "factId": "sugar-fall-out-boy",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who recorded \"Sugar, We're Goin Down\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Panic! at the Disco"
+      },
+      {
+        "key": "B",
+        "text": "My Chemical Romance"
+      },
+      {
+        "key": "C",
+        "text": "Fall Out Boy"
+      },
+      {
+        "key": "D",
+        "text": "All Time Low"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Panic! at the Disco were signed to Fall Out Boy's bassist Pete Wentz's label — hence the trap.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sugar-fall-out-boy-ru-1",
+    "factId": "sugar-fall-out-boy",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто записал «Sugar, We're Goin Down»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Panic! at the Disco"
+      },
+      {
+        "key": "B",
+        "text": "My Chemical Romance"
+      },
+      {
+        "key": "C",
+        "text": "Fall Out Boy"
+      },
+      {
+        "key": "D",
+        "text": "All Time Low"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Panic! at the Disco подписались на лейбл басиста Fall Out Boy Пита Вентца — отсюда ловушка.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "black-parade-father-en-1",
+    "factId": "black-parade-father",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In My Chemical Romance's \"Welcome to the Black Parade\", who takes the narrator as a boy to see a marching band?",
+    "options": [
+      {
+        "key": "A",
+        "text": "His older brother"
+      },
+      {
+        "key": "B",
+        "text": "His teacher"
+      },
+      {
+        "key": "C",
+        "text": "His father"
+      },
+      {
+        "key": "D",
+        "text": "His grandfather"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The single note on the piano at the start is one of the most recognisable intros of the 2000s.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "black-parade-father-ru-1",
+    "factId": "black-parade-father",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто в песне My Chemical Romance «Welcome to the Black Parade» ведёт маленького героя посмотреть на марширующий оркестр?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Старший брат"
+      },
+      {
+        "key": "B",
+        "text": "Учитель"
+      },
+      {
+        "key": "C",
+        "text": "Отец"
+      },
+      {
+        "key": "D",
+        "text": "Дедушка"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Одна нота на фортепиано в начале — одно из самых узнаваемых вступлений 2000-х.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "im-not-okay-mcr-en-1",
+    "factId": "im-not-okay-mcr",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who recorded \"I'm Not Okay (I Promise)\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Fall Out Boy"
+      },
+      {
+        "key": "B",
+        "text": "My Chemical Romance"
+      },
+      {
+        "key": "C",
+        "text": "Panic! at the Disco"
+      },
+      {
+        "key": "D",
+        "text": "Taking Back Sunday"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Its video is styled as a trailer for an American teen film.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "im-not-okay-mcr-ru-1",
+    "factId": "im-not-okay-mcr",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто записал «I'm Not Okay (I Promise)»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Fall Out Boy"
+      },
+      {
+        "key": "B",
+        "text": "My Chemical Romance"
+      },
+      {
+        "key": "C",
+        "text": "Panic! at the Disco"
+      },
+      {
+        "key": "D",
+        "text": "Taking Back Sunday"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Клип снят как трейлер американского подросткового фильма.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sins-not-tragedies-wedding-en-1",
+    "factId": "sins-not-tragedies-wedding",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Where does the story of Panic! at the Disco's \"I Write Sins Not Tragedies\" take place?",
+    "options": [
+      {
+        "key": "A",
+        "text": "At a funeral"
+      },
+      {
+        "key": "B",
+        "text": "At school"
+      },
+      {
+        "key": "C",
+        "text": "At a wedding"
+      },
+      {
+        "key": "D",
+        "text": "At an airport"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "A circus-themed wedding where the bride's secret comes out.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sins-not-tragedies-wedding-ru-1",
+    "factId": "sins-not-tragedies-wedding",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где происходит история песни Panic! at the Disco «I Write Sins Not Tragedies»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "На похоронах"
+      },
+      {
+        "key": "B",
+        "text": "В школе"
+      },
+      {
+        "key": "C",
+        "text": "На свадьбе"
+      },
+      {
+        "key": "D",
+        "text": "В аэропорту"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Цирковая свадьба, на которой раскрывается секрет невесты.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "somebody-told-me-killers-en-1",
+    "factId": "somebody-told-me-killers",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which band recorded \"Somebody Told Me\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Franz Ferdinand"
+      },
+      {
+        "key": "B",
+        "text": "Arctic Monkeys"
+      },
+      {
+        "key": "C",
+        "text": "The Killers"
+      },
+      {
+        "key": "D",
+        "text": "Kaiser Chiefs"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "A Las Vegas band that sounded more British than the British ones.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "somebody-told-me-killers-ru-1",
+    "factId": "somebody-told-me-killers",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какая группа записала «Somebody Told Me»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Franz Ferdinand"
+      },
+      {
+        "key": "B",
+        "text": "Arctic Monkeys"
+      },
+      {
+        "key": "C",
+        "text": "The Killers"
+      },
+      {
+        "key": "D",
+        "text": "Kaiser Chiefs"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Группа из Лас-Вегаса, звучавшая британнее самих британцев.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "why-dont-you-get-a-job-en-1",
+    "factId": "why-dont-you-get-a-job",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is The Offspring's \"Why Don't You Get a Job?\" mainly about?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Someone made redundant"
+      },
+      {
+        "key": "B",
+        "text": "An unemployed musician"
+      },
+      {
+        "key": "C",
+        "text": "Partners who live off someone else"
+      },
+      {
+        "key": "D",
+        "text": "A teenager skipping school"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Both verses tell the same story — once about a girlfriend, once about a boyfriend.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "why-dont-you-get-a-job-ru-1",
+    "factId": "why-dont-you-get-a-job",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "О чём в основном песня The Offspring «Why Don't You Get a Job?»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "О человеке, которого сократили"
+      },
+      {
+        "key": "B",
+        "text": "О безработном музыканте"
+      },
+      {
+        "key": "C",
+        "text": "О партнёрах, которые живут за чужой счёт"
+      },
+      {
+        "key": "D",
+        "text": "О подростке, который прогуливает школу"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Оба куплета рассказывают одну историю — один про девушку, другой про парня.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pretty-fly-white-guy-en-1",
+    "factId": "pretty-fly-white-guy",
+    "familyId": "pop-punk-00s",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who is being mocked in The Offspring's \"Pretty Fly (for a White Guy)\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A rock star"
+      },
+      {
+        "key": "B",
+        "text": "A guy trying far too hard to look street"
+      },
+      {
+        "key": "C",
+        "text": "A teacher"
+      },
+      {
+        "key": "D",
+        "text": "A wealthy musician"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A 1998 hit that went to No. 1 in the UK.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pretty-fly-white-guy-ru-1",
+    "factId": "pretty-fly-white-guy",
+    "familyId": "pop-punk-00s",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Над кем смеётся песня The Offspring «Pretty Fly (for a White Guy)»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Над рок-звездой"
+      },
+      {
+        "key": "B",
+        "text": "Над парнем, который изо всех сил строит из себя «уличного»"
+      },
+      {
+        "key": "C",
+        "text": "Над учителем"
+      },
+      {
+        "key": "D",
+        "text": "Над богатым музыкантом"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Хит 1998 года, добравшийся до первого места в Великобритании.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "qip-client-ru-1",
+    "factId": "qip-client",
+    "familyId": "runet-2000s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Как назывался популярный в рунете альтернативный клиент для ICQ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "ZIP"
+      },
+      {
+        "key": "B",
+        "text": "QIP"
+      },
+      {
+        "key": "C",
+        "text": "RIP"
+      },
+      {
+        "key": "D",
+        "text": "SIP"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Quiet Internet Pager — российская программа, которой многие заменяли «родную» ICQ: без рекламы и с удобными статусами.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "zhzh-livejournal-ru-1",
+    "factId": "zhzh-livejournal",
+    "familyId": "runet-2000s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что в рунете называли «ЖЖ»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Компьютерную игру"
+      },
+      {
+        "key": "B",
+        "text": "Музыкальную программу"
+      },
+      {
+        "key": "C",
+        "text": "LiveJournal"
+      },
+      {
+        "key": "D",
+        "text": "Первый российский браузер"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "«Живой журнал» — главная блог-платформа рунета 2000-х: там спорили, знакомились и узнавали новости.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bolvanka-blank-disc-ru-1",
+    "factId": "bolvanka-blank-disc",
+    "familyId": "runet-2000s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что в 2000-е называли «болванкой»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Пустой текстовый файл"
+      },
+      {
+        "key": "B",
+        "text": "Дешёвый компьютер"
+      },
+      {
+        "key": "C",
+        "text": "Чистый CD или DVD для записи"
+      },
+      {
+        "key": "D",
+        "text": "Неактивный аккаунт"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Болванки покупали стопками — для музыки, фильмов и сборников «в машину».",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "livejournal-before-vk-ru-1",
+    "factId": "livejournal-before-vk",
+    "familyId": "runet-2000s",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Что из этого появилось раньше всех?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«ВКонтакте»"
+      },
+      {
+        "key": "B",
+        "text": "Instagram"
+      },
+      {
+        "key": "C",
+        "text": "LiveJournal"
+      },
+      {
+        "key": "D",
+        "text": "Telegram"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "LiveJournal запустили в 1999 году в США; рунет пришёл туда в начале 2000-х и вскоре стал его главной аудиторией.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.4
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "polanski-green-leader-en-1",
+    "factId": "polanski-green-leader",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Zack Polanski is the leader of which UK political party?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Reform UK"
+      },
+      {
+        "key": "B",
+        "text": "The Green Party of England and Wales"
+      },
+      {
+        "key": "C",
+        "text": "Plaid Cymru"
+      },
+      {
+        "key": "D",
+        "text": "The Liberal Democrats"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He was elected leader in September 2025.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ed-balls-day-en-1",
+    "factId": "ed-balls-day",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In what year did Ed Balls accidentally tweet simply \"Ed Balls\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2008"
+      },
+      {
+        "key": "B",
+        "text": "2011"
+      },
+      {
+        "key": "C",
+        "text": "2014"
+      },
+      {
+        "key": "D",
+        "text": "2016"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He was apparently trying to search for his own name. Every 28 April is now Ed Balls Day.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "truss-lettuce-en-1",
+    "factId": "truss-lettuce",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In 2022, what did a British newspaper livestream to see whether it would outlast Liz Truss as Prime Minister?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A pint of milk"
+      },
+      {
+        "key": "B",
+        "text": "A loaf of bread"
+      },
+      {
+        "key": "C",
+        "text": "A lettuce"
+      },
+      {
+        "key": "D",
+        "text": "A tin of baked beans"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The lettuce won: Truss announced her resignation that same week.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "larry-chief-mouser-en-1",
+    "factId": "larry-chief-mouser",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What is the official title of Larry the cat at 10 Downing Street?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Royal Rat Catcher"
+      },
+      {
+        "key": "B",
+        "text": "Minister for Mice"
+      },
+      {
+        "key": "C",
+        "text": "Chief Mouser to the Cabinet Office"
+      },
+      {
+        "key": "D",
+        "text": "Downing Street Pet Secretary"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "He has had the title since 2011 and has outlasted several Prime Ministers.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ed-davey-stunts-en-1",
+    "factId": "ed-davey-stunts",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which party leader spent the 2024 election campaign falling off a paddleboard, riding a waterslide and bungee jumping?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Rishi Sunak"
+      },
+      {
+        "key": "B",
+        "text": "Keir Starmer"
+      },
+      {
+        "key": "C",
+        "text": "Nigel Farage"
+      },
+      {
+        "key": "D",
+        "text": "Ed Davey"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "The stunts were deliberate — and the Lib Dems went on to win 72 seats.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "boris-fridge-en-1",
+    "factId": "boris-fridge",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Where did Boris Johnson appear to retreat in 2019 to avoid a Good Morning Britain interview?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A toilet"
+      },
+      {
+        "key": "B",
+        "text": "A lift"
+      },
+      {
+        "key": "C",
+        "text": "A walk-in fridge"
+      },
+      {
+        "key": "D",
+        "text": "A broom cupboard"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It happened at a dairy in Yorkshire during the 2019 election campaign.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sunak-samba-en-1",
+    "factId": "sunak-samba",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which trainers did Rishi Sunak jokingly apologise for wearing, after people said he'd made them uncool?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Crocs"
+      },
+      {
+        "key": "B",
+        "text": "Dr. Martens"
+      },
+      {
+        "key": "C",
+        "text": "New Balance 574"
+      },
+      {
+        "key": "D",
+        "text": "Adidas Samba"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "He insisted he was a \"longtime devotee\" of Adidas.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cameron-hum-en-1",
+    "factId": "cameron-hum",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What did David Cameron do near a live microphone right after announcing his departure in 2016?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Swore"
+      },
+      {
+        "key": "B",
+        "text": "Phoned his wife"
+      },
+      {
+        "key": "C",
+        "text": "Hummed a little tune"
+      },
+      {
+        "key": "D",
+        "text": "Asked where his car was"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Nobody ever worked out which tune it was.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "boaty-mcboatface-en-1",
+    "factId": "boaty-mcboatface",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What name did the British public famously vote for in 2016 for a new polar research ship?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Floaty McFloatface"
+      },
+      {
+        "key": "B",
+        "text": "HMS Internet"
+      },
+      {
+        "key": "C",
+        "text": "Boaty McBoatface"
+      },
+      {
+        "key": "D",
+        "text": "David McBoatface"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The ship was named RRS Sir David Attenborough instead; Boaty McBoatface went to its little yellow submarine.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jackie-weaver-en-1",
+    "factId": "jackie-weaver",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "\"You have no authority here, Jackie Weaver!\" went viral from what kind of event?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A House of Commons debate"
+      },
+      {
+        "key": "B",
+        "text": "An episode of Question Time"
+      },
+      {
+        "key": "C",
+        "text": "A school parents' evening"
+      },
+      {
+        "key": "D",
+        "text": "A parish council meeting on Zoom"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "It was Handforth Parish Council in Cheshire; Jackie Weaver simply moved the shouting councillor to the waiting room.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "count-binface-en-1",
+    "factId": "count-binface",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which of these is a real candidate who has stood for Mayor of London?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Lord Ballotface"
+      },
+      {
+        "key": "B",
+        "text": "Duke Democracy"
+      },
+      {
+        "key": "C",
+        "text": "Count Binface"
+      },
+      {
+        "key": "D",
+        "text": "Darth Westminster"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "He says he is an intergalactic space warrior. In 2021 nearly 25,000 Londoners gave him their first vote.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "monster-raving-loony-en-1",
+    "factId": "monster-raving-loony",
+    "familyId": "uk-politics-oddities",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which of these British political parties actually exists?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Sensible People Party"
+      },
+      {
+        "key": "B",
+        "text": "The British Tea Party"
+      },
+      {
+        "key": "C",
+        "text": "The Official Monster Raving Loony Party"
+      },
+      {
+        "key": "D",
+        "text": "The Mildly Annoyed Party"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Founded in 1982 by Screaming Lord Sutch; it still stands candidates in elections.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "greggs-vegan-roll-en-1",
+    "factId": "greggs-vegan-roll",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which Greggs product caused a surprisingly heated national debate when it launched in 2019?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A gluten-free steak bake"
+      },
+      {
+        "key": "B",
+        "text": "The vegan sausage roll"
+      },
+      {
+        "key": "C",
+        "text": "A pineapple pasty"
+      },
+      {
+        "key": "D",
+        "text": "A cold sausage roll"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Piers Morgan was furious; the roll became one of Greggs' bestsellers.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 1,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "aldi-specialbuys-days-en-1",
+    "factId": "aldi-specialbuys-days",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "On which two days does Aldi launch new Specialbuys in the middle aisle?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monday and Friday"
+      },
+      {
+        "key": "B",
+        "text": "Tuesday and Saturday"
+      },
+      {
+        "key": "C",
+        "text": "Thursday and Sunday"
+      },
+      {
+        "key": "D",
+        "text": "Wednesday and Sunday"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The \"middle aisle of mystery\" restocks twice a week.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wetherspoon-carpets-en-1",
+    "factId": "wetherspoon-carpets",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What is unusual about the carpets in Wetherspoon pubs?",
+    "options": [
+      {
+        "key": "A",
+        "text": "They must all be burgundy"
+      },
+      {
+        "key": "B",
+        "text": "They are bought at auctions"
+      },
+      {
+        "key": "C",
+        "text": "They are replaced every year"
+      },
+      {
+        "key": "D",
+        "text": "Each pub has its own design"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "The designs often nod to the building's history or the local area — there's even a book of them.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "the-knowledge-streets-en-1",
+    "factId": "the-knowledge-streets",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Roughly how many London streets must a black-cab driver learn for The Knowledge?",
+    "options": [
+      {
+        "key": "A",
+        "text": "2,500"
+      },
+      {
+        "key": "B",
+        "text": "8,000"
+      },
+      {
+        "key": "C",
+        "text": "25,000"
+      },
+      {
+        "key": "D",
+        "text": "100,000"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Plus around 100,000 landmarks and places — it usually takes three to four years.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "binley-mega-chippy-en-1",
+    "factId": "binley-mega-chippy",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which city is home to the internet-famous Binley Mega Chippy?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Birmingham"
+      },
+      {
+        "key": "B",
+        "text": "Leicester"
+      },
+      {
+        "key": "C",
+        "text": "Stoke-on-Trent"
+      },
+      {
+        "key": "D",
+        "text": "Coventry"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "In 2022 people travelled from all over the country to a perfectly ordinary chippy because of a TikTok song.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "willys-chocolate-experience-en-1",
+    "factId": "willys-chocolate-experience",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which city hosted the infamous Willy's Chocolate Experience in 2024?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Manchester"
+      },
+      {
+        "key": "B",
+        "text": "Birmingham"
+      },
+      {
+        "key": "C",
+        "text": "Glasgow"
+      },
+      {
+        "key": "D",
+        "text": "Blackpool"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "AI-generated posters promised wonders; families paid up to £35 for a near-empty warehouse.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bude-tunnel-en-1",
+    "factId": "bude-tunnel",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What is Cornwall's internet-famous Bude Tunnel actually?",
+    "options": [
+      {
+        "key": "A",
+        "text": "An abandoned railway tunnel"
+      },
+      {
+        "key": "B",
+        "text": "A wartime bunker"
+      },
+      {
+        "key": "C",
+        "text": "A cycle tunnel"
+      },
+      {
+        "key": "D",
+        "text": "A covered walkway by a Sainsbury's car park"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "About 70 metres long, with fairy lights — and a rating many real attractions would envy.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bushtucker-ostrich-en-1",
+    "factId": "bushtucker-ostrich",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which of these has genuinely been eaten in a Bushtucker Trial on I'm a Celebrity?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A chocolate-covered kangaroo tail"
+      },
+      {
+        "key": "B",
+        "text": "A fried shoe sole"
+      },
+      {
+        "key": "C",
+        "text": "Ostrich anus"
+      },
+      {
+        "key": "D",
+        "text": "Crocodile nose with Marmite"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The only made-up option here is the funny-sounding one; the real menu is worse.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "oasis-reunion-15-years-en-1",
+    "factId": "oasis-reunion-15-years",
+    "familyId": "uk-everyday",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "When Oasis announced their reunion in 2024, roughly how long had it been since they last played together?",
+    "options": [
+      {
+        "key": "A",
+        "text": "5 years"
+      },
+      {
+        "key": "B",
+        "text": "10 years"
+      },
+      {
+        "key": "C",
+        "text": "15 years"
+      },
+      {
+        "key": "D",
+        "text": "25 years"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "They split after a backstage fight in Paris in 2009; the reunion tour came in 2025.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mr-blobby-christmas-en-1",
+    "factId": "mr-blobby-christmas",
+    "familyId": "uk-charts",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Who had the UK Christmas Number One in 1993, beating Take That?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cliff Richard"
+      },
+      {
+        "key": "B",
+        "text": "East 17"
+      },
+      {
+        "key": "C",
+        "text": "Spice Girls"
+      },
+      {
+        "key": "D",
+        "text": "Mr Blobby"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "A pink, spotty character from Noel's House Party. The Spice Girls only appeared in 1996.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bob-builder-christmas-en-1",
+    "factId": "bob-builder-christmas",
+    "familyId": "uk-charts",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Who had the UK Christmas Number One in 2000?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Britney Spears"
+      },
+      {
+        "key": "B",
+        "text": "Westlife"
+      },
+      {
+        "key": "C",
+        "text": "Robbie Williams"
+      },
+      {
+        "key": "D",
+        "text": "Bob the Builder"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "\"Can We Fix It?\" beat Westlife to the top spot.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ladbaby-five-christmas-en-1",
+    "factId": "ladbaby-five-christmas",
+    "familyId": "uk-charts",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What chart record did LadBaby set in the UK?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The longest-running Number One"
+      },
+      {
+        "key": "B",
+        "text": "Ten Number One albums in a row"
+      },
+      {
+        "key": "C",
+        "text": "Five Christmas Number Ones in a row"
+      },
+      {
+        "key": "D",
+        "text": "The first Number One without a physical release"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "From 2018 to 2022 — nearly all of them about sausage rolls, for charity.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 1,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pj-and-duncan-en-1",
+    "factId": "pj-and-duncan",
+    "familyId": "uk-charts",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Under what names did Ant & Dec first perform as a pop duo?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Gaz & Baz"
+      },
+      {
+        "key": "B",
+        "text": "Ant & Deck"
+      },
+      {
+        "key": "C",
+        "text": "PJ & Duncan"
+      },
+      {
+        "key": "D",
+        "text": "The Newcastle Boys"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Those were their characters in the children's drama Byker Grove.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "rhumble-number-one-2013-en-1",
+    "factId": "rhumble-number-one-2013",
+    "familyId": "uk-charts",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "\"Let's Get Ready to Rhumble\" came out in 1994. In what year did it finally reach Number One?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1994"
+      },
+      {
+        "key": "B",
+        "text": "1998"
+      },
+      {
+        "key": "C",
+        "text": "2004"
+      },
+      {
+        "key": "D",
+        "text": "2013"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Almost 19 years later, after they performed it on Saturday Night Takeaway.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "susan-boyle-dreamed-en-1",
+    "factId": "susan-boyle-dreamed",
+    "familyId": "uk-charts",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which song did Susan Boyle sing at her famous Britain's Got Talent audition?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Memory"
+      },
+      {
+        "key": "B",
+        "text": "Somewhere Over the Rainbow"
+      },
+      {
+        "key": "C",
+        "text": "I Dreamed a Dream"
+      },
+      {
+        "key": "D",
+        "text": "Don't Cry for Me Argentina"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It's from Les Misérables; the audition became one of YouTube's early global hits.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mind-the-gap-1968-en-1",
+    "factId": "mind-the-gap-1968",
+    "familyId": "uk-transport",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "When was \"Mind the gap\" first introduced on the London Underground?",
+    "options": [
+      {
+        "key": "A",
+        "text": "1933"
+      },
+      {
+        "key": "B",
+        "text": "1955"
+      },
+      {
+        "key": "C",
+        "text": "1968"
+      },
+      {
+        "key": "D",
+        "text": "1984"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The first recording was made by sound engineer Peter Lodge.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.8,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wombat-cube-poo-en-1",
+    "factId": "wombat-cube-poo",
+    "familyId": "weird-nature-body",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which animal produces almost cube-shaped poo?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Koala"
+      },
+      {
+        "key": "B",
+        "text": "Wombat"
+      },
+      {
+        "key": "C",
+        "text": "Capybara"
+      },
+      {
+        "key": "D",
+        "text": "Badger"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The cubes don't roll away, which helps wombats mark their territory.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wombat-cube-poo-ru-1",
+    "factId": "wombat-cube-poo",
+    "familyId": "weird-nature-body",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какое животное оставляет почти кубические какашки?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Коала"
+      },
+      {
+        "key": "B",
+        "text": "Вомбат"
+      },
+      {
+        "key": "C",
+        "text": "Капибара"
+      },
+      {
+        "key": "D",
+        "text": "Барсук"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Кубики не скатываются — так вомбаты метят территорию.",
+    "topics": {
+      "nature": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "banana-berry-en-1",
+    "factId": "banana-berry",
+    "familyId": "weird-nature-body",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these is botanically a berry?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Strawberry"
+      },
+      {
+        "key": "B",
+        "text": "Raspberry"
+      },
+      {
+        "key": "C",
+        "text": "Banana"
+      },
+      {
+        "key": "D",
+        "text": "Cherry"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Strawberries and raspberries aren't true berries; a cherry is a drupe.",
+    "topics": {
+      "nature": 0.6,
+      "science": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "banana-berry-ru-1",
+    "factId": "banana-berry",
+    "familyId": "weird-nature-body",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого с точки зрения ботаники — ягода?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Клубника"
+      },
+      {
+        "key": "B",
+        "text": "Малина"
+      },
+      {
+        "key": "C",
+        "text": "Банан"
+      },
+      {
+        "key": "D",
+        "text": "Вишня"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Клубника и малина — не настоящие ягоды, а вишня — костянка.",
+    "topics": {
+      "nature": 0.6,
+      "science": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wrinkly-fingers-en-1",
+    "factId": "wrinkly-fingers",
+    "familyId": "weird-nature-body",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Why do your fingers wrinkle after a long time in water?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The skin soaks up water like a sponge"
+      },
+      {
+        "key": "B",
+        "text": "Water dissolves the top layer"
+      },
+      {
+        "key": "C",
+        "text": "The nervous system narrows the blood vessels"
+      },
+      {
+        "key": "D",
+        "text": "The body is trying to cool down"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It doesn't happen if the nerves are damaged — so it's an active reaction, perhaps for better grip.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wrinkly-fingers-ru-1",
+    "factId": "wrinkly-fingers",
+    "familyId": "weird-nature-body",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Почему пальцы сморщиваются после долгого пребывания в воде?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Кожа впитывает воду, как губка"
+      },
+      {
+        "key": "B",
+        "text": "Вода растворяет верхний слой кожи"
+      },
+      {
+        "key": "C",
+        "text": "Нервная система сужает сосуды"
+      },
+      {
+        "key": "D",
+        "text": "Организм пытается охладиться"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Если нервы повреждены, пальцы не сморщиваются — значит, это активная реакция; возможно, ради лучшего сцепления.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "onion-tears-en-1",
+    "factId": "onion-tears",
+    "familyId": "weird-nature-body",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Why does cutting an onion make your eyes water?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Its smell"
+      },
+      {
+        "key": "B",
+        "text": "Acid already stored inside the onion"
+      },
+      {
+        "key": "C",
+        "text": "A volatile chemical formed when it is cut"
+      },
+      {
+        "key": "D",
+        "text": "Pollen"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The irritant only forms when the cells break — chilling the onion slows it down.",
+    "topics": {
+      "science": 0.6,
+      "food": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "onion-tears-ru-1",
+    "factId": "onion-tears",
+    "familyId": "weird-nature-body",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Почему от нарезанного лука слезятся глаза?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из-за запаха"
+      },
+      {
+        "key": "B",
+        "text": "Из-за кислоты, которая уже есть в луке"
+      },
+      {
+        "key": "C",
+        "text": "Из-за летучего вещества, которое образуется при разрезании"
+      },
+      {
+        "key": "D",
+        "text": "Из-за пыльцы"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Раздражающее вещество появляется, только когда клетки разрушаются, — охлаждённый лук «плачет» меньше.",
+    "topics": {
+      "science": 0.6,
+      "food": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "facebook-before-youtube-en-1",
+    "factId": "facebook-before-youtube",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these came first?",
+    "options": [
+      {
+        "key": "A",
+        "text": "YouTube"
+      },
+      {
+        "key": "B",
+        "text": "Facebook"
+      },
+      {
+        "key": "C",
+        "text": "Twitter"
+      },
+      {
+        "key": "D",
+        "text": "Instagram"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Facebook 2004, YouTube 2005, Twitter 2006, Instagram 2010.",
+    "topics": {
+      "old-internet": 0.6,
+      "internet-now": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "facebook-before-youtube-ru-1",
+    "factId": "facebook-before-youtube",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что появилось раньше всех?",
+    "options": [
+      {
+        "key": "A",
+        "text": "YouTube"
+      },
+      {
+        "key": "B",
+        "text": "Facebook"
+      },
+      {
+        "key": "C",
+        "text": "Twitter"
+      },
+      {
+        "key": "D",
+        "text": "Instagram"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Facebook — 2004, YouTube — 2005, Twitter — 2006, Instagram — 2010.",
+    "topics": {
+      "old-internet": 0.6,
+      "internet-now": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wikipedia-before-iphone-en-1",
+    "factId": "wikipedia-before-iphone",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these launched first?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The iPhone"
+      },
+      {
+        "key": "B",
+        "text": "Spotify"
+      },
+      {
+        "key": "C",
+        "text": "Wikipedia"
+      },
+      {
+        "key": "D",
+        "text": "Instagram"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Wikipedia went live in January 2001.",
+    "topics": {
+      "old-internet": 0.6,
+      "internet-now": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "wikipedia-before-iphone-ru-1",
+    "factId": "wikipedia-before-iphone",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого запустили раньше всех?",
+    "options": [
+      {
+        "key": "A",
+        "text": "iPhone"
+      },
+      {
+        "key": "B",
+        "text": "Spotify"
+      },
+      {
+        "key": "C",
+        "text": "Википедию"
+      },
+      {
+        "key": "D",
+        "text": "Instagram"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Википедия заработала в январе 2001 года.",
+    "topics": {
+      "old-internet": 0.6,
+      "internet-now": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "winrar-not-social-en-1",
+    "factId": "winrar-not-social",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these was NOT a social network?",
+    "options": [
+      {
+        "key": "A",
+        "text": "MySpace"
+      },
+      {
+        "key": "B",
+        "text": "Bebo"
+      },
+      {
+        "key": "C",
+        "text": "Friendster"
+      },
+      {
+        "key": "D",
+        "text": "WinRAR"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "WinRAR is famous for its free trial that never actually ends.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "winrar-not-social-ru-1",
+    "factId": "winrar-not-social",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого НЕ было социальной сетью?",
+    "options": [
+      {
+        "key": "A",
+        "text": "MySpace"
+      },
+      {
+        "key": "B",
+        "text": "Bebo"
+      },
+      {
+        "key": "C",
+        "text": "Friendster"
+      },
+      {
+        "key": "D",
+        "text": "WinRAR"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "WinRAR знаменит бесплатным пробным периодом, который никогда не заканчивается.",
+    "topics": {
+      "old-internet": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "00s": 1
+    },
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "save-icon-floppy-en-1",
+    "factId": "save-icon-floppy",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which common computer icon shows a technology many younger users have never used?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Search"
+      },
+      {
+        "key": "B",
+        "text": "Wi-Fi"
+      },
+      {
+        "key": "C",
+        "text": "Save"
+      },
+      {
+        "key": "D",
+        "text": "Bluetooth"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It's a 3.5-inch floppy disk — some kids think it's a 3D-printed save icon.",
+    "topics": {
+      "old-internet": 0.6,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "save-icon-floppy-ru-1",
+    "factId": "save-icon-floppy",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На какой привычной компьютерной иконке нарисована вещь, которой многие молодые пользователи никогда не пользовались?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Поиск"
+      },
+      {
+        "key": "B",
+        "text": "Wi-Fi"
+      },
+      {
+        "key": "C",
+        "text": "Сохранить"
+      },
+      {
+        "key": "D",
+        "text": "Bluetooth"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Это 3,5-дюймовая дискета — некоторые дети уверены, что это просто «иконка сохранения».",
+    "topics": {
+      "old-internet": 0.6,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bluetooth-harald-en-1",
+    "factId": "bluetooth-harald",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Bluetooth is named after…",
+    "options": [
+      {
+        "key": "A",
+        "text": "The colour of its first logo"
+      },
+      {
+        "key": "B",
+        "text": "A type of radio wave"
+      },
+      {
+        "key": "C",
+        "text": "The nickname of a Scandinavian king"
+      },
+      {
+        "key": "D",
+        "text": "A toothpaste brand"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "King Harald united Danish tribes — just as the tech unites devices. The logo combines his runic initials.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "bluetooth-harald-ru-1",
+    "factId": "bluetooth-harald",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Bluetooth назван в честь…",
+    "options": [
+      {
+        "key": "A",
+        "text": "цвета первого логотипа"
+      },
+      {
+        "key": "B",
+        "text": "типа радиоволн"
+      },
+      {
+        "key": "C",
+        "text": "прозвища скандинавского короля"
+      },
+      {
+        "key": "D",
+        "text": "марки зубной пасты"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Король Харальд Синезубый объединил датские племена — как технология объединяет устройства. Логотип составлен из его рунических инициалов.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "google-googol-en-1",
+    "factId": "google-googol",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which brand got its name from a misspelled very large number?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yahoo"
+      },
+      {
+        "key": "B",
+        "text": "Google"
+      },
+      {
+        "key": "C",
+        "text": "Amazon"
+      },
+      {
+        "key": "D",
+        "text": "Spotify"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A googol is 1 followed by 100 zeros.",
+    "topics": {
+      "fashion-brands": 0.6,
+      "old-internet": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "google-googol-ru-1",
+    "factId": "google-googol",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой бренд получил название от неправильно написанного огромного числа?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Yahoo"
+      },
+      {
+        "key": "B",
+        "text": "Google"
+      },
+      {
+        "key": "C",
+        "text": "Amazon"
+      },
+      {
+        "key": "D",
+        "text": "Spotify"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Гугол — это единица со ста нулями.",
+    "topics": {
+      "fashion-brands": 0.6,
+      "old-internet": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tech-flops-all-three-en-1",
+    "factId": "tech-flops-all-three",
+    "familyId": "weird-tech-history",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these was a real tech product that flopped or was discontinued?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Google Glass"
+      },
+      {
+        "key": "B",
+        "text": "Microsoft Zune"
+      },
+      {
+        "key": "C",
+        "text": "Amazon Fire Phone"
+      },
+      {
+        "key": "D",
+        "text": "All three"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Zune was Microsoft's iPod rival; the Fire Phone lasted barely a year.",
+    "topics": {
+      "fashion-brands": 0.5,
+      "internet-now": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "tech-flops-all-three-ru-1",
+    "factId": "tech-flops-all-three",
+    "familyId": "weird-tech-history",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого — реальный технологический продукт, который провалился или был снят с продаж?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Google Glass"
+      },
+      {
+        "key": "B",
+        "text": "Microsoft Zune"
+      },
+      {
+        "key": "C",
+        "text": "Amazon Fire Phone"
+      },
+      {
+        "key": "D",
+        "text": "Все три"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Zune был ответом Microsoft на iPod, а Fire Phone продержался едва ли год.",
+    "topics": {
+      "fashion-brands": 0.5,
+      "internet-now": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "karaoke-japanese-en-1",
+    "factId": "karaoke-japanese",
+    "familyId": "weird-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which language does the word \"karaoke\" come from?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Korean"
+      },
+      {
+        "key": "B",
+        "text": "Chinese"
+      },
+      {
+        "key": "C",
+        "text": "Japanese"
+      },
+      {
+        "key": "D",
+        "text": "Italian"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Kara means \"empty\", oke is short for \"orchestra\".",
+    "topics": {
+      "world-pop": 0.5,
+      "geography": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "karaoke-japanese-ru-1",
+    "factId": "karaoke-japanese",
+    "familyId": "weird-words",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Из какого языка пришло слово «караоке»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Из корейского"
+      },
+      {
+        "key": "B",
+        "text": "Из китайского"
+      },
+      {
+        "key": "C",
+        "text": "Из японского"
+      },
+      {
+        "key": "D",
+        "text": "Из итальянского"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "«Кара» — «пустой», «оке» — сокращение от «оркестр».",
+    "topics": {
+      "world-pop": 0.5,
+      "geography": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "robot-capek-en-1",
+    "factId": "robot-capek",
+    "familyId": "weird-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "The word \"robot\" became famous through a play by a writer from which country?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Germany"
+      },
+      {
+        "key": "B",
+        "text": "The USA"
+      },
+      {
+        "key": "C",
+        "text": "Czechoslovakia"
+      },
+      {
+        "key": "D",
+        "text": "Japan"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It comes from the Czech robota, \"forced labour\"; Karel Čapek's brother Josef suggested it.",
+    "topics": {
+      "world-literature": 0.6,
+      "science": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "robot-capek-ru-1",
+    "factId": "robot-capek",
+    "familyId": "weird-words",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Слово «робот» прославила пьеса писателя из какой страны?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Германии"
+      },
+      {
+        "key": "B",
+        "text": "США"
+      },
+      {
+        "key": "C",
+        "text": "Чехословакии"
+      },
+      {
+        "key": "D",
+        "text": "Японии"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "От чешского robota — «подневольный труд». Слово Карелу Чапеку подсказал брат Йозеф.",
+    "topics": {
+      "world-literature": 0.6,
+      "science": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "emoji-picture-character-en-1",
+    "factId": "emoji-picture-character",
+    "familyId": "weird-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What does the Japanese word \"emoji\" literally mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Emotional picture"
+      },
+      {
+        "key": "B",
+        "text": "Tiny face"
+      },
+      {
+        "key": "C",
+        "text": "Picture + character"
+      },
+      {
+        "key": "D",
+        "text": "Internet emotion"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The likeness to \"emotion\" is pure coincidence.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "emoji-picture-character-ru-1",
+    "factId": "emoji-picture-character",
+    "familyId": "weird-words",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что буквально означает японское слово «эмодзи»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Эмоциональная картинка"
+      },
+      {
+        "key": "B",
+        "text": "Маленькое лицо"
+      },
+      {
+        "key": "C",
+        "text": "Картинка + знак"
+      },
+      {
+        "key": "D",
+        "text": "Интернет-эмоция"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Сходство с английским emotion — чистое совпадение.",
+    "topics": {
+      "internet-now": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "circle-back-en-1",
+    "factId": "circle-back",
+    "familyId": "weird-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Which office phrase means \"let's come back to this later\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Touch base"
+      },
+      {
+        "key": "B",
+        "text": "Deep dive"
+      },
+      {
+        "key": "C",
+        "text": "Circle back"
+      },
+      {
+        "key": "D",
+        "text": "Move the needle"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "\"Touch base\" is a quick check-in; \"circle back\" is the polite way to park something.",
+    "topics": {
+      "internet-now": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 0.6,
+      "UK": 0.8,
+      "US": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "no-bandwidth-en-1",
+    "factId": "no-bandwidth",
+    "familyId": "weird-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": false,
+    "text": "Which office phrase means \"I don't have time for this right now\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "My pipeline is blue"
+      },
+      {
+        "key": "B",
+        "text": "I don't have the bandwidth"
+      },
+      {
+        "key": "C",
+        "text": "My calendar is red"
+      },
+      {
+        "key": "D",
+        "text": "I'm below the line"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Borrowed from networking: you've run out of capacity.",
+    "topics": {
+      "internet-now": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 0.6,
+      "UK": 0.8,
+      "US": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crisps-saratoga-en-1",
+    "factId": "crisps-saratoga",
+    "familyId": "weird-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "According to the best-known origin story, where were potato crisps invented?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Britain"
+      },
+      {
+        "key": "B",
+        "text": "France"
+      },
+      {
+        "key": "C",
+        "text": "The USA"
+      },
+      {
+        "key": "D",
+        "text": "Belgium"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "The legend of chef George Crum in Saratoga Springs is popular but disputed — English cookbooks had crisps earlier.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crisps-saratoga-ru-1",
+    "factId": "crisps-saratoga",
+    "familyId": "weird-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где, по самой известной версии, изобрели картофельные чипсы?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Великобритании"
+      },
+      {
+        "key": "B",
+        "text": "Во Франции"
+      },
+      {
+        "key": "C",
+        "text": "В США"
+      },
+      {
+        "key": "D",
+        "text": "В Бельгии"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Легенда о поваре Джордже Краме из Саратога-Спрингс популярна, но спорна — в английских поваренных книгах чипсы были раньше.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "carbonara-no-cream-en-1",
+    "factId": "carbonara-no-cream",
+    "familyId": "weird-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which ingredient does NOT go into a classic Italian carbonara?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Eggs"
+      },
+      {
+        "key": "B",
+        "text": "Pecorino"
+      },
+      {
+        "key": "C",
+        "text": "Guanciale"
+      },
+      {
+        "key": "D",
+        "text": "Cream"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "The creaminess comes from eggs and cheese; Italians take the cream question very personally.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "carbonara-no-cream-ru-1",
+    "factId": "carbonara-no-cream",
+    "familyId": "weird-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой ингредиент НЕ кладут в классическую итальянскую карбонару?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Яйца"
+      },
+      {
+        "key": "B",
+        "text": "Пекорино"
+      },
+      {
+        "key": "C",
+        "text": "Гуанчиале"
+      },
+      {
+        "key": "D",
+        "text": "Сливки"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Кремовость дают яйца и сыр; к вопросу о сливках итальянцы относятся очень лично.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "coca-cola-pharmacy-en-1",
+    "factId": "coca-cola-pharmacy",
+    "familyId": "weird-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these products began life with pharmacy or medicinal associations?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nutella"
+      },
+      {
+        "key": "B",
+        "text": "Pringles"
+      },
+      {
+        "key": "C",
+        "text": "Coca-Cola"
+      },
+      {
+        "key": "D",
+        "text": "Heinz Beans"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Pharmacist John Pemberton sold it in Atlanta in 1886 as a tonic.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "coca-cola-pharmacy-ru-1",
+    "factId": "coca-cola-pharmacy",
+    "familyId": "weird-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой из этих продуктов начинал как аптечное или лечебное средство?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Nutella"
+      },
+      {
+        "key": "B",
+        "text": "Pringles"
+      },
+      {
+        "key": "C",
+        "text": "Coca-Cola"
+      },
+      {
+        "key": "D",
+        "text": "Фасоль Heinz"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Фармацевт Джон Пембертон продавал её в Атланте в 1886 году как тонизирующее средство.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "caesar-cardini-en-1",
+    "factId": "caesar-cardini",
+    "familyId": "weird-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Caesar salad isn't named after Julius Caesar. Who is it named after?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Roman emperor"
+      },
+      {
+        "key": "B",
+        "text": "A Hollywood actor"
+      },
+      {
+        "key": "C",
+        "text": "Restaurateur Caesar Cardini"
+      },
+      {
+        "key": "D",
+        "text": "A French chef called César"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Cardini, an Italian immigrant, ran a restaurant in Tijuana, Mexico.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "caesar-cardini-ru-1",
+    "factId": "caesar-cardini",
+    "familyId": "weird-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Салат «Цезарь» назван не в честь Юлия Цезаря. А в честь кого?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Римского императора"
+      },
+      {
+        "key": "B",
+        "text": "Голливудского актёра"
+      },
+      {
+        "key": "C",
+        "text": "Ресторатора Цезаря Кардини"
+      },
+      {
+        "key": "D",
+        "text": "Французского шефа по имени Сезар"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Итальянский эмигрант Кардини держал ресторан в мексиканской Тихуане.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mamma-mia-not-pasta-en-1",
+    "factId": "mamma-mia-not-pasta",
+    "familyId": "weird-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these is NOT a real type of pasta?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Orecchiette"
+      },
+      {
+        "key": "B",
+        "text": "Strozzapreti"
+      },
+      {
+        "key": "C",
+        "text": "Radiatori"
+      },
+      {
+        "key": "D",
+        "text": "Mamma Mia"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Radiatori really are shaped like little radiators.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mamma-mia-not-pasta-ru-1",
+    "factId": "mamma-mia-not-pasta",
+    "familyId": "weird-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого НЕ настоящий вид пасты?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Орекьетте"
+      },
+      {
+        "key": "B",
+        "text": "Строццапрети"
+      },
+      {
+        "key": "C",
+        "text": "Радиаторы"
+      },
+      {
+        "key": "D",
+        "text": "Мамма миа"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Радиаторы и правда похожи на маленькие батареи отопления.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "strozzapreti-meaning-en-1",
+    "factId": "strozzapreti-meaning",
+    "familyId": "weird-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What does the pasta name \"strozzapreti\" roughly mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Little ears"
+      },
+      {
+        "key": "B",
+        "text": "Angel hair"
+      },
+      {
+        "key": "C",
+        "text": "Priest stranglers"
+      },
+      {
+        "key": "D",
+        "text": "Grandmother's fingers"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Legends say greedy priests choked on it. Little ears are orecchiette; angel hair is capellini.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "strozzapreti-meaning-ru-1",
+    "factId": "strozzapreti-meaning",
+    "familyId": "weird-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что примерно означает название пасты «строццапрети»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Маленькие ушки"
+      },
+      {
+        "key": "B",
+        "text": "Волосы ангела"
+      },
+      {
+        "key": "C",
+        "text": "Душители священников"
+      },
+      {
+        "key": "D",
+        "text": "Бабушкины пальчики"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "По легенде, ею давились жадные священники. Ушки — это орекьетте, волосы ангела — капеллини.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blue-eiffel-65-en-1",
+    "factId": "blue-eiffel-65",
+    "familyId": "weird-music",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who performed \"Blue (Da Ba Dee)\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Aqua"
+      },
+      {
+        "key": "B",
+        "text": "Vengaboys"
+      },
+      {
+        "key": "C",
+        "text": "Eiffel 65"
+      },
+      {
+        "key": "D",
+        "text": "Scooter"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "An Italian trio from Turin; the song was a huge hit in 1999.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "blue-eiffel-65-ru-1",
+    "factId": "blue-eiffel-65",
+    "familyId": "weird-music",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто исполнял «Blue (Da Ba Dee)»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Aqua"
+      },
+      {
+        "key": "B",
+        "text": "Vengaboys"
+      },
+      {
+        "key": "C",
+        "text": "Eiffel 65"
+      },
+      {
+        "key": "D",
+        "text": "Scooter"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Итальянское трио из Турина; песня гремела в 1999 году.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "90s": 1
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "WHY_DO_I_REMEMBER_THIS": 0.8,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "prisencolinensinainciusol-en-1",
+    "factId": "prisencolinensinainciusol",
+    "familyId": "weird-music",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which famous song is sung in made-up words meant to sound like English?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Macarena"
+      },
+      {
+        "key": "B",
+        "text": "Barbie Girl"
+      },
+      {
+        "key": "C",
+        "text": "Dragostea Din Tei"
+      },
+      {
+        "key": "D",
+        "text": "Prisencolinensinainciusol"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Celentano wanted to show how English sounds to Italians who don't speak it. Dragostea Din Tei is in Romanian.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "prisencolinensinainciusol-ru-1",
+    "factId": "prisencolinensinainciusol",
+    "familyId": "weird-music",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую знаменитую песню поют на выдуманных словах, которые должны звучать как английские?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Macarena"
+      },
+      {
+        "key": "B",
+        "text": "Barbie Girl"
+      },
+      {
+        "key": "C",
+        "text": "Dragostea Din Tei"
+      },
+      {
+        "key": "D",
+        "text": "Prisencolinensinainciusol"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Челентано хотел показать, как английский звучит для итальянцев, которые его не знают. Dragostea Din Tei поют по-румынски.",
+    "topics": {
+      "world-pop": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {
+      "80s": 0.4
+    },
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "batman-boring-dull-en-1",
+    "factId": "batman-boring-dull",
+    "familyId": "weird-geography",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these is a real place name?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Batman, in Turkey"
+      },
+      {
+        "key": "B",
+        "text": "Boring, in the USA"
+      },
+      {
+        "key": "C",
+        "text": "Dull, in Scotland"
+      },
+      {
+        "key": "D",
+        "text": "All three"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Boring and Dull are even twinned — \"a pair for the ages\".",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "batman-boring-dull-ru-1",
+    "factId": "batman-boring-dull",
+    "familyId": "weird-geography",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого — название реального места?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Батман в Турции"
+      },
+      {
+        "key": "B",
+        "text": "Боринг («Скучный») в США"
+      },
+      {
+        "key": "C",
+        "text": "Далл («Унылый») в Шотландии"
+      },
+      {
+        "key": "D",
+        "text": "Все три"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Боринг и Далл даже стали городами-побратимами.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nepal-flag-en-1",
+    "factId": "nepal-flag",
+    "familyId": "weird-geography",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which national flag is the only one that isn't four-sided?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Switzerland"
+      },
+      {
+        "key": "B",
+        "text": "Vatican City"
+      },
+      {
+        "key": "C",
+        "text": "Nepal"
+      },
+      {
+        "key": "D",
+        "text": "Bhutan"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Two stacked triangles. Switzerland and Vatican City are square, but still four-sided.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "nepal-flag-ru-1",
+    "factId": "nepal-flag",
+    "familyId": "weird-geography",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Флаг какой страны — единственный в мире не четырёхугольный?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Швейцарии"
+      },
+      {
+        "key": "B",
+        "text": "Ватикана"
+      },
+      {
+        "key": "C",
+        "text": "Непала"
+      },
+      {
+        "key": "D",
+        "text": "Бутана"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Это два треугольника друг над другом. Флаги Швейцарии и Ватикана квадратные, но всё равно четырёхугольные.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "africa-four-hemispheres-en-1",
+    "factId": "africa-four-hemispheres",
+    "familyId": "weird-geography",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which continent lies in all four hemispheres?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Europe"
+      },
+      {
+        "key": "B",
+        "text": "South America"
+      },
+      {
+        "key": "C",
+        "text": "Africa"
+      },
+      {
+        "key": "D",
+        "text": "Australia"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Both the equator and the Greenwich meridian cross Africa.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "africa-four-hemispheres-ru-1",
+    "factId": "africa-four-hemispheres",
+    "familyId": "weird-geography",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой материк лежит сразу во всех четырёх полушариях?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Европа"
+      },
+      {
+        "key": "B",
+        "text": "Южная Америка"
+      },
+      {
+        "key": "C",
+        "text": "Африка"
+      },
+      {
+        "key": "D",
+        "text": "Австралия"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Африку пересекают и экватор, и Гринвичский меридиан.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pacific-largest-en-1",
+    "factId": "pacific-largest",
+    "familyId": "weird-geography",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which is the world's largest ocean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Atlantic"
+      },
+      {
+        "key": "B",
+        "text": "The Indian"
+      },
+      {
+        "key": "C",
+        "text": "The Pacific"
+      },
+      {
+        "key": "D",
+        "text": "The Southern"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "It's bigger than all the land on Earth put together — a breather after a hard one.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pacific-largest-ru-1",
+    "factId": "pacific-largest",
+    "familyId": "weird-geography",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой океан самый большой?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Атлантический"
+      },
+      {
+        "key": "B",
+        "text": "Индийский"
+      },
+      {
+        "key": "C",
+        "text": "Тихий"
+      },
+      {
+        "key": "D",
+        "text": "Южный"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Он больше всей суши Земли вместе взятой — передышка после сложного вопроса.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "I_KNOW_THIS": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "old-olympic-events-en-1",
+    "factId": "old-olympic-events",
+    "familyId": "weird-sport",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these has genuinely appeared at the Olympic Games?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tug of war"
+      },
+      {
+        "key": "B",
+        "text": "Obstacle swimming"
+      },
+      {
+        "key": "C",
+        "text": "Live pigeon shooting"
+      },
+      {
+        "key": "D",
+        "text": "All of the above"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Paris 1900 had swimming over and under boats in the Seine — and the only Olympic event where animals were deliberately killed.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "old-olympic-events-ru-1",
+    "factId": "old-olympic-events",
+    "familyId": "weird-sport",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого действительно было на Олимпийских играх?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Перетягивание каната"
+      },
+      {
+        "key": "B",
+        "text": "Плавание с препятствиями"
+      },
+      {
+        "key": "C",
+        "text": "Стрельба по живым голубям"
+      },
+      {
+        "key": "D",
+        "text": "Всё перечисленное"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "В Париже-1900 плавали над лодками и под ними прямо в Сене — и устроили единственное соревнование, где намеренно убивали животных.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "odd-sports-real-en-1",
+    "factId": "odd-sports-real",
+    "familyId": "weird-sport",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these sports actually exists?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Chess boxing"
+      },
+      {
+        "key": "B",
+        "text": "Wife carrying"
+      },
+      {
+        "key": "C",
+        "text": "Underwater hockey"
+      },
+      {
+        "key": "D",
+        "text": "All three"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Wife carrying has a world championship in Finland; the prize is the wife's weight in beer.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "odd-sports-real-ru-1",
+    "factId": "odd-sports-real",
+    "familyId": "weird-sport",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой из этих видов спорта существует на самом деле?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Шахбокс"
+      },
+      {
+        "key": "B",
+        "text": "Бег с женой на руках"
+      },
+      {
+        "key": "C",
+        "text": "Подводный хоккей"
+      },
+      {
+        "key": "D",
+        "text": "Все три"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Чемпионат мира по бегу с женой проходит в Финляндии; приз — пиво весом с жену.",
+    "topics": {
+      "sports": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ikea-bike-tv-en-1",
+    "factId": "ikea-bike-tv",
+    "familyId": "weird-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these has IKEA genuinely sold?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A bicycle"
+      },
+      {
+        "key": "B",
+        "text": "A television"
+      },
+      {
+        "key": "C",
+        "text": "A car"
+      },
+      {
+        "key": "D",
+        "text": "Both a bicycle and a television"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "The Sladda bike and the Uppleva TV-in-a-cabinet — both real, both flat-packed.",
+    "topics": {
+      "fashion-brands": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ikea-bike-tv-ru-1",
+    "factId": "ikea-bike-tv",
+    "familyId": "weird-brands",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что из этого IKEA действительно продавала?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Велосипед"
+      },
+      {
+        "key": "B",
+        "text": "Телевизор"
+      },
+      {
+        "key": "C",
+        "text": "Автомобиль"
+      },
+      {
+        "key": "D",
+        "text": "И велосипед, и телевизор"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Велосипед Sladda и телевизор Uppleva, встроенный в тумбу, — оба настоящие.",
+    "topics": {
+      "fashion-brands": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "luke-i-am-your-father-en-1",
+    "factId": "luke-i-am-your-father",
+    "familyId": "weird-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which famous Star Wars line is usually misquoted?",
+    "options": [
+      {
+        "key": "A",
+        "text": "\"May the Force be with you\""
+      },
+      {
+        "key": "B",
+        "text": "\"Luke, I am your father\""
+      },
+      {
+        "key": "C",
+        "text": "\"I have a bad feeling about this\""
+      },
+      {
+        "key": "D",
+        "text": "\"Do or do not. There is no try.\""
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Vader actually says \"No, I am your father\".",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "luke-i-am-your-father-ru-1",
+    "factId": "luke-i-am-your-father",
+    "familyId": "weird-brands",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какую знаменитую фразу из «Звёздных войн» обычно цитируют неправильно?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Да пребудет с тобой Сила»"
+      },
+      {
+        "key": "B",
+        "text": "«Люк, я твой отец»"
+      },
+      {
+        "key": "C",
+        "text": "«У меня плохое предчувствие»"
+      },
+      {
+        "key": "D",
+        "text": "«Делай или не делай. Не надо пытаться»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "На самом деле Вейдер говорит: «Нет, я твой отец».",
+    "topics": {
+      "world-cinema": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "lordi-finland-ru-1",
     "factId": "lordi-finland",
     "familyId": "eurovision-winners",
@@ -4682,7 +13096,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "lordi-finland-en-1",
@@ -5428,7 +13842,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "margherita-queen-en-1",
@@ -6856,7 +15270,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "bering-strait-ru-1",
@@ -11283,54 +19697,6 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
-    "id": "livanov-mbe-en-1",
-    "factId": "livanov-mbe",
-    "familyId": "bridges-screen",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "REGIONAL",
-    "isBridge": true,
-    "text": "Which actor, famous as Sherlock Holmes in the Soviet TV films, was made an honorary MBE?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Jeremy Brett"
-      },
-      {
-        "key": "B",
-        "text": "Vasily Livanov"
-      },
-      {
-        "key": "C",
-        "text": "Vitaly Solomin"
-      },
-      {
-        "key": "D",
-        "text": "Innokenty Smoktunovsky"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "Vitaly Solomin played his Watson. Many British fans rate the Soviet series among the best Holmes adaptations.",
-    "topics": {
-      "world-literature": 0.6,
-      "soviet-cinema": 0.8
-    },
-    "contexts": {
-      "POST_SOVIET": 1,
-      "UK": 0.6,
-      "GLOBAL": 0.5
-    },
-    "generations": {},
-    "difficulty": 4,
-    "dignity": 4,
-    "effects": {
-      "BRIDGE": 0.8,
-      "HERO_CANDIDATE": 0.5
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
     "id": "bbc-war-and-peace-2016-en-1",
     "factId": "bbc-war-and-peace-2016",
     "familyId": "bridges-screen",
@@ -11360,13 +19726,13 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "Anna Karenina was the 2012 film with Keira Knightley. Paul Dano played Pierre, Lily James played Natasha.",
     "topics": {
-      "russian-literature": 0.8,
-      "world-cinema": 0.5
+      "world-literature": 0.8,
+      "world-series": 0.5
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {
       "10s": 1
@@ -11410,13 +19776,12 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "It is often called the Soviet answer to Kubrick's 2001. Soderbergh remade it in 2002 with George Clooney.",
     "topics": {
-      "world-cinema": 0.8,
-      "soviet-cinema": 0.8
+      "world-cinema": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 4,
@@ -11426,7 +19791,7 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "potemkin-odessa-steps-en-1",
@@ -11458,13 +19823,12 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "The pram rolling down the steps has been copied endlessly — most famously in The Untouchables (1987).",
     "topics": {
-      "world-cinema": 0.8,
-      "soviet-cinema": 0.6
+      "world-cinema": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 3,
@@ -11474,54 +19838,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
-    "id": "cheburashka-japan-en-1",
-    "factId": "cheburashka-japan",
-    "familyId": "bridges-screen",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "REGIONAL",
-    "isBridge": true,
-    "text": "Outside the former USSR, in which country did Cheburashka become a big hit and get its own remake?",
-    "options": [
-      {
-        "key": "A",
-        "text": "China"
-      },
-      {
-        "key": "B",
-        "text": "Japan"
-      },
-      {
-        "key": "C",
-        "text": "Finland"
-      },
-      {
-        "key": "D",
-        "text": "Italy"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "Japanese fans love his huge ears and big eyes; a Japanese stop-motion version came out in 2010.",
-    "topics": {
-      "cartoons": 1
-    },
-    "contexts": {
-      "POST_SOVIET": 1,
-      "UK": 0.6,
-      "GLOBAL": 0.5
-    },
-    "generations": {},
-    "difficulty": 3,
-    "dignity": 4,
-    "effects": {
-      "BRIDGE": 0.8,
-      "I_FIGURED_IT_OUT": 0.4
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "back-in-the-ussr-en-1",
@@ -11556,9 +19873,9 @@ export const BANK: BankQuestion[] = [
       "world-pop": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {
       "80s": 0.5
@@ -11606,9 +19923,9 @@ export const BANK: BankQuestion[] = [
       "cold-war": 0.4
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {
       "80s": 0.8
@@ -11652,13 +19969,12 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "It comes from his opera The Tale of Tsar Saltan, from Pushkin's fairy tale: the prince turns into a bumblebee.",
     "topics": {
-      "art": 0.6,
-      "russian-literature": 0.4
+      "art": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 3,
@@ -11704,9 +20020,9 @@ export const BANK: BankQuestion[] = [
       "art": 0.5
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 4,
@@ -11748,13 +20064,12 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "Nabokov wrote his first novels in Russian and switched to English in America. He later translated Lolita into Russian himself.",
     "topics": {
-      "world-literature": 0.8,
-      "russian-literature": 0.8
+      "world-literature": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 3,
@@ -11782,7 +20097,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Lev Termen, a Russian physicist"
+        "text": "Lev Termen"
       },
       {
         "key": "C",
@@ -11799,9 +20114,9 @@ export const BANK: BankQuestion[] = [
       "science": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 3,
@@ -11811,7 +20126,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "mammoth-from-russian-en-1",
@@ -11847,9 +20162,9 @@ export const BANK: BankQuestion[] = [
       "science": 0.4
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.5
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 4,
@@ -11857,144 +20172,6 @@ export const BANK: BankQuestion[] = [
     "effects": {
       "I_FIGURED_IT_OUT": 0.6,
       "BRIDGE": 0.5
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
-    "id": "sputnik-meaning-en-1",
-    "factId": "sputnik-meaning",
-    "familyId": "russian-words",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "REGIONAL",
-    "isBridge": true,
-    "text": "What does the Russian word \"sputnik\" mean?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Rocket"
-      },
-      {
-        "key": "B",
-        "text": "Companion, fellow traveller"
-      },
-      {
-        "key": "C",
-        "text": "Star"
-      },
-      {
-        "key": "D",
-        "text": "Signal"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "A satellite \"travels with\" the Earth — hence the name.",
-    "topics": {
-      "space": 1
-    },
-    "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
-    },
-    "generations": {},
-    "difficulty": 3,
-    "dignity": 4,
-    "effects": {
-      "I_KNOW_THIS": 0.6,
-      "I_FIGURED_IT_OUT": 0.4
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
-    "id": "poyekhali-en-1",
-    "factId": "poyekhali",
-    "familyId": "russian-words",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "REGIONAL",
-    "isBridge": true,
-    "text": "What did Yuri Gagarin's famous word \"Poyekhali!\" mean?",
-    "options": [
-      {
-        "key": "A",
-        "text": "\"Goodbye!\""
-      },
-      {
-        "key": "B",
-        "text": "\"Let's go!\""
-      },
-      {
-        "key": "C",
-        "text": "\"Hooray!\""
-      },
-      {
-        "key": "D",
-        "text": "\"Everything is fine!\""
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "He said it as Vostok 1 lifted off on 12 April 1961.",
-    "topics": {
-      "space": 1,
-      "ussr-history": 0.4
-    },
-    "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
-    },
-    "generations": {},
-    "difficulty": 3,
-    "dignity": 4,
-    "effects": {
-      "I_KNOW_THIS": 0.7
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
-    "id": "bolshoi-meaning-en-1",
-    "factId": "bolshoi-meaning",
-    "familyId": "russian-words",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "REGIONAL",
-    "isBridge": true,
-    "text": "What does \"Bolshoi\" in the Bolshoi Theatre mean?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Royal"
-      },
-      {
-        "key": "B",
-        "text": "Big, grand"
-      },
-      {
-        "key": "C",
-        "text": "Old"
-      },
-      {
-        "key": "D",
-        "text": "National"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "Its Moscow building opened in 1825; the company is one of the most famous in ballet.",
-    "topics": {
-      "art": 1
-    },
-    "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
-    },
-    "generations": {},
-    "difficulty": 3,
-    "dignity": 4,
-    "effects": {
-      "I_KNOW_THIS": 0.6,
-      "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
     "status": "DRAFT"
@@ -12029,11 +20206,11 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "The first matryoshka was made in the 1890s.",
     "topics": {
-      "ussr-everyday": 1
+      "art": 0.6
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
+      "POST_SOVIET": 0.6,
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 1,
@@ -12077,8 +20254,8 @@ export const BANK: BankQuestion[] = [
       "art": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
+      "POST_SOVIET": 0.6,
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 2,
@@ -12122,8 +20299,8 @@ export const BANK: BankQuestion[] = [
       "videogames": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
+      "POST_SOVIET": 0.6,
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 4,
@@ -12165,13 +20342,12 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "The English version of their Russian hit \"Ya soshla s uma\".",
     "topics": {
-      "world-pop": 1,
-      "ru-pop-00s": 0.6
+      "world-pop": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
+      "POST_SOVIET": 0.6,
       "UK": 0.6,
-      "GLOBAL": 0.6
+      "GLOBAL": 1
     },
     "generations": {
       "00s": 1
@@ -12183,7 +20359,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "kasparov-deep-blue-en-1",
@@ -12219,8 +20395,8 @@ export const BANK: BankQuestion[] = [
       "science": 0.5
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
+      "POST_SOVIET": 0.6,
+      "GLOBAL": 1
     },
     "generations": {
       "90s": 1
@@ -12266,8 +20442,8 @@ export const BANK: BankQuestion[] = [
       "food": 1
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
+      "POST_SOVIET": 0.6,
+      "GLOBAL": 1
     },
     "generations": {},
     "difficulty": 1,
@@ -14824,7 +23000,7 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "seryoga-chorny-bumer-ru-1",
@@ -17038,7 +25214,8 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "Released by Bandai in 1996 — followed by countless cheap copies.",
     "topics": {
-      "russia-90s-life": 1
+      "old-internet": 0.6,
+      "videogames": 0.5
     },
     "contexts": {
       "GLOBAL": 1
@@ -17647,51 +25824,6 @@ export const BANK: BankQuestion[] = [
     ],
     "correctKey": "B",
     "explanation": "«Не шалю, никого не трогаю, починяю примус».",
-    "topics": {
-      "russian-literature": 1
-    },
-    "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.4
-    },
-    "generations": {},
-    "difficulty": 1,
-    "dignity": 5,
-    "effects": {
-      "SHARED_KNOWLEDGE": 1
-    },
-    "ageSafety": "ALL",
-    "status": "DRAFT"
-  },
-  {
-    "id": "begemot-en-1",
-    "factId": "begemot",
-    "familyId": "bulgakov",
-    "language": "en",
-    "originLanguage": "ru",
-    "cultureSpecificity": "REGIONAL",
-    "isBridge": true,
-    "text": "In Bulgakov's The Master and Margarita, what is the name of the giant cat in Woland's retinue?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Azazello"
-      },
-      {
-        "key": "B",
-        "text": "Behemoth"
-      },
-      {
-        "key": "C",
-        "text": "Koroviev"
-      },
-      {
-        "key": "D",
-        "text": "Abaddon"
-      }
-    ],
-    "correctKey": "B",
-    "explanation": "\"I'm not causing any trouble, I'm not touching anyone, I'm fixing the primus stove.\"",
     "topics": {
       "russian-literature": 1
     },
@@ -19687,8 +27819,7 @@ export const BANK: BankQuestion[] = [
     "correctKey": "C",
     "explanation": "12 April 1961; the Voskhod flights came later, in 1964–65.",
     "topics": {
-      "space": 1,
-      "ussr-history": 0.4
+      "space": 1
     },
     "contexts": {
       "GLOBAL": 1,
@@ -19780,8 +27911,7 @@ export const BANK: BankQuestion[] = [
     "correctKey": "A",
     "explanation": "One orbit of the Earth; the next cosmonaut, Gherman Titov, stayed up for a full day.",
     "topics": {
-      "space": 1,
-      "ussr-history": 0.3
+      "space": 1
     },
     "contexts": {
       "GLOBAL": 1,
@@ -20154,8 +28284,7 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "All of them were real space dogs: Dezik and Tsygan flew a suborbital rocket in 1951, while Pchyolka and Mushka died on re-entry in December 1960.",
     "topics": {
-      "space": 1,
-      "ussr-history": 0.3
+      "space": 1
     },
     "contexts": {
       "GLOBAL": 1,
@@ -20398,7 +28527,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "apollo-11-collins-en-1",
@@ -20490,7 +28619,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "moonwalkers-count-en-1",
@@ -20580,7 +28709,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "last-moon-landing-year-en-1",
@@ -20759,7 +28888,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "hottest-planet-en-1",
@@ -20852,7 +28981,7 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "pluto-dwarf-planet-en-1",
@@ -20945,7 +29074,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "mars-moons-en-1",
@@ -23742,11 +31871,12 @@ export const BANK: BankQuestion[] = [
     "correctKey": "B",
     "explanation": "26 April 1986; HBO's 2019 series made it famous all over again.",
     "topics": {
-      "ussr-history": 1
+      "cold-war": 0.6,
+      "science": 0.5
     },
     "contexts": {
-      "POST_SOVIET": 1,
-      "GLOBAL": 0.6
+      "POST_SOVIET": 0.6,
+      "GLOBAL": 1
     },
     "generations": {
       "80s": 1,
@@ -23945,12 +32075,12 @@ export const BANK: BankQuestion[] = [
       "00s": 0.6
     },
     "difficulty": 2,
-    "dignity": 2,
+    "dignity": 3,
     "effects": {
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "sims-simlish-ru-1",
@@ -24044,7 +32174,7 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "minecraft-creeper-ru-1",
@@ -27164,7 +35294,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "modern-talking-country-ru-1",
@@ -27298,8 +35428,8 @@ export const BANK: BankQuestion[] = [
       "world-pop": 1
     },
     "contexts": {
-      "GLOBAL": 0.7,
-      "POST_SOVIET": 1
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.6
     },
     "generations": {
       "80s": 0.8,

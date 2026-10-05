@@ -444,7 +444,7 @@ families:
 
       - id: zveri-roma-real-name
         statement: "Настоящее имя Ромы Зверя — Роман Билык; он родом из Таганрога."
-        sources: [{ name: "Википедия: Рома Зверь", type: REFERENCE, verified: false }]
+        sources: [{ name: "Википедия: Рома Зверь", type: REFERENCE, verified: true }]
         questions:
           - id: zveri-roma-real-name-ru-1
             language: ru
@@ -463,8 +463,12 @@ families:
             difficulty: 5
             dignity: 2
             effects: { I_KNOW_THIS: 1.0, HERO_CANDIDATE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
 
   - family: seryoga
     name: "Серёга"

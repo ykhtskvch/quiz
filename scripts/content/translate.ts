@@ -68,7 +68,7 @@ for (const [sourceId, tr] of Object.entries(translations)) {
     explanation: tr.explanation,
     status: "DRAFT",
     generation_method: "AI",
-    review_notes: [...(src.review_notes ?? []), "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."],
+    review_notes: [...(src.review_notes ?? []), `AI doubt: перевод — проверить естественность ${lang === "en" ? "английского" : "русского"} и что варианты остались однозначными.`],
   };
   delete q.reviewed;
   const node = doc.createNode(q);

@@ -7,7 +7,7 @@ families:
     facts:
       - id: margherita-queen
         statement: "Пицца «Маргарита» названа в честь итальянской королевы Маргариты Савойской."
-        sources: [ { name: "Википедия: Пицца «Маргарита»", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Пицца «Маргарита»", type: REFERENCE, verified: true }]
         questions:
           - id: margherita-queen-ru-1
             language: ru
@@ -25,8 +25,12 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_KNOW_THIS: 0.6, I_FIGURED_IT_OUT: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-05
           - id: margherita-queen-en-1
             language: en
             origin_language: ru
@@ -50,7 +54,7 @@ families:
 
       - id: wasabi
         statement: "Васаби — японская приправа из растения, родственного хрену."
-        sources: [ { name: "Википедия: Васаби", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Васаби", type: REFERENCE, verified: false }]
         questions:
           - id: wasabi-ru-1
             language: ru
@@ -93,7 +97,7 @@ families:
 
       - id: paella-spain
         statement: "Паэлья — блюдо испанской (валенсийской) кухни."
-        sources: [ { name: "Википедия: Паэлья", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Паэлья", type: REFERENCE, verified: false }]
         questions:
           - id: paella-spain-ru-1
             language: ru
@@ -136,7 +140,7 @@ families:
 
       - id: guacamole-avocado
         statement: "Основа гуакамоле — авокадо."
-        sources: [ { name: "Википедия: Гуакамоле", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Гуакамоле", type: REFERENCE, verified: false }]
         questions:
           - id: guacamole-avocado-ru-1
             language: ru
@@ -179,7 +183,7 @@ families:
 
       - id: saffron-expensive
         statement: "Шафран — самая дорогая пряность в мире."
-        sources: [ { name: "Википедия: Шафран (пряность)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Шафран (пряность)", type: REFERENCE, verified: false }]
         questions:
           - id: saffron-expensive-ru-1
             language: ru
@@ -222,7 +226,7 @@ families:
 
       - id: emmental-holes
         statement: "Швейцарский сыр эмменталь знаменит крупными дырками."
-        sources: [ { name: "Википедия: Эмменталь", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Википедия: Эмменталь", type: REFERENCE, verified: false }]
         questions:
           - id: emmental-holes-ru-1
             language: ru
