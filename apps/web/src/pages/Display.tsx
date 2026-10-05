@@ -4,7 +4,7 @@ import QRCode from "qrcode";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
 import { AnswerTimer, NextUp, StatCards } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
-import { useRoom } from "../useRoom.ts";
+import { useCountdown, useRoom } from "../useRoom.ts";
 
 declare const __LAN_ORIGIN__: string;
 
@@ -105,6 +105,10 @@ function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
   const total = reveal ? Object.values(reveal.distribution).reduce((a, b) => a + b, 0) : 0;
   const correct = reveal ? q.options?.find((o) => o.key === reveal.correctKey) : undefined;
   const questionsTotal = s.game?.totalQuestions ?? q.number;
+  // Reveal in two beats (playtest 1): the answer first, then "Did you know?" with the explanation.
+  const remaining = useCountdown(q.timing, timingAt);
+  const revealElapsed = reveal && q.timing && remaining !== null ? q.timing.durationMs - remaining : 0;
+  const showFact = Boolean(reveal?.explanation) && revealElapsed >= DEFAULT_CONFIG.revealFactAfterMs;
 
   return (
     <div className="question-view">
@@ -114,38 +118,49 @@ function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
         {reveal && <NextUp timing={q.timing} timingAt={timingAt} number={q.number} total={questionsTotal} />}
       </div>
       <h1 className="question-text">{q.text}</h1>
-      <ol className="options">
-        {KEYS.map((key) => {
-          const o = q.options?.find((x) => x.key === key);
-          const isCorrect = reveal?.correctKey === key;
-          const votes = reveal?.distribution[key] ?? 0;
-          return (
-            <li key={key} className={!o ? "pending" : reveal ? (isCorrect ? "correct" : "dim") : ""}>
-              <span className="key">{key}</span>
-              <span className="text">{o?.text ?? ""}</span>
-              {reveal && (
-                <span className="votes">
-                  <span className="bar" style={{ width: total ? `${(votes / total) * 100}%` : 0 }} />
-                  {votes}
-                </span>
-              )}
-            </li>
-          );
-        })}
-      </ol>
-      <div className="stage-foot">
-        {q.phase === "PRESENTING" && <p className="muted reading">{t.reading}</p>}
-        {q.phase === "ANSWERING" && <AnswerTimer timing={q.timing} timingAt={timingAt} />}
-        {reveal && correct && (
-          <div className="reveal-banner">
-            <p className="reveal-label">{t.correctAnswer}</p>
-            <p className="reveal-answer">
-              <span className="key">{correct.key}</span> {correct.text}
-            </p>
-            {reveal.explanation && <p className="explanation">{reveal.explanation}</p>}
+      {showFact && correct ? (
+        <div className="did-you-know">
+          <p className="dyk-label">{t.didYouKnow}</p>
+          <p className="dyk-text">{reveal!.explanation}</p>
+          <p className="dyk-answer">
+            {t.correctAnswer}: <span className="key">{correct.key}</span> {correct.text}
+          </p>
+        </div>
+      ) : (
+        <>
+          <ol className="options">
+            {KEYS.map((key) => {
+              const o = q.options?.find((x) => x.key === key);
+              const isCorrect = reveal?.correctKey === key;
+              const votes = reveal?.distribution[key] ?? 0;
+              return (
+                <li key={key} className={!o ? "pending" : reveal ? (isCorrect ? "correct" : "dim") : ""}>
+                  <span className="key">{key}</span>
+                  <span className="text">{o?.text ?? ""}</span>
+                  {reveal && (
+                    <span className="votes">
+                      <span className="bar" style={{ width: total ? `${(votes / total) * 100}%` : 0 }} />
+                      {votes}
+                    </span>
+                  )}
+                </li>
+              );
+            })}
+          </ol>
+          <div className="stage-foot">
+            {q.phase === "PRESENTING" && <p className="muted reading">{t.reading}</p>}
+            {q.phase === "ANSWERING" && <AnswerTimer timing={q.timing} timingAt={timingAt} />}
+            {reveal && correct && (
+              <div className="reveal-banner">
+                <p className="reveal-label">{t.correctAnswer}</p>
+                <p className="reveal-answer">
+                  <span className="key">{correct.key}</span> {correct.text}
+                </p>
+              </div>
+            )}
           </div>
-        )}
-      </div>
+        </>
+      )}
     </div>
   );
 }

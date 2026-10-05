@@ -187,11 +187,16 @@ function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: s
     return (
       <div className="finished">
         <section className="center-text">
-          <p className="result-title">{t.results}</p>
-          {mine && <p className="big-text">{t.yourPlace(place, s.results.leaderboard.length)}</p>}
+          <p className="muted results-label">{t.results}</p>
           {mine && (
-            <p className="muted">
-              {t.score(mine.score)} · {t.correctOf(mine.correct, mine.attempted)}
+            <p className="place">
+              {t.place(place)} <span className="place-of">({t.placeOf(s.results.leaderboard.length)})</span>
+            </p>
+          )}
+          {mine && (
+            <p className="place-stats">
+              <span>{t.score(mine.score)}</span>
+              <span>{t.correctOf(mine.correct, mine.attempted)}</span>
             </p>
           )}
         </section>
@@ -215,9 +220,12 @@ function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: s
               {t.playAgain}
             </button>
           )}
-          <button className="link" onClick={onEdit}>
-            {t.editPrefs}
-          </button>
+          {/* Changing interests is about the next game, so it comes after the form (playtest 1). */}
+          {(feedbackSent || !mine) && (
+            <button className="link" onClick={onEdit}>
+              {t.editPrefs}
+            </button>
+          )}
           {cmd.error && <p className="error">{cmd.error}</p>}
         </section>
       </div>
@@ -274,7 +282,11 @@ function QuestionBody({
       {q.phase === "REVEALED" ? (
         <div className={`result ${kind}`}>
           <p className="result-title">{kind === "right" ? t.correct : kind === "wrong" ? t.wrong : t.noAnswer}</p>
-          {r?.correct && <p className="points">{t.points(r.points)}</p>}
+          {r?.correct && (
+            <p className="points">
+              {t.points(r.points)} <span className="tier">· {t.speedTier[speedTier(r.points)]}</span>
+            </p>
+          )}
           {correct && (
             <div className="reveal-banner">
               <p className="reveal-label">{t.correctAnswer}</p>
@@ -377,4 +389,10 @@ function useWakeLock(active: boolean) {
       lock?.release().catch(() => {});
     };
   }, [active]);
+}
+
+/** Which speed band a correct answer's points came from (GameConfig.points). */
+function speedTier(points: number): "fast" | "mid" | "late" {
+  const p = DEFAULT_CONFIG.points;
+  return points >= p.fast ? "fast" : points >= p.mid ? "mid" : "late";
 }

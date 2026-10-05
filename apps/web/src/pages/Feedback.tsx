@@ -63,6 +63,9 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
   );
 }
 
+/** Playtest 1: a long list felt like a chore — show a few at a time. */
+const RATINGS_PAGE = 5;
+
 export function QuestionRatings({
   code,
   token,
@@ -76,7 +79,9 @@ export function QuestionRatings({
 }) {
   const t = useT();
   const [ratings, setRatings] = useState<Record<number, QuestionRating>>(initial);
+  const [shown, setShown] = useState(RATINGS_PAGE);
   if (results.questions.length === 0) return null;
+  const hidden = results.questions.length - shown;
 
   const rate = async (number: number, rating: QuestionRating) => {
     if (ratings[number]) return;
@@ -95,9 +100,9 @@ export function QuestionRatings({
   return (
     <section className="ratings">
       <h2>{t.rateTitle}</h2>
-      <p className="muted small">{t.rateHint}</p>
+      <p className="rate-hint">{t.rateHint}</p>
       <ol className="rating-list">
-        {results.questions.map((q) => (
+        {results.questions.slice(0, shown).map((q) => (
           <li key={q.number}>
             <p className="rating-q">{q.text}</p>
             <div className="rating-buttons">
@@ -116,6 +121,11 @@ export function QuestionRatings({
           </li>
         ))}
       </ol>
+      {hidden > 0 && (
+        <button className="link" onClick={() => setShown(shown + RATINGS_PAGE)}>
+          {t.rateShowMore(Math.min(hidden, RATINGS_PAGE))}
+        </button>
+      )}
     </section>
   );
 }

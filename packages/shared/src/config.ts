@@ -4,6 +4,8 @@ export type GameConfig = {
   presentation: { minMs: number; perCharMs: number; maxMs: number };
   answerMs: number;
   revealMs: number;
+  /** The reveal shows the correct answer first, then switches to "Did you know?" with the explanation. */
+  revealFactAfterMs: number;
   /** Pause between a skipped question and the next one. */
   skipGapMs: number;
   /** How long a disconnected player still counts as active (BR-075). */
@@ -27,7 +29,9 @@ export const DEFAULT_CONFIG: GameConfig = {
   // between. Longer reading, a shorter reveal that ends with a visible "next question in 3".
   presentation: { minMs: 4000, perCharMs: 45, maxMs: 9000 },
   answerMs: 15_000,
-  revealMs: 8000,
+  // 4 s for the answer, then 6 s of "Did you know?" — a breather before the next question.
+  revealMs: 10_000,
+  revealFactAfterMs: 4000,
   skipGapMs: 1500,
   disconnectGraceMs: 25_000,
   softEndAfterMs: 30 * 60_000,
