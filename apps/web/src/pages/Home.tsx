@@ -31,6 +31,7 @@ export function Home() {
   return (
     <main className="home">
       <h1>{t.appName}</h1>
+      <p className="slogan">{t.slogan}</p>
       <p className="muted">{t.tagline}</p>
       <p className="how-to">{t.howTo}</p>
       <BetaBadge />

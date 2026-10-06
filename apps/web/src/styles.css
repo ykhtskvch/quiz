@@ -1201,3 +1201,11 @@ button.link {
   line-height: 1.45;
 }
 
+/* Brand: Knowish — "Everyone knows something." */
+.slogan {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+

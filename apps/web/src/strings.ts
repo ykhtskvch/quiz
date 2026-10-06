@@ -12,7 +12,8 @@ function ruPlural(n: number, one: string, few: string, many: string) {
 const enNf = new Intl.NumberFormat("en-GB");
 
 const ru = {
-  appName: "Квиз для своих",
+  appName: "Knowish",
+  slogan: "Каждый что-то знает.",
   beta: "Бета",
   howTo: "Откройте эту страницу на ТВ или ноутбуке и создайте комнату — игроки заходят по QR-коду с телефонов.",
   privacyTitle: "Без аккаунтов. Что мы храним?",
@@ -165,7 +166,8 @@ const ru = {
 };
 
 const en: Strings = {
-  appName: "Quiz for your crowd",
+  appName: "Knowish",
+  slogan: "Everyone knows something.",
   beta: "Beta",
   howTo: "Open this page on a TV or laptop and create a room — players join by scanning the QR code with their phones.",
   privacyTitle: "No accounts. What do we keep?",

@@ -60,6 +60,14 @@
     // ALLOW_DRAFTS is "true" only for the Saturday 10.10 beta — switch to "false" afterwards.
     "production": {
       "name": "quiz",
+      // Public address (EPIC 38, L-03). quiz.<account>.workers.dev stays on as a backup link.
+      "routes": [
+        { "pattern": "knowish.party", "custom_domain": true },
+        { "pattern": "www.knowish.party", "custom_domain": true }
+      ],
+      "workers_dev": true,
+      // No per-version preview URLs: one public site plus the workers.dev backup.
+      "preview_urls": false,
       "assets": {
         "directory": "../web/dist",
         "not_found_handling": "single-page-application",
