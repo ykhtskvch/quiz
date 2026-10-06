@@ -4,10 +4,11 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --port 8787",
-    "deploy": "wrangler deploy",
     "db:migrate:local": "wrangler d1 migrations apply quiz-analytics --local",
     "deploy:staging": "wrangler deploy --env staging",
-    "db:migrate:staging": "wrangler d1 migrations apply quiz-analytics-staging --env staging --remote"
+    "db:migrate:staging": "wrangler d1 migrations apply quiz-analytics-staging --env staging --remote",
+    "deploy:production": "wrangler deploy --env production",
+    "db:migrate:production": "wrangler d1 migrations apply quiz-analytics --env production --remote"
   },
   "dependencies": {
     "@quiz/shared": "*",

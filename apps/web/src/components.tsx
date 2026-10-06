@@ -1,5 +1,7 @@
 // Small pieces shared by the display and the phone.
+import { useEffect, useState } from "react";
 import type { GameResults, PhaseTiming } from "@quiz/shared";
+import { api } from "./api.ts";
 import { useT } from "./strings.ts";
 import { useCountdown } from "./useRoom.ts";
 
@@ -55,3 +57,22 @@ export function StatCards({ results }: { results: GameResults }) {
     </div>
   );
 }
+
+let betaCache: Promise<boolean> | null = null;
+
+/** "Beta" badge while this deployment plays unreviewed questions (EPIC 38, L-10). Silent on errors. */
+export function BetaBadge() {
+  const t = useT();
+  const [beta, setBeta] = useState(false);
+  useEffect(() => {
+    betaCache ??= api.meta().then((m) => m.beta).catch(() => false);
+    betaCache.then(setBeta);
+  }, []);
+  if (!beta) return null;
+  return (
+    <p className="beta-badge" title={t.betaHint}>
+      <span>{t.beta}</span> {t.betaHint}
+    </p>
+  );
+}
+

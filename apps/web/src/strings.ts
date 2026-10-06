@@ -13,6 +13,8 @@ const enNf = new Intl.NumberFormat("en-GB");
 
 const ru = {
   appName: "Квиз для своих",
+  beta: "Бета",
+  betaHint: "Часть вопросов ещё на проверке — если что-то не так, скажите!",
   gameLanguage: "Язык игры",
   languageName: { ru: "Русский", en: "English" } as Record<Language, string>,
   languageHint: "На этом языке будут вопросы и интерфейс у всех игроков.",
@@ -156,6 +158,8 @@ const ru = {
 
 const en: Strings = {
   appName: "Quiz for your crowd",
+  beta: "Beta",
+  betaHint: "Some questions are still being checked — if something looks off, tell us!",
   gameLanguage: "Game language",
   languageName: { ru: "Русский", en: "English" },
   languageHint: "Questions and every player's screen will be in this language.",

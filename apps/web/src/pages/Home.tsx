@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { isRoomCode, LANGUAGES } from "@quiz/shared";
 import { api, ApiError } from "../api.ts";
+import { BetaBadge } from "../components.tsx";
 import { navigate } from "../router.ts";
 import { setLanguage, useLanguage, useT } from "../strings.ts";
 
@@ -31,6 +32,7 @@ export function Home() {
     <main className="home">
       <h1>{t.appName}</h1>
       <p className="muted">{t.tagline}</p>
+      <BetaBadge />
       <div className="lang-pick" role="radiogroup" aria-label={t.gameLanguage}>
         <span className="muted small">{t.gameLanguage}</span>
         <div className="segmented">

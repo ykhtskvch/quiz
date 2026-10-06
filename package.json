@@ -17,6 +17,7 @@
     "analytics": "node scripts/dev/analytics-report.ts",
     "db:migrate:local": "npm run db:migrate:local -w @quiz/worker",
     "deploy:staging": "npm run build -w @quiz/web && npm run deploy:staging -w @quiz/worker",
+    "deploy:production": "npm run build -w @quiz/web && npm run deploy:production -w @quiz/worker",
     "content:review": "node scripts/content/review.ts",
     "content:priority": "node scripts/dev/simulate.ts --priority"
   },

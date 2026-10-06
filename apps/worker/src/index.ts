@@ -14,6 +14,7 @@ import {
 } from "@quiz/shared";
 import { RateLimiterDO } from "./limiter-do.ts";
 import type { Bucket } from "./ratelimit.ts";
+import { engineConfig } from "./deployment.ts";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
 export { RateLimiterDO, RoomDO };
@@ -51,6 +52,9 @@ app.use("*", async (c, next) => {
   }
   await next();
 });
+
+/** Deployment facts the web app needs before any room exists (e.g. the "beta" badge). */
+app.get("/meta", (c) => c.json({ beta: engineConfig(c.env).allowDrafts }));
 
 app.post("/rooms", async (c) => {
   const body = await c.req.json<{ language?: unknown }>().catch(() => ({ language: undefined }));

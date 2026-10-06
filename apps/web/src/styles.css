@@ -1152,3 +1152,24 @@ button.link {
   width: 1.6em;
   height: 1.6em;
 }
+
+/* EPIC 38: "beta" while unreviewed questions are playable. */
+.beta-badge {
+  margin: 0.75rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.beta-badge span {
+  display: inline-block;
+  margin-right: 0.4rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+

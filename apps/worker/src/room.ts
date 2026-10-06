@@ -16,7 +16,8 @@ import {
   type Snapshot,
 } from "@quiz/shared";
 import { BANK } from "@quiz/shared/bank-data";
-import { availableTopics, DEFAULT_ENGINE_CONFIG } from "@quiz/engine";
+import { availableTopics, type EngineConfig } from "@quiz/engine";
+import { engineConfig, type DeploymentVars } from "./deployment.ts";
 import { writeAnalytics } from "./analytics.ts";
 import type { RateLimiterDO } from "./limiter-do.ts";
 import { newRoomState, Room, ROOM_STATE_VERSION, type Effect, type Result, type RoomState, type Viewer } from "./game.ts";
@@ -29,6 +30,7 @@ export interface Env {
   DB?: D1Database;
   /** Per-IP request counters (NFR-016); optional so a missing binding never blocks gameplay. */
   LIMITER?: DurableObjectNamespace<RateLimiterDO>;
+  ALLOW_DRAFTS?: DeploymentVars["ALLOW_DRAFTS"];
 }
 
 type Attachment = { role: "display" } | { role: "player"; playerId: string };
@@ -42,9 +44,11 @@ const fail = (status: 400 | 401 | 404, error: string): Result<never> => ({ ok: f
 export class RoomDO extends DurableObject<Env> {
   private state: RoomState | null = null;
   private readonly config = DEFAULT_CONFIG;
+  private readonly engine: EngineConfig;
 
   constructor(ctx: DurableObjectState, env: Env) {
     super(ctx, env);
+    this.engine = engineConfig(env);
     ctx.blockConcurrencyWhile(async () => {
       const stored = (await ctx.storage.get<RoomState>("state")) ?? null;
       if (stored && stored.version !== ROOM_STATE_VERSION) {
@@ -63,7 +67,7 @@ export class RoomDO extends DurableObject<Env> {
     if (this.state) return { ok: false, status: 409, error: "room exists" };
     const displayToken = randomToken();
     this.state = newRoomState(code, await sha256(displayToken), Date.now(), this.config, language);
-    await this.commit(new Room(this.state, this.config));
+    await this.commit(new Room(this.state, this.config, BANK, this.engine));
     return { ok: true, value: { displayToken } };
   }
 
@@ -71,7 +75,7 @@ export class RoomDO extends DurableObject<Env> {
   async info(): Promise<Result<RoomInfo>> {
     if (!this.live()) return fail(404, "room not found");
     const language = this.state!.language;
-    return { ok: true, value: { language, topics: availableTopics(BANK, { ...DEFAULT_ENGINE_CONFIG, language }) } };
+    return { ok: true, value: { language, topics: availableTopics(BANK, { ...this.engine, language }) } };
   }
 
   async join(rawNickname: string): Promise<Result<{ playerId: string; playerToken: string; isHost: boolean }>> {
@@ -219,7 +223,7 @@ export class RoomDO extends DurableObject<Env> {
   // ---------- internals ----------
 
   private room(): Room {
-    return new Room(this.state!, this.config);
+    return new Room(this.state!, this.config, BANK, this.engine);
   }
 
   private live(): boolean {

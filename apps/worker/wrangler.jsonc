@@ -1,6 +1,8 @@
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "quiz",
+  // Top level = local `wrangler dev` only. Deploy with an env (staging / production), never bare:
+  // a bare `wrangler deploy` would ship a worker without the web app.
+  "name": "quiz-dev",
   "main": "src/index.ts",
   "compatibility_date": "2026-10-01",
   "durable_objects": {
@@ -19,6 +21,8 @@
     { "binding": "DB", "database_name": "quiz-analytics", "database_id": "00000000-0000-0000-0000-000000000000", "migrations_dir": "migrations" }
   ],
   "observability": { "enabled": true },
+  // Unreviewed DRAFT questions are playable only where this is "true" (BR-130).
+  "vars": { "ALLOW_DRAFTS": "true" },
 
   "env": {
     // https://quiz-staging.<account>.workers.dev — playtests (12-system-design §12).
@@ -48,7 +52,39 @@
           "migrations_dir": "migrations"
         }
       ],
-      "observability": { "enabled": true }
+      "observability": { "enabled": true },
+      "vars": { "ALLOW_DRAFTS": "true" }
+    },
+
+    // The public site (EPIC 38). Same shape as staging, its own worker, rooms and analytics.
+    // ALLOW_DRAFTS is "true" only for the Saturday 10.10 beta — switch to "false" afterwards.
+    "production": {
+      "name": "quiz",
+      "assets": {
+        "directory": "../web/dist",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": ["/api/*"]
+      },
+      "durable_objects": {
+        "bindings": [
+          { "name": "ROOMS", "class_name": "RoomDO" },
+          { "name": "LIMITER", "class_name": "RateLimiterDO" }
+        ]
+      },
+      "migrations": [
+        { "tag": "v1", "new_sqlite_classes": ["RoomDO"] },
+        { "tag": "v2", "new_sqlite_classes": ["RateLimiterDO"] }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "quiz-analytics",
+          "database_id": "d18c1b27-692d-48aa-95f9-1c74f745565e",
+          "migrations_dir": "migrations"
+        }
+      ],
+      "observability": { "enabled": true },
+      "vars": { "ALLOW_DRAFTS": "true" }
     }
   }
 }

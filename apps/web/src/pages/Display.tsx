@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
-import { AnswerTimer, NextUp, StatCards } from "../components.tsx";
+import { AnswerTimer, BetaBadge, NextUp, StatCards } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { useCountdown, useRoom } from "../useRoom.ts";
 
@@ -86,6 +86,7 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
         <p className="scoring-rules">
           {t.gameLength(DEFAULT_CONFIG.questionsPerGame)} {t.scoringRules}
         </p>
+        <BetaBadge />
       </section>
     </div>
   );
