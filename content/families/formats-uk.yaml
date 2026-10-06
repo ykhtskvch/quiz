@@ -1,0 +1,154 @@
+# Playtest 1 formats — what the British really mean, Crap Towns (EN-native)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: british-phrases
+    name: "What the British really mean"
+    facts:
+      - id: brit-with-greatest-respect
+        statement: "In the famous Anglo-EU translation guide, \"With the greatest respect…\" really means \"You are an idiot.\""
+        sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
+        questions:
+          - id: brit-with-greatest-respect-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "According to the famous \"what the British really mean\" guide, what does \"With the greatest respect…\" actually mean?"
+            options:
+              - { key: A, text: "I admire your opinion", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "You are an idiot", correct: true }
+              - { key: C, text: "Please go on", distractor: PLAUSIBLE }
+              - { key: D, text: "I'm about to agree", distractor: PLAUSIBLE }
+            explanation: "The more respect a Brit announces, the less there is. The guide went viral as a table for confused European colleagues."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.6, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: brit-bear-in-mind
+        statement: "In the Anglo-EU translation guide, \"I'll bear it in mind\" really means \"I've forgotten it already.\""
+        sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
+        questions:
+          - id: brit-bear-in-mind-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "When a Brit says \"I'll bear it in mind\", what do they usually mean?"
+            options:
+              - { key: A, text: "I'll definitely do it", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "I've forgotten it already", correct: true }
+              - { key: C, text: "Remind me tomorrow", distractor: PLAUSIBLE }
+              - { key: D, text: "I need to ask my boss", distractor: PLAUSIBLE }
+            explanation: "Europeans tend to hear a promise. The British usually mean the conversation is over."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.6, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: brit-quite-good
+        statement: "In the Anglo-EU translation guide, \"Quite good\" really means \"A bit disappointing.\""
+        sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
+        questions:
+          - id: brit-quite-good-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In British English, what does \"quite good\" often really mean?"
+            options:
+              - { key: A, text: "Excellent", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Very good", distractor: NEAR_MISS }
+              - { key: C, text: "A bit disappointing", correct: true }
+              - { key: D, text: "Brilliant, but don't tell anyone", distractor: PLAUSIBLE }
+            explanation: "Americans hear \"very good\"; in Britain \"quite\" usually turns the volume down, not up."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.6, current: 0.6 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.7, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: brit-very-interesting
+        statement: "In the Anglo-EU translation guide, \"Very interesting\" really means \"That is clearly nonsense.\""
+        sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
+        questions:
+          - id: brit-very-interesting-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "A British colleague calls your idea \"very interesting\". What do they most likely mean?"
+            options:
+              - { key: A, text: "They love it", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "They want to hear more", distractor: PLAUSIBLE }
+              - { key: C, text: "That is clearly nonsense", correct: true }
+              - { key: D, text: "They'll fund it", distractor: PLAUSIBLE }
+            explanation: "One of the most famous lines in the guide — and one of the most misunderstood in meetings."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.6, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: brit-correct-me
+        statement: "In the Anglo-EU translation guide, \"Correct me if I'm wrong\" really means \"I know I'm right — please don't contradict me.\""
+        sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
+        questions:
+          - id: brit-correct-me-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "What does a Brit usually mean by \"Correct me if I'm wrong…\"?"
+            options:
+              - { key: A, text: "I'm not sure, please help", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "I know I'm right — don't contradict me", correct: true }
+              - { key: C, text: "Let's vote on it", distractor: PLAUSIBLE }
+              - { key: D, text: "I've made a mistake", distractor: PLAUSIBLE }
+            explanation: "It's an invitation nobody is supposed to accept."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.6, current: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: crap-towns
+    name: "Crap Towns"
+    facts:
+      - id: crap-towns-hull
+        statement: "In the 2003 book Crap Towns, readers voted Hull the worst place to live in the UK."
+        sources: [{ name: "Wikipedia: Crap Towns", type: REFERENCE, verified: false }]
+        questions:
+          - id: crap-towns-hull-en-1
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "In the tongue-in-cheek 2003 book Crap Towns, which place was voted the UK's worst?"
+            options:
+              - { key: A, text: "Slough", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Luton", distractor: PLAUSIBLE }
+              - { key: C, text: "Hull", correct: true }
+              - { key: D, text: "Morecambe", distractor: PLAUSIBLE }
+            explanation: "Slough is the famous trap: John Betjeman's 1937 poem begins \"Come, friendly bombs, and fall on Slough!\" — but the book's winner was Hull."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 10s: 0.6, current: 0.6 }
+            difficulty: 4
+            dignity: 1
+            effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: Light-hearted but about a real town — check the tone is fine for the room (dignity 1).", "AI doubt: Check: 2003 winner Hull."]

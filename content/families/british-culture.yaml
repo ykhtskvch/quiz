@@ -172,6 +172,26 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-05
+          - id: del-boy-van-en-2
+            language: en
+            origin_language: en
+            culture_specificity: LOCAL
+            text: "Which make and model is the Trotters' three-wheeled van in Only Fools and Horses?"
+            options:
+              - { key: A, text: "Reliant Robin", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Reliant Regal", correct: true }
+              - { key: C, text: "Bond Bug", distractor: SAME_CATEGORY }
+              - { key: D, text: "Austin A35 van", distractor: PLAUSIBLE }
+            explanation: "Most people say Robin, but it's a Reliant Regal Supervan III — the Robin only replaced the Regal in 1973."
+            topics: { british-culture: 1.0 }
+            contexts: { UK: 1.0 }
+            generations: { 80s: 1.0, 90s: 0.8 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: HYBRID
+            review_notes: ["AI doubt: harder version from playtest 1 (US-PT1-012). Check: Supervan III, and that the Robin replaced the Regal in 1973."]
 
       - id: blue-peter-badge
         statement: "The children's programme Blue Peter is famous for awarding its badges."

@@ -1,0 +1,75 @@
+# Playtest 1 formats — что на самом деле значит (RU only)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: ru-phrases
+    name: "Что на самом деле значит"
+    facts:
+      - id: da-net-navernoe
+        statement: "Русское «да нет, наверное» означает «скорее нет»."
+        sources: [{ name: "Википедия: Да нет", type: REFERENCE, verified: false }]
+        questions:
+          - id: da-net-navernoe-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что на самом деле значит «да нет, наверное»?"
+            options:
+              - { key: A, text: "Да", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Нет, точно", distractor: NEAR_MISS }
+              - { key: C, text: "Скорее нет", correct: true }
+              - { key: D, text: "Надо подумать до завтра", distractor: PLAUSIBLE }
+            explanation: "Три слова, из которых два противоречат друг другу, — и всем понятно, что это вежливое «нет»."
+            topics: { russia-90s-life: 0.5, ussr-everyday: 0.5 }
+            contexts: { POST_SOVIET: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: prisest-na-dorozhku
+        statement: "По русской примете перед дальней дорогой все ненадолго присаживаются — «посидеть на дорожку»."
+        sources: [{ name: "Википедия: Присесть на дорожку", type: REFERENCE, verified: false }]
+        questions:
+          - id: prisest-na-dorozhku-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Что по русской примете делают все вместе прямо перед дальней дорогой?"
+            options:
+              - { key: A, text: "Стучат по дереву", distractor: SAME_CATEGORY }
+              - { key: B, text: "Ненадолго присаживаются", correct: true }
+              - { key: C, text: "Плюют через левое плечо", distractor: SAME_CATEGORY }
+              - { key: D, text: "Открывают все окна", distractor: PLAUSIBLE }
+            explanation: "«Посидим на дорожку» — минута тишины, чтобы ничего не забыть и чтобы путь был удачным."
+            topics: { russia-90s-life: 0.5, ussr-everyday: 0.5 }
+            contexts: { POST_SOVIET: 1.0 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: ne-svisti
+        statement: "По русской примете в доме нельзя свистеть — «денег не будет»."
+        sources: [{ name: "Википедия: Суеверия", type: REFERENCE, verified: false }]
+        questions:
+          - id: ne-svisti-ru-1
+            language: ru
+            origin_language: ru
+            culture_specificity: LOCAL
+            text: "Почему по русской примете нельзя свистеть в доме?"
+            options:
+              - { key: A, text: "Соседи пожалуются", distractor: PLAUSIBLE }
+              - { key: B, text: "Денег не будет", correct: true }
+              - { key: C, text: "Дождь пойдёт", distractor: PLAUSIBLE }
+              - { key: D, text: "Гости не придут", distractor: PLAUSIBLE }
+            explanation: "Иностранцы обычно не верят, что за свист дома правда делают замечание."
+            topics: { russia-90s-life: 0.5, ussr-everyday: 0.5 }
+            contexts: { POST_SOVIET: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI

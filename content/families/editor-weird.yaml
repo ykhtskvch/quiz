@@ -7,7 +7,7 @@ families:
     facts:
       - id: wombat-cube-poo
         statement: "Wombats produce cube-shaped poo."
-        sources: [ { name: "Wikipedia: Wombat", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Wombat", type: REFERENCE, verified: false }]
         questions:
           - id: wombat-cube-poo-en-1
             language: en
@@ -50,7 +50,7 @@ families:
 
       - id: banana-berry
         statement: "Botanically, a banana is a berry, while strawberries and raspberries are not."
-        sources: [ { name: "Wikipedia: Berry (botany)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Berry (botany)", type: REFERENCE, verified: false }]
         questions:
           - id: banana-berry-en-1
             language: en
@@ -93,7 +93,7 @@ families:
 
       - id: wrinkly-fingers
         statement: "Fingers wrinkle in water because the nervous system constricts blood vessels under the skin."
-        sources: [ { name: "Wikipedia: Wrinkly fingers", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Wrinkly fingers", type: REFERENCE, verified: false }]
         questions:
           - id: wrinkly-fingers-en-1
             language: en
@@ -136,7 +136,7 @@ families:
 
       - id: onion-tears
         statement: "Cutting an onion releases a volatile compound (syn-propanethial-S-oxide) that irritates the eyes."
-        sources: [ { name: "Wikipedia: Syn-Propanethial-S-oxide", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Syn-Propanethial-S-oxide", type: REFERENCE, verified: false }]
         questions:
           - id: onion-tears-en-1
             language: en
@@ -182,7 +182,7 @@ families:
     facts:
       - id: facebook-before-youtube
         statement: "Facebook (2004) launched before YouTube (2005), Twitter (2006) and Instagram (2010)."
-        sources: [ { name: "Wikipedia: Facebook", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Facebook", type: REFERENCE, verified: false }]
         questions:
           - id: facebook-before-youtube-en-1
             language: en
@@ -225,7 +225,7 @@ families:
 
       - id: wikipedia-before-iphone
         statement: "Wikipedia (2001) launched before Spotify (2006), the iPhone (2007) and Instagram (2010)."
-        sources: [ { name: "Wikipedia: Wikipedia", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Wikipedia", type: REFERENCE, verified: false }]
         questions:
           - id: wikipedia-before-iphone-en-1
             language: en
@@ -268,7 +268,7 @@ families:
 
       - id: winrar-not-social
         statement: "MySpace, Bebo and Friendster were social networks; WinRAR is a file-compression program."
-        sources: [ { name: "Wikipedia: WinRAR", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: WinRAR", type: REFERENCE, verified: false }]
         questions:
           - id: winrar-not-social-en-1
             language: en
@@ -313,7 +313,7 @@ families:
 
       - id: save-icon-floppy
         statement: "The usual Save icon is a floppy disk, a storage medium many younger users have never used."
-        sources: [ { name: "Wikipedia: Floppy disk", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Floppy disk", type: REFERENCE, verified: false }]
         questions:
           - id: save-icon-floppy-en-1
             language: en
@@ -356,7 +356,7 @@ families:
 
       - id: bluetooth-harald
         statement: "Bluetooth is named after the 10th-century Danish king Harald \"Bluetooth\" Gormsson."
-        sources: [ { name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false }]
         questions:
           - id: bluetooth-harald-en-1
             language: en
@@ -399,7 +399,7 @@ families:
 
       - id: google-googol
         statement: "The name Google comes from a misspelling of \"googol\", the number 10 to the power of 100."
-        sources: [ { name: "Wikipedia: Google", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Google", type: REFERENCE, verified: false }]
         questions:
           - id: google-googol-en-1
             language: en
@@ -442,7 +442,7 @@ families:
 
       - id: tech-flops-all-three
         statement: "Google Glass, the Microsoft Zune and the Amazon Fire Phone were all discontinued commercial flops."
-        sources: [ { name: "Wikipedia: Amazon Fire Phone", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Amazon Fire Phone", type: REFERENCE, verified: false }]
         questions:
           - id: tech-flops-all-three-en-1
             language: en
@@ -488,7 +488,7 @@ families:
     facts:
       - id: karaoke-japanese
         statement: "The word karaoke is Japanese: \"empty orchestra\"."
-        sources: [ { name: "Wikipedia: Karaoke", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Karaoke", type: REFERENCE, verified: false }]
         questions:
           - id: karaoke-japanese-en-1
             language: en
@@ -531,7 +531,7 @@ families:
 
       - id: robot-capek
         statement: "The word \"robot\" was popularised by Karel Čapek's 1920 play R.U.R.; Čapek was from Czechoslovakia."
-        sources: [ { name: "Wikipedia: R.U.R.", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: R.U.R.", type: REFERENCE, verified: false }]
         questions:
           - id: robot-capek-en-1
             language: en
@@ -574,7 +574,7 @@ families:
 
       - id: emoji-picture-character
         statement: "The Japanese word emoji means \"picture\" (e) + \"character\" (moji); it is unrelated to the English \"emotion\"."
-        sources: [ { name: "Wikipedia: Emoji", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Emoji", type: REFERENCE, verified: false }]
         questions:
           - id: emoji-picture-character-en-1
             language: en
@@ -617,7 +617,7 @@ families:
 
       - id: circle-back
         statement: "In corporate English, \"circle back\" means to return to a topic later."
-        sources: [ { name: "Cambridge Dictionary: circle back", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Cambridge Dictionary: circle back", type: REFERENCE, verified: false }]
         questions:
           - id: circle-back-en-1
             language: en
@@ -640,7 +640,7 @@ families:
 
       - id: no-bandwidth
         statement: "In office jargon, \"I don't have the bandwidth\" means having no time or capacity for something."
-        sources: [ { name: "Cambridge Dictionary: bandwidth", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Cambridge Dictionary: bandwidth", type: REFERENCE, verified: false }]
         questions:
           - id: no-bandwidth-en-1
             language: en
@@ -666,7 +666,7 @@ families:
     facts:
       - id: crisps-saratoga
         statement: "The most common origin story credits George Crum in Saratoga Springs, New York (1853), with inventing potato chips; the story is disputed."
-        sources: [ { name: "Wikipedia: Potato chip", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Potato chip", type: REFERENCE, verified: false }]
         questions:
           - id: crisps-saratoga-en-1
             language: en
@@ -709,7 +709,7 @@ families:
 
       - id: carbonara-no-cream
         statement: "Classic Roman carbonara uses eggs, pecorino, guanciale and pepper — no cream."
-        sources: [ { name: "Wikipedia: Carbonara", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Carbonara", type: REFERENCE, verified: false }]
         questions:
           - id: carbonara-no-cream-en-1
             language: en
@@ -752,7 +752,7 @@ families:
 
       - id: coca-cola-pharmacy
         statement: "Coca-Cola was created in 1886 by pharmacist John Pemberton and first sold at a pharmacy soda fountain."
-        sources: [ { name: "Wikipedia: Coca-Cola", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Coca-Cola", type: REFERENCE, verified: false }]
         questions:
           - id: coca-cola-pharmacy-en-1
             language: en
@@ -795,7 +795,7 @@ families:
 
       - id: caesar-cardini
         statement: "Caesar salad is named after restaurateur Caesar Cardini, who served it in Tijuana in the 1920s."
-        sources: [ { name: "Wikipedia: Caesar salad", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Caesar salad", type: REFERENCE, verified: false }]
         questions:
           - id: caesar-cardini-en-1
             language: en
@@ -838,7 +838,7 @@ families:
 
       - id: mamma-mia-not-pasta
         statement: "Orecchiette, strozzapreti and radiatori are real pasta shapes."
-        sources: [ { name: "Wikipedia: List of pasta", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: List of pasta", type: REFERENCE, verified: false }]
         questions:
           - id: mamma-mia-not-pasta-en-1
             language: en
@@ -881,7 +881,7 @@ families:
 
       - id: strozzapreti-meaning
         statement: "The pasta name strozzapreti means \"priest stranglers\"."
-        sources: [ { name: "Wikipedia: Strozzapreti", type: REFERENCE, verified: true } ]
+        sources: [{ name: "Wikipedia: Strozzapreti", type: REFERENCE, verified: true }]
         questions:
           - id: strozzapreti-meaning-en-1
             language: en
@@ -929,7 +929,7 @@ families:
     facts:
       - id: blue-eiffel-65
         statement: "\"Blue (Da Ba Dee)\" (1998) was performed by the Italian group Eiffel 65."
-        sources: [ { name: "Wikipedia: Blue (Da Ba Dee)", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Blue (Da Ba Dee)", type: REFERENCE, verified: false }]
         questions:
           - id: blue-eiffel-65-en-1
             language: en
@@ -974,7 +974,7 @@ families:
 
       - id: prisencolinensinainciusol
         statement: "Adriano Celentano's \"Prisencolinensinainciusol\" (1972) is sung in made-up gibberish meant to sound like English."
-        sources: [ { name: "Wikipedia: Prisencolinensinainciusol", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Prisencolinensinainciusol", type: REFERENCE, verified: false }]
         questions:
           - id: prisencolinensinainciusol-en-1
             language: en
@@ -1022,7 +1022,7 @@ families:
     facts:
       - id: batman-boring-dull
         statement: "Batman (Turkey), Boring (Oregon, USA) and Dull (Perthshire, Scotland) are all real places."
-        sources: [ { name: "Wikipedia: Boring, Oregon", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Boring, Oregon", type: REFERENCE, verified: false }]
         questions:
           - id: batman-boring-dull-en-1
             language: en
@@ -1065,7 +1065,7 @@ families:
 
       - id: nepal-flag
         statement: "Nepal's flag is the only national flag that is not a rectangle or square."
-        sources: [ { name: "Wikipedia: Flag of Nepal", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Flag of Nepal", type: REFERENCE, verified: false }]
         questions:
           - id: nepal-flag-en-1
             language: en
@@ -1108,7 +1108,7 @@ families:
 
       - id: africa-four-hemispheres
         statement: "Africa lies in all four hemispheres: the equator and the prime meridian both cross it."
-        sources: [ { name: "Wikipedia: Africa", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Africa", type: REFERENCE, verified: false }]
         questions:
           - id: africa-four-hemispheres-en-1
             language: en
@@ -1153,7 +1153,7 @@ families:
 
       - id: pacific-largest
         statement: "The Pacific is the world's largest ocean."
-        sources: [ { name: "Wikipedia: Pacific Ocean", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Pacific Ocean", type: REFERENCE, verified: false }]
         questions:
           - id: pacific-largest-en-1
             language: en
@@ -1198,8 +1198,8 @@ families:
     name: "Weird but true: sport"
     facts:
       - id: old-olympic-events
-        statement: "Tug of war, obstacle swimming and live pigeon shooting were all events at early Olympic Games (Paris 1900 for the last two)."
-        sources: [ { name: "Wikipedia: 1900 Summer Olympics", type: REFERENCE, verified: false } ]
+        statement: "Tug of war (1900–1920), obstacle swimming (1900) and rope climbing (1896–1932) were all official Olympic events."
+        sources: [{ name: "Wikipedia: 1900 Summer Olympics", type: REFERENCE, verified: false }]
         questions:
           - id: old-olympic-events-en-1
             language: en
@@ -1209,9 +1209,9 @@ families:
             options:
               - { key: A, text: "Tug of war", distractor: NEAR_MISS }
               - { key: B, text: "Obstacle swimming", distractor: NEAR_MISS }
-              - { key: C, text: "Live pigeon shooting", distractor: NEAR_MISS }
+              - { key: C, text: "Rope climbing", distractor: NEAR_MISS }
               - { key: D, text: "All of the above", correct: true }
-            explanation: "Paris 1900 had swimming over and under boats in the Seine — and the only Olympic event where animals were deliberately killed."
+            explanation: "Paris 1900 had swimmers going over and under boats in the Seine; rope climbing was part of gymnastics until 1932."
             topics: { sports: 1.0 }
             contexts: { GLOBAL: 1.0 }
             difficulty: 3
@@ -1219,7 +1219,8 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
             status: DRAFT
             generation_method: HYBRID
-            review_notes: [ "AI doubt: Live pigeon shooting's official Olympic status is disputed — check the source wording." ]
+            review_notes:
+              - "Сверка Claude 2026-10-05: стрельба по живым голубям (1900) не входит в официальные результаты МОК (en.wikipedia: Shooting at the 1900 Summer Olympics) — заменена на лазание по канату."
           - id: old-olympic-events-ru-1
             language: ru
             origin_language: en
@@ -1228,9 +1229,9 @@ families:
             options:
               - { key: A, text: Перетягивание каната, distractor: NEAR_MISS }
               - { key: B, text: Плавание с препятствиями, distractor: NEAR_MISS }
-              - { key: C, text: Стрельба по живым голубям, distractor: NEAR_MISS }
+              - { key: C, text: Лазание по канату, distractor: NEAR_MISS }
               - { key: D, text: Всё перечисленное, correct: true }
-            explanation: В Париже-1900 плавали над лодками и под ними прямо в Сене — и устроили единственное соревнование, где намеренно убивали животных.
+            explanation: В Париже-1900 плавали над лодками и под ними прямо в Сене, а лазание по канату было гимнастической дисциплиной до 1932 года.
             topics: { sports: 1 }
             contexts: { GLOBAL: 1 }
             difficulty: 3
@@ -1239,12 +1240,12 @@ families:
             status: DRAFT
             generation_method: AI
             review_notes:
-              - "AI doubt: Live pigeon shooting's official Olympic status is disputed — check the source wording."
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+              - "Сверка Claude 2026-10-05: голубиная стрельба заменена на лазание по канату — её нет в официальных результатах МОК."
 
       - id: odd-sports-real
         statement: "Chess boxing, wife carrying and underwater hockey are all real sports with championships."
-        sources: [ { name: "Wikipedia: Chess boxing", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: Chess boxing", type: REFERENCE, verified: false }]
         questions:
           - id: odd-sports-real-en-1
             language: en
@@ -1290,7 +1291,7 @@ families:
     facts:
       - id: ikea-bike-tv
         statement: "IKEA has sold a bicycle (Sladda, 2016) and a TV built into furniture (Uppleva, 2012)."
-        sources: [ { name: "Wikipedia: IKEA", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: IKEA", type: REFERENCE, verified: false }]
         questions:
           - id: ikea-bike-tv-en-1
             language: en
@@ -1310,7 +1311,8 @@ families:
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
             status: DRAFT
             generation_method: HYBRID
-            review_notes: [ "AI doubt: Check product names and years (Sladda 2016, Uppleva 2012)." ]
+            review_notes:
+              - "Сверка Claude 2026-10-05: подтверждено (en.wikipedia: IKEA) — Sladda 2016–2018, Uppleva с 2012."
           - id: ikea-bike-tv-ru-1
             language: ru
             origin_language: en
@@ -1330,12 +1332,12 @@ families:
             status: DRAFT
             generation_method: AI
             review_notes:
-              - "AI doubt: Check product names and years (Sladda 2016, Uppleva 2012)."
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
+              - "Сверка Claude 2026-10-05: подтверждено (en.wikipedia: IKEA) — Sladda 2016–2018, Uppleva с 2012."
 
       - id: luke-i-am-your-father
         statement: "In The Empire Strikes Back, Darth Vader says \"No, I am your father\", not \"Luke, I am your father\"."
-        sources: [ { name: "Wikipedia: I am your father", type: REFERENCE, verified: false } ]
+        sources: [{ name: "Wikipedia: I am your father", type: REFERENCE, verified: false }]
         questions:
           - id: luke-i-am-your-father-en-1
             language: en

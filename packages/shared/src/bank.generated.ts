@@ -1935,6 +1935,54 @@ export const BANK: BankQuestion[] = [
     "status": "APPROVED"
   },
   {
+    "id": "del-boy-van-en-2",
+    "factId": "del-boy-van",
+    "familyId": "british-tv",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Which make and model is the Trotters' three-wheeled van in Only Fools and Horses?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Reliant Robin"
+      },
+      {
+        "key": "B",
+        "text": "Reliant Regal"
+      },
+      {
+        "key": "C",
+        "text": "Bond Bug"
+      },
+      {
+        "key": "D",
+        "text": "Austin A35 van"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Most people say Robin, but it's a Reliant Regal Supervan III — the Robin only replaced the Regal in 1973.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.8
+    },
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "blue-peter-badge-en-1",
     "factId": "blue-peter-badge",
     "familyId": "british-tv",
@@ -7315,7 +7363,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "C",
-    "explanation": "A 2002 hit that got its own film announcement twenty years later.",
+    "explanation": "Paramount bought the film rights back in 2003; in 2022 Avril said she was developing the film herself.",
     "topics": {
       "world-pop": 1
     },
@@ -7362,7 +7410,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "C",
-    "explanation": "Хит 2002 года, по которому спустя почти двадцать лет объявили фильм.",
+    "explanation": "Права на фильм по песне купили ещё в 2003 году, а в 2022-м Аврил сказала, что занимается им сама.",
     "topics": {
       "world-pop": 1
     },
@@ -7785,7 +7833,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Canadians from Montreal; the song had a second life on the Cheaper by the Dozen soundtrack.",
+    "explanation": "Canadians from Montreal; the song was on the soundtrack of the teen comedy The New Guy (2002).",
     "topics": {
       "world-pop": 1
     },
@@ -7832,7 +7880,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Канадцы из Монреаля; у песни была вторая жизнь в саундтреке фильма «Оптом дешевле».",
+    "explanation": "Канадцы из Монреаля; песня вошла в саундтрек подростковой комедии «Новенький» (2002).",
     "topics": {
       "world-pop": 1
     },
@@ -12623,7 +12671,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "C",
-        "text": "Live pigeon shooting"
+        "text": "Rope climbing"
       },
       {
         "key": "D",
@@ -12631,7 +12679,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "D",
-    "explanation": "Paris 1900 had swimming over and under boats in the Seine — and the only Olympic event where animals were deliberately killed.",
+    "explanation": "Paris 1900 had swimmers going over and under boats in the Seine; rope climbing was part of gymnastics until 1932.",
     "topics": {
       "sports": 1
     },
@@ -12668,7 +12716,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "C",
-        "text": "Стрельба по живым голубям"
+        "text": "Лазание по канату"
       },
       {
         "key": "D",
@@ -12676,7 +12724,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "D",
-    "explanation": "В Париже-1900 плавали над лодками и под ними прямо в Сене — и устроили единственное соревнование, где намеренно убивали животных.",
+    "explanation": "В Париже-1900 плавали над лодками и под ними прямо в Сене, а лазание по канату было гимнастической дисциплиной до 1932 года.",
     "topics": {
       "sports": 1
     },
@@ -14237,6 +14285,431 @@ export const BANK: BankQuestion[] = [
     "dignity": 3,
     "effects": {
       "I_KNOW_THIS": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "da-net-navernoe-ru-1",
+    "factId": "da-net-navernoe",
+    "familyId": "ru-phrases",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что на самом деле значит «да нет, наверное»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Да"
+      },
+      {
+        "key": "B",
+        "text": "Нет, точно"
+      },
+      {
+        "key": "C",
+        "text": "Скорее нет"
+      },
+      {
+        "key": "D",
+        "text": "Надо подумать до завтра"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Три слова, из которых два противоречат друг другу, — и всем понятно, что это вежливое «нет».",
+    "topics": {
+      "russia-90s-life": 0.5,
+      "ussr-everyday": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "prisest-na-dorozhku-ru-1",
+    "factId": "prisest-na-dorozhku",
+    "familyId": "ru-phrases",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Что по русской примете делают все вместе прямо перед дальней дорогой?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Стучат по дереву"
+      },
+      {
+        "key": "B",
+        "text": "Ненадолго присаживаются"
+      },
+      {
+        "key": "C",
+        "text": "Плюют через левое плечо"
+      },
+      {
+        "key": "D",
+        "text": "Открывают все окна"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "«Посидим на дорожку» — минута тишины, чтобы ничего не забыть и чтобы путь был удачным.",
+    "topics": {
+      "russia-90s-life": 0.5,
+      "ussr-everyday": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ne-svisti-ru-1",
+    "factId": "ne-svisti",
+    "familyId": "ru-phrases",
+    "language": "ru",
+    "originLanguage": "ru",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "Почему по русской примете нельзя свистеть в доме?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Соседи пожалуются"
+      },
+      {
+        "key": "B",
+        "text": "Денег не будет"
+      },
+      {
+        "key": "C",
+        "text": "Дождь пойдёт"
+      },
+      {
+        "key": "D",
+        "text": "Гости не придут"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Иностранцы обычно не верят, что за свист дома правда делают замечание.",
+    "topics": {
+      "russia-90s-life": 0.5,
+      "ussr-everyday": 0.5
+    },
+    "contexts": {
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "brit-with-greatest-respect-en-1",
+    "factId": "brit-with-greatest-respect",
+    "familyId": "british-phrases",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "According to the famous \"what the British really mean\" guide, what does \"With the greatest respect…\" actually mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "I admire your opinion"
+      },
+      {
+        "key": "B",
+        "text": "You are an idiot"
+      },
+      {
+        "key": "C",
+        "text": "Please go on"
+      },
+      {
+        "key": "D",
+        "text": "I'm about to agree"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The more respect a Brit announces, the less there is. The guide went viral as a table for confused European colleagues.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.6,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "brit-bear-in-mind-en-1",
+    "factId": "brit-bear-in-mind",
+    "familyId": "british-phrases",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "When a Brit says \"I'll bear it in mind\", what do they usually mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "I'll definitely do it"
+      },
+      {
+        "key": "B",
+        "text": "I've forgotten it already"
+      },
+      {
+        "key": "C",
+        "text": "Remind me tomorrow"
+      },
+      {
+        "key": "D",
+        "text": "I need to ask my boss"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Europeans tend to hear a promise. The British usually mean the conversation is over.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.6,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "brit-quite-good-en-1",
+    "factId": "brit-quite-good",
+    "familyId": "british-phrases",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In British English, what does \"quite good\" often really mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Excellent"
+      },
+      {
+        "key": "B",
+        "text": "Very good"
+      },
+      {
+        "key": "C",
+        "text": "A bit disappointing"
+      },
+      {
+        "key": "D",
+        "text": "Brilliant, but don't tell anyone"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Americans hear \"very good\"; in Britain \"quite\" usually turns the volume down, not up.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.6,
+      "current": 0.6
+    },
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.7,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "brit-very-interesting-en-1",
+    "factId": "brit-very-interesting",
+    "familyId": "british-phrases",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "A British colleague calls your idea \"very interesting\". What do they most likely mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "They love it"
+      },
+      {
+        "key": "B",
+        "text": "They want to hear more"
+      },
+      {
+        "key": "C",
+        "text": "That is clearly nonsense"
+      },
+      {
+        "key": "D",
+        "text": "They'll fund it"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "One of the most famous lines in the guide — and one of the most misunderstood in meetings.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.6,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "brit-correct-me-en-1",
+    "factId": "brit-correct-me",
+    "familyId": "british-phrases",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "What does a Brit usually mean by \"Correct me if I'm wrong…\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "I'm not sure, please help"
+      },
+      {
+        "key": "B",
+        "text": "I know I'm right — don't contradict me"
+      },
+      {
+        "key": "C",
+        "text": "Let's vote on it"
+      },
+      {
+        "key": "D",
+        "text": "I've made a mistake"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It's an invitation nobody is supposed to accept.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.6,
+      "current": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_FIGURED_IT_OUT": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "crap-towns-hull-en-1",
+    "factId": "crap-towns-hull",
+    "familyId": "crap-towns",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "LOCAL",
+    "isBridge": false,
+    "text": "In the tongue-in-cheek 2003 book Crap Towns, which place was voted the UK's worst?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Slough"
+      },
+      {
+        "key": "B",
+        "text": "Luton"
+      },
+      {
+        "key": "C",
+        "text": "Hull"
+      },
+      {
+        "key": "D",
+        "text": "Morecambe"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Slough is the famous trap: John Betjeman's 1937 poem begins \"Come, friendly bombs, and fall on Slough!\" — but the book's winner was Hull.",
+    "topics": {
+      "british-culture": 1
+    },
+    "contexts": {
+      "UK": 1
+    },
+    "generations": {
+      "10s": 0.6,
+      "current": 0.6
+    },
+    "difficulty": 4,
+    "dignity": 1,
+    "effects": {
+      "HERO_CANDIDATE": 0.6,
+      "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
     "status": "DRAFT"
