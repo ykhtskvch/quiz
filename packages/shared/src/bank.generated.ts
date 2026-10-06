@@ -20627,6 +20627,753 @@ export const BANK: BankQuestion[] = [
     "editorRating": 5
   },
   {
+    "id": "ak-47-year-en-1",
+    "factId": "ak-47-year",
+    "familyId": "bridges-things",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What does the \"47\" in AK-47 stand for?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The year 1947"
+      },
+      {
+        "key": "B",
+        "text": "A .47 calibre"
+      },
+      {
+        "key": "C",
+        "text": "47 parts"
+      },
+      {
+        "key": "D",
+        "text": "A 47-round magazine"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "AK is Avtomat Kalashnikova — Kalashnikov's automatic rifle; 1947 is the year the design was finalised.",
+    "topics": {
+      "cold-war": 0.6,
+      "science": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "lada-riva-ussr-en-1",
+    "factId": "lada-riva-ussr",
+    "familyId": "bridges-things",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "The Lada Riva — a favourite punchline in 1980s Britain — was built in which country?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Poland"
+      },
+      {
+        "key": "B",
+        "text": "The USSR"
+      },
+      {
+        "key": "C",
+        "text": "Czechoslovakia"
+      },
+      {
+        "key": "D",
+        "text": "Yugoslavia"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It's the export name of the VAZ-2105/2107 \"Zhiguli\", built in Tolyatti. Half the room probably rode in one.",
+    "topics": {
+      "british-culture": 0.4,
+      "fashion-brands": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8,
+      "UK": 0.8
+    },
+    "generations": {
+      "80s": 1,
+      "90s": 0.6
+    },
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "faberge-romanovs-en-1",
+    "factId": "faberge-romanovs",
+    "familyId": "bridges-things",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Fabergé's famous jewelled eggs were made for which royal family?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The British royal family"
+      },
+      {
+        "key": "B",
+        "text": "The Romanovs of Russia"
+      },
+      {
+        "key": "C",
+        "text": "The Habsburgs"
+      },
+      {
+        "key": "D",
+        "text": "The Bourbons of France"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Tsar Alexander III ordered the first one for his wife in 1885; each Easter brought a new surprise inside.",
+    "topics": {
+      "art": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "matryoshka-japan-en-1",
+    "factId": "matryoshka-japan",
+    "familyId": "bridges-things",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "When was the first Russian matryoshka doll made?",
+    "options": [
+      {
+        "key": "A",
+        "text": "In the 1690s"
+      },
+      {
+        "key": "B",
+        "text": "In the 1890s"
+      },
+      {
+        "key": "C",
+        "text": "In the 1790s"
+      },
+      {
+        "key": "D",
+        "text": "In the 1930s"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Carved by Vasily Zvyozdochkin to a design by Sergey Malyutin. The story that it copied a Japanese doll is popular, but historians doubt it.",
+    "topics": {
+      "art": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "BRIDGE": 0.6,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "babushka-meaning-en-1",
+    "factId": "babushka-meaning",
+    "familyId": "bridges-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "In Russian, what does \"babushka\" actually mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A headscarf"
+      },
+      {
+        "key": "B",
+        "text": "Grandmother"
+      },
+      {
+        "key": "C",
+        "text": "A nesting doll"
+      },
+      {
+        "key": "D",
+        "text": "A cabbage soup"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "English borrowed the word for the headscarf grandmothers wear — Russians would only ever mean the grandmother.",
+    "topics": {
+      "world-literature": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "vodka-little-water-en-1",
+    "factId": "vodka-little-water",
+    "familyId": "bridges-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What does the word \"vodka\" literally mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Fire water"
+      },
+      {
+        "key": "B",
+        "text": "Little water"
+      },
+      {
+        "key": "C",
+        "text": "Pure spirit"
+      },
+      {
+        "key": "D",
+        "text": "Grain drink"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Voda is water; vodka is its affectionate little form.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "cyrillic-saint-cyril-en-1",
+    "factId": "cyrillic-saint-cyril",
+    "familyId": "bridges-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "The Cyrillic alphabet is named after…",
+    "options": [
+      {
+        "key": "A",
+        "text": "A Russian tsar"
+      },
+      {
+        "key": "B",
+        "text": "A Byzantine missionary, Saint Cyril"
+      },
+      {
+        "key": "C",
+        "text": "A Bulgarian city"
+      },
+      {
+        "key": "D",
+        "text": "The first printing press"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Cyril and his brother Methodius brought writing to the Slavs; the alphabet itself was developed by their followers.",
+    "topics": {
+      "world-literature": 0.6,
+      "geography": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "red-square-beautiful-en-1",
+    "factId": "red-square-beautiful",
+    "familyId": "bridges-words",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Moscow's Red Square got its name long before communism. What did \"krasnaya\" originally mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Red"
+      },
+      {
+        "key": "B",
+        "text": "Beautiful"
+      },
+      {
+        "key": "C",
+        "text": "Revolutionary"
+      },
+      {
+        "key": "D",
+        "text": "Main"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Krasnaya once meant \"beautiful\" — the name stuck to the square in the 17th century.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "BRIDGE": 0.6,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "riga-latvia-en-1",
+    "factId": "riga-latvia",
+    "familyId": "bridges-places",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "What is the capital of Latvia?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tallinn"
+      },
+      {
+        "key": "B",
+        "text": "Riga"
+      },
+      {
+        "key": "C",
+        "text": "Vilnius"
+      },
+      {
+        "key": "D",
+        "text": "Minsk"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Tallinn is Estonia and Vilnius is Lithuania — the three Baltic capitals people mix up most.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8,
+      "EUROPE": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "BRIDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "minsk-belarus-en-1",
+    "factId": "minsk-belarus",
+    "familyId": "bridges-places",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Minsk is the capital of which country?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ukraine"
+      },
+      {
+        "key": "B",
+        "text": "Belarus"
+      },
+      {
+        "key": "C",
+        "text": "Lithuania"
+      },
+      {
+        "key": "D",
+        "text": "Moldova"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Belarus sits between Poland, Lithuania, Latvia, Russia and Ukraine.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "BRIDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "trans-siberian-vladivostok-en-1",
+    "factId": "trans-siberian-vladivostok",
+    "familyId": "bridges-places",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "The Trans-Siberian Railway runs from Moscow to…",
+    "options": [
+      {
+        "key": "A",
+        "text": "Novosibirsk"
+      },
+      {
+        "key": "B",
+        "text": "Vladivostok"
+      },
+      {
+        "key": "C",
+        "text": "Beijing"
+      },
+      {
+        "key": "D",
+        "text": "Murmansk"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "9,289 km — about a week on the train. Beijing is the Trans-Mongolian branch; Irkutsk and Krasnoyarsk are on the way.",
+    "topics": {
+      "geography": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mendeleev-periodic-en-1",
+    "factId": "mendeleev-periodic",
+    "familyId": "bridges-science-space",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Who created the periodic table of the elements?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Marie Curie"
+      },
+      {
+        "key": "B",
+        "text": "Dmitri Mendeleev"
+      },
+      {
+        "key": "C",
+        "text": "Niels Bohr"
+      },
+      {
+        "key": "D",
+        "text": "Antoine Lavoisier"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "In 1869 he left gaps for elements nobody had found yet — and predicted their properties.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 5,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pavlov-dogs-en-1",
+    "factId": "pavlov-dogs",
+    "familyId": "bridges-science-space",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Ivan Pavlov is famous for experiments with…",
+    "options": [
+      {
+        "key": "A",
+        "text": "Cats"
+      },
+      {
+        "key": "B",
+        "text": "Dogs"
+      },
+      {
+        "key": "C",
+        "text": "Pigeons"
+      },
+      {
+        "key": "D",
+        "text": "Rats"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A bell, then food — and soon the dogs drooled at the bell alone. He won the Nobel Prize in 1904, for digestion.",
+    "topics": {
+      "science": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "gagarin-manchester-1961-en-1",
+    "factId": "gagarin-manchester-1961",
+    "familyId": "bridges-science-space",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "On his 1961 visit to Britain, in which city did Yuri Gagarin refuse an umbrella and ride through heavy rain in an open-top car?",
+    "options": [
+      {
+        "key": "A",
+        "text": "London"
+      },
+      {
+        "key": "B",
+        "text": "Manchester"
+      },
+      {
+        "key": "C",
+        "text": "Glasgow"
+      },
+      {
+        "key": "D",
+        "text": "Liverpool"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "He stood up in the car so the cheering crowds could see him. He visited London on the same trip.",
+    "topics": {
+      "space": 1,
+      "british-culture": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8,
+      "UK": 0.8
+    },
+    "generations": {},
+    "difficulty": 5,
+    "dignity": 4,
+    "effects": {
+      "BRIDGE": 0.6,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "fischer-spassky-1972-en-1",
+    "factId": "fischer-spassky-1972",
+    "familyId": "bridges-cold-war-culture",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Which American beat the Soviet world chess champion Boris Spassky in 1972?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Garry Kasparov"
+      },
+      {
+        "key": "B",
+        "text": "Bobby Fischer"
+      },
+      {
+        "key": "C",
+        "text": "Paul Morphy"
+      },
+      {
+        "key": "D",
+        "text": "Magnus Carlsen"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The \"Match of the Century\" in Reykjavík was a Cold War event in its own right. Kasparov was Soviet; Carlsen is Norwegian.",
+    "topics": {
+      "sports": 0.8,
+      "cold-war": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "BRIDGE": 0.8,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "doctor-zhivago-nobel-en-1",
+    "factId": "doctor-zhivago-nobel",
+    "familyId": "bridges-cold-war-culture",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "REGIONAL",
+    "isBridge": true,
+    "text": "Which novel, banned in the USSR, won its author the 1958 Nobel Prize in Literature?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Master and Margarita"
+      },
+      {
+        "key": "B",
+        "text": "Doctor Zhivago"
+      },
+      {
+        "key": "C",
+        "text": "Lolita"
+      },
+      {
+        "key": "D",
+        "text": "One Day in the Life of Ivan Denisovich"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Pasternak was pressured into declining the prize. Solzhenitsyn — the author of One Day… — got his Nobel in 1970.",
+    "topics": {
+      "world-literature": 0.8,
+      "cold-war": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.8
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 5,
+    "effects": {
+      "BRIDGE": 0.6,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "matryoshka-en-1",
     "factId": "matryoshka",
     "familyId": "russian-words",
@@ -35599,7 +36346,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Песня вышла в 1993 году, а мировым хитом стала в ремиксе 1996-го.",
+    "explanation": "Песня вышла в 1993 году, а мировым хитом стал ремикс Bayside Boys 1995 года — в 1996-м он 14 недель был первым в США.",
     "topics": {
       "world-pop": 1
     },
@@ -35646,7 +36393,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "The song came out in 1993 and went global with the 1996 remix.",
+    "explanation": "It came out in 1993; the Bayside Boys remix of 1995 spent 14 weeks at US No. 1 in 1996.",
     "topics": {
       "world-pop": 1
     },

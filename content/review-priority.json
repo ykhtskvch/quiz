@@ -1,1348 +1,711 @@
 {
- "games": 600,
+ "games": 300,
  "rooms": [
-  "Суббота: друзья 30–45, русская комната",
-  "Суббота: друзья 30–45, английская смешанная комната"
+  "Суббота 10.10: 8 постсоветских + 2 британца, EN"
  ],
  "items": [
   {
-   "id": "everton-toffees-en-1",
-   "share": 0.19
-  },
-  {
-   "id": "simpsons-springfield-en-1",
-   "share": 0.187
-  },
-  {
-   "id": "del-boy-van-en-1",
-   "share": 0.187
-  },
-  {
-   "id": "blue-peter-badge-en-1",
-   "share": 0.182
+   "id": "sims-simlish-en-1",
+   "share": 0.667
   },
   {
    "id": "tube-circle-yellow-en-1",
-   "share": 0.18
+   "share": 0.537
   },
   {
-   "id": "wallace-wensleydale-en-1",
-   "share": 0.177
-  },
-  {
-   "id": "apples-and-pears-en-1",
-   "share": 0.17
-  },
-  {
-   "id": "big-ben-bell-en-1",
-   "share": 0.165
-  },
-  {
-   "id": "elizabeth-70-years-en-1",
-   "share": 0.152
-  },
-  {
-   "id": "eastenders-square-en-1",
-   "share": 0.148
-  },
-  {
-   "id": "crazy-frog-axel-f-en-1",
-   "share": 0.147
-  },
-  {
-   "id": "dial-up-phone-en-1",
-   "share": 0.145
-  },
-  {
-   "id": "stonehenge-wiltshire-en-1",
-   "share": 0.145
-  },
-  {
-   "id": "timati-banda-ru-1",
-   "share": 0.143
-  },
-  {
-   "id": "ru-domain-year-ru-1",
-   "share": 0.143
-  },
-  {
-   "id": "friends-central-perk-en-1",
-   "share": 0.143
-  },
-  {
-   "id": "zveri-roma-real-name-ru-1",
-   "share": 0.142
-  },
-  {
-   "id": "del-boy-van-en-2",
-   "share": 0.14
-  },
-  {
-   "id": "mr-bean-atkinson-en-1",
-   "share": 0.14
-  },
-  {
-   "id": "baikonur-country-ru-1",
-   "share": 0.137
-  },
-  {
-   "id": "fidonet-ru-1",
-   "share": 0.133
-  },
-  {
-   "id": "tereshkova-callsign-ru-1",
-   "share": 0.13
-  },
-  {
-   "id": "russia-time-zones-ru-1",
-   "share": 0.128
-  },
-  {
-   "id": "nirvana-aberdeen-en-1",
-   "share": 0.127
-  },
-  {
-   "id": "rambler-pushchino-ru-1",
-   "share": 0.125
-  },
-  {
-   "id": "britney-debut-en-1",
-   "share": 0.125
-  },
-  {
-   "id": "myspace-top-8-en-1",
-   "share": 0.123
-  },
-  {
-   "id": "mushy-peas-en-1",
-   "share": 0.122
-  },
-  {
-   "id": "winamp-llama-en-1",
-   "share": 0.12
-  },
-  {
-   "id": "livejournal-before-vk-ru-1",
-   "share": 0.115
-  },
-  {
-   "id": "masyanya-author-ru-1",
-   "share": 0.112
-  },
-  {
-   "id": "flight-of-the-bumblebee-en-1",
-   "share": 0.112
-  },
-  {
-   "id": "livejournal-sup-ru-1",
-   "share": 0.108
-  },
-  {
-   "id": "dima-bilan-real-name-ru-1",
-   "share": 0.108
-  },
-  {
-   "id": "always-love-you-dolly-en-1",
-   "share": 0.108
-  },
-  {
-   "id": "bbc-war-and-peace-2016-en-1",
-   "share": 0.105
-  },
-  {
-   "id": "fabrika-zvezd-1-winner-ru-1",
-   "share": 0.103
-  },
-  {
-   "id": "mario-plumber-en-1",
-   "share": 0.102
-  },
-  {
-   "id": "britney-debut-ru-1",
-   "share": 0.1
-  },
-  {
-   "id": "sms-cyrillic-70-ru-1",
-   "share": 0.1
-  },
-  {
-   "id": "malovato-budet-ru-1",
-   "share": 0.1
-  },
-  {
-   "id": "mir-deorbit-ru-1",
-   "share": 0.1
-  },
-  {
-   "id": "macarena-spain-en-1",
-   "share": 0.1
-  },
-  {
-   "id": "nu-pogodi-wolf-voice-ru-1",
-   "share": 0.098
-  },
-  {
-   "id": "karlson-cure-ru-1",
-   "share": 0.098
-  },
-  {
-   "id": "pluto-dwarf-planet-ru-1",
-   "share": 0.098
-  },
-  {
-   "id": "bake-off-edd-kimber-en-1",
-   "share": 0.098
-  },
-  {
-   "id": "qip-client-ru-1",
-   "share": 0.097
-  },
-  {
-   "id": "tardis-police-box-en-1",
-   "share": 0.095
-  },
-  {
-   "id": "odnoklassniki-founder-ru-1",
-   "share": 0.093
-  },
-  {
-   "id": "preved-medved-origin-ru-1",
-   "share": 0.092
-  },
-  {
-   "id": "titanic-oscars-en-1",
-   "share": 0.092
-  },
-  {
-   "id": "numa-numa-en-1",
-   "share": 0.09
-  },
-  {
-   "id": "bonfire-night-en-1",
-   "share": 0.09
-  },
-  {
-   "id": "kopeyka-vaz-2101-ru-1",
-   "share": 0.087
-  },
-  {
-   "id": "mailru-1998-ru-1",
-   "share": 0.087
-  },
-  {
-   "id": "vinni-pukh-voice-ru-1",
-   "share": 0.085
-  },
-  {
-   "id": "sims-simlish-en-1",
-   "share": 0.085
-  },
-  {
-   "id": "nirvana-aberdeen-ru-1",
-   "share": 0.083
-  },
-  {
-   "id": "dendy-clone-ru-1",
-   "share": 0.083
-  },
-  {
-   "id": "always-love-you-dolly-ru-1",
-   "share": 0.082
-  },
-  {
-   "id": "korolev-chief-designer-ru-1",
-   "share": 0.082
-  },
-  {
-   "id": "elektronika-egg-game-ru-1",
-   "share": 0.08
-  },
-  {
-   "id": "rhumble-number-one-2013-en-1",
-   "share": 0.08
-  },
-  {
-   "id": "vronsky-frou-frou-ru-1",
-   "share": 0.078
-  },
-  {
-   "id": "bi2-polkovnik-ru-1",
-   "share": 0.078
-  },
-  {
-   "id": "theremin-termen-en-1",
-   "share": 0.078
-  },
-  {
-   "id": "timati-real-name-ru-1",
-   "share": 0.077
-  },
-  {
-   "id": "macarena-spain-ru-1",
-   "share": 0.077
-  },
-  {
-   "id": "ptitsa-govorun-ru-1",
-   "share": 0.077
-  },
-  {
-   "id": "scream-munch-en-1",
-   "share": 0.077
-  },
-  {
-   "id": "avatar-2-billion-en-1",
-   "share": 0.075
-  },
-  {
-   "id": "matrix-red-pill-en-1",
-   "share": 0.075
-  },
-  {
-   "id": "ace-of-base-sweden-en-1",
-   "share": 0.075
-  },
-  {
-   "id": "serebro-producer-ru-1",
-   "share": 0.073
-  },
-  {
-   "id": "vk-year-ru-1",
-   "share": 0.073
-  },
-  {
-   "id": "wii-sports-no-football-en-1",
-   "share": 0.073
-  },
-  {
-   "id": "berlin-four-sectors-en-1",
-   "share": 0.073
-  },
-  {
-   "id": "pushkin-kern-ru-1",
-   "share": 0.072
-  },
-  {
-   "id": "crazy-frog-axel-f-ru-1",
-   "share": 0.07
-  },
-  {
-   "id": "andropov-term-ru-1",
-   "share": 0.07
-  },
-  {
-   "id": "youtube-year-en-1",
-   "share": 0.07
-  },
-  {
-   "id": "berlin-wall-built-en-1",
-   "share": 0.07
-  },
-  {
-   "id": "aldi-specialbuys-days-en-1",
-   "share": 0.07
+   "id": "mammoth-from-russian-en-1",
+   "share": 0.533
   },
   {
    "id": "bude-tunnel-en-1",
-   "share": 0.068
-  },
-  {
-   "id": "myspace-autoplay-en-1",
-   "share": 0.068
-  },
-  {
-   "id": "nutcracker-tchaikovsky-en-1",
-   "share": 0.068
+   "share": 0.36
   },
   {
    "id": "ed-balls-day-en-1",
-   "share": 0.068
+   "share": 0.343
   },
   {
-   "id": "via-gra-first-singer-ru-1",
-   "share": 0.067
+   "id": "wallace-wensleydale-en-1",
+   "share": 0.337
   },
   {
-   "id": "why-dont-you-get-a-job-en-1",
-   "share": 0.067
+   "id": "youtube-year-en-1",
+   "share": 0.317
   },
   {
-   "id": "natasha-pierre-ru-1",
-   "share": 0.065
-  },
-  {
-   "id": "gta-sa-cj-en-1",
-   "share": 0.065
-  },
-  {
-   "id": "gta-sa-cj-ru-1",
-   "share": 0.063
-  },
-  {
-   "id": "wii-sports-no-football-ru-1",
-   "share": 0.063
-  },
-  {
-   "id": "t9-meaning-en-1",
-   "share": 0.063
-  },
-  {
-   "id": "glukoza-real-name-ru-1",
-   "share": 0.062
-  },
-  {
-   "id": "polina-gagarina-fabrika-2-ru-1",
-   "share": 0.062
-  },
-  {
-   "id": "yalta-1945-en-1",
-   "share": 0.062
-  },
-  {
-   "id": "murzilka-ru-1",
-   "share": 0.06
-  },
-  {
-   "id": "crime-opening-july-ru-1",
-   "share": 0.06
-  },
-  {
-   "id": "matryoshka-en-1",
-   "share": 0.06
-  },
-  {
-   "id": "posh-spice-en-1",
-   "share": 0.06
-  },
-  {
-   "id": "alien-weyland-yutani-en-1",
-   "share": 0.06
-  },
-  {
-   "id": "santa-barbara-family-ru-1",
-   "share": 0.058
-  },
-  {
-   "id": "uma2rman-nochnoy-dozor-ru-1",
-   "share": 0.058
-  },
-  {
-   "id": "ezhik-norshtein-ru-1",
-   "share": 0.058
-  },
-  {
-   "id": "terminator-be-back-ru-1",
-   "share": 0.058
-  },
-  {
-   "id": "cheops-wonder-en-1",
-   "share": 0.058
-  },
-  {
-   "id": "windows-xp-bliss-en-1",
-   "share": 0.058
-  },
-  {
-   "id": "matrix-red-pill-ru-1",
-   "share": 0.057
-  },
-  {
-   "id": "uma2rman-founders-ru-1",
-   "share": 0.057
-  },
-  {
-   "id": "checkpoint-charlie-en-1",
-   "share": 0.057
-  },
-  {
-   "id": "smash-members-ru-1",
-   "share": 0.055
-  },
-  {
-   "id": "modern-talking-country-ru-1",
-   "share": 0.055
-  },
-  {
-   "id": "avatar-2-billion-ru-1",
-   "share": 0.055
-  },
-  {
-   "id": "warsaw-pact-en-1",
-   "share": 0.055
-  },
-  {
-   "id": "tetris-pajitnov-en-1",
-   "share": 0.055
-  },
-  {
-   "id": "sonic-sega-en-1",
-   "share": 0.055
-  },
-  {
-   "id": "terminator-be-back-en-1",
-   "share": 0.055
-  },
-  {
-   "id": "numa-numa-ru-1",
-   "share": 0.053
-  },
-  {
-   "id": "winamp-llama-ru-1",
-   "share": 0.053
-  },
-  {
-   "id": "ironiya-apartment-12-ru-1",
-   "share": 0.053
-  },
-  {
-   "id": "bremenskie-trubadur-ru-1",
-   "share": 0.053
-  },
-  {
-   "id": "prostokvashino-cat-ru-1",
-   "share": 0.053
-  },
-  {
-   "id": "msn-nudge-en-1",
-   "share": 0.053
-  },
-  {
-   "id": "forrest-chocolates-en-1",
-   "share": 0.053
-  },
-  {
-   "id": "belovezhskie-ru-1",
-   "share": 0.052
-  },
-  {
-   "id": "icq-sound-ru-1",
-   "share": 0.052
-  },
-  {
-   "id": "leningrad-renamed-ru-1",
-   "share": 0.052
-  },
-  {
-   "id": "potemkin-odessa-steps-en-1",
-   "share": 0.052
-  },
-  {
-   "id": "karetu-mne-ru-1",
-   "share": 0.05
-  },
-  {
-   "id": "sims-simlish-ru-1",
-   "share": 0.05
-  },
-  {
-   "id": "mario-plumber-ru-1",
-   "share": 0.05
-  },
-  {
-   "id": "smeshariki-hedgehog-ru-1",
-   "share": 0.05
-  },
-  {
-   "id": "posh-spice-ru-1",
-   "share": 0.05
-  },
-  {
-   "id": "hottest-planet-ru-1",
-   "share": 0.05
-  },
-  {
-   "id": "prague-spring-en-1",
-   "share": 0.05
-  },
-  {
-   "id": "facebook-poke-en-1",
-   "share": 0.05
-  },
-  {
-   "id": "wrinkly-fingers-en-1",
-   "share": 0.05
-  },
-  {
-   "id": "september-ends-father-en-1",
-   "share": 0.05
-  },
-  {
-   "id": "fawlty-towers-12-en-1",
-   "share": 0.05
-  },
-  {
-   "id": "shchas-spoyu-ru-1",
-   "share": 0.048
-  },
-  {
-   "id": "dial-up-phone-ru-1",
-   "share": 0.048
-  },
-  {
-   "id": "vishnevy-sad-lopakhin-ru-1",
-   "share": 0.048
-  },
-  {
-   "id": "amelie-montmartre-ru-1",
-   "share": 0.048
-  },
-  {
-   "id": "margherita-queen-ru-1",
-   "share": 0.048
-  },
-  {
-   "id": "rickroll-en-1",
-   "share": 0.048
-  },
-  {
-   "id": "strozzapreti-meaning-en-1",
-   "share": 0.048
-  },
-  {
-   "id": "the-anthem-good-charlotte-en-1",
-   "share": 0.048
-  },
-  {
-   "id": "bolvanka-blank-disc-ru-1",
-   "share": 0.047
-  },
-  {
-   "id": "ironiya-pugacheva-sings-ru-1",
-   "share": 0.047
-  },
-  {
-   "id": "khrushchevka-ru-1",
-   "share": 0.047
-  },
-  {
-   "id": "ussr-treaty-four-republics-ru-1",
-   "share": 0.047
-  },
-  {
-   "id": "war-and-peace-oscar-ru-1",
-   "share": 0.047
-  },
-  {
-   "id": "joey-en-1",
-   "share": 0.047
-  },
-  {
-   "id": "super-bowl-en-1",
-   "share": 0.047
-  },
-  {
-   "id": "mind-the-gap-1968-en-1",
-   "share": 0.047
-  },
-  {
-   "id": "alien-weyland-yutani-ru-1",
-   "share": 0.045
-  },
-  {
-   "id": "kosygin-reform-ru-1",
-   "share": 0.045
-  },
-  {
-   "id": "tatu-producer-ru-1",
-   "share": 0.045
-  },
-  {
-   "id": "ace-of-base-sweden-ru-1",
-   "share": 0.045
-  },
-  {
-   "id": "tetris-korobeiniki-en-1",
-   "share": 0.045
-  },
-  {
-   "id": "wombat-cube-poo-en-1",
-   "share": 0.045
-  },
-  {
-   "id": "borscht-beetroot-en-1",
-   "share": 0.045
-  },
-  {
-   "id": "ussr-founded-1922-ru-1",
-   "share": 0.043
-  },
-  {
-   "id": "tselina-kazakhstan-ru-1",
-   "share": 0.043
-  },
-  {
-   "id": "lordi-finland-ru-1",
-   "share": 0.043
-  },
-  {
-   "id": "titanic-oscars-ru-1",
-   "share": 0.043
-  },
-  {
-   "id": "smiley-fahlman-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "emoji-picture-character-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "sdi-star-wars-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "octopus-hearts-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "bake-off-star-baker-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "the-knowledge-streets-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "thats-what-you-get-paramore-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "limewire-viruses-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "tatu-uk-number-one-en-1",
-   "share": 0.043
-  },
-  {
-   "id": "icq-aska-ru-1",
-   "share": 0.042
-  },
-  {
-   "id": "gena-job-ru-1",
-   "share": 0.042
-  },
-  {
-   "id": "susan-boyle-dreamed-en-1",
-   "share": 0.042
-  },
-  {
-   "id": "bushtucker-ostrich-en-1",
-   "share": 0.042
-  },
-  {
-   "id": "sunak-samba-en-1",
-   "share": 0.042
-  },
-  {
-   "id": "tarkovsky-solaris-en-1",
-   "share": 0.042
-  },
-  {
-   "id": "icq-logo-ru-1",
-   "share": 0.04
-  },
-  {
-   "id": "fabrika-zvezd-host-ru-1",
-   "share": 0.04
-  },
-  {
-   "id": "moscow-tears-oscar-1981-ru-1",
-   "share": 0.04
-  },
-  {
-   "id": "why-dont-you-get-a-job-ru-1",
-   "share": 0.04
-  },
-  {
-   "id": "mimino-job-ru-1",
-   "share": 0.04
-  },
-  {
-   "id": "delorean-88-en-1",
-   "share": 0.04
-  },
-  {
-   "id": "iron-curtain-churchill-en-1",
-   "share": 0.04
-  },
-  {
-   "id": "moonwalkers-count-ru-1",
-   "share": 0.038
-  },
-  {
-   "id": "zhzh-livejournal-ru-1",
-   "share": 0.038
-  },
-  {
-   "id": "rickroll-ru-1",
-   "share": 0.038
-  },
-  {
-   "id": "fabrika-zvezd-channel-ru-1",
-   "share": 0.038
-  },
-  {
-   "id": "binley-mega-chippy-en-1",
-   "share": 0.038
-  },
-  {
-   "id": "forrest-chocolates-ru-1",
-   "share": 0.037
-  },
-  {
-   "id": "youtube-year-ru-1",
-   "share": 0.037
-  },
-  {
-   "id": "wombat-cube-poo-ru-1",
-   "share": 0.037
-  },
-  {
-   "id": "ivan-vasilievich-bulgakov-ru-1",
-   "share": 0.037
-  },
-  {
-   "id": "last-moon-landing-year-ru-1",
-   "share": 0.037
-  },
-  {
-   "id": "boney-m-rasputin-ru-1",
-   "share": 0.037
-  },
-  {
-   "id": "furbish-en-1",
-   "share": 0.037
-  },
-  {
-   "id": "statue-of-liberty-france-en-1",
-   "share": 0.037
-  },
-  {
-   "id": "september-ends-father-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "nep-lenin-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "vostok-delo-tonkoe-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "mars-moons-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "black-square-malevich-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "detochkin-money-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "glukoza-animated-image-ru-1",
-   "share": 0.035
-  },
-  {
-   "id": "kasparov-deep-blue-en-1",
-   "share": 0.035
-  },
-  {
-   "id": "fifth-element-leeloo-en-1",
-   "share": 0.035
-  },
-  {
-   "id": "yandex-name-ru-1",
-   "share": 0.033
-  },
-  {
-   "id": "strozzapreti-meaning-ru-1",
-   "share": 0.033
-  },
-  {
-   "id": "t9-meaning-ru-1",
-   "share": 0.033
-  },
-  {
-   "id": "caesar-cardini-ru-1",
-   "share": 0.033
-  },
-  {
-   "id": "tatu-eurovision-2003-place-ru-1",
-   "share": 0.033
-  },
-  {
-   "id": "memory-card-mp3-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "willys-chocolate-experience-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "sims-pool-ladder-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "blink-small-things-boybands-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "schindler-red-coat-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "fat-lip-sum-41-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "crisps-saratoga-en-1",
-   "share": 0.033
-  },
-  {
-   "id": "windows-xp-bliss-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "tarkhun-estragon-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "crisps-saratoga-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "zori-five-girls-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "seventeen-moments-tariverdiev-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "sims-pool-ladder-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "operatsiya-y-trus-ru-1",
-   "share": 0.032
-  },
-  {
-   "id": "dna-watson-crick-en-1",
-   "share": 0.032
-  },
-  {
-   "id": "nepal-flag-en-1",
-   "share": 0.032
-  },
-  {
-   "id": "seychelles-smallest-africa-en-1",
-   "share": 0.032
-  },
-  {
-   "id": "seryoga-chorny-bumer-ru-1",
-   "share": 0.03
-  },
-  {
-   "id": "delorean-88-ru-1",
-   "share": 0.03
-  },
-  {
-   "id": "apollo-11-collins-ru-1",
-   "share": 0.03
-  },
-  {
-   "id": "blink-small-things-boybands-ru-1",
-   "share": 0.03
-  },
-  {
-   "id": "bob-builder-christmas-en-1",
-   "share": 0.03
-  },
-  {
-   "id": "ringtone-paid-en-1",
-   "share": 0.03
+   "id": "simpsons-springfield-en-1",
+   "share": 0.31
   },
   {
    "id": "polanski-green-leader-en-1",
-   "share": 0.03
+   "share": 0.307
   },
   {
-   "id": "france-most-time-zones-en-1",
-   "share": 0.03
+   "id": "bushtucker-ostrich-en-1",
+   "share": 0.293
   },
   {
-   "id": "mr-blobby-christmas-en-1",
-   "share": 0.03
+   "id": "wetherspoon-carpets-en-1",
+   "share": 0.283
+  },
+  {
+   "id": "schumacher-titles-en-1",
+   "share": 0.283
+  },
+  {
+   "id": "crazy-frog-axel-f-en-1",
+   "share": 0.28
+  },
+  {
+   "id": "gagarin-manchester-1961-en-1",
+   "share": 0.267
+  },
+  {
+   "id": "mr-bean-atkinson-en-1",
+   "share": 0.263
+  },
+  {
+   "id": "friends-central-perk-en-1",
+   "share": 0.26
+  },
+  {
+   "id": "t9-meaning-en-1",
+   "share": 0.253
+  },
+  {
+   "id": "winamp-llama-en-1",
+   "share": 0.25
+  },
+  {
+   "id": "lordi-finland-en-1",
+   "share": 0.247
+  },
+  {
+   "id": "red-square-beautiful-en-1",
+   "share": 0.237
+  },
+  {
+   "id": "avatar-2-billion-en-1",
+   "share": 0.233
+  },
+  {
+   "id": "vodka-little-water-en-1",
+   "share": 0.23
+  },
+  {
+   "id": "windows-xp-bliss-en-1",
+   "share": 0.223
+  },
+  {
+   "id": "gta-sa-cj-en-1",
+   "share": 0.223
+  },
+  {
+   "id": "numa-numa-en-1",
+   "share": 0.22
+  },
+  {
+   "id": "britney-debut-en-1",
+   "share": 0.217
+  },
+  {
+   "id": "spirited-away-chihiro-en-1",
+   "share": 0.217
+  },
+  {
+   "id": "dial-up-phone-en-1",
+   "share": 0.217
+  },
+  {
+   "id": "trans-siberian-vladivostok-en-1",
+   "share": 0.213
+  },
+  {
+   "id": "pluto-dwarf-planet-en-1",
+   "share": 0.207
+  },
+  {
+   "id": "wii-sports-no-football-en-1",
+   "share": 0.203
+  },
+  {
+   "id": "flight-of-the-bumblebee-en-1",
+   "share": 0.2
+  },
+  {
+   "id": "twilight-jacob-en-1",
+   "share": 0.19
+  },
+  {
+   "id": "greggs-vegan-roll-en-1",
+   "share": 0.18
+  },
+  {
+   "id": "ed-davey-stunts-en-1",
+   "share": 0.173
+  },
+  {
+   "id": "always-love-you-dolly-en-1",
+   "share": 0.173
+  },
+  {
+   "id": "macarena-spain-en-1",
+   "share": 0.173
+  },
+  {
+   "id": "september-ends-father-en-1",
+   "share": 0.173
+  },
+  {
+   "id": "hp-house-en-1",
+   "share": 0.17
+  },
+  {
+   "id": "mario-plumber-en-1",
+   "share": 0.167
+  },
+  {
+   "id": "boris-fridge-en-1",
+   "share": 0.163
+  },
+  {
+   "id": "matrix-red-pill-en-1",
+   "share": 0.16
+  },
+  {
+   "id": "nirvana-aberdeen-en-1",
+   "share": 0.16
+  },
+  {
+   "id": "scream-munch-en-1",
+   "share": 0.157
+  },
+  {
+   "id": "mendeleev-periodic-en-1",
+   "share": 0.153
+  },
+  {
+   "id": "shrek-fiona-night-en-1",
+   "share": 0.15
+  },
+  {
+   "id": "fifth-element-leeloo-en-1",
+   "share": 0.147
+  },
+  {
+   "id": "hp-platform-en-1",
+   "share": 0.147
+  },
+  {
+   "id": "blink-small-things-boybands-en-1",
+   "share": 0.147
+  },
+  {
+   "id": "ringtone-paid-en-1",
+   "share": 0.143
+  },
+  {
+   "id": "blink-whats-my-age-video-en-1",
+   "share": 0.143
+  },
+  {
+   "id": "nutcracker-tchaikovsky-en-1",
+   "share": 0.14
+  },
+  {
+   "id": "rickroll-en-1",
+   "share": 0.14
+  },
+  {
+   "id": "cheops-wonder-en-1",
+   "share": 0.13
+  },
+  {
+   "id": "pavlov-dogs-en-1",
+   "share": 0.13
+  },
+  {
+   "id": "jordan-bulls-en-1",
+   "share": 0.127
+  },
+  {
+   "id": "lion-king-mufasa-en-1",
+   "share": 0.123
+  },
+  {
+   "id": "wombat-cube-poo-en-1",
+   "share": 0.123
+  },
+  {
+   "id": "lotr-mount-doom-en-1",
+   "share": 0.117
+  },
+  {
+   "id": "titanic-oscars-en-1",
+   "share": 0.117
+  },
+  {
+   "id": "fischer-spassky-1972-en-1",
+   "share": 0.113
+  },
+  {
+   "id": "ikea-bike-tv-en-1",
+   "share": 0.11
+  },
+  {
+   "id": "sugar-fall-out-boy-en-1",
+   "share": 0.103
+  },
+  {
+   "id": "faberge-romanovs-en-1",
+   "share": 0.103
+  },
+  {
+   "id": "riga-latvia-en-1",
+   "share": 0.103
+  },
+  {
+   "id": "bbc-war-and-peace-2016-en-1",
+   "share": 0.1
+  },
+  {
+   "id": "bluetooth-file-transfer-en-1",
+   "share": 0.1
+  },
+  {
+   "id": "fat-lip-sum-41-en-1",
+   "share": 0.1
+  },
+  {
+   "id": "ace-of-base-sweden-en-1",
+   "share": 0.1
+  },
+  {
+   "id": "im-just-a-kid-simple-plan-en-1",
+   "share": 0.097
+  },
+  {
+   "id": "forrest-chocolates-en-1",
+   "share": 0.097
+  },
+  {
+   "id": "mind-the-gap-1968-en-1",
+   "share": 0.093
+  },
+  {
+   "id": "babushka-meaning-en-1",
+   "share": 0.09
+  },
+  {
+   "id": "chess-stalemate-en-1",
+   "share": 0.09
+  },
+  {
+   "id": "icq-uin-en-1",
+   "share": 0.09
+  },
+  {
+   "id": "hybrid-theory-en-1",
+   "share": 0.087
+  },
+  {
+   "id": "minsk-belarus-en-1",
+   "share": 0.087
+  },
+  {
+   "id": "octopus-hearts-en-1",
+   "share": 0.083
+  },
+  {
+   "id": "complicated-fake-en-1",
+   "share": 0.083
+  },
+  {
+   "id": "sims-pool-ladder-en-1",
+   "share": 0.083
+  },
+  {
+   "id": "nabokov-lolita-en-1",
+   "share": 0.083
+  },
+  {
+   "id": "nokia-3310-no-camera-en-1",
+   "share": 0.083
+  },
+  {
+   "id": "colosseum-purpose-en-1",
+   "share": 0.08
+  },
+  {
+   "id": "veni-vidi-vici-en-1",
+   "share": 0.08
+  },
+  {
+   "id": "the-knowledge-streets-en-1",
+   "share": 0.08
+  },
+  {
+   "id": "why-dont-you-get-a-job-en-1",
+   "share": 0.08
+  },
+  {
+   "id": "the-anthem-good-charlotte-en-1",
+   "share": 0.077
+  },
+  {
+   "id": "saffron-expensive-en-1",
+   "share": 0.077
+  },
+  {
+   "id": "memory-card-mp3-en-1",
+   "share": 0.073
+  },
+  {
+   "id": "saint-exupery-pilot-en-1",
+   "share": 0.073
+  },
+  {
+   "id": "schindler-red-coat-en-1",
+   "share": 0.073
+  },
+  {
+   "id": "numb-expectations-en-1",
+   "share": 0.073
+  },
+  {
+   "id": "posh-spice-en-1",
+   "share": 0.073
+  },
+  {
+   "id": "1984-big-brother-en-1",
+   "share": 0.07
+  },
+  {
+   "id": "burn-a-cd-en-1",
+   "share": 0.07
+  },
+  {
+   "id": "sins-not-tragedies-wedding-en-1",
+   "share": 0.07
+  },
+  {
+   "id": "terminator-be-back-en-1",
+   "share": 0.067
+  },
+  {
+   "id": "statue-of-liberty-france-en-1",
+   "share": 0.067
+  },
+  {
+   "id": "bones-206-en-1",
+   "share": 0.067
+  },
+  {
+   "id": "thats-what-you-get-paramore-en-1",
+   "share": 0.067
+  },
+  {
+   "id": "bluetooth-harald-en-1",
+   "share": 0.063
+  },
+  {
+   "id": "winrar-not-social-en-1",
+   "share": 0.063
+  },
+  {
+   "id": "old-olympic-events-en-1",
+   "share": 0.063
+  },
+  {
+   "id": "joey-en-1",
+   "share": 0.06
+  },
+  {
+   "id": "del-boy-van-en-1",
+   "share": 0.06
+  },
+  {
+   "id": "titanic-jack-en-1",
+   "share": 0.057
+  },
+  {
+   "id": "grand-slam-four-en-1",
+   "share": 0.057
+  },
+  {
+   "id": "tetris-pajitnov-en-1",
+   "share": 0.057
+  },
+  {
+   "id": "caesar-cardini-en-1",
+   "share": 0.057
+  },
+  {
+   "id": "wrinkly-fingers-en-1",
+   "share": 0.053
+  },
+  {
+   "id": "trojan-horse-en-1",
+   "share": 0.053
+  },
+  {
+   "id": "mp3-downloads-en-1",
+   "share": 0.053
+  },
+  {
+   "id": "super-bowl-en-1",
+   "share": 0.053
+  },
+  {
+   "id": "sunak-samba-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "im-not-okay-mcr-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "black-parade-father-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "dna-watson-crick-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "nokia-snake-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "smiley-fahlman-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "nepal-flag-en-1",
+   "share": 0.05
+  },
+  {
+   "id": "seven-samurai-remake-en-1",
+   "share": 0.047
+  },
+  {
+   "id": "sonic-sega-en-1",
+   "share": 0.047
+  },
+  {
+   "id": "gagarin-flight-duration-en-1",
+   "share": 0.047
+  },
+  {
+   "id": "matryoshka-en-1",
+   "share": 0.047
+  },
+  {
+   "id": "crisps-saratoga-en-1",
+   "share": 0.043
+  },
+  {
+   "id": "margherita-queen-en-1",
+   "share": 0.043
+  },
+  {
+   "id": "strozzapreti-meaning-en-1",
+   "share": 0.04
+  },
+  {
+   "id": "conchita-austria-en-1",
+   "share": 0.04
+  },
+  {
+   "id": "elton-john-ussr-1979-en-1",
+   "share": 0.04
+  },
+  {
+   "id": "nureyev-paris-1961-en-1",
+   "share": 0.04
   },
   {
    "id": "mona-lisa-louvre-en-1",
+   "share": 0.037
+  },
+  {
+   "id": "nero-burning-rom-en-1",
+   "share": 0.037
+  },
+  {
+   "id": "berlin-four-sectors-en-1",
+   "share": 0.037
+  },
+  {
+   "id": "cs-teams-en-1",
+   "share": 0.037
+  },
+  {
+   "id": "skype-calls-abroad-en-1",
+   "share": 0.033
+  },
+  {
+   "id": "walter-white-teacher-en-1",
+   "share": 0.033
+  },
+  {
+   "id": "emmental-holes-en-1",
+   "share": 0.033
+  },
+  {
+   "id": "tetris-korobeiniki-en-1",
+   "share": 0.033
+  },
+  {
+   "id": "pompeii-vesuvius-en-1",
+   "share": 0.033
+  },
+  {
+   "id": "luna-9-soft-landing-en-1",
+   "share": 0.03
+  },
+  {
+   "id": "aladdin-iago-en-1",
    "share": 0.03
   },
   {
    "id": "pretty-fly-white-guy-en-1",
-   "share": 0.03
+   "share": 0.027
   },
   {
-   "id": "africa-four-hemispheres-ru-1",
-   "share": 0.028
-  },
-  {
-   "id": "scream-munch-ru-1",
-   "share": 0.028
-  },
-  {
-   "id": "bottle-deposit-12-kop-ru-1",
-   "share": 0.028
-  },
-  {
-   "id": "complicated-fake-ru-1",
-   "share": 0.028
-  },
-  {
-   "id": "titanic-jack-ru-1",
-   "share": 0.028
-  },
-  {
-   "id": "pluto-dwarf-planet-en-1",
-   "share": 0.028
+   "id": "africa-four-hemispheres-en-1",
+   "share": 0.027
   },
   {
    "id": "blue-eiffel-65-en-1",
-   "share": 0.028
-  },
-  {
-   "id": "vaz-2101-fiat-124-ru-1",
    "share": 0.027
   },
   {
-   "id": "fat-lip-sum-41-ru-1",
+   "id": "cheetah-fastest-en-1",
    "share": 0.027
   },
   {
-   "id": "kin-dza-dza-money-ru-1",
+   "id": "canada-second-area-en-1",
    "share": 0.027
   },
   {
-   "id": "pioneer-tie-ends-ru-1",
+   "id": "starry-night-van-gogh-en-1",
    "share": 0.027
   },
   {
-   "id": "bluetooth-file-transfer-en-1",
+   "id": "checkpoint-charlie-en-1",
    "share": 0.027
+  },
+  {
+   "id": "blue-whale-en-1",
+   "share": 0.027
+  },
+  {
+   "id": "carbonara-no-cream-en-1",
+   "share": 0.027
+  },
+  {
+   "id": "circle-back-en-1",
+   "share": 0.027
+  },
+  {
+   "id": "angkor-wat-en-1",
+   "share": 0.027
+  },
+  {
+   "id": "dali-clocks-en-1",
+   "share": 0.027
+  },
+  {
+   "id": "koala-eucalyptus-en-1",
+   "share": 0.027
+  },
+  {
+   "id": "mars-moons-en-1",
+   "share": 0.023
+  },
+  {
+   "id": "tiber-rome-en-1",
+   "share": 0.023
   },
   {
    "id": "john-glenn-orbit-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "bones-206-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "wetherspoon-carpets-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "lesotho-enclave-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "caesar-cardini-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "veni-vidi-vici-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "sting-sumner-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "nokia-3310-no-camera-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "im-just-a-kid-simple-plan-en-1",
-   "share": 0.027
-  },
-  {
-   "id": "bluetooth-harald-ru-1",
-   "share": 0.025
-  },
-  {
-   "id": "schindler-red-coat-ru-1",
-   "share": 0.025
-  },
-  {
-   "id": "the-anthem-good-charlotte-ru-1",
-   "share": 0.025
-  },
-  {
-   "id": "cs-teams-en-1",
-   "share": 0.025
-  },
-  {
-   "id": "mercury-zanzibar-en-1",
-   "share": 0.025
-  },
-  {
-   "id": "cheops-wonder-ru-1",
    "share": 0.023
   },
   {
-   "id": "sonic-sega-ru-1",
+   "id": "seychelles-smallest-africa-en-1",
    "share": 0.023
   },
   {
-   "id": "pager-ru-1",
+   "id": "apollo-11-eagle-en-1",
    "share": 0.023
   },
   {
-   "id": "old-olympic-events-ru-1",
+   "id": "simpsons-groening-en-1",
    "share": 0.023
   },
   {
-   "id": "olympics-greece-en-1",
+   "id": "france-most-time-zones-en-1",
    "share": 0.023
-  },
-  {
-   "id": "pj-and-duncan-en-1",
-   "share": 0.023
-  },
-  {
-   "id": "blink-whats-my-age-video-en-1",
-   "share": 0.023
-  },
-  {
-   "id": "luna-9-soft-landing-en-1",
-   "share": 0.023
-  },
-  {
-   "id": "colosseum-purpose-en-1",
-   "share": 0.023
-  },
-  {
-   "id": "complicated-fake-en-1",
-   "share": 0.023
-  },
-  {
-   "id": "gazirovka-price-ru-1",
-   "share": 0.022
-  },
-  {
-   "id": "nepal-flag-ru-1",
-   "share": 0.022
-  },
-  {
-   "id": "france-most-time-zones-ru-1",
-   "share": 0.022
-  },
-  {
-   "id": "troshkin-job-ru-1",
-   "share": 0.022
-  },
-  {
-   "id": "ladbaby-five-christmas-en-1",
-   "share": 0.022
-  },
-  {
-   "id": "beatles-quarrymen-en-1",
-   "share": 0.022
-  },
-  {
-   "id": "batman-boring-dull-en-1",
-   "share": 0.022
-  },
-  {
-   "id": "dna-watson-crick-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "hybrid-theory-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "mumiy-troll-eurovision-2001-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "seychelles-smallest-africa-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "bluetooth-file-transfer-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "joey-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "shrek-fiona-night-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "brilliantovaya-ruka-director-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "emmental-holes-ru-1",
-   "share": 0.02
-  },
-  {
-   "id": "tatu-members-ru-1",
-   "share": 0.02
   },
   {
    "id": "hottest-planet-en-1",
    "share": 0.02
   },
   {
-   "id": "gagarin-flight-duration-en-1",
-   "share": 0.02
-  },
-  {
-   "id": "emmental-holes-en-1",
-   "share": 0.02
-  },
-  {
-   "id": "starry-night-van-gogh-en-1",
-   "share": 0.02
-  },
-  {
-   "id": "circle-back-en-1",
-   "share": 0.02
-  },
-  {
-   "id": "apollo-11-eagle-en-1",
-   "share": 0.02
-  },
-  {
-   "id": "moonwalkers-count-en-1",
-   "share": 0.02
-  },
-  {
-   "id": "lesotho-enclave-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "spirited-away-chihiro-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "khrushchev-shoe-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "saffron-expensive-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "dima-bilan-eurovision-2008-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "pushkin-dantes-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "im-just-a-kid-simple-plan-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "furbish-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "beryozka-shop-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "alsu-eurovision-2000-ru-1",
-   "share": 0.018
-  },
-  {
-   "id": "pompeii-vesuvius-en-1",
-   "share": 0.018
-  },
-  {
-   "id": "salyut-1-first-station-en-1",
-   "share": 0.018
-  },
-  {
-   "id": "bluetooth-harald-en-1",
-   "share": 0.018
-  },
-  {
-   "id": "blue-whale-en-1",
-   "share": 0.018
-  },
-  {
-   "id": "numb-expectations-en-1",
-   "share": 0.018
-  },
-  {
    "id": "danube-most-countries-en-1",
-   "share": 0.018
+   "share": 0.02
   },
   {
-   "id": "onegin-genre-ru-1",
+   "id": "india-population-en-1",
+   "share": 0.02
+  },
+  {
+   "id": "berlin-wall-built-en-1",
+   "share": 0.02
+  },
+  {
+   "id": "laika-sputnik-2-en-1",
+   "share": 0.02
+  },
+  {
+   "id": "cyrillic-saint-cyril-en-1",
+   "share": 0.02
+  },
+  {
+   "id": "myspace-top-8-en-1",
+   "share": 0.02
+  },
+  {
+   "id": "iss-orbit-period-en-1",
    "share": 0.017
   },
   {
-   "id": "octopus-hearts-ru-1",
+   "id": "yalta-1945-en-1",
    "share": 0.017
   },
   {
-   "id": "onegin-duel-ru-1",
+   "id": "larry-chief-mouser-en-1",
    "share": 0.017
   },
   {
-   "id": "saturn-rings-ice-ru-1",
+   "id": "sk8er-boi-story-en-1",
    "share": 0.017
   },
   {
-   "id": "chess-stalemate-ru-1",
+   "id": "odd-sports-real-en-1",
    "share": 0.017
   },
   {
-   "id": "shurik-actor-ru-1",
+   "id": "alien-weyland-yutani-en-1",
    "share": 0.017
   },
   {
-   "id": "pozovi-menya-snezhina-ru-1",
+   "id": "emoji-picture-character-en-1",
    "share": 0.017
   },
   {
-   "id": "phone-07-long-distance-ru-1",
-   "share": 0.017
-  },
-  {
-   "id": "blink-whats-my-age-video-ru-1",
-   "share": 0.017
-  },
-  {
-   "id": "last-moon-landing-year-en-1",
-   "share": 0.017
-  },
-  {
-   "id": "burn-a-cd-en-1",
-   "share": 0.017
-  },
-  {
-   "id": "nero-burning-rom-en-1",
-   "share": 0.017
-  },
-  {
-   "id": "africa-four-hemispheres-en-1",
-   "share": 0.017
-  },
-  {
-   "id": "ostrich-largest-bird-en-1",
+   "id": "iron-curtain-churchill-en-1",
    "share": 0.017
   },
   {
@@ -1350,447 +713,127 @@
    "share": 0.017
   },
   {
-   "id": "icq-uin-en-1",
+   "id": "salyut-1-first-station-en-1",
    "share": 0.017
   },
   {
-   "id": "sugar-fall-out-boy-en-1",
-   "share": 0.017
-  },
-  {
-   "id": "tiber-rome-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "danube-most-countries-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "sputnik-1-year-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "via-gra-founder-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "india-population-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "conchita-austria-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "kalugina-nickname-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "sunlight-travel-time-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "emoji-picture-character-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "maksim-znaesh-li-ty-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "sgushchenka-label-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "canada-second-area-ru-1",
-   "share": 0.015
-  },
-  {
-   "id": "sistine-michelangelo-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "saffron-expensive-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "old-olympic-events-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "margherita-queen-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "mamma-mia-not-pasta-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "gold-symbol-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "tiber-rome-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "angkor-wat-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "cheetah-fastest-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "titanic-jack-en-1",
-   "share": 0.015
-  },
-  {
-   "id": "amazon-volume-ru-1",
+   "id": "moonwalkers-count-en-1",
    "share": 0.013
   },
   {
-   "id": "numb-expectations-ru-1",
+   "id": "lesotho-enclave-en-1",
    "share": 0.013
   },
   {
-   "id": "bones-206-ru-1",
+   "id": "somebody-told-me-killers-en-1",
    "share": 0.013
-  },
-  {
-   "id": "pretty-fly-white-guy-ru-1",
-   "share": 0.013
-  },
-  {
-   "id": "ikea-bike-tv-ru-1",
-   "share": 0.013
-  },
-  {
-   "id": "ringtone-paid-ru-1",
-   "share": 0.013
-  },
-  {
-   "id": "grand-slam-four-ru-1",
-   "share": 0.013
-  },
-  {
-   "id": "duck-tales-scrooge-ru-1",
-   "share": 0.013
-  },
-  {
-   "id": "wwf-panda-en-1",
-   "share": 0.013
-  },
-  {
-   "id": "thriller-best-selling-en-1",
-   "share": 0.013
-  },
-  {
-   "id": "light-speed-en-1",
-   "share": 0.013
-  },
-  {
-   "id": "air-nitrogen-en-1",
-   "share": 0.013
-  },
-  {
-   "id": "koala-eucalyptus-en-1",
-   "share": 0.013
-  },
-  {
-   "id": "no-bandwidth-en-1",
-   "share": 0.013
-  },
-  {
-   "id": "taksofon-2-kop-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "cs-teams-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "sugar-fall-out-boy-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "drozdov-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "fabrika-zvezd-format-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "shtirlits-actor-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "smiley-fahlman-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "wrinkly-fingers-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "blue-eiffel-65-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "thats-what-you-get-paramore-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "via-gra-name-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "scarlett-tomorrow-ru-1",
-   "share": 0.012
-  },
-  {
-   "id": "walter-white-teacher-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "winrar-not-social-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "laika-sputnik-2-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "jackie-weaver-en-1",
-   "share": 0.012
   },
   {
    "id": "scarlett-tomorrow-en-1",
-   "share": 0.012
+   "share": 0.013
   },
   {
-   "id": "nokia-snake-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "ikea-bike-tv-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "canada-second-area-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "dali-clocks-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "sunlight-travel-time-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "truss-lettuce-en-1",
-   "share": 0.012
-  },
-  {
-   "id": "seven-samurai-remake-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "angkor-wat-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "simpsons-groening-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "sins-not-tragedies-wedding-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "pompeii-vesuvius-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "luna-9-soft-landing-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "black-parade-father-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "mona-lisa-louvre-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "lion-king-mufasa-ru-1",
-   "share": 0.01
-  },
-  {
-   "id": "trojan-horse-en-1",
-   "share": 0.01
-  },
-  {
-   "id": "back-in-the-ussr-en-1",
-   "share": 0.01
-  },
-  {
-   "id": "black-parade-father-en-1",
-   "share": 0.01
-  },
-  {
-   "id": "hybrid-theory-en-1",
-   "share": 0.01
-  },
-  {
-   "id": "kavkazskaya-plennitsa-folklore-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "burn-a-cd-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "arina-rodionovna-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "beatles-quarrymen-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "zveri-rayony-kvartaly-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "moonwalk-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "american-idiot-green-day-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "gold-symbol-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "tetris-pajitnov-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "blue-whale-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "carbonara-no-cream-ru-1",
-   "share": 0.008
-  },
-  {
-   "id": "apollo-11-collins-en-1",
-   "share": 0.008
-  },
-  {
-   "id": "polyakov-longest-flight-en-1",
-   "share": 0.008
-  },
-  {
-   "id": "luke-i-am-your-father-en-1",
-   "share": 0.008
-  },
-  {
-   "id": "ed-davey-stunts-en-1",
-   "share": 0.008
-  },
-  {
-   "id": "abba-waterloo-en-1",
-   "share": 0.008
-  },
-  {
-   "id": "australia-capital-en-1",
-   "share": 0.008
-  },
-  {
-   "id": "paella-spain-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "air-nitrogen-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "cheetah-fastest-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "sistine-michelangelo-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "sting-sumner-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "ruki-vverh-debut-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "gto-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "colosseum-purpose-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "the-dress-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "olympics-greece-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "starry-night-van-gogh-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "ironiya-sudby-city-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "nokia-3310-no-camera-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "dali-clocks-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "lemonade-buratino-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "coca-cola-pharmacy-ru-1",
-   "share": 0.007
-  },
-  {
-   "id": "nero-burning-rom-ru-1",
-   "share": 0.007
+   "id": "diamond-hardest-en-1",
+   "share": 0.013
   },
   {
    "id": "penicillin-fleming-en-1",
-   "share": 0.007
+   "share": 0.013
   },
   {
-   "id": "gagarin-spacecraft-en-1",
-   "share": 0.007
+   "id": "kasparov-deep-blue-en-1",
+   "share": 0.013
+  },
+  {
+   "id": "ostrich-largest-bird-en-1",
+   "share": 0.013
   },
   {
    "id": "spider-legs-en-1",
+   "share": 0.013
+  },
+  {
+   "id": "crew-dragon-2020-en-1",
+   "share": 0.013
+  },
+  {
+   "id": "prague-spring-en-1",
+   "share": 0.013
+  },
+  {
+   "id": "sistine-michelangelo-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "del-boy-van-en-2",
+   "share": 0.01
+  },
+  {
+   "id": "last-moon-landing-year-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "myspace-autoplay-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "oasis-reunion-15-years-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "coca-cola-pharmacy-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "guacamole-avocado-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "godfather-brando-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "apollo-11-collins-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "gold-symbol-en-1",
+   "share": 0.01
+  },
+  {
+   "id": "psycho-hitchcock-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "delorean-88-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "thriller-best-selling-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "elizabeth-70-years-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "olympic-rings-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "limewire-viruses-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "theremin-termen-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "warsaw-pact-en-1",
+   "share": 0.007
+  },
+  {
+   "id": "marathon-distance-en-1",
    "share": 0.007
   },
   {
@@ -1798,287 +841,43 @@
    "share": 0.007
   },
   {
-   "id": "seven-samurai-remake-en-1",
+   "id": "saturn-rings-ice-en-1",
    "share": 0.007
   },
   {
-   "id": "lordi-finland-en-1",
+   "id": "big-ben-bell-en-1",
    "share": 0.007
   },
   {
-   "id": "mp3-downloads-en-1",
+   "id": "no-bandwidth-en-1",
    "share": 0.007
   },
   {
-   "id": "im-not-okay-mcr-en-1",
+   "id": "wwf-panda-en-1",
    "share": 0.007
-  },
-  {
-   "id": "skype-calls-abroad-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "spider-legs-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "largest-planet-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "bazarov-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "koala-eucalyptus-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "big-mac-1990-price-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "diamond-hardest-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "mamma-mia-not-pasta-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "icq-uin-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "shura-real-name-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "sk8er-boi-story-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "avoska-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "mp3-downloads-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "ikhtiandr-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "light-speed-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "turkey-capital-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "newton-gravity-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "wasabi-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "guacamole-avocado-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "thriller-best-selling-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "im-not-okay-mcr-ru-1",
-   "share": 0.005
-  },
-  {
-   "id": "skype-calls-abroad-en-1",
-   "share": 0.005
-  },
-  {
-   "id": "farmville-en-1",
-   "share": 0.005
-  },
-  {
-   "id": "wasabi-en-1",
-   "share": 0.005
-  },
-  {
-   "id": "crap-towns-hull-en-1",
-   "share": 0.005
-  },
-  {
-   "id": "sins-not-tragedies-wedding-en-1",
-   "share": 0.005
   },
   {
    "id": "american-idiot-green-day-en-1",
-   "share": 0.005
+   "share": 0.007
   },
   {
-   "id": "mars-moons-en-1",
-   "share": 0.005
+   "id": "light-speed-en-1",
+   "share": 0.007
   },
   {
-   "id": "lion-king-mufasa-en-1",
-   "share": 0.005
+   "id": "sunlight-travel-time-en-1",
+   "share": 0.007
   },
   {
-   "id": "boaty-mcboatface-en-1",
-   "share": 0.005
+   "id": "air-nitrogen-en-1",
+   "share": 0.007
   },
   {
-   "id": "greggs-vegan-roll-en-1",
-   "share": 0.005
-  },
-  {
-   "id": "winrar-not-social-ru-1",
+   "id": "back-in-the-ussr-en-1",
    "share": 0.003
   },
   {
-   "id": "facebook-before-youtube-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "onion-tears-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "fifth-element-leeloo-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "memory-card-mp3-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "mumu-gerasim-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "hp-house-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "saint-exupery-pilot-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "i-am-your-father-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "ostrich-largest-bird-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "australia-capital-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "mercury-zanzibar-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "nokia-snake-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "kilimanjaro-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "luke-i-am-your-father-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "batman-boring-dull-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "chichikov-souls-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "raskolnikov-name-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "vlastilina-solovyova-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "penicillin-fleming-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "default-1998-rate-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "pacific-largest-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "trojan-horse-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "1984-big-brother-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "apollo-11-eagle-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "abba-waterloo-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "crew-dragon-2020-ru-1",
-   "share": 0.003
-  },
-  {
-   "id": "carbonara-no-cream-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "conchita-austria-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "saturn-rings-ice-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "coca-cola-pharmacy-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "india-population-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "boris-fridge-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "vatican-smallest-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "newton-gravity-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "oasis-reunion-15-years-en-1",
+   "id": "wikipedia-before-iphone-en-1",
    "share": 0.003
   },
   {
@@ -2086,31 +885,23 @@
    "share": 0.003
   },
   {
-   "id": "turkey-capital-en-1",
+   "id": "cuban-crisis-country-en-1",
    "share": 0.003
   },
   {
-   "id": "pacific-largest-en-1",
+   "id": "istanbul-two-continents-en-1",
    "share": 0.003
   },
   {
-   "id": "elton-john-ussr-1979-en-1",
+   "id": "facebook-before-youtube-en-1",
    "share": 0.003
   },
   {
-   "id": "sk8er-boi-story-en-1",
+   "id": "belka-strelka-en-1",
    "share": 0.003
   },
   {
-   "id": "baikal-deepest-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "beatles-liverpool-en-1",
-   "share": 0.003
-  },
-  {
-   "id": "bering-strait-en-1",
+   "id": "tatu-uk-number-one-en-1",
    "share": 0.003
   },
   {
@@ -2118,204 +909,48 @@
    "share": 0.003
   },
   {
-   "id": "psycho-hitchcock-en-1",
+   "id": "abba-waterloo-en-1",
    "share": 0.003
   },
   {
-   "id": "greenland-island-en-1",
+   "id": "stonehenge-wiltshire-en-1",
    "share": 0.003
   },
   {
-   "id": "greenland-island-ru-1",
-   "share": 0.002
+   "id": "turkey-capital-en-1",
+   "share": 0.003
   },
   {
-   "id": "anna-karenina-first-line-ru-1",
-   "share": 0.002
+   "id": "leonov-first-spacewalk-en-1",
+   "share": 0.003
   },
   {
-   "id": "svoya-igra-host-ru-1",
-   "share": 0.002
+   "id": "luke-i-am-your-father-en-1",
+   "share": 0.003
   },
   {
-   "id": "oktyabrenok-badge-ru-1",
-   "share": 0.002
+   "id": "mercury-zanzibar-en-1",
+   "share": 0.003
   },
   {
-   "id": "vdnkh-ru-1",
-   "share": 0.002
+   "id": "borscht-beetroot-en-1",
+   "share": 0.003
   },
   {
-   "id": "aladdin-iago-ru-1",
-   "share": 0.002
+   "id": "olympic-boycott-1984-en-1",
+   "share": 0.003
   },
   {
-   "id": "vsegda-gotov-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "salyut-1-first-station-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "artek-crimea-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "minecraft-creeper-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "zemfira-ufa-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "ivanushki-producer-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "somebody-told-me-killers-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "checkpoint-charlie-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "khrushchev-corn-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "iss-orbit-period-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "masha-youtube-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "bering-strait-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "gagarin-flight-duration-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "halley-comet-return-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "belka-strelka-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "odd-sports-real-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "hp-platform-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "jaws-bruce-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "laika-sputnik-2-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "chgk-six-points-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "banana-berry-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "vatican-smallest-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "begemot-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "lotr-mount-doom-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "wwf-panda-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "iron-curtain-churchill-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "ntv-gusinsky-ru-1",
-   "share": 0.002
-  },
-  {
-   "id": "iss-orbit-period-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "madonna-like-a-prayer-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "diamond-hardest-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "tamagotchi-country-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "shrek-fiona-night-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "facebook-before-youtube-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "grand-slam-four-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "jaws-bruce-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "monster-raving-loony-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "belka-strelka-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "crazy-frog-ringtone-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "larry-chief-mouser-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "i-am-your-father-en-1",
-   "share": 0.002
-  },
-  {
-   "id": "somebody-told-me-killers-en-1",
-   "share": 0.002
+   "id": "mamma-mia-not-pasta-en-1",
+   "share": 0.003
   },
   {
    "id": "the-dress-en-1",
-   "share": 0.002
+   "share": 0.003
+  },
+  {
+   "id": "sdi-star-wars-en-1",
+   "share": 0.003
   }
  ]
 }

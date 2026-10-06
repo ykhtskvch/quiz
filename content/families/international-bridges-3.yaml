@@ -1,0 +1,411 @@
+# Bridges, set 3 — for mixed rooms (EN-native, EPIC 38)
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: bridges-things
+    name: "Things everyone has heard of"
+    facts:
+      - id: ak-47-year
+        statement: "The \"47\" in AK-47 is the year 1947, when Mikhail Kalashnikov's rifle design was finalised; AK stands for Avtomat Kalashnikova."
+        sources: [{ name: "Wikipedia: AK-47", type: REFERENCE, verified: false }]
+        questions:
+          - id: ak-47-year-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What does the \"47\" in AK-47 stand for?"
+            options:
+              - { key: A, text: "The year 1947", correct: true }
+              - { key: B, text: "A .47 calibre", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "47 parts", distractor: PLAUSIBLE }
+              - { key: D, text: "A 47-round magazine", distractor: PLAUSIBLE }
+            explanation: "AK is Avtomat Kalashnikova — Kalashnikov's automatic rifle; 1947 is the year the design was finalised."
+            topics: { cold-war: 0.6, science: 0.5 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 2
+            dignity: 3
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: lada-riva-ussr
+        statement: "The Lada Riva, the butt of many British jokes in the 1980s, was built by AvtoVAZ in the USSR (Tolyatti)."
+        sources: [{ name: "Wikipedia: Lada Riva", type: REFERENCE, verified: false }]
+        questions:
+          - id: lada-riva-ussr-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "The Lada Riva — a favourite punchline in 1980s Britain — was built in which country?"
+            options:
+              - { key: A, text: "Poland", distractor: NEAR_MISS }
+              - { key: B, text: "The USSR", correct: true }
+              - { key: C, text: "Czechoslovakia", distractor: NEAR_MISS }
+              - { key: D, text: "Yugoslavia", distractor: NEAR_MISS }
+            explanation: "It's the export name of the VAZ-2105/2107 \"Zhiguli\", built in Tolyatti. Half the room probably rode in one."
+            topics: { british-culture: 0.4, fashion-brands: 0.5 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8, UK: 0.8 }
+            generations: { 80s: 1.0, 90s: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: faberge-romanovs
+        statement: "Fabergé's jewelled Easter eggs were made for the Russian imperial family, the Romanovs."
+        sources: [{ name: "Wikipedia: Fabergé egg", type: REFERENCE, verified: false }]
+        questions:
+          - id: faberge-romanovs-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Fabergé's famous jewelled eggs were made for which royal family?"
+            options:
+              - { key: A, text: "The British royal family", distractor: SAME_CATEGORY }
+              - { key: B, text: "The Romanovs of Russia", correct: true }
+              - { key: C, text: "The Habsburgs", distractor: SAME_CATEGORY }
+              - { key: D, text: "The Bourbons of France", distractor: SAME_CATEGORY }
+            explanation: "Tsar Alexander III ordered the first one for his wife in 1885; each Easter brought a new surprise inside."
+            topics: { art: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: matryoshka-japan
+        statement: "The first Russian matryoshka was made in the 1890s, carved by Vasily Zvyozdochkin and designed by Sergey Malyutin."
+        sources: [{ name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: false }]
+        questions:
+          - id: matryoshka-japan-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "When was the first Russian matryoshka doll made?"
+            options:
+              - { key: A, text: In the 1690s, distractor: PLAUSIBLE }
+              - { key: B, text: In the 1890s, correct: true }
+              - { key: C, text: In the 1790s, distractor: PLAUSIBLE }
+              - { key: D, text: In the 1930s, distractor: COMMON_MISCONCEPTION }
+            explanation: "Carved by Vasily Zvyozdochkin to a design by Sergey Malyutin. The story that it copied a Japanese doll is popular, but historians doubt it."
+            topics: { art: 0.6 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 4
+            dignity: 3
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-06: японское происхождение источник называет сомнительным («serious doubts», en.wikipedia: Matryoshka doll) — вопрос переделан на десятилетие (1890-е)."
+
+  - family: bridges-words
+    name: "Words and names"
+    facts:
+      - id: babushka-meaning
+        statement: "In Russian, \"babushka\" means grandmother; in English it came to mean a headscarf tied under the chin."
+        sources: [{ name: "Wiktionary: babushka", type: REFERENCE, verified: false }]
+        questions:
+          - id: babushka-meaning-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "In Russian, what does \"babushka\" actually mean?"
+            options:
+              - { key: A, text: "A headscarf", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Grandmother", correct: true }
+              - { key: C, text: "A nesting doll", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "A cabbage soup", distractor: PLAUSIBLE }
+            explanation: "English borrowed the word for the headscarf grandmothers wear — Russians would only ever mean the grandmother."
+            topics: { world-literature: 0.5 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 2
+            dignity: 2
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: vodka-little-water
+        statement: "\"Vodka\" is a diminutive of \"voda\", water — roughly \"little water\"."
+        sources: [{ name: "Wiktionary: водка", type: REFERENCE, verified: false }]
+        questions:
+          - id: vodka-little-water-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What does the word \"vodka\" literally mean?"
+            options:
+              - { key: A, text: "Fire water", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Little water", correct: true }
+              - { key: C, text: "Pure spirit", distractor: PLAUSIBLE }
+              - { key: D, text: "Grain drink", distractor: PLAUSIBLE }
+            explanation: "Voda is water; vodka is its affectionate little form."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 3
+            dignity: 2
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: cyrillic-saint-cyril
+        statement: "The Cyrillic alphabet is named after Saint Cyril, a 9th-century Byzantine missionary."
+        sources: [{ name: "Wikipedia: Cyrillic script", type: REFERENCE, verified: false }]
+        questions:
+          - id: cyrillic-saint-cyril-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "The Cyrillic alphabet is named after…"
+            options:
+              - { key: A, text: "A Russian tsar", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "A Byzantine missionary, Saint Cyril", correct: true }
+              - { key: C, text: "A Bulgarian city", distractor: PLAUSIBLE }
+              - { key: D, text: "The first printing press", distractor: PLAUSIBLE }
+            explanation: "Cyril and his brother Methodius brought writing to the Slavs; the alphabet itself was developed by their followers."
+            topics: { world-literature: 0.6, geography: 0.4 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: red-square-beautiful
+        statement: "Red Square's name comes from Old Russian \"krasnaya\", which meant \"beautiful\" — it has nothing to do with communism."
+        sources: [{ name: "Wikipedia: Red Square", type: REFERENCE, verified: false }]
+        questions:
+          - id: red-square-beautiful-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Moscow's Red Square got its name long before communism. What did \"krasnaya\" originally mean?"
+            options:
+              - { key: A, text: "Red", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Beautiful", correct: true }
+              - { key: C, text: "Revolutionary", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Main", distractor: PLAUSIBLE }
+            explanation: "Krasnaya once meant \"beautiful\" — the name stuck to the square in the 17th century."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 4
+            dignity: 3
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-06: подтверждено (en.wikipedia: Red Square) — «красная» = «красивая», нынешнее название с 1661–62."
+
+  - family: bridges-places
+    name: "Places your friends are from"
+    facts:
+      - id: riga-latvia
+        statement: "Riga is the capital of Latvia."
+        sources: [{ name: "Wikipedia: Riga", type: REFERENCE, verified: false }]
+        questions:
+          - id: riga-latvia-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "What is the capital of Latvia?"
+            options:
+              - { key: A, text: "Tallinn", distractor: NEAR_MISS }
+              - { key: B, text: "Riga", correct: true }
+              - { key: C, text: "Vilnius", distractor: NEAR_MISS }
+              - { key: D, text: "Minsk", distractor: SAME_CATEGORY }
+            explanation: "Tallinn is Estonia and Vilnius is Lithuania — the three Baltic capitals people mix up most."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8, EUROPE: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: minsk-belarus
+        statement: "Minsk is the capital of Belarus."
+        sources: [{ name: "Wikipedia: Minsk", type: REFERENCE, verified: false }]
+        questions:
+          - id: minsk-belarus-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Minsk is the capital of which country?"
+            options:
+              - { key: A, text: "Ukraine", distractor: NEAR_MISS }
+              - { key: B, text: "Belarus", correct: true }
+              - { key: C, text: "Lithuania", distractor: NEAR_MISS }
+              - { key: D, text: "Moldova", distractor: SAME_CATEGORY }
+            explanation: "Belarus sits between Poland, Lithuania, Latvia, Russia and Ukraine."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 2
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.6, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: trans-siberian-vladivostok
+        statement: "The Trans-Siberian Railway runs from Moscow to Vladivostok, 9,289 km."
+        sources: [{ name: "Wikipedia: Trans-Siberian Railway", type: REFERENCE, verified: false }]
+        questions:
+          - id: trans-siberian-vladivostok-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "The Trans-Siberian Railway runs from Moscow to…"
+            options:
+              - { key: A, text: "Novosibirsk", distractor: NEAR_MISS }
+              - { key: B, text: "Vladivostok", correct: true }
+              - { key: C, text: "Beijing", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Murmansk", distractor: PLAUSIBLE }
+            explanation: "9,289 km — about a week on the train. Beijing is the Trans-Mongolian branch; Irkutsk and Krasnoyarsk are on the way."
+            topics: { geography: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-06: длина 9 289 км подтверждена (en.wikipedia: Trans-Siberian Railway); «семь часовых поясов» источником не подтверждены — убраны."
+
+  - family: bridges-science-space
+    name: "Science and space"
+    facts:
+      - id: mendeleev-periodic
+        statement: "The periodic table was created by the Russian chemist Dmitri Mendeleev in 1869."
+        sources: [{ name: "Wikipedia: Dmitri Mendeleev", type: REFERENCE, verified: false }]
+        questions:
+          - id: mendeleev-periodic-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Who created the periodic table of the elements?"
+            options:
+              - { key: A, text: "Marie Curie", distractor: SAME_CATEGORY }
+              - { key: B, text: "Dmitri Mendeleev", correct: true }
+              - { key: C, text: "Niels Bohr", distractor: SAME_CATEGORY }
+              - { key: D, text: "Antoine Lavoisier", distractor: SAME_CATEGORY }
+            explanation: "In 1869 he left gaps for elements nobody had found yet — and predicted their properties."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 2
+            dignity: 5
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pavlov-dogs
+        statement: "Ivan Pavlov is famous for experiments on conditioned reflexes in dogs."
+        sources: [{ name: "Wikipedia: Ivan Pavlov", type: REFERENCE, verified: false }]
+        questions:
+          - id: pavlov-dogs-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Ivan Pavlov is famous for experiments with…"
+            options:
+              - { key: A, text: "Cats", distractor: PLAUSIBLE }
+              - { key: B, text: "Dogs", correct: true }
+              - { key: C, text: "Pigeons", distractor: PLAUSIBLE }
+              - { key: D, text: "Rats", distractor: SAME_CATEGORY }
+            explanation: "A bell, then food — and soon the dogs drooled at the bell alone. He won the Nobel Prize in 1904, for digestion."
+            topics: { science: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: gagarin-manchester-1961
+        statement: "During his July 1961 visit to the UK, Yuri Gagarin rode through heavy rain in Manchester in an open-top car, refusing an umbrella so the crowds could see him."
+        sources: [{ name: "Wikipedia: Yuri Gagarin", type: REFERENCE, verified: false }]
+        questions:
+          - id: gagarin-manchester-1961-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "On his 1961 visit to Britain, in which city did Yuri Gagarin refuse an umbrella and ride through heavy rain in an open-top car?"
+            options:
+              - { key: A, text: "London", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Manchester", correct: true }
+              - { key: C, text: "Glasgow", distractor: PLAUSIBLE }
+              - { key: D, text: "Liverpool", distractor: PLAUSIBLE }
+            explanation: "He stood up in the car so the cheering crowds could see him. He visited London on the same trip."
+            topics: { space: 1.0, british-culture: 0.5 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8, UK: 0.8 }
+            difficulty: 5
+            dignity: 4
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes:
+              - "Сверка Claude 2026-10-06: подтверждено (en.wikipedia: Yuri Gagarin) — Манчестер, ливень, открытая машина, отказался от зонта. «Первый город» и приглашение профсоюза источником не подтверждаются — из вопроса убраны."
+
+  - family: bridges-cold-war-culture
+    name: "Cold War, from both sides"
+    facts:
+      - id: fischer-spassky-1972
+        statement: "In 1972 American Bobby Fischer beat the Soviet world champion Boris Spassky in Reykjavík."
+        sources: [{ name: "Wikipedia: World Chess Championship 1972", type: REFERENCE, verified: false }]
+        questions:
+          - id: fischer-spassky-1972-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which American beat the Soviet world chess champion Boris Spassky in 1972?"
+            options:
+              - { key: A, text: "Garry Kasparov", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Bobby Fischer", correct: true }
+              - { key: C, text: "Paul Morphy", distractor: SAME_CATEGORY }
+              - { key: D, text: "Magnus Carlsen", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "The \"Match of the Century\" in Reykjavík was a Cold War event in its own right. Kasparov was Soviet; Carlsen is Norwegian."
+            topics: { sports: 0.8, cold-war: 0.6 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 3
+            dignity: 4
+            effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: doctor-zhivago-nobel
+        statement: "Boris Pasternak's Doctor Zhivago, banned in the USSR, won him the 1958 Nobel Prize in Literature, which he was forced to decline."
+        sources: [{ name: "Wikipedia: Doctor Zhivago (novel)", type: REFERENCE, verified: false }]
+        questions:
+          - id: doctor-zhivago-nobel-en-1
+            language: en
+            origin_language: en
+            culture_specificity: REGIONAL
+            is_bridge: true
+            text: "Which novel, banned in the USSR, won its author the 1958 Nobel Prize in Literature?"
+            options:
+              - { key: A, text: "The Master and Margarita", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Doctor Zhivago", correct: true }
+              - { key: C, text: "Lolita", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "One Day in the Life of Ivan Denisovich", distractor: NEAR_MISS }
+            explanation: "Pasternak was pressured into declining the prize. Solzhenitsyn — the author of One Day… — got his Nobel in 1970."
+            topics: { world-literature: 0.8, cold-war: 0.5 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.8 }
+            difficulty: 4
+            dignity: 5
+            effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI

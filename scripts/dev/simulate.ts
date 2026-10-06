@@ -57,27 +57,21 @@ type Archetype = {
 };
 
 const ALL_ARCHETYPES: Archetype[] = [
-  // EPIC 38: the Saturday 10.10 group — friends 30–45, Russian speakers and Brits, broad interests.
-  // The room language isn't known yet, so both versions are prepared.
+  // EPIC 38: the Saturday 10.10 group, as described by the host: ten people aged 30–42 — eight from
+  // post-Soviet countries (Belarus, Russia ×6, Latvia) and two Brits (Scotland, North of England) who
+  // don't speak Russian, so the room is English. Interests aren't known yet: a broad EN pool.
   {
-    name: "Суббота: друзья 30–45, русская комната",
-    tag: "saturday",
-    players: 6,
-    ages: ["35_44", "25_34", "35_44", "45_54"],
-    pool: ["space", "world-pop", "world-cinema", "old-internet", "food", "geography", "ru-pop-00s", "soviet-cinema", "cartoons", "internet-now", "videogames", "science", "nature", "ussr-everyday"],
-    backgrounds: null,
-    backgroundsBySeat: [["POST_SOVIET"], ["POST_SOVIET", "UK"], ["POST_SOVIET"], ["POST_SOVIET", "UK"]],
-    dignity: ["BALANCE", "POP"],
-  },
-  {
-    name: "Суббота: друзья 30–45, английская смешанная комната",
+    name: "Суббота 10.10: 8 постсоветских + 2 британца, EN",
     tag: "saturday",
     language: "en",
-    players: 6,
-    ages: ["35_44", "25_34", "35_44", "45_54"],
-    pool: ["british-culture", "world-pop", "world-cinema", "old-internet", "food", "geography", "science", "nature", "internet-now", "videogames", "space", "american-pop-culture"],
+    players: 10,
+    ages: ["35_44", "25_34", "25_34", "25_34", "25_34", "35_44", "35_44", "25_34", "35_44", "35_44"],
+    pool: ["british-culture", "world-pop", "world-cinema", "old-internet", "food", "geography", "science", "nature", "internet-now", "videogames", "space", "cold-war", "american-pop-culture", "cartoons", "fandoms", "sports", "eurovision"],
     backgrounds: null,
-    backgroundsBySeat: [["POST_SOVIET"], ["UK"], ["POST_SOVIET", "UK"], ["UK"]],
+    backgroundsBySeat: [
+      ["POST_SOVIET"], ["POST_SOVIET"], ["POST_SOVIET"], ["POST_SOVIET"], ["POST_SOVIET"],
+      ["POST_SOVIET", "EUROPE"], ["POST_SOVIET"], ["POST_SOVIET"], ["UK"], ["UK"],
+    ],
     dignity: ["BALANCE", "POP"],
   },
   {
