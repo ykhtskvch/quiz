@@ -1528,3 +1528,25 @@ button.link {
   flex-shrink: 0;
 }
 
+/* 👍 / 👎 on the reveal (06.10): small, optional, below the correct answer. */
+.quick-rate {
+  display: flex;
+  gap: var(--space-2);
+  justify-content: center;
+}
+
+.quick-rate button {
+  min-width: 56px;
+  min-height: 44px;
+  font-size: 1.3rem;
+  background: var(--surface);
+}
+
+.quick-rate-done {
+  margin: 0;
+  font-size: var(--fs-hint);
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+}
+

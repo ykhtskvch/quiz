@@ -12,7 +12,7 @@ function ruPlural(n: number, one: string, few: string, many: string) {
 const enNf = new Intl.NumberFormat("en-GB");
 
 const ru = {
-  appName: "Knowish",
+  appName: "KNOWISH",
   slogan: "Каждый что-то знает.",
   beta: "Бета",
   howTo: "Открой эту страницу на ТВ или ноутбуке и создай игру — игроки зайдут по QR-коду с телефонов.",
@@ -177,6 +177,8 @@ const ru = {
   send: "Отправить",
   feedbackThanks: "Спасибо! Это помогает делать квиз лучше.",
   rateTitle: "Оцени вопросы",
+  quickRateLabel: "Как тебе вопрос?",
+  quickRateThanks: "Спасибо за оценку!",
   rateOffer: "Хочешь оценить вопросы? Это по желанию и займёт минуту.",
   rateOfferButton: "Оценить вопросы",
   waitHostNewGame: "Ждём, пока ведущий начнёт новую игру",
@@ -195,7 +197,7 @@ const ru = {
 };
 
 const en: Strings = {
-  appName: "Knowish",
+  appName: "KNOWISH",
   slogan: "Everyone knows something.",
   beta: "Beta",
   howTo: "Open this page on a TV or laptop and create a room — players join by scanning the QR code with their phones.",
@@ -356,6 +358,8 @@ const en: Strings = {
   send: "Send",
   feedbackThanks: "Thank you! This helps make the quiz better.",
   rateTitle: "Rate the questions",
+  quickRateLabel: "How was this question?",
+  quickRateThanks: "Thanks for rating!",
   rateOffer: "Want to rate the questions? It's optional and takes a minute.",
   rateOfferButton: "Rate the questions",
   waitHostNewGame: "Waiting for the host to start a new game",

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#16131f"/>
+  <g transform="translate(0,285)">
+    <text x="80" y="185" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-size="120" font-weight="800" fill="#f4f1fa">KNOWISH</text>
+    <text x="80" y="265" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-size="52" font-weight="700" fill="#ffcc4d">Everyone knows something.</text>
+    <text x="80" y="325" font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-size="30" fill="#a49cb8">A party quiz for a TV and phones · knowish.party</text>
+    <g font-family="-apple-system, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="800" fill="#ffffff">
+      <rect x="80" y="390" width="240" height="150" rx="24" fill="#221d30"/><rect x="104" y="414" width="64" height="64" rx="14" fill="#c2410c"/><text x="123" y="461">A</text>
+      <rect x="350" y="390" width="240" height="150" rx="24" fill="#221d30"/><rect x="374" y="414" width="64" height="64" rx="14" fill="#2563eb"/><text x="393" y="461">B</text>
+      <rect x="620" y="390" width="240" height="150" rx="24" fill="#221d30" stroke="#4ade80" stroke-width="6"/><rect x="644" y="414" width="64" height="64" rx="14" fill="#9333ea"/><text x="663" y="461">C</text>
+      <rect x="890" y="390" width="240" height="150" rx="24" fill="#221d30"/><rect x="914" y="414" width="64" height="64" rx="14" fill="#0f766e"/><text x="933" y="461">D</text>
+    </g>
+  </g>
+</svg>

@@ -340,11 +340,14 @@ export class Room {
     return ok(true);
   }
 
-  /** Great / Fine / Bad for a revealed question of the finished game (US-FEED-001). First rating wins. */
+  /**
+   * Great / Fine / Bad for a revealed question (US-FEED-001). Since 06.10 also during the game, right
+   * on the reveal (👍/👎 on the phone), not only after it — fresher and far more ratings. First rating wins.
+   */
   rateQuestion(playerId: string, number: number, rating: QuestionRating, now: number): Result<true> {
     const g = this.s.game;
     if (!this.player(playerId)) return fail(401, "invalid token");
-    if (g?.status !== "FINISHED") return fail(409, "game not finished");
+    if (!g) return fail(409, "no game");
     const q = g.questions.find((x) => x.number === number && x.phase === "REVEALED");
     if (!q) return fail(404, "no such question");
     const key = `${number}:${playerId}`;

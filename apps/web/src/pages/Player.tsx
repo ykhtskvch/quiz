@@ -1,6 +1,6 @@
 // Phone: join → wait → answer → result → final place. Host controls appear for the first player.
 import { useEffect, useState } from "react";
-import type { HostCommand, OnboardingInput, OptionKey, Snapshot } from "@quiz/shared";
+import type { HostCommand, OnboardingInput, OptionKey, QuestionRating, Snapshot } from "@quiz/shared";
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { navigate } from "../router.ts";
@@ -19,6 +19,21 @@ export function Player({ code }: { code: string }) {
   // the results screen, and coming back must not show an already-sent form again.
   const [sentInGame, setSentInGame] = useState<number | null>(null);
   const [ratingInGame, setRatingInGame] = useState<number | null>(null);
+  // Ratings given right on the reveal, keyed "game:question" — so the end-of-game list only asks
+  // about the questions this player hasn't rated yet.
+  const [rated, setRated] = useState<Record<string, QuestionRating>>({});
+  const rate = (game: number, number: number, rating: QuestionRating) => {
+    const key = `${game}:${number}`;
+    if (rated[key] || !me) return;
+    setRated((r) => ({ ...r, [key]: rating }));
+    api.rateQuestion(code, me.playerToken, number, rating).catch(() =>
+      setRated((r) => {
+        const copy = { ...r };
+        delete copy[key];
+        return copy;
+      }),
+    );
+  };
   // Own answers are never broadcast, so the snapshot only has them after a reconnect; keep the last submission.
   const [submitted, setSubmitted] = useState<OnboardingInput | null>(null);
 
@@ -87,6 +102,8 @@ export function Player({ code }: { code: string }) {
           timingAt={timingAt}
           onEdit={() => setEditing(true)}
           offboarding={{ sentInGame, setSentInGame, ratingInGame, setRatingInGame }}
+          rated={rated}
+          onRate={rate}
         />
       )}
     </main>
@@ -185,6 +202,11 @@ function useCommand(code: string, token: string) {
   return { busy, error, run, host };
 }
 
+type RateProps = {
+  rated: Record<string, QuestionRating>;
+  onRate: (game: number, number: number, rating: QuestionRating) => void;
+};
+
 type Offboarding = {
   sentInGame: number | null;
   setSentInGame: (n: number) => void;
@@ -199,6 +221,8 @@ function PlayerBody({
   timingAt,
   onEdit,
   offboarding,
+  rated,
+  onRate,
 }: {
   s: Snapshot;
   code: string;
@@ -206,7 +230,7 @@ function PlayerBody({
   timingAt: number;
   onEdit: () => void;
   offboarding: Offboarding;
-}) {
+} & RateProps) {
   const t = useT();
   const isHost = s.you.role === "player" && s.you.isHost;
   const cmd = useCommand(code, token);
@@ -258,6 +282,13 @@ function PlayerBody({
 
   // ---- finished: place, offboarding, ratings, play again ----
   if (s.results) {
+    // Ratings from the reveal (this session) plus any the server already has (after a reconnect).
+    const myRatings: Record<number, QuestionRating> = { ...(s.mine?.ratings ?? {}) };
+    for (const [key, r] of Object.entries(rated)) {
+      const [gameNo, number] = key.split(":").map(Number);
+      if (game && gameNo === game.number) myRatings[number] = r;
+    }
+    const unrated = s.results.questions.filter((q) => !myRatings[q.number]);
     const myIndex = s.results.leaderboard.findIndex((l) => s.you.role === "player" && l.playerId === s.you.playerId);
     const mine = s.results.leaderboard[myIndex];
     const place = placeOf(s.results.leaderboard, myIndex);
@@ -283,7 +314,7 @@ function PlayerBody({
           <section className="after-feedback">
             <p className="thanks">{t.feedbackThanks}</p>
             {!isHost && <p className="muted center-text">{t.waitHostNewGame}</p>}
-            {!rating && s.results.questions.length > 0 && (
+            {!rating && unrated.length > 0 && (
               <div className="rate-offer">
                 <p>{t.rateOffer}</p>
                 <button onClick={() => game && setRatingInGame(game.number)}>{t.rateOfferButton}</button>
@@ -291,7 +322,9 @@ function PlayerBody({
             )}
           </section>
         )}
-        {mine && feedbackSent && rating && <QuestionRatings code={code} token={token} results={s.results} initial={s.mine?.ratings ?? {}} />}
+        {mine && feedbackSent && rating && unrated.length > 0 && (
+          <QuestionRatings code={code} token={token} results={{ ...s.results, questions: unrated }} initial={myRatings} />
+        )}
         <section className="center-text finished-actions">
           {isHost && (
             <button className="primary big" disabled={cmd.busy} onClick={() => cmd.host("play-again")}>
@@ -313,7 +346,7 @@ function PlayerBody({
   return (
     <>
       {game.status === "PAUSED" && <div className="paused-chip">{t.paused}</div>}
-      <QuestionBody s={s} code={code} token={token} timingAt={timingAt} run={cmd.run} busy={cmd.busy} />
+      <QuestionBody s={s} code={code} token={token} timingAt={timingAt} run={cmd.run} busy={cmd.busy} rated={rated} onRate={onRate} />
       {cmd.error && <p className="error center-text">{cmd.error}</p>}
       {isHost && <HostBar s={s} host={cmd.host} busy={cmd.busy} />}
     </>
@@ -327,6 +360,8 @@ function QuestionBody({
   timingAt,
   run,
   busy,
+  rated,
+  onRate,
 }: {
   s: Snapshot;
   code: string;
@@ -334,7 +369,7 @@ function QuestionBody({
   timingAt: number;
   run: (f: () => Promise<unknown>) => Promise<void>;
   busy: boolean;
-}) {
+} & RateProps) {
   const t = useT();
   const q = s.question;
   if (s.you.role === "player" && s.you.status === "PENDING") {
@@ -373,6 +408,7 @@ function QuestionBody({
               </p>
             </div>
           )}
+          {s.game && <QuickRate rating={rated[`${s.game.number}:${q.number}`] ?? s.mine?.ratings[q.number]} onRate={(r) => onRate(s.game!.number, q.number, r)} />}
           <NextUp timing={q.timing} timingAt={timingAt} number={q.number} total={total} />
         </div>
       ) : (
@@ -402,6 +438,21 @@ function QuestionBody({
         </>
       )}
     </section>
+  );
+}
+
+/** 👍 / 👎 right on the reveal: optional, one tap, then a thank-you (06.10). "Fine" stays for the end list. */
+function QuickRate({ rating, onRate }: { rating: QuestionRating | undefined; onRate: (r: QuestionRating) => void }) {
+  const t = useT();
+  if (rating) return <p className="quick-rate-done muted">{t.quickRateThanks}</p>;
+  return (
+    <div className="quick-rate" role="group" aria-label={t.quickRateLabel}>
+      {(["GREAT", "BAD"] as QuestionRating[]).map((r) => (
+        <button key={r} aria-label={t.rating[r].label} onClick={() => onRate(r)}>
+          {t.rating[r].icon}
+        </button>
+      ))}
+    </div>
   );
 }
 

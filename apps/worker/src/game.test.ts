@@ -381,6 +381,19 @@ describe("feedback and analytics", () => {
     expect(analytics(r).filter((e) => e.kind === "QUESTION_RATED")).toHaveLength(1);
     expect(r.snapshot({ role: "player", player: state.players[0] }, 6300).mine?.ratings).toEqual({ 1: "GREAT" });
   });
+
+  it("accepts a rating right on the reveal, during the game — but not before the reveal", () => {
+    const { state, ids, room } = setup();
+    room().tick(3000); // q1 answering
+    expect(room().rateQuestion(ids[0], 1, "GREAT", 3500)).toMatchObject({ ok: false, status: 404 }); // not revealed yet
+    room().answer(ids[0], "B", 4000);
+    room().answer(ids[1], "B", 4000); // revealed
+    const r = room();
+    expect(state.game!.status).toBe("ACTIVE");
+    expect(r.rateQuestion(ids[1], 1, "BAD", 5000).ok).toBe(true);
+    expect(analytics(r).filter((e) => e.kind === "QUESTION_RATED")).toEqual([expect.objectContaining({ rating: "BAD" })]);
+    expect(r.snapshot({ role: "player", player: state.players[1] }, 5100).mine?.ratings).toEqual({ 1: "BAD" });
+  });
 });
 
 describe("privacy and lifecycle", () => {
