@@ -32,6 +32,7 @@ export function Home() {
     <main className="home">
       <h1>{t.appName}</h1>
       <p className="muted">{t.tagline}</p>
+      <p className="how-to">{t.howTo}</p>
       <BetaBadge />
       <div className="lang-pick" role="radiogroup" aria-label={t.gameLanguage}>
         <span className="muted small">{t.gameLanguage}</span>
@@ -72,6 +73,14 @@ export function Home() {
           </button>
         </div>
       </form>
+      <details className="privacy">
+        <summary>{t.privacyTitle}</summary>
+        <ul>
+          {t.privacyItems.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </details>
     </main>
   );
 }

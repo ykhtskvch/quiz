@@ -1,7 +1,7 @@
 // Composition Engine simulator (09-system-design §7): plays many virtual rooms against the real
 // bank and prints the Engine §16 metrics — the fastest way to find content gaps before a playtest.
 //
-//   node scripts/dev/simulate.ts [--runs 200] [--questions 25] [--drafts] [--seed 1] [--priority]
+//   node scripts/dev/simulate.ts [--runs 200] [--questions 20] [--drafts] [--seed 1] [--priority] [--only saturday]
 //
 // --priority also writes content/review-priority.json: the share of simulated games each question
 // appears in, so the review tool can put the questions a playtest will actually see first.
@@ -9,6 +9,7 @@ import { writeFileSync } from "node:fs";
 import { parseArgs } from "node:util";
 import { BANK } from "../../packages/shared/src/bank.generated.ts";
 import {
+  DEFAULT_CONFIG,
   primaryTopic,
   type AgeBand,
   type BackgroundContext,
@@ -30,10 +31,12 @@ import {
 const { values } = parseArgs({
   options: {
     runs: { type: "string", default: "200" },
-    questions: { type: "string", default: "25" },
+    questions: { type: "string", default: String(DEFAULT_CONFIG.questionsPerGame) },
     seed: { type: "string", default: "1" },
     drafts: { type: "boolean", default: true },
     priority: { type: "boolean", default: false },
+    /** Only the archetypes with this tag, e.g. "saturday" for the 10.10 launch group (EPIC 38). */
+    only: { type: "string" },
   },
 });
 const RUNS = Number(values.runs);
@@ -48,16 +51,43 @@ type Archetype = {
   pool: string[];
   backgrounds: BackgroundContext[] | null;
   dignity: DignityChoice[];
+  /** Per-player backgrounds, cycled by seat; overrides `backgrounds` (mixed rooms). */
+  backgroundsBySeat?: (BackgroundContext[] | null)[];
+  tag?: string;
 };
 
-const ARCHETYPES: Archetype[] = [
+const ALL_ARCHETYPES: Archetype[] = [
+  // EPIC 38: the Saturday 10.10 group — friends 30–45, Russian speakers and Brits, broad interests.
+  // The room language isn't known yet, so both versions are prepared.
+  {
+    name: "Суббота: друзья 30–45, русская комната",
+    tag: "saturday",
+    players: 6,
+    ages: ["35_44", "25_34", "35_44", "45_54"],
+    pool: ["space", "world-pop", "world-cinema", "old-internet", "food", "geography", "ru-pop-00s", "soviet-cinema", "cartoons", "internet-now", "videogames", "science", "nature", "ussr-everyday"],
+    backgrounds: null,
+    backgroundsBySeat: [["POST_SOVIET"], ["POST_SOVIET", "UK"], ["POST_SOVIET"], ["POST_SOVIET", "UK"]],
+    dignity: ["BALANCE", "POP"],
+  },
+  {
+    name: "Суббота: друзья 30–45, английская смешанная комната",
+    tag: "saturday",
+    language: "en",
+    players: 6,
+    ages: ["35_44", "25_34", "35_44", "45_54"],
+    pool: ["british-culture", "world-pop", "world-cinema", "old-internet", "food", "geography", "science", "nature", "internet-now", "videogames", "space", "american-pop-culture"],
+    backgrounds: null,
+    backgroundsBySeat: [["POST_SOVIET"], ["UK"], ["POST_SOVIET", "UK"], ["UK"]],
+    dignity: ["BALANCE", "POP"],
+  },
   {
     name: "EN: 2 постсоветских + 3 британца",
     language: "en",
     players: 5,
     ages: ["25_34", "35_44"],
     pool: ["space", "british-culture", "world-pop", "world-cinema", "geography", "food", "american-pop-culture"],
-    backgrounds: ["POST_SOVIET"],
+    backgrounds: null,
+    backgroundsBySeat: [["POST_SOVIET"], ["POST_SOVIET"], ["UK"], ["UK"], ["UK"]],
     dignity: ["BALANCE", "POP"],
   },
   {
@@ -114,6 +144,10 @@ const ARCHETYPES: Archetype[] = [
 /** Games each question appeared in, across all archetypes (for --priority). */
 const appearances = new Map<string, number>();
 
+// Untagged archetypes are the general set; tagged ones only run with --only.
+const ARCHETYPES = values.only ? ALL_ARCHETYPES.filter((a) => a.tag === values.only) : ALL_ARCHETYPES.filter((a) => !a.tag);
+if (ARCHETYPES.length === 0) throw new Error(`no archetypes tagged "${values.only}"`);
+
 const pick = <T>(xs: T[], rng: () => number) => xs[Math.floor(rng() * xs.length)];
 
 function makePlayer(a: Archetype, i: number, rng: () => number): OnboardingInput {
@@ -122,7 +156,7 @@ function makePlayer(a: Archetype, i: number, rng: () => number): OnboardingInput
   return {
     ageBand: a.ages[i % a.ages.length],
     topics: liked.map((slug) => ({ slug, preference: "LIKE" as const, depth: pick<Depth>(["CASUAL", "INTERESTED", "EXPERT"], rng) })),
-    backgrounds: a.name.startsWith("EN: 2 постсоветских") ? (i < 2 ? ["POST_SOVIET"] : ["UK"]) : a.backgrounds,
+    backgrounds: a.backgroundsBySeat ? a.backgroundsBySeat[i % a.backgroundsBySeat.length] : a.backgrounds,
     dignity: pick(a.dignity, rng),
   };
 }

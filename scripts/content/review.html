@@ -88,6 +88,11 @@
         <option value="RETIRED">Снятые</option>
         <option value="">Все</option>
       </select>
+      <select id="lang">
+        <option value="">Оба языка</option>
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+      </select>
       <select id="order">
         <option value="file">По порядку в файлах</option>
         <option value="share">Сначала частые в игре</option>
@@ -124,6 +129,8 @@
       $("#reviewer").addEventListener("input", (e) => store.set("review.reviewer", e.target.value));
       $("#file").addEventListener("change", () => { cursor = 0; render(); });
       $("#status").addEventListener("change", () => { cursor = 0; render(); });
+      $("#lang").value = store.get("review.lang", "");
+      $("#lang").addEventListener("change", (e) => { store.set("review.lang", e.target.value); cursor = 0; render(); });
       $("#order").value = store.get("review.order", "file");
       $("#order").addEventListener("change", (e) => { store.set("review.order", e.target.value); cursor = 0; render(); });
 
@@ -142,7 +149,8 @@
       function visible() {
         const f = $("#file").value;
         const s = $("#status").value;
-        const list = all.filter((q) => (!f || q.file === f) && (!s || q.status === s));
+        const l = $("#lang").value;
+        const list = all.filter((q) => (!f || q.file === f) && (!s || q.status === s) && (!l || q.language === l));
         // Stable sort: equally frequent questions keep their file order.
         const order = $("#order").value;
         if (order === "share") return list.sort((a, b) => b.share - a.share);

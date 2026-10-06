@@ -14,6 +14,14 @@ const enNf = new Intl.NumberFormat("en-GB");
 const ru = {
   appName: "Квиз для своих",
   beta: "Бета",
+  howTo: "Откройте эту страницу на ТВ или ноутбуке и создайте комнату — игроки заходят по QR-коду с телефонов.",
+  privacyTitle: "Без аккаунтов. Что мы храним?",
+  privacyItems: [
+    "Ник, ответы и интересы живут только в комнате. Комната удаляется целиком через 6 часов.",
+    "Интересы и возраст видишь только ты — ни экран, ни другие игроки их не получают.",
+    "Для улучшения квиза копится анонимная статистика: какие вопросы сыграны, сколько верных ответов, оценки и анкета. Без ников, кода комнаты и интересов.",
+    "На этом устройстве запоминаются только язык и вход в комнату. Cookies, рекламы и трекеров нет.",
+  ],
   betaHint: "Часть вопросов ещё на проверке — если что-то не так, скажите!",
   gameLanguage: "Язык игры",
   languageName: { ru: "Русский", en: "English" } as Record<Language, string>,
@@ -159,6 +167,14 @@ const ru = {
 const en: Strings = {
   appName: "Quiz for your crowd",
   beta: "Beta",
+  howTo: "Open this page on a TV or laptop and create a room — players join by scanning the QR code with their phones.",
+  privacyTitle: "No accounts. What do we keep?",
+  privacyItems: [
+    "Your nickname, answers and interests live only in the room. The whole room is deleted after 6 hours.",
+    "Only you see your interests and age group — neither the screen nor other players get them.",
+    "To improve the quiz we keep anonymous stats: which questions were played, how many got them right, ratings and the survey. No nicknames, room codes or interests.",
+    "This device only remembers your language and your seat in the room. No cookies, ads or trackers.",
+  ],
   betaHint: "Some questions are still being checked — if something looks off, tell us!",
   gameLanguage: "Game language",
   languageName: { ru: "Русский", en: "English" },

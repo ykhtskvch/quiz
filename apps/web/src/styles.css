@@ -1082,6 +1082,10 @@ button.link {
   gap: 0.4rem;
 }
 
+.lang-pick .segmented {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .scoring-rules {
   margin-top: 1.5rem;
   padding: 0.75rem 1rem;
@@ -1171,5 +1175,29 @@ button.link {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+/* EPIC 38 (L-06): short privacy note on the home page. */
+.privacy {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.privacy summary {
+  cursor: pointer;
+}
+
+.privacy ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.how-to {
+  margin: 0.5rem 0 0;
+  line-height: 1.45;
 }
 

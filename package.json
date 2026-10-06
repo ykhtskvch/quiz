@@ -19,7 +19,8 @@
     "deploy:staging": "npm run build -w @quiz/web && npm run deploy:staging -w @quiz/worker",
     "deploy:production": "npm run build -w @quiz/web && npm run deploy:production -w @quiz/worker",
     "content:review": "node scripts/content/review.ts",
-    "content:priority": "node scripts/dev/simulate.ts --priority"
+    "content:priority": "node scripts/dev/simulate.ts --priority",
+    "content:priority:saturday": "node scripts/dev/simulate.ts --only saturday --runs 300 --priority"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",
