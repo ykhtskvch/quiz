@@ -3,7 +3,7 @@ import { primaryTopic, type BankQuestion, type OnboardingInput } from "@quiz/sha
 import { DEFAULT_ENGINE_CONFIG, type EngineConfig } from "./config.ts";
 import { aggregateProfile, playerProfile, type GroupProfile } from "./profile.ts";
 import { seededRng } from "./rng.ts";
-import { availableTopics, emptyCompositionState, nextQuestion, registerLateJoin, type CompositionState } from "./select.ts";
+import { availableTopics, emptyCompositionState, nextQuestion, ratingFactor, registerLateJoin, type CompositionState } from "./select.ts";
 
 const TOPIC_SPECS: { slug: string; dignity: number; local?: boolean }[] = [
   { slug: "space", dignity: 5 },
@@ -222,5 +222,26 @@ describe("room preferences", () => {
     const { picks } = run(profile, 20);
     const spaceShare = picks.filter((p) => primaryTopic(p.q) === "space").length / picks.length;
     expect(spaceShare).toBeGreaterThan(1 / 7); // more than a uniform share of the 7 eligible topics
+  });
+});
+
+describe("editor rating (EPIC 38, L-09)", () => {
+  const q = (editorRating?: number) => ({ ...makeBank()[0], editorRating });
+
+  it("turns 1–5 stars into a gentle multiplier, neutral when unrated", () => {
+    const f = (r?: number) => Math.round(ratingFactor(q(r), DEFAULT_ENGINE_CONFIG) * 100) / 100;
+    expect([f(1), f(2), f(3), f(4), f(5), f(undefined)]).toEqual([0.7, 0.85, 1, 1.15, 1.3, 1]);
+  });
+
+  it("makes favourites come up more often than disliked ones, all else equal", () => {
+    // Same bank, half the questions rated 5★ and half 1★ (alternating, so topics and difficulty are balanced).
+    const bank = makeBank().map((x, i) => ({ ...x, editorRating: i % 2 ? 5 : 1 }));
+    let fav = 0;
+    let disliked = 0;
+    for (let seed = 1; seed <= 60; seed++) {
+      for (const p of run(fourExperts(), 10, { seed, bank }).picks) p.q.editorRating === 5 ? fav++ : disliked++;
+    }
+    expect(fav).toBeGreaterThan(disliked * 1.2);
+    expect(disliked).toBeGreaterThan(0); // disliked ones still appear — nothing disappears
   });
 });

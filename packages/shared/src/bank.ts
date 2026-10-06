@@ -32,6 +32,8 @@ export type BankQuestion = {
   ageSafety: "ALL" | "NON_EXPLICIT_ADULT" | "EXPLICIT_18";
   status: QuestionStatus;
   answerMs?: number;
+  /** 1–5: how much the editor likes it (EPIC 38, L-09). Absent = no opinion. */
+  editorRating?: number;
 };
 
 export const primaryTopic = (q: BankQuestion): string =>

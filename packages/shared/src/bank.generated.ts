@@ -505,7 +505,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.7
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "graceland-memphis-en-1",
@@ -596,7 +597,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "disneyland-1955-en-1",
@@ -641,7 +643,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "got-milk-en-1",
@@ -688,7 +691,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.8
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "colosseum-purpose-ru-1",
@@ -1750,7 +1754,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "elizabeth-70-years-en-1",
@@ -1795,7 +1800,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "eastenders-square-en-1",
@@ -1840,7 +1846,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "tardis-police-box-en-1",
@@ -1884,7 +1891,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "del-boy-van-en-1",
@@ -1932,7 +1940,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "del-boy-van-en-2",
@@ -2028,7 +2037,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.8
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "mr-bean-atkinson-en-1",
@@ -2073,7 +2083,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "bake-off-star-baker-en-1",
@@ -2119,7 +2130,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "wallace-wensleydale-en-1",
@@ -2164,7 +2176,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "bonfire-night-en-1",
@@ -2208,7 +2221,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "mushy-peas-en-1",
@@ -2253,7 +2267,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "apples-and-pears-en-1",
@@ -2298,7 +2313,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "stonehenge-wiltshire-en-1",
@@ -2342,7 +2358,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "nu-pogodi-wolf-voice-ru-1",
@@ -8889,7 +8906,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "ed-balls-day-en-1",
@@ -8937,7 +8955,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "truss-lettuce-en-1",
@@ -8985,7 +9004,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "larry-chief-mouser-en-1",
@@ -9033,7 +9053,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "ed-davey-stunts-en-1",
@@ -9081,7 +9102,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "boris-fridge-en-1",
@@ -9129,7 +9151,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "sunak-samba-en-1",
@@ -9177,7 +9200,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "cameron-hum-en-1",
@@ -9225,7 +9249,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "boaty-mcboatface-en-1",
@@ -9273,7 +9298,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "jackie-weaver-en-1",
@@ -9321,7 +9347,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "count-binface-en-1",
@@ -9369,7 +9396,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "monster-raving-loony-en-1",
@@ -9417,7 +9445,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "greggs-vegan-roll-en-1",
@@ -9465,7 +9494,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "aldi-specialbuys-days-en-1",
@@ -9513,7 +9543,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "wetherspoon-carpets-en-1",
@@ -9561,7 +9592,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "the-knowledge-streets-en-1",
@@ -9609,7 +9641,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "binley-mega-chippy-en-1",
@@ -9657,7 +9690,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "willys-chocolate-experience-en-1",
@@ -9705,7 +9739,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "bude-tunnel-en-1",
@@ -9753,7 +9788,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "bushtucker-ostrich-en-1",
@@ -9801,7 +9837,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "oasis-reunion-15-years-en-1",
@@ -9849,7 +9886,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "mr-blobby-christmas-en-1",
@@ -9897,7 +9935,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "bob-builder-christmas-en-1",
@@ -9945,7 +9984,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "ladbaby-five-christmas-en-1",
@@ -9993,7 +10033,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "pj-and-duncan-en-1",
@@ -10041,7 +10082,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "rhumble-number-one-2013-en-1",
@@ -10089,7 +10131,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "susan-boyle-dreamed-en-1",
@@ -10137,7 +10180,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "mind-the-gap-1968-en-1",
@@ -10185,7 +10229,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "wombat-cube-poo-en-1",
@@ -12101,7 +12146,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "blue-eiffel-65-en-1",
@@ -13056,7 +13102,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "lordi-finland-en-1",
@@ -13802,7 +13849,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "margherita-queen-en-1",
@@ -15655,7 +15703,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "bering-strait-ru-1",
@@ -16056,7 +16105,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "fawlty-towers-12-en-1",
@@ -16103,7 +16153,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "bake-off-edd-kimber-en-1",
@@ -16150,7 +16201,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "everton-toffees-en-1",
@@ -16195,7 +16247,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "chandler-muriel-en-1",
@@ -16243,7 +16296,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "kramer-cosmo-en-1",
@@ -16290,7 +16344,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "homer-jay-en-1",
@@ -16338,7 +16393,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "tonight-show-steve-allen-en-1",
@@ -16383,7 +16439,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "berlin-airlift-ru-1",
@@ -20129,7 +20186,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "tarkovsky-solaris-en-1",
@@ -20176,7 +20234,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "potemkin-odessa-steps-en-1",
@@ -20223,7 +20282,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "back-in-the-ussr-en-1",
@@ -20272,7 +20332,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "elton-john-ussr-1979-en-1",
@@ -20322,7 +20383,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "flight-of-the-bumblebee-en-1",
@@ -20369,7 +20431,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "nureyev-paris-1961-en-1",
@@ -20511,7 +20574,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "mammoth-from-russian-en-1",
@@ -20559,7 +20623,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "matryoshka-en-1",
@@ -20604,7 +20669,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "nutcracker-tchaikovsky-en-1",
@@ -20649,7 +20715,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "tetris-korobeiniki-en-1",
@@ -20695,7 +20762,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "tatu-uk-number-one-en-1",
@@ -20744,7 +20812,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "kasparov-deep-blue-en-1",
@@ -20792,7 +20861,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "borscht-beetroot-en-1",
@@ -20837,7 +20907,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "cheetah-fastest-ru-1",
@@ -22754,7 +22825,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "fabrika-zvezd-host-ru-1",
@@ -22901,7 +22973,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "via-gra-founder-ru-1",
@@ -23192,7 +23265,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "uma2rman-founders-ru-1",
@@ -23385,7 +23459,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "seryoga-chorny-bumer-ru-1",
@@ -28912,7 +28987,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "apollo-11-collins-en-1",
@@ -29004,7 +29080,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "moonwalkers-count-en-1",
@@ -29094,7 +29171,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "last-moon-landing-year-en-1",
@@ -29273,7 +29351,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "hottest-planet-en-1",
@@ -29459,7 +29538,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "mars-moons-en-1",
@@ -29970,7 +30050,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "jwst-launch-ru-1",
@@ -32559,7 +32640,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 5
   },
   {
     "id": "minecraft-creeper-ru-1",
@@ -35679,7 +35761,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "APPROVED"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "modern-talking-country-ru-1",

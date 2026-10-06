@@ -91,6 +91,11 @@ type Candidate = {
 
 const QUALITY: Record<BankQuestion["status"], number> = { GOLD: 1, APPROVED: 0.7, FACT_CHECKED: 0.6, DRAFT: 0.5 };
 
+/** Multiplier from the editor's 1–5 rating (EngineConfig.editorRatingBoost); 1 when unrated. */
+export function ratingFactor(q: BankQuestion, config: EngineConfig): number {
+  return q.editorRating ? Math.max(0, 1 + config.editorRatingBoost * (q.editorRating - 3)) : 1;
+}
+
 export function difficultyBand(d: number): DifficultyBand {
   return d < 2.5 ? "easy" : d < 3.5 ? "medium" : d < 4.5 ? "hard" : "specialist";
 }
@@ -228,7 +233,7 @@ export function nextQuestion(input: SelectionInput): Selection | null {
     if (hardRun === 2 && (band === "hard" || band === "specialist")) penalty *= 0.7;
     if (recentFamilies.has(q.familyId)) penalty *= 0.05;
 
-    return { q, affinities, roomDifficulty, band, dignityBand: dBand, context, components, heroPlayerId, penalty, score: raw * penalty };
+    return { q, affinities, roomDifficulty, band, dignityBand: dBand, context, components, heroPlayerId, penalty, score: raw * penalty * ratingFactor(q, config) };
   };
 
   let candidates = eligible.map(score);
@@ -255,7 +260,7 @@ export function nextQuestion(input: SelectionInput): Selection | null {
         candidates = pool.map((c) => ({
           ...c,
           heroPlayerId: null,
-          score: (0.4 * c.components.quality + 0.3 * c.components.difficulty + 0.3 * c.components.cultural) * c.penalty,
+          score: (0.4 * c.components.quality + 0.3 * c.components.difficulty + 0.3 * c.components.cultural) * c.penalty * ratingFactor(c.q, config),
         }));
         mode = "wildcard";
       }

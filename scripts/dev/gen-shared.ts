@@ -64,6 +64,7 @@ const bank = files.flatMap((f) =>
           ageSafety: q.age_safety,
           status: q.status,
           ...(q.answer_time_override ? { answerMs: q.answer_time_override * 1000 } : {}),
+          ...(q.editor_rating ? { editorRating: q.editor_rating } : {}),
         })),
     ),
   ),

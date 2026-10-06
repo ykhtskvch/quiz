@@ -37,6 +37,11 @@ export type EngineConfig = {
   wildcardShare: number;
   /** D-07: room difficulty = global − coef × share of players with a match. */
   roomDifficultyCoef: number;
+  /**
+   * Editor's 1–5 rating nudges selection: score × (1 + boost × (rating − 3)), so 5★ ×1.3, 1★ ×0.7
+   * at 0.15; unrated = ×1 (EPIC 38, L-09). Favourites come up more often, nothing disappears.
+   */
+  editorRatingBoost: number;
   /** Same family may not reappear within this many questions (BR-094). */
   familyGap: number;
   difficultyTargets: Record<DifficultyBand, number>;
@@ -61,6 +66,7 @@ export const DEFAULT_ENGINE_CONFIG: EngineConfig = {
   wildcardShare: 0.15,
   roomDifficultyCoef: 0.5,
   familyGap: 3,
+  editorRatingBoost: 0.15,
   difficultyTargets: { easy: 0.2, medium: 0.4, hard: 0.28, specialist: 0.12 },
   dignityTargets: {
     4: { high: 0.35, mid: 0.35, low: 0.2, rubbish: 0.1 },
