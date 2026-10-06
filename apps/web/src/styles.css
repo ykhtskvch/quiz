@@ -9,12 +9,29 @@
   --right: #4ade80;
   --wrong: #f87171;
   --radius: 16px;
-  --opt-a: #f97316;
-  --opt-b: #3b82f6;
-  --opt-c: #a855f7;
-  --opt-d: #14b8a6;
+  /* Option keys: white letters ≥ 5:1 on all four (DS-003; were 2.5–4:1). */
+  --opt-a: #c2410c;
+  --opt-b: #2563eb;
+  --opt-c: #9333ea;
+  --opt-d: #0f766e;
+  /* Shared scale (DS-007): spacing 8/12/16/24/32, text sizes for phone screens. */
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --fs-meta: 0.8125rem;
+  --fs-hint: 0.9375rem;
+  --fs-body: 1rem;
+  --fs-choice: 1.0625rem;
+  --fs-title: 1.625rem;
   color-scheme: dark;
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* DS-008 font trial (?font=manrope); not the default until the owner decides. */
+:root[data-font="manrope"] {
+  font-family: "Manrope Variable", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 * {
@@ -54,6 +71,12 @@ button:disabled {
   cursor: default;
 }
 
+/* Visible keyboard focus everywhere (DS-005). */
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
 button.primary {
   background: var(--accent);
   color: var(--accent-text);
@@ -83,6 +106,10 @@ input {
 input:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+input:focus-visible {
+  outline: none;
 }
 
 .muted {
@@ -131,26 +158,83 @@ input:focus {
 
 /* ---------- home ---------- */
 
+/* Home (DS-010/011): brand on top, then two separate cards — host a game, join a game. */
 .home {
-  max-width: 420px;
+  max-width: 440px;
   margin: 0 auto;
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 1.25rem;
-  padding: 2rem 1rem;
+  display: grid;
+  align-content: center;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-3);
 }
 
-.home h1 {
-  font-size: 2.5rem;
+.home-head {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.home-head p {
   margin: 0;
 }
 
-.join-code {
-  margin-top: 2rem;
+.home h1 {
+  font-size: 2.75rem;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.home-card {
   display: grid;
-  gap: 0.5rem;
+  gap: var(--space-3);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-3);
+}
+
+.home-card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.home-card .big {
+  max-width: none;
+}
+
+.field-label {
+  font-size: var(--fs-hint);
+  font-weight: 600;
+}
+
+.hint {
+  font-size: var(--fs-hint);
+  line-height: 1.4;
+}
+
+.home-foot {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.join-code {
+  display: grid;
+  gap: var(--space-1);
+}
+
+@media (min-width: 900px) {
+  .home {
+    max-width: 920px;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: var(--space-4) var(--space-5);
+  }
+  .home-head,
+  .home-foot {
+    grid-column: 1 / -1;
+  }
+  .home h1 {
+    font-size: 3.5rem;
+  }
 }
 
 .row {
@@ -168,7 +252,7 @@ input:focus {
 .display {
   min-height: 100dvh;
   padding: 3vw;
-  font-size: clamp(16px, 1.6vw, 32px);
+  font-size: clamp(16px, 1.75vw, 36px);
 }
 
 .lobby {
@@ -198,11 +282,12 @@ input:focus {
   margin: 0.25em 0 0;
 }
 
+/* Two columns, so 8 players with long names still fit on one TV screen (DS-044). */
 .players {
   list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.5em;
 }
 
@@ -210,7 +295,7 @@ input:focus {
   background: var(--surface);
   padding: 0.5em 0.9em;
   border-radius: 999px;
-  font-size: 1.3em;
+  font-size: 1.1em;
   display: flex;
   gap: 0.5em;
   align-items: center;
@@ -236,17 +321,28 @@ input:focus {
 }
 
 /* Fixed stage (playtest 1): top-aligned, every slot reserved, so phases never shift the layout. */
+/* Full-height stage (DS-050): the option grid takes the free space, so a TV has no empty bottom.
+   Row heights depend only on the screen, never on the phase — the layout still doesn't move. */
 .question-view {
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding-top: 2vh;
+  min-height: calc(100dvh - 6vw);
   display: grid;
-  align-content: start;
-  gap: 1.5em;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 1.25em;
+}
+
+.question-view .options {
+  grid-auto-rows: 1fr;
+  align-self: stretch;
+}
+
+.question-view .did-you-know {
+  align-self: stretch;
 }
 
 .question-text {
-  font-size: 2.4em;
+  font-size: 2.5em;
   line-height: 1.2;
   margin: 0;
 }
@@ -433,12 +529,43 @@ li:nth-child(4) .key,
   width: 100%;
   max-width: 360px;
   display: grid;
-  gap: 0.75rem;
+  gap: var(--space-2);
   text-align: left;
 }
 
 .join-form .big {
   max-width: none;
+}
+
+/* Small brand mark on screens a guest lands on (DS-002, DS-020). */
+.brand-mark {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.01em;
+}
+
+.join-form p {
+  margin: 0;
+}
+
+.join-heading {
+  margin: 0;
+  font-size: var(--fs-title);
+  line-height: 1.2;
+}
+
+/* Reserved line, so an error doesn't push the field and the button around (DS-021). */
+.form-error {
+  min-height: 2.8em;
+  font-size: var(--fs-hint);
+}
+
+.notice {
+  max-width: 340px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.45;
 }
 
 .answer-section {
@@ -758,9 +885,14 @@ button.danger {
 
 /* ---------- M3: onboarding ---------- */
 
+/* Text-style buttons still get a 44 px touch target (DS-004). */
 button.link {
   background: none;
-  padding: 0.25rem 0;
+  min-height: 44px;
+  padding: 0.5rem 0.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   color: var(--muted);
   text-decoration: underline;
   font-weight: 500;
@@ -769,14 +901,40 @@ button.link {
 .onboarding {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: var(--space-2);
   flex: 1;
 }
 
 .onboarding h2 {
-  margin: 0.25rem 0;
-  font-size: 1.5rem;
-  line-height: 1.25;
+  margin: var(--space-1) 0 0;
+  font-size: var(--fs-title);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.onboarding .hint {
+  margin: 0;
+}
+
+.step-count {
+  font-size: var(--fs-meta);
+}
+
+/* Privacy in full on step 1 (DS-031), a short note afterwards. */
+.privacy-box {
+  margin: 0;
+  padding: var(--space-2) var(--space-3);
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: var(--fs-hint);
+  line-height: 1.4;
+}
+
+.onb-status {
+  margin: 0;
+  min-height: 1.4em;
+  color: var(--muted);
+  font-size: var(--fs-hint);
 }
 
 .onb-head {
@@ -787,6 +945,7 @@ button.link {
 
 .privacy-note {
   margin: 0;
+  font-size: var(--fs-meta);
 }
 
 .choice-list {
@@ -798,8 +957,9 @@ button.link {
   text-align: left;
   background: var(--surface);
   border: 2px solid transparent;
-  padding: 1rem 1.1rem;
-  font-size: 1.1rem;
+  padding: var(--space-3);
+  font-size: var(--fs-choice);
+  min-height: 52px;
 }
 
 .choice.tall {
@@ -807,22 +967,41 @@ button.link {
   gap: 0.25rem;
 }
 
+/* Selection is light, not yellow (DS-001), and never colour alone: the border plus a check (DS-030). */
 .choice.selected {
-  border-color: var(--accent);
+  border-color: var(--text);
+  background: var(--surface-2);
+}
+
+.choice {
+  position: relative;
+}
+
+.choice.selected {
+  padding-right: 2.75rem;
+}
+
+.choice.selected::after {
+  content: "✓";
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 800;
 }
 
 .topic-groups {
   display: grid;
-  gap: 1rem;
-  padding-bottom: 5.5rem; /* room for the sticky button */
+  gap: var(--space-3);
+  padding-bottom: var(--space-3);
 }
 
+/* Normal case, so groups don't compete with the topics (DS-007). */
 .group-title {
-  margin: 0 0 0.4rem;
-  font-size: 0.85rem;
+  margin: 0 0 var(--space-1);
+  font-size: var(--fs-meta);
+  font-weight: 600;
   color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .topic-grid {
@@ -831,19 +1010,36 @@ button.link {
   gap: 0.5rem;
 }
 
+/* Compact cards (DS-032), emoji and jokes kept (CR2 boundary). */
 .topic-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.35rem;
+  gap: 4px;
   text-align: left;
-  min-height: 84px;
-  padding: 0.75rem;
+  min-height: 72px;
+  padding: 10px var(--space-2);
   background: var(--surface);
   border: 2px solid transparent;
   font-weight: 600;
-  font-size: 0.95rem;
-  line-height: 1.2;
+  font-size: var(--fs-body);
+  line-height: 1.25;
+}
+
+.topic-card .check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--text);
+  color: var(--bg);
+  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 .topic-card:disabled {
@@ -861,7 +1057,7 @@ button.link {
 }
 
 .topic-card.selected.like {
-  border-color: var(--accent);
+  border-color: var(--text);
   background: var(--surface-2);
 }
 
@@ -871,14 +1067,23 @@ button.link {
   text-decoration: line-through;
 }
 
+/* Opaque action panel (DS-034): nothing shows through it, safe area respected. */
 .sticky-next {
   position: sticky;
   bottom: 0;
-  padding: 0.75rem 0 calc(0.5rem + env(safe-area-inset-bottom));
-  background: linear-gradient(to top, var(--bg) 70%, transparent);
-  display: flex;
-  justify-content: center;
+  padding: var(--space-2) 0 calc(var(--space-1) + env(safe-area-inset-bottom));
+  background: var(--bg);
+  border-top: 1px solid var(--surface-2);
+  display: grid;
+  gap: var(--space-1);
+  justify-items: center;
   margin-top: auto;
+}
+
+.sticky-status {
+  margin: 0;
+  font-size: var(--fs-hint);
+  color: var(--muted);
 }
 
 .sticky-next .big {
@@ -922,9 +1127,10 @@ button.link {
   border-radius: 12px;
 }
 
+/* Selected = light fill, not yellow: yellow is kept for the main action and the timer (DS-001). */
 .segmented button.on {
-  background: var(--accent);
-  color: var(--accent-text);
+  background: var(--text);
+  color: var(--bg);
 }
 
 .players li.filling {
@@ -1086,14 +1292,10 @@ button.link {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.scoring-rules {
-  margin-top: 1.5rem;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  background: var(--surface-2);
-  font-size: 0.95rem;
-  line-height: 1.4;
+.home-card .segmented {
+  background: var(--bg);
 }
+
 
 /* Offboarding in two steps (playtest 1): form → thanks → optional ratings. */
 .after-feedback {
@@ -1159,7 +1361,7 @@ button.link {
 
 /* EPIC 38: "beta" while unreviewed questions are playable. */
 .beta-badge {
-  margin: 0.75rem 0 0;
+  margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -1179,7 +1381,7 @@ button.link {
 
 /* EPIC 38 (L-06): short privacy note on the home page. */
 .privacy {
-  margin-top: 2rem;
+  margin: 0;
   font-size: 0.9rem;
   color: var(--muted);
 }
@@ -1197,15 +1399,132 @@ button.link {
 }
 
 .how-to {
-  margin: 0.5rem 0 0;
+  margin: 0;
   line-height: 1.45;
 }
 
 /* Brand: Knowish — "Everyone knows something." */
 .slogan {
-  margin: 0.25rem 0 0.5rem;
+  margin: 0;
   font-size: 1.35rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--text);
+}
+
+/* Phone lobby (DS-042, DS-043): status block, the action with its reason, rules in one line. */
+.lobby-phone {
+  display: grid;
+  align-content: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+}
+
+.lobby-phone p {
+  margin: 0;
+}
+
+.lobby-status {
+  display: grid;
+  gap: var(--space-1);
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-3);
+  text-align: center;
+}
+
+.lobby-role {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.lobby-action {
+  display: grid;
+  gap: var(--space-1);
+  justify-items: center;
+  text-align: center;
+}
+
+.lobby-action .big {
+  max-width: none;
+}
+
+.rules {
+  display: grid;
+  gap: var(--space-1);
+  font-size: var(--fs-body);
+  text-align: center;
+}
+
+.rules summary {
+  cursor: pointer;
+  color: var(--muted);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  list-style: none;
+}
+
+.rules summary::-webkit-details-marker {
+  display: none;
+}
+
+.rules summary::before {
+  content: "▸";
+  transition: transform 0.15s;
+}
+
+.rules details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.rules details p {
+  margin-top: var(--space-1);
+  text-align: left;
+}
+
+.lobby-phone > .link {
+  justify-self: center;
+}
+
+/* Display lobby (DS-040, DS-041, DS-044): readable from the sofa, named next step, long names cut. */
+.display-brand {
+  font-size: 1.6em;
+  margin-bottom: 0.4em;
+}
+
+.lobby-next {
+  margin: 1.25em 0 0;
+  font-size: 1.35em;
+  font-weight: 700;
+}
+
+.lobby-rules {
+  margin: 0.5em 0 0;
+  font-size: 1.1em;
+  color: var(--muted);
+}
+
+.players-panel .beta-badge {
+  margin-top: 1em;
+  font-size: 0.8em;
+}
+
+.players li {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.player-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 5ch;
+  flex: 1;
+}
+
+.players li .tag {
+  flex-shrink: 0;
 }
 

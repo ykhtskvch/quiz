@@ -28,60 +28,83 @@ export function Home() {
 
   const normalized = code.trim().toUpperCase();
 
+  // "Enter another code" from a dead room link lands here with #join (DS-021).
+  const focusJoin = location.hash === "#join";
+
   return (
     <main className="home">
-      <h1>{t.appName}</h1>
-      <p className="slogan">{t.slogan}</p>
-      <p className="muted">{t.tagline}</p>
-      <p className="how-to">{t.howTo}</p>
-      <BetaBadge />
-      <div className="lang-pick" role="radiogroup" aria-label={t.gameLanguage}>
-        <span className="muted small">{t.gameLanguage}</span>
-        <div className="segmented">
-          {LANGUAGES.map((l) => (
-            <button key={l} role="radio" aria-checked={lang === l} className={lang === l ? "on" : ""} onClick={() => setLanguage(l, true)}>
-              {t.languageName[l]}
-            </button>
-          ))}
-        </div>
-        <span className="muted small">{t.languageHint}</span>
-      </div>
-      <button className="primary big" onClick={create} disabled={busy}>
-        {busy ? t.creating : t.createRoom}
-      </button>
-      {error && <p className="error">{error}</p>}
+      <header className="home-head">
+        <h1>{t.appName}</h1>
+        <p className="slogan">{t.slogan}</p>
+        <p className="muted">{t.tagline}</p>
+      </header>
 
-      <form
-        className="join-code"
-        onSubmit={(e) => {
-          e.preventDefault();
-          if (isRoomCode(normalized)) navigate(`/j/${normalized}`);
-        }}
-      >
-        <label htmlFor="code">{t.haveCode}</label>
-        <div className="row">
-          <input
-            id="code"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            placeholder="ABC234"
-            maxLength={6}
-            autoCapitalize="characters"
-            autoComplete="off"
-          />
-          <button type="submit" disabled={!isRoomCode(normalized)}>
-            {t.join}
-          </button>
+      {/* Two separate paths (DS-010): start a game on the big screen, or join one from a phone. */}
+      <section className="home-card" aria-labelledby="host-title">
+        <h2 id="host-title">{t.hostTitle}</h2>
+        <p className="how-to">{t.howTo}</p>
+        <div className="lang-pick" role="radiogroup" aria-label={t.gameLanguage}>
+          <span className="field-label">{t.gameLanguage}</span>
+          <div className="segmented">
+            {LANGUAGES.map((l) => (
+              <button key={l} role="radio" aria-checked={lang === l} className={lang === l ? "on" : ""} onClick={() => setLanguage(l, true)}>
+                {t.languageName[l]}
+              </button>
+            ))}
+          </div>
+          <span className="muted hint">{t.languageHint}</span>
         </div>
-      </form>
-      <details className="privacy">
-        <summary>{t.privacyTitle}</summary>
-        <ul>
-          {t.privacyItems.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-      </details>
+        <button className="primary big" onClick={create} disabled={busy}>
+          {busy ? t.creating : t.createRoom}
+        </button>
+        {error && (
+          <p className="error" role="alert">
+            {error}
+          </p>
+        )}
+      </section>
+
+      <section className="home-card" id="join" aria-labelledby="join-title">
+        <h2 id="join-title">{t.joinTitle}</h2>
+        <form
+          className="join-code"
+          onSubmit={(e) => {
+            e.preventDefault();
+            if (isRoomCode(normalized)) navigate(`/j/${normalized}`);
+          }}
+        >
+          <label htmlFor="code" className="field-label">
+            {t.roomCode}
+          </label>
+          <div className="row">
+            <input
+              id="code"
+              value={code}
+              onChange={(e) => setCode(e.target.value)}
+              placeholder="ABC234"
+              maxLength={6}
+              autoCapitalize="characters"
+              autoComplete="off"
+              autoFocus={focusJoin}
+            />
+            <button type="submit" disabled={!isRoomCode(normalized)}>
+              {t.join}
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <footer className="home-foot">
+        <BetaBadge />
+        <details className="privacy">
+          <summary>{t.privacyTitle}</summary>
+          <ul>
+            {t.privacyItems.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </details>
+      </footer>
     </main>
   );
 }

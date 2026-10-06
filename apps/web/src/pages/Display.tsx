@@ -2,7 +2,7 @@
 import { useEffect, useMemo, useState } from "react";
 import QRCode from "qrcode";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
-import { AnswerTimer, BetaBadge, NextUp, StatCards } from "../components.tsx";
+import { AnswerTimer, BetaBadge, NextUp, placeOf, StatCards } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { useCountdown, useRoom } from "../useRoom.ts";
 
@@ -35,7 +35,11 @@ export function Display({ code }: { code: string }) {
       ) : (
         <div className="center muted big-text">{t.nextQuestion}</div>
       )}
-      {s.game && <footer className="display-footer muted">{code}</footer>}
+      {s.game && (
+        <footer className="display-footer muted">
+          {t.appName} · {code}
+        </footer>
+      )}
     </main>
   );
 }
@@ -56,6 +60,7 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
   return (
     <div className="lobby">
       <section className="qr-panel">
+        <p className="brand-mark display-brand">{t.appName}</p>
         <h2>{t.scanToJoin}</h2>
         {qr && <img className="qr" src={qr} alt={joinUrl} />}
         <p className="muted">
@@ -74,7 +79,7 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
             {s.room.players.map((p) => (
               <li key={p.id} className={p.status === "DISCONNECTED" ? "offline" : p.ready ? "ready" : "filling"}>
                 {p.ready && <span aria-hidden>✓</span>}
-                {p.nickname}
+                <span className="player-name">{p.nickname}</span>
                 {p.isHost && <span className="tag">{t.host}</span>}
                 {!p.ready && p.status !== "DISCONNECTED" && <span className="tag muted">{t.chipOnboarding}</span>}
                 {p.status === "DISCONNECTED" && <span className="tag muted">{t.offline}</span>}
@@ -82,11 +87,9 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
             ))}
           </ul>
         )}
-        <p className="muted small">{t.hostHint}</p>
-        <p className="scoring-rules">
-          {t.gameLength(DEFAULT_CONFIG.questionsPerGame)} {t.scoringRules}
-        </p>
-        <BetaBadge />
+        <p className="lobby-next">{lobbyNext(s, t)}</p>
+        <p className="lobby-rules">{t.rulesShort(DEFAULT_CONFIG.questionsPerGame)}</p>
+        <BetaBadge group />
       </section>
     </div>
   );
@@ -99,6 +102,18 @@ const KEYS = ["A", "B", "C", "D"] as const;
  * from the start and fill in when answering opens, and the bottom slot holds the timer, then the
  * correct answer. Nothing moves between phases, so eyes stay where they were.
  */
+/** What the room is waiting for, named — instead of a fixed instruction (DS-041). */
+function lobbyNext(s: Snapshot, t: ReturnType<typeof useT>): string {
+  const players = s.room.players;
+  const host = players.find((p) => p.isHost);
+  if (!host) return t.hostHint;
+  const ready = players.filter((p) => p.ready).length;
+  const prefix = `${t.hostIs(host.nickname)} · `;
+  if (ready < 2) return prefix + t.displayNeedPlayers;
+  if (players.some((p) => !p.ready && p.status !== "DISCONNECTED")) return prefix + t.displayWaitSetup;
+  return prefix + t.displayCanStart;
+}
+
 function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
   const t = useT();
   const q = s.question!;
@@ -168,22 +183,25 @@ function QuestionView({ s, timingAt }: { s: Snapshot; timingAt: number }) {
 
 function Results({ results }: { results: GameResults }) {
   const t = useT();
-  const [winner, ...rest] = results.leaderboard;
+  const board = results.leaderboard;
+  // Everyone tied for the top score is a winner; the rest keep shared places for ties.
+  const winners = board.filter((l, i) => placeOf(board, i) === 1);
+  const rest = board.filter((l, i) => placeOf(board, i) > 1);
   return (
     <div className="results">
       <p className="muted">
         {t.results} · {t.questionsPlayed(results.questionsPlayed)}
       </p>
-      {winner && (
+      {winners.length > 0 && (
         <div className="winner">
-          <p className="muted">{t.winner}</p>
-          <p className="winner-name">{winner.nickname}</p>
-          <p className="winner-score">{t.score(winner.score)}</p>
+          <p className="muted">{winners.length > 1 ? t.winners : t.winner}</p>
+          <p className="winner-name">{winners.map((w) => w.nickname).join(" · ")}</p>
+          <p className="winner-score">{t.score(winners[0].score)}</p>
         </div>
       )}
-      <ol className="leaderboard" start={2}>
+      <ol className="leaderboard">
         {rest.map((l) => (
-          <li key={l.playerId}>
+          <li key={l.playerId} value={placeOf(board, board.indexOf(l))}>
             <span className="name">{l.nickname}</span>
             <span className="muted">{t.correctOf(l.correct, l.attempted)}</span>
             <span className="score">{t.score(l.score)}</span>

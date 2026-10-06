@@ -20,6 +20,11 @@ const STEPS: Step[] = ["age", "topics", "depth", "less", "background", "dignity"
 
 const topicBySlug = new Map(TOPICS.map((x) => [x.slug, x]));
 
+/**
+ * All six dimensions stay (CR2 boundary); the presentation is lighter (DS-031): one question per
+ * step, its action type in one line, privacy in full on step 1 and as a short note after that.
+ * Editing between games opens a section menu instead of replaying all six steps (DS-035).
+ */
 export function Onboarding({
   code,
   token,
@@ -39,6 +44,7 @@ export function Onboarding({
 }) {
   const t = useT();
   const lang = useLanguage();
+  const editing = Boolean(onCancel && initial);
   const offered = useMemo(
     () => (availableTopics && availableTopics.length ? TOPICS.filter((x) => availableTopics.includes(x.slug)) : TOPICS),
     [availableTopics],
@@ -47,7 +53,7 @@ export function Onboarding({
     const x = topicBySlug.get(slug)!;
     return lang === "en" ? x.nameEn : x.name;
   };
-  const [step, setStep] = useState<Step>("age");
+  const [step, setStep] = useState<Step | "sections">(editing ? "sections" : "age");
   const [ageBand, setAgeBand] = useState<AgeBand | null>(initial?.ageBand ?? null);
   const [liked, setLiked] = useState<Map<string, Depth>>(
     () =>
@@ -63,26 +69,29 @@ export function Onboarding({
     () => new Set(initial?.topics.filter((x) => x.preference === "LESS_OF").map((x) => x.slug).slice(0, MAX_LESS_TOPICS)),
   );
   const [backgrounds, setBackgrounds] = useState<Set<BackgroundContext>>(() => new Set(initial?.backgrounds ?? []));
+  const [dignity, setDignity] = useState<DignityChoice | null>(initial?.dignity ?? null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const index = STEPS.indexOf(step);
-  const go = (s: Step) => {
+  const index = step === "sections" ? -1 : STEPS.indexOf(step);
+  const go = (s: Step | "sections") => {
     setError(null);
     setStep(s);
     window.scrollTo(0, 0);
   };
-  const next = () => go(STEPS[index + 1]);
-  const back = () => index > 0 && go(STEPS[index - 1]);
+  // While editing, every section saves on its own and returns to the lobby.
+  const next = () => (editing ? submit() : go(STEPS[index + 1]));
+  const back = () => (editing ? go("sections") : index > 0 && go(STEPS[index - 1]));
 
-  const submit = async (dignity: DignityChoice) => {
+  const submit = async (chosen: DignityChoice | null = dignity) => {
     if (!ageBand) return go("age");
+    if (!chosen) return go("dignity");
     setBusy(true);
     setError(null);
     try {
       const input: OnboardingInput = {
         ageBand,
-        dignity,
+        dignity: chosen,
         backgrounds: backgrounds.size ? [...backgrounds] : null, // empty = skipped → inferred (D-01)
         topics: [
           ...[...liked].map(([slug, depth]) => ({ slug, preference: "LIKE" as const, depth })),
@@ -104,48 +113,73 @@ export function Onboarding({
     return copy;
   };
 
+  const saveLabel = editing ? (busy ? t.saving : t.save) : t.next;
+
   return (
     <section className="onboarding">
       <header className="onb-head">
-        {index > 0 ? (
+        {step !== "sections" && (editing || index > 0) ? (
           <button className="link" onClick={back}>
             ← {t.back}
-          </button>
-        ) : onCancel ? (
-          <button className="link" onClick={onCancel}>
-            {t.cancel}
           </button>
         ) : (
           <span />
         )}
-        <span className="muted small">{t.stepOf(index + 1, STEPS.length)}</span>
+        {editing ? (
+          <button className="link" onClick={onCancel}>
+            {t.backToLobby}
+          </button>
+        ) : (
+          <span className="muted step-count">{t.stepOf(index + 1, STEPS.length)}</span>
+        )}
       </header>
-      <p className="muted small privacy-note">{t.privateNote}</p>
+      {step === "age" && !editing ? (
+        <p className="privacy-box">{t.privacyLong}</p>
+      ) : (
+        <p className="muted privacy-note">🔒 {t.privateNote}</p>
+      )}
 
-      {step === "age" && (
+      {step === "sections" && (
         <>
-          <h2>{t.ageTitle}</h2>
+          <h2>{t.editSections}</h2>
           <div className="choice-list">
-            {AGE_BANDS.map((band) => (
-              <button
-                key={band}
-                className={`choice ${ageBand === band ? "selected" : ""}`}
-                onClick={() => {
-                  setAgeBand(band);
-                  next();
-                }}
-              >
-                {t.ageBand[band]}
+            {STEPS.map((s) => (
+              <button key={s} className="choice" onClick={() => go(s)}>
+                {t.sectionName[s]}
               </button>
             ))}
           </div>
         </>
       )}
 
+      {step === "age" && (
+        <>
+          <h2>{t.ageTitle}</h2>
+          <p className="muted hint">{t.pickOneOption}</p>
+          <div className="choice-list" role="radiogroup" aria-label={t.ageTitle}>
+            {AGE_BANDS.map((band) => (
+              <button
+                key={band}
+                role="radio"
+                aria-checked={ageBand === band}
+                className={`choice ${ageBand === band ? "selected" : ""}`}
+                onClick={() => {
+                  setAgeBand(band);
+                  if (!editing) go(STEPS[index + 1]);
+                }}
+              >
+                {t.ageBand[band]}
+              </button>
+            ))}
+          </div>
+          {editing && <StickyNext onClick={next} label={saveLabel} disabled={busy} />}
+        </>
+      )}
+
       {step === "topics" && (
         <>
           <h2>{t.topicsTitle}</h2>
-          <p className="muted small">{t.topicsHint(MAX_LIKED_TOPICS)}</p>
+          <p className="muted hint">{t.topicsHint(MAX_LIKED_TOPICS)}</p>
           <TopicGrid
             topics={offered}
             selected={new Set(liked.keys())}
@@ -157,24 +191,36 @@ export function Onboarding({
               setLiked(copy);
             }}
           />
-          <StickyNext disabled={liked.size === 0} onClick={next} label={liked.size ? t.nextWithCount(liked.size) : t.pickOne} />
+          <StickyNext
+            disabled={liked.size === 0 || busy}
+            onClick={next}
+            label={liked.size ? saveLabel : t.pickOne}
+            status={t.selectedCount(liked.size, MAX_LIKED_TOPICS)}
+          />
         </>
       )}
 
       {step === "depth" && (
         <>
           <h2>{t.depthTitle}</h2>
+          <p className="muted hint">{t.depthHint}</p>
           <ul className="depth-list">
             {[...liked].map(([slug, depth]) => {
               const topic = topicBySlug.get(slug)!;
               return (
                 <li key={slug}>
-                  <span className="depth-topic">
+                  <span className="depth-topic" id={`depth-${slug}`}>
                     {topic.emoji} {name(slug)}
                   </span>
-                  <div className="segmented">
+                  <div className="segmented" role="radiogroup" aria-labelledby={`depth-${slug}`}>
                     {(["CASUAL", "INTERESTED", "EXPERT"] as Depth[]).map((d) => (
-                      <button key={d} className={depth === d ? "on" : ""} onClick={() => setLiked(new Map(liked).set(slug, d))}>
+                      <button
+                        key={d}
+                        role="radio"
+                        aria-checked={depth === d}
+                        className={depth === d ? "on" : ""}
+                        onClick={() => setLiked(new Map(liked).set(slug, d))}
+                      >
                         {t.depth[d]}
                       </button>
                     ))}
@@ -183,14 +229,14 @@ export function Onboarding({
               );
             })}
           </ul>
-          <StickyNext onClick={next} label={t.next} />
+          <StickyNext onClick={next} label={saveLabel} disabled={busy} />
         </>
       )}
 
       {step === "less" && (
         <>
           <h2>{t.lessTitle}</h2>
-          <p className="muted small">{t.lessHint(MAX_LESS_TOPICS)}</p>
+          <p className="muted hint">{t.lessHint(MAX_LESS_TOPICS)}</p>
           <TopicGrid
             topics={offered}
             selected={less}
@@ -199,43 +245,68 @@ export function Onboarding({
             max={MAX_LESS_TOPICS}
             onToggle={(slug) => setLess(less.has(slug) || less.size < MAX_LESS_TOPICS ? toggle(less, slug) : less)}
           />
-          <StickyNext onClick={next} label={less.size ? t.next : t.skipStep} />
+          <StickyNext
+            onClick={next}
+            label={editing ? saveLabel : less.size ? t.next : t.skipStep}
+            disabled={busy}
+            status={t.selectedCount(less.size, MAX_LESS_TOPICS)}
+          />
         </>
       )}
 
       {step === "background" && (
         <>
           <h2>{t.backgroundTitle}</h2>
-          <p className="muted small">{t.backgroundHint}</p>
+          <p className="muted hint">{t.backgroundHint}</p>
           <div className="choice-list">
             {BACKGROUND_CONTEXTS.map((c) => (
-              <button key={c} className={`choice ${backgrounds.has(c) ? "selected" : ""}`} onClick={() => setBackgrounds(toggle(backgrounds, c))}>
+              <button
+                key={c}
+                aria-pressed={backgrounds.has(c)}
+                className={`choice ${backgrounds.has(c) ? "selected" : ""}`}
+                onClick={() => setBackgrounds(toggle(backgrounds, c))}
+              >
                 {t.background[c]}
               </button>
             ))}
           </div>
-          <StickyNext onClick={next} label={backgrounds.size ? t.next : t.skipStep} />
+          <StickyNext onClick={next} label={editing ? saveLabel : backgrounds.size ? t.next : t.skipStep} disabled={busy} />
         </>
       )}
 
       {step === "dignity" && (
         <>
           <h2>{t.dignityTitle}</h2>
-          <div className="choice-list">
+          <p className="muted hint">{t.dignityHint}</p>
+          <div className="choice-list" role="radiogroup" aria-label={t.dignityTitle}>
             {(["CLASSIC", "BALANCE", "POP"] as DignityChoice[]).map((d) => (
               <button
                 key={d}
-                className={`choice tall ${initial?.dignity === d ? "selected" : ""}`}
+                role="radio"
+                aria-checked={dignity === d}
+                className={`choice tall ${dignity === d ? "selected" : ""}`}
                 disabled={busy}
-                onClick={() => submit(d)}
+                onClick={() => {
+                  setDignity(d);
+                  submit(d);
+                }}
               >
                 <strong>{t.dignity[d].title}</strong>
                 <span className="muted small">{t.dignity[d].hint}</span>
               </button>
             ))}
           </div>
-          {error && <p className="error">{error}</p>}
         </>
+      )}
+
+      {/* Visible feedback while saving and on failure, not just disabled buttons (DS-031). */}
+      <p className="onb-status" role="status">
+        {busy ? t.saving : ""}
+      </p>
+      {error && (
+        <p className="error" role="alert">
+          {error}
+        </p>
       )}
     </section>
   );
@@ -286,12 +357,17 @@ function TopicGrid({
                   {x.emoji}
                 </span>
                 <span>{lang === "en" ? x.nameEn : x.name}</span>
+                {selected.has(x.slug) && (
+                  <span className="check" aria-hidden>
+                    {variant === "less" ? "−" : "✓"}
+                  </span>
+                )}
               </button>
             ))}
           </div>
         </div>
       ))}
-      {full && <p className="muted small">{t.limitReached(max)}</p>}
+      {full && <p className="muted hint">{t.limitReached(max)}</p>}
       {hidden > 0 && (
         <button className="link show-all" onClick={() => setExpanded(true)}>
           {t.showAllTopics(hidden)}
@@ -301,9 +377,11 @@ function TopicGrid({
   );
 }
 
-function StickyNext({ onClick, label, disabled = false }: { onClick: () => void; label: string; disabled?: boolean }) {
+/** Opaque bottom action panel (DS-034); an optional status line such as "2/5 selected" sits above the button. */
+function StickyNext({ onClick, label, disabled = false, status }: { onClick: () => void; label: string; disabled?: boolean; status?: string }) {
   return (
     <div className="sticky-next">
+      {status && <p className="sticky-status">{status}</p>}
       <button className="primary big" disabled={disabled} onClick={onClick}>
         {label}
       </button>

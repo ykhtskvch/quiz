@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 import type { HostCommand, OnboardingInput, OptionKey, Snapshot } from "@quiz/shared";
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
-import { AnswerTimer, NextUp } from "../components.tsx";
+import { navigate } from "../router.ts";
+import { AnswerTimer, NextUp, placeOf } from "../components.tsx";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
 import { setLanguage, useT } from "../strings.ts";
@@ -14,11 +15,17 @@ export function Player({ code }: { code: string }) {
   const [me, setMe] = useState<PlayerSession | null>(() => session.load(code));
   const { snapshot, status, timingAt } = useRoom(code, me?.playerToken ?? null);
   const [editing, setEditing] = useState(false);
+  // Offboarding progress per game number. Kept here, above the screens: editing preferences unmounts
+  // the results screen, and coming back must not show an already-sent form again.
+  const [sentInGame, setSentInGame] = useState<number | null>(null);
+  const [ratingInGame, setRatingInGame] = useState<number | null>(null);
   // Own answers are never broadcast, so the snapshot only has them after a reconnect; keep the last submission.
   const [submitted, setSubmitted] = useState<OnboardingInput | null>(null);
 
-  // Learn the room's language (and which topics have content in it) before joining.
+  // Learn the room's language (and which topics have content in it) before joining — and find out
+  // early if the room is gone, before anyone types a name (DS-021).
   const [topics, setTopics] = useState<string[] | null>(null);
+  const [missing, setMissing] = useState(false);
   useEffect(() => {
     api
       .roomInfo(code)
@@ -26,7 +33,10 @@ export function Player({ code }: { code: string }) {
         setLanguage(info.language);
         setTopics(info.topics);
       })
-      .catch(() => setTopics([]));
+      .catch((err) => {
+        if (err instanceof ApiError && err.status === 404) setMissing(true);
+        setTopics([]);
+      });
   }, [code]);
   const roomLanguage = snapshot?.room.language;
   useEffect(() => {
@@ -42,7 +52,7 @@ export function Player({ code }: { code: string }) {
 
   useWakeLock(Boolean(me));
 
-  if (status === "not-found") return <main className="center">{t.roomNotFound}</main>;
+  if (status === "not-found" || (missing && !me)) return <RoomNotFound />;
   if (!me) return <JoinForm code={code} onJoined={setMe} />;
   if (!snapshot || snapshot.you.role !== "player") return <main className="center muted">…</main>;
 
@@ -70,8 +80,31 @@ export function Player({ code }: { code: string }) {
           onCancel={you.status === "ONBOARDING" ? undefined : () => setEditing(false)}
         />
       ) : (
-        <PlayerBody s={snapshot} code={code} token={me.playerToken} timingAt={timingAt} onEdit={() => setEditing(true)} />
+        <PlayerBody
+          s={snapshot}
+          code={code}
+          token={me.playerToken}
+          timingAt={timingAt}
+          onEdit={() => setEditing(true)}
+          offboarding={{ sentInGame, setSentInGame, ratingInGame, setRatingInGame }}
+        />
       )}
+    </main>
+  );
+}
+
+/** A dead or mistyped room link is not a dead end: say what happened and offer another code. */
+function RoomNotFound() {
+  const t = useT();
+  return (
+    <main className="player center">
+      <p className="brand-mark">{t.appName}</p>
+      <p className="notice" role="alert">
+        {t.roomNotFound}
+      </p>
+      <button className="primary big" onClick={() => navigate("/#join")}>
+        {t.enterAnotherCode}
+      </button>
     </main>
   );
 }
@@ -92,8 +125,11 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
       session.save(code, s);
       onJoined(s);
     } catch (err) {
+      // A failed request without a status is the network, not a missing room (DS-021).
       const httpStatus = err instanceof ApiError ? err.status : 0;
-      setError(httpStatus === 404 ? t.roomNotFound : httpStatus === 429 ? t.tooManyRequests : t.errorGeneric);
+      setError(
+        httpStatus === 404 ? t.roomNotFound : httpStatus === 429 ? t.tooManyRequests : httpStatus === 0 ? t.networkError : t.errorGeneric,
+      );
       setBusy(false);
     }
   };
@@ -101,10 +137,15 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
   return (
     <main className="player center">
       <form className="join-form" onSubmit={submit}>
+        <p className="brand-mark">{t.appName}</p>
+        <h1 className="join-heading">{t.joinHeading}</h1>
         <p className="muted">
-          {t.roomCode}: {code}
+          {t.roomCode}: <strong>{code}</strong>
         </p>
-        <label htmlFor="name">{t.yourName}</label>
+        <p className="hint">{t.joinHint}</p>
+        <label htmlFor="name" className="field-label">
+          {t.yourName}
+        </label>
         <input
           id="name"
           value={name}
@@ -117,7 +158,9 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
         <button className="primary big" type="submit" disabled={busy || !name.trim()}>
           {busy ? t.joining : t.join}
         </button>
-        {error && <p className="error">{error}</p>}
+        <p className="error form-error" role="alert">
+          {error ?? ""}
+        </p>
       </form>
     </main>
   );
@@ -142,51 +185,86 @@ function useCommand(code: string, token: string) {
   return { busy, error, run, host };
 }
 
-function PlayerBody({ s, code, token, timingAt, onEdit }: { s: Snapshot; code: string; token: string; timingAt: number; onEdit: () => void }) {
+type Offboarding = {
+  sentInGame: number | null;
+  setSentInGame: (n: number) => void;
+  ratingInGame: number | null;
+  setRatingInGame: (n: number) => void;
+};
+
+function PlayerBody({
+  s,
+  code,
+  token,
+  timingAt,
+  onEdit,
+  offboarding,
+}: {
+  s: Snapshot;
+  code: string;
+  token: string;
+  timingAt: number;
+  onEdit: () => void;
+  offboarding: Offboarding;
+}) {
   const t = useT();
   const isHost = s.you.role === "player" && s.you.isHost;
   const cmd = useCommand(code, token);
   const game = s.game;
   // Per game number, so a new game starts with a fresh form.
-  const [sentInGame, setSentInGame] = useState<number | null>(null);
-  const [ratingInGame, setRatingInGame] = useState<number | null>(null);
+  const { sentInGame, setSentInGame, ratingInGame, setRatingInGame } = offboarding;
   const feedbackSent = Boolean(s.mine?.feedbackGiven) || (game !== null && sentInGame === game.number);
   const rating = game !== null && ratingInGame === game.number;
 
-  // ---- lobby ----
+  // ---- lobby: one status block — role, readiness, the next step (DS-042, DS-043) ----
   if (!game) {
     const ready = s.room.players.filter((p) => p.ready).length;
+    const settingUp = s.room.players.filter((p) => !p.ready && p.status !== "DISCONNECTED").length;
     const enough = ready >= 2;
+    const hostName = s.room.players.find((p) => p.isHost)?.nickname;
     return (
-      <section className="center grow">
-        <p className="big-text">{t.readyWait}</p>
-        <p>{isHost ? t.youAreHost : t.waitingForHost}</p>
-        <p className="muted">{t.readyCount(ready, s.room.players.length)}</p>
-        <p className="muted small">
-          {t.gameLength(DEFAULT_CONFIG.questionsPerGame)} {t.scoringRules}
-        </p>
+      <section className="grow lobby-phone">
+        <div className="lobby-status">
+          <p className="lobby-role">{isHost ? t.youAreHostLong : hostName ? t.waitingForName(hostName) : t.waitingForHost}</p>
+          <p className="muted">{t.readyCount(ready, s.room.players.length)}</p>
+          {isHost && enough && settingUp > 0 && <p className="hint">{t.othersSettingUp(settingUp)}</p>}
+        </div>
         {isHost && (
-          <button className="primary big" disabled={cmd.busy || !enough} onClick={() => cmd.host("start")}>
-            {t.start}
-          </button>
+          <div className="lobby-action">
+            <button className="primary big" disabled={cmd.busy || !enough} onClick={() => cmd.host("start")}>
+              {t.start}
+            </button>
+            {!enough && <p className="hint">{t.needOneMore}</p>}
+          </div>
         )}
-        {isHost && !enough && <p className="muted small">{t.needTwoPlayers}</p>}
-        {isHost && enough && ready < s.room.players.length && <p className="muted small">{t.stragglersHint}</p>}
+        <div className="rules">
+          <p>{t.rulesShort(DEFAULT_CONFIG.questionsPerGame)}</p>
+          <details>
+            <summary>{t.scoringTitle}</summary>
+            <p className="hint">{t.scoringRules}</p>
+          </details>
+        </div>
         <button className="link" onClick={onEdit}>
           {t.editPrefs}
         </button>
-        {cmd.error && <p className="error">{cmd.error}</p>}
+        {cmd.error && (
+          <p className="error" role="alert">
+            {cmd.error}
+          </p>
+        )}
       </section>
     );
   }
 
   // ---- finished: place, offboarding, ratings, play again ----
   if (s.results) {
-    const place = s.results.leaderboard.findIndex((l) => s.you.role === "player" && l.playerId === s.you.playerId) + 1;
-    const mine = s.results.leaderboard[place - 1];
+    const myIndex = s.results.leaderboard.findIndex((l) => s.you.role === "player" && l.playerId === s.you.playerId);
+    const mine = s.results.leaderboard[myIndex];
+    const place = placeOf(s.results.leaderboard, myIndex);
     return (
       <div className="finished">
         <section className="center-text">
+          <p className="brand-mark">{t.appName}</p>
           <p className="muted results-label">{t.results}</p>
           {mine && (
             <p className="place">

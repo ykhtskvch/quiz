@@ -5,6 +5,8 @@ import { Display } from "./pages/Display.tsx";
 import { Home } from "./pages/Home.tsx";
 import { Player } from "./pages/Player.tsx";
 import { usePath } from "./router.ts";
+import "@fontsource-variable/manrope";
+import "./fontTrial.ts";
 import "./styles.css";
 
 function App() {

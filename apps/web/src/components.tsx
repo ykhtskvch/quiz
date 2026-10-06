@@ -61,7 +61,7 @@ export function StatCards({ results }: { results: GameResults }) {
 let betaCache: Promise<boolean> | null = null;
 
 /** "Beta" badge while this deployment plays unreviewed questions (EPIC 38, L-10). Silent on errors. */
-export function BetaBadge() {
+export function BetaBadge({ group = false }: { group?: boolean }) {
   const t = useT();
   const [beta, setBeta] = useState(false);
   useEffect(() => {
@@ -70,9 +70,15 @@ export function BetaBadge() {
   }, []);
   if (!beta) return null;
   return (
-    <p className="beta-badge" title={t.betaHint}>
-      <span>{t.beta}</span> {t.betaHint}
+    <p className="beta-badge">
+      <span>{t.beta}</span> {group ? t.betaHintGroup : t.betaHint}
     </p>
   );
+}
+
+/** Place by points: equal scores share a place (1, 1, 3), so a tie never reads as a loss. */
+export function placeOf(leaderboard: GameResults["leaderboard"], index: number): number {
+  const score = leaderboard[index]?.score ?? 0;
+  return 1 + leaderboard.filter((l) => l.score > score).length;
 }
 
