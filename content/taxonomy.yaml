@@ -25,10 +25,13 @@ topics:
   - { slug: science, emoji: "🔬", name: "Наука и изобретения", name_en: "Science & inventions", group: "Наука и мир", group_en: "Science & the world", level: B, target_questions: 8 }
   - { slug: geography, emoji: "🌍", name: "География и страны", name_en: "Geography & countries", group: "Наука и мир", group_en: "Science & the world", level: A, target_questions: 15 }
   - { slug: nature, emoji: "🐾", name: "Животные и природа", name_en: "Animals & nature", group: "Наука и мир", group_en: "Science & the world", level: B, target_questions: 8 }
+  - { slug: psychology, emoji: "🧠", name: "Психология и философия", name_en: "Psychology & philosophy", group: "Наука и мир", group_en: "Science & the world", level: A, target_questions: 8 }
+  - { slug: politics, emoji: "🗳️", name: "Политика и экономика", name_en: "Politics & economics", group: "Наука и мир", group_en: "Science & the world", level: A, target_questions: 8 }
   # Литература и искусство
   - { slug: russian-literature, emoji: "📖", name: "Русская литература", name_en: "Russian literature", group: "Литература и искусство", group_en: "Literature & art", level: A, target_questions: 15, implied_context: POST_SOVIET }
   - { slug: world-literature, emoji: "📚", name: "Мировая литература", name_en: "World literature", group: "Литература и искусство", group_en: "Literature & art", level: B, target_questions: 8 }
   - { slug: art, emoji: "🎨", name: "Живопись и искусство", name_en: "Painting & art", group: "Литература и искусство", group_en: "Literature & art", level: B, target_questions: 8 }
+  - { slug: theatre, emoji: "🎭", name: "Театр и мюзиклы", name_en: "Theatre & musicals", group: "Литература и искусство", group_en: "Literature & art", level: A, target_questions: 8 }
   # Кино и ТВ
   - { slug: soviet-cinema, emoji: "🎞️", name: "Советское кино", name_en: "Soviet cinema", group: "Кино и ТВ", group_en: "Film & TV", level: A, target_questions: 15, implied_context: POST_SOVIET }
   - { slug: world-cinema, emoji: "🎬", name: "Голливуд и мировое кино", name_en: "Hollywood & world cinema", group: "Кино и ТВ", group_en: "Film & TV", level: A, target_questions: 15 }

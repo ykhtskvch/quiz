@@ -56,7 +56,7 @@ families:
 
       - id: nokia-3310-no-camera
         statement: "The standard Nokia 3310 (2000) had SMS, a calculator and Snake II, but no camera."
-        sources: [ { name: "Wikipedia: Nokia 3310", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Nokia 3310", type: REFERENCE, verified: true } ]
         questions:
           - id: nokia-3310-no-camera-en-1
             language: en
@@ -75,8 +75,12 @@ families:
             difficulty: 1
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: nokia-3310-no-camera-ru-1
             language: ru
             origin_language: en
@@ -197,7 +201,7 @@ families:
 
       - id: bluetooth-file-transfer
         statement: "In the 2000s \"send it by Bluetooth\" meant transferring a file directly from one phone to another."
-        sources: [ { name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Bluetooth", type: REFERENCE, verified: true } ]
         questions:
           - id: bluetooth-file-transfer-en-1
             language: en
@@ -216,8 +220,12 @@ families:
             difficulty: 1
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: bluetooth-file-transfer-ru-1
             language: ru
             origin_language: en
@@ -362,7 +370,7 @@ families:
 
       - id: icq-uin
         statement: "An ICQ number (UIN) was a numerical user ID."
-        sources: [ { name: "Wikipedia: ICQ", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: ICQ", type: REFERENCE, verified: true } ]
         questions:
           - id: icq-uin-en-1
             language: en
@@ -381,9 +389,12 @@ families:
             difficulty: 1
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
-            review_notes: [ "AI doubt: The bank has ICQ questions in Russian (sound, logo, «аська») — this one is about the UIN." ]
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: icq-uin-ru-1
             language: ru
             origin_language: en
@@ -713,7 +724,7 @@ families:
     facts:
       - id: sims-pool-ladder
         statement: "A famous Sims joke: remove the ladder from the pool and the Sims can't get out."
-        sources: [ { name: "Wikipedia: The Sims", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: The Sims", type: REFERENCE, verified: true } ]
         questions:
           - id: sims-pool-ladder-en-1
             language: en
@@ -732,8 +743,12 @@ families:
             difficulty: 2
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: sims-pool-ladder-ru-1
             language: ru
             origin_language: en

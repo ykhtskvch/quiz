@@ -260,7 +260,7 @@ families:
 
       - id: nabokov-lolita
         statement: "Lolita was written in English by the Russian-born writer Vladimir Nabokov."
-        sources: [ { name: "Wikipedia: Lolita", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Lolita", type: REFERENCE, verified: true } ]
         questions:
           - id: nabokov-lolita-en-1
             language: en
@@ -279,8 +279,12 @@ families:
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_KNOW_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: theremin-termen
         statement: "The theremin, an electronic instrument played without being touched, was invented in 1920 by the Russian physicist Lev Termen (Leon Theremin)."

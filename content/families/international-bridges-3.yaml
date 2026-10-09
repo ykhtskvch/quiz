@@ -56,7 +56,7 @@ families:
 
       - id: faberge-romanovs
         statement: "Fabergé's jewelled Easter eggs were made for the Russian imperial family, the Romanovs."
-        sources: [ { name: "Wikipedia: Fabergé egg", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Fabergé egg", type: REFERENCE, verified: true } ]
         questions:
           - id: faberge-romanovs-en-1
             language: en
@@ -75,8 +75,12 @@ families:
             difficulty: 2
             dignity: 4
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: matryoshka-japan
         statement: "The first Russian matryoshka was made in the 1890s, carved by Vasily Zvyozdochkin and designed by Sergey Malyutin."
@@ -109,7 +113,7 @@ families:
     facts:
       - id: babushka-meaning
         statement: "In Russian, \"babushka\" means grandmother; in English it came to mean a headscarf tied under the chin."
-        sources: [ { name: "Wiktionary: babushka", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wiktionary: babushka", type: REFERENCE, verified: true } ]
         questions:
           - id: babushka-meaning-en-1
             language: en
@@ -128,8 +132,12 @@ families:
             difficulty: 2
             dignity: 2
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: vodka-little-water
         statement: "\"Vodka\" is a diminutive of \"voda\", water — roughly \"little water\"."
@@ -216,7 +224,7 @@ families:
     facts:
       - id: riga-latvia
         statement: "Riga is the capital of Latvia."
-        sources: [ { name: "Wikipedia: Riga", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Riga", type: REFERENCE, verified: true } ]
         questions:
           - id: riga-latvia-en-1
             language: en
@@ -235,12 +243,16 @@ families:
             difficulty: 2
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 0.6, BRIDGE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: minsk-belarus
         statement: "Minsk is the capital of Belarus."
-        sources: [ { name: "Wikipedia: Minsk", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Minsk", type: REFERENCE, verified: true } ]
         questions:
           - id: minsk-belarus-en-1
             language: en
@@ -259,8 +271,12 @@ families:
             difficulty: 2
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 0.6, BRIDGE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: trans-siberian-vladivostok
         statement: "The Trans-Siberian Railway runs from Moscow to Vladivostok, 9,289 km."

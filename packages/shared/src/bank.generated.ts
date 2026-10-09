@@ -754,11 +754,11 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Gladiator fights and public spectacles"
+        "text": "Gladiator fights and shows"
       },
       {
         "key": "C",
-        "text": "As a temple to Jupiter"
+        "text": "Worship of Jupiter"
       },
       {
         "key": "D",
@@ -780,7 +780,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "cheops-wonder-ru-1",
@@ -870,7 +871,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "veni-vidi-vici-ru-1",
@@ -940,7 +942,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "D",
-        "text": "Nero"
+        "text": "Kanye West"
       }
     ],
     "correctKey": "B",
@@ -958,7 +960,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "olympics-greece-ru-1",
@@ -1488,7 +1491,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "sistine-michelangelo-ru-1",
@@ -3087,7 +3091,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "shrek-fiona-night-ru-1",
@@ -3179,7 +3184,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "duck-tales-scrooge-ru-1",
@@ -3575,19 +3581,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "A CIA spy base"
+        "text": "A CIA listening post"
       },
       {
         "key": "B",
-        "text": "A crossing point between West and East Berlin"
+        "text": "A Berlin border crossing"
       },
       {
         "key": "C",
-        "text": "An American airfield"
+        "text": "An American airbase"
       },
       {
         "key": "D",
-        "text": "Hitler's bunker"
+        "text": "Hitler's last bunker"
       }
     ],
     "correctKey": "B",
@@ -4662,7 +4668,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "t9-meaning-ru-1",
@@ -4760,7 +4767,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "nokia-3310-no-camera-ru-1",
@@ -4958,7 +4966,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "ringtone-paid-ru-1",
@@ -5056,7 +5065,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "bluetooth-file-transfer-ru-1",
@@ -5119,19 +5129,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "5G"
+        "text": "A 5G connection"
       },
       {
         "key": "B",
-        "text": "Face ID"
+        "text": "Face ID unlock"
       },
       {
         "key": "C",
-        "text": "A memory-card slot for MP3s"
+        "text": "A memory-card slot"
       },
       {
         "key": "D",
-        "text": "An eSIM"
+        "text": "An eSIM slot"
       }
     ],
     "correctKey": "C",
@@ -5405,7 +5415,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "icq-uin-ru-1",
@@ -5652,7 +5663,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "windows-xp-bliss-ru-1",
@@ -6147,7 +6159,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "sims-pool-ladder-ru-1",
@@ -6245,7 +6258,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "gta-sa-cj-ru-1",
@@ -6343,7 +6357,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "wii-sports-no-football-ru-1",
@@ -6637,7 +6652,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "rickroll-ru-1",
@@ -6735,7 +6751,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "numa-numa-ru-1",
@@ -6927,7 +6944,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "blink-whats-my-age-video-ru-1",
@@ -7021,7 +7039,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "blink-small-things-boybands-ru-1",
@@ -7209,7 +7228,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "september-ends-father-ru-1",
@@ -7303,7 +7323,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "fat-lip-sum-41-ru-1",
@@ -7364,19 +7385,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "They start dating straight away"
+        "text": "They start dating and stay together"
       },
       {
         "key": "B",
-        "text": "He gives up skating"
+        "text": "He gives up skating to win her over"
       },
       {
         "key": "C",
-        "text": "She turns him down, and he later becomes a star"
+        "text": "She turns him down and he becomes a star"
       },
       {
         "key": "D",
-        "text": "He moves abroad"
+        "text": "He moves abroad and they lose touch"
       }
     ],
     "correctKey": "C",
@@ -7491,7 +7512,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "complicated-fake-ru-1",
@@ -7585,7 +7607,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "hybrid-theory-ru-1",
@@ -7646,19 +7669,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Being bored at work"
+        "text": "Being stuck in a dead-end job"
       },
       {
         "key": "B",
-        "text": "Others' expectations and losing yourself"
+        "text": "Living up to others' expectations"
       },
       {
         "key": "C",
-        "text": "A breakup"
+        "text": "A painful breakup"
       },
       {
         "key": "D",
-        "text": "Physical exhaustion"
+        "text": "Being physically exhausted"
       }
     ],
     "correctKey": "B",
@@ -7867,7 +7890,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "im-just-a-kid-simple-plan-ru-1",
@@ -7924,7 +7948,7 @@ export const BANK: BankQuestion[] = [
     "originLanguage": "en",
     "cultureSpecificity": "GLOBAL",
     "isBridge": false,
-    "text": "Which band recorded \"That's What You Get\"?",
+    "text": "Who recorded \"That's What You Get\"?",
     "options": [
       {
         "key": "A",
@@ -7971,7 +7995,7 @@ export const BANK: BankQuestion[] = [
     "originLanguage": "en",
     "cultureSpecificity": "GLOBAL",
     "isBridge": false,
-    "text": "Какая группа записала «That's What You Get»?",
+    "text": "Кто записал «That's What You Get»?",
     "options": [
       {
         "key": "A",
@@ -8055,7 +8079,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "sugar-fall-out-boy-ru-1",
@@ -8586,15 +8611,15 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "A rock star"
+        "text": "A washed-up rock star"
       },
       {
         "key": "B",
-        "text": "A guy trying far too hard to look street"
+        "text": "A suburban wannabe"
       },
       {
         "key": "C",
-        "text": "A teacher"
+        "text": "A strict teacher"
       },
       {
         "key": "D",
@@ -10275,7 +10300,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "wombat-cube-poo-ru-1",
@@ -10516,19 +10542,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Its smell"
+        "text": "Its strong smell"
       },
       {
         "key": "B",
-        "text": "Acid already stored inside the onion"
+        "text": "Acid already stored inside it"
       },
       {
         "key": "C",
-        "text": "A volatile chemical formed when it is cut"
+        "text": "A chemical released when it's cut"
       },
       {
         "key": "D",
-        "text": "Pollen"
+        "text": "Tiny particles of its skin"
       }
     ],
     "correctKey": "C",
@@ -12920,7 +12946,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "ikea-bike-tv-ru-1",
@@ -13150,7 +13177,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "conchita-austria-ru-1",
@@ -13336,7 +13364,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 1
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "hp-platform-ru-1",
@@ -13430,7 +13459,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "lotr-mount-doom-ru-1",
@@ -13522,7 +13552,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "twilight-jacob-ru-1",
@@ -13618,7 +13649,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "got-mother-of-dragons-ru-1",
@@ -14678,19 +14710,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "I'm not sure, please help"
+        "text": "I'm not sure, so please help me"
       },
       {
         "key": "B",
-        "text": "I know I'm right — don't contradict me"
+        "text": "I know I'm right, so don't argue"
       },
       {
         "key": "C",
-        "text": "Let's vote on it"
+        "text": "Let's put it to a vote"
       },
       {
         "key": "D",
-        "text": "I've made a mistake"
+        "text": "I think I've made a mistake"
       }
     ],
     "correctKey": "B",
@@ -16058,6 +16090,1336 @@ export const BANK: BankQuestion[] = [
     "dignity": 4,
     "effects": {
       "I_KNOW_THIS": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "al-dente-meaning-en-1",
+    "factId": "al-dente-meaning",
+    "familyId": "guests-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What does \"al dente\" literally mean?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To the tooth"
+      },
+      {
+        "key": "B",
+        "text": "To the bone"
+      },
+      {
+        "key": "C",
+        "text": "To the touch"
+      },
+      {
+        "key": "D",
+        "text": "To the end"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Pasta should still offer a little resistance to the bite.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "sunlight-vitamin-d-en-1",
+    "factId": "sunlight-vitamin-d",
+    "familyId": "guests-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which vitamin does your skin make from sunlight?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Vitamin A"
+      },
+      {
+        "key": "B",
+        "text": "Vitamin C"
+      },
+      {
+        "key": "C",
+        "text": "Vitamin D"
+      },
+      {
+        "key": "D",
+        "text": "Vitamin B12"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "That's why the NHS advises vitamin D supplements over the dark British winter.",
+    "topics": {
+      "food": 0.8,
+      "science": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "peanut-legume-en-1",
+    "factId": "peanut-legume",
+    "familyId": "guests-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which of these \"nuts\" is actually a legume, like peas and beans?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The almond"
+      },
+      {
+        "key": "B",
+        "text": "The peanut"
+      },
+      {
+        "key": "C",
+        "text": "The cashew"
+      },
+      {
+        "key": "D",
+        "text": "The walnut"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Peanuts grow underground in pods. Almonds and cashews are seeds of fruits.",
+    "topics": {
+      "food": 1,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "scoville-scale-en-1",
+    "factId": "scoville-scale",
+    "familyId": "guests-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "The heat of a chilli pepper is measured on which scale?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Richter scale"
+      },
+      {
+        "key": "B",
+        "text": "The Mohs scale"
+      },
+      {
+        "key": "C",
+        "text": "The Kelvin scale"
+      },
+      {
+        "key": "D",
+        "text": "The Scoville scale"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Named after the American pharmacist Wilbur Scoville, who devised it in 1912. A Carolina Reaper tops 1.5 million units.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "maillard-reaction-en-1",
+    "factId": "maillard-reaction",
+    "familyId": "guests-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is the Maillard reaction responsible for in cooking?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Bread dough rising"
+      },
+      {
+        "key": "B",
+        "text": "The brown crust on steak"
+      },
+      {
+        "key": "C",
+        "text": "Mayonnaise holding together"
+      },
+      {
+        "key": "D",
+        "text": "Milk curdling with lemon"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Proteins and sugars react above about 140 °C. Same reason toast tastes better than bread.",
+    "topics": {
+      "food": 1,
+      "science": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.8,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "calories-per-gram-en-1",
+    "factId": "calories-per-gram",
+    "familyId": "guests-food",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Gram for gram, which has the most calories?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Alcohol"
+      },
+      {
+        "key": "B",
+        "text": "Sugar"
+      },
+      {
+        "key": "C",
+        "text": "Fat"
+      },
+      {
+        "key": "D",
+        "text": "Protein"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Fat: about 9 kcal per gram. Alcohol is a close second at 7, sugar and protein about 4.",
+    "topics": {
+      "food": 1,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "mousetrap-christie-en-1",
+    "factId": "mousetrap-christie",
+    "familyId": "guests-theatre",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "The Mousetrap, London's longest-running play, was written by whom?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Noël Coward"
+      },
+      {
+        "key": "B",
+        "text": "Agatha Christie"
+      },
+      {
+        "key": "C",
+        "text": "Arthur Conan Doyle"
+      },
+      {
+        "key": "D",
+        "text": "Oscar Wilde"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "It opened in 1952. At the end the audience is asked to keep the killer's identity a secret.",
+    "topics": {
+      "theatre": 1,
+      "world-literature": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "les-mis-west-end-en-1",
+    "factId": "les-mis-west-end",
+    "familyId": "guests-theatre",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which musical has been running in the West End since 1985, longer than any other?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Phantom of the Opera"
+      },
+      {
+        "key": "B",
+        "text": "Cats"
+      },
+      {
+        "key": "C",
+        "text": "The Lion King"
+      },
+      {
+        "key": "D",
+        "text": "Les Misérables"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "It opened at the Barbican in October 1985. Phantom arrived a year later, in 1986.",
+    "topics": {
+      "theatre": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "macbeth-curse-en-1",
+    "factId": "macbeth-curse",
+    "familyId": "guests-theatre",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Actors believe it's bad luck to say which play's name inside a theatre?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hamlet"
+      },
+      {
+        "key": "B",
+        "text": "Othello"
+      },
+      {
+        "key": "C",
+        "text": "Macbeth"
+      },
+      {
+        "key": "D",
+        "text": "King Lear"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "They call it \"the Scottish play\" instead. The cure: leave the room, spin round three times, spit and knock to be let back in.",
+    "topics": {
+      "theatre": 1,
+      "world-literature": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "globe-thatched-roof-en-1",
+    "factId": "globe-thatched-roof",
+    "familyId": "guests-theatre",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Since the Great Fire of 1666, Shakespeare's Globe is the only London building allowed to have what?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A thatched roof"
+      },
+      {
+        "key": "B",
+        "text": "A wooden stage"
+      },
+      {
+        "key": "C",
+        "text": "Burning torches"
+      },
+      {
+        "key": "D",
+        "text": "An open-air pit"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Thatch was banned after the fire. The rebuilt Globe got special permission and sprinklers on the roof.",
+    "topics": {
+      "theatre": 1,
+      "british-culture": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "hamilton-musical-en-1",
+    "factId": "hamilton-musical",
+    "familyId": "guests-theatre",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "The hip-hop musical Hamilton is about which American founding father?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Thomas Jefferson"
+      },
+      {
+        "key": "B",
+        "text": "Benjamin Franklin"
+      },
+      {
+        "key": "C",
+        "text": "Alexander Hamilton"
+      },
+      {
+        "key": "D",
+        "text": "George Washington"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "He's the man on the $10 bill. Jefferson and Washington are characters too.",
+    "topics": {
+      "theatre": 1,
+      "american-pop-culture": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "US": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jung-introvert-en-1",
+    "factId": "jung-introvert",
+    "familyId": "guests-psychology",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who popularised the words \"introvert\" and \"extravert\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sigmund Freud"
+      },
+      {
+        "key": "B",
+        "text": "Carl Jung"
+      },
+      {
+        "key": "C",
+        "text": "Ivan Pavlov"
+      },
+      {
+        "key": "D",
+        "text": "Abraham Maslow"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "In his 1921 book Psychological Types. The Myers-Briggs test grew out of his ideas.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.6,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "jung-shadow-en-1",
+    "factId": "jung-shadow",
+    "familyId": "guests-psychology",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In Jung's psychology, what is the hidden, darker side of your personality called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "The Persona"
+      },
+      {
+        "key": "B",
+        "text": "The Anima"
+      },
+      {
+        "key": "C",
+        "text": "The Ego"
+      },
+      {
+        "key": "D",
+        "text": "The Shadow"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "The Persona is the mask you show the world; the Shadow is what you'd rather not see in yourself.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pavlov-nobel-digestion-en-1",
+    "factId": "pavlov-nobel-digestion",
+    "familyId": "guests-psychology",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Ivan Pavlov, of Pavlov's dogs, won the Nobel Prize in 1904 for research on what?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Conditioned reflexes"
+      },
+      {
+        "key": "B",
+        "text": "Digestion"
+      },
+      {
+        "key": "C",
+        "text": "Sleep"
+      },
+      {
+        "key": "D",
+        "text": "Memory"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The dogs were part of his digestion research: he noticed they drooled before the food arrived.",
+    "topics": {
+      "psychology": 1,
+      "science": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.3
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "HERO_CANDIDATE": 0.6,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "maslow-top-en-1",
+    "factId": "maslow-top",
+    "familyId": "guests-psychology",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What sits at the very top of Maslow's pyramid of needs?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Esteem"
+      },
+      {
+        "key": "B",
+        "text": "Love and belonging"
+      },
+      {
+        "key": "C",
+        "text": "Self-actualisation"
+      },
+      {
+        "key": "D",
+        "text": "Safety"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Bottom to top: physiological needs, safety, love and belonging, esteem, self-actualisation.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "descartes-cogito-en-1",
+    "factId": "descartes-cogito",
+    "familyId": "guests-psychology",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Who said \"I think, therefore I am\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Immanuel Kant"
+      },
+      {
+        "key": "B",
+        "text": "Socrates"
+      },
+      {
+        "key": "C",
+        "text": "René Descartes"
+      },
+      {
+        "key": "D",
+        "text": "Plato"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Cogito, ergo sum. He first wrote it in French, in 1637: \"Je pense, donc je suis\".",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "dunning-kruger-en-1",
+    "factId": "dunning-kruger",
+    "familyId": "guests-psychology",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "According to the Dunning-Kruger effect, people who are bad at something tend to…",
+    "options": [
+      {
+        "key": "A",
+        "text": "Overrate their own skill"
+      },
+      {
+        "key": "B",
+        "text": "Underrate their own skill"
+      },
+      {
+        "key": "C",
+        "text": "Avoid trying it at all"
+      },
+      {
+        "key": "D",
+        "text": "Copy the best person"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Described in 1999. Ironically, it's an effect lots of people are very confident they understand.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pepsi-brads-drink-en-1",
+    "factId": "pepsi-brads-drink",
+    "familyId": "guests-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was Pepsi called when it was invented in 1893?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Brad's Drink"
+      },
+      {
+        "key": "B",
+        "text": "Carolina Cola"
+      },
+      {
+        "key": "C",
+        "text": "Dr. Pepsin's Tonic"
+      },
+      {
+        "key": "D",
+        "text": "Bradham Fizz"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "The pharmacist Caleb Bradham renamed it Pepsi-Cola in 1898.",
+    "topics": {
+      "fashion-brands": 1,
+      "food": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pepsi-soviet-fleet-en-1",
+    "factId": "pepsi-soviet-fleet",
+    "familyId": "guests-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "In 1989, what did the Soviet Union give PepsiCo in exchange for Pepsi syrup?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Siberian gold"
+      },
+      {
+        "key": "B",
+        "text": "Old submarines and warships"
+      },
+      {
+        "key": "C",
+        "text": "The rights to Tetris"
+      },
+      {
+        "key": "D",
+        "text": "Seats on Aeroflot"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Seventeen submarines, a cruiser, a frigate and a destroyer, sold on for scrap. For a moment Pepsi had a bigger fleet than many countries.",
+    "topics": {
+      "fashion-brands": 1,
+      "cold-war": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.5
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "HERO_CANDIDATE": 0.5,
+      "BRIDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "pepsi-challenge-en-1",
+    "factId": "pepsi-challenge",
+    "familyId": "guests-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What was the \"Pepsi Challenge\"?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Drinking a litre in one go"
+      },
+      {
+        "key": "B",
+        "text": "A TV talent show"
+      },
+      {
+        "key": "C",
+        "text": "A blind taste test against Coke"
+      },
+      {
+        "key": "D",
+        "text": "A cross-country road trip"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Started in 1975: people tasted two unmarked cups and picked the one they liked.",
+    "topics": {
+      "fashion-brands": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "new-coke-79-days-en-1",
+    "factId": "new-coke-79-days",
+    "familyId": "guests-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In 1985 Coca-Cola changed its recipe. How long before the old one came back?",
+    "options": [
+      {
+        "key": "A",
+        "text": "About a week"
+      },
+      {
+        "key": "B",
+        "text": "About three months"
+      },
+      {
+        "key": "C",
+        "text": "About two years"
+      },
+      {
+        "key": "D",
+        "text": "It never did"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "79 days. The original returned as \"Coca-Cola Classic\" after thousands of complaints.",
+    "topics": {
+      "fashion-brands": 1,
+      "food": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "starbucks-siren-en-1",
+    "factId": "starbucks-siren",
+    "familyId": "guests-brands",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Which brand's logo is a siren from Greek mythology?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Versace"
+      },
+      {
+        "key": "B",
+        "text": "Starbucks"
+      },
+      {
+        "key": "C",
+        "text": "Dove"
+      },
+      {
+        "key": "D",
+        "text": "Nike"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "A twin-tailed siren. Versace's logo is also Greek: the head of Medusa.",
+    "topics": {
+      "fashion-brands": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "ayn-rand-petersburg-en-1",
+    "factId": "ayn-rand-petersburg",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Ayn Rand, the author of Atlas Shrugged and a hero to libertarians, was born where?",
+    "options": [
+      {
+        "key": "A",
+        "text": "New York"
+      },
+      {
+        "key": "B",
+        "text": "Vienna"
+      },
+      {
+        "key": "C",
+        "text": "St Petersburg"
+      },
+      {
+        "key": "D",
+        "text": "Kyiv"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Born Alisa Rosenbaum in 1905, she left Soviet Russia in 1926 and never went back.",
+    "topics": {
+      "politics": 1,
+      "world-literature": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.6,
+      "BRIDGE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "monopoly-landlords-game-en-1",
+    "factId": "monopoly-landlords-game",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Monopoly grew out of a 1904 game that was designed to show what?",
+    "options": [
+      {
+        "key": "A",
+        "text": "How to get rich from property"
+      },
+      {
+        "key": "B",
+        "text": "How a stock exchange works"
+      },
+      {
+        "key": "C",
+        "text": "The evils of greedy landlords"
+      },
+      {
+        "key": "D",
+        "text": "How banks lend money"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Lizzie Magie's \"The Landlord's Game\". The game about the dangers of monopolies became a game about winning one.",
+    "topics": {
+      "politics": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "adam-smith-twenty-en-1",
+    "factId": "adam-smith-twenty",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Before the painter Turner, whose face was on the Bank of England £20 note?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Charles Darwin"
+      },
+      {
+        "key": "B",
+        "text": "Adam Smith"
+      },
+      {
+        "key": "C",
+        "text": "Isaac Newton"
+      },
+      {
+        "key": "D",
+        "text": "Winston Churchill"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "The Scottish father of economics, from 2007. Darwin was on the £10, Churchill is on the £5.",
+    "topics": {
+      "politics": 1,
+      "british-culture": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.7
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "svetov-nottingham-en-1",
+    "factId": "svetov-nottingham",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": true,
+    "text": "Russian libertarian YouTuber Mikhail Svetov got his politics degree at a university in which English city?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Oxford"
+      },
+      {
+        "key": "B",
+        "text": "Nottingham"
+      },
+      {
+        "key": "C",
+        "text": "Manchester"
+      },
+      {
+        "key": "D",
+        "text": "London"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Nottingham, in 2009. A libertarian educated in the home town of Robin Hood, who took from the rich.",
+    "topics": {
+      "politics": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 1,
+      "UK": 0.5
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "BRIDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "telegram-rally-planes-en-1",
+    "factId": "telegram-rally-planes",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "In 2018, thousands rallied in Moscow against the blocking of Telegram. What did they throw into the air?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Blue balloons"
+      },
+      {
+        "key": "B",
+        "text": "Their SIM cards"
+      },
+      {
+        "key": "C",
+        "text": "Paper planes"
+      },
+      {
+        "key": "D",
+        "text": "Old phones"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Paper planes, Telegram's logo. The rally was organised by Mikhail Svetov and the Libertarian Party.",
+    "topics": {
+      "politics": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 1,
+      "INTERNET_GLOBAL": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "svetov-svtv-en-1",
+    "factId": "svetov-svtv",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "What is Mikhail Svetov's YouTube channel called?",
+    "options": [
+      {
+        "key": "A",
+        "text": "SVTV"
+      },
+      {
+        "key": "B",
+        "text": "Popular Politics"
+      },
+      {
+        "key": "C",
+        "text": "Rabkor"
+      },
+      {
+        "key": "D",
+        "text": "Redaktsiya"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "SVTV. The others are real channels too: Navalny's team (Popular Politics), Boris Kagarlitsky's Rabkor and Alexey Pivovarov's Redaktsiya.",
+    "topics": {
+      "politics": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.9
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
+    "id": "shtefanov-romm-en-1",
+    "factId": "shtefanov-romm",
+    "familyId": "guests-politics",
+    "language": "en",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Blogger-historian Alexander Shtefanov's 2023 film \"Ordinary Denazification\" plays on the title of which 1965 Soviet documentary?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Man with a Movie Camera"
+      },
+      {
+        "key": "B",
+        "text": "Come and See"
+      },
+      {
+        "key": "C",
+        "text": "The Cranes Are Flying"
+      },
+      {
+        "key": "D",
+        "text": "Ordinary Fascism"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Mikhail Romm's \"Ordinary Fascism\" (1965). Shtefanov's film is about life in occupied Mariupol; he left Russia in 2024.",
+    "topics": {
+      "politics": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 1
+    },
+    "generations": {},
+    "difficulty": 5,
+    "dignity": 4,
+    "effects": {
+      "HERO_CANDIDATE": 0.9
     },
     "ageSafety": "ALL",
     "status": "DRAFT"
@@ -17840,7 +19202,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "jaws-bruce-ru-1",
@@ -18220,7 +19583,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "beatles-quarrymen-ru-1",
@@ -18381,7 +19745,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Aberdeen, Washington"
+        "text": "Aberdeen"
       },
       {
         "key": "C",
@@ -18410,7 +19774,7 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED"
   },
   {
     "id": "sting-sumner-ru-1",
@@ -20527,7 +21891,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "theremin-termen-en-1",
@@ -20768,7 +22133,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "matryoshka-japan-en-1",
@@ -20860,7 +22226,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "vodka-little-water-en-1",
@@ -20906,7 +22273,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "cyrillic-saint-cyril-en-1",
@@ -20924,7 +22292,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "A Byzantine missionary, Saint Cyril"
+        "text": "A Byzantine missionary"
       },
       {
         "key": "C",
@@ -20999,7 +22367,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "riga-latvia-en-1",
@@ -21046,7 +22415,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "minsk-belarus-en-1",
@@ -21092,7 +22462,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "trans-siberian-vladivostok-en-1",
@@ -21138,7 +22509,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "mendeleev-periodic-en-1",
@@ -21184,7 +22556,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "pavlov-dogs-en-1",
@@ -21229,7 +22602,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "gagarin-manchester-1961-en-1",
@@ -21277,7 +22651,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "fischer-spassky-1972-en-1",
@@ -21324,7 +22699,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "doctor-zhivago-nobel-en-1",
@@ -22009,7 +23385,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "spider-legs-ru-1",
@@ -22850,7 +24227,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "smiley-fahlman-ru-1",
@@ -23086,7 +24464,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "nokia-snake-ru-1",
@@ -23329,7 +24708,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "tatu-eurovision-2003-place-ru-1",
@@ -30239,7 +31619,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "mars-moons-ru-1",
@@ -31436,7 +32817,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "schumacher-titles-ru-1",
@@ -31532,7 +32914,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "jordan-bulls-ru-1",
@@ -31624,7 +33007,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "gazirovka-price-ru-1",
@@ -33856,7 +35240,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "matrix-red-pill-ru-1",
@@ -33950,7 +35335,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "godfather-brando-ru-1",
@@ -34598,7 +35984,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "terminator-be-back-ru-1",
@@ -35022,7 +36409,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "romeo-verona-ru-1",
@@ -36128,7 +37516,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "madonna-like-a-prayer-ru-1",
@@ -36410,7 +37799,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "crazy-frog-axel-f-ru-1",
@@ -36841,7 +38231,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "ace-of-base-sweden-ru-1",
@@ -36935,6 +38326,7 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.3
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   }
 ];

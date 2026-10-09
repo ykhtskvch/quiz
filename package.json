@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "concurrently -k -n worker,web -c blue,green \"npm run dev -w @quiz/worker\" \"npm run dev -w @quiz/web\"",
     "content:validate": "node scripts/content/validate.ts",
-    "content:build": "node scripts/content/build.ts",
+    "content:build": "node scripts/content/build.ts && npm run content:gen",
     "content:draft": "node scripts/content/draft.ts",
     "content:critique": "node scripts/content/critique.ts",
     "typecheck": "tsc --noEmit && tsc --noEmit -p apps/worker && tsc --noEmit -p apps/web",
@@ -16,11 +16,12 @@
     "smoke": "node scripts/dev/smoke.ts",
     "analytics": "node scripts/dev/analytics-report.ts",
     "db:migrate:local": "npm run db:migrate:local -w @quiz/worker",
-    "deploy:staging": "npm run build -w @quiz/web && npm run deploy:staging -w @quiz/worker",
-    "deploy:production": "npm run build -w @quiz/web && npm run deploy:production -w @quiz/worker",
+    "deploy:staging": "npm run content:gen && npm run build -w @quiz/web && npm run deploy:staging -w @quiz/worker",
+    "deploy:production": "npm run content:gen && npm run build -w @quiz/web && npm run deploy:production -w @quiz/worker",
     "content:review": "node scripts/content/review.ts",
     "content:priority": "node scripts/dev/simulate.ts --priority",
-    "content:priority:saturday": "node scripts/dev/simulate.ts --only saturday --runs 300 --priority"
+    "content:priority:saturday": "node scripts/dev/simulate.ts --only saturday --runs 300 --priority",
+    "content:gen": "node scripts/dev/gen-shared.ts"
   },
   "devDependencies": {
     "@types/node": "^26.6.3",

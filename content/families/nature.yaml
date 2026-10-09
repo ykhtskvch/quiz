@@ -139,7 +139,7 @@ families:
     facts:
       - id: octopus-hearts
         statement: "У осьминога три сердца."
-        sources: [ { name: "Википедия: Осьминоги", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: Осьминоги", type: REFERENCE, verified: true } ]
         questions:
           - id: octopus-hearts-ru-1
             language: ru
@@ -175,10 +175,12 @@ families:
             difficulty: 3
             dignity: 4
             effects: { I_KNOW_THIS: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: spider-legs
         statement: "У паука восемь ног; у насекомых — шесть."

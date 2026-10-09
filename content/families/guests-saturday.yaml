@@ -1,0 +1,692 @@
+# Saturday 10.10: questions for the guests' interests (EN room) — fun for everyone, a Hero for one
+# Written by Claude as DRAFT; every fact needs human review (BR-130).
+
+families:
+  - family: guests-food
+    name: "Food & nutrition (Saturday guests)"
+    facts:
+      - id: al-dente-meaning
+        statement: "Al dente is Italian for 'to the tooth'."
+        sources: [{ name: "Wikipedia: Al dente", type: REFERENCE, verified: false }]
+        questions:
+          - id: al-dente-meaning-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What does \"al dente\" literally mean?"
+            options:
+              - { key: A, text: "To the tooth", correct: true }
+              - { key: B, text: "To the bone", distractor: PLAUSIBLE }
+              - { key: C, text: "To the touch", distractor: NEAR_MISS }
+              - { key: D, text: "To the end", distractor: PLAUSIBLE }
+            explanation: "Pasta should still offer a little resistance to the bite."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: sunlight-vitamin-d
+        statement: "The skin makes vitamin D when exposed to sunlight (UVB)."
+        sources: [{ name: "NHS: Vitamin D", type: REFERENCE, verified: false }]
+        questions:
+          - id: sunlight-vitamin-d-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which vitamin does your skin make from sunlight?"
+            options:
+              - { key: A, text: "Vitamin A", distractor: PLAUSIBLE }
+              - { key: B, text: "Vitamin C", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Vitamin D", correct: true }
+              - { key: D, text: "Vitamin B12", distractor: SAME_CATEGORY }
+            explanation: "That's why the NHS advises vitamin D supplements over the dark British winter."
+            topics: { food: 0.8, science: 0.6 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: peanut-legume
+        statement: "Botanically, the peanut is a legume, not a nut."
+        sources: [{ name: "Wikipedia: Peanut", type: REFERENCE, verified: false }]
+        questions:
+          - id: peanut-legume-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which of these \"nuts\" is actually a legume, like peas and beans?"
+            options:
+              - { key: A, text: "The almond", distractor: SAME_CATEGORY }
+              - { key: B, text: "The peanut", correct: true }
+              - { key: C, text: "The cashew", distractor: SAME_CATEGORY }
+              - { key: D, text: "The walnut", distractor: SAME_CATEGORY }
+            explanation: "Peanuts grow underground in pods. Almonds and cashews are seeds of fruits."
+            topics: { food: 1.0, science: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.5, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: scoville-scale
+        statement: "The heat of chilli peppers is measured on the Scoville scale."
+        sources: [{ name: "Wikipedia: Scoville scale", type: REFERENCE, verified: false }]
+        questions:
+          - id: scoville-scale-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "The heat of a chilli pepper is measured on which scale?"
+            options:
+              - { key: A, text: "The Richter scale", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "The Mohs scale", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "The Kelvin scale", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "The Scoville scale", correct: true }
+            explanation: "Named after the American pharmacist Wilbur Scoville, who devised it in 1912. A Carolina Reaper tops 1.5 million units."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: maillard-reaction
+        statement: "The Maillard reaction between amino acids and sugars causes browning and flavour in seared, roasted and toasted food."
+        sources: [{ name: "Wikipedia: Maillard reaction", type: REFERENCE, verified: false }]
+        questions:
+          - id: maillard-reaction-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What is the Maillard reaction responsible for in cooking?"
+            options:
+              - { key: A, text: "Bread dough rising", distractor: PLAUSIBLE }
+              - { key: B, text: "The brown crust on steak", correct: true }
+              - { key: C, text: "Mayonnaise holding together", distractor: PLAUSIBLE }
+              - { key: D, text: "Milk curdling with lemon", distractor: PLAUSIBLE }
+            explanation: "Proteins and sugars react above about 140 °C. Same reason toast tastes better than bread."
+            topics: { food: 1.0, science: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.8, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: calories-per-gram
+        statement: "Per gram, fat has about 9 kcal, alcohol about 7, protein and carbohydrate about 4."
+        sources: [{ name: "NHS: Understanding calories", type: REFERENCE, verified: false }]
+        questions:
+          - id: calories-per-gram-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Gram for gram, which has the most calories?"
+            options:
+              - { key: A, text: "Alcohol", distractor: NEAR_MISS }
+              - { key: B, text: "Sugar", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Fat", correct: true }
+              - { key: D, text: "Protein", distractor: PLAUSIBLE }
+            explanation: "Fat: about 9 kcal per gram. Alcohol is a close second at 7, sugar and protein about 4."
+            topics: { food: 1.0, science: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: guests-theatre
+    name: "London theatre"
+    facts:
+      - id: mousetrap-christie
+        statement: "The Mousetrap by Agatha Christie has run in London's West End since 1952, the world's longest-running play."
+        sources: [{ name: "Wikipedia: The Mousetrap", type: REFERENCE, verified: false }]
+        questions:
+          - id: mousetrap-christie-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "The Mousetrap, London's longest-running play, was written by whom?"
+            options:
+              - { key: A, text: "Noël Coward", distractor: SAME_CATEGORY }
+              - { key: B, text: "Agatha Christie", correct: true }
+              - { key: C, text: "Arthur Conan Doyle", distractor: NEAR_MISS }
+              - { key: D, text: "Oscar Wilde", distractor: SAME_CATEGORY }
+            explanation: "It opened in 1952. At the end the audience is asked to keep the killer's identity a secret."
+            topics: { theatre: 1.0, world-literature: 0.4 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: les-mis-west-end
+        statement: "Les Misérables opened in London in 1985 and is the longest-running musical in the West End."
+        sources: [{ name: "Wikipedia: Les Misérables (musical)", type: REFERENCE, verified: false }]
+        questions:
+          - id: les-mis-west-end-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which musical has been running in the West End since 1985, longer than any other?"
+            options:
+              - { key: A, text: "The Phantom of the Opera", distractor: NEAR_MISS }
+              - { key: B, text: "Cats", distractor: NEAR_MISS }
+              - { key: C, text: "The Lion King", distractor: PLAUSIBLE }
+              - { key: D, text: "Les Misérables", correct: true }
+            explanation: "It opened at the Barbican in October 1985. Phantom arrived a year later, in 1986."
+            topics: { theatre: 1.0 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 3
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: macbeth-curse
+        statement: "By theatre superstition, saying 'Macbeth' inside a theatre brings bad luck; actors call it 'the Scottish play'."
+        sources: [{ name: "Wikipedia: The Scottish Play", type: REFERENCE, verified: false }]
+        questions:
+          - id: macbeth-curse-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Actors believe it's bad luck to say which play's name inside a theatre?"
+            options:
+              - { key: A, text: "Hamlet", distractor: SAME_CATEGORY }
+              - { key: B, text: "Othello", distractor: SAME_CATEGORY }
+              - { key: C, text: "Macbeth", correct: true }
+              - { key: D, text: "King Lear", distractor: SAME_CATEGORY }
+            explanation: "They call it \"the Scottish play\" instead. The cure: leave the room, spin round three times, spit and knock to be let back in."
+            topics: { theatre: 1.0, world-literature: 0.5 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: globe-thatched-roof
+        statement: "Shakespeare's Globe (1997) has the first thatched roof permitted in London since the Great Fire of 1666."
+        sources: [{ name: "Shakespeare's Globe: About the Globe", type: REFERENCE, verified: false }]
+        questions:
+          - id: globe-thatched-roof-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Since the Great Fire of 1666, Shakespeare's Globe is the only London building allowed to have what?"
+            options:
+              - { key: A, text: "A thatched roof", correct: true }
+              - { key: B, text: "A wooden stage", distractor: PLAUSIBLE }
+              - { key: C, text: "Burning torches", distractor: PLAUSIBLE }
+              - { key: D, text: "An open-air pit", distractor: NEAR_MISS }
+            explanation: "Thatch was banned after the fire. The rebuilt Globe got special permission and sprinklers on the roof."
+            topics: { theatre: 1.0, british-culture: 0.4 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: hamilton-musical
+        statement: "Hamilton, by Lin-Manuel Miranda, is about the US founding father Alexander Hamilton; it has played at London's Victoria Palace Theatre since 2017."
+        sources: [{ name: "Wikipedia: Hamilton (musical)", type: REFERENCE, verified: false }]
+        questions:
+          - id: hamilton-musical-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "The hip-hop musical Hamilton is about which American founding father?"
+            options:
+              - { key: A, text: "Thomas Jefferson", distractor: NEAR_MISS }
+              - { key: B, text: "Benjamin Franklin", distractor: SAME_CATEGORY }
+              - { key: C, text: "Alexander Hamilton", correct: true }
+              - { key: D, text: "George Washington", distractor: SAME_CATEGORY }
+            explanation: "He's the man on the $10 bill. Jefferson and Washington are characters too."
+            topics: { theatre: 1.0, american-pop-culture: 0.4 }
+            contexts: { GLOBAL: 1.0, US: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: guests-psychology
+    name: "Psychology & philosophy"
+    facts:
+      - id: jung-introvert
+        statement: "Carl Jung popularised the terms introvert and extravert in Psychological Types (1921)."
+        sources: [{ name: "Wikipedia: Extraversion and introversion", type: REFERENCE, verified: false }]
+        questions:
+          - id: jung-introvert-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Who popularised the words \"introvert\" and \"extravert\"?"
+            options:
+              - { key: A, text: "Sigmund Freud", distractor: NEAR_MISS }
+              - { key: B, text: "Carl Jung", correct: true }
+              - { key: C, text: "Ivan Pavlov", distractor: SAME_CATEGORY }
+              - { key: D, text: "Abraham Maslow", distractor: SAME_CATEGORY }
+            explanation: "In his 1921 book Psychological Types. The Myers-Briggs test grew out of his ideas."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: jung-shadow
+        statement: "In Jungian psychology, the Shadow is the unconscious side of the personality that the ego doesn't recognise in itself."
+        sources: [{ name: "Wikipedia: Shadow (psychology)", type: REFERENCE, verified: false }]
+        questions:
+          - id: jung-shadow-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In Jung's psychology, what is the hidden, darker side of your personality called?"
+            options:
+              - { key: A, text: "The Persona", distractor: NEAR_MISS }
+              - { key: B, text: "The Anima", distractor: NEAR_MISS }
+              - { key: C, text: "The Ego", distractor: SAME_CATEGORY }
+              - { key: D, text: "The Shadow", correct: true }
+            explanation: "The Persona is the mask you show the world; the Shadow is what you'd rather not see in yourself."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pavlov-nobel-digestion
+        statement: "Ivan Pavlov received the 1904 Nobel Prize in Physiology or Medicine for his work on the physiology of digestion."
+        sources: [{ name: "NobelPrize.org: Ivan Pavlov", type: REFERENCE, verified: false }]
+        questions:
+          - id: pavlov-nobel-digestion-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: "Ivan Pavlov, of Pavlov's dogs, won the Nobel Prize in 1904 for research on what?"
+            options:
+              - { key: A, text: "Conditioned reflexes", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Digestion", correct: true }
+              - { key: C, text: "Sleep", distractor: PLAUSIBLE }
+              - { key: D, text: "Memory", distractor: PLAUSIBLE }
+            explanation: "The dogs were part of his digestion research: he noticed they drooled before the food arrived."
+            topics: { psychology: 1.0, science: 0.6 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.3 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.6, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: maslow-top
+        statement: "At the top of Maslow's hierarchy of needs is self-actualisation."
+        sources: [{ name: "Wikipedia: Maslow's hierarchy of needs", type: REFERENCE, verified: false }]
+        questions:
+          - id: maslow-top-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What sits at the very top of Maslow's pyramid of needs?"
+            options:
+              - { key: A, text: "Esteem", distractor: NEAR_MISS }
+              - { key: B, text: "Love and belonging", distractor: PLAUSIBLE }
+              - { key: C, text: "Self-actualisation", correct: true }
+              - { key: D, text: "Safety", distractor: PLAUSIBLE }
+            explanation: "Bottom to top: physiological needs, safety, love and belonging, esteem, self-actualisation."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: descartes-cogito
+        statement: "'I think, therefore I am' (Cogito, ergo sum) is René Descartes'."
+        sources: [{ name: "Wikipedia: Cogito, ergo sum", type: REFERENCE, verified: false }]
+        questions:
+          - id: descartes-cogito-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Who said \"I think, therefore I am\"?"
+            options:
+              - { key: A, text: "Immanuel Kant", distractor: SAME_CATEGORY }
+              - { key: B, text: "Socrates", distractor: SAME_CATEGORY }
+              - { key: C, text: "René Descartes", correct: true }
+              - { key: D, text: "Plato", distractor: SAME_CATEGORY }
+            explanation: "Cogito, ergo sum. He first wrote it in French, in 1637: \"Je pense, donc je suis\"."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 1
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: dunning-kruger
+        statement: "The Dunning–Kruger effect (1999): people with low ability at a task tend to overestimate their ability."
+        sources: [{ name: "Wikipedia: Dunning–Kruger effect", type: REFERENCE, verified: false }]
+        questions:
+          - id: dunning-kruger-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "According to the Dunning-Kruger effect, people who are bad at something tend to…"
+            options:
+              - { key: A, text: "Overrate their own skill", correct: true }
+              - { key: B, text: "Underrate their own skill", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Avoid trying it at all", distractor: PLAUSIBLE }
+              - { key: D, text: "Copy the best person", distractor: PLAUSIBLE }
+            explanation: "Described in 1999. Ironically, it's an effect lots of people are very confident they understand."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.5, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: guests-brands
+    name: "Brands"
+    facts:
+      - id: pepsi-brads-drink
+        statement: "Pepsi was created in 1893 by Caleb Bradham as 'Brad's Drink' and renamed Pepsi-Cola in 1898."
+        sources: [{ name: "PepsiCo: Pepsi history", type: REFERENCE, verified: false }]
+        questions:
+          - id: pepsi-brads-drink-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What was Pepsi called when it was invented in 1893?"
+            options:
+              - { key: A, text: "Brad's Drink", correct: true }
+              - { key: B, text: "Carolina Cola", distractor: PLAUSIBLE }
+              - { key: C, text: "Dr. Pepsin's Tonic", distractor: NEAR_MISS }
+              - { key: D, text: "Bradham Fizz", distractor: PLAUSIBLE }
+            explanation: "The pharmacist Caleb Bradham renamed it Pepsi-Cola in 1898."
+            topics: { fashion-brands: 1.0, food: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: pepsi-soviet-fleet
+        statement: "In 1989 the USSR agreed to pay PepsiCo for syrup with 17 old submarines, a cruiser, a frigate and a destroyer, which were sold for scrap."
+        sources: [{ name: "The New York Times, 1989: 'Pepsi Will Be Bartered for Ships and Vodka in Deal With Soviets'", type: REFERENCE, verified: false }]
+        questions:
+          - id: pepsi-soviet-fleet-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: "In 1989, what did the Soviet Union give PepsiCo in exchange for Pepsi syrup?"
+            options:
+              - { key: A, text: "Siberian gold", distractor: PLAUSIBLE }
+              - { key: B, text: "Old submarines and warships", correct: true }
+              - { key: C, text: "The rights to Tetris", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Seats on Aeroflot", distractor: PLAUSIBLE }
+            explanation: "Seventeen submarines, a cruiser, a frigate and a destroyer, sold on for scrap. For a moment Pepsi had a bigger fleet than many countries."
+            topics: { fashion-brands: 1.0, cold-war: 0.6 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.5, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: The ships and the vodka in later deals are both widely reported; '17 submarines' — check against the NYT piece."]
+
+      - id: pepsi-challenge
+        statement: "The Pepsi Challenge (from 1975) was a blind taste test of Pepsi against Coca-Cola."
+        sources: [{ name: "Wikipedia: Pepsi Challenge", type: REFERENCE, verified: false }]
+        questions:
+          - id: pepsi-challenge-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What was the \"Pepsi Challenge\"?"
+            options:
+              - { key: A, text: "Drinking a litre in one go", distractor: PLAUSIBLE }
+              - { key: B, text: "A TV talent show", distractor: PLAUSIBLE }
+              - { key: C, text: "A blind taste test against Coke", correct: true }
+              - { key: D, text: "A cross-country road trip", distractor: PLAUSIBLE }
+            explanation: "Started in 1975: people tasted two unmarked cups and picked the one they liked."
+            topics: { fashion-brands: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.5, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: new-coke-79-days
+        statement: "New Coke launched on 23 April 1985; after a backlash, the original returned as Coca-Cola Classic 79 days later."
+        sources: [{ name: "The Coca-Cola Company: The story of New Coke", type: REFERENCE, verified: false }]
+        questions:
+          - id: new-coke-79-days-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In 1985 Coca-Cola changed its recipe. How long before the old one came back?"
+            options:
+              - { key: A, text: "About a week", distractor: PLAUSIBLE }
+              - { key: B, text: "About three months", correct: true }
+              - { key: C, text: "About two years", distractor: PLAUSIBLE }
+              - { key: D, text: "It never did", distractor: COMMON_MISCONCEPTION }
+            explanation: "79 days. The original returned as \"Coca-Cola Classic\" after thousands of complaints."
+            topics: { fashion-brands: 1.0, food: 0.3 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: starbucks-siren
+        statement: "The Starbucks logo is a twin-tailed siren from Greek mythology."
+        sources: [{ name: "Starbucks: The Siren's story", type: REFERENCE, verified: false }]
+        questions:
+          - id: starbucks-siren-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Which brand's logo is a siren from Greek mythology?"
+            options:
+              - { key: A, text: "Versace", distractor: NEAR_MISS }
+              - { key: B, text: "Starbucks", correct: true }
+              - { key: C, text: "Dove", distractor: PLAUSIBLE }
+              - { key: D, text: "Nike", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "A twin-tailed siren. Versace's logo is also Greek: the head of Medusa."
+            topics: { fashion-brands: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.5, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+  - family: guests-politics
+    name: "Politics & economics"
+    facts:
+      - id: ayn-rand-petersburg
+        statement: "Ayn Rand, author of Atlas Shrugged, was born Alisa Rosenbaum in St Petersburg in 1905."
+        sources: [{ name: "Wikipedia: Ayn Rand", type: REFERENCE, verified: false }]
+        questions:
+          - id: ayn-rand-petersburg-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: "Ayn Rand, the author of Atlas Shrugged and a hero to libertarians, was born where?"
+            options:
+              - { key: A, text: "New York", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Vienna", distractor: PLAUSIBLE }
+              - { key: C, text: "St Petersburg", correct: true }
+              - { key: D, text: "Kyiv", distractor: NEAR_MISS }
+            explanation: "Born Alisa Rosenbaum in 1905, she left Soviet Russia in 1926 and never went back."
+            topics: { politics: 1.0, world-literature: 0.4 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            difficulty: 3
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.6, BRIDGE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: monopoly-landlords-game
+        statement: "Monopoly descends from Lizzie Magie's The Landlord's Game (patented 1904), designed to show the evils of concentrating land in private monopolies."
+        sources: [{ name: "Wikipedia: The Landlord's Game", type: REFERENCE, verified: false }]
+        questions:
+          - id: monopoly-landlords-game-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Monopoly grew out of a 1904 game that was designed to show what?"
+            options:
+              - { key: A, text: "How to get rich from property", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "How a stock exchange works", distractor: PLAUSIBLE }
+              - { key: C, text: "The evils of greedy landlords", correct: true }
+              - { key: D, text: "How banks lend money", distractor: PLAUSIBLE }
+            explanation: "Lizzie Magie's \"The Landlord's Game\". The game about the dangers of monopolies became a game about winning one."
+            topics: { politics: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: adam-smith-twenty
+        statement: "The economist Adam Smith appeared on the Bank of England £20 note from 2007 until the polymer Turner note (2020)."
+        sources: [{ name: "Bank of England: Withdrawn banknotes", type: REFERENCE, verified: false }]
+        questions:
+          - id: adam-smith-twenty-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Before the painter Turner, whose face was on the Bank of England £20 note?"
+            options:
+              - { key: A, text: "Charles Darwin", distractor: NEAR_MISS }
+              - { key: B, text: "Adam Smith", correct: true }
+              - { key: C, text: "Isaac Newton", distractor: SAME_CATEGORY }
+              - { key: D, text: "Winston Churchill", distractor: SAME_CATEGORY }
+            explanation: "The Scottish father of economics, from 2007. Darwin was on the £10, Churchill is on the £5."
+            topics: { politics: 1.0, british-culture: 0.5 }
+            contexts: { GLOBAL: 1.0, UK: 0.7 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.5, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: svetov-nottingham
+        statement: "Mikhail Svetov, the Russian libertarian politician and author of the YouTube channel SVTV, graduated in political science from the University of Nottingham in 2009."
+        sources: [{ name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: false }]
+        questions:
+          - id: svetov-nottingham-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            is_bridge: true
+            text: "Russian libertarian YouTuber Mikhail Svetov got his politics degree at a university in which English city?"
+            options:
+              - { key: A, text: "Oxford", distractor: SAME_CATEGORY }
+              - { key: B, text: "Nottingham", correct: true }
+              - { key: C, text: "Manchester", distractor: SAME_CATEGORY }
+              - { key: D, text: "London", distractor: COMMON_MISCONCEPTION }
+            explanation: "Nottingham, in 2009. A libertarian educated in the home town of Robin Hood, who took from the rich."
+            topics: { politics: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 1.0, UK: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.7, BRIDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: telegram-rally-planes
+        statement: "On 30 April 2018 thousands rallied on Sakharov Avenue in Moscow against the blocking of Telegram; the rally was organised by the Libertarian Party, and protesters threw paper planes, the Telegram logo."
+        sources: [{ name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: false }]
+        questions:
+          - id: telegram-rally-planes-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "In 2018, thousands rallied in Moscow against the blocking of Telegram. What did they throw into the air?"
+            options:
+              - { key: A, text: "Blue balloons", distractor: PLAUSIBLE }
+              - { key: B, text: "Their SIM cards", distractor: PLAUSIBLE }
+              - { key: C, text: "Paper planes", correct: true }
+              - { key: D, text: "Old phones", distractor: PLAUSIBLE }
+            explanation: "Paper planes, Telegram's logo. The rally was organised by Mikhail Svetov and the Libertarian Party."
+            topics: { politics: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 1.0, INTERNET_GLOBAL: 0.6 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: paper planes at the 30 April 2018 rally (Durov's earlier call on 22 April too) — confirm with a news photo report"]
+
+      - id: svetov-svtv
+        statement: "Mikhail Svetov's YouTube channel is called SVTV."
+        sources: [{ name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: false }]
+        questions:
+          - id: svetov-svtv-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "What is Mikhail Svetov's YouTube channel called?"
+            options:
+              - { key: A, text: "SVTV", correct: true }
+              - { key: B, text: "Popular Politics", distractor: SAME_CATEGORY }
+              - { key: C, text: "Rabkor", distractor: SAME_CATEGORY }
+              - { key: D, text: "Redaktsiya", distractor: SAME_CATEGORY }
+            explanation: "SVTV. The others are real channels too: Navalny's team (Popular Politics), Boris Kagarlitsky's Rabkor and Alexey Pivovarov's Redaktsiya."
+            topics: { politics: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.9 }
+            status: DRAFT
+            generation_method: AI
+
+      - id: shtefanov-romm
+        statement: "Alexander Shtefanov, a Russian historian and blogger, released the documentary 'Ordinary Denazification' in 2023; its title plays on Mikhail Romm's 1965 documentary 'Ordinary Fascism'."
+        sources: [{ name: "Current Time: Shtefanov left Russia (2024)", type: REFERENCE, url: "https://www.currenttime.tv/a/shtefanov-uekhal-iz-rossii/32841124.html", verified: false }]
+        questions:
+          - id: shtefanov-romm-en-1
+            language: en
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Blogger-historian Alexander Shtefanov's 2023 film \"Ordinary Denazification\" plays on the title of which 1965 Soviet documentary?"
+            options:
+              - { key: A, text: "Man with a Movie Camera", distractor: SAME_CATEGORY }
+              - { key: B, text: "Come and See", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "The Cranes Are Flying", distractor: SAME_CATEGORY }
+              - { key: D, text: "Ordinary Fascism", correct: true }
+            explanation: "Mikhail Romm's \"Ordinary Fascism\" (1965). Shtefanov's film is about life in occupied Mariupol; he left Russia in 2024."
+            topics: { politics: 1.0 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 1.0 }
+            difficulty: 5
+            dignity: 4
+            effects: { HERO_CANDIDATE: 0.9 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: the title echo is an inference from the wording, not a quote from Shtefanov — keep or rephrase"]

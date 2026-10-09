@@ -103,6 +103,26 @@ export const TOPICS: TaxonomyTopic[] = [
     "featured": false
   },
   {
+    "slug": "psychology",
+    "name": "Психология и философия",
+    "nameEn": "Psychology & philosophy",
+    "emoji": "🧠",
+    "group": "Наука и мир",
+    "groupEn": "Science & the world",
+    "impliedContext": null,
+    "featured": true
+  },
+  {
+    "slug": "politics",
+    "name": "Политика и экономика",
+    "nameEn": "Politics & economics",
+    "emoji": "🗳️",
+    "group": "Наука и мир",
+    "groupEn": "Science & the world",
+    "impliedContext": null,
+    "featured": true
+  },
+  {
     "slug": "russian-literature",
     "name": "Русская литература",
     "nameEn": "Russian literature",
@@ -131,6 +151,16 @@ export const TOPICS: TaxonomyTopic[] = [
     "groupEn": "Literature & art",
     "impliedContext": null,
     "featured": false
+  },
+  {
+    "slug": "theatre",
+    "name": "Театр и мюзиклы",
+    "nameEn": "Theatre & musicals",
+    "emoji": "🎭",
+    "group": "Литература и искусство",
+    "groupEn": "Literature & art",
+    "impliedContext": null,
+    "featured": true
   },
   {
     "slug": "soviet-cinema",

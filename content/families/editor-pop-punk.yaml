@@ -199,7 +199,7 @@ families:
 
       - id: fat-lip-sum-41
         statement: "\"Fat Lip\" (2001) is by Sum 41."
-        sources: [ { name: "Wikipedia: Fat Lip", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Fat Lip", type: REFERENCE, verified: true } ]
         questions:
           - id: fat-lip-sum-41-en-1
             language: en
@@ -218,8 +218,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: fat-lip-sum-41-ru-1
             language: ru
             origin_language: en
@@ -292,7 +296,7 @@ families:
 
       - id: complicated-fake
         statement: "Avril Lavigne's \"Complicated\" (2002) complains about someone who acts fake around other people."
-        sources: [ { name: "Wikipedia: Complicated (Avril Lavigne song)", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Complicated (Avril Lavigne song)", type: REFERENCE, verified: true } ]
         questions:
           - id: complicated-fake-en-1
             language: en
@@ -311,8 +315,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: complicated-fake-ru-1
             language: ru
             origin_language: en
@@ -337,7 +345,7 @@ families:
 
       - id: hybrid-theory
         statement: "Linkin Park's debut album is Hybrid Theory (2000)."
-        sources: [ { name: "Wikipedia: Hybrid Theory", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Hybrid Theory", type: REFERENCE, verified: true } ]
         questions:
           - id: hybrid-theory-en-1
             language: en
@@ -356,8 +364,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: hybrid-theory-ru-1
             language: ru
             origin_language: en
@@ -472,7 +484,7 @@ families:
 
       - id: im-just-a-kid-simple-plan
         statement: "\"I'm Just a Kid\" (2002) is by Simple Plan."
-        sources: [ { name: "Wikipedia: I'm Just a Kid", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: I'm Just a Kid", type: REFERENCE, verified: true } ]
         questions:
           - id: im-just-a-kid-simple-plan-en-1
             language: en
@@ -491,10 +503,12 @@ families:
             difficulty: 4
             dignity: 2
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
-            review_notes:
-              - "Сверка Claude 2026-10-05: в «Оптом дешевле» песни нет по источнику — её саундтрек The New Guy (en.wikipedia: I'm Just a Kid); пояснение исправлено."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: im-just-a-kid-simple-plan-ru-1
             language: ru
             origin_language: en
@@ -565,7 +579,7 @@ families:
 
       - id: sugar-fall-out-boy
         statement: "\"Sugar, We're Goin Down\" (2005) is by Fall Out Boy."
-        sources: [ { name: "Wikipedia: Sugar, We're Goin Down", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Sugar, We're Goin Down", type: REFERENCE, verified: true } ]
         questions:
           - id: sugar-fall-out-boy-en-1
             language: en
@@ -584,8 +598,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: sugar-fall-out-boy-ru-1
             language: ru
             origin_language: en

@@ -7,7 +7,7 @@ families:
     facts:
       - id: colosseum-purpose
         statement: "Колизей в Риме строили для гладиаторских боёв и других зрелищ."
-        sources: [ { name: "Википедия: Колизей", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: Колизей", type: REFERENCE, verified: true } ]
         questions:
           - id: colosseum-purpose-ru-1
             language: ru
@@ -43,10 +43,12 @@ families:
             difficulty: 1
             dignity: 5
             effects: { SHARED_KNOWLEDGE: 1 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: cheops-wonder
         statement: "Пирамида Хеопса — единственное из семи чудес света, сохранившееся до наших дней."
@@ -95,7 +97,7 @@ families:
 
       - id: veni-vidi-vici
         statement: "«Пришёл, увидел, победил» (Veni, vidi, vici) — слова Юлия Цезаря."
-        sources: [ { name: "Википедия: Veni, vidi, vici", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: Veni, vidi, vici", type: REFERENCE, verified: true } ]
         questions:
           - id: veni-vidi-vici-ru-1
             language: ru
@@ -124,17 +126,19 @@ families:
               - { key: A, text: Alexander the Great, distractor: SAME_CATEGORY }
               - { key: B, text: Julius Caesar, correct: true }
               - { key: C, text: Hannibal, distractor: SAME_CATEGORY }
-              - { key: D, text: Nero, distractor: SAME_CATEGORY }
+              - { key: D, text: Kanye West, distractor: SAME_CATEGORY }
             explanation: "Caesar's report to Rome after a lightning victory in 47 BC: \"Veni, vidi, vici\"."
             topics: { ancient-world: 1 }
             contexts: { GLOBAL: 1 }
             difficulty: 2
             dignity: 5
             effects: { SHARED_KNOWLEDGE: 1 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: olympics-greece
         statement: "Олимпийские игры зародились в Древней Греции, в Олимпии."
