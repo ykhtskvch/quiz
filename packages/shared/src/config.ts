@@ -3,6 +3,11 @@ export type GameConfig = {
   minPlayers: number;
   presentation: { minMs: number; perCharMs: number; maxMs: number };
   answerMs: number;
+  /**
+   * When every active player has answered, the question doesn't close at once: this much time is
+   * left, so a mis-tap can still be changed (PT2, DS-D2). 0 closes immediately.
+   */
+  allAnsweredGraceMs: number;
   revealMs: number;
   /** The reveal shows the correct answer first, then switches to "Did you know?" with the explanation. */
   revealFactAfterMs: number;
@@ -29,6 +34,7 @@ export const DEFAULT_CONFIG: GameConfig = {
   // between. Longer reading, a shorter reveal that ends with a visible "next question in 3".
   presentation: { minMs: 4000, perCharMs: 45, maxMs: 9000 },
   answerMs: 15_000,
+  allAnsweredGraceMs: 3000,
   // 4 s for the answer, then 6 s of "Did you know?" — a breather before the next question.
   revealMs: 10_000,
   revealFactAfterMs: 4000,

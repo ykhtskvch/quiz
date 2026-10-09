@@ -259,15 +259,16 @@ export class Room {
     if (!q.options.some((o) => o.key === key)) return fail(400, "unknown option");
     if (p.activeFrom > q.number) return fail(409, "you join from the next question");
 
-    // Idempotent: a repeated tap returns the first accepted answer (07-api §7.3).
+    // A repeated tap on the same option is idempotent (07-api §7.3). A different option replaces the
+    // answer until the timer ends, and the points follow the time of the last choice (PT2, DS-D2).
     const existing = q.answers[playerId];
-    if (existing) return ok({ optionKey: existing.key });
+    if (existing?.key === key) return ok({ optionKey: key });
 
     this.touch(now);
     q.answers[playerId] = { key, responseMs: Math.max(0, now - (q.answeringStartedAt ?? now)), points: 0, voided: false };
     this.private(playerId, { type: "ANSWER_ACCEPTED", payload: { optionKey: key } });
-    this.broadcastCounts(now);
-    if (this.allAnswered(q, now)) this.closeAnswering(q, now);
+    if (!existing) this.broadcastCounts(now);
+    if (this.allAnswered(q, now)) this.everyoneAnswered(q, now);
     return ok({ optionKey: key });
   }
 
@@ -351,10 +352,15 @@ export class Room {
     const q = g.questions.find((x) => x.number === number && x.phase === "REVEALED");
     if (!q) return fail(404, "no such question");
     const key = `${number}:${playerId}`;
-    if (g.ratings[key]) return ok(true);
+    // A player can change their mind (PT2, DS-062); the analytics counts move with it.
+    const previous = g.ratings[key];
+    if (previous === rating) return ok(true);
     this.touch(now);
     g.ratings[key] = rating;
-    this.effects.push({ to: "analytics", event: { kind: "QUESTION_RATED", gameUid: g.uid, questionId: q.questionId, rating } });
+    this.effects.push({
+      to: "analytics",
+      event: { kind: "QUESTION_RATED", gameUid: g.uid, questionId: q.questionId, rating, ...(previous ? { previous } : {}) },
+    });
     return ok(true);
   }
 
@@ -427,7 +433,7 @@ export class Room {
       case "DISCONNECT_GRACE": {
         // The player now stops counting as active; the question may be complete without them.
         this.broadcastCounts(now);
-        if (q?.phase === "ANSWERING" && this.allAnswered(q, now)) this.closeAnswering(q, now);
+        if (q?.phase === "ANSWERING" && this.allAnswered(q, now)) this.everyoneAnswered(q, now);
         return;
       }
       case "SOFT_END":
@@ -718,6 +724,16 @@ export class Room {
         p.activeFrom <= q.number &&
         (p.connected || (p.disconnectedAt !== null && now - p.disconnectedAt < this.config.disconnectGraceMs)),
     );
+  }
+
+  /** Everyone has answered: leave only a short tail for changing an answer instead of the full timer. */
+  private everyoneAnswered(q: QuestionRun, now: number) {
+    const grace = this.config.allAnsweredGraceMs;
+    if (grace <= 0) return this.closeAnswering(q, now);
+    const d = this.s.deadlines.find((x) => x.kind === "ANSWER_END");
+    if (!d || d.at <= now + grace) return;
+    d.at = now + grace;
+    this.broadcast({ type: "ANSWER_TIMING_UPDATED", seq: 0, payload: { timing: this.timing(now)! } });
   }
 
   private allAnswered(q: QuestionRun, now: number): boolean {

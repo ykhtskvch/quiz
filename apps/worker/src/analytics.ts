@@ -59,15 +59,17 @@ export function analyticsStatements(db: D1Database, e: AnalyticsEvent): D1Prepar
       ];
     }
     case "QUESTION_RATED": {
-      const column = { GREAT: "great", FINE: "fine", BAD: "bad" }[e.rating];
-      return [
-        db
-          .prepare(
-            `INSERT INTO question_stats (question_id, ${column}) VALUES (?1, 1)
-             ON CONFLICT (question_id) DO UPDATE SET ${column} = ${column} + 1`,
-          )
-          .bind(e.questionId),
-      ];
+      const columns = { GREAT: "great", FINE: "fine", BAD: "bad" } as const;
+      const column = columns[e.rating];
+      const add = db
+        .prepare(
+          `INSERT INTO question_stats (question_id, ${column}) VALUES (?1, 1)
+           ON CONFLICT (question_id) DO UPDATE SET ${column} = ${column} + 1`,
+        )
+        .bind(e.questionId);
+      if (!e.previous) return [add];
+      const old = columns[e.previous];
+      return [add, db.prepare(`UPDATE question_stats SET ${old} = MAX(${old} - 1, 0) WHERE question_id = ?1`).bind(e.questionId)];
     }
   }
 }

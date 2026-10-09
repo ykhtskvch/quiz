@@ -53,6 +53,8 @@ function apply(s: Snapshot, e: ServerEvent): Snapshot {
         : next;
     case "ANSWER_COUNT_UPDATED":
       return s.question ? { ...next, question: { ...s.question, ...e.payload } } : next;
+    case "ANSWER_TIMING_UPDATED":
+      return withTiming(next, e.payload.timing);
     case "QUESTION_REVEALED":
       return s.question
         ? { ...next, reveal: e.payload.reveal, question: { ...s.question, phase: "REVEALED", timing: e.payload.timing } }
@@ -74,7 +76,7 @@ function apply(s: Snapshot, e: ServerEvent): Snapshot {
   }
 }
 
-const TIMED: ServerEvent["type"][] = ["SNAPSHOT", "QUESTION_PRESENTED", "ANSWER_PHASE_STARTED", "QUESTION_REVEALED", "GAME_PAUSED", "GAME_RESUMED"];
+const TIMED: ServerEvent["type"][] = ["SNAPSHOT", "QUESTION_PRESENTED", "ANSWER_PHASE_STARTED", "ANSWER_TIMING_UPDATED", "QUESTION_REVEALED", "GAME_PAUSED", "GAME_RESUMED"];
 
 function reducer(state: State, action: Action): State {
   if (action.kind === "status") return { ...state, status: action.status };

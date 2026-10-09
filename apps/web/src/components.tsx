@@ -30,10 +30,11 @@ export function NextUp({ timing, timingAt, number, total }: { timing: PhaseTimin
   const remaining = useCountdown(timing, timingAt);
   if (!timing || remaining === null) return null;
   const seconds = Math.max(1, Math.ceil(remaining / 1000));
-  const left = Math.max(0, total - number);
-  return <p className={`next-up ${seconds <= 3 ? "soon" : ""}`}>{left > 0 ? t.nextIn(seconds, left) : t.resultsIn(seconds)}</p>;
+  // Same "N of 20" as the question header; "17 to go" read as a random number (PT2, DS-064).
+  return <p className={`next-up ${seconds <= 3 ? "soon" : ""}`}>{number < total ? t.nextIn(seconds, number + 1, total) : t.resultsIn(seconds)}</p>;
 }
 
+/** Stats of the evening as one list, most important first: the toughest question on top (PT2, DS-073). */
 export function StatCards({ results }: { results: GameResults }) {
   const t = useT();
   const s = results.stats;
@@ -42,7 +43,12 @@ export function StatCards({ results }: { results: GameResults }) {
     s.onlyOneKnew && { title: t.statOnlyOne, body: s.onlyOneKnew.text, note: `${t.correctAnswer}: ${s.onlyOneKnew.correctText}` },
     s.mostDivided && { title: t.statDivided, body: s.mostDivided.text, note: `${t.correctAnswer}: ${s.mostDivided.correctText}` },
     s.everyoneKnew && { title: t.statEveryone, body: s.everyoneKnew.text, note: s.everyoneKnew.correctText },
-    s.fastestCorrect && { title: t.statFastest, body: s.fastestCorrect.nickname, note: t.seconds(s.fastestCorrect.responseMs) },
+    // Which question, too (PT2, DS-074): "you answered in one second, but on what?"
+    s.fastestCorrect && {
+      title: t.statFastest,
+      body: `${s.fastestCorrect.nickname} · ${t.seconds(s.fastestCorrect.responseMs)}`,
+      note: s.fastestCorrect.question.text,
+    },
   ].filter((c): c is { title: string; body: string; note: string } => Boolean(c));
   if (cards.length === 0) return null;
   return (
@@ -70,8 +76,8 @@ export function BetaBadge({ group = false }: { group?: boolean }) {
   }, []);
   if (!beta) return null;
   return (
-    <p className="beta-badge">
-      <span>{t.beta}</span> {group ? t.betaHintGroup : t.betaHint}
+    <p className={`beta-badge ${group ? "group" : ""}`}>
+      <span>{t.beta}</span> <em>{group ? t.betaHintGroup : t.betaHint}</em>
     </p>
   );
 }

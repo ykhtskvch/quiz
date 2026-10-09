@@ -1,5 +1,5 @@
 // Phone: join → wait → answer → result → final place. Host controls appear for the first player.
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { HostCommand, OnboardingInput, OptionKey, QuestionRating, Snapshot } from "@quiz/shared";
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
@@ -24,12 +24,15 @@ export function Player({ code }: { code: string }) {
   const [rated, setRated] = useState<Record<string, QuestionRating>>({});
   const rate = (game: number, number: number, rating: QuestionRating) => {
     const key = `${game}:${number}`;
-    if (rated[key] || !me) return;
+    // Changeable until the reveal ends (PT2, DS-062); a failed send puts the previous choice back.
+    const previous = rated[key];
+    if (previous === rating || !me) return;
     setRated((r) => ({ ...r, [key]: rating }));
     api.rateQuestion(code, me.playerToken, number, rating).catch(() =>
       setRated((r) => {
         const copy = { ...r };
-        delete copy[key];
+        if (previous) copy[key] = previous;
+        else delete copy[key];
         return copy;
       }),
     );
@@ -326,11 +329,7 @@ function PlayerBody({
           <QuestionRatings code={code} token={token} results={{ ...s.results, questions: unrated }} initial={myRatings} />
         )}
         <section className="center-text finished-actions">
-          {isHost && (
-            <button className="primary big" disabled={cmd.busy} onClick={() => cmd.host("play-again")}>
-              {t.playAgain}
-            </button>
-          )}
+          {isHost && <PlayAgain busy={cmd.busy} onConfirm={() => cmd.host("play-again")} />}
           {/* Changing interests is about the next game, so it comes after the form (playtest 1). */}
           {(feedbackSent || !mine) && (
             <button className="link" onClick={onEdit}>
@@ -413,45 +412,131 @@ function QuestionBody({
         </div>
       ) : (
         <>
-          <div className="answer-grid">
-            {(["A", "B", "C", "D"] as const).map((key) => {
-              const o = q.options?.find((x) => x.key === key);
-              return (
-                <button
-                  key={key}
-                  className={`answer ${!o ? "pending" : ""} ${mine === key ? "chosen" : ""}`}
-                  disabled={!o || Boolean(mine) || busy || paused}
-                  onClick={() => run(() => api.answer(code, token, key as OptionKey))}
-                >
-                  <span className="key">{key}</span>
-                  <span className="text">{o?.text ?? ""}</span>
-                </button>
-              );
-            })}
-          </div>
+          <AnswerGrid key={`${s.game?.number}:${q.number}`} s={s} code={code} token={token} paused={paused} />
           {q.phase === "PRESENTING" && <p className="muted center-text">{t.reading}</p>}
-          {mine && (
-            <p className="center-text">
-              {t.answerAccepted}: <strong>{mine}</strong>. {t.waitForOthers}
-            </p>
-          )}
         </>
       )}
     </section>
   );
 }
 
-/** 👍 / 👎 right on the reveal: optional, one tap, then a thank-you (06.10). "Fine" stays for the end list. */
+/**
+ * Options on the phone (PT2). A tap shows "sending…" at once and is retried through a reconnect, so a
+ * lost request can't look like an accepted answer; another option replaces the answer until time runs
+ * out (DS-D2). Keyed by question, so nothing carries over to the next one.
+ */
+function AnswerGrid({ s, code, token, paused }: { s: Snapshot; code: string; token: string; paused: boolean }) {
+  const t = useT();
+  const q = s.question!;
+  const mine = s.mine?.answer ?? null;
+  const [sending, setSending] = useState<OptionKey | null>(null);
+  const [failed, setFailed] = useState<"network" | "closed" | null>(null);
+  const attempt = useRef(0);
+
+  const send = async (key: OptionKey) => {
+    const my = ++attempt.current;
+    setSending(key);
+    setFailed(null);
+    for (let i = 0; i < 4; i++) {
+      try {
+        await api.answer(code, token, key);
+        if (my === attempt.current) setSending(null);
+        return;
+      } catch (e) {
+        if (my !== attempt.current) return;
+        const retry = !(e instanceof ApiError) || e.status >= 500 || e.status === 429;
+        if (!retry) {
+          setSending(null);
+          setFailed(e.status === 409 ? "closed" : "network");
+          return;
+        }
+        await new Promise((r) => setTimeout(r, 500 * (i + 1)));
+      }
+    }
+    if (my === attempt.current) {
+      setSending(null);
+      setFailed("network");
+    }
+  };
+
+  const shown = sending ?? mine;
+  const everyone = q.phase === "ANSWERING" && q.activePlayers > 0 && q.answered >= q.activePlayers;
+  return (
+    <>
+      <div className="answer-grid">
+        {(["A", "B", "C", "D"] as const).map((key) => {
+          const o = q.options?.find((x) => x.key === key);
+          return (
+            <button
+              key={key}
+              className={`answer ${!o ? "pending" : ""} ${shown === key ? "chosen" : ""} ${sending === key ? "sending" : ""}`}
+              aria-pressed={shown === key}
+              disabled={!o || paused || q.phase !== "ANSWERING"}
+              onClick={() => key !== shown && send(key)}
+            >
+              <span className="key">{key}</span>
+              <span className="text">{o?.text ?? ""}</span>
+            </button>
+          );
+        })}
+      </div>
+      <p className="answer-status center-text" role="status">
+        {sending ? (
+          t.answerSending
+        ) : failed ? (
+          <span className="error">{failed === "closed" ? t.answerTooLate : t.answerNotSent}</span>
+        ) : mine ? (
+          <>
+            {t.answerAccepted}: <strong>{mine}</strong>. {everyone ? t.everyoneAnswered : t.canChangeAnswer}
+          </>
+        ) : (
+          ""
+        )}
+      </p>
+    </>
+  );
+}
+
+/**
+ * 👍 / 👎 right on the reveal: optional, one tap (06.10). The choice stays lit and can be changed
+ * (PT2, DS-062). "Fine" stays for the end list.
+ */
 function QuickRate({ rating, onRate }: { rating: QuestionRating | undefined; onRate: (r: QuestionRating) => void }) {
   const t = useT();
-  if (rating) return <p className="quick-rate-done muted">{t.quickRateThanks}</p>;
   return (
-    <div className="quick-rate" role="group" aria-label={t.quickRateLabel}>
-      {(["GREAT", "BAD"] as QuestionRating[]).map((r) => (
-        <button key={r} aria-label={t.rating[r].label} onClick={() => onRate(r)}>
-          {t.rating[r].icon}
-        </button>
-      ))}
+    <div className="quick-rate-wrap">
+      <div className="quick-rate" role="group" aria-label={t.quickRateLabel}>
+        {(["GREAT", "BAD"] as QuestionRating[]).map((r) => (
+          <button key={r} className={rating === r ? "on" : ""} aria-pressed={rating === r} aria-label={t.rating[r].label} onClick={() => onRate(r)}>
+            {t.rating[r].icon}
+          </button>
+        ))}
+      </div>
+      <p className="quick-rate-done muted" role="status">
+        {rating ? t.quickRateThanks : ""}
+      </p>
+    </div>
+  );
+}
+
+/**
+ * PT2: "Play again" was taken for the form's send button and restarted the room. It sits in its own
+ * block for the host, looks secondary and asks once more, like "End".
+ */
+function PlayAgain({ busy, onConfirm }: { busy: boolean; onConfirm: () => void }) {
+  const t = useT();
+  const [confirm, setConfirm] = useState(false);
+  useEffect(() => {
+    if (!confirm) return;
+    const id = setTimeout(() => setConfirm(false), 3000);
+    return () => clearTimeout(id);
+  }, [confirm]);
+  return (
+    <div className="play-again">
+      <p className="muted small">{t.hostNextGame}</p>
+      <button className="secondary big" disabled={busy} onClick={() => (confirm ? onConfirm() : setConfirm(true))}>
+        {confirm ? t.confirmPlayAgain : t.playAgain}
+      </button>
     </div>
   );
 }

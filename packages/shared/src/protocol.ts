@@ -99,6 +99,8 @@ export type ServerEvent =
   | { type: "QUESTION_PRESENTED"; seq: number; payload: { question: PublicQuestion } }
   | { type: "ANSWER_PHASE_STARTED"; seq: number; payload: { options: { key: OptionKey; text: string }[]; timing: PhaseTiming; activePlayers: number } }
   | { type: "ANSWER_COUNT_UPDATED"; seq: number; payload: { answered: number; activePlayers: number } }
+  /** The answer timer was shortened: everyone has answered, a few seconds are left to change (DS-D2). */
+  | { type: "ANSWER_TIMING_UPDATED"; seq: number; payload: { timing: PhaseTiming } }
   | { type: "QUESTION_REVEALED"; seq: number; payload: { reveal: Reveal; timing: PhaseTiming } }
   | { type: "QUESTION_SKIPPED"; seq: number; payload: { number: number } }
   | { type: "GAME_PAUSED"; seq: number; payload: { timing: PhaseTiming | null } }
@@ -158,7 +160,7 @@ export type AnalyticsEvent =
       softEndShown: boolean;
     }
   | { kind: "SESSION_FEEDBACK"; gameUid: string; at: number; feedback: SessionFeedbackInput }
-  | { kind: "QUESTION_RATED"; gameUid: string; questionId: string; rating: QuestionRating };
+  | { kind: "QUESTION_RATED"; gameUid: string; questionId: string; rating: QuestionRating; /** A changed rating (PT2): this one is taken back. */ previous?: QuestionRating };
 
 export const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O, 1/I
 export const ROOM_CODE_LENGTH = 6;

@@ -54,23 +54,42 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
   const joinUrl = `${joinOrigin()}/j/${code}`;
   const [qr, setQr] = useState<string | null>(null);
   useEffect(() => {
-    QRCode.toDataURL(joinUrl, { margin: 1, width: 640, color: { dark: "#16131f", light: "#ffffff" } }).then(setQr);
+    // Level H survives the brand label covering the centre (PT2, DS-049).
+    QRCode.toDataURL(joinUrl, { margin: 1, width: 640, errorCorrectionLevel: "H", color: { dark: "#16131f", light: "#ffffff" } }).then(setQr);
   }, [joinUrl]);
 
   return (
     <div className="lobby">
       <section className="qr-panel">
-        <p className="brand-mark display-brand">{t.appName}</p>
         <h2>{t.scanToJoin}</h2>
-        {qr && <img className="qr" src={qr} alt={joinUrl} />}
+        {qr && (
+          <div className="qr-wrap">
+            <img className="qr" src={qr} alt={joinUrl} />
+            <span className="qr-brand" aria-hidden>
+              {t.appName}
+            </span>
+          </div>
+        )}
         <p className="muted">
           {t.orOpen} <strong>{joinOrigin().replace(/^https?:\/\//, "")}</strong> {t.andEnterCode}
         </p>
         <p className="room-code">{code}</p>
       </section>
       <section className="players-panel">
-        <h2>
-          {t.players} · {t.readyCount(s.room.players.filter((p) => p.ready).length, s.room.players.length)}
+        <h2 className="ready-count">
+          <span className="soft">{t.players} · </span>
+          {t.readyParts(s.room.players.filter((p) => p.ready).length, s.room.players.length).map((part, i) =>
+            i % 2 ? (
+              <strong key={i}>{part}</strong>
+            ) : (
+              part && (
+                <span key={i} className="soft">
+                  {" "}
+                  {part}{" "}
+                </span>
+              )
+            ),
+          )}
         </h2>
         {s.room.players.length === 0 ? (
           <p className="muted">{t.noPlayersYet}</p>
@@ -88,6 +107,7 @@ function Lobby({ code, s }: { code: string; s: Snapshot }) {
           </ul>
         )}
         <p className="lobby-next">{lobbyNext(s, t)}</p>
+        {!s.room.players.some((p) => p.isHost) && <p className="lobby-host-hint">{t.hostHint}</p>}
         <p className="lobby-rules">{t.rulesShort(DEFAULT_CONFIG.questionsPerGame)}</p>
         <BetaBadge group />
       </section>
@@ -106,7 +126,8 @@ const KEYS = ["A", "B", "C", "D"] as const;
 function lobbyNext(s: Snapshot, t: ReturnType<typeof useT>): string {
   const players = s.room.players;
   const host = players.find((p) => p.isHost);
-  if (!host) return t.hostHint;
+  // The "first one in is the host" rule stays, but quietly (PT2: it started a race for phones).
+  if (!host) return t.displayFirstStep;
   const ready = players.filter((p) => p.ready).length;
   const prefix = `${t.hostIs(host.nickname)} · `;
   if (ready < 2) return prefix + t.displayNeedPlayers;
@@ -188,28 +209,34 @@ function Results({ results }: { results: GameResults }) {
   const winners = board.filter((l, i) => placeOf(board, i) === 1);
   const rest = board.filter((l, i) => placeOf(board, i) > 1);
   return (
+    // Two columns on a TV, so ten players and five stats fit one screen (PT2, DS-014 / DS-073).
     <div className="results">
-      <p className="muted">
-        {t.results} · {t.questionsPlayed(results.questionsPlayed)}
-      </p>
-      {winners.length > 0 && (
-        <div className="winner">
-          <p className="muted">{winners.length > 1 ? t.winners : t.winner}</p>
-          <p className="winner-name">{winners.map((w) => w.nickname).join(" · ")}</p>
-          <p className="winner-score">{t.score(winners[0].score)}</p>
-        </div>
-      )}
-      <ol className="leaderboard">
-        {rest.map((l) => (
-          <li key={l.playerId} value={placeOf(board, board.indexOf(l))}>
-            <span className="name">{l.nickname}</span>
-            <span className="muted">{t.correctOf(l.correct, l.attempted)}</span>
-            <span className="score">{t.score(l.score)}</span>
-          </li>
-        ))}
-      </ol>
-      <StatCards results={results} />
-      <p className="muted small">{t.waitPlayAgain}</p>
+      <div className="results-main">
+        <p className="muted">
+          {t.results} · {t.questionsPlayed(results.questionsPlayed)}
+        </p>
+        {winners.length > 0 && (
+          <div className="winner">
+            <p className="muted">{winners.length > 1 ? t.winners : t.winner}</p>
+            <p className="winner-name">{winners.map((w) => w.nickname).join(" · ")}</p>
+            <p className="winner-score">{t.score(winners[0].score)}</p>
+          </div>
+        )}
+        <ol className="leaderboard">
+          {rest.map((l) => (
+            <li key={l.playerId} value={placeOf(board, board.indexOf(l))}>
+              <span className="place-no">{placeOf(board, board.indexOf(l))}.</span>
+              <span className="name">{l.nickname}</span>
+              <span className="muted">{t.correctOf(l.correct, l.attempted)}</span>
+              <span className="score">{t.score(l.score)}</span>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <div className="results-side">
+        <StatCards results={results} />
+        <p className="muted small">{t.waitPlayAgain}</p>
+      </div>
     </div>
   );
 }

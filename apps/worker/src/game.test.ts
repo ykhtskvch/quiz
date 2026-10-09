@@ -7,6 +7,8 @@ const config: GameConfig = {
   ...DEFAULT_CONFIG,
   presentation: { minMs: 3000, perCharMs: 0, maxMs: 3000 },
   answerMs: 15_000,
+  // Most tests check the reveal right after the last answer; the 3 s tail has its own tests.
+  allAnsweredGraceMs: 0,
   revealMs: 10_000,
   skipGapMs: 1000,
   disconnectGraceMs: 25_000,
@@ -123,12 +125,46 @@ describe("question cycle", () => {
     expect(state.game!.results!.leaderboard.map((l) => l.score)).toEqual([6, 6]);
   });
 
-  it("keeps the first answer on a repeated tap", () => {
-    const { ids, room } = setup();
+  it("a repeated tap on the same option keeps the original time", () => {
+    const { state, ids, room } = setup(3);
     room().tick(3000);
     room().answer(ids[0], "B", 4000);
-    const again = room().answer(ids[0], "C", 4100);
+    room().answer(ids[0], "B", 15_000);
+    expect(q(state).answers[ids[0]].responseMs).toBe(1000);
+  });
+
+  it("changing the answer replaces it, and points follow the time of the last choice", () => {
+    const { state, ids, room } = setup(3);
+    room().tick(3000);
+    room().answer(ids[0], "C", 3500); // mis-tap
+    const again = room().answer(ids[0], "B", 12_000); // corrected at 60 % of the window
     expect(again.ok && again.value.optionKey).toBe("B");
+    expect(Object.keys(q(state).answers)).toHaveLength(1);
+    room().tick(18_000);
+    expect(q(state).answers[ids[0]]).toMatchObject({ key: "B", responseMs: 9000, points: 2 });
+  });
+
+  it("when everyone has answered, leaves a short tail to change instead of closing at once", () => {
+    const { state, ids, room } = setup(2, { ...config, allAnsweredGraceMs: 3000 });
+    room().tick(3000);
+    room().answer(ids[0], "B", 4000);
+    room().answer(ids[1], "A", 5000); // everyone answered → closes at 8000, not 18 000
+    expect(q(state).phase).toBe("ANSWERING");
+    room().answer(ids[1], "B", 7000); // still in time; the tail doesn't restart
+    room().tick(7999);
+    expect(q(state).phase).toBe("ANSWERING");
+    room().tick(8000);
+    expect(q(state).phase).toBe("REVEALED");
+    expect(q(state).answers[ids[1]].key).toBe("B");
+  });
+
+  it("the tail never extends the timer", () => {
+    const { state, ids, room } = setup(2, { ...config, allAnsweredGraceMs: 3000 });
+    room().tick(3000);
+    room().answer(ids[0], "B", 4000);
+    room().answer(ids[1], "B", 17_000); // 1 s left — stays 1 s
+    room().tick(18_000);
+    expect(q(state).phase).toBe("REVEALED");
   });
 });
 
@@ -366,7 +402,7 @@ describe("feedback and analytics", () => {
     expect(r.snapshot({ role: "player", player: state.players[0] }, 6200).mine).toMatchObject({ feedbackGiven: true });
   });
 
-  it("lets each player rate a revealed question once", () => {
+  it("keeps one rating per player and question, which the player can change", () => {
     const { state, ids, room } = setup();
     room().tick(3000);
     room().answer(ids[0], "B", 3000);
@@ -376,10 +412,14 @@ describe("feedback and analytics", () => {
 
     const r = room();
     expect(r.rateQuestion(ids[0], 1, "GREAT", 6000).ok).toBe(true);
-    expect(r.rateQuestion(ids[0], 1, "BAD", 6100).ok).toBe(true);
+    expect(r.rateQuestion(ids[0], 1, "GREAT", 6050).ok).toBe(true); // same again: nothing new
+    expect(r.rateQuestion(ids[0], 1, "BAD", 6100).ok).toBe(true); // changed their mind
     expect(r.rateQuestion(ids[0], 2, "BAD", 6200)).toMatchObject({ ok: false, status: 404 });
-    expect(analytics(r).filter((e) => e.kind === "QUESTION_RATED")).toHaveLength(1);
-    expect(r.snapshot({ role: "player", player: state.players[0] }, 6300).mine?.ratings).toEqual({ 1: "GREAT" });
+    expect(analytics(r).filter((e) => e.kind === "QUESTION_RATED")).toEqual([
+      expect.objectContaining({ rating: "GREAT" }),
+      expect.objectContaining({ rating: "BAD", previous: "GREAT" }),
+    ]);
+    expect(r.snapshot({ role: "player", player: state.players[0] }, 6300).mine?.ratings).toEqual({ 1: "BAD" });
   });
 
   it("accepts a rating right on the reveal, during the game — but not before the reveal", () => {

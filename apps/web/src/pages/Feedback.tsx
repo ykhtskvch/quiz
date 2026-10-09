@@ -33,8 +33,13 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
     </div>
   );
 
+  // All five are answered before sending (PT2): the button stays grey until then and says how many are left.
+  const FIELDS = ["playAgain", "difficulty", "pace", "culturalBalance", "differentGroup"] as const;
+  const answered = FIELDS.filter((k) => form[k]).length;
+  const complete = answered === FIELDS.length;
+
   const submit = async () => {
-    if (!form.playAgain) return;
+    if (!complete) return;
     setBusy(true);
     setError(null);
     try {
@@ -55,8 +60,8 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
       {row("pace", t.fbPace, PACE_RATINGS, t.fbPaceValues)}
       {row("culturalBalance", t.fbBalance, BALANCE_RATINGS, t.fbBalanceValues)}
       {row("differentGroup", t.fbDifferentGroup, PLAY_AGAIN, t.intent)}
-      <button className="primary big" disabled={!form.playAgain || busy} onClick={submit}>
-        {form.playAgain ? t.send : t.fbNeedPlayAgain}
+      <button className="primary big" disabled={!complete || busy} onClick={submit}>
+        {complete ? t.send : t.fbNeedAll(answered, FIELDS.length)}
       </button>
       {error && <p className="error">{error}</p>}
     </section>
@@ -84,14 +89,17 @@ export function QuestionRatings({
   const hidden = results.questions.length - shown;
 
   const rate = async (number: number, rating: QuestionRating) => {
-    if (ratings[number]) return;
+    // Changeable (PT2, DS-062); a failed send puts the previous choice back.
+    const previous = ratings[number];
+    if (previous === rating) return;
     setRatings({ ...ratings, [number]: rating });
     try {
       await api.rateQuestion(code, token, number, rating);
     } catch {
       setRatings((r) => {
         const copy = { ...r };
-        delete copy[number];
+        if (previous) copy[number] = previous;
+        else delete copy[number];
         return copy;
       });
     }
@@ -110,7 +118,7 @@ export function QuestionRatings({
                 <button
                   key={r}
                   className={ratings[q.number] === r ? "on" : ""}
-                  disabled={Boolean(ratings[q.number])}
+                  aria-pressed={ratings[q.number] === r}
                   aria-label={t.rating[r].label}
                   onClick={() => rate(q.number, r)}
                 >

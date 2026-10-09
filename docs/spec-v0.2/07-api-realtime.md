@@ -164,7 +164,7 @@ Presentation phase: text — короткая анимация / чтение; i
 POST /game-questions/{gameQuestionId}/answers   { "optionId": "a1" }
 ```
 
-Backend фиксирует серверное `submitted_at`, `response_time_ms` от `answering_started_at`, correctness, score. Unique `(game_question_id, player_id)` — повторный tap не создаёт второй результат (idempotent, возвращает первый). После закрытия — `ANSWER_REJECTED { reason: QUESTION_CLOSED }`.
+Backend фиксирует серверное `submitted_at`, `response_time_ms` от `answering_started_at`, correctness, score. Unique `(game_question_id, player_id)` — повторный tap не создаёт второй результат (idempotent, возвращает первый). **С 08.10 (PT2, DS-D2):** другой вариант до конца таймера заменяет ответ, время и очки — по последнему выбору; тот же вариант — idempotent. Когда ответили все, вопрос закрывается не сразу, а через `allAnsweredGraceMs` (3 с), событие `ANSWER_TIMING_UPDATED`. После закрытия — `ANSWER_REJECTED { reason: QUESTION_CLOSED }`.
 
 Приватно: `ANSWER_ACCEPTED` («Ответ принят»), без «верно / неверно».
 В `room:`: `ANSWER_COUNT_UPDATED { answered, activePlayers }` — без распределения.
