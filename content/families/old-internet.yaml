@@ -216,7 +216,7 @@ families:
     facts:
       - id: dial-up-phone
         statement: "При модемном (dial-up) подключении телефонная линия была занята: звонить по домашнему телефону было нельзя."
-        sources: [ { name: "Википедия: Dial-up", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: Dial-up", type: REFERENCE, verified: true } ]
         questions:
           - id: dial-up-phone-ru-1
             language: ru
@@ -254,10 +254,12 @@ families:
             difficulty: 2
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: internet-history
     name: "История интернета"
@@ -331,7 +333,7 @@ families:
 
       - id: youtube-year
         statement: "YouTube появился в 2005 году."
-        sources: [ { name: "Википедия: YouTube", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: YouTube", type: REFERENCE, verified: true } ]
         questions:
           - id: youtube-year-ru-1
             language: ru
@@ -369,10 +371,12 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.6, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: mobile-2000s
     name: "Телефоны нулевых"
@@ -451,7 +455,7 @@ families:
     facts:
       - id: winamp-llama
         statement: "Фирменный слоган Winamp — «It really whips the llama's ass»; на нём фигурирует лама."
-        sources: [ { name: "Википедия: Winamp", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: Winamp", type: REFERENCE, verified: true } ]
         questions:
           - id: winamp-llama-ru-1
             language: ru
@@ -489,7 +493,9 @@ families:
             difficulty: 4
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 1, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06

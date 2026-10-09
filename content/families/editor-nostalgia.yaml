@@ -7,7 +7,7 @@ families:
     facts:
       - id: t9-meaning
         statement: "T9 stands for \"Text on 9 keys\"."
-        sources: [{ name: "Wikipedia: T9 (predictive text)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: T9 (predictive text)", type: REFERENCE, verified: true } ]
         questions:
           - id: t9-meaning-en-1
             language: en
@@ -26,8 +26,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06
           - id: t9-meaning-ru-1
             language: ru
             origin_language: en
@@ -52,7 +56,7 @@ families:
 
       - id: nokia-3310-no-camera
         statement: "The standard Nokia 3310 (2000) had SMS, a calculator and Snake II, but no camera."
-        sources: [{ name: "Wikipedia: Nokia 3310", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Nokia 3310", type: REFERENCE, verified: false } ]
         questions:
           - id: nokia-3310-no-camera-en-1
             language: en
@@ -97,7 +101,7 @@ families:
 
       - id: crazy-frog-ringtone
         statement: "Crazy Frog became famous mainly as a mobile ringtone (2004–2005)."
-        sources: [{ name: "Wikipedia: Crazy Frog", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Crazy Frog", type: REFERENCE, verified: false } ]
         questions:
           - id: crazy-frog-ringtone-en-1
             language: en
@@ -144,7 +148,7 @@ families:
 
       - id: ringtone-paid
         statement: "In the 2000s people paid to download ringtones to their phones."
-        sources: [{ name: "Wikipedia: Ringtone", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Ringtone", type: REFERENCE, verified: false } ]
         questions:
           - id: ringtone-paid-en-1
             language: en
@@ -189,7 +193,7 @@ families:
 
       - id: bluetooth-file-transfer
         statement: "In the 2000s \"send it by Bluetooth\" meant transferring a file directly from one phone to another."
-        sources: [{ name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false } ]
         questions:
           - id: bluetooth-file-transfer-en-1
             language: en
@@ -234,7 +238,7 @@ families:
 
       - id: memory-card-mp3
         statement: "Before streaming and cheap mobile data, a memory-card slot for storing MP3s was a valued phone feature."
-        sources: [{ name: "Wikipedia: microSD", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: microSD", type: REFERENCE, verified: false } ]
         questions:
           - id: memory-card-mp3-en-1
             language: en
@@ -282,7 +286,7 @@ families:
     facts:
       - id: msn-nudge
         statement: "In MSN Messenger, a Nudge shook the other person's chat window."
-        sources: [{ name: "Wikipedia: Windows Live Messenger", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Windows Live Messenger", type: REFERENCE, verified: false } ]
         questions:
           - id: msn-nudge-en-1
             language: en
@@ -306,7 +310,7 @@ families:
 
       - id: myspace-top-8
         statement: "MySpace let users rank their Top 8 friends on their profile."
-        sources: [{ name: "Wikipedia: Myspace", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Myspace", type: REFERENCE, verified: false } ]
         questions:
           - id: myspace-top-8-en-1
             language: en
@@ -330,7 +334,7 @@ families:
 
       - id: myspace-autoplay
         statement: "MySpace profiles could play music automatically when opened."
-        sources: [{ name: "Wikipedia: Myspace", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Myspace", type: REFERENCE, verified: false } ]
         questions:
           - id: myspace-autoplay-en-1
             language: en
@@ -354,7 +358,7 @@ families:
 
       - id: icq-uin
         statement: "An ICQ number (UIN) was a numerical user ID."
-        sources: [{ name: "Wikipedia: ICQ", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: ICQ", type: REFERENCE, verified: false } ]
         questions:
           - id: icq-uin-en-1
             language: en
@@ -401,7 +405,7 @@ families:
 
       - id: limewire-viruses
         statement: "LimeWire was peer-to-peer file-sharing software; downloads were often mislabelled or carried viruses."
-        sources: [{ name: "Wikipedia: LimeWire", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: LimeWire", type: REFERENCE, verified: false } ]
         questions:
           - id: limewire-viruses-en-1
             language: en
@@ -425,7 +429,7 @@ families:
 
       - id: burn-a-cd
         statement: "To \"burn a CD\" means to write music or data onto a recordable disc."
-        sources: [{ name: "Wikipedia: Optical disc recording", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Optical disc recording", type: REFERENCE, verified: false } ]
         questions:
           - id: burn-a-cd-en-1
             language: en
@@ -470,7 +474,7 @@ families:
 
       - id: windows-xp-bliss
         statement: "The green-hill Windows XP wallpaper is called Bliss."
-        sources: [{ name: "Wikipedia: Bliss (image)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Bliss (image)", type: REFERENCE, verified: true } ]
         questions:
           - id: windows-xp-bliss-en-1
             language: en
@@ -489,8 +493,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06
           - id: windows-xp-bliss-ru-1
             language: ru
             origin_language: en
@@ -515,7 +523,7 @@ families:
 
       - id: facebook-poke
         statement: "Facebook's Poke had no specific purpose beyond getting someone's attention."
-        sources: [{ name: "Wikipedia: Facebook features", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Facebook features", type: REFERENCE, verified: false } ]
         questions:
           - id: facebook-poke-en-1
             language: en
@@ -539,7 +547,7 @@ families:
 
       - id: farmville
         statement: "FarmVille (2009) had millions of Facebook users harvesting virtual crops."
-        sources: [{ name: "Wikipedia: FarmVille", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: FarmVille", type: REFERENCE, verified: false } ]
         questions:
           - id: farmville-en-1
             language: en
@@ -563,7 +571,7 @@ families:
 
       - id: nero-burning-rom
         statement: "Nero Burning ROM was software for burning CDs and DVDs."
-        sources: [{ name: "Wikipedia: Nero Burning ROM", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Nero Burning ROM", type: REFERENCE, verified: false } ]
         questions:
           - id: nero-burning-rom-en-1
             language: en
@@ -608,7 +616,7 @@ families:
 
       - id: mp3-downloads
         statement: "MP3 became almost synonymous with downloaded music in the 2000s."
-        sources: [{ name: "Wikipedia: MP3", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: MP3", type: REFERENCE, verified: false } ]
         questions:
           - id: mp3-downloads-en-1
             language: en
@@ -653,7 +661,7 @@ families:
 
       - id: skype-calls-abroad
         statement: "Skype became one of the main ways to make cheap internet calls abroad."
-        sources: [{ name: "Wikipedia: Skype", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Skype", type: REFERENCE, verified: false } ]
         questions:
           - id: skype-calls-abroad-en-1
             language: en
@@ -701,7 +709,7 @@ families:
     facts:
       - id: sims-pool-ladder
         statement: "A famous Sims joke: remove the ladder from the pool and the Sims can't get out."
-        sources: [{ name: "Wikipedia: The Sims", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Sims", type: REFERENCE, verified: false } ]
         questions:
           - id: sims-pool-ladder-en-1
             language: en
@@ -746,7 +754,7 @@ families:
 
       - id: gta-sa-cj
         statement: "The protagonist of GTA: San Andreas is Carl \"CJ\" Johnson."
-        sources: [{ name: "Wikipedia: Grand Theft Auto: San Andreas", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Grand Theft Auto: San Andreas", type: REFERENCE, verified: true } ]
         questions:
           - id: gta-sa-cj-en-1
             language: en
@@ -765,8 +773,12 @@ families:
             difficulty: 3
             dignity: 1
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06
           - id: gta-sa-cj-ru-1
             language: ru
             origin_language: en
@@ -791,7 +803,7 @@ families:
 
       - id: wii-sports-no-football
         statement: "Wii Sports (2006) had tennis, baseball, bowling, golf and boxing — no football."
-        sources: [{ name: "Wikipedia: Wii Sports", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Wii Sports", type: REFERENCE, verified: true } ]
         questions:
           - id: wii-sports-no-football-en-1
             language: en
@@ -810,8 +822,12 @@ families:
             difficulty: 3
             dignity: 1
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-06
           - id: wii-sports-no-football-ru-1
             language: ru
             origin_language: en
@@ -836,7 +852,7 @@ families:
 
       - id: tamagotchi-care
         statement: "A Tamagotchi had to be fed and cleaned up after, and could die if neglected."
-        sources: [{ name: "Wikipedia: Tamagotchi", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Tamagotchi", type: REFERENCE, verified: false } ]
         questions:
           - id: tamagotchi-care-en-1
             language: en
@@ -881,7 +897,7 @@ families:
 
       - id: furbish
         statement: "Furbies spoke a made-up language called Furbish."
-        sources: [{ name: "Wikipedia: Furby", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Furby", type: REFERENCE, verified: false } ]
         questions:
           - id: furbish-en-1
             language: en
@@ -929,7 +945,7 @@ families:
     facts:
       - id: rickroll
         statement: "Rickrolling means tricking someone into opening Rick Astley's \"Never Gonna Give You Up\"."
-        sources: [{ name: "Wikipedia: Rickrolling", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Rickrolling", type: REFERENCE, verified: false } ]
         questions:
           - id: rickroll-en-1
             language: en
@@ -974,7 +990,7 @@ families:
 
       - id: numa-numa
         statement: "The 2004 \"Numa Numa\" video featured Gary Brolsma lip-syncing to \"Dragostea Din Tei\" by the Moldovan group O-Zone."
-        sources: [{ name: "Wikipedia: Numa Numa (video)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Numa Numa (video)", type: REFERENCE, verified: true } ]
         questions:
           - id: numa-numa-en-1
             language: en
@@ -993,8 +1009,12 @@ families:
             difficulty: 3
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-06
           - id: numa-numa-ru-1
             language: ru
             origin_language: en
@@ -1019,7 +1039,7 @@ families:
 
       - id: the-dress
         statement: "In 2015 the internet argued over whether a photographed dress was blue and black or white and gold."
-        sources: [{ name: "Wikipedia: The dress", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The dress", type: REFERENCE, verified: false } ]
         questions:
           - id: the-dress-en-1
             language: en

@@ -7,7 +7,7 @@ families:
     facts:
       - id: blink-whats-my-age-video
         statement: "In the video for \"What's My Age Again?\" (1999), Blink-182 run naked through Los Angeles."
-        sources: [{ name: "Wikipedia: What's My Age Again?", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: What's My Age Again?", type: REFERENCE, verified: false } ]
         questions:
           - id: blink-whats-my-age-video-en-1
             language: en
@@ -52,7 +52,7 @@ families:
 
       - id: blink-small-things-boybands
         statement: "The video for Blink-182's \"All the Small Things\" (1999) parodies boy bands and pop stars of the time."
-        sources: [{ name: "Wikipedia: All the Small Things", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: All the Small Things", type: REFERENCE, verified: false } ]
         questions:
           - id: blink-small-things-boybands-en-1
             language: en
@@ -97,7 +97,7 @@ families:
 
       - id: american-idiot-green-day
         statement: "\"American Idiot\" (2004) is by Green Day."
-        sources: [{ name: "Wikipedia: American Idiot (song)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: American Idiot (song)", type: REFERENCE, verified: false } ]
         questions:
           - id: american-idiot-green-day-en-1
             language: en
@@ -142,7 +142,7 @@ families:
 
       - id: september-ends-father
         statement: "Billie Joe Armstrong wrote \"Wake Me Up When September Ends\" about his father, who died of cancer in September 1982."
-        sources: [{ name: "Wikipedia: Wake Me Up When September Ends", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Wake Me Up When September Ends", type: REFERENCE, verified: true } ]
         questions:
           - id: september-ends-father-en-1
             language: en
@@ -161,8 +161,12 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-06
           - id: september-ends-father-ru-1
             language: ru
             origin_language: en
@@ -187,7 +191,7 @@ families:
 
       - id: fat-lip-sum-41
         statement: "\"Fat Lip\" (2001) is by Sum 41."
-        sources: [{ name: "Wikipedia: Fat Lip", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Fat Lip", type: REFERENCE, verified: false } ]
         questions:
           - id: fat-lip-sum-41-en-1
             language: en
@@ -232,7 +236,7 @@ families:
 
       - id: sk8er-boi-story
         statement: "In Avril Lavigne's \"Sk8er Boi\", a girl rejects a skater boy who later becomes a rock star."
-        sources: [{ name: "Wikipedia: Sk8er Boi", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Sk8er Boi", type: REFERENCE, verified: false } ]
         questions:
           - id: sk8er-boi-story-en-1
             language: en
@@ -280,7 +284,7 @@ families:
 
       - id: complicated-fake
         statement: "Avril Lavigne's \"Complicated\" (2002) complains about someone who acts fake around other people."
-        sources: [{ name: "Wikipedia: Complicated (Avril Lavigne song)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Complicated (Avril Lavigne song)", type: REFERENCE, verified: false } ]
         questions:
           - id: complicated-fake-en-1
             language: en
@@ -325,7 +329,7 @@ families:
 
       - id: hybrid-theory
         statement: "Linkin Park's debut album is Hybrid Theory (2000)."
-        sources: [{ name: "Wikipedia: Hybrid Theory", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Hybrid Theory", type: REFERENCE, verified: false } ]
         questions:
           - id: hybrid-theory-en-1
             language: en
@@ -370,7 +374,7 @@ families:
 
       - id: numb-expectations
         statement: "Linkin Park's \"Numb\" (2003) is about the pressure of someone else's expectations and losing yourself."
-        sources: [{ name: "Wikipedia: Numb (Linkin Park song)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Numb (Linkin Park song)", type: REFERENCE, verified: false } ]
         questions:
           - id: numb-expectations-en-1
             language: en
@@ -415,7 +419,7 @@ families:
 
       - id: the-anthem-good-charlotte
         statement: "\"The Anthem\" (2002) is by Good Charlotte."
-        sources: [{ name: "Wikipedia: The Anthem (Good Charlotte song)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Anthem (Good Charlotte song)", type: REFERENCE, verified: false } ]
         questions:
           - id: the-anthem-good-charlotte-en-1
             language: en
@@ -460,7 +464,7 @@ families:
 
       - id: im-just-a-kid-simple-plan
         statement: "\"I'm Just a Kid\" (2002) is by Simple Plan."
-        sources: [{ name: "Wikipedia: I'm Just a Kid", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: I'm Just a Kid", type: REFERENCE, verified: false } ]
         questions:
           - id: im-just-a-kid-simple-plan-en-1
             language: en
@@ -508,13 +512,13 @@ families:
 
       - id: thats-what-you-get-paramore
         statement: "\"That's What You Get\" (2008) is by Paramore."
-        sources: [{ name: "Wikipedia: That's What You Get (Paramore song)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: That's What You Get (Paramore song)", type: REFERENCE, verified: false } ]
         questions:
           - id: thats-what-you-get-paramore-en-1
             language: en
             origin_language: en
             culture_specificity: GLOBAL
-            text: "Which band recorded \"That's What You Get\"?"
+            text: "Who recorded \"That's What You Get\"?"
             options:
               - { key: A, text: "Evanescence", distractor: SAME_CATEGORY }
               - { key: B, text: "Avril Lavigne", distractor: CONTEXTUAL_CONFUSION }
@@ -533,7 +537,7 @@ families:
             language: ru
             origin_language: en
             culture_specificity: GLOBAL
-            text: Какая группа записала «That's What You Get»?
+            text: Кто записал «That's What You Get»?
             options:
               - { key: A, text: Evanescence, distractor: SAME_CATEGORY }
               - { key: B, text: Аврил Лавин, distractor: CONTEXTUAL_CONFUSION }
@@ -553,7 +557,7 @@ families:
 
       - id: sugar-fall-out-boy
         statement: "\"Sugar, We're Goin Down\" (2005) is by Fall Out Boy."
-        sources: [{ name: "Wikipedia: Sugar, We're Goin Down", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Sugar, We're Goin Down", type: REFERENCE, verified: false } ]
         questions:
           - id: sugar-fall-out-boy-en-1
             language: en
@@ -598,7 +602,7 @@ families:
 
       - id: black-parade-father
         statement: "\"Welcome to the Black Parade\" (2006) opens with the narrator's father taking him as a boy to see a marching band."
-        sources: [{ name: "Wikipedia: Welcome to the Black Parade", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Welcome to the Black Parade", type: REFERENCE, verified: false } ]
         questions:
           - id: black-parade-father-en-1
             language: en
@@ -643,7 +647,7 @@ families:
 
       - id: im-not-okay-mcr
         statement: "\"I'm Not Okay (I Promise)\" (2004) is by My Chemical Romance."
-        sources: [{ name: "Wikipedia: I'm Not Okay (I Promise)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: I'm Not Okay (I Promise)", type: REFERENCE, verified: false } ]
         questions:
           - id: im-not-okay-mcr-en-1
             language: en
@@ -688,7 +692,7 @@ families:
 
       - id: sins-not-tragedies-wedding
         statement: "The video and story of \"I Write Sins Not Tragedies\" (2005) by Panic! at the Disco are set at a wedding."
-        sources: [{ name: "Wikipedia: I Write Sins Not Tragedies", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: I Write Sins Not Tragedies", type: REFERENCE, verified: false } ]
         questions:
           - id: sins-not-tragedies-wedding-en-1
             language: en
@@ -733,7 +737,7 @@ families:
 
       - id: somebody-told-me-killers
         statement: "\"Somebody Told Me\" (2004) is by The Killers."
-        sources: [{ name: "Wikipedia: Somebody Told Me", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Somebody Told Me", type: REFERENCE, verified: false } ]
         questions:
           - id: somebody-told-me-killers-en-1
             language: en
@@ -778,7 +782,7 @@ families:
 
       - id: why-dont-you-get-a-job
         statement: "The Offspring's \"Why Don't You Get a Job?\" (1998) is about partners who live off someone else."
-        sources: [{ name: "Wikipedia: Why Don't You Get a Job?", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Why Don't You Get a Job?", type: REFERENCE, verified: false } ]
         questions:
           - id: why-dont-you-get-a-job-en-1
             language: en
@@ -823,7 +827,7 @@ families:
 
       - id: pretty-fly-white-guy
         statement: "The Offspring's \"Pretty Fly (for a White Guy)\" (1998) mocks a suburban guy trying too hard to look street."
-        sources: [{ name: "Wikipedia: Pretty Fly (for a White Guy)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Pretty Fly (for a White Guy)", type: REFERENCE, verified: false } ]
         questions:
           - id: pretty-fly-white-guy-en-1
             language: en

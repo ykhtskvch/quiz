@@ -7,7 +7,7 @@ families:
     facts:
       - id: moonwalk
         statement: "Знаменитое «скользящее назад» движение Майкла Джексона называется «лунная походка»."
-        sources: [{ name: "Википедия: Лунная походка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Лунная походка", type: REFERENCE, verified: false } ]
         questions:
           - id: moonwalk-ru-1
             language: ru
@@ -52,7 +52,7 @@ families:
 
       - id: thriller-best-selling
         statement: "Альбом Майкла Джексона «Thriller» (1982) — самый продаваемый альбом в истории."
-        sources: [{ name: "Википедия: Thriller (альбом)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Thriller (альбом)", type: REFERENCE, verified: false } ]
         questions:
           - id: thriller-best-selling-ru-1
             language: ru
@@ -100,7 +100,7 @@ families:
     facts:
       - id: abba-waterloo
         statement: "ABBA победила на «Евровидении-1974» с песней «Waterloo»."
-        sources: [{ name: "Википедия: Waterloo (песня ABBA)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Waterloo (песня ABBA)", type: REFERENCE, verified: false } ]
         questions:
           - id: abba-waterloo-ru-1
             language: ru
@@ -148,7 +148,7 @@ families:
     facts:
       - id: mercury-zanzibar
         statement: "Фредди Меркьюри родился на острове Занзибар (1946)."
-        sources: [{ name: "Википедия: Меркьюри, Фредди", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Меркьюри, Фредди", type: REFERENCE, verified: false } ]
         questions:
           - id: mercury-zanzibar-ru-1
             language: ru
@@ -196,7 +196,7 @@ families:
     facts:
       - id: posh-spice
         statement: "Прозвище Виктории Бекхэм (Адамс) в Spice Girls — Posh Spice."
-        sources: [{ name: "Википедия: Spice Girls", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Spice Girls", type: REFERENCE, verified: false } ]
         questions:
           - id: posh-spice-ru-1
             language: ru
@@ -244,7 +244,7 @@ families:
     facts:
       - id: britney-debut
         statement: "Дебютный хит Бритни Спирс — «...Baby One More Time» (1998)."
-        sources: [{ name: "Википедия: ...Baby One More Time (песня)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: ...Baby One More Time (песня)", type: REFERENCE, verified: true } ]
         questions:
           - id: britney-debut-ru-1
             language: ru
@@ -282,17 +282,19 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_KNOW_THIS: 0.6, WHY_DO_I_REMEMBER_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: madonna
     name: "Мадонна"
     facts:
       - id: madonna-like-a-prayer
         statement: "Песню «Like a Prayer» (1989) исполняет Мадонна."
-        sources: [{ name: "Википедия: Like a Prayer (песня)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Like a Prayer (песня)", type: REFERENCE, verified: false } ]
         questions:
           - id: madonna-like-a-prayer-ru-1
             language: ru
@@ -340,7 +342,7 @@ families:
     facts:
       - id: psy-country
         statement: "PSY, исполнитель «Gangnam Style», — из Южной Кореи."
-        sources: [{ name: "Википедия: Gangnam Style", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Gangnam Style", type: REFERENCE, verified: false } ]
         questions:
           - id: psy-country-ru-1
             language: ru
@@ -388,7 +390,7 @@ families:
     facts:
       - id: macarena-spain
         statement: "«Макарену» исполнил испанский дуэт Los del Río."
-        sources: [{ name: "Википедия: Macarena", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Macarena", type: REFERENCE, verified: true } ]
         questions:
           - id: macarena-spain-ru-1
             language: ru
@@ -428,18 +430,19 @@ families:
             difficulty: 3
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_KNOW_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
-              - "Сверка Claude 2026-10-06: remix 1995, US No. 1 in 1996 (en.wikipedia: Macarena)."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: crazy-frog
     name: "Crazy Frog"
     facts:
       - id: crazy-frog-axel-f
         statement: "Хит Crazy Frog «Axel F» (2005) — кавер на тему из фильма «Полицейский из Беверли-Хиллз»."
-        sources: [{ name: "Википедия: Axel F", type: REFERENCE, verified: true }]
+        sources: [ { name: "Википедия: Axel F", type: REFERENCE, verified: true } ]
         questions:
           - id: crazy-frog-axel-f-ru-1
             language: ru
@@ -491,7 +494,7 @@ families:
     facts:
       - id: modern-talking-country
         statement: "Modern Talking — дуэт Дитера Болена и Томаса Андерса из ФРГ."
-        sources: [{ name: "Википедия: Modern Talking", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Modern Talking", type: REFERENCE, verified: false } ]
         questions:
           - id: modern-talking-country-ru-1
             language: ru
@@ -518,7 +521,7 @@ families:
     facts:
       - id: boney-m-rasputin
         statement: "Героем хита Boney M. 1978 года стал Григорий Распутин."
-        sources: [{ name: "Википедия: Rasputin (песня)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Rasputin (песня)", type: REFERENCE, verified: false } ]
         questions:
           - id: boney-m-rasputin-ru-1
             language: ru
@@ -568,7 +571,7 @@ families:
     facts:
       - id: beatles-liverpool
         statement: "The Beatles — из Ливерпуля."
-        sources: [{ name: "Википедия: The Beatles", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: The Beatles", type: REFERENCE, verified: false } ]
         questions:
           - id: beatles-liverpool-ru-1
             language: ru
@@ -617,7 +620,7 @@ families:
     facts:
       - id: always-love-you-dolly
         statement: "Песню «I Will Always Love You», хит Уитни Хьюстон (1992), написала и первой исполнила Долли Партон."
-        sources: [{ name: "Википедия: I Will Always Love You", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: I Will Always Love You", type: REFERENCE, verified: true } ]
         questions:
           - id: always-love-you-dolly-ru-1
             language: ru
@@ -655,17 +658,19 @@ families:
             difficulty: 5
             dignity: 2
             effects: { I_KNOW_THIS: 1, HERO_CANDIDATE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: ace-of-base
     name: "Ace of Base"
     facts:
       - id: ace-of-base-sweden
         statement: "Группа Ace of Base («All That She Wants», «The Sign») — из Швеции."
-        sources: [{ name: "Википедия: Ace of Base", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Ace of Base", type: REFERENCE, verified: false } ]
         questions:
           - id: ace-of-base-sweden-ru-1
             language: ru

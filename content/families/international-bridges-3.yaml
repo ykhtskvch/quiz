@@ -7,7 +7,7 @@ families:
     facts:
       - id: ak-47-year
         statement: "The \"47\" in AK-47 is the year 1947, when Mikhail Kalashnikov's rifle design was finalised; AK stands for Avtomat Kalashnikova."
-        sources: [{ name: "Wikipedia: AK-47", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: AK-47", type: REFERENCE, verified: false } ]
         questions:
           - id: ak-47-year-en-1
             language: en
@@ -31,7 +31,7 @@ families:
 
       - id: lada-riva-ussr
         statement: "The Lada Riva, the butt of many British jokes in the 1980s, was built by AvtoVAZ in the USSR (Tolyatti)."
-        sources: [{ name: "Wikipedia: Lada Riva", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Lada Riva", type: REFERENCE, verified: false } ]
         questions:
           - id: lada-riva-ussr-en-1
             language: en
@@ -56,7 +56,7 @@ families:
 
       - id: faberge-romanovs
         statement: "Fabergé's jewelled Easter eggs were made for the Russian imperial family, the Romanovs."
-        sources: [{ name: "Wikipedia: Fabergé egg", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Fabergé egg", type: REFERENCE, verified: false } ]
         questions:
           - id: faberge-romanovs-en-1
             language: en
@@ -80,7 +80,7 @@ families:
 
       - id: matryoshka-japan
         statement: "The first Russian matryoshka was made in the 1890s, carved by Vasily Zvyozdochkin and designed by Sergey Malyutin."
-        sources: [{ name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: false } ]
         questions:
           - id: matryoshka-japan-en-1
             language: en
@@ -109,7 +109,7 @@ families:
     facts:
       - id: babushka-meaning
         statement: "In Russian, \"babushka\" means grandmother; in English it came to mean a headscarf tied under the chin."
-        sources: [{ name: "Wiktionary: babushka", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wiktionary: babushka", type: REFERENCE, verified: false } ]
         questions:
           - id: babushka-meaning-en-1
             language: en
@@ -133,7 +133,7 @@ families:
 
       - id: vodka-little-water
         statement: "\"Vodka\" is a diminutive of \"voda\", water — roughly \"little water\"."
-        sources: [{ name: "Wiktionary: водка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wiktionary: водка", type: REFERENCE, verified: true } ]
         questions:
           - id: vodka-little-water-en-1
             language: en
@@ -152,12 +152,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
       - id: cyrillic-saint-cyril
         statement: "The Cyrillic alphabet is named after Saint Cyril, a 9th-century Byzantine missionary."
-        sources: [{ name: "Wikipedia: Cyrillic script", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Cyrillic script", type: REFERENCE, verified: false } ]
         questions:
           - id: cyrillic-saint-cyril-en-1
             language: en
@@ -181,7 +185,7 @@ families:
 
       - id: red-square-beautiful
         statement: "Red Square's name comes from Old Russian \"krasnaya\", which meant \"beautiful\" — it has nothing to do with communism."
-        sources: [{ name: "Wikipedia: Red Square", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Red Square", type: REFERENCE, verified: true } ]
         questions:
           - id: red-square-beautiful-en-1
             language: en
@@ -200,17 +204,19 @@ families:
             difficulty: 4
             dignity: 3
             effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-06: подтверждено (en.wikipedia: Red Square) — «красная» = «красивая», нынешнее название с 1661–62."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: bridges-places
     name: "Places your friends are from"
     facts:
       - id: riga-latvia
         statement: "Riga is the capital of Latvia."
-        sources: [{ name: "Wikipedia: Riga", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Riga", type: REFERENCE, verified: false } ]
         questions:
           - id: riga-latvia-en-1
             language: en
@@ -234,7 +240,7 @@ families:
 
       - id: minsk-belarus
         statement: "Minsk is the capital of Belarus."
-        sources: [{ name: "Wikipedia: Minsk", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Minsk", type: REFERENCE, verified: false } ]
         questions:
           - id: minsk-belarus-en-1
             language: en
@@ -258,7 +264,7 @@ families:
 
       - id: trans-siberian-vladivostok
         statement: "The Trans-Siberian Railway runs from Moscow to Vladivostok, 9,289 km."
-        sources: [{ name: "Wikipedia: Trans-Siberian Railway", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Trans-Siberian Railway", type: REFERENCE, verified: true } ]
         questions:
           - id: trans-siberian-vladivostok-en-1
             language: en
@@ -277,17 +283,19 @@ families:
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-06: длина 9 289 км подтверждена (en.wikipedia: Trans-Siberian Railway); «семь часовых поясов» источником не подтверждены — убраны."
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: bridges-science-space
     name: "Science and space"
     facts:
       - id: mendeleev-periodic
         statement: "The periodic table was created by the Russian chemist Dmitri Mendeleev in 1869."
-        sources: [{ name: "Wikipedia: Dmitri Mendeleev", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Dmitri Mendeleev", type: REFERENCE, verified: false } ]
         questions:
           - id: mendeleev-periodic-en-1
             language: en
@@ -311,7 +319,7 @@ families:
 
       - id: pavlov-dogs
         statement: "Ivan Pavlov is famous for experiments on conditioned reflexes in dogs."
-        sources: [{ name: "Wikipedia: Ivan Pavlov", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Ivan Pavlov", type: REFERENCE, verified: false } ]
         questions:
           - id: pavlov-dogs-en-1
             language: en
@@ -335,7 +343,7 @@ families:
 
       - id: gagarin-manchester-1961
         statement: "During his July 1961 visit to the UK, Yuri Gagarin rode through heavy rain in Manchester in an open-top car, refusing an umbrella so the crowds could see him."
-        sources: [{ name: "Wikipedia: Yuri Gagarin", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Yuri Gagarin", type: REFERENCE, verified: true } ]
         questions:
           - id: gagarin-manchester-1961-en-1
             language: en
@@ -354,17 +362,19 @@ families:
             difficulty: 5
             dignity: 4
             effects: { BRIDGE: 0.6, HERO_CANDIDATE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "Сверка Claude 2026-10-06: подтверждено (en.wikipedia: Yuri Gagarin) — Манчестер, ливень, открытая машина, отказался от зонта. «Первый город» и приглашение профсоюза источником не подтверждаются — из вопроса убраны."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-06
 
   - family: bridges-cold-war-culture
     name: "Cold War, from both sides"
     facts:
       - id: fischer-spassky-1972
         statement: "In 1972 American Bobby Fischer beat the Soviet world champion Boris Spassky in Reykjavík."
-        sources: [{ name: "Wikipedia: World Chess Championship 1972", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: World Chess Championship 1972", type: REFERENCE, verified: false } ]
         questions:
           - id: fischer-spassky-1972-en-1
             language: en
@@ -388,7 +398,7 @@ families:
 
       - id: doctor-zhivago-nobel
         statement: "Boris Pasternak's Doctor Zhivago, banned in the USSR, won him the 1958 Nobel Prize in Literature, which he was forced to decline."
-        sources: [{ name: "Wikipedia: Doctor Zhivago (novel)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Doctor Zhivago (novel)", type: REFERENCE, verified: false } ]
         questions:
           - id: doctor-zhivago-nobel-en-1
             language: en
