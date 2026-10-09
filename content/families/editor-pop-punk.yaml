@@ -439,7 +439,7 @@ families:
 
       - id: the-anthem-good-charlotte
         statement: "\"The Anthem\" (2002) is by Good Charlotte."
-        sources: [ { name: "Wikipedia: The Anthem (Good Charlotte song)", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: The Anthem (Good Charlotte song)", type: REFERENCE, verified: true } ]
         questions:
           - id: the-anthem-good-charlotte-en-1
             language: en
@@ -458,8 +458,12 @@ families:
             difficulty: 4
             dignity: 2
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: the-anthem-good-charlotte-ru-1
             language: ru
             origin_language: en
@@ -808,7 +812,7 @@ families:
 
       - id: why-dont-you-get-a-job
         statement: "The Offspring's \"Why Don't You Get a Job?\" (1998) is about partners who live off someone else."
-        sources: [ { name: "Wikipedia: Why Don't You Get a Job?", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Why Don't You Get a Job?", type: REFERENCE, verified: true } ]
         questions:
           - id: why-dont-you-get-a-job-en-1
             language: en
@@ -827,8 +831,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: why-dont-you-get-a-job-ru-1
             language: ru
             origin_language: en

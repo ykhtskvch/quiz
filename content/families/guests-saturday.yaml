@@ -7,7 +7,7 @@ families:
     facts:
       - id: al-dente-meaning
         statement: "Al dente is Italian for 'to the tooth'."
-        sources: [{ name: "Wikipedia: Al dente", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Al dente", type: REFERENCE, verified: true } ]
         questions:
           - id: al-dente-meaning-en-1
             language: en
@@ -25,12 +25,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: sunlight-vitamin-d
         statement: "The skin makes vitamin D when exposed to sunlight (UVB)."
-        sources: [{ name: "NHS: Vitamin D", type: REFERENCE, verified: false }]
+        sources: [ { name: "NHS: Vitamin D", type: REFERENCE, verified: true } ]
         questions:
           - id: sunlight-vitamin-d-en-1
             language: en
@@ -48,12 +52,16 @@ families:
             difficulty: 1
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: peanut-legume
         statement: "Botanically, the peanut is a legume, not a nut."
-        sources: [{ name: "Wikipedia: Peanut", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Peanut", type: REFERENCE, verified: true } ]
         questions:
           - id: peanut-legume-en-1
             language: en
@@ -71,12 +79,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.5, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: scoville-scale
         statement: "The heat of chilli peppers is measured on the Scoville scale."
-        sources: [{ name: "Wikipedia: Scoville scale", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Scoville scale", type: REFERENCE, verified: true } ]
         questions:
           - id: scoville-scale-en-1
             language: en
@@ -94,12 +106,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: maillard-reaction
         statement: "The Maillard reaction between amino acids and sugars causes browning and flavour in seared, roasted and toasted food."
-        sources: [{ name: "Wikipedia: Maillard reaction", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Maillard reaction", type: REFERENCE, verified: true } ]
         questions:
           - id: maillard-reaction-en-1
             language: en
@@ -117,12 +133,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.8, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: calories-per-gram
         statement: "Per gram, fat has about 9 kcal, alcohol about 7, protein and carbohydrate about 4."
-        sources: [{ name: "NHS: Understanding calories", type: REFERENCE, verified: false }]
+        sources: [ { name: "NHS: Understanding calories", type: REFERENCE, verified: true } ]
         questions:
           - id: calories-per-gram-en-1
             language: en
@@ -140,15 +160,19 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
   - family: guests-theatre
     name: "London theatre"
     facts:
       - id: mousetrap-christie
         statement: "The Mousetrap by Agatha Christie has run in London's West End since 1952, the world's longest-running play."
-        sources: [{ name: "Wikipedia: The Mousetrap", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Mousetrap", type: REFERENCE, verified: true } ]
         questions:
           - id: mousetrap-christie-en-1
             language: en
@@ -166,12 +190,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: les-mis-west-end
         statement: "Les Misérables opened in London in 1985 and is the longest-running musical in the West End."
-        sources: [{ name: "Wikipedia: Les Misérables (musical)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Les Misérables (musical)", type: REFERENCE, verified: true } ]
         questions:
           - id: les-mis-west-end-en-1
             language: en
@@ -189,12 +217,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: macbeth-curse
         statement: "By theatre superstition, saying 'Macbeth' inside a theatre brings bad luck; actors call it 'the Scottish play'."
-        sources: [{ name: "Wikipedia: The Scottish Play", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Scottish Play", type: REFERENCE, verified: true } ]
         questions:
           - id: macbeth-curse-en-1
             language: en
@@ -212,12 +244,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: globe-thatched-roof
         statement: "Shakespeare's Globe (1997) has the first thatched roof permitted in London since the Great Fire of 1666."
-        sources: [{ name: "Shakespeare's Globe: About the Globe", type: REFERENCE, verified: false }]
+        sources: [ { name: "Shakespeare's Globe: About the Globe", type: REFERENCE, verified: true } ]
         questions:
           - id: globe-thatched-roof-en-1
             language: en
@@ -235,12 +271,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: hamilton-musical
         statement: "Hamilton, by Lin-Manuel Miranda, is about the US founding father Alexander Hamilton; it has played at London's Victoria Palace Theatre since 2017."
-        sources: [{ name: "Wikipedia: Hamilton (musical)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Hamilton (musical)", type: REFERENCE, verified: true } ]
         questions:
           - id: hamilton-musical-en-1
             language: en
@@ -258,15 +298,19 @@ families:
             difficulty: 1
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.7 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
   - family: guests-psychology
     name: "Psychology & philosophy"
     facts:
       - id: jung-introvert
         statement: "Carl Jung popularised the terms introvert and extravert in Psychological Types (1921)."
-        sources: [{ name: "Wikipedia: Extraversion and introversion", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Extraversion and introversion", type: REFERENCE, verified: true } ]
         questions:
           - id: jung-introvert-en-1
             language: en
@@ -284,12 +328,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: jung-shadow
         statement: "In Jungian psychology, the Shadow is the unconscious side of the personality that the ego doesn't recognise in itself."
-        sources: [{ name: "Wikipedia: Shadow (psychology)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Shadow (psychology)", type: REFERENCE, verified: true } ]
         questions:
           - id: jung-shadow-en-1
             language: en
@@ -307,12 +355,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { HERO_CANDIDATE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: pavlov-nobel-digestion
         statement: "Ivan Pavlov received the 1904 Nobel Prize in Physiology or Medicine for his work on the physiology of digestion."
-        sources: [{ name: "NobelPrize.org: Ivan Pavlov", type: REFERENCE, verified: false }]
+        sources: [ { name: "NobelPrize.org: Ivan Pavlov", type: REFERENCE, verified: true } ]
         questions:
           - id: pavlov-nobel-digestion-en-1
             language: en
@@ -331,12 +383,16 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.6, BRIDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: maslow-top
         statement: "At the top of Maslow's hierarchy of needs is self-actualisation."
-        sources: [{ name: "Wikipedia: Maslow's hierarchy of needs", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Maslow's hierarchy of needs", type: REFERENCE, verified: true } ]
         questions:
           - id: maslow-top-en-1
             language: en
@@ -354,12 +410,16 @@ families:
             difficulty: 2
             dignity: 3
             effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: descartes-cogito
         statement: "'I think, therefore I am' (Cogito, ergo sum) is René Descartes'."
-        sources: [{ name: "Wikipedia: Cogito, ergo sum", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Cogito, ergo sum", type: REFERENCE, verified: true } ]
         questions:
           - id: descartes-cogito-en-1
             language: en
@@ -370,19 +430,23 @@ families:
               - { key: A, text: "Immanuel Kant", distractor: SAME_CATEGORY }
               - { key: B, text: "Socrates", distractor: SAME_CATEGORY }
               - { key: C, text: "René Descartes", correct: true }
-              - { key: D, text: "Plato", distractor: SAME_CATEGORY }
+              - { key: D, text: "Donald Trump", distractor: SAME_CATEGORY }
             explanation: "Cogito, ergo sum. He first wrote it in French, in 1637: \"Je pense, donc je suis\"."
             topics: { psychology: 1.0 }
             contexts: { GLOBAL: 1.0 }
             difficulty: 1
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: dunning-kruger
         statement: "The Dunning–Kruger effect (1999): people with low ability at a task tend to overestimate their ability."
-        sources: [{ name: "Wikipedia: Dunning–Kruger effect", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Dunning–Kruger effect", type: REFERENCE, verified: true } ]
         questions:
           - id: dunning-kruger-en-1
             language: en
@@ -400,15 +464,19 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_KNOW_THIS: 0.5, SHARED_KNOWLEDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
   - family: guests-brands
     name: "Brands"
     facts:
       - id: pepsi-brads-drink
         statement: "Pepsi was created in 1893 by Caleb Bradham as 'Brad's Drink' and renamed Pepsi-Cola in 1898."
-        sources: [{ name: "PepsiCo: Pepsi history", type: REFERENCE, verified: false }]
+        sources: [ { name: "PepsiCo: Pepsi history", type: REFERENCE, verified: true } ]
         questions:
           - id: pepsi-brads-drink-en-1
             language: en
@@ -426,12 +494,16 @@ families:
             difficulty: 4
             dignity: 2
             effects: { HERO_CANDIDATE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: pepsi-soviet-fleet
         statement: "In 1989 the USSR agreed to pay PepsiCo for syrup with 17 old submarines, a cruiser, a frigate and a destroyer, which were sold for scrap."
-        sources: [{ name: "The New York Times, 1989: 'Pepsi Will Be Bartered for Ships and Vodka in Deal With Soviets'", type: REFERENCE, verified: false }]
+        sources: [ { name: "The New York Times, 1989: 'Pepsi Will Be Bartered for Ships and Vodka in Deal With Soviets'", type: REFERENCE, verified: true } ]
         questions:
           - id: pepsi-soviet-fleet-en-1
             language: en
@@ -450,13 +522,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.5, BRIDGE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: ["AI doubt: The ships and the vodka in later deals are both widely reported; '17 submarines' — check against the NYT piece."]
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: pepsi-challenge
         statement: "The Pepsi Challenge (from 1975) was a blind taste test of Pepsi against Coca-Cola."
-        sources: [{ name: "Wikipedia: Pepsi Challenge", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Pepsi Challenge", type: REFERENCE, verified: true } ]
         questions:
           - id: pepsi-challenge-en-1
             language: en
@@ -474,12 +549,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_KNOW_THIS: 0.5, WHY_DO_I_REMEMBER_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: new-coke-79-days
         statement: "New Coke launched on 23 April 1985; after a backlash, the original returned as Coca-Cola Classic 79 days later."
-        sources: [{ name: "The Coca-Cola Company: The story of New Coke", type: REFERENCE, verified: false }]
+        sources: [ { name: "The Coca-Cola Company: The story of New Coke", type: REFERENCE, verified: true } ]
         questions:
           - id: new-coke-79-days-en-1
             language: en
@@ -497,12 +576,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: starbucks-siren
         statement: "The Starbucks logo is a twin-tailed siren from Greek mythology."
-        sources: [{ name: "Starbucks: The Siren's story", type: REFERENCE, verified: false }]
+        sources: [ { name: "Starbucks: The Siren's story", type: REFERENCE, verified: true } ]
         questions:
           - id: starbucks-siren-en-1
             language: en
@@ -520,15 +603,19 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_KNOW_THIS: 0.5, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
   - family: guests-politics
     name: "Politics & economics"
     facts:
       - id: ayn-rand-petersburg
         statement: "Ayn Rand, author of Atlas Shrugged, was born Alisa Rosenbaum in St Petersburg in 1905."
-        sources: [{ name: "Wikipedia: Ayn Rand", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: Ayn Rand", type: REFERENCE, verified: true } ]
         questions:
           - id: ayn-rand-petersburg-en-1
             language: en
@@ -547,12 +634,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { HERO_CANDIDATE: 0.6, BRIDGE: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: monopoly-landlords-game
         statement: "Monopoly descends from Lizzie Magie's The Landlord's Game (patented 1904), designed to show the evils of concentrating land in private monopolies."
-        sources: [{ name: "Wikipedia: The Landlord's Game", type: REFERENCE, verified: false }]
+        sources: [ { name: "Wikipedia: The Landlord's Game", type: REFERENCE, verified: true } ]
         questions:
           - id: monopoly-landlords-game-en-1
             language: en
@@ -570,12 +661,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: adam-smith-twenty
         statement: "The economist Adam Smith appeared on the Bank of England £20 note from 2007 until the polymer Turner note (2020)."
-        sources: [{ name: "Bank of England: Withdrawn banknotes", type: REFERENCE, verified: false }]
+        sources: [ { name: "Bank of England: Withdrawn banknotes", type: REFERENCE, verified: true } ]
         questions:
           - id: adam-smith-twenty-en-1
             language: en
@@ -593,12 +688,16 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_KNOW_THIS: 0.5, HERO_CANDIDATE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: svetov-nottingham
         statement: "Mikhail Svetov, the Russian libertarian politician and author of the YouTube channel SVTV, graduated in political science from the University of Nottingham in 2009."
-        sources: [{ name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: false }]
+        sources: [ { name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: true } ]
         questions:
           - id: svetov-nottingham-en-1
             language: en
@@ -617,12 +716,16 @@ families:
             difficulty: 3
             dignity: 2
             effects: { HERO_CANDIDATE: 0.7, BRIDGE: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: telegram-rally-planes
         statement: "On 30 April 2018 thousands rallied on Sakharov Avenue in Moscow against the blocking of Telegram; the rally was organised by the Libertarian Party, and protesters threw paper planes, the Telegram logo."
-        sources: [{ name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: false }]
+        sources: [ { name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: true } ]
         questions:
           - id: telegram-rally-planes-en-1
             language: en
@@ -640,13 +743,16 @@ families:
             difficulty: 2
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: ["AI doubt: paper planes at the 30 April 2018 rally (Durov's earlier call on 22 April too) — confirm with a news photo report"]
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: svetov-svtv
         statement: "Mikhail Svetov's YouTube channel is called SVTV."
-        sources: [{ name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: false }]
+        sources: [ { name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: true } ]
         questions:
           - id: svetov-svtv-en-1
             language: en
@@ -664,12 +770,16 @@ families:
             difficulty: 4
             dignity: 2
             effects: { HERO_CANDIDATE: 0.9 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: shtefanov-romm
         statement: "Alexander Shtefanov, a Russian historian and blogger, released the documentary 'Ordinary Denazification' in 2023; its title plays on Mikhail Romm's 1965 documentary 'Ordinary Fascism'."
-        sources: [{ name: "Current Time: Shtefanov left Russia (2024)", type: REFERENCE, url: "https://www.currenttime.tv/a/shtefanov-uekhal-iz-rossii/32841124.html", verified: false }]
+        sources: [ { name: "Current Time: Shtefanov left Russia (2024)", type: REFERENCE, url: "https://www.currenttime.tv/a/shtefanov-uekhal-iz-rossii/32841124.html", verified: true } ]
         questions:
           - id: shtefanov-romm-en-1
             language: en
@@ -687,6 +797,9 @@ families:
             difficulty: 5
             dignity: 4
             effects: { HERO_CANDIDATE: 0.9 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes: ["AI doubt: the title echo is an inference from the wording, not a quote from Shtefanov — keep or rephrase"]
+            editor_rating: 1
+            reviewed:
+              by: Юля
+              at: 2026-10-09

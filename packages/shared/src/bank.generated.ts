@@ -5164,7 +5164,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "memory-card-mp3-ru-1",
@@ -7796,7 +7797,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "the-anthem-good-charlotte-ru-1",
@@ -8550,7 +8552,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "why-dont-you-get-a-job-ru-1",
@@ -14279,7 +14282,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "emmental-holes-ru-1",
@@ -16137,7 +16141,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "sunlight-vitamin-d-en-1",
@@ -16183,7 +16188,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "peanut-legume-en-1",
@@ -16229,7 +16235,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "scoville-scale-en-1",
@@ -16274,7 +16281,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "maillard-reaction-en-1",
@@ -16320,7 +16328,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "calories-per-gram-en-1",
@@ -16366,7 +16375,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "mousetrap-christie-en-1",
@@ -16413,7 +16423,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "les-mis-west-end-en-1",
@@ -16459,7 +16470,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "macbeth-curse-en-1",
@@ -16506,7 +16518,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "globe-thatched-roof-en-1",
@@ -16553,7 +16566,8 @@ export const BANK: BankQuestion[] = [
       "I_FIGURED_IT_OUT": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "hamilton-musical-en-1",
@@ -16599,7 +16613,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.7
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "jung-introvert-en-1",
@@ -16644,7 +16659,8 @@ export const BANK: BankQuestion[] = [
       "I_KNOW_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "jung-shadow-en-1",
@@ -16688,7 +16704,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "pavlov-nobel-digestion-en-1",
@@ -16736,7 +16753,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "maslow-top-en-1",
@@ -16781,7 +16799,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "descartes-cogito-en-1",
@@ -16807,7 +16826,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "D",
-        "text": "Plato"
+        "text": "Donald Trump"
       }
     ],
     "correctKey": "C",
@@ -16825,7 +16844,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "dunning-kruger-en-1",
@@ -16870,7 +16890,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "pepsi-brads-drink-en-1",
@@ -16915,7 +16936,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.8
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "pepsi-soviet-fleet-en-1",
@@ -16963,7 +16985,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "pepsi-challenge-en-1",
@@ -17008,7 +17031,8 @@ export const BANK: BankQuestion[] = [
       "WHY_DO_I_REMEMBER_THIS": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 2
   },
   {
     "id": "new-coke-79-days-en-1",
@@ -17054,7 +17078,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "starbucks-siren-en-1",
@@ -17099,7 +17124,8 @@ export const BANK: BankQuestion[] = [
       "SHARED_KNOWLEDGE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "ayn-rand-petersburg-en-1",
@@ -17146,7 +17172,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.6
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "monopoly-landlords-game-en-1",
@@ -17191,7 +17218,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 4
   },
   {
     "id": "adam-smith-twenty-en-1",
@@ -17238,7 +17266,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "svetov-nottingham-en-1",
@@ -17285,7 +17314,8 @@ export const BANK: BankQuestion[] = [
       "BRIDGE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "telegram-rally-planes-en-1",
@@ -17332,7 +17362,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.4
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 3
   },
   {
     "id": "svetov-svtv-en-1",
@@ -17377,7 +17408,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.9
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "shtefanov-romm-en-1",
@@ -17422,7 +17454,8 @@ export const BANK: BankQuestion[] = [
       "HERO_CANDIDATE": 0.9
     },
     "ageSafety": "ALL",
-    "status": "DRAFT"
+    "status": "APPROVED",
+    "editorRating": 1
   },
   {
     "id": "tube-circle-yellow-en-1",
