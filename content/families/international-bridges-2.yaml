@@ -6,6 +6,7 @@ families:
     name: "Screen bridges"
     facts:
       - id: livanov-mbe
+        subject: sherlock-holmes
         statement: "Vasily Livanov, Sherlock Holmes in the Soviet TV films (1979–1986), was made an honorary MBE in 2006."
         sources: [ { name: "Wikipedia: Vasily Livanov", type: REFERENCE, verified: false } ]
         questions:
@@ -32,6 +33,7 @@ families:
               - "Редакция 2026-10-05: снят из EN-версии — постсоветская культура остаётся в русской версии."
 
       - id: bbc-war-and-peace-2016
+        subject: war-and-peace
         statement: "In 2016 the BBC adapted War and Peace with Paul Dano as Pierre and Lily James as Natasha."
         sources: [ { name: "Wikipedia: War & Peace (2016 TV series)", type: REFERENCE, verified: true } ]
         questions:
@@ -146,6 +148,7 @@ families:
     name: "Music bridges"
     facts:
       - id: back-in-the-ussr
+        subject: the-beatles
         statement: "\"Back in the U.S.S.R.\" (The Beatles, 1968) parodies Chuck Berry's \"Back in the U.S.A.\" and the Beach Boys."
         sources: [ { name: "Wikipedia: Back in the U.S.S.R.", type: REFERENCE, verified: true } ]
         questions:

@@ -6,6 +6,7 @@ families:
     name: "ICQ («аська»)"
     facts:
       - id: icq-sound
+        subject: icq
         statement: "ICQ при новом сообщении издавала звук «О-оу!» (uh-oh)."
         sources: [ { name: "Википедия: ICQ", type: REFERENCE, verified: false } ]
         questions:
@@ -30,6 +31,7 @@ families:
             generation_method: AI
 
       - id: icq-logo
+        subject: icq
         statement: "Логотип ICQ — зелёный цветок."
         sources: [ { name: "Википедия: ICQ", type: REFERENCE, verified: false } ]
         questions:
@@ -55,6 +57,7 @@ families:
             review_notes: [ "AI doubt: Проверить деталь про красный цветок в статусе «не в сети» или убрать её из пояснения." ]
 
       - id: icq-aska
+        subject: icq
         statement: "В рунете «аськой» называли мессенджер ICQ."
         sources: [ { name: "Википедия: ICQ", type: REFERENCE, verified: false } ]
         questions:
@@ -382,6 +385,7 @@ families:
     name: "Телефоны нулевых"
     facts:
       - id: nokia-snake
+        subject: nokia-3310
         statement: "На телефоне Nokia 3310 была предустановлена игра «Змейка» (Snake II)."
         sources: [ { name: "Википедия: Nokia 3310", type: REFERENCE, verified: false } ]
         questions:

@@ -83,6 +83,7 @@ families:
               at: 2026-10-09
 
       - id: matryoshka-japan
+        subject: matryoshka
         statement: "The first Russian matryoshka was made in the 1890s, carved by Vasily Zvyozdochkin and designed by Sergey Malyutin."
         sources: [ { name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: false } ]
         questions:
@@ -338,6 +339,7 @@ families:
               at: 2026-10-09
 
       - id: pavlov-dogs
+        subject: pavlov
         statement: "Ivan Pavlov is famous for experiments on conditioned reflexes in dogs."
         sources: [ { name: "Wikipedia: Ivan Pavlov", type: REFERENCE, verified: true } ]
         questions:
@@ -366,6 +368,7 @@ families:
               at: 2026-10-09
 
       - id: gagarin-manchester-1961
+        subject: gagarin
         statement: "During his July 1961 visit to the UK, Yuri Gagarin rode through heavy rain in Manchester in an open-top car, refusing an umbrella so the crowds could see him."
         sources: [ { name: "Wikipedia: Yuri Gagarin", type: REFERENCE, verified: true } ]
         questions:

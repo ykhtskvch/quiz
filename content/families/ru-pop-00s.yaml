@@ -6,6 +6,7 @@ families:
     name: "t.A.T.u."
     facts:
       - id: tatu-eurovision-2003-place
+        subject: tatu
         statement: "На «Евровидении-2003» t.A.T.u. с песней «Не верь, не бойся» заняли 3-е место (164 балла)."
         sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2003", type: REFERENCE, verified: false } ]
         questions:
@@ -30,6 +31,7 @@ families:
             generation_method: AI
 
       - id: tatu-members
+        subject: tatu
         statement: "Участницы t.A.T.u. — Юлия Волкова и Елена Катина; обе до этого пели в ансамбле «Непоседы»."
         sources: [ { name: "Википедия: t.A.T.u.", type: REFERENCE, verified: false } ]
         questions:
@@ -54,6 +56,7 @@ families:
             generation_method: AI
 
       - id: tatu-producer
+        subject: tatu
         statement: "Продюсер и автор концепции t.A.T.u. — Иван Шаповалов."
         sources: [ { name: "Википедия: Шаповалов, Иван Николаевич", type: REFERENCE, verified: false } ]
         questions:
@@ -83,6 +86,7 @@ families:
     name: "«Фабрика звёзд»"
     facts:
       - id: fabrika-zvezd-channel
+        subject: fabrika-zvezd
         statement: "«Фабрика звёзд» выходила на Первом канале; первый сезон — 2002 год."
         sources: [ { name: "Википедия: Фабрика звёзд (Россия)", type: REFERENCE, verified: false } ]
         questions:
@@ -107,6 +111,7 @@ families:
             generation_method: AI
 
       - id: fabrika-zvezd-1-winner
+        subject: fabrika-zvezd
         statement: "Победитель первой «Фабрики звёзд» (2002) — группа «Корни»."
         sources: [ { name: "Википедия: Фабрика звёзд 1", type: REFERENCE, verified: true } ]
         questions:
@@ -135,6 +140,7 @@ families:
               at: 2026-10-05
 
       - id: fabrika-zvezd-host
+        subject: fabrika-zvezd
         statement: "Ведущая первых сезонов «Фабрики звёзд» — Яна Чурикова."
         sources: [ { name: "Википедия: Чурикова, Яна Александровна", type: REFERENCE, verified: false } ]
         questions:
@@ -159,6 +165,7 @@ families:
             generation_method: AI
 
       - id: fabrika-zvezd-format
+        subject: fabrika-zvezd
         statement: "«Фабрика звёзд» — российская адаптация формата Star Academy."
         sources: [ { name: "Википедия: Star Academy", type: REFERENCE, verified: false } ]
         questions:
@@ -187,6 +194,7 @@ families:
     name: "Тимати"
     facts:
       - id: timati-banda
+        subject: fabrika-zvezd
         statement: "Тимати участвовал в «Фабрике звёзд-4» (2004) в составе группы «Банда»."
         sources: [ { name: "Википедия: Тимати", type: REFERENCE, verified: true } ]
         questions:
@@ -218,6 +226,7 @@ families:
     name: "«ВИА Гра»"
     facts:
       - id: via-gra-founder
+        subject: via-gra
         statement: "Группу «ВИА Гра» в 2000 году создали Константин Меладзе и Дмитрий Костюк; Меладзе — автор большинства песен."
         sources: [ { name: "Википедия: ВИА Гра", type: REFERENCE, verified: false } ]
         questions:
@@ -242,6 +251,7 @@ families:
             generation_method: AI
 
       - id: via-gra-first-singer
+        subject: via-gra
         statement: "Алёна Винницкая — участница «ВИА Гры» с момента основания (2000); Вера Брежнева и Анна Седокова пришли в 2002 году."
         sources: [ { name: "Википедия: ВИА Гра", type: REFERENCE, verified: false } ]
         questions:
@@ -266,6 +276,7 @@ families:
             generation_method: AI
 
       - id: via-gra-name
+        subject: via-gra
         statement: "Название «ВИА Гра» обыгрывает советскую аббревиатуру ВИА — вокально-инструментальный ансамбль."
         sources: [ { name: "Википедия: Вокально-инструментальный ансамбль", type: REFERENCE, verified: false } ]
         questions:
@@ -321,6 +332,7 @@ families:
     name: "Дима Билан"
     facts:
       - id: dima-bilan-eurovision-2008
+        subject: dima-bilan
         statement: "Дима Билан победил на «Евровидении-2008» в Белграде с песней Believe."
         sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2008", type: REFERENCE, verified: false } ]
         questions:
@@ -345,6 +357,7 @@ families:
             generation_method: AI
 
       - id: dima-bilan-real-name
+        subject: dima-bilan
         statement: "Настоящее имя Димы Билана — Виктор Белан."
         sources: [ { name: "Википедия: Дима Билан", type: REFERENCE, verified: true } ]
         questions:
@@ -376,6 +389,7 @@ families:
     name: "Uma2rman"
     facts:
       - id: uma2rman-founders
+        subject: uma2rman
         statement: "Группу Uma2rman основали братья Владимир и Сергей Кристовские из Нижнего Новгорода."
         sources: [ { name: "Википедия: Uma2rman", type: REFERENCE, verified: false } ]
         questions:
@@ -400,6 +414,7 @@ families:
             generation_method: AI
 
       - id: uma2rman-nochnoy-dozor
+        subject: uma2rman
         statement: "Uma2rman записали песню «Ночной дозор» для одноимённого фильма Тимура Бекмамбетова (2004)."
         sources: [ { name: "Википедия: Ночной дозор (фильм)", type: REFERENCE, verified: false } ]
         questions:
@@ -427,6 +442,7 @@ families:
     name: "«Звери»"
     facts:
       - id: zveri-rayony-kvartaly
+        subject: zveri
         statement: "Песню «Районы-кварталы» исполняет группа «Звери»."
         sources: [ { name: "Википедия: Звери (группа)", type: REFERENCE, verified: false } ]
         questions:
@@ -451,6 +467,7 @@ families:
             generation_method: AI
 
       - id: zveri-roma-real-name
+        subject: zveri
         statement: "Настоящее имя Ромы Зверя — Роман Билык; он родом из Таганрога."
         sources: [ { name: "Википедия: Рома Зверь", type: REFERENCE, verified: true } ]
         questions:
@@ -511,6 +528,7 @@ families:
     name: "Глюк'oZa"
     facts:
       - id: glukoza-animated-image
+        subject: glukoza
         statement: "В первых клипах проекта Глюк'oZa (2002–2003) вместо певицы был нарисованный мультипликационный персонаж."
         sources: [ { name: "Википедия: Глюк’oZa", type: REFERENCE, verified: false } ]
         questions:
@@ -538,6 +556,7 @@ families:
     name: "Россия на «Евровидении»"
     facts:
       - id: mumiy-troll-eurovision-2001
+        subject: mumiy-troll
         statement: "На «Евровидении-2001» Россию представлял «Мумий Тролль» с песней Lady Alpine Blue (12-е место)."
         sources: [ { name: "Википедия: Россия на конкурсе песни Евровидение 2001", type: REFERENCE, verified: false } ]
         questions:
@@ -589,6 +608,7 @@ families:
     name: "Полина Гагарина"
     facts:
       - id: polina-gagarina-fabrika-2
+        subject: fabrika-zvezd
         statement: "Полина Гагарина победила во второй «Фабрике звёзд» (2003), а в 2015 году заняла 2-е место на «Евровидении» с песней A Million Voices."
         sources: [ { name: "Википедия: Гагарина, Полина Сергеевна", type: REFERENCE, verified: false } ]
         questions:

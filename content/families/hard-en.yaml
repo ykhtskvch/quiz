@@ -6,6 +6,7 @@ families:
     name: "British culture — hard"
     facts:
       - id: tube-circle-yellow
+        subject: london-underground
         statement: "The Circle line is shown in yellow on the London Underground map."
         sources: [ { name: "Wikipedia: Circle line", type: REFERENCE, verified: true } ]
         questions:
@@ -61,6 +62,7 @@ families:
               at: 2026-10-05
 
       - id: bake-off-edd-kimber
+        subject: bake-off
         statement: "Edd Kimber won the first series of The Great British Bake Off in 2010."
         sources: [ { name: "Wikipedia: The Great British Bake Off (series 1)", type: REFERENCE, verified: true } ]
         questions:
@@ -119,6 +121,7 @@ families:
     name: "American pop culture — hard"
     facts:
       - id: chandler-muriel
+        subject: friends
         statement: "In Friends, Chandler Bing's middle name is Muriel."
         sources: [ { name: "Wikipedia: Chandler Bing", type: REFERENCE, verified: true } ]
         questions:
@@ -147,6 +150,7 @@ families:
               at: 2026-10-05
 
       - id: kramer-cosmo
+        subject: seinfeld
         statement: "In Seinfeld, Kramer's first name is Cosmo."
         sources: [ { name: "Wikipedia: Cosmo Kramer", type: REFERENCE, verified: true } ]
         questions:
@@ -175,6 +179,7 @@ families:
               at: 2026-10-05
 
       - id: homer-jay
+        subject: the-simpsons
         statement: "Homer Simpson's middle name is Jay."
         sources: [ { name: "Wikipedia: Homer Simpson", type: REFERENCE, verified: true } ]
         questions:

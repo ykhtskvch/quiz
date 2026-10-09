@@ -57,6 +57,7 @@ families:
             generation_method: AI
 
       - id: default-1998-month
+        subject: default-1998
         statement: "Дефолт 1998 года объявлен 17 августа."
         sources: [{ name: "Википедия: Экономический кризис в России (1998)", type: REFERENCE, verified: false }]
         questions:
@@ -187,6 +188,7 @@ families:
     name: "Гаджеты 90-х"
     facts:
       - id: tamagotchi-country
+        subject: tamagotchi
         statement: "Тамагочи придумали в Японии (Bandai, 1996)."
         sources: [{ name: "Википедия: Тамагочи", type: REFERENCE, verified: false }]
         questions:
@@ -363,6 +365,7 @@ families:
     name: "Первый «Макдоналдс»"
     facts:
       - id: mcdonalds-1990
+        subject: mcdonalds-moscow
         statement: "Первый в СССР «Макдоналдс» открылся 31 января 1990 года на Пушкинской площади в Москве."
         sources: [{ name: "Википедия: Макдоналдс в России", type: REFERENCE, verified: false }]
         questions:

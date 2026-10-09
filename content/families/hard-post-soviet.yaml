@@ -105,6 +105,7 @@ families:
     name: "Советский быт — сложные"
     facts:
       - id: vaz-2101-fiat-124
+        subject: vaz-2101
         statement: "Прототипом ВАЗ-2101 «Жигули» стал итальянский Fiat 124."
         sources: [{ name: "Википедия: ВАЗ-2101", type: REFERENCE, verified: false }]
         questions:
@@ -209,6 +210,7 @@ families:
     name: "Россия 90-х — сложные"
     facts:
       - id: big-mac-1990-price
+        subject: mcdonalds-moscow
         statement: "В январе 1990 года «Биг Мак» в первом московском «Макдоналдсе» стоил 3 рубля 75 копеек."
         sources: [{ name: "Википедия: Макдоналдс в России", type: REFERENCE, verified: false }]
         questions:
@@ -258,6 +260,7 @@ families:
             generation_method: AI
 
       - id: default-1998-rate
+        subject: default-1998
         statement: "После дефолта 17 августа 1998 года курс рубля упал примерно с 6 до 20 с лишним рублей за доллар к концу года."
         sources: [{ name: "Википедия: Дефолт в России (1998)", type: REFERENCE, verified: false }]
         questions:
@@ -285,6 +288,7 @@ families:
     name: "Русская литература — сложные"
     facts:
       - id: vronsky-frou-frou
+        subject: anna-karenina
         statement: "Кобылу Вронского в «Анне Карениной», сломавшую спину на скачках, звали Фру-Фру."
         sources: [{ name: "Л. Н. Толстой, «Анна Каренина»", type: REFERENCE, verified: false }]
         questions:
@@ -308,6 +312,7 @@ families:
             generation_method: AI
 
       - id: crime-opening-july
+        subject: crime-and-punishment
         statement: "«Преступление и наказание» начинается словами «В начале июля, в чрезвычайно жаркое время…»."
         sources: [{ name: "Ф. М. Достоевский, «Преступление и наказание»", type: REFERENCE, verified: false }]
         questions:
@@ -331,6 +336,7 @@ families:
             generation_method: AI
 
       - id: pushkin-kern
+        subject: pushkin
         statement: "Стихотворение «Я помню чудное мгновенье…» Пушкин посвятил Анне Керн."
         sources: [{ name: "Википедия: К *** (Я помню чудное мгновенье)", type: REFERENCE, verified: false }]
         questions:
@@ -380,6 +386,7 @@ families:
     name: "Советское кино — сложные"
     facts:
       - id: ironiya-apartment-12
+        subject: ironiya-sudby
         statement: "В «Иронии судьбы» Лукашин и Надя живут по одному адресу: 3-я улица Строителей, дом 25, квартира 12."
         sources: [{ name: "Э. Рязанов, «Ирония судьбы, или С лёгким паром!»", type: REFERENCE, verified: false }]
         questions:
@@ -404,6 +411,7 @@ families:
             generation_method: AI
 
       - id: ironiya-pugacheva-sings
+        subject: ironiya-sudby
         statement: "В «Иронии судьбы» песни за героиню Барбары Брыльской исполнила Алла Пугачёва, а говорит за неё Валентина Талызина."
         sources: [{ name: "Википедия: Ирония судьбы, или С лёгким паром!", type: REFERENCE, verified: false }]
         questions:
@@ -428,6 +436,7 @@ families:
             generation_method: AI
 
       - id: war-and-peace-oscar
+        subject: war-and-peace
         statement: "«Война и мир» Сергея Бондарчука стала первым советским фильмом, получившим «Оскар» за лучший фильм на иностранном языке (1969)."
         sources: [{ name: "Википедия: Война и мир (фильм, 1965)", type: REFERENCE, verified: false }]
         questions:
@@ -453,6 +462,7 @@ families:
             review_notes: [ "AI doubt: Документальный «Разгром немецких войск под Москвой» получил «Оскар» в 1943 году — вопрос именно про категорию иностранного фильма." ]
 
       - id: seventeen-moments-tariverdiev
+        subject: seventeen-moments
         statement: "Музыку к «Семнадцати мгновениям весны» написал Микаэл Таривердиев."
         sources: [{ name: "Википедия: Семнадцать мгновений весны", type: REFERENCE, verified: false }]
         questions:
@@ -480,6 +490,7 @@ families:
     name: "ТВ 90-х и 00-х — сложные"
     facts:
       - id: chgk-six-points
+        subject: chgk
         statement: "В «Что? Где? Когда?» игра идёт до шести очков: знатоки побеждают, набрав 6."
         sources: [{ name: "Википедия: Что? Где? Когда?", type: REFERENCE, verified: false }]
         questions:
@@ -504,6 +515,7 @@ families:
             generation_method: AI
 
       - id: tetya-valya-leontyeva
+        subject: spokoynoy-nochi
         statement: "«Тётей Валей» дети называли Валентину Леонтьеву, ведущую «Спокойной ночи, малыши!»."
         sources: [{ name: "Википедия: Леонтьева, Валентина Михайловна", type: REFERENCE, verified: false }]
         questions:
@@ -579,6 +591,7 @@ families:
     name: "Поп 90-х — сложные"
     facts:
       - id: ruki-vverh-debut
+        subject: ruki-vverh
         statement: "Дебютный альбом группы «Руки вверх!» — «Дышите равномерно» (1997)."
         sources: [{ name: "Википедия: Руки вверх!", type: REFERENCE, verified: false }]
         questions:
@@ -604,6 +617,7 @@ families:
             review_notes: [ "AI doubt: Проверить название и год дебютного альбома." ]
 
       - id: shura-real-name
+        subject: shura
         statement: "Настоящее имя певца Шуры — Александр Медведев."
         sources: [{ name: "Википедия: Шура (певец)", type: REFERENCE, verified: false }]
         questions:
@@ -704,6 +718,7 @@ families:
             generation_method: AI
 
       - id: glukoza-real-name
+        subject: glukoza
         statement: "Настоящее имя певицы Глюк'oZa — Наталья Ионова."
         sources: [{ name: "Википедия: Глюкоза (певица)", type: REFERENCE, verified: false }]
         questions:
@@ -757,6 +772,7 @@ families:
     name: "Старый интернет — сложные"
     facts:
       - id: livejournal-sup
+        subject: livejournal
         statement: "В 2007 году LiveJournal купила компания SUP Александра Мамута."
         sources: [{ name: "Википедия: LiveJournal", type: REFERENCE, verified: false }]
         questions:

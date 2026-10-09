@@ -6,6 +6,7 @@ families:
     name: "2000s pop-punk and emo"
     facts:
       - id: blink-whats-my-age-video
+        subject: blink-182
         statement: "In the video for \"What's My Age Again?\" (1999), Blink-182 run naked through Los Angeles."
         sources: [ { name: "Wikipedia: What's My Age Again?", type: REFERENCE, verified: true } ]
         questions:
@@ -55,6 +56,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: blink-small-things-boybands
+        subject: blink-182
         statement: "The video for Blink-182's \"All the Small Things\" (1999) parodies boy bands and pop stars of the time."
         sources: [ { name: "Wikipedia: All the Small Things", type: REFERENCE, verified: true } ]
         questions:
@@ -104,6 +106,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: american-idiot-green-day
+        subject: green-day
         statement: "\"American Idiot\" (2004) is by Green Day."
         sources: [ { name: "Wikipedia: American Idiot (song)", type: REFERENCE, verified: false } ]
         questions:
@@ -149,6 +152,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: september-ends-father
+        subject: green-day
         statement: "Billie Joe Armstrong wrote \"Wake Me Up When September Ends\" about his father, who died of cancer in September 1982."
         sources: [ { name: "Wikipedia: Wake Me Up When September Ends", type: REFERENCE, verified: true } ]
         questions:
@@ -247,6 +251,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: sk8er-boi-story
+        subject: avril-lavigne
         statement: "In Avril Lavigne's \"Sk8er Boi\", a girl rejects a skater boy who later becomes a rock star."
         sources: [ { name: "Wikipedia: Sk8er Boi", type: REFERENCE, verified: false } ]
         questions:
@@ -295,6 +300,7 @@ families:
               - "Сверка Claude 2026-10-05: исправлено пояснение — права на фильм с 2003 года."
 
       - id: complicated-fake
+        subject: avril-lavigne
         statement: "Avril Lavigne's \"Complicated\" (2002) complains about someone who acts fake around other people."
         sources: [ { name: "Wikipedia: Complicated (Avril Lavigne song)", type: REFERENCE, verified: true } ]
         questions:
@@ -344,6 +350,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: hybrid-theory
+        subject: linkin-park
         statement: "Linkin Park's debut album is Hybrid Theory (2000)."
         sources: [ { name: "Wikipedia: Hybrid Theory", type: REFERENCE, verified: true } ]
         questions:
@@ -393,6 +400,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: numb-expectations
+        subject: linkin-park
         statement: "Linkin Park's \"Numb\" (2003) is about the pressure of someone else's expectations and losing yourself."
         sources: [ { name: "Wikipedia: Numb (Linkin Park song)", type: REFERENCE, verified: false } ]
         questions:
@@ -631,6 +639,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: black-parade-father
+        subject: my-chemical-romance
         statement: "\"Welcome to the Black Parade\" (2006) opens with the narrator's father taking him as a boy to see a marching band."
         sources: [ { name: "Wikipedia: Welcome to the Black Parade", type: REFERENCE, verified: false } ]
         questions:
@@ -676,6 +685,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: im-not-okay-mcr
+        subject: my-chemical-romance
         statement: "\"I'm Not Okay (I Promise)\" (2004) is by My Chemical Romance."
         sources: [ { name: "Wikipedia: I'm Not Okay (I Promise)", type: REFERENCE, verified: false } ]
         questions:
@@ -811,6 +821,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: why-dont-you-get-a-job
+        subject: the-offspring
         statement: "The Offspring's \"Why Don't You Get a Job?\" (1998) is about partners who live off someone else."
         sources: [ { name: "Wikipedia: Why Don't You Get a Job?", type: REFERENCE, verified: true } ]
         questions:
@@ -860,6 +871,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: pretty-fly-white-guy
+        subject: the-offspring
         statement: "The Offspring's \"Pretty Fly (for a White Guy)\" (1998) mocks a suburban guy trying too hard to look street."
         sources: [ { name: "Wikipedia: Pretty Fly (for a White Guy)", type: REFERENCE, verified: false } ]
         questions:

@@ -6,6 +6,7 @@ families:
     name: "«Иванушки International»"
     facts:
       - id: ivanushki-producer
+        subject: ivanushki
         statement: "Продюсер группы «Иванушки International» — Игорь Матвиенко."
         sources: [{ name: "Википедия: Иванушки International", type: REFERENCE, verified: false }]
         questions:
@@ -30,6 +31,7 @@ families:
             generation_method: AI
 
       - id: ivanushki-tuchi
+        subject: ivanushki
         statement: "Песню «Тучи» исполнял(а) «Иванушки International»."
         sources: [{ name: "Википедия: Иванушки International", type: REFERENCE, verified: false }]
         questions:
@@ -57,6 +59,7 @@ families:
     name: "«Руки Вверх!»"
     facts:
       - id: ruki-vverh-kroshka
+        subject: ruki-vverh
         statement: "Песню «Крошка моя» исполнял(а) «Руки Вверх!»."
         sources: [{ name: "Википедия: Руки Вверх!", type: REFERENCE, verified: false }]
         questions:
@@ -167,6 +170,7 @@ families:
     name: "«Мумий Тролль»"
     facts:
       - id: mumiy-troll-city
+        subject: mumiy-troll
         statement: "Группа «Мумий Тролль» Ильи Лагутенко — из Владивостока."
         sources: [{ name: "Википедия: Мумий Тролль", type: REFERENCE, verified: false }]
         questions:
@@ -194,6 +198,7 @@ families:
     name: "Шура"
     facts:
       - id: shura-kholodnaya-luna
+        subject: shura
         statement: "Песню «Холодная луна» исполнял(а) Шура."
         sources: [{ name: "Википедия: Шура (певец)", type: REFERENCE, verified: false }]
         questions:

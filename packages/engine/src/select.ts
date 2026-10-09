@@ -8,6 +8,8 @@ import type { GroupProfile, PlayerProfile } from "./profile.ts";
 export type HistoryEntry = {
   questionId: string;
   familyId: string;
+  /** What the question is about (a band, a brand, a show); optional in rooms saved before 09.10. */
+  subject?: string | null;
   topic: string;
   /** Strongest non-GLOBAL context, if any. */
   context: string | null;
@@ -238,6 +240,13 @@ export function nextQuestion(input: SelectionInput): Selection | null {
 
   let candidates = eligible.map(score);
 
+  // One question per subject per game (owner, 09.10: two blink-182 questions in one round). Families
+  // are too broad for this (all of pop-punk is one), so facts name their subject. Only relaxed when
+  // nothing else is left.
+  const usedSubjects = new Set(state.history.map((h) => h.subject).filter(Boolean));
+  const fresh = candidates.filter((c) => !c.q.subject || !usedSubjects.has(c.q.subject));
+  if (fresh.length) candidates = fresh;
+
   // ---------- 4. mode: opening / wildcard / normal ----------
   let mode: SelectionDebug["mode"] = "normal";
   if (index < config.openingCount) {
@@ -288,6 +297,7 @@ export function nextQuestion(input: SelectionInput): Selection | null {
       {
         questionId: pick.q.id,
         familyId: pick.q.familyId,
+        subject: pick.q.subject ?? null,
         topic: primaryTopic(pick.q),
         context: pick.context,
         band: pick.band,

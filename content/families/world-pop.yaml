@@ -6,6 +6,7 @@ families:
     name: "Майкл Джексон"
     facts:
       - id: moonwalk
+        subject: michael-jackson
         statement: "Знаменитое «скользящее назад» движение Майкла Джексона называется «лунная походка»."
         sources: [ { name: "Википедия: Лунная походка", type: REFERENCE, verified: false } ]
         questions:
@@ -51,6 +52,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: thriller-best-selling
+        subject: michael-jackson
         statement: "Альбом Майкла Джексона «Thriller» (1982) — самый продаваемый альбом в истории."
         sources: [ { name: "Википедия: Thriller (альбом)", type: REFERENCE, verified: false } ]
         questions:
@@ -441,6 +443,7 @@ families:
     name: "Crazy Frog"
     facts:
       - id: crazy-frog-axel-f
+        subject: crazy-frog
         statement: "Хит Crazy Frog «Axel F» (2005) — кавер на тему из фильма «Полицейский из Беверли-Хиллз»."
         sources: [ { name: "Википедия: Axel F", type: REFERENCE, verified: true } ]
         questions:
@@ -570,6 +573,7 @@ families:
     name: "The Beatles"
     facts:
       - id: beatles-liverpool
+        subject: the-beatles
         statement: "The Beatles — из Ливерпуля."
         sources: [ { name: "Википедия: The Beatles", type: REFERENCE, verified: false } ]
         questions:

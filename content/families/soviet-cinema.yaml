@@ -6,6 +6,7 @@ families:
     name: "«Ирония судьбы, или С лёгким паром!»"
     facts:
       - id: ironiya-sudby-city
+        subject: ironiya-sudby
         statement: "В «Иронии судьбы» Женя Лукашин после бани улетает из Москвы в Ленинград."
         sources: [{ name: "Википедия: Ирония судьбы, или С лёгким паром!", type: REFERENCE, verified: false }]
         questions:
@@ -57,6 +58,7 @@ families:
             generation_method: AI
 
       - id: kavkazskaya-plennitsa-folklore
+        subject: shurik
         statement: "В «Кавказской пленнице» Шурик едет на Кавказ собирать фольклор — легенды, тосты, обычаи."
         sources: [{ name: "Википедия: Кавказская пленница, или Новые приключения Шурика", type: REFERENCE, verified: false }]
         questions:
@@ -81,6 +83,7 @@ families:
             generation_method: AI
 
       - id: shurik-actor
+        subject: shurik
         statement: "Роль Шурика в фильмах Гайдая сыграл Александр Демьяненко."
         sources: [{ name: "Википедия: Демьяненко, Александр Сергеевич", type: REFERENCE, verified: false }]
         questions:
@@ -240,6 +243,7 @@ families:
     name: "«Семнадцать мгновений весны»"
     facts:
       - id: shtirlits-actor
+        subject: seventeen-moments
         statement: "Штирлица в «Семнадцати мгновениях весны» сыграл Вячеслав Тихонов."
         sources: [{ name: "Википедия: Семнадцать мгновений весны", type: REFERENCE, verified: false }]
         questions:
@@ -402,6 +406,7 @@ families:
     name: "«Операция „Ы“ и другие приключения Шурика»"
     facts:
       - id: operatsiya-y-trus
+        subject: shurik
         statement: "В «Операции „Ы“» Трус, Балбес и Бывалый пытаются ограбить склад, который сторожит баба Нюра."
         sources: [{ name: "Википедия: Операция «Ы» и другие приключения Шурика", type: REFERENCE, verified: false }]
         questions:

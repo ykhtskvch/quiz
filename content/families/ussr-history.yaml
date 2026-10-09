@@ -201,6 +201,7 @@ families:
             generation_method: AI
 
       - id: khrushchev-corn
+        subject: khrushchev
         statement: "Хрущёв продвигал кукурузу как «царицу полей»."
         sources: [{ name: "Википедия: Кукурузная кампания", type: REFERENCE, verified: false }]
         questions:

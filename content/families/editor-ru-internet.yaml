@@ -6,6 +6,7 @@ families:
     name: "Рунет 2000-х"
     facts:
       - id: qip-client
+        subject: icq
         statement: "QIP (Quiet Internet Pager) — популярный в рунете альтернативный клиент ICQ."
         sources: [{ name: "Википедия: QIP", type: REFERENCE, verified: false }]
         questions:
@@ -30,6 +31,7 @@ families:
             generation_method: HYBRID
 
       - id: zhzh-livejournal
+        subject: livejournal
         statement: "«ЖЖ» — разговорное название LiveJournal («Живой журнал»)."
         sources: [{ name: "Википедия: LiveJournal", type: REFERENCE, verified: false }]
         questions:
@@ -54,6 +56,7 @@ families:
             generation_method: HYBRID
 
       - id: bolvanka-blank-disc
+        subject: burning-cds
         statement: "«Болванкой» в 2000-е называли чистый CD или DVD для записи."
         sources: [{ name: "Википедия: CD-R", type: REFERENCE, verified: false }]
         questions:
@@ -78,6 +81,7 @@ families:
             generation_method: HYBRID
 
       - id: livejournal-before-vk
+        subject: livejournal
         statement: "LiveJournal появился в 1999 году — раньше «ВКонтакте» (2006), Instagram (2010) и Telegram (2013)."
         sources: [{ name: "Википедия: LiveJournal", type: REFERENCE, verified: false }]
         questions:

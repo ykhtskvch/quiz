@@ -6,6 +6,7 @@ families:
     name: "What the British really mean"
     facts:
       - id: brit-with-greatest-respect
+        subject: anglo-eu-translation-guide
         statement: "In the famous Anglo-EU translation guide, \"With the greatest respect…\" really means \"You are an idiot.\""
         sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
         questions:
@@ -30,6 +31,7 @@ families:
             generation_method: AI
 
       - id: brit-bear-in-mind
+        subject: anglo-eu-translation-guide
         statement: "In the Anglo-EU translation guide, \"I'll bear it in mind\" really means \"I've forgotten it already.\""
         sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
         questions:
@@ -54,6 +56,7 @@ families:
             generation_method: AI
 
       - id: brit-quite-good
+        subject: anglo-eu-translation-guide
         statement: "In the Anglo-EU translation guide, \"Quite good\" really means \"A bit disappointing.\""
         sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
         questions:
@@ -78,6 +81,7 @@ families:
             generation_method: AI
 
       - id: brit-very-interesting
+        subject: anglo-eu-translation-guide
         statement: "In the Anglo-EU translation guide, \"Very interesting\" really means \"That is clearly nonsense.\""
         sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
         questions:
@@ -102,6 +106,7 @@ families:
             generation_method: AI
 
       - id: brit-correct-me
+        subject: anglo-eu-translation-guide
         statement: "In the Anglo-EU translation guide, \"Correct me if I'm wrong\" really means \"I know I'm right — please don't contradict me.\""
         sources: [{ name: "The Anglo-EU translation guide (widely shared table of British phrases), e.g. The Telegraph", type: REFERENCE, verified: false }]
         questions:

@@ -6,6 +6,7 @@ families:
     name: "«Ну, погоди!»"
     facts:
       - id: nu-pogodi-wolf-voice
+        subject: nu-pogodi
         statement: "Волка в «Ну, погоди!» озвучивал Анатолий Папанов."
         sources: [ { name: "Википедия: Ну, погоди!", type: REFERENCE, verified: false } ]
         questions:

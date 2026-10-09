@@ -6,6 +6,7 @@ families:
     name: "Russian words the world knows"
     facts:
       - id: sputnik-meaning
+        subject: sputnik
         statement: "\"Sputnik\" means \"companion\" or \"fellow traveller\" in Russian."
         sources: [ { name: "Wikipedia: Sputnik 1", type: REFERENCE, verified: false } ]
         questions:
@@ -32,6 +33,7 @@ families:
               - "Редакция 2026-10-05: снят из EN-версии — постсоветская культура остаётся в русской версии."
 
       - id: poyekhali
+        subject: gagarin
         statement: "Gagarin's famous word at launch, \"Poyekhali!\", means \"Let's go!\"."
         sources: [ { name: "Wikipedia: Vostok 1", type: REFERENCE, verified: false } ]
         questions:
@@ -84,6 +86,7 @@ families:
               - "Редакция 2026-10-05: снят из EN-версии — постсоветская культура остаётся в русской версии."
 
       - id: matryoshka
+        subject: matryoshka
         statement: "A matryoshka is a set of wooden nesting dolls."
         sources: [ { name: "Wikipedia: Matryoshka doll", type: REFERENCE, verified: true } ]
         questions:
@@ -143,6 +146,7 @@ families:
               at: 2026-10-05
 
       - id: tetris-korobeiniki
+        subject: tetris
         statement: "The famous Tetris (Game Boy) theme is the Russian folk song \"Korobeiniki\"."
         sources: [ { name: "Wikipedia: Korobeiniki", type: REFERENCE, verified: true } ]
         questions:
@@ -171,6 +175,7 @@ families:
               at: 2026-10-05
 
       - id: tatu-uk-number-one
+        subject: tatu
         statement: "t.A.T.u.'s \"All the Things She Said\" went to No. 1 in the UK in 2003."
         sources: [ { name: "Wikipedia: All the Things She Said", type: REFERENCE, verified: true } ]
         questions:

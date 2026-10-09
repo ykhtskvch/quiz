@@ -6,6 +6,7 @@ families:
     name: "Полёт Гагарина"
     facts:
       - id: gagarin-spacecraft
+        subject: gagarin
         statement: "Юрий Гагарин совершил первый полёт человека в космос 12 апреля 1961 года на корабле «Восток-1»."
         sources: [ { name: "Википедия: Восток-1", type: REFERENCE, verified: false } ]
         questions:
@@ -49,6 +50,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: gagarin-flight-duration
+        subject: gagarin
         statement: "Полёт Гагарина длился 108 минут — один виток вокруг Земли."
         sources: [ { name: "Википедия: Восток-1", type: REFERENCE, verified: false } ]
         questions:
@@ -279,6 +281,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: laika-sputnik-2
+        subject: sputnik
         statement: "Лайка полетела в космос на «Спутнике-2» в ноябре 1957 года."
         sources: [ { name: "Википедия: Лайка (собака-космонавт)", type: REFERENCE, verified: false } ]
         questions:
@@ -325,6 +328,7 @@ families:
     name: "Первый спутник"
     facts:
       - id: sputnik-1-year
+        subject: sputnik
         statement: "Первый искусственный спутник Земли запущен в СССР 4 октября 1957 года."
         sources: [ { name: "Википедия: Спутник-1", type: REFERENCE, verified: false } ]
         questions:
@@ -371,6 +375,7 @@ families:
     name: "Программа «Аполлон»"
     facts:
       - id: apollo-11-collins
+        subject: apollo
         statement: "Из экипажа «Аполлона-11» на Луну не высаживался Майкл Коллинз — он оставался на орбите в командном модуле."
         sources: [ { name: "Википедия: Аполлон-11", type: REFERENCE, verified: true } ]
         questions:
@@ -418,6 +423,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: moonwalkers-count
+        subject: apollo
         statement: "По Луне ходили 12 человек (миссии «Аполлон» 1969–1972). Всего к Луне летали 28 человек: 24 по «Аполлонам» и 4 — экипаж «Артемиды-2» (облёт Луны, апрель 2026)."
         sources: [ { name: "Википедия: Список людей, ходивших по Луне", type: REFERENCE, verified: true } ]
         questions:
@@ -468,6 +474,7 @@ families:
               - "Сверка Claude 2026-10-04: Artemis II flew around the Moon in April 2026 without landing; 12 still correct, explanation updated."
 
       - id: last-moon-landing-year
+        subject: apollo
         statement: "Последняя на сегодня высадка людей на Луну — «Аполлон-17», декабрь 1972 года."
         sources: [ { name: "Википедия: Аполлон-17", type: REFERENCE, verified: true } ]
         questions:

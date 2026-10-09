@@ -6,6 +6,7 @@ families:
     name: "London"
     facts:
       - id: mind-the-gap
+        subject: london-underground
         statement: "\"Mind the gap\" is the famous safety announcement on the London Underground."
         sources: [ { name: "Wikipedia: Mind the gap", type: REFERENCE, verified: false } ]
         questions:
@@ -250,6 +251,7 @@ families:
               at: 2026-10-05
 
       - id: bake-off-star-baker
+        subject: bake-off
         statement: "Each week on The Great British Bake Off the best contestant is named Star Baker."
         sources: [ { name: "Wikipedia: The Great British Bake Off", type: REFERENCE, verified: true } ]
         questions:

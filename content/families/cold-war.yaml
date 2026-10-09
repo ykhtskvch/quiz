@@ -6,6 +6,7 @@ families:
     name: "Разделённый Берлин"
     facts:
       - id: berlin-wall-fall
+        subject: divided-berlin
         statement: "Берлинская стена пала 9 ноября 1989 года."
         sources: [ { name: "Википедия: Берлинская стена", type: REFERENCE, verified: false } ]
         questions:
@@ -51,6 +52,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: berlin-wall-built
+        subject: divided-berlin
         statement: "Берлинскую стену возвели в августе 1961 года."
         sources: [ { name: "Википедия: Берлинская стена", type: REFERENCE, verified: false } ]
         questions:
@@ -96,6 +98,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: berlin-four-sectors
+        subject: divided-berlin
         statement: "После Второй мировой войны Берлин разделили на четыре оккупационных сектора: советский, американский, британский и французский."
         sources: [ { name: "Википедия: Западный Берлин", type: REFERENCE, verified: false } ]
         questions:
@@ -141,6 +144,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: checkpoint-charlie
+        subject: divided-berlin
         statement: "«Чекпойнт Чарли» — самый известный пропускной пункт между Западным и Восточным Берлином."
         sources: [ { name: "Википедия: Чекпойнт Чарли", type: REFERENCE, verified: false } ]
         questions:
@@ -189,6 +193,7 @@ families:
     name: "Карибский кризис"
     facts:
       - id: cuban-crisis-country
+        subject: cuban-missile-crisis
         statement: "Карибский кризис 1962 года начался из-за размещения советских ракет на Кубе."
         sources: [ { name: "Википедия: Карибский кризис", type: REFERENCE, verified: false } ]
         questions:
@@ -234,6 +239,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: hotline-1963
+        subject: cuban-missile-crisis
         statement: "После Карибского кризиса, в 1963 году, между Москвой и Вашингтоном установили прямую линию связи — «горячую линию»."
         sources: [ { name: "Википедия: Горячая линия Вашингтон — Москва", type: REFERENCE, verified: false } ]
         questions:
@@ -604,6 +610,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: khrushchev-shoe
+        subject: khrushchev
         statement: "Широко известна история о том, как Хрущёв в 1960 году стучал ботинком по столу на заседании Генассамблеи ООН."
         sources: [ { name: "Википедия: Кузькина мать", type: REFERENCE, verified: false } ]
         questions:
@@ -629,6 +636,7 @@ families:
             review_notes: [ "AI doubt: Проверить источник: эпизод известен, но детали спорны; источник статьи — уточнить (возможно, «Хрущёв, Никита Сергеевич»)." ]
 
       - id: prague-spring
+        subject: prague-spring
         statement: "Период реформ в Чехословакии 1968 года назван «Пражской весной»."
         sources: [ { name: "Википедия: Пражская весна", type: REFERENCE, verified: false } ]
         questions:

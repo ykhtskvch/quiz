@@ -57,6 +57,7 @@ families:
     name: "Советские автомобили"
     facts:
       - id: kopeyka-vaz-2101
+        subject: vaz-2101
         statement: "«Копейкой» называли ВАЗ-2101 — первую модель «Жигулей»."
         sources: [{ name: "Википедия: ВАЗ-2101", type: REFERENCE, verified: false }]
         questions:
@@ -208,6 +209,7 @@ families:
             generation_method: AI
 
       - id: khrushchevka
+        subject: khrushchev
         statement: "Типовые панельные пятиэтажки 1960-х в народе называют «хрущёвками»."
         sources: [{ name: "Википедия: Хрущёвка", type: REFERENCE, verified: false }]
         questions:
@@ -336,6 +338,7 @@ families:
     name: "Советское детство"
     facts:
       - id: elektronika-egg-game
+        subject: nu-pogodi
         statement: "В электронной игре «Ну, погоди!» (Электроника ИМ-02) Волк ловит корзиной яйца."
         sources: [{ name: "Википедия: Ну, погоди! (игра)", type: REFERENCE, verified: false }]
         questions:

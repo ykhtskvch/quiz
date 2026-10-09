@@ -6,6 +6,7 @@ families:
     name: "Гарри Поттер"
     facts:
       - id: hp-house
+        subject: harry-potter
         statement: "Гарри Поттер учится на факультете Гриффиндор."
         sources: [ { name: "Википедия: Гриффиндор", type: REFERENCE, verified: true } ]
         questions:
@@ -53,6 +54,7 @@ families:
               at: 2026-10-09
 
       - id: hp-platform
+        subject: harry-potter
         statement: "Поезд в Хогвартс отправляется с платформы 9¾ вокзала Кингс-Кросс."
         sources: [ { name: "Википедия: Хогвартс-экспресс", type: REFERENCE, verified: true } ]
         questions:

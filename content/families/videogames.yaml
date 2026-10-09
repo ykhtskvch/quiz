@@ -6,6 +6,7 @@ families:
     name: "Видеоигры"
     facts:
       - id: tetris-pajitnov
+        subject: tetris
         statement: "Тетрис придумал советский программист Алексей Пажитнов в 1984 году."
         sources: [{ name: "Википедия: Тетрис", type: REFERENCE, verified: false }]
         questions:
@@ -99,6 +100,7 @@ families:
               at: 2026-10-05
 
       - id: sims-simlish
+        subject: the-sims
         statement: "Персонажи The Sims говорят на выдуманном языке симлиш."
         sources: [{ name: "Википедия: Симлиш", type: REFERENCE, verified: true }]
         questions:

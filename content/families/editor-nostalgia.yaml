@@ -55,6 +55,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: nokia-3310-no-camera
+        subject: nokia-3310
         statement: "The standard Nokia 3310 (2000) had SMS, a calculator and Snake II, but no camera."
         sources: [ { name: "Wikipedia: Nokia 3310", type: REFERENCE, verified: true } ]
         questions:
@@ -104,6 +105,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: crazy-frog-ringtone
+        subject: crazy-frog
         statement: "Crazy Frog became famous mainly as a mobile ringtone (2004–2005)."
         sources: [ { name: "Wikipedia: Crazy Frog", type: REFERENCE, verified: false } ]
         questions:
@@ -200,6 +202,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: bluetooth-file-transfer
+        subject: bluetooth
         statement: "In the 2000s \"send it by Bluetooth\" meant transferring a file directly from one phone to another."
         sources: [ { name: "Wikipedia: Bluetooth", type: REFERENCE, verified: true } ]
         questions:
@@ -249,6 +252,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: memory-card-mp3
+        subject: mp3
         statement: "Before streaming and cheap mobile data, a memory-card slot for storing MP3s was a valued phone feature."
         sources: [ { name: "Wikipedia: microSD", type: REFERENCE, verified: true } ]
         questions:
@@ -325,6 +329,7 @@ families:
             generation_method: HYBRID
 
       - id: myspace-top-8
+        subject: myspace
         statement: "MySpace let users rank their Top 8 friends on their profile."
         sources: [ { name: "Wikipedia: Myspace", type: REFERENCE, verified: false } ]
         questions:
@@ -349,6 +354,7 @@ families:
             generation_method: HYBRID
 
       - id: myspace-autoplay
+        subject: myspace
         statement: "MySpace profiles could play music automatically when opened."
         sources: [ { name: "Wikipedia: Myspace", type: REFERENCE, verified: false } ]
         questions:
@@ -373,6 +379,7 @@ families:
             generation_method: HYBRID
 
       - id: icq-uin
+        subject: icq
         statement: "An ICQ number (UIN) was a numerical user ID."
         sources: [ { name: "Wikipedia: ICQ", type: REFERENCE, verified: true } ]
         questions:
@@ -447,6 +454,7 @@ families:
             generation_method: HYBRID
 
       - id: burn-a-cd
+        subject: burning-cds
         statement: "To \"burn a CD\" means to write music or data onto a recordable disc."
         sources: [ { name: "Wikipedia: Optical disc recording", type: REFERENCE, verified: false } ]
         questions:
@@ -541,6 +549,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: facebook-poke
+        subject: facebook
         statement: "Facebook's Poke had no specific purpose beyond getting someone's attention."
         sources: [ { name: "Wikipedia: Facebook features", type: REFERENCE, verified: false } ]
         questions:
@@ -565,6 +574,7 @@ families:
             generation_method: HYBRID
 
       - id: farmville
+        subject: facebook
         statement: "FarmVille (2009) had millions of Facebook users harvesting virtual crops."
         sources: [ { name: "Wikipedia: FarmVille", type: REFERENCE, verified: false } ]
         questions:
@@ -589,6 +599,7 @@ families:
             generation_method: HYBRID
 
       - id: nero-burning-rom
+        subject: burning-cds
         statement: "Nero Burning ROM was software for burning CDs and DVDs."
         sources: [ { name: "Wikipedia: Nero Burning ROM", type: REFERENCE, verified: false } ]
         questions:
@@ -634,6 +645,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: mp3-downloads
+        subject: mp3
         statement: "MP3 became almost synonymous with downloaded music in the 2000s."
         sources: [ { name: "Wikipedia: MP3", type: REFERENCE, verified: false } ]
         questions:
@@ -727,6 +739,7 @@ families:
     name: "2000s games and toys"
     facts:
       - id: sims-pool-ladder
+        subject: the-sims
         statement: "A famous Sims joke: remove the ladder from the pool and the Sims can't get out."
         sources: [ { name: "Wikipedia: The Sims", type: REFERENCE, verified: true } ]
         questions:
@@ -874,6 +887,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: tamagotchi-care
+        subject: tamagotchi
         statement: "A Tamagotchi had to be fed and cleaned up after, and could die if neglected."
         sources: [ { name: "Wikipedia: Tamagotchi", type: REFERENCE, verified: false } ]
         questions:

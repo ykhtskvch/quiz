@@ -33,6 +33,7 @@ families:
     name: "«Поле чудес»"
     facts:
       - id: pole-chudes-first-host
+        subject: pole-chudes
         statement: "Первым ведущим «Поля чудес» (1990) был Владислав Листьев; Леонид Якубович ведёт программу с 1991 года."
         sources: [{ name: "Википедия: Поле чудес", type: REFERENCE, verified: false }]
         questions:
@@ -57,6 +58,7 @@ families:
             generation_method: AI
 
       - id: pole-chudes-format
+        subject: pole-chudes
         statement: "«Поле чудес» создано по мотивам американского шоу Wheel of Fortune."
         sources: [{ name: "Википедия: Поле чудес", type: REFERENCE, verified: false }]
         questions:
@@ -111,6 +113,7 @@ families:
     name: "«Что? Где? Когда?»"
     facts:
       - id: chgk-owl
+        subject: chgk
         statement: "Главный приз «Что? Где? Когда?» — «Хрустальная сова»; сова — символ игры."
         sources: [{ name: "Википедия: Что? Где? Когда?", type: REFERENCE, verified: false }]
         questions:
@@ -221,6 +224,7 @@ families:
     name: "«Спокойной ночи, малыши!»"
     facts:
       - id: spokoynoy-nochi-filya
+        subject: spokoynoy-nochi
         statement: "Щенок из «Спокойной ночи, малыши!» — Филя; Хрюша — поросёнок, Степашка — зайчик, Каркуша — ворона."
         sources: [{ name: "Википедия: Спокойной ночи, малыши!", type: REFERENCE, verified: false }]
         questions:

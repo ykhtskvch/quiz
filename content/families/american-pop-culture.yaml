@@ -6,6 +6,7 @@ families:
     name: "American TV"
     facts:
       - id: friends-central-perk
+        subject: friends
         statement: "In Friends the gang hangs out at the Central Perk coffee house."
         sources: [{ name: "Wikipedia: Friends", type: REFERENCE, verified: true }]
         questions:
@@ -33,6 +34,7 @@ families:
               at: 2026-10-05
 
       - id: simpsons-springfield
+        subject: the-simpsons
         statement: "The Simpsons live in Springfield."
         sources: [{ name: "Wikipedia: Springfield (The Simpsons)", type: REFERENCE, verified: true }]
         questions:
@@ -60,6 +62,7 @@ families:
               at: 2026-10-05
 
       - id: seinfeld-nothing
+        subject: seinfeld
         statement: "Seinfeld was famously described as \"a show about nothing\"."
         sources: [{ name: "Wikipedia: Seinfeld", type: REFERENCE, verified: true }]
         questions:

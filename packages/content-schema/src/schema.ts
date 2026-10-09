@@ -110,6 +110,8 @@ export const QuestionSchema = z.object({
 export const FactSchema = z.object({
   id: slug,
   statement: z.string().min(1),
+  /** What the fact is about (a band, a brand, a show): the engine asks one question per subject per game. */
+  subject: slug.optional(),
   time_sensitive: z.boolean().default(false),
   sources: z.array(SourceSchema).default([]),
   questions: z.array(QuestionSchema).min(1),

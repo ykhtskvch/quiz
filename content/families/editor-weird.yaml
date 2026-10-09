@@ -185,6 +185,7 @@ families:
     name: "Weird but true: tech"
     facts:
       - id: facebook-before-youtube
+        subject: facebook
         statement: "Facebook (2004) launched before YouTube (2005), Twitter (2006) and Instagram (2010)."
         sources: [ { name: "Wikipedia: Facebook", type: REFERENCE, verified: false } ]
         questions:
@@ -359,6 +360,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: bluetooth-harald
+        subject: bluetooth
         statement: "Bluetooth is named after the 10th-century Danish king Harald \"Bluetooth\" Gormsson."
         sources: [ { name: "Wikipedia: Bluetooth", type: REFERENCE, verified: false } ]
         questions:
@@ -755,6 +757,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: coca-cola-pharmacy
+        subject: coca-cola
         statement: "Coca-Cola was created in 1886 by pharmacist John Pemberton and first sold at a pharmacy soda fountain."
         sources: [ { name: "Wikipedia: Coca-Cola", type: REFERENCE, verified: false } ]
         questions:
@@ -841,6 +844,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: mamma-mia-not-pasta
+        subject: pasta-shapes
         statement: "Orecchiette, strozzapreti and radiatori are real pasta shapes."
         sources: [ { name: "Wikipedia: List of pasta", type: REFERENCE, verified: false } ]
         questions:
@@ -884,6 +888,7 @@ families:
               - "AI doubt: перевод — проверить естественность русского и что варианты остались однозначными."
 
       - id: strozzapreti-meaning
+        subject: pasta-shapes
         statement: "The pasta name strozzapreti means \"priest stranglers\"."
         sources: [ { name: "Wikipedia: Strozzapreti", type: REFERENCE, verified: true } ]
         questions:
@@ -1342,6 +1347,7 @@ families:
               - "Сверка Claude 2026-10-05: подтверждено (en.wikipedia: IKEA) — Sladda 2016–2018, Uppleva с 2012."
 
       - id: luke-i-am-your-father
+        subject: vader-father
         statement: "In The Empire Strikes Back, Darth Vader says \"No, I am your father\", not \"Luke, I am your father\"."
         sources: [ { name: "Wikipedia: I am your father", type: REFERENCE, verified: false } ]
         questions:

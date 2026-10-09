@@ -198,6 +198,7 @@ families:
               at: 2026-10-09
 
       - id: les-mis-west-end
+        subject: les-miserables
         statement: "Les Misérables opened in London in 1985 and is the longest-running musical in the West End."
         sources: [ { name: "Wikipedia: Les Misérables (musical)", type: REFERENCE, verified: true } ]
         questions:
@@ -309,6 +310,7 @@ families:
     name: "Psychology & philosophy"
     facts:
       - id: jung-introvert
+        subject: jung
         statement: "Carl Jung popularised the terms introvert and extravert in Psychological Types (1921)."
         sources: [ { name: "Wikipedia: Extraversion and introversion", type: REFERENCE, verified: true } ]
         questions:
@@ -336,6 +338,7 @@ families:
               at: 2026-10-09
 
       - id: jung-shadow
+        subject: jung
         statement: "In Jungian psychology, the Shadow is the unconscious side of the personality that the ego doesn't recognise in itself."
         sources: [ { name: "Wikipedia: Shadow (psychology)", type: REFERENCE, verified: true } ]
         questions:
@@ -363,6 +366,7 @@ families:
               at: 2026-10-09
 
       - id: pavlov-nobel-digestion
+        subject: pavlov
         statement: "Ivan Pavlov received the 1904 Nobel Prize in Physiology or Medicine for his work on the physiology of digestion."
         sources: [ { name: "NobelPrize.org: Ivan Pavlov", type: REFERENCE, verified: true } ]
         questions:
@@ -475,6 +479,7 @@ families:
     name: "Brands"
     facts:
       - id: pepsi-brads-drink
+        subject: pepsi
         statement: "Pepsi was created in 1893 by Caleb Bradham as 'Brad's Drink' and renamed Pepsi-Cola in 1898."
         sources: [ { name: "PepsiCo: Pepsi history", type: REFERENCE, verified: true } ]
         questions:
@@ -502,6 +507,7 @@ families:
               at: 2026-10-09
 
       - id: pepsi-soviet-fleet
+        subject: pepsi
         statement: "In 1989 the USSR agreed to pay PepsiCo for syrup with 17 old submarines, a cruiser, a frigate and a destroyer, which were sold for scrap."
         sources: [ { name: "The New York Times, 1989: 'Pepsi Will Be Bartered for Ships and Vodka in Deal With Soviets'", type: REFERENCE, verified: true } ]
         questions:
@@ -530,6 +536,7 @@ families:
               at: 2026-10-09
 
       - id: pepsi-challenge
+        subject: pepsi
         statement: "The Pepsi Challenge (from 1975) was a blind taste test of Pepsi against Coca-Cola."
         sources: [ { name: "Wikipedia: Pepsi Challenge", type: REFERENCE, verified: true } ]
         questions:
@@ -557,6 +564,7 @@ families:
               at: 2026-10-09
 
       - id: new-coke-79-days
+        subject: coca-cola
         statement: "New Coke launched on 23 April 1985; after a backlash, the original returned as Coca-Cola Classic 79 days later."
         sources: [ { name: "The Coca-Cola Company: The story of New Coke", type: REFERENCE, verified: true } ]
         questions:
@@ -696,6 +704,7 @@ families:
               at: 2026-10-09
 
       - id: svetov-nottingham
+        subject: svetov
         statement: "Mikhail Svetov, the Russian libertarian politician and author of the YouTube channel SVTV, graduated in political science from the University of Nottingham in 2009."
         sources: [ { name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: true } ]
         questions:
@@ -724,6 +733,7 @@ families:
               at: 2026-10-09
 
       - id: telegram-rally-planes
+        subject: svetov
         statement: "On 30 April 2018 thousands rallied on Sakharov Avenue in Moscow against the blocking of Telegram; the rally was organised by the Libertarian Party, and protesters threw paper planes, the Telegram logo."
         sources: [ { name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: true } ]
         questions:
@@ -751,6 +761,7 @@ families:
               at: 2026-10-09
 
       - id: svetov-svtv
+        subject: svetov
         statement: "Mikhail Svetov's YouTube channel is called SVTV."
         sources: [ { name: "Рувики: Светов, Михаил Владимирович", type: REFERENCE, url: "https://ru.ruwiki.ru/wiki/Светов,_Михаил_Владимирович", verified: true } ]
         questions:

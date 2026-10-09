@@ -6,6 +6,7 @@ families:
     name: "«Титаник»"
     facts:
       - id: titanic-jack
+        subject: titanic
         statement: "Героя Леонардо Ди Каприо в «Титанике» зовут Джек Доусон."
         sources: [ { name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false } ]
         questions:
@@ -51,6 +52,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: titanic-oscars
+        subject: titanic
         statement: "«Титаник» получил 11 «Оскаров» из 14 номинаций."
         sources: [ { name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: true } ]
         questions:
@@ -199,6 +201,7 @@ families:
     name: "«Звёздные войны»"
     facts:
       - id: i-am-your-father
+        subject: vader-father
         statement: "«Я твой отец» Дарт Вейдер говорит Люку Скайуокеру в «Империи наносит ответный удар»."
         sources: [ { name: "Википедия: Звёздные войны. Эпизод V: Империя наносит ответный удар", type: REFERENCE, verified: false } ]
         questions:
@@ -343,6 +346,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: jaws-spielberg
+        subject: jaws
         statement: "«Челюсти» (1975) снял Стивен Спилберг."
         sources: [ { name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false } ]
         questions:

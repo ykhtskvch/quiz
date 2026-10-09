@@ -6,6 +6,7 @@ families:
     name: "Холодная война — сложные"
     facts:
       - id: berlin-airlift
+        subject: divided-berlin
         statement: "В 1948–1949 годах во время блокады Западного Берлина западные союзники снабжали город по воздуху — «Берлинский воздушный мост»."
         sources: [ { name: "Википедия: Берлинский воздушный мост", type: REFERENCE, verified: false } ]
         questions:
@@ -141,6 +142,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: prague-spring-dubcek
+        subject: prague-spring
         statement: "Лидером Чехословакии во время «Пражской весны» 1968 года был Александр Дубчек."
         sources: [ { name: "Википедия: Пражская весна", type: REFERENCE, verified: false } ]
         questions:
@@ -232,6 +234,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: apollo-11-eagle
+        subject: apollo
         statement: "Лунный модуль «Аполлона-11» назывался «Игл» (Eagle), командный модуль — «Колумбия»."
         sources: [ { name: "Википедия: Аполлон-11", type: REFERENCE, verified: false } ]
         questions:
@@ -679,6 +682,7 @@ families:
               at: 2026-10-06
 
       - id: jaws-bruce
+        subject: jaws
         statement: "Механическую акулу на съёмках «Челюстей» прозвали Брюсом — в честь адвоката Спилберга."
         sources: [ { name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false } ]
         questions:
@@ -727,6 +731,7 @@ families:
     name: "Мультфильмы — сложные"
     facts:
       - id: simpsons-groening
+        subject: the-simpsons
         statement: "Создатель «Симпсонов» — Мэтт Грейнинг."
         sources: [ { name: "Википедия: Грейнинг, Мэтт", type: REFERENCE, verified: false } ]
         questions:
@@ -867,6 +872,7 @@ families:
     name: "Мировой поп — сложные"
     facts:
       - id: beatles-quarrymen
+        subject: the-beatles
         statement: "Группа Джона Леннона, в которой он познакомился с Полом Маккартни, называлась The Quarrymen."
         sources: [ { name: "Википедия: The Quarrymen", type: REFERENCE, verified: false } ]
         questions:

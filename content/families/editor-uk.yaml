@@ -602,6 +602,7 @@ families:
     name: "UK charts oddities"
     facts:
       - id: mr-blobby-christmas
+        subject: uk-christmas-number-one
         statement: "Mr Blobby was the UK Christmas Number One in 1993, ahead of Take That."
         sources: [{ name: "Official Charts: Mr Blobby", type: REFERENCE, url: "https://www.officialcharts.com/songs/mr-blobby-mr-blobby/", verified: true }]
         questions:
@@ -630,6 +631,7 @@ families:
               at: 2026-10-05
 
       - id: bob-builder-christmas
+        subject: uk-christmas-number-one
         statement: "\"Can We Fix It?\" by Bob the Builder was the UK Christmas Number One in 2000, ahead of Westlife."
         sources: [{ name: "Official Charts: every Christmas Number 1", type: REFERENCE, url: "https://www.officialcharts.com/chart-news/every-official-christmas-number-1-ever-__3618/", verified: true }]
         questions:
@@ -658,6 +660,7 @@ families:
               at: 2026-10-05
 
       - id: ladbaby-five-christmas
+        subject: uk-christmas-number-one
         statement: "LadBaby had five consecutive UK Christmas Number Ones, 2018–2022, most of them about sausage rolls."
         time_sensitive: true
         sources: [{ name: "Official Charts: LadBaby", type: REFERENCE, url: "https://www.officialcharts.com/artist/54840/ladbaby/", verified: true }]
@@ -687,6 +690,7 @@ families:
               at: 2026-10-05
 
       - id: pj-and-duncan
+        subject: ant-and-dec
         statement: "Ant & Dec first performed as a pop duo under the names PJ & Duncan, their characters in Byker Grove."
         sources: [{ name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: true }]
         questions:
@@ -715,6 +719,7 @@ families:
               at: 2026-10-05
 
       - id: rhumble-number-one-2013
+        subject: ant-and-dec
         statement: "\"Let's Get Ready to Rhumble\" (1994) reached UK Number One in 2013, after Ant & Dec performed it on Saturday Night Takeaway."
         sources: [{ name: "Official Charts: PJ and Duncan", type: REFERENCE, url: "https://www.officialcharts.com/artist/29628/pj-and-duncan/", verified: true }]
         questions:
@@ -743,6 +748,7 @@ families:
               at: 2026-10-05
 
       - id: susan-boyle-dreamed
+        subject: les-miserables
         statement: "Susan Boyle sang \"I Dreamed a Dream\" from Les Misérables at her 2009 Britain's Got Talent audition."
         sources: [{ name: "ITVX: Susan Boyle's first audition", type: REFERENCE, url: "https://www.itv.com/britainsgottalent/articles/10-years-of-bgt-susan-boyle-first-audition", verified: true }]
         questions:
@@ -774,6 +780,7 @@ families:
     name: "London transport"
     facts:
       - id: mind-the-gap-1968
+        subject: london-underground
         statement: "\"Mind the gap\" was introduced on the London Underground in 1968."
         sources: [{ name: "Made by TfL: our brand assets", type: REFERENCE, url: "https://madeby.tfl.gov.uk/2024/06/07/our-brand-assets/", verified: true }]
         questions:

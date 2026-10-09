@@ -47,6 +47,7 @@ const bank = files.flatMap((f) =>
           id: q.id,
           factId: fact.id,
           familyId: family.family,
+          ...(fact.subject ? { subject: fact.subject } : {}),
           language: q.language,
           originLanguage: q.origin_language,
           cultureSpecificity: q.culture_specificity,

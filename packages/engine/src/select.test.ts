@@ -120,6 +120,23 @@ describe("eligibility", () => {
     expect(run(fourExperts(), 5, { config: { allowDrafts: false } }).picks).toHaveLength(0);
   });
 
+  it("asks one question per subject in a game while there is anything else to ask", () => {
+    // Space questions share a handful of subjects (like two blink-182 facts in the pop-punk family).
+    const bank = makeBank().map((q) => (q.topics.space ? { ...q, subject: `space-subject-${Number(q.id.split("-")[1]) % 3}` } : q));
+    for (const seed of [1, 2, 3]) {
+      const { picks } = run(room({ a: onb({ space: "EXPERT" }), b: onb({ space: "EXPERT" }) }), 20, { seed, bank });
+      const subjects = picks.map((p) => p.q.subject).filter(Boolean);
+      expect(new Set(subjects).size).toBe(subjects.length);
+    }
+  });
+
+  it("relaxes the subject rule rather than stop the game", () => {
+    const bank = makeBank()
+      .filter((q) => q.topics.space)
+      .map((q) => ({ ...q, subject: "only-one" }));
+    expect(run(fourExperts(), 5, { bank }).picks).toHaveLength(5);
+  });
+
   it("returns null when the bank is exhausted", () => {
     const bank = makeBank().slice(0, 3);
     expect(run(fourExperts(), 10, { bank }).picks).toHaveLength(3);

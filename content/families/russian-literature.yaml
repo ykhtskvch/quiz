@@ -6,6 +6,7 @@ families:
     name: "Пушкин"
     facts:
       - id: onegin-genre
+        subject: eugene-onegin
         statement: "«Евгений Онегин» — роман в стихах."
         sources: [{ name: "Википедия: Евгений Онегин", type: REFERENCE, verified: false }]
         questions:
@@ -29,6 +30,7 @@ families:
             generation_method: AI
 
       - id: onegin-duel
+        subject: eugene-onegin
         statement: "Онегин убивает на дуэли Ленского."
         sources: [{ name: "Википедия: Евгений Онегин", type: REFERENCE, verified: false }]
         questions:
@@ -52,6 +54,7 @@ families:
             generation_method: AI
 
       - id: pushkin-dantes
+        subject: pushkin
         statement: "Пушкина смертельно ранил на дуэли в 1837 году Жорж Дантес."
         sources: [{ name: "Википедия: Дуэль Пушкина и Дантеса", type: REFERENCE, verified: false }]
         questions:
@@ -75,6 +78,7 @@ families:
             generation_method: AI
 
       - id: arina-rodionovna
+        subject: pushkin
         statement: "Няню Пушкина звали Арина Родионовна."
         sources: [{ name: "Википедия: Арина Родионовна", type: REFERENCE, verified: false }]
         questions:
@@ -176,6 +180,7 @@ families:
     name: "Толстой"
     facts:
       - id: natasha-pierre
+        subject: war-and-peace
         statement: "В эпилоге «Войны и мира» Наташа Ростова — жена Пьера Безухова."
         sources: [{ name: "Википедия: Война и мир", type: REFERENCE, verified: false }]
         questions:
@@ -199,6 +204,7 @@ families:
             generation_method: AI
 
       - id: anna-karenina-first-line
+        subject: anna-karenina
         statement: "Роман «Анна Каренина» начинается фразой «Все счастливые семьи похожи друг на друга, каждая несчастливая семья несчастлива по-своему»."
         sources: [{ name: "Википедия: Анна Каренина", type: REFERENCE, verified: false }]
         questions:
@@ -225,6 +231,7 @@ families:
     name: "Достоевский"
     facts:
       - id: raskolnikov-name
+        subject: crime-and-punishment
         statement: "Главного героя «Преступления и наказания» зовут Родион Раскольников."
         sources: [{ name: "Википедия: Преступление и наказание", type: REFERENCE, verified: false }]
         questions:

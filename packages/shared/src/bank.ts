@@ -11,6 +11,8 @@ export type BankQuestion = {
   id: string;
   factId: string;
   familyId: string;
+  /** What the fact is about (e.g. "blink-182"): at most one question per subject in a game. */
+  subject?: string;
   language: "ru" | "en";
   originLanguage: "ru" | "en";
   cultureSpecificity: "GLOBAL" | "REGIONAL" | "LOCAL";

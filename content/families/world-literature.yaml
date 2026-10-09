@@ -92,6 +92,7 @@ families:
               - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
 
       - id: baker-street-221b
+        subject: sherlock-holmes
         statement: "Шерлок Холмс жил на Бейкер-стрит, 221Б."
         sources: [ { name: "Википедия: Бейкер-стрит, 221Б", type: REFERENCE, verified: false } ]
         questions:
