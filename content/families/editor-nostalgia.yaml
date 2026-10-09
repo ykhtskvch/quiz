@@ -148,7 +148,7 @@ families:
 
       - id: ringtone-paid
         statement: "In the 2000s people paid to download ringtones to their phones."
-        sources: [ { name: "Wikipedia: Ringtone", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Ringtone", type: REFERENCE, verified: true } ]
         questions:
           - id: ringtone-paid-en-1
             language: en
@@ -167,8 +167,12 @@ families:
             difficulty: 1
             dignity: 1
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: ringtone-paid-ru-1
             language: ru
             origin_language: en
@@ -246,10 +250,10 @@ families:
             culture_specificity: GLOBAL
             text: "Before Spotify and cheap mobile data, which phone feature was especially prized?"
             options:
-              - { key: A, text: "5G", distractor: CONTEXTUAL_CONFUSION }
-              - { key: B, text: "Face ID", distractor: CONTEXTUAL_CONFUSION }
-              - { key: C, text: "A memory-card slot for MP3s", correct: true }
-              - { key: D, text: "An eSIM", distractor: CONTEXTUAL_CONFUSION }
+              - { key: A, text: "A 5G connection", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Face ID unlock", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "A memory-card slot", correct: true }
+              - { key: D, text: "An eSIM slot", distractor: CONTEXTUAL_CONFUSION }
             explanation: "More megabytes meant more songs on the bus."
             topics: { old-internet: 1.0 }
             contexts: { GLOBAL: 1.0, INTERNET_GLOBAL: 0.8 }
@@ -945,7 +949,7 @@ families:
     facts:
       - id: rickroll
         statement: "Rickrolling means tricking someone into opening Rick Astley's \"Never Gonna Give You Up\"."
-        sources: [ { name: "Wikipedia: Rickrolling", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Rickrolling", type: REFERENCE, verified: true } ]
         questions:
           - id: rickroll-en-1
             language: en
@@ -964,8 +968,12 @@ families:
             difficulty: 1
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: rickroll-ru-1
             language: ru
             origin_language: en

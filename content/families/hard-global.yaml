@@ -913,7 +913,7 @@ families:
 
       - id: nirvana-aberdeen
         statement: "Группа Nirvana образовалась в 1987 году в городе Абердин, штат Вашингтон."
-        sources: [ { name: "Википедия: Nirvana", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Википедия: Nirvana", type: REFERENCE, verified: true } ]
         questions:
           - id: nirvana-aberdeen-ru-1
             language: ru
@@ -941,7 +941,7 @@ families:
             text: In which town was Nirvana formed?
             options:
               - { key: A, text: Seattle, distractor: COMMON_MISCONCEPTION }
-              - { key: B, text: "Aberdeen, Washington", correct: true }
+              - { key: B, text: "Aberdeen", correct: true }
               - { key: C, text: Portland, distractor: SAME_CATEGORY }
               - { key: D, text: Olympia, distractor: NEAR_MISS }
             explanation: Aberdeen is a small town in Washington state. The band later moved to Olympia, and Seattle made them famous.
@@ -951,10 +951,11 @@ families:
             difficulty: 5
             dignity: 2
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: sting-sumner
         statement: "Настоящее имя Стинга — Гордон Самнер."

@@ -7,7 +7,7 @@ families:
     facts:
       - id: blink-whats-my-age-video
         statement: "In the video for \"What's My Age Again?\" (1999), Blink-182 run naked through Los Angeles."
-        sources: [ { name: "Wikipedia: What's My Age Again?", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: What's My Age Again?", type: REFERENCE, verified: true } ]
         questions:
           - id: blink-whats-my-age-video-en-1
             language: en
@@ -26,8 +26,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 4
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: blink-whats-my-age-video-ru-1
             language: ru
             origin_language: en
@@ -52,7 +56,7 @@ families:
 
       - id: blink-small-things-boybands
         statement: "The video for Blink-182's \"All the Small Things\" (1999) parodies boy bands and pop stars of the time."
-        sources: [ { name: "Wikipedia: All the Small Things", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: All the Small Things", type: REFERENCE, verified: true } ]
         questions:
           - id: blink-small-things-boybands-en-1
             language: en
@@ -71,8 +75,12 @@ families:
             difficulty: 3
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, SHARED_KNOWLEDGE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: HYBRID
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
           - id: blink-small-things-boybands-ru-1
             language: ru
             origin_language: en
@@ -244,10 +252,10 @@ families:
             culture_specificity: GLOBAL
             text: "In Avril Lavigne's \"Sk8er Boi\", what happens to the boy?"
             options:
-              - { key: A, text: "They start dating straight away", distractor: PLAUSIBLE }
-              - { key: B, text: "He gives up skating", distractor: PLAUSIBLE }
-              - { key: C, text: "She turns him down, and he later becomes a star", correct: true }
-              - { key: D, text: "He moves abroad", distractor: PLAUSIBLE }
+              - { key: A, text: "They start dating and stay together", distractor: PLAUSIBLE }
+              - { key: B, text: "He gives up skating to win her over", distractor: PLAUSIBLE }
+              - { key: C, text: "She turns him down and he becomes a star", correct: true }
+              - { key: D, text: "He moves abroad and they lose touch", distractor: PLAUSIBLE }
             explanation: "Paramount bought the film rights back in 2003; in 2022 Avril said she was developing the film herself."
             topics: { world-pop: 1.0 }
             contexts: { GLOBAL: 1.0 }
@@ -382,10 +390,10 @@ families:
             culture_specificity: GLOBAL
             text: "What is Linkin Park's \"Numb\" mainly about?"
             options:
-              - { key: A, text: "Being bored at work", distractor: PLAUSIBLE }
-              - { key: B, text: "Others' expectations and losing yourself", correct: true }
-              - { key: C, text: "A breakup", distractor: COMMON_MISCONCEPTION }
-              - { key: D, text: "Physical exhaustion", distractor: PLAUSIBLE }
+              - { key: A, text: "Being stuck in a dead-end job", distractor: PLAUSIBLE }
+              - { key: B, text: "Living up to others' expectations", correct: true }
+              - { key: C, text: "A painful breakup", distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "Being physically exhausted", distractor: PLAUSIBLE }
             explanation: "Later a huge mash-up hit with Jay-Z: \"Numb/Encore\"."
             topics: { world-pop: 1.0 }
             contexts: { GLOBAL: 1.0 }
@@ -835,9 +843,9 @@ families:
             culture_specificity: GLOBAL
             text: "Who is being mocked in The Offspring's \"Pretty Fly (for a White Guy)\"?"
             options:
-              - { key: A, text: "A rock star", distractor: PLAUSIBLE }
-              - { key: B, text: "A guy trying far too hard to look street", correct: true }
-              - { key: C, text: "A teacher", distractor: PLAUSIBLE }
+              - { key: A, text: "A washed-up rock star", distractor: PLAUSIBLE }
+              - { key: B, text: "A suburban wannabe", correct: true }
+              - { key: C, text: "A strict teacher", distractor: PLAUSIBLE }
               - { key: D, text: "A wealthy musician", distractor: PLAUSIBLE }
             explanation: "A 1998 hit that went to No. 1 in the UK."
             topics: { world-pop: 1.0 }

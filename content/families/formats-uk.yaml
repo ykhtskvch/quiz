@@ -111,10 +111,10 @@ families:
             culture_specificity: LOCAL
             text: "What does a Brit usually mean by \"Correct me if I'm wrong…\"?"
             options:
-              - { key: A, text: "I'm not sure, please help", distractor: COMMON_MISCONCEPTION }
-              - { key: B, text: "I know I'm right — don't contradict me", correct: true }
-              - { key: C, text: "Let's vote on it", distractor: PLAUSIBLE }
-              - { key: D, text: "I've made a mistake", distractor: PLAUSIBLE }
+              - { key: A, text: "I'm not sure, so please help me", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "I know I'm right, so don't argue", correct: true }
+              - { key: C, text: "Let's put it to a vote", distractor: PLAUSIBLE }
+              - { key: D, text: "I think I've made a mistake", distractor: PLAUSIBLE }
             explanation: "It's an invitation nobody is supposed to accept."
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }

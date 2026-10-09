@@ -171,7 +171,7 @@ families:
             text: "The Cyrillic alphabet is named after…"
             options:
               - { key: A, text: "A Russian tsar", distractor: COMMON_MISCONCEPTION }
-              - { key: B, text: "A Byzantine missionary, Saint Cyril", correct: true }
+              - { key: B, text: "A Byzantine missionary", correct: true }
               - { key: C, text: "A Bulgarian city", distractor: PLAUSIBLE }
               - { key: D, text: "The first printing press", distractor: PLAUSIBLE }
             explanation: "Cyril and his brother Methodius brought writing to the Slavs; the alphabet itself was developed by their followers."
@@ -295,7 +295,7 @@ families:
     facts:
       - id: mendeleev-periodic
         statement: "The periodic table was created by the Russian chemist Dmitri Mendeleev in 1869."
-        sources: [ { name: "Wikipedia: Dmitri Mendeleev", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Dmitri Mendeleev", type: REFERENCE, verified: true } ]
         questions:
           - id: mendeleev-periodic-en-1
             language: en
@@ -314,12 +314,16 @@ families:
             difficulty: 2
             dignity: 5
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: pavlov-dogs
         statement: "Ivan Pavlov is famous for experiments on conditioned reflexes in dogs."
-        sources: [ { name: "Wikipedia: Ivan Pavlov", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: Ivan Pavlov", type: REFERENCE, verified: true } ]
         questions:
           - id: pavlov-dogs-en-1
             language: en
@@ -338,8 +342,12 @@ families:
             difficulty: 1
             dignity: 4
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: gagarin-manchester-1961
         statement: "During his July 1961 visit to the UK, Yuri Gagarin rode through heavy rain in Manchester in an open-top car, refusing an umbrella so the crowds could see him."
@@ -374,7 +382,7 @@ families:
     facts:
       - id: fischer-spassky-1972
         statement: "In 1972 American Bobby Fischer beat the Soviet world champion Boris Spassky in Reykjavík."
-        sources: [ { name: "Wikipedia: World Chess Championship 1972", type: REFERENCE, verified: false } ]
+        sources: [ { name: "Wikipedia: World Chess Championship 1972", type: REFERENCE, verified: true } ]
         questions:
           - id: fischer-spassky-1972-en-1
             language: en
@@ -393,8 +401,12 @@ families:
             difficulty: 3
             dignity: 4
             effects: { BRIDGE: 0.8, I_FIGURED_IT_OUT: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
       - id: doctor-zhivago-nobel
         statement: "Boris Pasternak's Doctor Zhivago, banned in the USSR, won him the 1958 Nobel Prize in Literature, which he was forced to decline."

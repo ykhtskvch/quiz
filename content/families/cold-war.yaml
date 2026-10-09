@@ -169,10 +169,10 @@ families:
             culture_specificity: GLOBAL
             text: What was Checkpoint Charlie?
             options:
-              - { key: A, text: A CIA spy base, distractor: PLAUSIBLE }
-              - { key: B, text: A crossing point between West and East Berlin, correct: true }
-              - { key: C, text: An American airfield, distractor: PLAUSIBLE }
-              - { key: D, text: Hitler's bunker, distractor: CONTEXTUAL_CONFUSION }
+              - { key: A, text: A CIA listening post, distractor: PLAUSIBLE }
+              - { key: B, text: A Berlin border crossing, correct: true }
+              - { key: C, text: An American airbase, distractor: PLAUSIBLE }
+              - { key: D, text: Hitler's last bunker, distractor: CONTEXTUAL_CONFUSION }
             explanation: '"Charlie" is C in the NATO alphabet — the third checkpoint after Alpha and Bravo.'
             topics: { cold-war: 1 }
             contexts: { GLOBAL: 1, POST_SOVIET: 0.4 }

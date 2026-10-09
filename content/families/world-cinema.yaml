@@ -7,7 +7,7 @@ families:
     facts:
       - id: titanic-jack
         statement: "Героя Леонардо Ди Каприо в «Титанике» зовут Джек Доусон."
-        sources: [{ name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false } ]
         questions:
           - id: titanic-jack-ru-1
             language: ru
@@ -52,7 +52,7 @@ families:
 
       - id: titanic-oscars
         statement: "«Титаник» получил 11 «Оскаров» из 14 номинаций."
-        sources: [{ name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Титаник (фильм, 1997)", type: REFERENCE, verified: true } ]
         questions:
           - id: titanic-oscars-ru-1
             language: ru
@@ -90,17 +90,19 @@ families:
             difficulty: 4
             dignity: 3
             effects: { I_KNOW_THIS: 0.8, HERO_CANDIDATE: 0.4 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 2
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
   - family: matrix
     name: "«Матрица»"
     facts:
       - id: matrix-red-pill
         statement: "В «Матрице» Нео выбирает красную таблетку."
-        sources: [{ name: "Википедия: Матрица (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Матрица (фильм)", type: REFERENCE, verified: true } ]
         questions:
           - id: matrix-red-pill-ru-1
             language: ru
@@ -138,17 +140,19 @@ families:
             difficulty: 2
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.8 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
 
   - family: godfather
     name: "«Крёстный отец»"
     facts:
       - id: godfather-brando
         statement: "Вито Корлеоне в первом «Крёстном отце» (1972) сыграл Марлон Брандо."
-        sources: [{ name: "Википедия: Крёстный отец", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Крёстный отец", type: REFERENCE, verified: false } ]
         questions:
           - id: godfather-brando-ru-1
             language: ru
@@ -196,7 +200,7 @@ families:
     facts:
       - id: i-am-your-father
         statement: "«Я твой отец» Дарт Вейдер говорит Люку Скайуокеру в «Империи наносит ответный удар»."
-        sources: [{ name: "Википедия: Звёздные войны. Эпизод V: Империя наносит ответный удар", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Звёздные войны. Эпизод V: Империя наносит ответный удар", type: REFERENCE, verified: false } ]
         questions:
           - id: i-am-your-father-ru-1
             language: ru
@@ -246,7 +250,7 @@ families:
     facts:
       - id: delorean-88
         statement: "Машину времени DeLorean в «Назад в будущее» нужно было разогнать до 88 миль в час."
-        sources: [{ name: "Википедия: Назад в будущее", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Назад в будущее", type: REFERENCE, verified: false } ]
         questions:
           - id: delorean-88-ru-1
             language: ru
@@ -297,7 +301,7 @@ families:
     facts:
       - id: psycho-hitchcock
         statement: "Фильм «Психо» (1960) снял Альфред Хичкок."
-        sources: [{ name: "Википедия: Психо (фильм, 1960)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Психо (фильм, 1960)", type: REFERENCE, verified: false } ]
         questions:
           - id: psycho-hitchcock-ru-1
             language: ru
@@ -340,7 +344,7 @@ families:
 
       - id: jaws-spielberg
         statement: "«Челюсти» (1975) снял Стивен Спилберг."
-        sources: [{ name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Челюсти (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: jaws-spielberg-ru-1
             language: ru
@@ -385,7 +389,7 @@ families:
 
       - id: seven-samurai-remake
         statement: "Вестерн «Великолепная семёрка» (1960) — ремейк «Семи самураев» Акиры Куросавы."
-        sources: [{ name: "Википедия: Великолепная семёрка", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Великолепная семёрка", type: REFERENCE, verified: false } ]
         questions:
           - id: seven-samurai-remake-ru-1
             language: ru
@@ -431,7 +435,7 @@ families:
     facts:
       - id: forrest-chocolates
         statement: "Форрест Гамп сравнивает жизнь с коробкой шоколадных конфет."
-        sources: [{ name: "Википедия: Форрест Гамп", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Форрест Гамп", type: REFERENCE, verified: false } ]
         questions:
           - id: forrest-chocolates-ru-1
             language: ru
@@ -476,7 +480,7 @@ families:
 
       - id: terminator-be-back
         statement: "Фразу «I'll be back» Терминатор произносит в первом фильме (1984), перед тем как въехать на машине в полицейский участок."
-        sources: [{ name: "Википедия: Терминатор (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Терминатор (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: terminator-be-back-ru-1
             language: ru
@@ -521,7 +525,7 @@ families:
 
       - id: scarlett-tomorrow
         statement: "«Я подумаю об этом завтра» — фраза Скарлетт О'Хара из «Унесённых ветром»."
-        sources: [{ name: "Википедия: Унесённые ветром (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Унесённые ветром (фильм)", type: REFERENCE, verified: false } ]
         questions:
           - id: scarlett-tomorrow-ru-1
             language: ru
@@ -567,7 +571,7 @@ families:
     facts:
       - id: schindler-red-coat
         statement: "В чёрно-белом «Списке Шиндлера» единственное цветное пятно — красное пальто девочки."
-        sources: [{ name: "Википедия: Список Шиндлера", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Список Шиндлера", type: REFERENCE, verified: false } ]
         questions:
           - id: schindler-red-coat-ru-1
             language: ru
@@ -612,7 +616,7 @@ families:
 
       - id: amelie-montmartre
         statement: "Амели из фильма «Амели» (2001) живёт и работает на Монмартре."
-        sources: [{ name: "Википедия: Амели", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Амели", type: REFERENCE, verified: false } ]
         questions:
           - id: amelie-montmartre-ru-1
             language: ru
@@ -636,7 +640,7 @@ families:
 
       - id: fifth-element-leeloo
         statement: "Лилу в «Пятом элементе» (1997) сыграла Милла Йовович."
-        sources: [{ name: "Википедия: Пятый элемент (фильм)", type: REFERENCE, verified: false }]
+        sources: [ { name: "Википедия: Пятый элемент (фильм)", type: REFERENCE, verified: true } ]
         questions:
           - id: fifth-element-leeloo-ru-1
             language: ru
@@ -676,7 +680,9 @@ families:
             difficulty: 3
             dignity: 3
             effects: { I_KNOW_THIS: 0.6 }
-            status: DRAFT
+            status: APPROVED
             generation_method: AI
-            review_notes:
-              - "AI doubt: перевод — проверить естественность английского и что варианты остались однозначными."
+            editor_rating: 3
+            reviewed:
+              by: Юля
+              at: 2026-10-09
