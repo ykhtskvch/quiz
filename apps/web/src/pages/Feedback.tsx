@@ -64,6 +64,11 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
         {complete ? t.send : t.fbNeedAll(answered, FIELDS.length)}
       </button>
       {error && <p className="error">{error}</p>}
+      <p className="muted small fb-privacy">
+        <a href="/privacy" target="_blank" rel="noopener">
+          {t.privacyMore}
+        </a>
+      </p>
     </section>
   );
 }

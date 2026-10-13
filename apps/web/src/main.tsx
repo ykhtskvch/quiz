@@ -4,6 +4,7 @@ import { isRoomCode } from "@quiz/shared";
 import { Display } from "./pages/Display.tsx";
 import { Home } from "./pages/Home.tsx";
 import { Player } from "./pages/Player.tsx";
+import { Privacy } from "./pages/Privacy.tsx";
 import { usePath } from "./router.ts";
 import "@fontsource-variable/manrope";
 import "./fontTrial.ts";
@@ -16,6 +17,7 @@ function App() {
     const code = m[2].toUpperCase();
     return m[1] === "d" ? <Display key={code} code={code} /> : <Player key={code} code={code} />;
   }
+  if (path === "/privacy") return <Privacy />;
   return <Home />;
 }
 

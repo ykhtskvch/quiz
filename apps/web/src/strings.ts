@@ -21,8 +21,50 @@ const ru = {
     "Ник, ответы и интересы живут только в комнате. Комната удаляется целиком через 6 часов.",
     "Интересы и возраст видишь только ты — ни экран, ни другие игроки их не получают.",
     "Для улучшения квиза копится анонимная статистика: какие вопросы сыграны, сколько верных ответов, оценки и анкета. Без ников, кода комнаты и интересов.",
-    "На этом устройстве запоминаются только язык и вход в комнату. Cookies, рекламы и трекеров нет.",
+    "На этом устройстве запоминаются язык, вход в комнату и — на общем экране — какие вопросы уже были. Cookies, рекламы и трекеров нет.",
   ],
+  privacyMore: "Подробнее о данных",
+  privacyPage: {
+    title: "Что KNOWISH знает о тебе",
+    intro: "Коротко: аккаунтов нет, cookies, рекламы и трекеров нет. Всё, что нужно для игры, живёт в комнате и удаляется вместе с ней.",
+    sections: [
+      {
+        title: "Пока идёт игра",
+        items: [
+          "Комната хранит ник, ответы анкеты (возраст, интересы, культурный контекст), ответы на вопросы, очки и оценки вопросов.",
+          "Интересы и возраст видишь только ты: ни общий экран, ни другие игроки их не получают. Ник и очки видны всей комнате.",
+          "Комната удаляется целиком через 6 часов после последнего действия в ней.",
+        ],
+      },
+      {
+        title: "Анонимная статистика",
+        items: [
+          "Чтобы чинить и подбирать вопросы, мы считаем: сколько раз вопрос сыграли, сколько ответили и сколько верно, сколько раз выбрали каждый вариант, оценки 👍 👌 👎.",
+          "По игре — число игроков, сколько вопросов сыграно и сколько длилась игра. И ответы анкеты после игры.",
+          "Без ников, кода комнаты, интересов, возраста и IP-адресов: по статистике нельзя узнать, кто играл и кто что ответил.",
+        ],
+      },
+      {
+        title: "На твоём устройстве",
+        items: [
+          "Язык интерфейса и «вход в комнату», чтобы после перезагрузки вернуться на своё место.",
+          "На общем экране — какие вопросы уже были (до полугода), чтобы в следующий раз не повторяться.",
+          "Это хранится только в браузере (localStorage). Стереть — очистить данные сайта в настройках браузера.",
+        ],
+      },
+      {
+        title: "Хостинг",
+        items: [
+          "Сайт работает на Cloudflare. Технические журналы запросов (время, адрес страницы, ошибки) хранятся несколько дней — чтобы искать сбои.",
+          "IP-адрес используется только для защиты от перегрузки (лимит запросов в минуту) и не сохраняется вместе с игрой.",
+          "Шрифты и QR-коды — свои, без сторонних сервисов.",
+        ],
+      },
+    ],
+    contactTitle: "Связаться",
+    contactText: "Нашлась ошибка в вопросе, есть идея или вопрос о данных — пиши:",
+    back: "← На главную",
+  },
   betaHint: "Часть вопросов ещё на проверке — если что-то не так, скажи!",
   betaHintGroup: "Часть вопросов ещё на проверке — если что-то не так, скажите!",
   gameLanguage: "Язык игры",
@@ -225,8 +267,50 @@ const en: Strings = {
     "Your nickname, answers and interests live only in the room. The whole room is deleted after 6 hours.",
     "Only you see your interests and age group. The screen and other players never get them.",
     "To improve the quiz we keep anonymous stats: which questions were played, how many got them right, ratings and the survey. No nicknames, room codes or interests.",
-    "This device only remembers your language and your seat in the room. No cookies, ads or trackers.",
+    "This device remembers your language, your seat in the room and, on the shared screen, which questions were already asked. No cookies, ads or trackers.",
   ],
+  privacyMore: "More about data",
+  privacyPage: {
+    title: "What KNOWISH knows about you",
+    intro: "In short: no accounts, no cookies, no ads, no trackers. Everything the game needs lives in the room and is deleted with it.",
+    sections: [
+      {
+        title: "While you play",
+        items: [
+          "The room keeps your nickname, your setup answers (age group, interests, cultural background), your answers, points and question ratings.",
+          "Only you see your interests and age group: the shared screen and other players never get them. Your nickname and points are visible to the room.",
+          "The whole room is deleted 6 hours after the last thing that happened in it.",
+        ],
+      },
+      {
+        title: "Anonymous statistics",
+        items: [
+          "To fix and pick questions we count how often a question was played, how many answered and got it right, how often each option was chosen, and 👍 👌 👎 ratings.",
+          "Per game: the number of players, questions played and how long it took. And the answers to the after-game survey.",
+          "No nicknames, room codes, interests, ages or IP addresses: the statistics can't tell who played or who answered what.",
+        ],
+      },
+      {
+        title: "On your device",
+        items: [
+          "Your language and your seat in the room, so a reload brings you back.",
+          "On the shared screen: which questions were already asked (up to six months), so the next game doesn't repeat them.",
+          "This is kept only in your browser (localStorage). Clear the site's data in your browser settings to remove it.",
+        ],
+      },
+      {
+        title: "Hosting",
+        items: [
+          "The site runs on Cloudflare. Technical request logs (time, page address, errors) are kept for a few days to track down failures.",
+          "Your IP address is used only to protect the site from overload (a per-minute request limit) and is not stored with the game.",
+          "Fonts and QR codes are our own, with no third-party services.",
+        ],
+      },
+    ],
+    contactTitle: "Get in touch",
+    contactText: "Found a mistake in a question, have an idea or a question about data? Write to:",
+    back: "← Home",
+  },
   betaHint: "Some questions are still being checked. If something looks off, tell us!",
   betaHintGroup: "Some questions are still being checked. If something looks off, tell us!",
   gameLanguage: "Game language",

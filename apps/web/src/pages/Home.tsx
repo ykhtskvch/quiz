@@ -110,6 +110,9 @@ export function Home() {
               <li key={item}>{item}</li>
             ))}
           </ul>
+          <a href="/privacy" onClick={(e) => (e.preventDefault(), navigate("/privacy"))}>
+            {t.privacyMore}
+          </a>
         </details>
       </footer>
     </main>
