@@ -4,7 +4,7 @@ import type { HostCommand, OnboardingInput, OptionKey, QuestionRating, Snapshot 
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { navigate } from "../router.ts";
-import { AnswerTimer, JoinQr, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
+import { AnswerTimer, JoinQr, latecomers, LatecomersNote, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
 import { playerHistory, trackOnce } from "../funnel.ts";
 import { seen } from "../seen.ts";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
@@ -680,9 +680,26 @@ function HostBar({ s, host, busy }: { s: Snapshot; host: (c: HostCommand) => Pro
 
   const paused = s.game?.status === "PAUSED";
   const canSkip = !paused && (s.question?.phase === "PRESENTING" || s.question?.phase === "ANSWERING");
+  const late = latecomers(s);
+  const [inviting, setInviting] = useState(false);
 
   return (
     <div className="host-bar">
+      {(late.waiting.length > 0 || late.settingUp.length > 0) && (
+        <div className="host-late">
+          <LatecomersNote s={s} />
+          <p className="muted small">{t.lateNoRestart}</p>
+        </div>
+      )}
+      {/* Without a TV nobody else shows the code during the game (P-04, P-05). */}
+      {s.room.phonesOnly && (
+        <>
+          <button className="link" onClick={() => setInviting(!inviting)}>
+            {inviting ? t.hideInvite : t.inviteMore}
+          </button>
+          {inviting && <Invite code={s.room.code} />}
+        </>
+      )}
       {s.game?.softEndSuggested && !softDismissed && (
         <div className="soft-end">
           <p>{t.softEnd}</p>

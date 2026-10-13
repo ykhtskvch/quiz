@@ -1,7 +1,7 @@
 // Small pieces shared by the display and the phone.
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
-import type { GameResults, PhaseTiming } from "@quiz/shared";
+import type { GameResults, PhaseTiming, Snapshot } from "@quiz/shared";
 import { api } from "./api.ts";
 import { useT } from "./strings.ts";
 import { useCountdown } from "./useRoom.ts";
@@ -120,5 +120,31 @@ export function JoinQr({ qr, joinUrl }: { qr: string | null; joinUrl: string }) 
         {t.appName}
       </span>
     </div>
+  );
+}
+
+/**
+ * People who came in during a game (P-05): still filling in the setup, or set and waiting for the next
+ * question. They join by themselves — showing it is what saves the host from restarting the room.
+ */
+export function latecomers(s: Snapshot): { settingUp: string[]; waiting: string[] } {
+  const live = s.game && s.game.status !== "FINISHED";
+  if (!live) return { settingUp: [], waiting: [] };
+  const players = s.room.players.filter((p) => p.status !== "DISCONNECTED");
+  return {
+    settingUp: players.filter((p) => p.status === "ONBOARDING").map((p) => p.nickname),
+    waiting: players.filter((p) => p.status === "PENDING").map((p) => p.nickname),
+  };
+}
+
+export function LatecomersNote({ s, className = "" }: { s: Snapshot; className?: string }) {
+  const t = useT();
+  const { settingUp, waiting } = latecomers(s);
+  if (!settingUp.length && !waiting.length) return null;
+  return (
+    <p className={`latecomers ${className}`} role="status">
+      {waiting.length > 0 && <span>{t.lateWaiting(waiting.join(", "))}</span>}
+      {settingUp.length > 0 && <span>{t.lateSettingUp(settingUp.join(", "))}</span>}
+    </p>
   );
 }

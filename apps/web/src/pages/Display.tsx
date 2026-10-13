@@ -1,7 +1,7 @@
 // Shared screen: lobby with QR, question phases, reveal, final results. Read-only — it never sends commands.
 import { useEffect, useMemo } from "react";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
-import { AnswerTimer, BetaBadge, joinHost, JoinQr, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
+import { AnswerTimer, BetaBadge, joinHost, JoinQr, LatecomersNote, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { seen } from "../seen.ts";
 import { useCountdown, useRoom } from "../useRoom.ts";
@@ -38,9 +38,15 @@ export function Display({ code }: { code: string }) {
       ) : (
         <div className="center muted big-text">{t.nextQuestion}</div>
       )}
+      {/* P-05: during a game the join address stays on screen, and latecomers are named, so nobody
+          restarts the room to let someone in. */}
       {s.game && (
-        <footer className="display-footer muted">
-          {t.appName} · {code}
+        <footer className="display-footer">
+          <span className="brand-small">{t.appName}</span>
+          <LatecomersNote s={s} />
+          <span className="late-join">
+            {t.lateJoin} <strong>{joinHost()}</strong> · {t.codeLabel} <strong className="code">{code}</strong>
+          </span>
         </footer>
       )}
     </main>

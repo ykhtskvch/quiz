@@ -718,12 +718,65 @@ button.danger {
   z-index: 5;
 }
 
+/* In the flow, not fixed (P-05): the join line takes its own row, so it never covers the stage. */
 .display-footer {
-  position: fixed;
-  right: 2vw;
-  bottom: 1.5vw;
-  letter-spacing: 0.2em;
-  font-weight: 700;
+  display: flex;
+  align-items: baseline;
+  gap: 2vw;
+  padding-top: 0.6em;
+  font-size: 0.85em;
+  color: var(--muted);
+}
+
+.display-footer .brand-small {
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.display-footer .late-join {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.display-footer strong {
+  color: var(--text);
+}
+
+.display-footer .code {
+  letter-spacing: 0.15em;
+}
+
+.latecomers {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em 1.2em;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.display-footer .latecomers {
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-wrap: nowrap;
+}
+
+.host-late {
+  display: grid;
+  gap: 4px;
+  text-align: center;
+  padding-bottom: var(--space-2);
+}
+
+.host-late .latecomers {
+  justify-content: center;
+  font-size: var(--fs-hint);
+}
+
+.host-late p {
+  margin: 0;
 }
 
 .results {
