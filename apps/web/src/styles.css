@@ -1914,3 +1914,8 @@ button.link {
   font-weight: 700;
   font-size: 1.2rem;
 }
+
+/* Share the results picture (EPIC 41 P-12). */
+.share-results {
+  margin-top: var(--space-3);
+}

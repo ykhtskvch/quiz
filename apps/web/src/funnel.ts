@@ -2,7 +2,7 @@
 import type { FunnelStep } from "@quiz/shared";
 
 /** Counts a browser-side step once per browser session (a reload is not a new visit). */
-export function trackOnce(step: Extract<FunnelStep, "home_view" | "join_view">, scope = "") {
+export function trackOnce(step: Extract<FunnelStep, "home_view" | "join_view" | "share_results">, scope = "") {
   const key = `knowish.funnel.${step}.${scope}`;
   try {
     if (sessionStorage.getItem(key)) return;

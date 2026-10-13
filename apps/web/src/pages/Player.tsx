@@ -9,7 +9,8 @@ import { playerHistory, trackOnce } from "../funnel.ts";
 import { seen } from "../seen.ts";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
-import { setLanguage, useT } from "../strings.ts";
+import { setLanguage, useLanguage, useT } from "../strings.ts";
+import { renderResultsCard, shareResultsCard } from "../shareCard.ts";
 import { useRoom } from "../useRoom.ts";
 
 export function Player({ code }: { code: string }) {
@@ -321,6 +322,7 @@ function PlayerBody({
               <span>{t.correctOf(mine.correct, mine.attempted)}</span>
             </p>
           )}
+          <ShareResults results={s.results} scope={`${code}:${game?.number ?? 0}`} />
         </section>
         {s.room.phonesOnly && <PhoneStandings results={s.results} />}
         {mine && !feedbackSent && <SessionFeedback code={code} token={token} onSent={() => game && setSentInGame(game.number)} />}
@@ -531,6 +533,29 @@ function QuickRate({ rating, onRate }: { rating: QuestionRating | undefined; onR
         {rating ? t.quickRateThanks : ""}
       </p>
     </div>
+  );
+}
+
+/** P-12: the results of the evening as a picture for the group chat. Drawn on the phone. */
+function ShareResults({ results, scope }: { results: NonNullable<Snapshot["results"]>; scope: string }) {
+  const t = useT();
+  const lang = useLanguage();
+  const [state, setState] = useState<"idle" | "busy" | "saved">("idle");
+  const share = async () => {
+    setState("busy");
+    try {
+      const blob = await renderResultsCard(results, t, lang);
+      const r = await shareResultsCard(blob, t);
+      if (r !== "cancelled") trackOnce("share_results", scope);
+      setState(r === "saved" ? "saved" : "idle");
+    } catch {
+      setState("idle");
+    }
+  };
+  return (
+    <button className="secondary share-results" disabled={state === "busy"} onClick={share}>
+      {state === "busy" ? t.shareMaking : state === "saved" ? t.shareSaved : t.shareResults}
+    </button>
   );
 }
 

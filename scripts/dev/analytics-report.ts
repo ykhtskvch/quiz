@@ -156,6 +156,7 @@ else {
     "Доиграно": f("game_completed"),
     "Закончено досрочно": f("game_ended_early"),
     "«Сыграть ещё»": f("play_again"),
+    "Поделились картинкой итогов": f("share_results"),
   });
   console.table({
     "Заход → комната": share(rooms, f("home_view")),

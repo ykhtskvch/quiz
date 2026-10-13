@@ -180,7 +180,7 @@ export const isRoomCode = (s: string) =>
  * Funnel steps (EPIC 41 P-07), counted per day without any ids. Client steps come from the browser
  * through POST /api/funnel; the rest are counted by the server.
  */
-export const CLIENT_FUNNEL_STEPS = ["home_view", "join_view"] as const;
+export const CLIENT_FUNNEL_STEPS = ["home_view", "join_view", "share_results"] as const;
 export type FunnelStep =
   | (typeof CLIENT_FUNNEL_STEPS)[number]
   | "room_created_tv"
