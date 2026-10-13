@@ -1008,13 +1008,13 @@ families:
             language: ru
             origin_language: en
             culture_specificity: GLOBAL
-            text: Какую знаменитую песню поют на выдуманных словах, которые должны звучать как английские?
+            text: "На каком «языке» Адриано Челентано спел хит «Prisencolinensinainciusol» (1972)?"
             options:
-              - { key: A, text: Macarena, distractor: PLAUSIBLE }
-              - { key: B, text: Barbie Girl, distractor: PLAUSIBLE }
-              - { key: C, text: Dragostea Din Tei, distractor: CONTEXTUAL_CONFUSION }
-              - { key: D, text: Prisencolinensinainciusol, correct: true }
-            explanation: Челентано хотел показать, как английский звучит для итальянцев, которые его не знают. Dragostea Din Tei поют по-румынски.
+              - { key: A, text: "На неаполитанском диалекте", distractor: PLAUSIBLE }
+              - { key: B, text: "На латыни", distractor: PLAUSIBLE }
+              - { key: C, text: "На эсперанто", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "На выдуманном «английском»", correct: true }
+            explanation: "Слова ничего не значат: Челентано хотел показать, как английский звучит для итальянцев, которые его не знают."
             topics: { world-pop: 1 }
             contexts: { GLOBAL: 1 }
             generations: { 80s: 0.4 }
@@ -1330,10 +1330,10 @@ families:
             culture_specificity: GLOBAL
             text: Что из этого IKEA действительно продавала?
             options:
-              - { key: A, text: Велосипед, distractor: NEAR_MISS }
-              - { key: B, text: Телевизор, distractor: NEAR_MISS }
-              - { key: C, text: Автомобиль, distractor: PLAUSIBLE }
-              - { key: D, text: "И велосипед, и телевизор", correct: true }
+              - { key: A, text: "Велосипед и мотоцикл", distractor: NEAR_MISS }
+              - { key: B, text: "Телевизор и мотоцикл", distractor: NEAR_MISS }
+              - { key: C, text: "Мотоцикл и автомобиль", distractor: PLAUSIBLE }
+              - { key: D, text: "Велосипед и телевизор", correct: true }
             explanation: Велосипед Sladda и телевизор Uppleva, встроенный в тумбу, — оба настоящие.
             topics: { fashion-brands: 1 }
             contexts: { GLOBAL: 1 }

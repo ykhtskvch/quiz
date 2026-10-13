@@ -38,11 +38,11 @@ families:
             culture_specificity: GLOBAL
             text: Как расшифровывается T9 — предиктивный набор на старых телефонах?
             options:
-              - { key: A, text: Type 9, distractor: PLAUSIBLE }
-              - { key: B, text: Turbo 9, distractor: PLAUSIBLE }
-              - { key: C, text: Text on 9 keys — текст на 9 кнопках, correct: true }
-              - { key: D, text: Telephone 9, distractor: PLAUSIBLE }
-            explanation: Слово угадывалось по одному нажатию на букву — и иногда угадывалось очень смешно.
+              - { key: A, text: "Type 9 Pro", distractor: PLAUSIBLE }
+              - { key: B, text: "Turbo 9 Mode", distractor: PLAUSIBLE }
+              - { key: C, text: "Text on 9 keys", correct: true }
+              - { key: D, text: "Telephone 9 Line", distractor: PLAUSIBLE }
+            explanation: "Text on 9 keys — «текст на 9 кнопках». Слово угадывалось по одному нажатию на букву — и иногда угадывалось очень смешно."
             topics: { old-internet: 1 }
             contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }
             generations: { 00s: 1, 90s: 0.4 }
@@ -412,10 +412,10 @@ families:
             culture_specificity: GLOBAL
             text: Что такое номер ICQ?
             options:
-              - { key: A, text: Номер телефона, distractor: PLAUSIBLE }
-              - { key: B, text: Пароль от чата, distractor: PLAUSIBLE }
-              - { key: C, text: Числовой идентификатор пользователя, correct: true }
-              - { key: D, text: Количество друзей, distractor: PLAUSIBLE }
+              - { key: A, text: "Номер телефона", distractor: PLAUSIBLE }
+              - { key: B, text: "Пароль от чата", distractor: PLAUSIBLE }
+              - { key: C, text: "Номер пользователя", correct: true }
+              - { key: D, text: "Число друзей", distractor: PLAUSIBLE }
             explanation: Короткие номера были статусной вещью — их даже продавали.
             topics: { old-internet: 1 }
             contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }

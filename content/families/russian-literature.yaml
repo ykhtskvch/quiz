@@ -115,10 +115,10 @@ families:
             text: "Что скупал Чичиков в «Мёртвых душах»?"
             options:
               - { key: A, text: "Старинные иконы", distractor: PLAUSIBLE }
-              - { key: B, text: "Умерших крестьян, которые числились живыми", correct: true }
+              - { key: B, text: "Умерших крестьян", correct: true }
               - { key: C, text: "Чужие долги", distractor: PLAUSIBLE }
               - { key: D, text: "Землю под строительство", distractor: PLAUSIBLE }
-            explanation: "Под залог «душ» можно было получить деньги в Опекунском совете."
+            explanation: "Умерших, которые по ревизии числились живыми: под залог таких «душ» можно было получить деньги в Опекунском совете."
             topics: { russian-literature: 1.0 }
             contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }
             difficulty: 2

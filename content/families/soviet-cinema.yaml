@@ -69,7 +69,7 @@ families:
             text: "Зачем Шурик поехал на Кавказ в «Кавказской пленнице»?"
             options:
               - { key: A, text: "На археологические раскопки", distractor: PLAUSIBLE }
-              - { key: B, text: "Собирать фольклор: легенды, тосты, обычаи", correct: true }
+              - { key: B, text: "Собирать местный фольклор", correct: true }
               - { key: C, text: "На свадьбу друга", distractor: PLAUSIBLE }
               - { key: D, text: "Лечиться в санатории", distractor: PLAUSIBLE }
             explanation: "Отсюда знаменитый тост про маленькую, но очень гордую птичку."

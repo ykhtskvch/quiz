@@ -185,10 +185,10 @@ families:
             culture_specificity: GLOBAL
             text: С каким личным событием связана песня Green Day «Wake Me Up When September Ends»?
             options:
-              - { key: A, text: С концом лета, distractor: COMMON_MISCONCEPTION }
-              - { key: B, text: С политикой США, distractor: CONTEXTUAL_CONFUSION }
-              - { key: C, text: Со смертью отца Билли Джо Армстронга, correct: true }
-              - { key: D, text: С окончанием школы, distractor: PLAUSIBLE }
+              - { key: A, text: "С концом лета", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "С политикой США", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Со смертью отца", correct: true }
+              - { key: D, text: "С окончанием школы", distractor: PLAUSIBLE }
             explanation: Отец умер, когда Билли Джо было десять. А клип при этом — про солдата, уходящего в Ирак.
             topics: { world-pop: 1 }
             contexts: { GLOBAL: 1 }

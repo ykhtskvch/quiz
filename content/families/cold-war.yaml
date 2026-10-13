@@ -573,10 +573,10 @@ families:
             is_bridge: true
             text: "Какую программу Рейгана прозвали «Звёздными войнами»?"
             options:
-              - { key: A, text: "Лунную программу", distractor: CONTEXTUAL_CONFUSION }
-              - { key: B, text: "Систему противоракетной обороны в космосе", correct: true }
+              - { key: A, text: "Лунную программу «Аполлон»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Противоракетную оборону в космосе", correct: true }
               - { key: C, text: "Программу «Спейс шаттл»", distractor: CONTEXTUAL_CONFUSION }
-              - { key: D, text: "Полёт к Марсу", distractor: PLAUSIBLE }
+              - { key: D, text: "Полёт людей к Марсу", distractor: PLAUSIBLE }
             explanation: "Прозвище взяли у фильма Джорджа Лукаса 1977 года."
             topics: { cold-war: 1.0 }
             contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }

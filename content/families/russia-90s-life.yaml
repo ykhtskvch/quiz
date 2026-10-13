@@ -120,9 +120,9 @@ families:
             text: "Клоном какой приставки была «Денди»?"
             options:
               - { key: A, text: "Sega Mega Drive", distractor: CONTEXTUAL_CONFUSION }
-              - { key: B, text: "Nintendo Famicom (NES)", correct: true }
+              - { key: B, text: "Nintendo Famicom", correct: true }
               - { key: C, text: "Sony PlayStation", distractor: SAME_CATEGORY }
-              - { key: D, text: "Game Boy", distractor: SAME_CATEGORY }
+              - { key: D, text: "Nintendo Game Boy", distractor: SAME_CATEGORY }
             explanation: "«Денди, Денди, мы все любим Денди!» — а внутри был 8-битный японский Famicom."
             topics: { russia-90s-life: 1.0, videogames: 0.7 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
@@ -171,10 +171,10 @@ families:
             text: "Кого в 90-е называли «челноками»?"
             options:
               - { key: A, text: "Таксистов-«бомбил»", distractor: PLAUSIBLE }
-              - { key: B, text: "Торговцев, возивших товар из-за границы в клетчатых сумках", correct: true }
+              - { key: B, text: "Торговцев с товаром из-за границы", correct: true }
               - { key: C, text: "Ткачей на фабриках", distractor: CONTEXTUAL_CONFUSION }
               - { key: D, text: "Пилотов частных авиакомпаний", distractor: PLAUSIBLE }
-            explanation: "Ездили туда-обратно, как челнок в ткацком станке."
+            explanation: "Ездили туда-обратно — в Турцию, Китай, Польшу — с огромными клетчатыми сумками, как челнок в ткацком станке."
             topics: { russia-90s-life: 1.0 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }
             generations: { 90s: 1.0 }
@@ -243,10 +243,10 @@ families:
             culture_specificity: REGIONAL
             text: "Что умел пейджер?"
             options:
-              - { key: A, text: "Звонить", distractor: PLAUSIBLE }
-              - { key: B, text: "Принимать короткие сообщения, которые диктовали оператору", correct: true }
+              - { key: A, text: "Звонить на любой номер", distractor: PLAUSIBLE }
+              - { key: B, text: "Принимать сообщения", correct: true }
               - { key: C, text: "Выходить в интернет", distractor: PLAUSIBLE }
-              - { key: D, text: "Фотографировать", distractor: PLAUSIBLE }
+              - { key: D, text: "Делать фотографии", distractor: PLAUSIBLE }
             explanation: "Звонишь оператору, диктуешь текст — и он появляется на экранчике у адресата."
             topics: { russia-90s-life: 1.0 }
             contexts: { POST_SOVIET: 1.0, GLOBAL: 0.5 }
@@ -376,7 +376,7 @@ families:
             text: "Где в 1990 году открылся первый «Макдоналдс» в СССР?"
             options:
               - { key: A, text: "На Арбате", distractor: NEAR_MISS }
-              - { key: B, text: "На Пушкинской площади в Москве", correct: true }
+              - { key: B, text: "На Пушкинской площади", correct: true }
               - { key: C, text: "На Невском проспекте", distractor: SAME_CATEGORY }
               - { key: D, text: "На ВДНХ", distractor: PLAUSIBLE }
             explanation: "В первый день в очереди стояли около 30 тысяч человек."

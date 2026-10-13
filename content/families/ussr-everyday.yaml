@@ -95,10 +95,10 @@ families:
             text: "Что символизировали три конца пионерского галстука?"
             options:
               - { key: A, text: "Три цвета советского флага", distractor: PLAUSIBLE }
-              - { key: B, text: "Три поколения: коммунистов, комсомольцев и пионеров", correct: true }
+              - { key: B, text: "Единство трёх поколений", correct: true }
               - { key: C, text: "Три закона пионеров", distractor: PLAUSIBLE }
               - { key: D, text: "«Учиться, учиться и учиться»", distractor: CONTEXTUAL_CONFUSION }
-            explanation: "Красный цвет галстука объясняли как частицу знамени."
+            explanation: "Три поколения — коммунисты, комсомольцы и пионеры. Красный цвет галстука объясняли как частицу знамени."
             topics: { ussr-everyday: 1.0 }
             contexts: { POST_SOVIET: 1.0 }
             generations: { 80s: 1.0 }

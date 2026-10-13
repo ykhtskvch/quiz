@@ -325,7 +325,7 @@ families:
               - { key: A, text: "«Идиот»", distractor: SAME_CATEGORY }
               - { key: B, text: "«Преступление и наказание»", correct: true }
               - { key: C, text: "«Бесы»", distractor: SAME_CATEGORY }
-              - { key: D, text: "«Белые ночи»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "«Братья Карамазовы»", distractor: CONTEXTUAL_CONFUSION }
             explanation: "Дальше молодой человек выходит из своей каморки в Столярном переулке — это Раскольников."
             topics: { russian-literature: 1.0 }
             contexts: { POST_SOVIET: 1.0, GLOBAL: 0.4 }

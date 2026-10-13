@@ -42,9 +42,9 @@ families:
             text: "Кто исполнял песню «Тучи»?"
             options:
               - { key: A, text: "«Иванушки International»", correct: true }
-              - { key: B, text: "«На-На»", distractor: SAME_CATEGORY }
-              - { key: C, text: "«Руки Вверх!»", distractor: SAME_CATEGORY }
-              - { key: D, text: "«Кар-Мэн»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Отпетые мошенники»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Дискотека Авария»", distractor: SAME_CATEGORY }
+              - { key: D, text: "«Руки Вверх!»", distractor: SAME_CATEGORY }
             explanation: "Песня 1996 года сделала группу звёздами; рыжий Андрей Григорьев-Апполонов, Кирилл Андреев и Игорь Сорин."
             topics: { ru-pop-90s: 1.0 }
             contexts: { POST_SOVIET: 1.0, RUSSIA_1990S: 1.0 }

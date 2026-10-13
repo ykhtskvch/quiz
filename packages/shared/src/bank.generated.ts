@@ -4412,11 +4412,11 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Лунную программу"
+        "text": "Лунную программу «Аполлон»"
       },
       {
         "key": "B",
-        "text": "Систему противоракетной обороны в космосе"
+        "text": "Противоракетную оборону в космосе"
       },
       {
         "key": "C",
@@ -4424,7 +4424,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "D",
-        "text": "Полёт к Марсу"
+        "text": "Полёт людей к Марсу"
       }
     ],
     "correctKey": "B",
@@ -4703,23 +4703,23 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Type 9"
+        "text": "Type 9 Pro"
       },
       {
         "key": "B",
-        "text": "Turbo 9"
+        "text": "Turbo 9 Mode"
       },
       {
         "key": "C",
-        "text": "Text on 9 keys — текст на 9 кнопках"
+        "text": "Text on 9 keys"
       },
       {
         "key": "D",
-        "text": "Telephone 9"
+        "text": "Telephone 9 Line"
       }
     ],
     "correctKey": "C",
-    "explanation": "Слово угадывалось по одному нажатию на букву — и иногда угадывалось очень смешно.",
+    "explanation": "Text on 9 keys — «текст на 9 кнопках». Слово угадывалось по одному нажатию на букву — и иногда угадывалось очень смешно.",
     "topics": {
       "old-internet": 1
     },
@@ -5421,11 +5421,11 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "C",
-        "text": "Числовой идентификатор пользователя"
+        "text": "Номер пользователя"
       },
       {
         "key": "D",
-        "text": "Количество друзей"
+        "text": "Число друзей"
       }
     ],
     "correctKey": "C",
@@ -7254,7 +7254,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "C",
-        "text": "Со смертью отца Билли Джо Армстронга"
+        "text": "Со смертью отца"
       },
       {
         "key": "D",
@@ -12366,27 +12366,27 @@ export const BANK: BankQuestion[] = [
     "originLanguage": "en",
     "cultureSpecificity": "GLOBAL",
     "isBridge": false,
-    "text": "Какую знаменитую песню поют на выдуманных словах, которые должны звучать как английские?",
+    "text": "На каком «языке» Адриано Челентано спел хит «Prisencolinensinainciusol» (1972)?",
     "options": [
       {
         "key": "A",
-        "text": "Macarena"
+        "text": "На неаполитанском диалекте"
       },
       {
         "key": "B",
-        "text": "Barbie Girl"
+        "text": "На латыни"
       },
       {
         "key": "C",
-        "text": "Dragostea Din Tei"
+        "text": "На эсперанто"
       },
       {
         "key": "D",
-        "text": "Prisencolinensinainciusol"
+        "text": "На выдуманном «английском»"
       }
     ],
     "correctKey": "D",
-    "explanation": "Челентано хотел показать, как английский звучит для итальянцев, которые его не знают. Dragostea Din Tei поют по-румынски.",
+    "explanation": "Слова ничего не значат: Челентано хотел показать, как английский звучит для итальянцев, которые его не знают.",
     "topics": {
       "world-pop": 1
     },
@@ -13004,19 +13004,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Велосипед"
+        "text": "Велосипед и мотоцикл"
       },
       {
         "key": "B",
-        "text": "Телевизор"
+        "text": "Телевизор и мотоцикл"
       },
       {
         "key": "C",
-        "text": "Автомобиль"
+        "text": "Мотоцикл и автомобиль"
       },
       {
         "key": "D",
-        "text": "И велосипед, и телевизор"
+        "text": "Велосипед и телевизор"
       }
     ],
     "correctKey": "D",
@@ -21544,7 +21544,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "D",
-        "text": "«Белые ночи»"
+        "text": "«Братья Карамазовы»"
       }
     ],
     "correctKey": "B",
@@ -27118,15 +27118,15 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "«На-На»"
+        "text": "«Отпетые мошенники»"
       },
       {
         "key": "C",
-        "text": "«Руки Вверх!»"
+        "text": "«Дискотека Авария»"
       },
       {
         "key": "D",
-        "text": "«Кар-Мэн»"
+        "text": "«Руки Вверх!»"
       }
     ],
     "correctKey": "A",
@@ -28728,7 +28728,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Nintendo Famicom (NES)"
+        "text": "Nintendo Famicom"
       },
       {
         "key": "C",
@@ -28736,7 +28736,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "D",
-        "text": "Game Boy"
+        "text": "Nintendo Game Boy"
       }
     ],
     "correctKey": "B",
@@ -28824,7 +28824,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Торговцев, возивших товар из-за границы в клетчатых сумках"
+        "text": "Торговцев с товаром из-за границы"
       },
       {
         "key": "C",
@@ -28836,7 +28836,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Ездили туда-обратно, как челнок в ткацком станке.",
+    "explanation": "Ездили туда-обратно — в Турцию, Китай, Польшу — с огромными клетчатыми сумками, как челнок в ткацком станке.",
     "topics": {
       "russia-90s-life": 1
     },
@@ -28963,11 +28963,11 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Звонить"
+        "text": "Звонить на любой номер"
       },
       {
         "key": "B",
-        "text": "Принимать короткие сообщения, которые диктовали оператору"
+        "text": "Принимать сообщения"
       },
       {
         "key": "C",
@@ -28975,7 +28975,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "D",
-        "text": "Фотографировать"
+        "text": "Делать фотографии"
       }
     ],
     "correctKey": "B",
@@ -29208,7 +29208,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "На Пушкинской площади в Москве"
+        "text": "На Пушкинской площади"
       },
       {
         "key": "C",
@@ -29490,7 +29490,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Умерших крестьян, которые числились живыми"
+        "text": "Умерших крестьян"
       },
       {
         "key": "C",
@@ -29502,7 +29502,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Под залог «душ» можно было получить деньги в Опекунском совете.",
+    "explanation": "Умерших, которые по ревизии числились живыми: под залог таких «душ» можно было получить деньги в Опекунском совете.",
     "topics": {
       "russian-literature": 1
     },
@@ -30803,7 +30803,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Собирать фольклор: легенды, тосты, обычаи"
+        "text": "Собирать местный фольклор"
       },
       {
         "key": "C",
@@ -34329,7 +34329,7 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Три поколения: коммунистов, комсомольцев и пионеров"
+        "text": "Единство трёх поколений"
       },
       {
         "key": "C",
@@ -34341,7 +34341,7 @@ export const BANK: BankQuestion[] = [
       }
     ],
     "correctKey": "B",
-    "explanation": "Красный цвет галстука объясняли как частицу знамени.",
+    "explanation": "Три поколения — коммунисты, комсомольцы и пионеры. Красный цвет галстука объясняли как частицу знамени.",
     "topics": {
       "ussr-everyday": 1
     },
