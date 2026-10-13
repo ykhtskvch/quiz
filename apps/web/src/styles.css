@@ -1868,3 +1868,49 @@ button.link {
   margin: 0;
   text-align: center;
 }
+
+/* ---------- Survey: one required question, the rest optional (EPIC 41 P-08) ---------- */
+
+.fb-optional {
+  margin: calc(-1 * var(--space-1)) 0 0;
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.feedback textarea {
+  width: 100%;
+  font: inherit;
+  font-size: var(--fs-body);
+  padding: 0.75em 0.9em;
+  border-radius: var(--radius);
+  border: 2px solid var(--surface-2);
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+}
+
+.feedback textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* "Host your own game" after the results (EPIC 41 P-11). */
+.host-own {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-3);
+}
+
+.host-own p {
+  margin: 0;
+}
+
+.host-own-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}

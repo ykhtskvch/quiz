@@ -166,3 +166,11 @@ else {
     "Игроки → ведущие": share(f("room_created_by_player"), rooms),
   });
 }
+
+// ---------- survey comments (EPIC 41 P-08) ----------
+const comments = query<{ day: string; play_again: string; comment: string }>(`
+  SELECT date(created_at / 1000, 'unixepoch') AS day, play_again, comment FROM session_feedback
+  WHERE comment IS NOT NULL ORDER BY created_at DESC LIMIT 20`);
+console.log("=== «Что улучшить?» — последние комментарии ===");
+if (comments.length) console.table(comments.map((c) => ({ день: c.day, "ещё?": c.play_again, комментарий: c.comment })));
+else console.log("Пока нет.\n");

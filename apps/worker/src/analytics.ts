@@ -52,10 +52,10 @@ export function analyticsStatements(db: D1Database, e: AnalyticsEvent): D1Prepar
       return [
         db
           .prepare(
-            `INSERT INTO session_feedback (game_uid, created_at, play_again, different_group, difficulty, pace, cultural_balance)
-             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)`,
+            `INSERT INTO session_feedback (game_uid, created_at, play_again, different_group, difficulty, pace, cultural_balance, comment)
+             VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8)`,
           )
-          .bind(e.gameUid, e.at, f.playAgain, f.differentGroup ?? null, f.difficulty ?? null, f.pace ?? null, f.culturalBalance ?? null),
+          .bind(e.gameUid, e.at, f.playAgain, f.differentGroup ?? null, f.difficulty ?? null, f.pace ?? null, f.culturalBalance ?? null, f.comment ?? null),
       ];
     }
     case "FUNNEL":

@@ -4,6 +4,7 @@ import { useState } from "react";
 import {
   BALANCE_RATINGS,
   DIFFICULTY_RATINGS,
+  FEEDBACK_COMMENT_MAX,
   PACE_RATINGS,
   PLAY_AGAIN,
   QUESTION_RATINGS,
@@ -25,7 +26,13 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
       <p className="fb-label">{label}</p>
       <div className="segmented">
         {values.map((v) => (
-          <button key={v} className={form[key] === v ? "on" : ""} onClick={() => setForm({ ...form, [key]: v })}>
+          // Optional rows can be un-picked with a second tap; "play again" just switches.
+          <button
+            key={v}
+            className={form[key] === v ? "on" : ""}
+            aria-pressed={form[key] === v}
+            onClick={() => setForm({ ...form, [key]: form[key] === v && key !== "playAgain" ? undefined : v })}
+          >
             {labels[v]}
           </button>
         ))}
@@ -33,10 +40,9 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
     </div>
   );
 
-  // All five are answered before sending (PT2): the button stays grey until then and says how many are left.
-  const FIELDS = ["playAgain", "difficulty", "pace", "culturalBalance", "differentGroup"] as const;
-  const answered = FIELDS.filter((k) => form[k]).length;
-  const complete = answered === FIELDS.length;
+  // P-08: only "play again" is required — a third of the players filled in the all-required form on
+  // 10.10. The button stays grey until it is answered (PT2), the rest is optional.
+  const complete = Boolean(form.playAgain);
 
   const submit = async () => {
     if (!complete) return;
@@ -56,12 +62,26 @@ export function SessionFeedback({ code, token, onSent }: { code: string; token: 
     <section className="feedback">
       <h2>{t.feedbackTitle}</h2>
       {row("playAgain", t.fbPlayAgain, PLAY_AGAIN, t.intent)}
+      <p className="fb-optional muted">{t.fbOptional}</p>
       {row("difficulty", t.fbDifficulty, DIFFICULTY_RATINGS, t.fbDifficultyValues)}
       {row("pace", t.fbPace, PACE_RATINGS, t.fbPaceValues)}
       {row("culturalBalance", t.fbBalance, BALANCE_RATINGS, t.fbBalanceValues)}
       {row("differentGroup", t.fbDifferentGroup, PLAY_AGAIN, t.intent)}
+      <div className="fb-row">
+        <label className="fb-label" htmlFor="fb-comment">
+          {t.fbComment}
+        </label>
+        <textarea
+          id="fb-comment"
+          rows={3}
+          maxLength={FEEDBACK_COMMENT_MAX}
+          placeholder={t.fbCommentPlaceholder}
+          value={form.comment ?? ""}
+          onChange={(e) => setForm({ ...form, comment: e.target.value })}
+        />
+      </div>
       <button className="primary big" disabled={!complete || busy} onClick={submit}>
-        {complete ? t.send : t.fbNeedAll(answered, FIELDS.length)}
+        {complete ? t.send : t.fbNeedFirst}
       </button>
       {error && <p className="error">{error}</p>}
       <p className="muted small fb-privacy">

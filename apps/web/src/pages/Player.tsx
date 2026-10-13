@@ -349,6 +349,9 @@ function PlayerBody({
           )}
           {cmd.error && <p className="error">{cmd.error}</p>}
         </section>
+        {/* P-11: every guest is a possible host. After the form, so it never competes with it;
+            not for the host, who already has "Play again". */}
+        {!isHost && (feedbackSent || !mine) && <HostYourOwn />}
       </div>
     );
   }
@@ -528,6 +531,22 @@ function QuickRate({ rating, onRate }: { rating: QuestionRating | undefined; onR
         {rating ? t.quickRateThanks : ""}
       </p>
     </div>
+  );
+}
+
+/** P-11: "Enjoyed it? Host your own" — opens the home page, where a new game starts in one tap. */
+function HostYourOwn() {
+  const t = useT();
+  return (
+    <section className="host-own" aria-labelledby="host-own-title">
+      <p className="host-own-title" id="host-own-title">
+        {t.hostOwnTitle}
+      </p>
+      <p className="muted">{t.hostOwnHint}</p>
+      <button className="secondary big" onClick={() => navigate("/")}>
+        {t.hostOwnButton}
+      </button>
+    </section>
   );
 }
 

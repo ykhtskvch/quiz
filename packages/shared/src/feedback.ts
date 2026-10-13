@@ -18,7 +18,11 @@ export type SessionFeedbackInput = {
   difficulty?: (typeof DIFFICULTY_RATINGS)[number];
   pace?: (typeof PACE_RATINGS)[number];
   culturalBalance?: (typeof BALANCE_RATINGS)[number];
+  /** "What would you improve?" — optional free text (EPIC 41 P-08). */
+  comment?: string;
 };
+
+export const FEEDBACK_COMMENT_MAX = 500;
 
 type Parsed<T> = { ok: true; value: T } | { ok: false; error: string };
 
@@ -38,6 +42,11 @@ export function parseSessionFeedback(raw: unknown): Parsed<SessionFeedbackInput>
     if (r[key] === undefined || r[key] === null) continue;
     if (!oneOf(allowed, r[key])) return { ok: false, error: `invalid ${key}` };
     (value as Record<string, unknown>)[key] = r[key];
+  }
+  if (r.comment !== undefined && r.comment !== null) {
+    if (typeof r.comment !== "string") return { ok: false, error: "invalid comment" };
+    const comment = r.comment.trim().replace(/\s+/g, " ").slice(0, FEEDBACK_COMMENT_MAX);
+    if (comment) value.comment = comment;
   }
   return { ok: true, value };
 }
