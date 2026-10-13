@@ -3,6 +3,7 @@ import { isRoomCode, LANGUAGES } from "@quiz/shared";
 import { api, ApiError } from "../api.ts";
 import { BetaBadge } from "../components.tsx";
 import { navigate } from "../router.ts";
+import { seen } from "../seen.ts";
 import { setLanguage, useLanguage, useT } from "../strings.ts";
 
 export function Home() {
@@ -16,7 +17,7 @@ export function Home() {
     setBusy(true);
     setError(null);
     try {
-      const room = await api.createRoom(lang);
+      const room = await api.createRoom(lang, seen.list());
       // The display token rides in the URL fragment: it never reaches the server logs,
       // and the display survives a reload.
       navigate(`/d/${room.roomCode}#t=${room.displayToken}`);

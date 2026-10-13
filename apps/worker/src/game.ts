@@ -122,6 +122,12 @@ export type RoomState = {
   usedQuestionIds: string[];
   /** BR-093: a fact is never asked twice in a room, whatever the wording. */
   usedFactIds: string[];
+  /**
+   * Facts this screen already showed in earlier rooms, oldest first (EPIC 41 P-03: a company coming
+   * back shouldn't get the same questions). Kept out like used facts, but given up when nothing
+   * fresh is left. Optional: rooms saved before 13.10 don't have it.
+   */
+  seenBefore?: string[];
   deadlines: Deadline[];
   seq: number;
   closed: boolean;
@@ -142,7 +148,14 @@ const fail = (status: ErrorStatus, error: string): Result<never> => ({ ok: false
 
 const PHASE_DEADLINES: PhaseDeadline[] = ["PRESENTATION_END", "ANSWER_END", "REVEAL_END", "NEXT_QUESTION"];
 
-export function newRoomState(code: string, displayTokenHash: string, now: number, config: GameConfig, language: Language = "ru"): RoomState {
+export function newRoomState(
+  code: string,
+  displayTokenHash: string,
+  now: number,
+  config: GameConfig,
+  language: Language = "ru",
+  seenBefore: string[] = [],
+): RoomState {
   return {
     version: ROOM_STATE_VERSION,
     code,
@@ -154,6 +167,7 @@ export function newRoomState(code: string, displayTokenHash: string, now: number
     game: null,
     usedQuestionIds: [],
     usedFactIds: [],
+    seenBefore,
     deadlines: [{ kind: "EXPIRY", at: now + config.roomExpiryMs }],
     seq: 0,
     closed: false,
@@ -478,16 +492,23 @@ export class Room {
     if (number > g.totalQuestions) return this.finishGame(now, "COMPLETED");
     const ready = this.s.players.filter((p) => p.onboarding && p.activeFrom <= number);
     const live = ready.filter((p) => p.connected || (p.disconnectedAt !== null && now - p.disconnectedAt < this.config.disconnectGraceMs));
-    const selection = nextQuestion({
-      bank: this.bank,
-      profile: g.profile ?? this.buildProfile(),
-      activePlayerIds: (live.length ? live : ready).map((p) => p.id),
-      usedQuestionIds: new Set(this.s.usedQuestionIds),
-      usedFactIds: new Set(this.s.usedFactIds),
-      state: g.composition,
-      config: { ...this.engine, language: this.s.language },
-      rng: this.rng,
-    });
+    const pick = (seen: string[]) =>
+      nextQuestion({
+        bank: this.bank,
+        profile: g.profile ?? this.buildProfile(),
+        activePlayerIds: (live.length ? live : ready).map((p) => p.id),
+        usedQuestionIds: new Set(this.s.usedQuestionIds),
+        usedFactIds: new Set([...this.s.usedFactIds, ...seen]),
+        state: g.composition,
+        config: { ...this.engine, language: this.s.language },
+        rng: this.rng,
+      });
+    let selection = pick(this.s.seenBefore ?? []);
+    if (!selection && this.s.seenBefore?.length) {
+      // Everything fresh has been asked: repeats from earlier evenings beat ending the game.
+      this.s.seenBefore = [];
+      selection = pick([]);
+    }
     if (!selection) return this.finishGame(now, "BANK_EXHAUSTED"); // bank exhausted for this room
     g.composition = selection.state;
     const next = selection.question;
@@ -702,7 +723,8 @@ export class Room {
   private revealData(q: QuestionRun): Reveal {
     const distribution: Record<OptionKey, number> = { A: 0, B: 0, C: 0, D: 0 };
     for (const a of Object.values(q.answers)) distribution[a.key]++;
-    return { correctKey: q.correctKey, explanation: q.explanation, distribution };
+    // The fact id goes out only once the answer is public: an id like "nirvana-aberdeen" gives it away.
+    return { correctKey: q.correctKey, explanation: q.explanation, distribution, factId: q.factId };
   }
 
   private personalResult(q: QuestionRun, a: Answer): PersonalResult {

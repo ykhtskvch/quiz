@@ -63,6 +63,8 @@ POST /rooms
 
 Backend создаёт Room (язык `ru`), первую Game Session (`ONBOARDING`), anonymous host player, room code, display token.
 
+> **С 13.10 (EPIC 41 P-03):** тело запроса — `{ "language": "ru" | "en", "seen"?: string[] }`. `seen` — id фактов, которые этот экран уже показывал (старые первыми, не больше 1000; хранятся в localStorage экрана 180 дней). Движок обходит их, как уже заданные в комнате, а если свежих не осталось — забывает их, но игру не останавливает. Экран узнаёт id факта из `reveal.factId` — только после раскрытия, потому что id вроде `nirvana-aberdeen` выдаёт ответ.
+
 Display открывает `/play/F7KD3M/display` и подписывается на `room:{room_id}`.
 
 ### Join

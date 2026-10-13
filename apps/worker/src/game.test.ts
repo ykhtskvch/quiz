@@ -358,6 +358,42 @@ describe("room language", () => {
   });
 });
 
+describe("coming back on the same screen (P-03)", () => {
+  /** Plays a whole room (4-question bank) and returns the facts in the order they were shown. */
+  const playRoom = (seen: string[]) => {
+    const state = newRoomState("ABCDEF", "h", 0, config, "ru", seen);
+    const room = () => new Room(state, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
+    for (const id of ["a", "b"]) {
+      const p = room().join(id, id, `h${id}`, 0);
+      room().connect(p.id, 0);
+      room().submitOnboarding(p.id, onboarding, 0);
+    }
+    room().start(state.players[0].id, 0);
+    for (let t = 0; state.game!.status !== "FINISHED" && t < 300_000; t += 1000) room().tick(t);
+    return { state, shown: state.game!.questions.map((q) => q.factId) };
+  };
+
+  it("asks facts this screen hasn't shown before first", () => {
+    const { shown } = playRoom(["fact-q1", "fact-q2"]);
+    expect(shown.slice(0, 2).sort()).toEqual(["fact-q3", "fact-q4"]);
+  });
+
+  it("falls back to earlier facts rather than end the game", () => {
+    const { state, shown } = playRoom(["fact-q1", "fact-q2", "fact-q3", "fact-q4"]);
+    expect(shown).toHaveLength(4);
+    expect(state.seenBefore).toEqual([]);
+  });
+
+  it("names the fact only once it is revealed", () => {
+    const { state, room } = setup();
+    room().tick(3000); // answering: no reveal yet, nothing names the fact
+    expect(JSON.stringify(room().snapshot({ role: "display" }, 3000))).not.toContain(q(state).factId);
+    room().answer(state.players[0].id, "B", 3000);
+    room().answer(state.players[1].id, "B", 3000);
+    expect(room().snapshot({ role: "display" }, 3100).reveal?.factId).toBe(q(state).factId);
+  });
+});
+
 describe("feedback and analytics", () => {
   const analytics = (r: Room) => r.effects.flatMap((e) => (e.to === "analytics" ? [e.event] : []));
 

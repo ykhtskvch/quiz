@@ -41,7 +41,12 @@ export type Reveal = {
   correctKey: OptionKey;
   explanation: string;
   distribution: Record<OptionKey, number>;
+  /** Lets the shared screen remember what it has shown (EPIC 41 P-03); sent only after the reveal. */
+  factId: string;
 };
+
+/** How many seen facts a screen may send when creating a room (P-03). */
+export const SEEN_FACTS_MAX = 1000;
 
 export type PersonalResult = { correct: boolean; points: number };
 

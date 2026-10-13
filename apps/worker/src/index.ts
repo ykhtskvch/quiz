@@ -15,6 +15,7 @@ import {
 import { RateLimiterDO } from "./limiter-do.ts";
 import type { Bucket } from "./ratelimit.ts";
 import { engineConfig } from "./deployment.ts";
+import { seenFacts } from "./seen.ts";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
 export { RateLimiterDO, RoomDO };
@@ -57,11 +58,12 @@ app.use("*", async (c, next) => {
 app.get("/meta", (c) => c.json({ beta: engineConfig(c.env).allowDrafts }));
 
 app.post("/rooms", async (c) => {
-  const body = await c.req.json<{ language?: unknown }>().catch(() => ({ language: undefined }));
+  const body = await c.req.json<{ language?: unknown; seen?: unknown }>().catch(() => ({ language: undefined, seen: undefined }));
   const language: Language = LANGUAGES.includes(body.language as Language) ? (body.language as Language) : "ru";
+  const seen = seenFacts(body.seen);
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = generateRoomCode();
-    const r = await roomStub(c, code).init(code, language);
+    const r = await roomStub(c, code).init(code, language, seen);
     if (r.ok) return c.json({ roomCode: code, displayToken: r.value.displayToken, language }, 201);
   }
   return c.json({ error: "could not allocate a room code" }, 503);

@@ -4,6 +4,7 @@ import QRCode from "qrcode";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
 import { AnswerTimer, BetaBadge, NextUp, placeOf, StatCards } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
+import { seen } from "../seen.ts";
 import { useCountdown, useRoom } from "../useRoom.ts";
 
 declare const __LAN_ORIGIN__: string;
@@ -16,6 +17,11 @@ export function Display({ code }: { code: string }) {
   useEffect(() => {
     if (roomLanguage) setLanguage(roomLanguage);
   }, [roomLanguage]);
+  // Remember what this screen has shown, so the next room here starts with fresh questions (P-03).
+  const revealedFact = s?.reveal?.factId;
+  useEffect(() => {
+    if (revealedFact) seen.add(revealedFact);
+  }, [revealedFact]);
 
   if (!token || status === "unauthorized") return <main className="center">{t.displayNoToken}</main>;
   if (status === "not-found") return <main className="center">{t.roomNotFound}</main>;
