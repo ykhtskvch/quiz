@@ -166,10 +166,10 @@ families:
             culture_specificity: GLOBAL
             text: Почему от нарезанного лука слезятся глаза?
             options:
-              - { key: A, text: Из-за запаха, distractor: COMMON_MISCONCEPTION }
-              - { key: B, text: "Из-за кислоты, которая уже есть в луке", distractor: NEAR_MISS }
-              - { key: C, text: "Из-за летучего вещества, которое образуется при разрезании", correct: true }
-              - { key: D, text: Из-за пыльцы, distractor: PLAUSIBLE }
+              - { key: A, text: "Мешает резкий запах", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Внутри лука есть кислота", distractor: NEAR_MISS }
+              - { key: C, text: "Выделяется едкое вещество", correct: true }
+              - { key: D, text: "Летят частички шелухи", distractor: PLAUSIBLE }
             explanation: Раздражающее вещество появляется, только когда клетки разрушаются, — охлаждённый лук «плачет» меньше.
             topics: { science: 0.6, food: 0.6 }
             contexts: { GLOBAL: 1 }

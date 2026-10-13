@@ -285,10 +285,10 @@ families:
             culture_specificity: GLOBAL
             text: Что особенно ценилось в телефоне до Spotify и дешёвого мобильного интернета?
             options:
-              - { key: A, text: 5G, distractor: CONTEXTUAL_CONFUSION }
-              - { key: B, text: Face ID, distractor: CONTEXTUAL_CONFUSION }
-              - { key: C, text: Слот для карты памяти под MP3, correct: true }
-              - { key: D, text: eSIM, distractor: CONTEXTUAL_CONFUSION }
+              - { key: A, text: "Связь 5G", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "Разблокировка по лицу", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "Слот для карты памяти", correct: true }
+              - { key: D, text: "Слот для eSIM", distractor: CONTEXTUAL_CONFUSION }
             explanation: Больше мегабайт — больше песен в автобусе.
             topics: { old-internet: 1 }
             contexts: { GLOBAL: 1, INTERNET_GLOBAL: 0.8 }

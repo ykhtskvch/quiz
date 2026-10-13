@@ -713,11 +713,11 @@ export const BANK: BankQuestion[] = [
       },
       {
         "key": "B",
-        "text": "Для гладиаторских боёв и зрелищ"
+        "text": "Для боёв гладиаторов"
       },
       {
         "key": "C",
-        "text": "Как храм Юпитера"
+        "text": "Для поклонения Юпитеру"
       },
       {
         "key": "D",
@@ -3545,19 +3545,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Шпионской базой ЦРУ"
+        "text": "Станцией прослушки ЦРУ"
       },
       {
         "key": "B",
-        "text": "Пунктом пропуска между Западным и Восточным Берлином"
+        "text": "Пунктом пропуска в Берлине"
       },
       {
         "key": "C",
-        "text": "Американским аэродромом"
+        "text": "Американской авиабазой"
       },
       {
         "key": "D",
-        "text": "Бункером Гитлера"
+        "text": "Последним бункером Гитлера"
       }
     ],
     "correctKey": "B",
@@ -5157,19 +5157,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "5G"
+        "text": "Связь 5G"
       },
       {
         "key": "B",
-        "text": "Face ID"
+        "text": "Разблокировка по лицу"
       },
       {
         "key": "C",
-        "text": "Слот для карты памяти под MP3"
+        "text": "Слот для карты памяти"
       },
       {
         "key": "D",
-        "text": "eSIM"
+        "text": "Слот для eSIM"
       }
     ],
     "correctKey": "C",
@@ -7437,19 +7437,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Они сразу начинают встречаться"
+        "text": "Они встречаются и не расстаются"
       },
       {
         "key": "B",
-        "text": "Он бросает скейт"
+        "text": "Он бросает скейт ради неё"
       },
       {
         "key": "C",
-        "text": "Она ему отказывает, а он потом становится звездой"
+        "text": "Она отказывает, а он становится звездой"
       },
       {
         "key": "D",
-        "text": "Он уезжает за границу"
+        "text": "Он уезжает, и они теряются"
       }
     ],
     "correctKey": "C",
@@ -7727,15 +7727,15 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "О скуке на работе"
+        "text": "О работе, которая надоела"
       },
       {
         "key": "B",
-        "text": "О чужих ожиданиях и потере себя"
+        "text": "О давлении чужих ожиданий"
       },
       {
         "key": "C",
-        "text": "О расставании"
+        "text": "О тяжёлом расставании"
       },
       {
         "key": "D",
@@ -8679,15 +8679,15 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Над рок-звездой"
+        "text": "Над бывшей рок-звездой"
       },
       {
         "key": "B",
-        "text": "Над парнем, который изо всех сил строит из себя «уличного»"
+        "text": "Над пригородным позёром"
       },
       {
         "key": "C",
-        "text": "Над учителем"
+        "text": "Над строгим учителем"
       },
       {
         "key": "D",
@@ -10620,19 +10620,19 @@ export const BANK: BankQuestion[] = [
     "options": [
       {
         "key": "A",
-        "text": "Из-за запаха"
+        "text": "Мешает резкий запах"
       },
       {
         "key": "B",
-        "text": "Из-за кислоты, которая уже есть в луке"
+        "text": "Внутри лука есть кислота"
       },
       {
         "key": "C",
-        "text": "Из-за летучего вещества, которое образуется при разрезании"
+        "text": "Выделяется едкое вещество"
       },
       {
         "key": "D",
-        "text": "Из-за пыльцы"
+        "text": "Летят частички шелухи"
       }
     ],
     "correctKey": "C",
@@ -16196,6 +16196,51 @@ export const BANK: BankQuestion[] = [
     "editorRating": 2
   },
   {
+    "id": "al-dente-meaning-ru-1",
+    "factId": "al-dente-meaning",
+    "familyId": "guests-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что буквально значит «аль денте»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«На зуб»"
+      },
+      {
+        "key": "B",
+        "text": "«До кости»"
+      },
+      {
+        "key": "C",
+        "text": "«На ощупь»"
+      },
+      {
+        "key": "D",
+        "text": "«До конца»"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Паста должна чуть-чуть сопротивляться, когда её кусаешь.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "sunlight-vitamin-d-en-1",
     "factId": "sunlight-vitamin-d",
     "familyId": "guests-food",
@@ -16241,6 +16286,52 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 1
+  },
+  {
+    "id": "sunlight-vitamin-d-ru-1",
+    "factId": "sunlight-vitamin-d",
+    "familyId": "guests-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой витамин кожа вырабатывает на солнце?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Витамин A"
+      },
+      {
+        "key": "B",
+        "text": "Витамин C"
+      },
+      {
+        "key": "C",
+        "text": "Витамин D"
+      },
+      {
+        "key": "D",
+        "text": "Витамин B12"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Поэтому зимой, когда солнца мало, врачи часто советуют пить витамин D.",
+    "topics": {
+      "food": 0.8,
+      "science": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "peanut-legume-en-1",
@@ -16290,6 +16381,52 @@ export const BANK: BankQuestion[] = [
     "editorRating": 2
   },
   {
+    "id": "peanut-legume-ru-1",
+    "factId": "peanut-legume",
+    "familyId": "guests-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой из этих «орехов» на самом деле бобовое — как горох и фасоль?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Миндаль"
+      },
+      {
+        "key": "B",
+        "text": "Арахис"
+      },
+      {
+        "key": "C",
+        "text": "Кешью"
+      },
+      {
+        "key": "D",
+        "text": "Грецкий орех"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Арахис созревает под землёй, в стручках. Миндаль и кешью — семена плодов.",
+    "topics": {
+      "food": 1,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "scoville-scale-en-1",
     "factId": "scoville-scale",
     "familyId": "guests-food",
@@ -16334,6 +16471,51 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 2
+  },
+  {
+    "id": "scoville-scale-ru-1",
+    "factId": "scoville-scale",
+    "familyId": "guests-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "По какой шкале измеряют остроту перца?",
+    "options": [
+      {
+        "key": "A",
+        "text": "По шкале Рихтера"
+      },
+      {
+        "key": "B",
+        "text": "По шкале Мооса"
+      },
+      {
+        "key": "C",
+        "text": "По шкале Кельвина"
+      },
+      {
+        "key": "D",
+        "text": "По шкале Сковилла"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Её придумал американский фармацевт Уилбур Сковилл в 1912 году. У «Каролинского жнеца» — больше 1,5 миллиона единиц.",
+    "topics": {
+      "food": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "maillard-reaction-en-1",
@@ -16383,6 +16565,52 @@ export const BANK: BankQuestion[] = [
     "editorRating": 2
   },
   {
+    "id": "maillard-reaction-ru-1",
+    "factId": "maillard-reaction",
+    "familyId": "guests-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "За что на кухне отвечает реакция Майяра?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Тесто поднимается"
+      },
+      {
+        "key": "B",
+        "text": "Корочка на стейке"
+      },
+      {
+        "key": "C",
+        "text": "Майонез не расслаивается"
+      },
+      {
+        "key": "D",
+        "text": "Молоко сворачивается"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Белки и сахара реагируют при температуре выше 140 °C. Поэтому тост вкуснее хлеба.",
+    "topics": {
+      "food": 1,
+      "science": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.8,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "calories-per-gram-en-1",
     "factId": "calories-per-gram",
     "familyId": "guests-food",
@@ -16428,6 +16656,52 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 3
+  },
+  {
+    "id": "calories-per-gram-ru-1",
+    "factId": "calories-per-gram",
+    "familyId": "guests-food",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что калорийнее всего — грамм на грамм?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Алкоголь"
+      },
+      {
+        "key": "B",
+        "text": "Сахар"
+      },
+      {
+        "key": "C",
+        "text": "Жир"
+      },
+      {
+        "key": "D",
+        "text": "Белок"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Жир — около 9 ккал на грамм. Алкоголь почти догоняет: 7. Сахар и белок — около 4.",
+    "topics": {
+      "food": 1,
+      "science": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 5,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "mousetrap-christie-en-1",
@@ -16478,6 +16752,53 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "mousetrap-christie-ru-1",
+    "factId": "mousetrap-christie",
+    "familyId": "guests-theatre",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто написал «Мышеловку» — пьесу, которая идёт в Лондоне дольше всех?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ноэл Кауард"
+      },
+      {
+        "key": "B",
+        "text": "Агата Кристи"
+      },
+      {
+        "key": "C",
+        "text": "Артур Конан Дойл"
+      },
+      {
+        "key": "D",
+        "text": "Оскар Уайльд"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Премьера была в 1952 году. В конце зрителей просят никому не рассказывать, кто убийца.",
+    "topics": {
+      "theatre": 1,
+      "world-literature": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "les-mis-west-end-en-1",
     "factId": "les-mis-west-end",
     "familyId": "guests-theatre",
@@ -16524,6 +16845,53 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 4
+  },
+  {
+    "id": "les-mis-west-end-ru-1",
+    "factId": "les-mis-west-end",
+    "familyId": "guests-theatre",
+    "subject": "les-miserables",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Какой мюзикл идёт в лондонском Вест-Энде с 1985 года — дольше всех?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Призрак оперы»"
+      },
+      {
+        "key": "B",
+        "text": "«Кошки»"
+      },
+      {
+        "key": "C",
+        "text": "«Король Лев»"
+      },
+      {
+        "key": "D",
+        "text": "«Отверженные»"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Премьера — в октябре 1985 года в «Барбикане». «Призрак оперы» появился годом позже, в 1986-м.",
+    "topics": {
+      "theatre": 1
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.6,
+      "I_KNOW_THIS": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "macbeth-curse-en-1",
@@ -16574,6 +16942,53 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "macbeth-curse-ru-1",
+    "factId": "macbeth-curse",
+    "familyId": "guests-theatre",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Название какой пьесы актёры боятся произносить в театре?",
+    "options": [
+      {
+        "key": "A",
+        "text": "«Гамлет»"
+      },
+      {
+        "key": "B",
+        "text": "«Отелло»"
+      },
+      {
+        "key": "C",
+        "text": "«Макбет»"
+      },
+      {
+        "key": "D",
+        "text": "«Король Лир»"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Вместо этого говорят «шотландская пьеса». Если вырвалось — выйти, трижды повернуться, сплюнуть и постучаться, чтобы впустили обратно.",
+    "topics": {
+      "theatre": 1,
+      "world-literature": 0.5
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.6,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "globe-thatched-roof-en-1",
     "factId": "globe-thatched-roof",
     "familyId": "guests-theatre",
@@ -16620,6 +17035,53 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 3
+  },
+  {
+    "id": "globe-thatched-roof-ru-1",
+    "factId": "globe-thatched-roof",
+    "familyId": "guests-theatre",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что после Великого пожара 1666 года в Лондоне разрешено только театру «Глобус»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Соломенная крыша"
+      },
+      {
+        "key": "B",
+        "text": "Деревянная сцена"
+      },
+      {
+        "key": "C",
+        "text": "Горящие факелы"
+      },
+      {
+        "key": "D",
+        "text": "Открытый партер"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "После пожара соломенные крыши запретили. Восстановленный «Глобус» получил особое разрешение — и спринклеры на крыше.",
+    "topics": {
+      "theatre": 1,
+      "british-culture": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "UK": 0.6
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.7,
+      "I_FIGURED_IT_OUT": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "hamilton-musical-en-1",
@@ -16669,6 +17131,52 @@ export const BANK: BankQuestion[] = [
     "editorRating": 2
   },
   {
+    "id": "hamilton-musical-ru-1",
+    "factId": "hamilton-musical",
+    "familyId": "guests-theatre",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "О каком из отцов-основателей США хип-хоп-мюзикл «Гамильтон»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Томас Джефферсон"
+      },
+      {
+        "key": "B",
+        "text": "Бенджамин Франклин"
+      },
+      {
+        "key": "C",
+        "text": "Александр Гамильтон"
+      },
+      {
+        "key": "D",
+        "text": "Джордж Вашингтон"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Это он на купюре в 10 долларов. Джефферсон и Вашингтон в мюзикле тоже есть.",
+    "topics": {
+      "theatre": 1,
+      "american-pop-culture": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "US": 0.4
+    },
+    "generations": {},
+    "difficulty": 1,
+    "dignity": 2,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.7
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "jung-introvert-en-1",
     "factId": "jung-introvert",
     "familyId": "guests-psychology",
@@ -16716,6 +17224,52 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "jung-introvert-ru-1",
+    "factId": "jung-introvert",
+    "familyId": "guests-psychology",
+    "subject": "jung",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто ввёл в обиход слова «интроверт» и «экстраверт»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Зигмунд Фрейд"
+      },
+      {
+        "key": "B",
+        "text": "Карл Юнг"
+      },
+      {
+        "key": "C",
+        "text": "Иван Павлов"
+      },
+      {
+        "key": "D",
+        "text": "Абрахам Маслоу"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "В книге «Психологические типы» 1921 года. Из его идей потом вырос тест Майерс — Бриггс.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.6,
+      "I_KNOW_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "jung-shadow-en-1",
     "factId": "jung-shadow",
     "familyId": "guests-psychology",
@@ -16760,6 +17314,51 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 3
+  },
+  {
+    "id": "jung-shadow-ru-1",
+    "factId": "jung-shadow",
+    "familyId": "guests-psychology",
+    "subject": "jung",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как в психологии Юнга называется скрытая, тёмная сторона личности?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Персона"
+      },
+      {
+        "key": "B",
+        "text": "Анима"
+      },
+      {
+        "key": "C",
+        "text": "Эго"
+      },
+      {
+        "key": "D",
+        "text": "Тень"
+      }
+    ],
+    "correctKey": "D",
+    "explanation": "Персона — маска, которую мы показываем миру. Тень — то, чего в себе видеть не хочется.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "pavlov-nobel-digestion-en-1",
@@ -16812,6 +17411,54 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "pavlov-nobel-digestion-ru-1",
+    "factId": "pavlov-nobel-digestion",
+    "familyId": "guests-psychology",
+    "subject": "pavlov",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "За что Иван Павлов — тот самый, с собаками — получил Нобелевскую премию в 1904 году?",
+    "options": [
+      {
+        "key": "A",
+        "text": "За условные рефлексы"
+      },
+      {
+        "key": "B",
+        "text": "За работы о пищеварении"
+      },
+      {
+        "key": "C",
+        "text": "За работы о сне"
+      },
+      {
+        "key": "D",
+        "text": "За работы о памяти"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Собаки были частью этих работ: Павлов заметил, что слюна у них течёт ещё до еды. Он стал первым нобелевским лауреатом из России.",
+    "topics": {
+      "psychology": 1,
+      "science": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.3
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 3,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "maslow-top-en-1",
     "factId": "maslow-top",
     "familyId": "guests-psychology",
@@ -16858,6 +17505,51 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "maslow-top-ru-1",
+    "factId": "maslow-top",
+    "familyId": "guests-psychology",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что на самой вершине пирамиды потребностей Маслоу?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Признание"
+      },
+      {
+        "key": "B",
+        "text": "Любовь и принадлежность"
+      },
+      {
+        "key": "C",
+        "text": "Самоактуализация"
+      },
+      {
+        "key": "D",
+        "text": "Безопасность"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Снизу вверх: физиология, безопасность, любовь и принадлежность, признание, самоактуализация.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 3,
+    "effects": {
+      "I_KNOW_THIS": 0.6,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "descartes-cogito-en-1",
     "factId": "descartes-cogito",
     "familyId": "guests-psychology",
@@ -16901,6 +17593,50 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 4
+  },
+  {
+    "id": "descartes-cogito-ru-1",
+    "factId": "descartes-cogito",
+    "familyId": "guests-psychology",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Кто сказал «Мыслю, следовательно, существую»?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Иммануил Кант"
+      },
+      {
+        "key": "B",
+        "text": "Сократ"
+      },
+      {
+        "key": "C",
+        "text": "Рене Декарт"
+      },
+      {
+        "key": "D",
+        "text": "Дональд Трамп"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Cogito, ergo sum. Впервые — по-французски, в 1637 году: «Je pense, donc je suis».",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 4,
+    "effects": {
+      "SHARED_KNOWLEDGE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "dunning-kruger-en-1",
@@ -16949,6 +17685,51 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "dunning-kruger-ru-1",
+    "factId": "dunning-kruger",
+    "familyId": "guests-psychology",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "По эффекту Даннинга — Крюгера люди, которые в чём-то плохо разбираются, обычно…",
+    "options": [
+      {
+        "key": "A",
+        "text": "Переоценивают свои силы"
+      },
+      {
+        "key": "B",
+        "text": "Недооценивают свои силы"
+      },
+      {
+        "key": "C",
+        "text": "Даже не пробуют"
+      },
+      {
+        "key": "D",
+        "text": "Копируют лучшего"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Эффект описали в 1999 году. Забавно, что многие очень уверены, что прекрасно его понимают.",
+    "topics": {
+      "psychology": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "SHARED_KNOWLEDGE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "pepsi-brads-drink-en-1",
     "factId": "pepsi-brads-drink",
     "familyId": "guests-brands",
@@ -16994,6 +17775,52 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 3
+  },
+  {
+    "id": "pepsi-brads-drink-ru-1",
+    "factId": "pepsi-brads-drink",
+    "familyId": "guests-brands",
+    "subject": "pepsi",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Как назывался Pepsi, когда его придумали в 1893 году?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Brad's Drink"
+      },
+      {
+        "key": "B",
+        "text": "Carolina Cola"
+      },
+      {
+        "key": "C",
+        "text": "Dr. Pepsin's Tonic"
+      },
+      {
+        "key": "D",
+        "text": "Bradham Fizz"
+      }
+    ],
+    "correctKey": "A",
+    "explanation": "Фармацевт Калеб Брэдхэм переименовал напиток в Pepsi-Cola в 1898 году.",
+    "topics": {
+      "fashion-brands": 1,
+      "food": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "HERO_CANDIDATE": 0.8
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "pepsi-soviet-fleet-en-1",
@@ -17046,6 +17873,54 @@ export const BANK: BankQuestion[] = [
     "editorRating": 4
   },
   {
+    "id": "pepsi-soviet-fleet-ru-1",
+    "factId": "pepsi-soviet-fleet",
+    "familyId": "guests-brands",
+    "subject": "pepsi",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Чем в 1989 году Советский Союз расплатился с PepsiCo за сироп?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Сибирским золотом"
+      },
+      {
+        "key": "B",
+        "text": "Старыми подлодками и кораблями"
+      },
+      {
+        "key": "C",
+        "text": "Правами на «Тетрис»"
+      },
+      {
+        "key": "D",
+        "text": "Билетами «Аэрофлота»"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "17 подлодок, крейсер, фрегат и эсминец — их потом продали на металлолом. На какое-то время у Pepsi был флот больше, чем у многих стран.",
+    "topics": {
+      "fashion-brands": 1,
+      "cold-war": 0.6
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.5
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "HERO_CANDIDATE": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "pepsi-challenge-en-1",
     "factId": "pepsi-challenge",
     "familyId": "guests-brands",
@@ -17091,6 +17966,52 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 2
+  },
+  {
+    "id": "pepsi-challenge-ru-1",
+    "factId": "pepsi-challenge",
+    "familyId": "guests-brands",
+    "subject": "pepsi",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Что такое «Вызов Pepsi» (Pepsi Challenge)?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Выпить литр залпом"
+      },
+      {
+        "key": "B",
+        "text": "Телешоу талантов"
+      },
+      {
+        "key": "C",
+        "text": "Слепой тест против колы"
+      },
+      {
+        "key": "D",
+        "text": "Путешествие через всю страну"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "С 1975 года: люди пробовали напиток из двух стаканчиков без надписей и выбирали, какой вкуснее.",
+    "topics": {
+      "fashion-brands": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "WHY_DO_I_REMEMBER_THIS": 0.5
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "new-coke-79-days-en-1",
@@ -17141,6 +18062,53 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "new-coke-79-days-ru-1",
+    "factId": "new-coke-79-days",
+    "familyId": "guests-brands",
+    "subject": "coca-cola",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "В 1985 году Coca-Cola поменяла рецепт. Через сколько вернули старый?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Примерно через неделю"
+      },
+      {
+        "key": "B",
+        "text": "Примерно через три месяца"
+      },
+      {
+        "key": "C",
+        "text": "Примерно через два года"
+      },
+      {
+        "key": "D",
+        "text": "Так и не вернули"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Через 79 дней. После тысяч жалоб старый вкус вернулся под названием «Coca-Cola Classic».",
+    "topics": {
+      "fashion-brands": 1,
+      "food": 0.3
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.5,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "starbucks-siren-en-1",
     "factId": "starbucks-siren",
     "familyId": "guests-brands",
@@ -17185,6 +18153,51 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 3
+  },
+  {
+    "id": "starbucks-siren-ru-1",
+    "factId": "starbucks-siren",
+    "familyId": "guests-brands",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "На логотипе какого бренда — сирена из греческих мифов?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Versace"
+      },
+      {
+        "key": "B",
+        "text": "Starbucks"
+      },
+      {
+        "key": "C",
+        "text": "Dove"
+      },
+      {
+        "key": "D",
+        "text": "Nike"
+      }
+    ],
+    "correctKey": "B",
+    "explanation": "Двухвостая сирена. У Versace логотип тоже греческий — голова Медузы.",
+    "topics": {
+      "fashion-brands": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 2,
+    "dignity": 2,
+    "effects": {
+      "I_KNOW_THIS": 0.5,
+      "SHARED_KNOWLEDGE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "ayn-rand-petersburg-en-1",
@@ -17235,6 +18248,52 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
+    "id": "ayn-rand-petersburg-ru-1",
+    "factId": "ayn-rand-petersburg",
+    "familyId": "guests-politics",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "Где родилась Айн Рэнд — автор «Атлант расправил плечи» и кумир либертарианцев?",
+    "options": [
+      {
+        "key": "A",
+        "text": "В Нью-Йорке"
+      },
+      {
+        "key": "B",
+        "text": "В Вене"
+      },
+      {
+        "key": "C",
+        "text": "В Петербурге"
+      },
+      {
+        "key": "D",
+        "text": "В Киеве"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Её звали Алиса Розенбаум. Она родилась в 1905 году, уехала из Советской России в 1926-м и больше не вернулась.",
+    "topics": {
+      "politics": 1,
+      "world-literature": 0.4
+    },
+    "contexts": {
+      "GLOBAL": 1,
+      "POST_SOVIET": 0.4
+    },
+    "generations": {},
+    "difficulty": 3,
+    "dignity": 3,
+    "effects": {
+      "HERO_CANDIDATE": 0.6
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
+  },
+  {
     "id": "monopoly-landlords-game-en-1",
     "factId": "monopoly-landlords-game",
     "familyId": "guests-politics",
@@ -17279,6 +18338,51 @@ export const BANK: BankQuestion[] = [
     "ageSafety": "ALL",
     "status": "APPROVED",
     "editorRating": 4
+  },
+  {
+    "id": "monopoly-landlords-game-ru-1",
+    "factId": "monopoly-landlords-game",
+    "familyId": "guests-politics",
+    "language": "ru",
+    "originLanguage": "en",
+    "cultureSpecificity": "GLOBAL",
+    "isBridge": false,
+    "text": "«Монополия» выросла из игры 1904 года. Что та игра должна была показать?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Как разбогатеть на недвижимости"
+      },
+      {
+        "key": "B",
+        "text": "Как устроена биржа"
+      },
+      {
+        "key": "C",
+        "text": "Вред жадных землевладельцев"
+      },
+      {
+        "key": "D",
+        "text": "Как банки дают в долг"
+      }
+    ],
+    "correctKey": "C",
+    "explanation": "Это «Игра землевладельца» Лиззи Мэги. Игра о вреде монополий стала игрой о том, как построить свою.",
+    "topics": {
+      "politics": 1
+    },
+    "contexts": {
+      "GLOBAL": 1
+    },
+    "generations": {},
+    "difficulty": 4,
+    "dignity": 2,
+    "effects": {
+      "I_FIGURED_IT_OUT": 0.6,
+      "HERO_CANDIDATE": 0.4
+    },
+    "ageSafety": "ALL",
+    "status": "DRAFT"
   },
   {
     "id": "adam-smith-twenty-en-1",
@@ -17329,195 +18433,51 @@ export const BANK: BankQuestion[] = [
     "editorRating": 3
   },
   {
-    "id": "svetov-nottingham-en-1",
-    "factId": "svetov-nottingham",
+    "id": "adam-smith-twenty-ru-1",
+    "factId": "adam-smith-twenty",
     "familyId": "guests-politics",
-    "subject": "svetov",
-    "language": "en",
+    "language": "ru",
     "originLanguage": "en",
     "cultureSpecificity": "GLOBAL",
-    "isBridge": true,
-    "text": "Russian libertarian YouTuber Mikhail Svetov got his politics degree at a university in which English city?",
+    "isBridge": false,
+    "text": "Чей портрет был на британской купюре в 20 фунтов до художника Тёрнера?",
     "options": [
       {
         "key": "A",
-        "text": "Oxford"
+        "text": "Чарльза Дарвина"
       },
       {
         "key": "B",
-        "text": "Nottingham"
+        "text": "Адама Смита"
       },
       {
         "key": "C",
-        "text": "Manchester"
+        "text": "Исаака Ньютона"
       },
       {
         "key": "D",
-        "text": "London"
+        "text": "Уинстона Черчилля"
       }
     ],
     "correctKey": "B",
-    "explanation": "Nottingham, in 2009. A libertarian educated in the home town of Robin Hood, who took from the rich.",
+    "explanation": "Шотландского «отца экономики» — с 2007 года. Дарвин был на 10 фунтах, Черчилль — на 5.",
     "topics": {
-      "politics": 1
+      "politics": 1,
+      "british-culture": 0.5
     },
     "contexts": {
       "GLOBAL": 1,
-      "POST_SOVIET": 1,
-      "UK": 0.5
+      "UK": 0.7
     },
     "generations": {},
     "difficulty": 3,
-    "dignity": 2,
+    "dignity": 3,
     "effects": {
-      "HERO_CANDIDATE": 0.7,
-      "BRIDGE": 0.5
+      "I_KNOW_THIS": 0.5,
+      "HERO_CANDIDATE": 0.5
     },
     "ageSafety": "ALL",
-    "status": "APPROVED",
-    "editorRating": 1
-  },
-  {
-    "id": "telegram-rally-planes-en-1",
-    "factId": "telegram-rally-planes",
-    "familyId": "guests-politics",
-    "subject": "svetov",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "GLOBAL",
-    "isBridge": false,
-    "text": "In 2018, thousands rallied in Moscow against the blocking of Telegram. What did they throw into the air?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Blue balloons"
-      },
-      {
-        "key": "B",
-        "text": "Their SIM cards"
-      },
-      {
-        "key": "C",
-        "text": "Paper planes"
-      },
-      {
-        "key": "D",
-        "text": "Old phones"
-      }
-    ],
-    "correctKey": "C",
-    "explanation": "Paper planes, Telegram's logo. The rally was organised by Mikhail Svetov and the Libertarian Party.",
-    "topics": {
-      "politics": 1
-    },
-    "contexts": {
-      "GLOBAL": 1,
-      "POST_SOVIET": 1,
-      "INTERNET_GLOBAL": 0.6
-    },
-    "generations": {},
-    "difficulty": 2,
-    "dignity": 2,
-    "effects": {
-      "I_FIGURED_IT_OUT": 0.6,
-      "HERO_CANDIDATE": 0.4
-    },
-    "ageSafety": "ALL",
-    "status": "APPROVED",
-    "editorRating": 3
-  },
-  {
-    "id": "svetov-svtv-en-1",
-    "factId": "svetov-svtv",
-    "familyId": "guests-politics",
-    "subject": "svetov",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "GLOBAL",
-    "isBridge": false,
-    "text": "What is Mikhail Svetov's YouTube channel called?",
-    "options": [
-      {
-        "key": "A",
-        "text": "SVTV"
-      },
-      {
-        "key": "B",
-        "text": "Popular Politics"
-      },
-      {
-        "key": "C",
-        "text": "Rabkor"
-      },
-      {
-        "key": "D",
-        "text": "Redaktsiya"
-      }
-    ],
-    "correctKey": "A",
-    "explanation": "SVTV. The others are real channels too: Navalny's team (Popular Politics), Boris Kagarlitsky's Rabkor and Alexey Pivovarov's Redaktsiya.",
-    "topics": {
-      "politics": 1
-    },
-    "contexts": {
-      "GLOBAL": 1,
-      "POST_SOVIET": 1
-    },
-    "generations": {},
-    "difficulty": 4,
-    "dignity": 2,
-    "effects": {
-      "HERO_CANDIDATE": 0.9
-    },
-    "ageSafety": "ALL",
-    "status": "APPROVED",
-    "editorRating": 1
-  },
-  {
-    "id": "shtefanov-romm-en-1",
-    "factId": "shtefanov-romm",
-    "familyId": "guests-politics",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "GLOBAL",
-    "isBridge": false,
-    "text": "Blogger-historian Alexander Shtefanov's 2023 film \"Ordinary Denazification\" plays on the title of which 1965 Soviet documentary?",
-    "options": [
-      {
-        "key": "A",
-        "text": "Man with a Movie Camera"
-      },
-      {
-        "key": "B",
-        "text": "Come and See"
-      },
-      {
-        "key": "C",
-        "text": "The Cranes Are Flying"
-      },
-      {
-        "key": "D",
-        "text": "Ordinary Fascism"
-      }
-    ],
-    "correctKey": "D",
-    "explanation": "Mikhail Romm's \"Ordinary Fascism\" (1965). Shtefanov's film is about life in occupied Mariupol; he left Russia in 2024.",
-    "topics": {
-      "politics": 1
-    },
-    "contexts": {
-      "GLOBAL": 1,
-      "POST_SOVIET": 1
-    },
-    "generations": {},
-    "difficulty": 5,
-    "dignity": 4,
-    "effects": {
-      "HERO_CANDIDATE": 0.9
-    },
-    "ageSafety": "ALL",
-    "status": "APPROVED",
-    "editorRating": 1
+    "status": "DRAFT"
   },
   {
     "id": "tube-circle-yellow-en-1",

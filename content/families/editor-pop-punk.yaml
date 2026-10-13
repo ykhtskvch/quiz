@@ -282,10 +282,10 @@ families:
             culture_specificity: GLOBAL
             text: Что происходит с парнем в песне Аврил Лавин «Sk8er Boi»?
             options:
-              - { key: A, text: Они сразу начинают встречаться, distractor: PLAUSIBLE }
-              - { key: B, text: Он бросает скейт, distractor: PLAUSIBLE }
-              - { key: C, text: "Она ему отказывает, а он потом становится звездой", correct: true }
-              - { key: D, text: Он уезжает за границу, distractor: PLAUSIBLE }
+              - { key: A, text: "Они встречаются и не расстаются", distractor: PLAUSIBLE }
+              - { key: B, text: "Он бросает скейт ради неё", distractor: PLAUSIBLE }
+              - { key: C, text: "Она отказывает, а он становится звездой", correct: true }
+              - { key: D, text: "Он уезжает, и они теряются", distractor: PLAUSIBLE }
             explanation: Права на фильм по песне купили ещё в 2003 году, а в 2022-м Аврил сказала, что занимается им сама.
             topics: { world-pop: 1 }
             contexts: { GLOBAL: 1 }
@@ -429,10 +429,10 @@ families:
             culture_specificity: GLOBAL
             text: О чём в основном песня Linkin Park «Numb»?
             options:
-              - { key: A, text: О скуке на работе, distractor: PLAUSIBLE }
-              - { key: B, text: О чужих ожиданиях и потере себя, correct: true }
-              - { key: C, text: О расставании, distractor: COMMON_MISCONCEPTION }
-              - { key: D, text: О физической усталости, distractor: PLAUSIBLE }
+              - { key: A, text: "О работе, которая надоела", distractor: PLAUSIBLE }
+              - { key: B, text: "О давлении чужих ожиданий", correct: true }
+              - { key: C, text: "О тяжёлом расставании", distractor: COMMON_MISCONCEPTION }
+              - { key: D, text: "О физической усталости", distractor: PLAUSIBLE }
             explanation: Потом из неё вышел огромный мэшап с Jay-Z — «Numb/Encore».
             topics: { world-pop: 1 }
             contexts: { GLOBAL: 1 }
@@ -900,10 +900,10 @@ families:
             culture_specificity: GLOBAL
             text: Над кем смеётся песня The Offspring «Pretty Fly (for a White Guy)»?
             options:
-              - { key: A, text: Над рок-звездой, distractor: PLAUSIBLE }
-              - { key: B, text: "Над парнем, который изо всех сил строит из себя «уличного»", correct: true }
-              - { key: C, text: Над учителем, distractor: PLAUSIBLE }
-              - { key: D, text: Над богатым музыкантом, distractor: PLAUSIBLE }
+              - { key: A, text: "Над бывшей рок-звездой", distractor: PLAUSIBLE }
+              - { key: B, text: "Над пригородным позёром", correct: true }
+              - { key: C, text: "Над строгим учителем", distractor: PLAUSIBLE }
+              - { key: D, text: "Над богатым музыкантом", distractor: PLAUSIBLE }
             explanation: Хит 1998 года, добравшийся до первого места в Великобритании.
             topics: { world-pop: 1 }
             contexts: { GLOBAL: 1 }

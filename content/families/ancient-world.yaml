@@ -16,8 +16,8 @@ families:
             text: "Для чего построили Колизей?"
             options:
               - { key: A, text: "Для заседаний сената", distractor: PLAUSIBLE }
-              - { key: B, text: "Для гладиаторских боёв и зрелищ", correct: true }
-              - { key: C, text: "Как храм Юпитера", distractor: PLAUSIBLE }
+              - { key: B, text: "Для боёв гладиаторов", correct: true }
+              - { key: C, text: "Для поклонения Юпитеру", distractor: PLAUSIBLE }
               - { key: D, text: "Для гонок на колесницах", distractor: NEAR_MISS }
             explanation: "Гонки колесниц устраивали в Большом цирке."
             topics: { ancient-world: 1.0 }

@@ -154,10 +154,10 @@ families:
             culture_specificity: GLOBAL
             text: "Чем был «Чекпойнт Чарли»?"
             options:
-              - { key: A, text: "Шпионской базой ЦРУ", distractor: PLAUSIBLE }
-              - { key: B, text: "Пунктом пропуска между Западным и Восточным Берлином", correct: true }
-              - { key: C, text: "Американским аэродромом", distractor: PLAUSIBLE }
-              - { key: D, text: "Бункером Гитлера", distractor: CONTEXTUAL_CONFUSION }
+              - { key: A, text: "Станцией прослушки ЦРУ", distractor: PLAUSIBLE }
+              - { key: B, text: "Пунктом пропуска в Берлине", correct: true }
+              - { key: C, text: "Американской авиабазой", distractor: PLAUSIBLE }
+              - { key: D, text: "Последним бункером Гитлера", distractor: CONTEXTUAL_CONFUSION }
             explanation: "«Чарли» — буква C в радиоалфавите НАТО: это был третий пункт после «Альфы» и «Браво»."
             topics: { cold-war: 1.0 }
             contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }

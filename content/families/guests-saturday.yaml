@@ -31,6 +31,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: al-dente-meaning-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Что буквально значит «аль денте»?"
+            options:
+              - { key: A, text: "«На зуб»", correct: true }
+              - { key: B, text: "«До кости»", distractor: PLAUSIBLE }
+              - { key: C, text: "«На ощупь»", distractor: NEAR_MISS }
+              - { key: D, text: "«До конца»", distractor: PLAUSIBLE }
+            explanation: "Паста должна чуть-чуть сопротивляться, когда её кусаешь."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: sunlight-vitamin-d
         statement: "The skin makes vitamin D when exposed to sunlight (UVB)."
@@ -58,6 +77,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: sunlight-vitamin-d-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Какой витамин кожа вырабатывает на солнце?"
+            options:
+              - { key: A, text: "Витамин A", distractor: PLAUSIBLE }
+              - { key: B, text: "Витамин C", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Витамин D", correct: true }
+              - { key: D, text: "Витамин B12", distractor: SAME_CATEGORY }
+            explanation: "Поэтому зимой, когда солнца мало, врачи часто советуют пить витамин D."
+            topics: { food: 0.8, science: 0.6 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 1
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: peanut-legume
         statement: "Botanically, the peanut is a legume, not a nut."
@@ -85,6 +123,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: peanut-legume-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Какой из этих «орехов» на самом деле бобовое — как горох и фасоль?"
+            options:
+              - { key: A, text: "Миндаль", distractor: SAME_CATEGORY }
+              - { key: B, text: "Арахис", correct: true }
+              - { key: C, text: "Кешью", distractor: SAME_CATEGORY }
+              - { key: D, text: "Грецкий орех", distractor: SAME_CATEGORY }
+            explanation: "Арахис созревает под землёй, в стручках. Миндаль и кешью — семена плодов."
+            topics: { food: 1.0, science: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.5, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: scoville-scale
         statement: "The heat of chilli peppers is measured on the Scoville scale."
@@ -112,6 +169,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: scoville-scale-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "По какой шкале измеряют остроту перца?"
+            options:
+              - { key: A, text: "По шкале Рихтера", distractor: CONTEXTUAL_CONFUSION }
+              - { key: B, text: "По шкале Мооса", distractor: CONTEXTUAL_CONFUSION }
+              - { key: C, text: "По шкале Кельвина", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "По шкале Сковилла", correct: true }
+            explanation: "Её придумал американский фармацевт Уилбур Сковилл в 1912 году. У «Каролинского жнеца» — больше 1,5 миллиона единиц."
+            topics: { food: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: maillard-reaction
         statement: "The Maillard reaction between amino acids and sugars causes browning and flavour in seared, roasted and toasted food."
@@ -139,6 +215,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: maillard-reaction-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "За что на кухне отвечает реакция Майяра?"
+            options:
+              - { key: A, text: "Тесто поднимается", distractor: PLAUSIBLE }
+              - { key: B, text: "Корочка на стейке", correct: true }
+              - { key: C, text: "Майонез не расслаивается", distractor: PLAUSIBLE }
+              - { key: D, text: "Молоко сворачивается", distractor: PLAUSIBLE }
+            explanation: "Белки и сахара реагируют при температуре выше 140 °C. Поэтому тост вкуснее хлеба."
+            topics: { food: 1.0, science: 0.5 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.8, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: calories-per-gram
         statement: "Per gram, fat has about 9 kcal, alcohol about 7, protein and carbohydrate about 4."
@@ -166,6 +261,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: calories-per-gram-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Что калорийнее всего — грамм на грамм?"
+            options:
+              - { key: A, text: "Алкоголь", distractor: NEAR_MISS }
+              - { key: B, text: "Сахар", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Жир", correct: true }
+              - { key: D, text: "Белок", distractor: PLAUSIBLE }
+            explanation: "Жир — около 9 ккал на грамм. Алкоголь почти догоняет: 7. Сахар и белок — около 4."
+            topics: { food: 1.0, science: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 5
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
   - family: guests-theatre
     name: "London theatre"
@@ -196,6 +310,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: mousetrap-christie-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Кто написал «Мышеловку» — пьесу, которая идёт в Лондоне дольше всех?"
+            options:
+              - { key: A, text: "Ноэл Кауард", distractor: SAME_CATEGORY }
+              - { key: B, text: "Агата Кристи", correct: true }
+              - { key: C, text: "Артур Конан Дойл", distractor: NEAR_MISS }
+              - { key: D, text: "Оскар Уайльд", distractor: SAME_CATEGORY }
+            explanation: "Премьера была в 1952 году. В конце зрителей просят никому не рассказывать, кто убийца."
+            topics: { theatre: 1.0, world-literature: 0.4 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: les-mis-west-end
         subject: les-miserables
@@ -224,6 +357,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: les-mis-west-end-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Какой мюзикл идёт в лондонском Вест-Энде с 1985 года — дольше всех?"
+            options:
+              - { key: A, text: "«Призрак оперы»", distractor: NEAR_MISS }
+              - { key: B, text: "«Кошки»", distractor: NEAR_MISS }
+              - { key: C, text: "«Король Лев»", distractor: PLAUSIBLE }
+              - { key: D, text: "«Отверженные»", correct: true }
+            explanation: "Премьера — в октябре 1985 года в «Барбикане». «Призрак оперы» появился годом позже, в 1986-м."
+            topics: { theatre: 1.0 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 3
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: macbeth-curse
         statement: "By theatre superstition, saying 'Macbeth' inside a theatre brings bad luck; actors call it 'the Scottish play'."
@@ -251,6 +403,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: macbeth-curse-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Название какой пьесы актёры боятся произносить в театре?"
+            options:
+              - { key: A, text: "«Гамлет»", distractor: SAME_CATEGORY }
+              - { key: B, text: "«Отелло»", distractor: SAME_CATEGORY }
+              - { key: C, text: "«Макбет»", correct: true }
+              - { key: D, text: "«Король Лир»", distractor: SAME_CATEGORY }
+            explanation: "Вместо этого говорят «шотландская пьеса». Если вырвалось — выйти, трижды повернуться, сплюнуть и постучаться, чтобы впустили обратно."
+            topics: { theatre: 1.0, world-literature: 0.5 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 2
+            dignity: 3
+            effects: { SHARED_KNOWLEDGE: 0.6, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: globe-thatched-roof
         statement: "Shakespeare's Globe (1997) has the first thatched roof permitted in London since the Great Fire of 1666."
@@ -278,6 +449,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: globe-thatched-roof-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Что после Великого пожара 1666 года в Лондоне разрешено только театру «Глобус»?"
+            options:
+              - { key: A, text: "Соломенная крыша", correct: true }
+              - { key: B, text: "Деревянная сцена", distractor: PLAUSIBLE }
+              - { key: C, text: "Горящие факелы", distractor: PLAUSIBLE }
+              - { key: D, text: "Открытый партер", distractor: NEAR_MISS }
+            explanation: "После пожара соломенные крыши запретили. Восстановленный «Глобус» получил особое разрешение — и спринклеры на крыше."
+            topics: { theatre: 1.0, british-culture: 0.4 }
+            contexts: { GLOBAL: 1.0, UK: 0.6 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.7, I_FIGURED_IT_OUT: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: hamilton-musical
         statement: "Hamilton, by Lin-Manuel Miranda, is about the US founding father Alexander Hamilton; it has played at London's Victoria Palace Theatre since 2017."
@@ -305,6 +495,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: hamilton-musical-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "О каком из отцов-основателей США хип-хоп-мюзикл «Гамильтон»?"
+            options:
+              - { key: A, text: "Томас Джефферсон", distractor: NEAR_MISS }
+              - { key: B, text: "Бенджамин Франклин", distractor: SAME_CATEGORY }
+              - { key: C, text: "Александр Гамильтон", correct: true }
+              - { key: D, text: "Джордж Вашингтон", distractor: SAME_CATEGORY }
+            explanation: "Это он на купюре в 10 долларов. Джефферсон и Вашингтон в мюзикле тоже есть."
+            topics: { theatre: 1.0, american-pop-culture: 0.4 }
+            contexts: { GLOBAL: 1.0, US: 0.4 }
+            difficulty: 1
+            dignity: 2
+            effects: { SHARED_KNOWLEDGE: 0.7 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
   - family: guests-psychology
     name: "Psychology & philosophy"
@@ -336,6 +545,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: jung-introvert-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Кто ввёл в обиход слова «интроверт» и «экстраверт»?"
+            options:
+              - { key: A, text: "Зигмунд Фрейд", distractor: NEAR_MISS }
+              - { key: B, text: "Карл Юнг", correct: true }
+              - { key: C, text: "Иван Павлов", distractor: SAME_CATEGORY }
+              - { key: D, text: "Абрахам Маслоу", distractor: SAME_CATEGORY }
+            explanation: "В книге «Психологические типы» 1921 года. Из его идей потом вырос тест Майерс — Бриггс."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.6, I_KNOW_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: jung-shadow
         subject: jung
@@ -364,6 +592,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: jung-shadow-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Как в психологии Юнга называется скрытая, тёмная сторона личности?"
+            options:
+              - { key: A, text: "Персона", distractor: NEAR_MISS }
+              - { key: B, text: "Анима", distractor: NEAR_MISS }
+              - { key: C, text: "Эго", distractor: SAME_CATEGORY }
+              - { key: D, text: "Тень", correct: true }
+            explanation: "Персона — маска, которую мы показываем миру. Тень — то, чего в себе видеть не хочется."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: pavlov-nobel-digestion
         subject: pavlov
@@ -393,6 +640,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: pavlov-nobel-digestion-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "За что Иван Павлов — тот самый, с собаками — получил Нобелевскую премию в 1904 году?"
+            options:
+              - { key: A, text: "За условные рефлексы", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "За работы о пищеварении", correct: true }
+              - { key: C, text: "За работы о сне", distractor: PLAUSIBLE }
+              - { key: D, text: "За работы о памяти", distractor: PLAUSIBLE }
+            explanation: "Собаки были частью этих работ: Павлов заметил, что слюна у них течёт ещё до еды. Он стал первым нобелевским лауреатом из России."
+            topics: { psychology: 1.0, science: 0.6 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.3 }
+            difficulty: 4
+            dignity: 3
+            effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: maslow-top
         statement: "At the top of Maslow's hierarchy of needs is self-actualisation."
@@ -420,6 +686,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: maslow-top-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Что на самой вершине пирамиды потребностей Маслоу?"
+            options:
+              - { key: A, text: "Признание", distractor: NEAR_MISS }
+              - { key: B, text: "Любовь и принадлежность", distractor: PLAUSIBLE }
+              - { key: C, text: "Самоактуализация", correct: true }
+              - { key: D, text: "Безопасность", distractor: PLAUSIBLE }
+            explanation: "Снизу вверх: физиология, безопасность, любовь и принадлежность, признание, самоактуализация."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.6, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: descartes-cogito
         statement: "'I think, therefore I am' (Cogito, ergo sum) is René Descartes'."
@@ -447,6 +732,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: descartes-cogito-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Кто сказал «Мыслю, следовательно, существую»?"
+            options:
+              - { key: A, text: "Иммануил Кант", distractor: SAME_CATEGORY }
+              - { key: B, text: "Сократ", distractor: SAME_CATEGORY }
+              - { key: C, text: "Рене Декарт", correct: true }
+              - { key: D, text: "Дональд Трамп", distractor: SAME_CATEGORY }
+            explanation: "Cogito, ergo sum. Впервые — по-французски, в 1637 году: «Je pense, donc je suis»."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 4
+            effects: { SHARED_KNOWLEDGE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: dunning-kruger
         statement: "The Dunning–Kruger effect (1999): people with low ability at a task tend to overestimate their ability."
@@ -474,6 +778,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: dunning-kruger-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "По эффекту Даннинга — Крюгера люди, которые в чём-то плохо разбираются, обычно…"
+            options:
+              - { key: A, text: "Переоценивают свои силы", correct: true }
+              - { key: B, text: "Недооценивают свои силы", distractor: COMMON_MISCONCEPTION }
+              - { key: C, text: "Даже не пробуют", distractor: PLAUSIBLE }
+              - { key: D, text: "Копируют лучшего", distractor: PLAUSIBLE }
+            explanation: "Эффект описали в 1999 году. Забавно, что многие очень уверены, что прекрасно его понимают."
+            topics: { psychology: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.5, SHARED_KNOWLEDGE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
   - family: guests-brands
     name: "Brands"
@@ -505,6 +828,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: pepsi-brads-drink-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Как назывался Pepsi, когда его придумали в 1893 году?"
+            options:
+              - { key: A, text: "Brad's Drink", correct: true }
+              - { key: B, text: "Carolina Cola", distractor: PLAUSIBLE }
+              - { key: C, text: "Dr. Pepsin's Tonic", distractor: NEAR_MISS }
+              - { key: D, text: "Bradham Fizz", distractor: PLAUSIBLE }
+            explanation: "Фармацевт Калеб Брэдхэм переименовал напиток в Pepsi-Cola в 1898 году."
+            topics: { fashion-brands: 1.0, food: 0.4 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { HERO_CANDIDATE: 0.8 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: pepsi-soviet-fleet
         subject: pepsi
@@ -534,6 +876,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: pepsi-soviet-fleet-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Чем в 1989 году Советский Союз расплатился с PepsiCo за сироп?"
+            options:
+              - { key: A, text: "Сибирским золотом", distractor: PLAUSIBLE }
+              - { key: B, text: "Старыми подлодками и кораблями", correct: true }
+              - { key: C, text: "Правами на «Тетрис»", distractor: CONTEXTUAL_CONFUSION }
+              - { key: D, text: "Билетами «Аэрофлота»", distractor: PLAUSIBLE }
+            explanation: "17 подлодок, крейсер, фрегат и эсминец — их потом продали на металлолом. На какое-то время у Pepsi был флот больше, чем у многих стран."
+            topics: { fashion-brands: 1.0, cold-war: 0.6 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.5 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: pepsi-challenge
         subject: pepsi
@@ -562,6 +923,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: pepsi-challenge-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Что такое «Вызов Pepsi» (Pepsi Challenge)?"
+            options:
+              - { key: A, text: "Выпить литр залпом", distractor: PLAUSIBLE }
+              - { key: B, text: "Телешоу талантов", distractor: PLAUSIBLE }
+              - { key: C, text: "Слепой тест против колы", correct: true }
+              - { key: D, text: "Путешествие через всю страну", distractor: PLAUSIBLE }
+            explanation: "С 1975 года: люди пробовали напиток из двух стаканчиков без надписей и выбирали, какой вкуснее."
+            topics: { fashion-brands: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.5, WHY_DO_I_REMEMBER_THIS: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: new-coke-79-days
         subject: coca-cola
@@ -590,6 +970,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: new-coke-79-days-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "В 1985 году Coca-Cola поменяла рецепт. Через сколько вернули старый?"
+            options:
+              - { key: A, text: "Примерно через неделю", distractor: PLAUSIBLE }
+              - { key: B, text: "Примерно через три месяца", correct: true }
+              - { key: C, text: "Примерно через два года", distractor: PLAUSIBLE }
+              - { key: D, text: "Так и не вернули", distractor: COMMON_MISCONCEPTION }
+            explanation: "Через 79 дней. После тысяч жалоб старый вкус вернулся под названием «Coca-Cola Classic»."
+            topics: { fashion-brands: 1.0, food: 0.3 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 3
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.5, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: starbucks-siren
         statement: "The Starbucks logo is a twin-tailed siren from Greek mythology."
@@ -617,6 +1016,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: starbucks-siren-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "На логотипе какого бренда — сирена из греческих мифов?"
+            options:
+              - { key: A, text: "Versace", distractor: NEAR_MISS }
+              - { key: B, text: "Starbucks", correct: true }
+              - { key: C, text: "Dove", distractor: PLAUSIBLE }
+              - { key: D, text: "Nike", distractor: CONTEXTUAL_CONFUSION }
+            explanation: "Двухвостая сирена. У Versace логотип тоже греческий — голова Медузы."
+            topics: { fashion-brands: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 2
+            dignity: 2
+            effects: { I_KNOW_THIS: 0.5, SHARED_KNOWLEDGE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
   - family: guests-politics
     name: "Politics & economics"
@@ -648,6 +1066,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: ayn-rand-petersburg-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Где родилась Айн Рэнд — автор «Атлант расправил плечи» и кумир либертарианцев?"
+            options:
+              - { key: A, text: "В Нью-Йорке", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "В Вене", distractor: PLAUSIBLE }
+              - { key: C, text: "В Петербурге", correct: true }
+              - { key: D, text: "В Киеве", distractor: NEAR_MISS }
+            explanation: "Её звали Алиса Розенбаум. Она родилась в 1905 году, уехала из Советской России в 1926-м и больше не вернулась."
+            topics: { politics: 1.0, world-literature: 0.4 }
+            contexts: { GLOBAL: 1.0, POST_SOVIET: 0.4 }
+            difficulty: 3
+            dignity: 3
+            effects: { HERO_CANDIDATE: 0.6 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: monopoly-landlords-game
         statement: "Monopoly descends from Lizzie Magie's The Landlord's Game (patented 1904), designed to show the evils of concentrating land in private monopolies."
@@ -675,6 +1112,25 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: monopoly-landlords-game-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "«Монополия» выросла из игры 1904 года. Что та игра должна была показать?"
+            options:
+              - { key: A, text: "Как разбогатеть на недвижимости", distractor: COMMON_MISCONCEPTION }
+              - { key: B, text: "Как устроена биржа", distractor: PLAUSIBLE }
+              - { key: C, text: "Вред жадных землевладельцев", correct: true }
+              - { key: D, text: "Как банки дают в долг", distractor: PLAUSIBLE }
+            explanation: "Это «Игра землевладельца» Лиззи Мэги. Игра о вреде монополий стала игрой о том, как построить свою."
+            topics: { politics: 1.0 }
+            contexts: { GLOBAL: 1.0 }
+            difficulty: 4
+            dignity: 2
+            effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.4 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
 
       - id: adam-smith-twenty
         statement: "The economist Adam Smith appeared on the Bank of England £20 note from 2007 until the polymer Turner note (2020)."
@@ -702,3 +1158,22 @@ families:
             reviewed:
               by: Юля
               at: 2026-10-09
+          - id: adam-smith-twenty-ru-1
+            language: ru
+            origin_language: en
+            culture_specificity: GLOBAL
+            text: "Чей портрет был на британской купюре в 20 фунтов до художника Тёрнера?"
+            options:
+              - { key: A, text: "Чарльза Дарвина", distractor: NEAR_MISS }
+              - { key: B, text: "Адама Смита", correct: true }
+              - { key: C, text: "Исаака Ньютона", distractor: SAME_CATEGORY }
+              - { key: D, text: "Уинстона Черчилля", distractor: SAME_CATEGORY }
+            explanation: "Шотландского «отца экономики» — с 2007 года. Дарвин был на 10 фунтах, Черчилль — на 5."
+            topics: { politics: 1.0, british-culture: 0.5 }
+            contexts: { GLOBAL: 1.0, UK: 0.7 }
+            difficulty: 3
+            dignity: 3
+            effects: { I_KNOW_THIS: 0.5, HERO_CANDIDATE: 0.5 }
+            status: DRAFT
+            generation_method: AI
+            review_notes: ["AI doubt: перевод 13.10 — проверить естественность русского и что варианты остались однозначными."]
