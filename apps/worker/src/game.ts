@@ -128,6 +128,8 @@ export type RoomState = {
    * fresh is left. Optional: rooms saved before 13.10 don't have it.
    */
   seenBefore?: string[];
+  /** No shared screen (EPIC 41 P-04): the phones show what the TV would — invite, "did you know", results. */
+  phonesOnly?: boolean;
   deadlines: Deadline[];
   seq: number;
   closed: boolean;
@@ -155,6 +157,7 @@ export function newRoomState(
   config: GameConfig,
   language: Language = "ru",
   seenBefore: string[] = [],
+  phonesOnly = false,
 ): RoomState {
   return {
     version: ROOM_STATE_VERSION,
@@ -168,6 +171,7 @@ export function newRoomState(
     usedQuestionIds: [],
     usedFactIds: [],
     seenBefore,
+    phonesOnly,
     deadlines: [{ kind: "EXPIRY", at: now + config.roomExpiryMs }],
     seq: 0,
     closed: false,
@@ -411,7 +415,13 @@ export class Room {
             onboarding: me.onboarding,
           }
         : { role: "display" },
-      room: { code: this.s.code, language: this.s.language, status: this.roomStatus(), players: this.s.players.map((p) => this.publicPlayer(p)) },
+      room: {
+        code: this.s.code,
+        language: this.s.language,
+        status: this.roomStatus(),
+        players: this.s.players.map((p) => this.publicPlayer(p)),
+        phonesOnly: Boolean(this.s.phonesOnly),
+      },
       game: g ? { number: g.number, status: g.status, softEndSuggested: g.softEndSuggested, totalQuestions: g.totalQuestions } : null,
       question: g?.status === "FINISHED" ? null : this.publicQuestion(now),
       reveal: q?.phase === "REVEALED" && g?.status !== "FINISHED" ? this.revealData(q) : null,

@@ -4,7 +4,8 @@ import type { HostCommand, OnboardingInput, OptionKey, QuestionRating, Snapshot 
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { navigate } from "../router.ts";
-import { AnswerTimer, NextUp, placeOf } from "../components.tsx";
+import { AnswerTimer, JoinQr, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
+import { seen } from "../seen.ts";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
 import { setLanguage, useT } from "../strings.ts";
@@ -242,6 +243,11 @@ function PlayerBody({
   const { sentInGame, setSentInGame, ratingInGame, setRatingInGame } = offboarding;
   const feedbackSent = Boolean(s.mine?.feedbackGiven) || (game !== null && sentInGame === game.number);
   const rating = game !== null && ratingInGame === game.number;
+  // Without a TV the host's phone is the room's memory of what was asked (P-03, P-04).
+  const revealedFact = s.room.phonesOnly && isHost ? s.reveal?.factId : undefined;
+  useEffect(() => {
+    if (revealedFact) seen.add(revealedFact);
+  }, [revealedFact]);
 
   // ---- lobby: one status block — role, readiness, the next step (DS-042, DS-043) ----
   if (!game) {
@@ -256,6 +262,7 @@ function PlayerBody({
           <p className="muted">{t.readyCount(ready, s.room.players.length)}</p>
           {isHost && enough && settingUp > 0 && <p className="hint">{t.othersSettingUp(settingUp)}</p>}
         </div>
+        {s.room.phonesOnly && <Invite code={code} />}
         {isHost && (
           <div className="lobby-action">
             <button className="primary big" disabled={cmd.busy || !enough} onClick={() => cmd.host("start")}>
@@ -312,6 +319,7 @@ function PlayerBody({
             </p>
           )}
         </section>
+        {s.room.phonesOnly && <PhoneStandings results={s.results} />}
         {mine && !feedbackSent && <SessionFeedback code={code} token={token} onSent={() => game && setSentInGame(game.number)} />}
         {mine && feedbackSent && (
           <section className="after-feedback">
@@ -407,6 +415,7 @@ function QuestionBody({
               </p>
             </div>
           )}
+          {s.room.phonesOnly && s.reveal && <PhoneReveal reveal={s.reveal} />}
           {s.game && <QuickRate rating={rated[`${s.game.number}:${q.number}`] ?? s.mine?.ratings[q.number]} onRate={(r) => onRate(s.game!.number, q.number, r)} />}
           <NextUp timing={q.timing} timingAt={timingAt} number={q.number} total={total} />
         </div>
@@ -516,6 +525,77 @@ function QuickRate({ rating, onRate }: { rating: QuestionRating | undefined; onR
         {rating ? t.quickRateThanks : ""}
       </p>
     </div>
+  );
+}
+
+/** No TV (P-04): the invite the TV lobby would show — QR, code and a share button. */
+function Invite({ code }: { code: string }) {
+  const t = useT();
+  const { joinUrl, qr } = useJoinQr(code);
+  const [copied, setCopied] = useState(false);
+  const share = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({ title: t.appName, text: t.shareText(code), url: joinUrl });
+        return;
+      }
+      await navigator.clipboard.writeText(joinUrl);
+      setCopied(true);
+    } catch {
+      // Share sheet dismissed or clipboard blocked: the QR and the code are still there.
+    }
+  };
+  return (
+    <section className="invite" aria-labelledby="invite-title">
+      <p className="invite-title" id="invite-title">
+        {t.inviteTitle}
+      </p>
+      <JoinQr qr={qr} joinUrl={joinUrl} />
+      <p className="invite-code">{code}</p>
+      <p className="muted hint">{t.inviteHint}</p>
+      <button className="secondary" onClick={share}>
+        {copied ? t.linkCopied : t.shareLink}
+      </button>
+    </section>
+  );
+}
+
+/** No TV (P-04): what the room learns on the big screen — how many got it, and "did you know". */
+function PhoneReveal({ reveal }: { reveal: NonNullable<Snapshot["reveal"]> }) {
+  const t = useT();
+  const answered = Object.values(reveal.distribution).reduce((a, b) => a + b, 0);
+  return (
+    <>
+      {answered > 0 && <p className="muted small">{t.rightOfAnswered(reveal.distribution[reveal.correctKey], answered)}</p>}
+      {reveal.explanation && (
+        <div className="phone-dyk">
+          <p className="dyk-label">{t.didYouKnow}</p>
+          <p>{reveal.explanation}</p>
+        </div>
+      )}
+    </>
+  );
+}
+
+/** No TV (P-04): the room's standings and facts of the evening, which the TV would show. */
+function PhoneStandings({ results }: { results: NonNullable<Snapshot["results"]> }) {
+  const t = useT();
+  const board = results.leaderboard;
+  return (
+    <section className="phone-standings" aria-labelledby="standings-title">
+      <h2 id="standings-title">{t.standings}</h2>
+      <ol className="leaderboard">
+        {board.map((l, i) => (
+          <li key={l.playerId}>
+            <span className="place-no">{placeOf(board, i)}.</span>
+            <span className="name">{l.nickname}</span>
+            <span className="muted">{t.correctOf(l.correct, l.attempted)}</span>
+            <span className="score">{t.score(l.score)}</span>
+          </li>
+        ))}
+      </ol>
+      <StatCards results={results} />
+    </section>
   );
 }
 

@@ -1717,3 +1717,106 @@ button.link {
   min-height: 1.4em;
 }
 
+
+/* ---------- No TV: phones only (EPIC 41 P-04) ---------- */
+
+.phones-only {
+  display: grid;
+  gap: var(--space-1);
+  justify-items: center;
+  text-align: center;
+}
+
+.home-card .phones-only .big {
+  max-width: 360px;
+}
+
+.invite {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-2);
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-4) var(--space-3);
+}
+
+.invite p {
+  margin: 0;
+}
+
+.invite-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.invite .qr-wrap {
+  width: min(70vw, 260px);
+}
+
+.invite .qr-brand {
+  font-size: 1rem;
+}
+
+.invite-code {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+}
+
+.phone-dyk {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+  max-width: 100%;
+}
+
+.phone-dyk p {
+  margin: 0;
+  font-size: var(--fs-hint);
+  line-height: 1.45;
+}
+
+.phone-dyk .dyk-label {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.phone-standings {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.phone-standings h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.phone-standings .leaderboard {
+  font-size: 1rem;
+}
+
+.phone-standings .leaderboard li {
+  grid-template-columns: 1.6em minmax(0, 1fr) auto 4.5em;
+}
+
+/* On a phone the stat title sits above its text, not in a column beside it. */
+@media (max-width: 600px) {
+  .stat-card {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .stat-card > :not(.stat-title) {
+    grid-column: 1;
+  }
+
+  .stat-title {
+    grid-row: auto;
+  }
+}

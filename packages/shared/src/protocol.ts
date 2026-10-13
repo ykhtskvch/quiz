@@ -79,7 +79,8 @@ export type Snapshot = {
         /** Own answers only — lets the phone prefill "change my preferences". */
         onboarding: OnboardingInput | null;
       };
-  room: { code: string; language: Language; status: RoomStatus; players: PublicPlayer[] };
+  /** phonesOnly: no shared screen, the phones show the invite, "did you know" and results (P-04). */
+  room: { code: string; language: Language; status: RoomStatus; players: PublicPlayer[]; phonesOnly: boolean };
   game: { number: number; status: GameStatus; softEndSuggested: boolean; totalQuestions: number } | null;
   question: PublicQuestion | null;
   reveal: Reveal | null;

@@ -384,6 +384,14 @@ describe("coming back on the same screen (P-03)", () => {
     expect(state.seenBefore).toEqual([]);
   });
 
+  it("a room without a TV says so to the phones (P-04)", () => {
+    const tv = newRoomState("ABCDEF", "h", 0, config);
+    const phones = newRoomState("ABCDEF", "h", 0, config, "ru", [], true);
+    const view = (st: RoomState) => new Room(st, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder).snapshot({ role: "display" }, 0).room.phonesOnly;
+    expect(view(tv)).toBe(false);
+    expect(view(phones)).toBe(true);
+  });
+
   it("names the fact only once it is revealed", () => {
     const { state, room } = setup();
     room().tick(3000); // answering: no reveal yet, nothing names the fact

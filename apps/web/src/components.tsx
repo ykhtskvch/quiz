@@ -1,5 +1,6 @@
 // Small pieces shared by the display and the phone.
 import { useEffect, useState } from "react";
+import QRCode from "qrcode";
 import type { GameResults, PhaseTiming } from "@quiz/shared";
 import { api } from "./api.ts";
 import { useT } from "./strings.ts";
@@ -88,3 +89,36 @@ export function placeOf(leaderboard: GameResults["leaderboard"], index: number):
   return 1 + leaderboard.filter((l) => l.score > score).length;
 }
 
+declare const __LAN_ORIGIN__: string;
+
+/** Where phones should go to join: the LAN address in local dev, the site itself otherwise. */
+function joinOrigin() {
+  const local = ["localhost", "127.0.0.1"].includes(location.hostname);
+  return local ? __LAN_ORIGIN__ : location.origin;
+}
+
+export const joinHost = () => joinOrigin().replace(/^https?:\/\//, "");
+
+/** Join link and its QR, for the TV lobby and, without a TV, for the phones (P-04). */
+export function useJoinQr(code: string) {
+  const joinUrl = `${joinOrigin()}/j/${code}`;
+  const [qr, setQr] = useState<string | null>(null);
+  useEffect(() => {
+    // Level H survives the brand label covering the centre (PT2, DS-049).
+    QRCode.toDataURL(joinUrl, { margin: 1, width: 640, errorCorrectionLevel: "H", color: { dark: "#16131f", light: "#ffffff" } }).then(setQr);
+  }, [joinUrl]);
+  return { joinUrl, qr };
+}
+
+export function JoinQr({ qr, joinUrl }: { qr: string | null; joinUrl: string }) {
+  const t = useT();
+  if (!qr) return null;
+  return (
+    <div className="qr-wrap">
+      <img className="qr" src={qr} alt={joinUrl} />
+      <span className="qr-brand" aria-hidden>
+        {t.appName}
+      </span>
+    </div>
+  );
+}

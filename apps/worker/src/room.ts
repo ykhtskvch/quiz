@@ -63,10 +63,10 @@ export class RoomDO extends DurableObject<Env> {
 
   // ---------- commands (RPC from the Worker) ----------
 
-  async init(code: string, language: Language, seenBefore: string[] = []): Promise<Result<{ displayToken: string }>> {
+  async init(code: string, language: Language, seenBefore: string[] = [], phonesOnly = false): Promise<Result<{ displayToken: string }>> {
     if (this.state) return { ok: false, status: 409, error: "room exists" };
     const displayToken = randomToken();
-    this.state = newRoomState(code, await sha256(displayToken), Date.now(), this.config, language, seenBefore);
+    this.state = newRoomState(code, await sha256(displayToken), Date.now(), this.config, language, seenBefore, phonesOnly);
     await this.commit(new Room(this.state, this.config, BANK, this.engine));
     return { ok: true, value: { displayToken } };
   }

@@ -13,14 +13,14 @@ export function Home() {
   const [error, setError] = useState<string | null>(null);
   const [code, setCode] = useState("");
 
-  const create = async () => {
+  const create = async (phonesOnly: boolean) => {
     setBusy(true);
     setError(null);
     try {
-      const room = await api.createRoom(lang, seen.list());
-      // The display token rides in the URL fragment: it never reaches the server logs,
-      // and the display survives a reload.
-      navigate(`/d/${room.roomCode}#t=${room.displayToken}`);
+      const room = await api.createRoom(lang, seen.list(), phonesOnly);
+      // No TV (P-04): this phone joins first and so becomes the host. Otherwise this device is the
+      // shared screen; its token rides in the URL fragment, never reaches server logs and survives a reload.
+      navigate(phonesOnly ? `/j/${room.roomCode}` : `/d/${room.roomCode}#t=${room.displayToken}`);
     } catch (err) {
       setError(err instanceof ApiError && err.status === 429 ? t.tooManyRequests : t.errorGeneric);
       setBusy(false);
@@ -55,9 +55,15 @@ export function Home() {
           </div>
           <span className="muted hint">{t.languageHint}</span>
         </div>
-        <button className="primary big" onClick={create} disabled={busy}>
+        <button className="primary big" onClick={() => create(false)} disabled={busy}>
           {busy ? t.creating : t.createRoom}
         </button>
+        <div className="phones-only">
+          <button className="secondary big" onClick={() => create(true)} disabled={busy}>
+            {t.createPhonesOnly}
+          </button>
+          <span className="muted hint">{t.phonesOnlyHint}</span>
+        </div>
         {error && (
           <p className="error" role="alert">
             {error}

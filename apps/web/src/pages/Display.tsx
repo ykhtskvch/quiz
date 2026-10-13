@@ -1,13 +1,10 @@
 // Shared screen: lobby with QR, question phases, reveal, final results. Read-only — it never sends commands.
-import { useEffect, useMemo, useState } from "react";
-import QRCode from "qrcode";
+import { useEffect, useMemo } from "react";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
-import { AnswerTimer, BetaBadge, NextUp, placeOf, StatCards } from "../components.tsx";
+import { AnswerTimer, BetaBadge, joinHost, JoinQr, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { seen } from "../seen.ts";
 import { useCountdown, useRoom } from "../useRoom.ts";
-
-declare const __LAN_ORIGIN__: string;
 
 export function Display({ code }: { code: string }) {
   const t = useT();
@@ -50,34 +47,17 @@ export function Display({ code }: { code: string }) {
   );
 }
 
-function joinOrigin() {
-  const local = ["localhost", "127.0.0.1"].includes(location.hostname);
-  return local ? __LAN_ORIGIN__ : location.origin;
-}
-
 function Lobby({ code, s }: { code: string; s: Snapshot }) {
   const t = useT();
-  const joinUrl = `${joinOrigin()}/j/${code}`;
-  const [qr, setQr] = useState<string | null>(null);
-  useEffect(() => {
-    // Level H survives the brand label covering the centre (PT2, DS-049).
-    QRCode.toDataURL(joinUrl, { margin: 1, width: 640, errorCorrectionLevel: "H", color: { dark: "#16131f", light: "#ffffff" } }).then(setQr);
-  }, [joinUrl]);
+  const { joinUrl, qr } = useJoinQr(code);
 
   return (
     <div className="lobby">
       <section className="qr-panel">
         <h2>{t.scanToJoin}</h2>
-        {qr && (
-          <div className="qr-wrap">
-            <img className="qr" src={qr} alt={joinUrl} />
-            <span className="qr-brand" aria-hidden>
-              {t.appName}
-            </span>
-          </div>
-        )}
+        <JoinQr qr={qr} joinUrl={joinUrl} />
         <p className="muted">
-          {t.orOpen} <strong>{joinOrigin().replace(/^https?:\/\//, "")}</strong> {t.andEnterCode}
+          {t.orOpen} <strong>{joinHost()}</strong> {t.andEnterCode}
         </p>
         <p className="room-code">{code}</p>
       </section>
