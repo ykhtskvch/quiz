@@ -254,7 +254,7 @@ families:
             topics: { old-internet: 1 }
             contexts: { GLOBAL: 1, INTERNET_GLOBAL: 1 }
             generations: { 90s: 1, 00s: 0.8 }
-            difficulty: 2
+            difficulty: 1
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 0.8, I_FIGURED_IT_OUT: 0.5 }
             status: APPROVED
@@ -371,7 +371,7 @@ families:
             topics: { old-internet: 1 }
             contexts: { GLOBAL: 1, INTERNET_GLOBAL: 1 }
             generations: { 00s: 1, 10s: 0.5 }
-            difficulty: 3
+            difficulty: 4
             dignity: 3
             effects: { I_FIGURED_IT_OUT: 0.6, SHARED_KNOWLEDGE: 0.4 }
             status: APPROVED
@@ -494,7 +494,7 @@ families:
             topics: { old-internet: 1 }
             contexts: { GLOBAL: 1, INTERNET_GLOBAL: 1 }
             generations: { 00s: 1, 90s: 0.6 }
-            difficulty: 4
+            difficulty: 5
             dignity: 2
             effects: { WHY_DO_I_REMEMBER_THIS: 1, HERO_CANDIDATE: 0.5 }
             status: APPROVED

@@ -957,7 +957,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 3,
     "dignity": 5,
     "effects": {
       "SHARED_KNOWLEDGE": 1
@@ -1940,7 +1940,7 @@ export const BANK: BankQuestion[] = [
       "80s": 1,
       "90s": 0.8
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,
@@ -3090,7 +3090,7 @@ export const BANK: BankQuestion[] = [
       "90s": 1,
       "00s": 0.5
     },
-    "difficulty": 2,
+    "difficulty": 1,
     "dignity": 3,
     "effects": {
       "SHARED_KNOWLEDGE": 0.8
@@ -4944,56 +4944,6 @@ export const BANK: BankQuestion[] = [
     "status": "DRAFT"
   },
   {
-    "id": "ringtone-paid-en-1",
-    "factId": "ringtone-paid",
-    "familyId": "nostalgia-phones",
-    "language": "en",
-    "originLanguage": "en",
-    "cultureSpecificity": "GLOBAL",
-    "isBridge": false,
-    "text": "What could you pay to put on an old mobile, then spend ages choosing the perfect few seconds of?",
-    "options": [
-      {
-        "key": "A",
-        "text": "A podcast"
-      },
-      {
-        "key": "B",
-        "text": "A widget"
-      },
-      {
-        "key": "C",
-        "text": "A ringtone"
-      },
-      {
-        "key": "D",
-        "text": "A story"
-      }
-    ],
-    "correctKey": "C",
-    "explanation": "Polyphonic ringtones were a huge business before smartphones.",
-    "topics": {
-      "old-internet": 1
-    },
-    "contexts": {
-      "GLOBAL": 1,
-      "INTERNET_GLOBAL": 0.8
-    },
-    "generations": {
-      "00s": 1,
-      "90s": 0.4
-    },
-    "difficulty": 1,
-    "dignity": 1,
-    "effects": {
-      "WHY_DO_I_REMEMBER_THIS": 0.8,
-      "SHARED_KNOWLEDGE": 0.4
-    },
-    "ageSafety": "ALL",
-    "status": "APPROVED",
-    "editorRating": 3
-  },
-  {
     "id": "ringtone-paid-ru-1",
     "factId": "ringtone-paid",
     "familyId": "nostalgia-phones",
@@ -5691,7 +5641,7 @@ export const BANK: BankQuestion[] = [
       "00s": 1,
       "90s": 0.4
     },
-    "difficulty": 3,
+    "difficulty": 5,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,
@@ -6294,7 +6244,7 @@ export const BANK: BankQuestion[] = [
       "00s": 1,
       "90s": 0.4
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 1,
     "effects": {
       "I_KNOW_THIS": 0.7,
@@ -6983,7 +6933,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,
@@ -7080,7 +7030,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,
@@ -7273,7 +7223,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 4,
+    "difficulty": 5,
     "dignity": 3,
     "effects": {
       "HERO_CANDIDATE": 0.7,
@@ -7561,7 +7511,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,
@@ -7658,7 +7608,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "I_KNOW_THIS": 0.7,
@@ -8040,7 +7990,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 4,
+    "difficulty": 3,
     "dignity": 2,
     "effects": {
       "HERO_CANDIDATE": 0.7,
@@ -8999,7 +8949,7 @@ export const BANK: BankQuestion[] = [
       "10s": 0.8,
       "current": 0.6
     },
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 3,
     "effects": {
       "I_KNOW_THIS": 0.7,
@@ -9195,7 +9145,7 @@ export const BANK: BankQuestion[] = [
       "10s": 0.8,
       "current": 0.6
     },
-    "difficulty": 2,
+    "difficulty": 3,
     "dignity": 2,
     "effects": {
       "SHARED_KNOWLEDGE": 0.6,
@@ -9244,7 +9194,7 @@ export const BANK: BankQuestion[] = [
       "10s": 0.8,
       "current": 0.6
     },
-    "difficulty": 2,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "SHARED_KNOWLEDGE": 0.6,
@@ -9685,7 +9635,7 @@ export const BANK: BankQuestion[] = [
       "10s": 0.8,
       "current": 0.6
     },
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 2,
     "effects": {
       "I_FIGURED_IT_OUT": 0.7,
@@ -9881,7 +9831,7 @@ export const BANK: BankQuestion[] = [
       "10s": 0.8,
       "current": 0.6
     },
-    "difficulty": 4,
+    "difficulty": 3,
     "dignity": 1,
     "effects": {
       "SHARED_KNOWLEDGE": 0.6,
@@ -12463,39 +12413,40 @@ export const BANK: BankQuestion[] = [
     "originLanguage": "en",
     "cultureSpecificity": "GLOBAL",
     "isBridge": false,
-    "text": "Which of these is a real place name?",
+    "text": "Since 2012, the town of Boring in Oregon has been officially paired with which Scottish village?",
     "options": [
       {
         "key": "A",
-        "text": "Batman, in Turkey"
+        "text": "Dreich"
       },
       {
         "key": "B",
-        "text": "Boring, in the USA"
+        "text": "Glum"
       },
       {
         "key": "C",
-        "text": "Dull, in Scotland"
+        "text": "Dull"
       },
       {
         "key": "D",
-        "text": "All three"
+        "text": "Bleak"
       }
     ],
-    "correctKey": "D",
-    "explanation": "Boring and Dull are even twinned — \"a pair for the ages\".",
+    "correctKey": "C",
+    "explanation": "Dull, in Perthshire. In 2013 Bland, in Australia, joined the club.",
     "topics": {
       "geography": 1
     },
     "contexts": {
-      "GLOBAL": 1
+      "GLOBAL": 1,
+      "UK": 0.4
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 3,
     "dignity": 2,
     "effects": {
-      "SHARED_KNOWLEDGE": 0.6,
-      "I_FIGURED_IT_OUT": 0.5
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
     "status": "DRAFT"
@@ -12508,27 +12459,27 @@ export const BANK: BankQuestion[] = [
     "originLanguage": "en",
     "cultureSpecificity": "GLOBAL",
     "isBridge": false,
-    "text": "Что из этого — название реального места?",
+    "text": "С какой шотландской деревней с 2012 года официально побратался городок Боринг («Скучный») в Орегоне?",
     "options": [
       {
         "key": "A",
-        "text": "Батман в Турции"
+        "text": "Дрейх («Пасмурный»)"
       },
       {
         "key": "B",
-        "text": "Боринг («Скучный») в США"
+        "text": "Глам («Угрюмый»)"
       },
       {
         "key": "C",
-        "text": "Далл («Унылый») в Шотландии"
+        "text": "Далл («Унылый»)"
       },
       {
         "key": "D",
-        "text": "Все три"
+        "text": "Блик («Мрачный»)"
       }
     ],
-    "correctKey": "D",
-    "explanation": "Боринг и Далл даже стали городами-побратимами.",
+    "correctKey": "C",
+    "explanation": "Далл, в графстве Перт. В 2013 году к ним присоединился австралийский Бланд («Пресный»).",
     "topics": {
       "geography": 1
     },
@@ -12536,11 +12487,11 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 3,
     "dignity": 2,
     "effects": {
-      "SHARED_KNOWLEDGE": 0.6,
-      "I_FIGURED_IT_OUT": 0.5
+      "I_FIGURED_IT_OUT": 0.7,
+      "SHARED_KNOWLEDGE": 0.3
     },
     "ageSafety": "ALL",
     "status": "DRAFT"
@@ -12851,7 +12802,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 4,
     "effects": {
       "I_FIGURED_IT_OUT": 0.7,
@@ -16468,7 +16419,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 5,
     "dignity": 3,
     "effects": {
       "I_FIGURED_IT_OUT": 0.6,
@@ -16754,7 +16705,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 3,
     "effects": {
       "HERO_CANDIDATE": 0.6,
@@ -16942,7 +16893,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 1,
+    "difficulty": 3,
     "dignity": 4,
     "effects": {
       "SHARED_KNOWLEDGE": 0.8
@@ -17319,7 +17270,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "I_FIGURED_IT_OUT": 0.6,
@@ -17605,7 +17556,7 @@ export const BANK: BankQuestion[] = [
       "UK": 1
     },
     "generations": {},
-    "difficulty": 4,
+    "difficulty": 2,
     "dignity": 3,
     "effects": {
       "HERO_CANDIDATE": 0.7,
@@ -18792,7 +18743,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 5,
+    "difficulty": 4,
     "dignity": 4,
     "effects": {
       "I_FIGURED_IT_OUT": 0.6,
@@ -18972,7 +18923,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 4,
+    "difficulty": 5,
     "dignity": 4,
     "effects": {
       "HERO_CANDIDATE": 0.7,
@@ -19735,7 +19686,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 4,
+    "difficulty": 5,
     "dignity": 3,
     "effects": {
       "HERO_CANDIDATE": 0.7,
@@ -22063,7 +22014,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 4,
     "effects": {
       "BRIDGE": 0.8,
@@ -22160,7 +22111,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 4,
+    "difficulty": 3,
     "dignity": 4,
     "effects": {
       "I_FIGURED_IT_OUT": 0.6,
@@ -22446,7 +22397,7 @@ export const BANK: BankQuestion[] = [
       "POST_SOVIET": 0.8
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 2,
     "effects": {
       "BRIDGE": 0.8,
@@ -22588,7 +22539,7 @@ export const BANK: BankQuestion[] = [
       "EUROPE": 0.8
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 1,
     "dignity": 4,
     "effects": {
       "SHARED_KNOWLEDGE": 0.6,
@@ -22635,7 +22586,7 @@ export const BANK: BankQuestion[] = [
       "POST_SOVIET": 0.8
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 1,
     "dignity": 4,
     "effects": {
       "SHARED_KNOWLEDGE": 0.6,
@@ -22682,7 +22633,7 @@ export const BANK: BankQuestion[] = [
       "POST_SOVIET": 0.8
     },
     "generations": {},
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 4,
     "effects": {
       "BRIDGE": 0.8,
@@ -22729,7 +22680,7 @@ export const BANK: BankQuestion[] = [
       "POST_SOVIET": 0.8
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 1,
     "dignity": 5,
     "effects": {
       "BRIDGE": 0.8,
@@ -23015,7 +22966,7 @@ export const BANK: BankQuestion[] = [
       "GLOBAL": 1
     },
     "generations": {},
-    "difficulty": 2,
+    "difficulty": 1,
     "dignity": 5,
     "effects": {
       "SHARED_KNOWLEDGE": 0.7
@@ -24408,7 +24359,7 @@ export const BANK: BankQuestion[] = [
       "90s": 1,
       "00s": 0.8
     },
-    "difficulty": 2,
+    "difficulty": 1,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,
@@ -24645,7 +24596,7 @@ export const BANK: BankQuestion[] = [
       "00s": 1,
       "10s": 0.5
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 3,
     "effects": {
       "I_FIGURED_IT_OUT": 0.6,
@@ -24891,7 +24842,7 @@ export const BANK: BankQuestion[] = [
       "00s": 1,
       "90s": 0.6
     },
-    "difficulty": 4,
+    "difficulty": 5,
     "dignity": 2,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 1,
@@ -35021,7 +34972,7 @@ export const BANK: BankQuestion[] = [
     "generations": {
       "00s": 1
     },
-    "difficulty": 4,
+    "difficulty": 2,
     "dignity": 2,
     "effects": {
       "I_KNOW_THIS": 0.8,
@@ -36524,7 +36475,7 @@ export const BANK: BankQuestion[] = [
       "90s": 0.8,
       "00s": 0.5
     },
-    "difficulty": 3,
+    "difficulty": 4,
     "dignity": 4,
     "effects": {
       "I_KNOW_THIS": 0.6
@@ -36668,7 +36619,7 @@ export const BANK: BankQuestion[] = [
       "90s": 0.8,
       "00s": 0.5
     },
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 3,
     "effects": {
       "I_KNOW_THIS": 0.6
@@ -37780,7 +37731,7 @@ export const BANK: BankQuestion[] = [
       "90s": 1,
       "00s": 0.8
     },
-    "difficulty": 3,
+    "difficulty": 2,
     "dignity": 2,
     "effects": {
       "I_KNOW_THIS": 0.6,
@@ -38164,7 +38115,7 @@ export const BANK: BankQuestion[] = [
       "00s": 1,
       "80s": 0.4
     },
-    "difficulty": 4,
+    "difficulty": 3,
     "dignity": 1,
     "effects": {
       "WHY_DO_I_REMEMBER_THIS": 0.8,

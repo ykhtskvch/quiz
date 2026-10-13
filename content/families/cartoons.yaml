@@ -394,7 +394,7 @@ families:
             topics: { cartoons: 1 }
             contexts: { GLOBAL: 1 }
             generations: { 90s: 1, 00s: 0.5 }
-            difficulty: 2
+            difficulty: 1
             dignity: 3
             effects: { SHARED_KNOWLEDGE: 0.8 }
             status: APPROVED

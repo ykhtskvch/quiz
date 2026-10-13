@@ -130,7 +130,7 @@ families:
             explanation: "Caesar's report to Rome after a lightning victory in 47 BC: \"Veni, vidi, vici\"."
             topics: { ancient-world: 1 }
             contexts: { GLOBAL: 1 }
-            difficulty: 2
+            difficulty: 3
             dignity: 5
             effects: { SHARED_KNOWLEDGE: 1 }
             status: APPROVED

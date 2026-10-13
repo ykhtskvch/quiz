@@ -612,7 +612,7 @@ families:
             topics: { world-cinema: 1 }
             contexts: { GLOBAL: 1 }
             generations: { 90s: 0.8, 00s: 0.5 }
-            difficulty: 3
+            difficulty: 4
             dignity: 4
             effects: { I_KNOW_THIS: 0.6 }
             status: DRAFT
@@ -683,7 +683,7 @@ families:
             topics: { world-cinema: 1 }
             contexts: { GLOBAL: 1, POST_SOVIET: 0.3 }
             generations: { 90s: 0.8, 00s: 0.5 }
-            difficulty: 3
+            difficulty: 2
             dignity: 3
             effects: { I_KNOW_THIS: 0.6 }
             status: APPROVED

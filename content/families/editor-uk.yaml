@@ -24,7 +24,7 @@ families:
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             generations: { 10s: 0.8, current: 0.6 }
-            difficulty: 3
+            difficulty: 2
             dignity: 3
             effects: { I_KNOW_THIS: 0.7, SHARED_KNOWLEDGE: 0.3 }
             status: APPROVED
@@ -137,7 +137,7 @@ families:
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             generations: { 10s: 0.8, current: 0.6 }
-            difficulty: 2
+            difficulty: 3
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: APPROVED
@@ -165,7 +165,7 @@ families:
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             generations: { 10s: 0.8, current: 0.6 }
-            difficulty: 2
+            difficulty: 4
             dignity: 2
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: APPROVED
@@ -420,7 +420,7 @@ families:
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             generations: { 10s: 0.8, current: 0.6 }
-            difficulty: 3
+            difficulty: 2
             dignity: 2
             effects: { I_FIGURED_IT_OUT: 0.7, SHARED_KNOWLEDGE: 0.3 }
             status: APPROVED
@@ -532,7 +532,7 @@ families:
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
             generations: { 10s: 0.8, current: 0.6 }
-            difficulty: 4
+            difficulty: 3
             dignity: 1
             effects: { SHARED_KNOWLEDGE: 0.6, I_FIGURED_IT_OUT: 0.5 }
             status: APPROVED

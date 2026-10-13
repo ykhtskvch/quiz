@@ -23,7 +23,7 @@ families:
             explanation: "The Central line is red, the Jubilee silver-grey, and Hammersmith & City pink — it shares many stations with the Circle."
             topics: { british-culture: 1.0 }
             contexts: { UK: 1.0 }
-            difficulty: 4
+            difficulty: 2
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
             status: APPROVED

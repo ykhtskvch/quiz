@@ -135,7 +135,7 @@ families:
             explanation: "Tchaikovsky also wrote Swan Lake and The Sleeping Beauty."
             topics: { art: 1.0 }
             contexts: { POST_SOVIET: 0.6, GLOBAL: 1 }
-            difficulty: 2
+            difficulty: 1
             dignity: 5
             effects: { SHARED_KNOWLEDGE: 0.7 }
             status: APPROVED

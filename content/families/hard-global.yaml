@@ -401,7 +401,7 @@ families:
             explanation: French Polynesia, Réunion, New Caledonia and the rest give France 12 time zones. Russia and the US have 11 each.
             topics: { geography: 1 }
             contexts: { GLOBAL: 1 }
-            difficulty: 5
+            difficulty: 4
             dignity: 4
             effects: { I_FIGURED_IT_OUT: 0.6, HERO_CANDIDATE: 0.5 }
             status: DRAFT
@@ -487,7 +487,7 @@ families:
             explanation: Eswatini is almost surrounded too, but it also borders Mozambique. Lesotho is also the only country lying entirely above 1,000 m.
             topics: { geography: 1 }
             contexts: { GLOBAL: 1 }
-            difficulty: 4
+            difficulty: 5
             dignity: 4
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
             status: DRAFT
@@ -858,7 +858,7 @@ families:
             topics: { cartoons: 1 }
             contexts: { GLOBAL: 1 }
             generations: { 00s: 1 }
-            difficulty: 4
+            difficulty: 5
             dignity: 3
             effects: { HERO_CANDIDATE: 0.7, I_KNOW_THIS: 0.5 }
             status: APPROVED
