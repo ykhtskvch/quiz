@@ -2,6 +2,7 @@
 //   node scripts/dev/analytics-report.ts           # local D1 used by `wrangler dev`
 //   node scripts/dev/analytics-report.ts --production  # production D1 (--remote works too)
 //   node scripts/dev/analytics-report.ts --staging     # staging D1 (playtests)
+//   … --days=7                                        # funnel window (default 30 days)
 import { execFileSync } from "node:child_process";
 
 const staging = process.argv.includes("--staging");
@@ -131,3 +132,37 @@ const deadDistractors = query<{ question_id: string; chosen_options: number; ans
 console.log("=== Неработающие distractors (вариант ни разу не выбрали при ≥ 8 ответах) ===");
 if (deadDistractors.length) console.table(deadDistractors);
 else console.log("Пока нет.\n");
+
+// ---------- funnel (EPIC 41 P-07) ----------
+const days = Number(process.argv.find((a) => a.startsWith("--days="))?.split("=")[1] ?? 30);
+const funnelRows = query<{ step: string; n: number }>(`
+  SELECT step, SUM(n) AS n FROM funnel_daily
+  WHERE day >= date('now', '-${Math.max(1, Math.floor(days))} days')
+  GROUP BY step`);
+const f = (step: string) => funnelRows.find((r) => r.step === step)?.n ?? 0;
+const share = (a: number, b: number) => (b ? pct(a / b) : "—");
+const rooms = f("room_created_tv") + f("room_created_phones");
+console.log(`=== Воронка за ${days} дн. (P-07) ===`);
+if (!funnelRows.length) console.log("Пока пусто: счётчики пишутся с 13.10.2026.\n");
+else {
+  console.table({
+    "Заходы на главную": f("home_view"),
+    "Переходы по приглашению": f("join_view"),
+    "Комнат создано": `${rooms} (с ТВ ${f("room_created_tv")}, без ТВ ${f("room_created_phones")})`,
+    "…из них тем же экраном повторно": f("room_created_returning"),
+    "…игроком, который стал ведущим": f("room_created_by_player"),
+    "Игроков вошло": f("player_joined"),
+    "Игр начато": f("game_started"),
+    "Доиграно": f("game_completed"),
+    "Закончено досрочно": f("game_ended_early"),
+    "«Сыграть ещё»": f("play_again"),
+  });
+  console.table({
+    "Заход → комната": share(rooms, f("home_view")),
+    "Комната → игра": share(f("game_started") - f("play_again"), rooms),
+    "Игра → доиграна": share(f("game_completed"), f("game_started")),
+    "Закончена → ещё раз": share(f("play_again"), f("game_completed") + f("game_ended_early")),
+    "Повторные комнаты": share(f("room_created_returning"), rooms),
+    "Игроки → ведущие": share(f("room_created_by_player"), rooms),
+  });
+}

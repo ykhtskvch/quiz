@@ -5,6 +5,7 @@ import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { navigate } from "../router.ts";
 import { AnswerTimer, JoinQr, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
+import { playerHistory, trackOnce } from "../funnel.ts";
 import { seen } from "../seen.ts";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
 import { Onboarding } from "./Onboarding.tsx";
@@ -14,6 +15,7 @@ import { useRoom } from "../useRoom.ts";
 export function Player({ code }: { code: string }) {
   const t = useT();
   const [me, setMe] = useState<PlayerSession | null>(() => session.load(code));
+  useEffect(() => trackOnce("join_view", code), [code]);
   const { snapshot, status, timingAt } = useRoom(code, me?.playerToken ?? null);
   const [editing, setEditing] = useState(false);
   // Offboarding progress per game number. Kept here, above the screens: editing preferences unmounts
@@ -144,6 +146,7 @@ function JoinForm({ code, onJoined }: { code: string; onJoined: (s: PlayerSessio
       const r = await api.join(code, name);
       const s = { playerId: r.playerId, playerToken: r.playerToken };
       session.save(code, s);
+      playerHistory.joined(code);
       onJoined(s);
     } catch (err) {
       // A failed request without a status is the network, not a missing room (DS-021).

@@ -31,8 +31,8 @@ async function call<T>(path: string, init: { token?: string; body?: unknown; met
 
 export const api = {
   meta: () => call<{ beta: boolean }>("/meta", { method: "GET" }),
-  createRoom: (language: Language, seen: string[] = [], phonesOnly = false) =>
-    call<CreateRoomResponse>("/rooms", { body: { language, seen, phonesOnly } }),
+  createRoom: (language: Language, seen: string[] = [], phonesOnly = false, fromPlayer = false) =>
+    call<CreateRoomResponse>("/rooms", { body: { language, seen, phonesOnly, fromPlayer } }),
   roomInfo: (code: string) => call<RoomInfo>(`/rooms/${code}`, { method: "GET" }),
   join: (code: string, nickname: string) => call<JoinResponse>(`/rooms/${code}/players`, { body: { nickname } }),
   host: (code: string, token: string, command: HostCommand) => call(`/rooms/${code}/${command}`, { token }),

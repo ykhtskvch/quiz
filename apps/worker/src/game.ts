@@ -6,6 +6,7 @@ import {
   type AnalyticsEvent,
   type BankQuestion,
   type BroadcastEvent,
+  type FunnelStep,
   type GameConfig,
   pointsFor,
   type GameResults,
@@ -194,6 +195,7 @@ export class Room {
 
   join(nickname: string, id: string, tokenHash: string, now: number): Player {
     this.touch(now);
+    this.funnel("player_joined", now);
     const player: Player = {
       id,
       nickname: this.uniqueNickname(nickname),
@@ -254,6 +256,7 @@ export class Room {
     this.touch(now);
     // Players still filling in onboarding join from the question after they finish.
     for (const p of this.s.players) p.activeFrom = p.onboarding ? 1 : NOT_YET;
+    this.funnel("game_started", now);
     this.newGame(1, now);
     return ok(true);
   }
@@ -265,6 +268,8 @@ export class Room {
     if (this.readyPlayers().length < this.config.minPlayers) return fail(409, `need at least ${this.config.minPlayers} ready players`);
     this.touch(now);
     for (const p of this.s.players) p.activeFrom = p.onboarding ? 1 : NOT_YET;
+    this.funnel("play_again", now);
+    this.funnel("game_started", now);
     this.newGame(this.s.game.number + 1, now);
     return ok(true);
   }
@@ -622,6 +627,7 @@ export class Room {
     g.status = "FINISHED";
     g.paused = null;
     g.results = this.computeResults();
+    this.funnel(endedBy === "HOST" ? "game_ended_early" : "game_completed", now);
     this.broadcast({ type: "GAME_FINISHED", seq: 0, payload: { results: g.results } });
     this.effects.push({
       to: "analytics",
@@ -766,6 +772,11 @@ export class Room {
     if (!d || d.at <= now + grace) return;
     d.at = now + grace;
     this.broadcast({ type: "ANSWER_TIMING_UPDATED", seq: 0, payload: { timing: this.timing(now)! } });
+  }
+
+  /** One anonymous funnel tick (P-07): a step and a time, nothing about who. */
+  private funnel(step: FunnelStep, now: number) {
+    this.effects.push({ to: "analytics", event: { kind: "FUNNEL", step, at: now } });
   }
 
   private allAnswered(q: QuestionRun, now: number): boolean {

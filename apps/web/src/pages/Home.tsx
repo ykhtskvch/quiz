@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { isRoomCode, LANGUAGES } from "@quiz/shared";
 import { api, ApiError } from "../api.ts";
 import { BetaBadge } from "../components.tsx";
+import { playerHistory, trackOnce } from "../funnel.ts";
 import { navigate } from "../router.ts";
 import { seen } from "../seen.ts";
 import { setLanguage, useLanguage, useT } from "../strings.ts";
@@ -12,12 +13,14 @@ export function Home() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [code, setCode] = useState("");
+  useEffect(() => trackOnce("home_view"), []);
 
   const create = async (phonesOnly: boolean) => {
     setBusy(true);
     setError(null);
     try {
-      const room = await api.createRoom(lang, seen.list(), phonesOnly);
+      const room = await api.createRoom(lang, seen.list(), phonesOnly, playerHistory.hasPlayed());
+      playerHistory.created(room.roomCode);
       // No TV (P-04): this phone joins first and so becomes the host. Otherwise this device is the
       // shared screen; its token rides in the URL fragment, never reaches server logs and survives a reload.
       navigate(phonesOnly ? `/j/${room.roomCode}` : `/d/${room.roomCode}#t=${room.displayToken}`);

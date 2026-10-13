@@ -423,9 +423,33 @@ describe("feedback and analytics", () => {
     r.skip(ids[0], 1000);
     r.tick(2000);
     r.end(ids[0], 3000);
-    const kinds = analytics(r).map((e) => e.kind);
-    expect(kinds).toEqual(["QUESTION_SKIPPED", "GAME_FINISHED"]);
-    expect(analytics(r)[1]).toMatchObject({ endedBy: "HOST", questionsPlayed: 0 });
+    const events = analytics(r).filter((e) => e.kind !== "FUNNEL");
+    expect(events.map((e) => e.kind)).toEqual(["QUESTION_SKIPPED", "GAME_FINISHED"]);
+    expect(events[1]).toMatchObject({ endedBy: "HOST", questionsPlayed: 0 });
+  });
+
+  it("counts funnel steps without saying who (P-07)", () => {
+    const funnel = (r: Room) => analytics(r).flatMap((e) => (e.kind === "FUNNEL" ? [e.step] : []));
+    const state = newRoomState("ABCDEF", "h", 0, config);
+    const room = () => new Room(state, config, bank, DEFAULT_ENGINE_CONFIG, keepOrder);
+    const ids = ["player-one-id", "player-two-id"].map((n) => {
+      const r = room();
+      const p = r.join(n, n, `h${n}`, 0);
+      r.connect(p.id, 0);
+      r.submitOnboarding(p.id, onboarding, 0);
+      expect(funnel(r)).toEqual(["player_joined"]);
+      return p.id;
+    });
+    let r = room();
+    r.start(ids[0], 0);
+    expect(funnel(r)).toEqual(["game_started"]);
+    r = room();
+    r.end(ids[0], 1000);
+    expect(funnel(r)).toEqual(["game_ended_early"]);
+    r = room();
+    r.playAgain(ids[0], 2000);
+    expect(funnel(r)).toEqual(["play_again", "game_started"]);
+    expect(JSON.stringify(analytics(r))).not.toContain(ids[0]);
   });
 
   it("accepts offboarding once per player after the game, never with a player id", () => {

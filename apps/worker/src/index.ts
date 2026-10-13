@@ -7,6 +7,8 @@ import {
   parseSessionFeedback,
   ROOM_CODE_ALPHABET,
   ROOM_CODE_LENGTH,
+  CLIENT_FUNNEL_STEPS,
+  type FunnelStep,
   type HostCommand,
   type Language,
   LANGUAGES,
@@ -16,6 +18,7 @@ import { RateLimiterDO } from "./limiter-do.ts";
 import type { Bucket } from "./ratelimit.ts";
 import { engineConfig } from "./deployment.ts";
 import { seenFacts } from "./seen.ts";
+import { writeAnalytics } from "./analytics.ts";
 import { RoomDO, type Env, type Result } from "./room.ts";
 
 export { RateLimiterDO, RoomDO };
@@ -35,6 +38,7 @@ const UNAUTHENTICATED_ROOM_PATHS = new Set([undefined, "players", "ws", "state"]
 
 function bucketFor(c: C): Bucket | undefined {
   const parts = c.req.path.split("/").filter(Boolean); // ["api", "rooms", code?, sub?]
+  if (parts[1] === "funnel") return "room";
   if (parts[1] !== "rooms") return undefined;
   if (parts.length === 2) return c.req.method === "POST" ? "create" : undefined;
   return UNAUTHENTICATED_ROOM_PATHS.has(parts[3]) ? "room" : "action";
@@ -59,16 +63,32 @@ app.get("/meta", (c) => c.json({ beta: engineConfig(c.env).allowDrafts }));
 
 app.post("/rooms", async (c) => {
   const body = await c.req
-    .json<{ language?: unknown; seen?: unknown; phonesOnly?: unknown }>()
-    .catch(() => ({ language: undefined, seen: undefined, phonesOnly: undefined }));
+    .json<{ language?: unknown; seen?: unknown; phonesOnly?: unknown; fromPlayer?: unknown }>()
+    .catch(() => ({ language: undefined, seen: undefined, phonesOnly: undefined, fromPlayer: undefined }));
   const language: Language = LANGUAGES.includes(body.language as Language) ? (body.language as Language) : "ru";
   const seen = seenFacts(body.seen);
   for (let attempt = 0; attempt < 5; attempt++) {
     const code = generateRoomCode();
     const r = await roomStub(c, code).init(code, language, seen, body.phonesOnly === true);
-    if (r.ok) return c.json({ roomCode: code, displayToken: r.value.displayToken, language }, 201);
+    if (r.ok) {
+      const now = Date.now();
+      const steps: FunnelStep[] = [body.phonesOnly === true ? "room_created_phones" : "room_created_tv"];
+      if (seen.length) steps.push("room_created_returning");
+      if (body.fromPlayer === true) steps.push("room_created_by_player");
+      c.executionCtx.waitUntil(writeAnalytics(c.env.DB, steps.map((step) => ({ kind: "FUNNEL", step, at: now }))));
+      return c.json({ roomCode: code, displayToken: r.value.displayToken, language }, 201);
+    }
   }
   return c.json({ error: "could not allocate a room code" }, 503);
+});
+
+/** Browser-side funnel steps (P-07): a step name and nothing else. */
+app.post("/funnel", async (c) => {
+  const body = await c.req.json<{ step?: unknown }>().catch(() => ({ step: undefined }));
+  const step = body.step as FunnelStep;
+  if (!CLIENT_FUNNEL_STEPS.includes(step as (typeof CLIENT_FUNNEL_STEPS)[number])) return c.json({ error: "unknown step" }, 400);
+  c.executionCtx.waitUntil(writeAnalytics(c.env.DB, [{ kind: "FUNNEL", step, at: Date.now() }]));
+  return c.body(null, 204);
 });
 
 app.use("/rooms/:code/*", async (c, next) => {

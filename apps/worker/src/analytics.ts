@@ -58,6 +58,12 @@ export function analyticsStatements(db: D1Database, e: AnalyticsEvent): D1Prepar
           .bind(e.gameUid, e.at, f.playAgain, f.differentGroup ?? null, f.difficulty ?? null, f.pace ?? null, f.culturalBalance ?? null),
       ];
     }
+    case "FUNNEL":
+      return [
+        db
+          .prepare(`INSERT INTO funnel_daily (day, step, n) VALUES (?1, ?2, 1) ON CONFLICT (day, step) DO UPDATE SET n = n + 1`)
+          .bind(new Date(e.at).toISOString().slice(0, 10), e.step),
+      ];
     case "QUESTION_RATED": {
       const columns = { GREAT: "great", FINE: "fine", BAD: "bad" } as const;
       const column = columns[e.rating];

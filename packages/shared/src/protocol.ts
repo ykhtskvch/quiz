@@ -166,6 +166,7 @@ export type AnalyticsEvent =
       softEndShown: boolean;
     }
   | { kind: "SESSION_FEEDBACK"; gameUid: string; at: number; feedback: SessionFeedbackInput }
+  | { kind: "FUNNEL"; step: FunnelStep; at: number }
   | { kind: "QUESTION_RATED"; gameUid: string; questionId: string; rating: QuestionRating; /** A changed rating (PT2): this one is taken back. */ previous?: QuestionRating };
 
 export const ROOM_CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789"; // no 0/O, 1/I
@@ -174,3 +175,22 @@ export const NICKNAME_MAX = 20;
 
 export const isRoomCode = (s: string) =>
   s.length === ROOM_CODE_LENGTH && [...s].every((c) => ROOM_CODE_ALPHABET.includes(c));
+
+/**
+ * Funnel steps (EPIC 41 P-07), counted per day without any ids. Client steps come from the browser
+ * through POST /api/funnel; the rest are counted by the server.
+ */
+export const CLIENT_FUNNEL_STEPS = ["home_view", "join_view"] as const;
+export type FunnelStep =
+  | (typeof CLIENT_FUNNEL_STEPS)[number]
+  | "room_created_tv"
+  | "room_created_phones"
+  /** The screen had played here before (P-03): a company coming back. */
+  | "room_created_returning"
+  /** Created on a device that had joined a game as a player: a player who became a host. */
+  | "room_created_by_player"
+  | "player_joined"
+  | "game_started"
+  | "game_completed"
+  | "game_ended_early"
+  | "play_again";

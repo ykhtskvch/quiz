@@ -41,6 +41,7 @@ const ru = {
         items: [
           "Чтобы чинить и подбирать вопросы, мы считаем: сколько раз вопрос сыграли, сколько ответили и сколько верно, сколько раз выбрали каждый вариант, оценки 👍 👌 👎.",
           "По игре — число игроков, сколько вопросов сыграно и сколько длилась игра. И ответы анкеты после игры.",
+          "И просто числа по дням: сколько раз открыли сайт и приглашение, создали комнату, начали, доиграли и сыграли ещё.",
           "Без ников, кода комнаты, интересов, возраста и IP-адресов: по статистике нельзя узнать, кто играл и кто что ответил.",
         ],
       },
@@ -49,6 +50,7 @@ const ru = {
         items: [
           "Язык интерфейса и «вход в комнату», чтобы после перезагрузки вернуться на своё место.",
           "На общем экране — какие вопросы уже были (до полугода), чтобы в следующий раз не повторяться.",
+          "Отметка, что с этого устройства уже играли в чьей-то игре, — чтобы считать, сколько игроков потом проводят свою.",
           "Это хранится только в браузере (localStorage). Стереть — очистить данные сайта в настройках браузера.",
         ],
       },
@@ -287,6 +289,7 @@ const en: Strings = {
         items: [
           "To fix and pick questions we count how often a question was played, how many answered and got it right, how often each option was chosen, and 👍 👌 👎 ratings.",
           "Per game: the number of players, questions played and how long it took. And the answers to the after-game survey.",
+          "And plain daily counts: how often the site and invites were opened, rooms created, games started, finished and played again.",
           "No nicknames, room codes, interests, ages or IP addresses: the statistics can't tell who played or who answered what.",
         ],
       },
@@ -295,6 +298,7 @@ const en: Strings = {
         items: [
           "Your language and your seat in the room, so a reload brings you back.",
           "On the shared screen: which questions were already asked (up to six months), so the next game doesn't repeat them.",
+          "A note that this device has played in someone else's game, so we can count how many players go on to host their own.",
           "This is kept only in your browser (localStorage). Clear the site's data in your browser settings to remove it.",
         ],
       },
