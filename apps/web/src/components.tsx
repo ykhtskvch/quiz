@@ -51,10 +51,14 @@ export function StatCards({ results }: { results: GameResults }) {
       note: s.fastestCorrect.question.text,
     },
   ].filter((c): c is { title: string; body: string; note: string } => Boolean(c));
-  if (cards.length === 0) return null;
+  // One question can win several titles in a short game ("toughest" and "only one knew"): show it once,
+  // under the most important title.
+  const seen = new Set<string>();
+  const unique = cards.filter((c) => (c.title === t.statFastest ? true : !seen.has(c.body) && Boolean(seen.add(c.body))));
+  if (unique.length === 0) return null;
   return (
     <div className="stat-cards">
-      {cards.slice(0, 5).map((c) => (
+      {unique.slice(0, 5).map((c) => (
         <div className="stat-card" key={c.title}>
           <p className="stat-title">{c.title}</p>
           <p className="stat-body">{c.body}</p>

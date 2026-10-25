@@ -322,9 +322,19 @@ function PlayerBody({
               <span>{t.correctOf(mine.correct, mine.attempted)}</span>
             </p>
           )}
+          <WinnerLine results={s.results} />
           <ShareResults results={s.results} scope={`${code}:${game?.number ?? 0}`} />
         </section>
-        {s.room.phonesOnly && <PhoneStandings results={s.results} />}
+        {/* P-13: everyone sees the room's results. Without a TV this is the only place, so it is open;
+            with a TV the table is on the big screen and folds away here, below the place. */}
+        {s.room.phonesOnly ? (
+          <PhoneStandings results={s.results} me={mine?.playerId} />
+        ) : (
+          <details className="room-results">
+            <summary>{t.roomResults}</summary>
+            <PhoneStandings results={s.results} me={mine?.playerId} bare />
+          </details>
+        )}
         {mine && !feedbackSent && <SessionFeedback code={code} token={token} onSent={() => game && setSentInGame(game.number)} />}
         {mine && feedbackSent && (
           <section className="after-feedback">
@@ -624,16 +634,29 @@ function PhoneReveal({ reveal }: { reveal: NonNullable<Snapshot["reveal"]> }) {
   );
 }
 
+/** P-13: who won, right under your own place — the line people ask about first. */
+function WinnerLine({ results }: { results: NonNullable<Snapshot["results"]> }) {
+  const t = useT();
+  const board = results.leaderboard;
+  const winners = board.filter((_, i) => placeOf(board, i) === 1);
+  if (!winners.length || board.length < 2) return null;
+  return (
+    <p className="winner-line">
+      {winners.length > 1 ? t.winners : t.winner}: <strong>{winners.map((w) => w.nickname).join(", ")}</strong> · {t.score(winners[0].score)}
+    </p>
+  );
+}
+
 /** No TV (P-04): the room's standings and facts of the evening, which the TV would show. */
-function PhoneStandings({ results }: { results: NonNullable<Snapshot["results"]> }) {
+function PhoneStandings({ results, me, bare = false }: { results: NonNullable<Snapshot["results"]>; me?: string; bare?: boolean }) {
   const t = useT();
   const board = results.leaderboard;
   return (
-    <section className="phone-standings" aria-labelledby="standings-title">
-      <h2 id="standings-title">{t.standings}</h2>
+    <section className="phone-standings" aria-label={t.standings}>
+      {!bare && <h2>{t.standings}</h2>}
       <ol className="leaderboard">
         {board.map((l, i) => (
-          <li key={l.playerId}>
+          <li key={l.playerId} className={l.playerId === me ? "me" : ""}>
             <span className="place-no">{placeOf(board, i)}.</span>
             <span className="name">{l.nickname}</span>
             <span className="muted">{t.correctOf(l.correct, l.attempted)}</span>

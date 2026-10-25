@@ -2233,3 +2233,44 @@ button.link {
   .demo-timer { transform: scaleX(0); }
   .demo-hero, .demo-points { opacity: 1; }
 }
+
+/* Room results on every phone (EPIC 41 P-13). */
+.winner-line {
+  margin-top: var(--space-2) !important;
+  font-size: var(--fs-hint);
+}
+
+.winner-line strong {
+  color: var(--accent);
+}
+
+.room-results {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: var(--space-2) var(--space-3);
+}
+
+.room-results summary {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.room-results[open] summary {
+  margin-bottom: var(--space-2);
+}
+
+.phone-standings .leaderboard li.me .name,
+.phone-standings .leaderboard li.me .score {
+  color: var(--accent);
+}
+
+.room-results .stat-card {
+  background: var(--bg);
+}
+
+.stat-card p {
+  margin: 0;
+}
