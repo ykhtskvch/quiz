@@ -11,12 +11,12 @@
     "db:migrate:production": "wrangler d1 migrations apply quiz-analytics --env production --remote"
   },
   "dependencies": {
+    "@quiz/engine": "*",
     "@quiz/shared": "*",
-    "hono": "^4.13.12",
-    "@quiz/engine": "*"
+    "hono": "^4.13.12"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^5.20261002.1",
-    "wrangler": "^4.146.0"
+    "wrangler": "^4.152.0"
   }
 }
