@@ -92,7 +92,8 @@
         }
       ],
       "observability": { "enabled": true },
-      "vars": { "ALLOW_DRAFTS": "true", "TIP_URL": "" }
+      // Stripe Payment Link for tips (EPIC 41 P-18), served as knowish.party/tip.
+      "vars": { "ALLOW_DRAFTS": "true", "TIP_URL": "https://buy.stripe.com/9B69AM1L83FbbBn4Fx9R600" }
     }
   }
 }
