@@ -2274,3 +2274,34 @@ button.link {
 .stat-card p {
   margin: 0;
 }
+
+/* Tips (EPIC 41 P-18): quiet, never before a game or during a question. */
+.tip-link {
+  color: var(--text);
+  font-weight: 600;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tip-card {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-1);
+  text-align: center;
+  padding: 0 var(--space-3);
+}
+
+.tip-card p {
+  margin: 0;
+  font-size: var(--fs-hint);
+}
+
+.tip-tv {
+  margin: 0;
+  font-size: 0.85em;
+}
+
+.tip-tv strong {
+  color: var(--text);
+}

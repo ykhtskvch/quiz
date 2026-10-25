@@ -22,6 +22,6 @@ export default defineConfig({
     host: true,
     port: PORT,
     strictPort: true,
-    proxy: { "/api": { target: "http://localhost:8787", ws: true } },
+    proxy: { "/api": { target: "http://localhost:8787", ws: true }, "/tip": { target: "http://localhost:8787" } },
   },
 });

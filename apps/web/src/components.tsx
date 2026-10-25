@@ -69,16 +69,26 @@ export function StatCards({ results }: { results: GameResults }) {
   );
 }
 
-let betaCache: Promise<boolean> | null = null;
+type Meta = { beta: boolean; tip: boolean };
+let metaCache: Promise<Meta> | null = null;
+
+/** Deployment facts, fetched once per page: beta (drafts on) and whether tips are switched on. */
+function useMeta(): Meta {
+  const [meta, setMeta] = useState<Meta>({ beta: false, tip: false });
+  useEffect(() => {
+    metaCache ??= api
+      .meta()
+      .then((m) => ({ beta: m.beta, tip: Boolean(m.tip) }))
+      .catch(() => ({ beta: false, tip: false }));
+    metaCache.then(setMeta);
+  }, []);
+  return meta;
+}
 
 /** "Beta" badge while this deployment plays unreviewed questions (EPIC 38, L-10). Silent on errors. */
 export function BetaBadge({ group = false }: { group?: boolean }) {
   const t = useT();
-  const [beta, setBeta] = useState(false);
-  useEffect(() => {
-    betaCache ??= api.meta().then((m) => m.beta).catch(() => false);
-    betaCache.then(setBeta);
-  }, []);
+  const { beta } = useMeta();
   if (!beta) return null;
   return (
     <p className={`beta-badge ${group ? "group" : ""}`}>
@@ -150,5 +160,34 @@ export function LatecomersNote({ s, className = "" }: { s: Snapshot; className?:
       {waiting.length > 0 && <span>{t.lateWaiting(waiting.join(", "))}</span>}
       {settingUp.length > 0 && <span>{t.lateSettingUp(settingUp.join(", "))}</span>}
     </p>
+  );
+}
+
+/**
+ * Tips (EPIC 41 P-18): a quiet link to knowish.party/tip, which forwards to the Stripe page. Only after
+ * the game or in the footer — never before a game or during a question. Hidden until TIP_URL is set.
+ */
+export function TipLink({ variant = "link" }: { variant?: "link" | "card" | "tv" }) {
+  const t = useT();
+  const { tip } = useMeta();
+  if (!tip) return null;
+  if (variant === "tv") {
+    return (
+      <p className="tip-tv muted">
+        {t.tipTv} <strong>{joinHost()}/tip</strong>
+      </p>
+    );
+  }
+  const link = (
+    <a className="tip-link" href="/tip" target="_blank" rel="noopener">
+      {t.tipLink}
+    </a>
+  );
+  if (variant === "link") return link;
+  return (
+    <section className="tip-card">
+      <p className="muted">{t.tipHint}</p>
+      {link}
+    </section>
   );
 }

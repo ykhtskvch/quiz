@@ -3,3 +3,6 @@ dist/
 .env
 .DS_Store
 .wrangler/
+
+# Local wrangler vars (never committed)
+.dev.vars

@@ -4,7 +4,7 @@ import type { HostCommand, OnboardingInput, OptionKey, QuestionRating, Snapshot 
 import { DEFAULT_CONFIG, NICKNAME_MAX } from "@quiz/shared";
 import { api, ApiError, session, type PlayerSession } from "../api.ts";
 import { navigate } from "../router.ts";
-import { AnswerTimer, JoinQr, latecomers, LatecomersNote, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
+import { AnswerTimer, JoinQr, latecomers, LatecomersNote, NextUp, placeOf, StatCards, TipLink, useJoinQr } from "../components.tsx";
 import { playerHistory, trackOnce } from "../funnel.ts";
 import { seen } from "../seen.ts";
 import { QuestionRatings, SessionFeedback } from "./Feedback.tsx";
@@ -364,6 +364,7 @@ function PlayerBody({
         {/* P-11: every guest is a possible host. After the form, so it never competes with it;
             not for the host, who already has "Play again". */}
         {!isHost && (feedbackSent || !mine) && <HostYourOwn />}
+        {(feedbackSent || !mine) && <TipLink variant="card" />}
       </div>
     );
   }

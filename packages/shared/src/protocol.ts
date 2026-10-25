@@ -193,4 +193,6 @@ export type FunnelStep =
   | "game_started"
   | "game_completed"
   | "game_ended_early"
-  | "play_again";
+  | "play_again"
+  /** Someone followed knowish.party/tip to the tip page (P-18). */
+  | "tip_open";

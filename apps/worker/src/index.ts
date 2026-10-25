@@ -16,7 +16,7 @@ import {
 } from "@quiz/shared";
 import { RateLimiterDO } from "./limiter-do.ts";
 import type { Bucket } from "./ratelimit.ts";
-import { engineConfig } from "./deployment.ts";
+import { engineConfig, tipUrl } from "./deployment.ts";
 import { seenFacts } from "./seen.ts";
 import { writeAnalytics } from "./analytics.ts";
 import { RoomDO, type Env, type Result } from "./room.ts";
@@ -59,7 +59,7 @@ app.use("*", async (c, next) => {
 });
 
 /** Deployment facts the web app needs before any room exists (e.g. the "beta" badge). */
-app.get("/meta", (c) => c.json({ beta: engineConfig(c.env).allowDrafts }));
+app.get("/meta", (c) => c.json({ beta: engineConfig(c.env).allowDrafts, tip: Boolean(tipUrl(c.env)) }));
 
 app.post("/rooms", async (c) => {
   const body = await c.req
@@ -148,7 +148,18 @@ app.post("/rooms/:code/answers", async (c) => {
 
 app.notFound((c) => c.json({ error: "not found" }, 404));
 
-export default app;
+// knowish.party/tip — short enough to read off a TV. The Stripe link lives in TIP_URL, so it can change
+// without a rebuild; each visit is a funnel tick (P-07), nothing else.
+const root = new Hono<{ Bindings: Env }>();
+root.get("/tip", (c) => {
+  const url = tipUrl(c.env);
+  if (!url) return c.redirect("/", 302);
+  c.executionCtx.waitUntil(writeAnalytics(c.env.DB, [{ kind: "FUNNEL", step: "tip_open", at: Date.now() }]));
+  return c.redirect(url, 302);
+});
+root.route("/", app);
+
+export default root;
 
 function generateRoomCode(): string {
   const bytes = crypto.getRandomValues(new Uint8Array(ROOM_CODE_LENGTH));

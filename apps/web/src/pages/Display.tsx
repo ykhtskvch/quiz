@@ -1,7 +1,7 @@
 // Shared screen: lobby with QR, question phases, reveal, final results. Read-only — it never sends commands.
 import { useEffect, useMemo } from "react";
 import { DEFAULT_CONFIG, type GameResults, type Snapshot } from "@quiz/shared";
-import { AnswerTimer, BetaBadge, joinHost, JoinQr, LatecomersNote, NextUp, placeOf, StatCards, useJoinQr } from "../components.tsx";
+import { AnswerTimer, BetaBadge, joinHost, JoinQr, LatecomersNote, NextUp, placeOf, StatCards, TipLink, useJoinQr } from "../components.tsx";
 import { setLanguage, useT } from "../strings.ts";
 import { seen } from "../seen.ts";
 import { useCountdown, useRoom } from "../useRoom.ts";
@@ -228,6 +228,7 @@ function Results({ results }: { results: GameResults }) {
       <div className="results-side">
         <StatCards results={results} />
         <p className="muted small">{t.waitPlayAgain}</p>
+        <TipLink variant="tv" />
       </div>
     </div>
   );

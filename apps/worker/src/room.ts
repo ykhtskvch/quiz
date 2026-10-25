@@ -31,6 +31,7 @@ export interface Env {
   /** Per-IP request counters (NFR-016); optional so a missing binding never blocks gameplay. */
   LIMITER?: DurableObjectNamespace<RateLimiterDO>;
   ALLOW_DRAFTS?: DeploymentVars["ALLOW_DRAFTS"];
+  TIP_URL?: DeploymentVars["TIP_URL"];
 }
 
 type Attachment = { role: "display" } | { role: "player"; playerId: string };

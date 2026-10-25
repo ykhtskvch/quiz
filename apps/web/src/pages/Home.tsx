@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { isRoomCode, LANGUAGES } from "@quiz/shared";
 import { api, ApiError } from "../api.ts";
-import { BetaBadge } from "../components.tsx";
+import { BetaBadge, TipLink } from "../components.tsx";
 import { playerHistory, trackOnce } from "../funnel.ts";
 import { navigate } from "../router.ts";
 import { seen } from "../seen.ts";
@@ -139,6 +139,7 @@ export function Home() {
 
       <footer className="home-foot">
         <BetaBadge />
+        <TipLink />
         <details className="privacy">
           <summary>{t.privacyTitle}</summary>
           <ul>
