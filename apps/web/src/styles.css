@@ -228,10 +228,18 @@ input:focus-visible {
   gap: var(--space-1);
 }
 
+/* P-09: on a wide screen the story (facts, demo, steps) on the left, the actions on the right. */
+.home-story,
+.home-actions {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+}
+
 @media (min-width: 900px) {
   .home {
-    max-width: 920px;
-    grid-template-columns: 1fr 1fr;
+    max-width: 1040px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
     align-items: start;
     gap: var(--space-4) var(--space-5);
   }
@@ -1971,4 +1979,257 @@ button.link {
 /* Share the results picture (EPIC 41 P-12). */
 .share-results {
   margin-top: var(--space-3);
+}
+
+
+/* ---------- Home for a stranger (EPIC 41 P-09) ---------- */
+
+.home .tagline {
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
+
+.have-code {
+  justify-self: start;
+  color: var(--text);
+  font-size: var(--fs-hint);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Side by side with the join card on a wide screen: no need for the shortcut. */
+@media (min-width: 900px) {
+  .have-code {
+    display: none;
+  }
+}
+
+.home-facts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.home-facts li {
+  background: var(--surface-2);
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: var(--fs-hint);
+  font-weight: 600;
+}
+
+.home-steps h2 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.25rem;
+}
+
+.home-steps ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-3);
+}
+
+.home-steps li {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: var(--space-2);
+  align-items: start;
+}
+
+.home-steps li > span:last-child {
+  display: grid;
+  gap: 2px;
+  line-height: 1.4;
+}
+
+.step-icon {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  background: var(--surface);
+  border-radius: 12px;
+}
+
+/* The mini game: a TV with the question, a phone tapping A, the reveal and the Hero line. 9 s loop. */
+.demo {
+  margin: 0;
+  position: relative;
+  padding: var(--space-2) 64px var(--space-3) 0;
+}
+
+.demo-tv {
+  background: #0d0b13;
+  border: 6px solid #2d2640;
+  border-radius: 14px;
+  padding: 14px 16px 16px;
+  display: grid;
+  gap: 10px;
+  min-height: 210px;
+  position: relative;
+}
+
+.demo-q {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.demo-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.demo-options li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface);
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 0.85rem;
+  border: 2px solid transparent;
+  animation: demo-dim 9s infinite;
+}
+
+.demo-options li.right {
+  animation-name: demo-right;
+}
+
+.demo .key {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 6px;
+  display: inline-grid;
+  place-items: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #fff;
+  flex: none;
+}
+
+.demo-options li:nth-child(1) .key, .demo-phone > span:nth-child(1) .key { background: var(--opt-a); }
+.demo-options li:nth-child(2) .key, .demo-phone > span:nth-child(2) .key { background: var(--opt-b); }
+.demo-options li:nth-child(3) .key, .demo-phone > span:nth-child(3) .key { background: var(--opt-c); }
+.demo-options li:nth-child(4) .key, .demo-phone > span:nth-child(4) .key { background: var(--opt-d); }
+
+.demo-timer {
+  height: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+  transform-origin: left;
+  animation: demo-timer 9s infinite;
+}
+
+.demo-hero {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: 999px;
+  opacity: 0;
+  animation: demo-hero 9s infinite;
+}
+
+.demo-phone {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 76px;
+  padding: 10px 8px 14px;
+  background: #0d0b13;
+  border: 4px solid #3a3150;
+  border-radius: 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.demo-phone > span:not(.demo-points) {
+  height: 26px;
+  border-radius: 6px;
+  background: var(--surface);
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+  border: 2px solid transparent;
+}
+
+.demo-phone > span.tap {
+  animation: demo-tap 9s infinite;
+}
+
+.demo-points {
+  position: absolute;
+  top: -14px;
+  right: -6px;
+  color: var(--right);
+  font-weight: 800;
+  opacity: 0;
+  animation: demo-points 9s infinite;
+}
+
+@keyframes demo-timer {
+  0%, 8% { transform: scaleX(1); }
+  45% { transform: scaleX(0.35); }
+  50%, 100% { transform: scaleX(0); opacity: 0; }
+}
+
+@keyframes demo-tap {
+  0%, 22% { border-color: transparent; background: var(--surface); }
+  25%, 92% { border-color: var(--accent); background: rgb(255 204 77 / 0.25); }
+  100% { border-color: transparent; }
+}
+
+@keyframes demo-dim {
+  0%, 50% { opacity: 1; }
+  55%, 92% { opacity: 0.35; }
+  100% { opacity: 1; }
+}
+
+@keyframes demo-right {
+  0%, 50% { border-color: transparent; }
+  55%, 92% { border-color: var(--right); }
+  100% { border-color: transparent; }
+}
+
+@keyframes demo-points {
+  0%, 55% { opacity: 0; transform: translateY(6px); }
+  60%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes demo-hero {
+  0%, 64% { opacity: 0; transform: translate(-50%, 8px); }
+  70%, 92% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; }
+}
+
+/* No motion: show the end of the story — the reveal and the Hero line. */
+@media (prefers-reduced-motion: reduce) {
+  .demo * {
+    animation: none !important;
+  }
+  .demo-options li:not(.right) { opacity: 0.35; }
+  .demo-options li.right { border-color: var(--right); }
+  .demo-phone > span.tap { border-color: var(--accent); }
+  .demo-timer { transform: scaleX(0); }
+  .demo-hero, .demo-points { opacity: 1; }
 }

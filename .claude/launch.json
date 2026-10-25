@@ -29,6 +29,17 @@
         "content:review"
       ],
       "port": 4400
+    },
+    {
+      "name": "app-5174",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": [
+        "concurrently",
+        "-k",
+        "npm run dev -w @quiz/worker",
+        "npm run dev -w @quiz/web -- --port 5174 --strictPort"
+      ],
+      "port": 5174
     }
   ]
 }
